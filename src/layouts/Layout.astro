@@ -1,0 +1,92 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../global.css';
+
+export interface Props {
+	description: string;
+	home?: boolean;
+	title: string;
+}
+
+const { home = false, title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="bg-base-100">
+	<head>
+		<script is:inline>
+      if (localStorage.getItem("theme") === null) {
+        document.documentElement.setAttribute("data-theme", "light");
+      } else {
+        document.documentElement.setAttribute(
+          "data-theme",
+          localStorage.getItem("theme")
+        );
+			}
+    </script>
+    <script>
+      import { themeChange } from 'theme-change';
+      themeChange();
+    </script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="author" content="Open &lcub;re&rcub;Source" />
+		<meta name="description" content={description} />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="sitemap" href="/sitemap-index.xml">
+		<link href="https://fosstodon.org/@openresource" rel="me">
+		<title>Open &lcub;re&rcub;Source - {title}</title>
+	</head>
+	<body>
+		<Header />
+		<main class={home ? `px-0 pb-0` : `mx-auto max-w-7xl px-2 sm:px-6 lg:px-8`}>
+			<slot />
+		</main>
+		<Footer divider={ !home } />
+	</body>
+</html>
+<script>
+	import { inject } from '@vercel/analytics';
+ 	inject();
+</script>
+<script>
+  const copyButtonLabel = "Copy";
+  const codeBlocks = Array.from(document.querySelectorAll("pre"));
+
+  for (let codeBlock of codeBlocks) {
+    let wrapper = document.createElement("div");
+    wrapper.className = "clipboard-copy"
+    wrapper.style.position = "relative";
+
+    let copyButton = document.createElement("button");
+    copyButton.className = "absolute top-0 right-0 z-10 p-2 mt-1 lg:mt-2 mr-1 lg:mr-2 bg-gray-700 text-gray-200 rounded";
+    copyButton.innerHTML = copyButtonLabel;
+
+    codeBlock.setAttribute("tabindex", "0");
+    codeBlock.appendChild(copyButton);
+    codeBlock.parentNode?.insertBefore(wrapper, codeBlock);
+    wrapper.appendChild(codeBlock);
+
+    copyButton.addEventListener("click", async () => {
+      await copyCode(codeBlock, copyButton);
+    });
+  }
+
+  async function copyCode(block, button) {
+    let code = block.querySelector("code");
+    let text = code.innerText;
+
+    await navigator.clipboard.writeText(text);
+
+    button.innerText = "Copied";
+
+    setTimeout(() => {
+      button.innerText = copyButtonLabel;
+    }, 700);
+  }
+</script>

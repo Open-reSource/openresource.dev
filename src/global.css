@@ -1,0 +1,117 @@
+html {
+  font-family: system-ui, sans-serif;
+}
+
+code {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+main {
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.visually-hidden:not(caption),
+.visually-hidden-focusable:not(:focus):not(:focus-within):not(caption) {
+  position: absolute !important;
+}
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+[data-theme="dark"] svg .text-primary {
+  fill: #8455e0;
+}
+
+[data-theme="dark"] .text-primary {
+  color: #8455e0;
+}
+
+.clipboard-copy {
+  background-color: #0d1117;
+}
+
+.astro-code {
+  margin-right: 58px;
+}
+
+@media screen and (min-width: 1024px) {
+  .astro-code {
+    margin-right: 70px;
+  }
+}
+
+.heading-wrapper {
+	--anchoring-icon-size-x: 1.5rem;
+	--anchoring-icon-size-y: 1.5rem;
+	margin-inline-end: var(--anchoring-icon-size-x);
+}
+
+.heading-wrapper:not(:first-child) {
+	margin-block: 0;
+}
+
+.heading-wrapper > * {
+	display: inline;
+	margin-bottom: 0;
+}
+
+.heading-wrapper > .anchor-link {
+	position: relative;
+	display: inline-flex;
+	margin-inline-end: calc(-1 * var(--anchoring-icon-size-x));
+	width: var(--anchoring-icon-size-x);
+	height: var(--anchoring-icon-size-y);
+	color: hsl(var(--bc));
+	text-decoration: none;
+	justify-content: center;
+	vertical-align: baseline;
+}
+
+/* Float anchor links to the left of headings on larger screens. */
+@media (min-width: 50em) {
+	.heading-wrapper {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: baseline;
+		margin-inline-start: calc(-1 * var(--anchoring-icon-size-x));
+	}
+
+	.heading-wrapper > .anchor-link {
+		margin-inline-end: 0;
+	}
+}
+
+.heading-wrapper > .anchor-link {
+	opacity: 0.5;
+}
+
+@media (hover: hover) {
+	.heading-wrapper > .anchor-link {
+		opacity: 0;
+	}
+}
+
+.heading-wrapper:hover > .anchor-link,
+.anchor-link:focus {
+	opacity: 1;
+}
