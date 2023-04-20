@@ -27,6 +27,6 @@
     "@tailwindcss/typography": "^0.5.9",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
-    "vercel": "^28.18.5"
+    "vercel": "^28.20.0"
   }
 }
