@@ -1,0 +1,129 @@
+---
+export const prerender = true
+import Layout from '../../layouts/Layout.astro';
+
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const modulesEntries = await getCollection('modules', ({ data }) => {
+    // Filter chapters so that soon ones are not rendered
+    return data.soon !== true;
+  });
+
+  const allEntries = await getCollection('modules'); // We need all entries to display the soon chapters
+
+  return modulesEntries.map(entry => ({
+    params: { slug: entry.slug }, props: {
+      isIndex: entry.id.endsWith('/index.mdx'),
+      entry,
+      orderedFilteredChapters: entry.id.endsWith('/index.mdx') ?
+          (allEntries.map((moduleEntry) => {
+            if (!moduleEntry.id.endsWith('/index.mdx') && moduleEntry.slug.startsWith(entry.slug)) {
+              return moduleEntry;
+            }
+          }).filter((moduleEntry) => moduleEntry !== undefined).sort((a, b) => a.data.id - b.data.id))
+        : (
+          allEntries.map((moduleEntry) => {
+            if (!moduleEntry.id.endsWith('/index.mdx') && moduleEntry.slug.split('/')[0].startsWith(entry.slug.split('/')[0])) {
+              return moduleEntry;
+            }
+          }).filter((moduleEntry) => moduleEntry !== undefined).sort((a, b) => a.data.id - b.data.id)
+        ),
+      module: entry.id.endsWith('/index.mdx') ?
+          entry
+        : (
+          allEntries.find((moduleEntry) => {
+            if (moduleEntry.id.endsWith('/index.mdx') && moduleEntry.slug.startsWith(entry.slug.split('/')[0])) {
+              return moduleEntry;
+            }
+          })
+        )
+    },
+  }));
+}
+
+const { entry, isIndex, orderedFilteredChapters, module } = Astro.props;
+const { Content } = await entry.render();
+---
+{ isIndex && (
+<Layout title={ entry.data.title } description={ entry.data.metaDescription }>
+  <div class="bg-base-100 pb-8 flex flex-col justify-center relative overflow-hidden xl:pb-12">
+    <div class="md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-4 lg:pb-4">
+      <div class="text-sm breadcrumbs px-2">
+        <ul>
+          <li><a href="/guide">Guide</a></li>
+          <li>{ entry.data.title }</li>
+        </ul>
+      </div>
+    </div>
+    <div class="relative w-full px-6 py-12 bg-base-100 shadow-xl shadow-base-300 ring-1 ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
+      <div class="mt-8 prose prose-slate mx-auto lg:prose-lg">
+        <span class="font-bold">Module { entry.data.id }</span>
+        <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary pb-3">{ entry.data.title }</h1>
+        <Content />
+        <a href={`/guide/${ orderedFilteredChapters[0].slug }`} class="btn btn-primary mt-3">Start Reading</a>
+      </div>
+    </div>
+    <div class="mt-10 relative w-full py-10 px-6 bg-base-100 shadow-xl shadow-base-300 ring-1 ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl">
+      <h2 class="font-bold text-2xl pb-4">Chapters</h2>
+      <ul class="steps steps-vertical">
+        {
+          orderedFilteredChapters.map((chapter) => {
+            if (chapter.data.soon === true) {
+              return (
+                <li class="step"><span class="text-left">{ chapter.data.title } <div class="badge">Soon</div></span></li>
+              )
+            }
+            return (<li class="step"><a class="hover:underline text-left" href={`/guide/${ chapter.slug }`}>{ chapter.data.title }</a></li>)
+          })
+        }
+      </ul>
+    </div>
+  </div>
+</Layout>
+)}
+
+{ !isIndex && (
+<Layout title={ entry.data.title } description={ entry.data.metaDescription }>
+  <div class="text-sm breadcrumbs pb-8">
+    <ul>
+      <li><a href="/guide">Guide</a></li>
+      <li><a href={`/guide/${module.slug}`}>{ module.data.title }</a></li>
+      <li><a>{ entry.data.title }</a></li>
+    </ul>
+  </div>
+  <div class="flex flex-col xl:flex-row-reverse gap-10">
+    <div class="bg-base-100 pb-8 flex flex-col justify-center relative overflow-hidden xl:pb-12">
+      <div class="relative w-full px-6 py-6 bg-base-100 md:shadow-xl md:shadow-base-300 md:py-12 xl:shadow-none xl:ring-0 md:ring-1 md:ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pb-28 xl:pb-12">
+        <div class="prose prose-slate mx-auto lg:prose-lg">
+          <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary pb-3">{ entry.data.title }</h1>
+          <Content />
+        </div>
+      </div>
+    </div>
+    <div class="p-4 w-full xl:px-0 xl:pt-4 md:max-w-3xl md:mx-auto lg:max-w-4xl xl:max-w-sm">
+      <h2 class="font-bold text-2xl pb-4">Chapters</h2>
+      <ul class="steps steps-vertical">
+        {
+          orderedFilteredChapters.map((chapter) => {
+            if (chapter.data.soon === true) {
+              return (
+                <li class="step"><span class="text-left">{ chapter.data.title } <div class="badge">Soon</div></span></li>
+              )
+            } else if (chapter.data.id < entry.data.id) {
+              return (
+                <li class="step step-primary"><a class="hover:underline text-left" href={`/guide/${ chapter.slug }`}>{ chapter.data.title }</a></li>
+              )
+            } else if (chapter.data.id === entry.data.id) {
+              return (
+              <li class="step step-primary"><span class="text-left">{ chapter.data.title }</span></li>
+              )
+            }
+            return (<li class="step"><a class="hover:underline text-left" href={`/guide/${ chapter.slug }`}>{ chapter.data.title }</a></li>)
+          })
+        }
+      </ul>
+    </div>
+  </div>
+</Layout>
+)}
