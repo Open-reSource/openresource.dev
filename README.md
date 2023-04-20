@@ -18,3 +18,9 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`          | Run the development server                       |
 | `npm run vercel`       | Run in the same conditions as Vercel             |
 
+## Copyright and License
+
+Code released under the [MIT License](https://github.com/Open-reSource/openresource.dev/blob/main/LICENSE).
+Content (including images) released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/):
+* `public/images/` directory
+* `src/content/articles` and `src/content/modules` directories
