@@ -26,6 +26,8 @@
 - [Status](#status)
 - [Quick Start](#quick-start)
 - [Bugs and Feature Requests](#bugs-and-feature-requests)
+- [Contributing](#contributing)
+- [Community](#community)
 - [Copyright and license](#copyright-and-license)
 
 ## What’s in This Repository
@@ -49,6 +51,20 @@ All commands are run from the root of the project, from a terminal:
 ## Bugs and Feature Requests
 
 Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Open-reSource/openresource.dev/issues/new/choose).
+
+## Contributing
+
+Please read through our [contributing guidelines](https://github.com/Open-reSource/openresource.dev/blob/main/CONTRIBUTING.md).
+
+## Community
+
+Get update on Open {re}Source's development and chat with the project maintainers an community members:
+
+- Follow [@open_resource on Twitter](https://twitter.com/open_resource).
+- Follow [@openresource on Mastodon](https://fosstodon.org/@openresource).
+- Explore [our GitHub Discussions](https://github.com/orgs/Open-reSource/discussions).
+- Chat with the community and the maintainers on [our Discord channel](https://discord.com/invite/fpUDwEMGwE).
+- Use [our RSS feed](https://www.openresource.dev/rss.xml) to know when articles are out!
 
 ## Copyright and License
 
