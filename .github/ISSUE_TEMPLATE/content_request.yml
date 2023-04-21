@@ -1,0 +1,29 @@
+name: Content request
+description: Suggest new content to include in the guide or as articles in Open {re}Source.
+title: "Suggest new content"
+labels: [content]
+assignees: []
+body:
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: Take a couple minutes to help our maintainers work faster.
+      options:
+        - label: I have [searched](https://github.com/Open-reSource/openresource.dev/issues?q=is%3Aissue+) for duplicate or closed content requests
+          required: true
+        - label: I have read the [contributing guidelines](https://github.com/Open-reSource/openresource.dev/blob/main/CONTRIBUTING.md
+          required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Provide detailed information for what we should add to help folks in the Open Source world.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation and context
+      description: Tell us why this content is needed or helpful, and what problems it may help solve.
+    validations:
+      required: true
