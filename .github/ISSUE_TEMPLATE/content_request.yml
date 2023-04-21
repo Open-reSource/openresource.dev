@@ -11,7 +11,7 @@ body:
       options:
         - label: I have [searched](https://github.com/Open-reSource/openresource.dev/issues?q=is%3Aissue+) for duplicate or closed content requests
           required: true
-        - label: I have read the [contributing guidelines](https://github.com/Open-reSource/openresource.dev/blob/main/CONTRIBUTING.md
+        - label: I have read the [contributing guidelines](https://github.com/Open-reSource/openresource.dev/blob/main/CONTRIBUTING.md)
           required: true
   - type: textarea
     id: proposal
