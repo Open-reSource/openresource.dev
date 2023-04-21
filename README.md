@@ -20,16 +20,6 @@
   <a href="https://discord.gg/fpUDwEMGwE">Discord</a>
 </p>
 
-## Table of Contents
-
-- [What's in This Repository](#whats-in-this-repository)
-- [Status](#status)
-- [Quick Start](#quick-start)
-- [Bugs and Feature Requests](#bugs-and-feature-requests)
-- [Contributing](#contributing)
-- [Community](#community)
-- [Copyright and license](#copyright-and-license)
-
 ## What’s in This Repository
 
 "openresource.dev" is the repository containing the code source deployed to https://openresource.dev.
