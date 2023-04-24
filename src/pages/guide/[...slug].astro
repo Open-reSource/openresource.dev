@@ -98,6 +98,18 @@ const { Content } = await entry.render();
         <div class="prose prose-slate mx-auto lg:prose-lg">
           <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary pb-3">{ entry.data.title }</h1>
           <Content />
+          <div class="flex flex-col xs:flex-row justify-center gap-5 sm:mt-32 items-center mt-16">
+            {
+              entry.data.id > 1 && (
+                <a href={`/guide/${ orderedFilteredChapters[entry.data.id - 2].slug }`} class="btn btn-secondary">Previous chapter</a>
+              )
+            }
+            {
+              entry.data.id < orderedFilteredChapters.length && (
+                <a href={`/guide/${ orderedFilteredChapters[entry.data.id].slug }`} class="btn btn-secondary">Next chapter</a>
+              )
+            }
+          </div>
         </div>
       </div>
     </div>
