@@ -2,6 +2,7 @@
 // https://github.com/withastro/astro.build/blob/main/scripts/update-showcase.mjs#L48
 
 import octokit from "@octokit/graphql";
+import ghActions from "@actions/core";
 import { parseHTML } from "linkedom";
 import fs from "node:fs/promises";
 import * as dotenv from "dotenv";
