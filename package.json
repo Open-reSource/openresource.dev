@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "vercel": "vercel dev",
-    "astro": "astro"
+    "astro": "astro",
+    "update:showcase": "node scripts/update-showcase.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^2.1.4",
@@ -24,7 +25,10 @@
     "theme-change": "^2.5.0"
   },
   "devDependencies": {
+    "@octokit/graphql": "^5.0.5",
     "@tailwindcss/typography": "^0.5.9",
+    "dotenv": "^16.0.3",
+    "linkedom": "^0.14.25",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "vercel": "^28.20.0"

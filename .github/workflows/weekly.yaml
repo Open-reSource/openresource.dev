@@ -1,0 +1,39 @@
+name: Weekly
+
+on:
+  schedule:
+    - cron: "0 12 * * Mon"
+  workflow_dispatch:
+
+jobs:
+  showcase:
+    name: Update Showcase Sites
+    if: github.repository_owner == 'Open-reSource'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code using Git
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run update:showcase script
+        id: showcase
+        run: npm run update:showcase
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        id: createpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          branch: ci/docgen-showcase
+          token: ${{ secrets.SHOWCASE_PR_GITHUB_TOKEN }}
+          add-paths: src/data/showcase.json
+          commit-message: "ci: update showcase"
+          title: "ci: update showcase"
+          body: ${{ steps.showcase.outputs.prBody }}
+          labels: ci
