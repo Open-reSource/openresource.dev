@@ -18,10 +18,12 @@ const articlesCollection = defineCollection({
 const modulesCollection = defineCollection({
   schema: z.object({
     id: z.number(),
+    creationDate: z.string().optional(),
+    description: z.string().optional(),
     metaDescription: z.string(),
+    lastUpdateDate: z.string().optional(),
     title: z.string(),
     soon: z.boolean().optional(),
-    description: z.string().optional(),
   })
 });
 
