@@ -76,11 +76,9 @@ Good pull requests—patches, improvements, new features—are a fantastic help.
 
 **However**, if existing content can be improved, Pull Requests are welcome! Notice that in this case, this work is going to be licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Adhering to the following process is the best way to get your work
-included in the project:
+Adhering to the following process is the best way to get your work included in the project:
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
+1. [Fork](https://help.github.com/articles/fork-a-repo/) the project, clone your fork, and configure the remotes:
 
    ```bash
    # Clone your fork of the repo into the current directory
@@ -104,8 +102,7 @@ included in the project:
    git checkout -b <topic-branch-name>
    ```
 
-4. Commit your changes in logical chunks. Please adhere to these [git commit message guidelines](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-   or your code is unlikely be merged into the main project. Use Git's [interactive rebase](https://help.github.com/articles/about-git-rebase/) feature to tidy up your commits before making them public.
+4. Commit your changes in logical chunks. Please try to respect the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/). Use Git's [interactive rebase](https://help.github.com/articles/about-git-rebase/) feature to tidy up your commits before making them public.
 
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
