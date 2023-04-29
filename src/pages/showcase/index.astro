@@ -4,6 +4,7 @@ export const prerender = true
 import Layout from '../../layouts/Layout.astro';
 import json from '../../data/showcase.json';
 import gh from 'parse-github-url';
+import ShowcaseBanner from '../../components/ShowcaseBanner.astro';
 
 const {
   title = 'Showcase',
@@ -53,6 +54,7 @@ const {
             </div>    
           ))}
         </div>
+        <ShowcaseBanner classes="mt-8" />
       </div>
     </div>
   </div>
