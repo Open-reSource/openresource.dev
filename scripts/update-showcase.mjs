@@ -6,6 +6,7 @@ import ghActions from "@actions/core";
 import { parseHTML } from "linkedom";
 import fs from "node:fs/promises";
 import * as dotenv from "dotenv";
+import gh from 'parse-github-url';
 dotenv.config();
 
 class ShowcaseScraper {
@@ -32,6 +33,7 @@ class ShowcaseScraper {
         authorization: `token ${process.env.GITHUB_TOKEN}`,
       },
     });
+
     this.#org = org;
     this.#repo = repo;
     this.#discussion = discussion;
@@ -57,7 +59,27 @@ class ShowcaseScraper {
     for (const comment of commentHtml) {
       const hrefs = await this.#extractHrefs(comment);
       if (hrefs.length > 0) {
-        myArray.push(hrefs);
+        const enhancedHrefs = [];
+        for (const href of hrefs) {
+          const ghReference = gh(href);
+
+          if (ghReference.repo !== null) {
+            console.log(`Adding repository data from ${href}...`);
+            const { repository } = await this.#getRepository({owner: ghReference.owner,name: ghReference.name});
+
+            enhancedHrefs.push( {
+              url: href,
+              repo: repository
+            });
+          } else {
+            console.log(`Adding ${href}...`);
+            enhancedHrefs.push({
+              url: href
+            });
+          }
+        }
+
+        myArray.push(enhancedHrefs);
       }
     }
 
@@ -104,6 +126,41 @@ class ShowcaseScraper {
        }
      }
    }`);
+  }
+
+  /**
+   * Execute a GraphQL query to fetch repository data from the GitHub API.
+   * @returns {Promise<{
+  *  repository
+  * }>}
+  */
+  #getRepository({ owner, name} = {}) {
+    return this.#query(`
+      query {
+        repository(owner: "${owner}", name: "${name}") {
+          object(expression: "HEAD:README.md") {
+            ... on Blob {
+              text
+            }
+          }
+          description
+          openGraphImageUrl
+          issues {
+            totalCount
+          }
+          stargazers {
+            totalCount
+          }
+          pullRequests {
+            totalCount
+          }
+          languages(first:10) {
+            nodes {
+              name
+            }
+          }
+        }
+    }`);
   }
 
   /**
@@ -169,7 +226,7 @@ class ShowcaseScraper {
       prLines.push(
         "#### Links added in this PR 🆕",
         "",
-        ...myArray.map((content) => `- ${content.join(" - ")}`),
+        ...myArray.map((content) => `- ${content.map(content => content.url).join(" - ")}`),
         ""
       );
     }
