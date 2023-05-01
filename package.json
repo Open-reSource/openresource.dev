@@ -29,7 +29,7 @@
     "@octokit/graphql": "^5.0.5",
     "@tailwindcss/typography": "^0.5.9",
     "dotenv": "^16.0.3",
-    "linkedom": "^0.14.25",
+    "linkedom": "^0.14.26",
     "parse-github-url": "^1.0.2",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
