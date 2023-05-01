@@ -14,14 +14,14 @@
   "dependencies": {
     "@astrojs/markdown-remark": "^2.1.4",
     "@astrojs/mdx": "^0.19.0",
-    "@astrojs/rss": "^2.3.2",
+    "@astrojs/rss": "^2.4.0",
     "@astrojs/sitemap": "^1.2.2",
     "@astrojs/tailwind": "^3.1.1",
-    "@astrojs/vercel": "^3.2.4",
+    "@astrojs/vercel": "^3.2.5",
     "@vercel/analytics": "^1.0.0",
     "astro": "^2.2.1",
     "daisyui": "^2.51.5",
-    "tailwindcss": "^3.3.1",
+    "tailwindcss": "^3.3.2",
     "theme-change": "^2.5.0"
   },
   "devDependencies": {
@@ -29,9 +29,10 @@
     "@octokit/graphql": "^5.0.5",
     "@tailwindcss/typography": "^0.5.9",
     "dotenv": "^16.0.3",
-    "linkedom": "^0.14.25",
+    "linkedom": "^0.14.26",
+    "parse-github-url": "^1.0.2",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
-    "vercel": "^28.20.0"
+    "vercel": "^29.0.3"
   }
 }
