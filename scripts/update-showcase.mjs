@@ -58,6 +58,7 @@ class ShowcaseScraper {
 
     for (const comment of commentHtml) {
       const hrefs = await this.#extractHrefs(comment);
+
       if (hrefs.length > 0) {
         const enhancedHrefs = [];
         for (const href of hrefs) {
@@ -138,20 +139,31 @@ class ShowcaseScraper {
     return this.#query(`
       query {
         repository(owner: "${owner}", name: "${name}") {
+          name
           object(expression: "HEAD:README.md") {
             ... on Blob {
               text
             }
           }
+          mentionableUsers {
+            totalCount
+          }
+          discussions(states: OPEN) {
+            totalCount
+          }
+          nameWithOwner
           description
           openGraphImageUrl
-          issues {
+          owner {
+            avatarUrl
+            login
+          }
+          forkCount
+          issues(states: OPEN) {
             totalCount
           }
-          stargazers {
-            totalCount
-          }
-          pullRequests {
+          stargazerCount
+          pullRequests(states: OPEN) {
             totalCount
           }
           languages(first:10) {
