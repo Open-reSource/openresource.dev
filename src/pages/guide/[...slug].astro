@@ -113,7 +113,7 @@ const { Content } = await entry.render();
               )
             }
             {
-              entry.data.id < orderedFilteredChapters.length && (
+              entry.data.id < orderedFilteredChapters.length && !orderedFilteredChapters[entry.data.id].data.soon && (
                 <a href={`/guide/${ orderedFilteredChapters[entry.data.id].slug }`} class="btn btn-secondary">Next chapter</a>
               )
             }
