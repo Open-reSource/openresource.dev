@@ -118,6 +118,6 @@ main {
 
 :focus-visible {
 	outline: 4px solid hsl(var(--bc)) !important;
-	outline-offset: 2px !important;
-	box-shadow: hsl(var(--b1)) 0 0 0 2px !important;
+	outline-offset: 2px;
+	box-shadow: hsl(var(--b1)) 0 0 0 2px;
 }
