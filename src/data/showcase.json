@@ -176,7 +176,7 @@
           "totalCount": 25
         },
         "discussions": {
-          "totalCount": 8
+          "totalCount": 9
         },
         "nameWithOwner": "fabiocaccamo/django-admin-interface",
         "description": ":superhero: :zap: django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
@@ -189,7 +189,7 @@
         "issues": {
           "totalCount": 13
         },
-        "stargazerCount": 1392,
+        "stargazerCount": 1395,
         "pullRequests": {
           "totalCount": 1
         },
@@ -235,7 +235,7 @@
         "issues": {
           "totalCount": 7
         },
-        "stargazerCount": 1047,
+        "stargazerCount": 1053,
         "pullRequests": {
           "totalCount": 1
         },
@@ -266,7 +266,7 @@
         },
         "nameWithOwner": "fabiocaccamo/FCFileManager",
         "description": ":iphone: :open_file_folder: iOS file manager on top of NSFileManager for simplifying files management.",
-        "openGraphImageUrl": "https://opengraph.githubassets.com/33f08059a762b2e06827f44c222a45fd3c0117e4af6ca61bb2ea82d769500e87/fabiocaccamo/FCFileManager",
+        "openGraphImageUrl": "https://opengraph.githubassets.com/c348b9f81b70102c0c074a2b2da87aa94eb09e8098a72e6ddda44821fb13cbc6/fabiocaccamo/FCFileManager",
         "owner": {
           "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
           "login": "fabiocaccamo"
@@ -315,7 +315,7 @@
         "issues": {
           "totalCount": 4
         },
-        "stargazerCount": 479,
+        "stargazerCount": 481,
         "pullRequests": {
           "totalCount": 0
         },
@@ -349,7 +349,7 @@
         },
         "nameWithOwner": "fabiocaccamo/django-treenode",
         "description": ":deciduous_tree: probably the best abstract model/admin for your tree based stuff.",
-        "openGraphImageUrl": "https://opengraph.githubassets.com/9c1d508b564fd3b4e6f74725dc7e0a964ff84bad2dac35776c1f08ed22f24069/fabiocaccamo/django-treenode",
+        "openGraphImageUrl": "https://opengraph.githubassets.com/0c2168c430e279682bbbb27145af6cbf297896f58ea6dbbe595de9b642c9f976/fabiocaccamo/django-treenode",
         "owner": {
           "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
           "login": "fabiocaccamo"
@@ -358,7 +358,7 @@
         "issues": {
           "totalCount": 9
         },
-        "stargazerCount": 426,
+        "stargazerCount": 429,
         "pullRequests": {
           "totalCount": 0
         },
