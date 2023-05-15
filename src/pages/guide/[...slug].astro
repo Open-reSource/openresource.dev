@@ -3,6 +3,7 @@ export const prerender = true
 import Layout from '../../layouts/Layout.astro';
 import readingTime from 'reading-time';
 import { getCollection } from 'astro:content';
+import Feedback from '../../components/Feedback.astro';
 
 export async function getStaticPaths() {
   const modulesEntries = await getCollection('modules', ({ data }) => {
@@ -106,6 +107,8 @@ const { Content } = await entry.render();
             </svg><span class="visually-hidden">Estimated reading time</span>{ Math.ceil(readingTime(entry.body).minutes) } min</span>
           </div>
           <Content />
+          <hr>
+          <Feedback id={entry.id} type="modules" />
           <div class="flex flex-col xs:flex-row justify-center gap-5 sm:mt-32 items-center mt-16">
             {
               entry.data.id > 1 && (
