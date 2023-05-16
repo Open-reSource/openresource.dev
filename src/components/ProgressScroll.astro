@@ -1,0 +1,14 @@
+---
+---
+<div class="fixed top-0 h-1.5 w-full bg-transparent" aria-hidden="true">
+  <div id="progress-scroll" class="h-full w-0 bg-primary transition ease-in-out delay-300 opacity-100"></div>
+</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progress-scroll').style.width = progress + '%';
+  });
+</script>
