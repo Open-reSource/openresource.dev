@@ -6,9 +6,11 @@
 
 <script>
   window.addEventListener('scroll', function() {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    var progress = (scrollTop / scrollHeight) * 100;
-    document.getElementById('progress-scroll').style.width = progress + '%';
+    if (document && document.getElementById('progress-scroll')) {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById('progress-scroll').style.width = progress + '%';
+    }
   });
 </script>
