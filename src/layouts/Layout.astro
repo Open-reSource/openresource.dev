@@ -2,14 +2,16 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../global.css';
+import ProgressScroll from '../components/ProgressScroll.astro';
 
 export interface Props {
 	description: string;
 	home?: boolean;
 	title: string;
+  progressScroll?: boolean;
 }
 
-const { home = false, title, description } = Astro.props;
+const { home = false, title, description, progressScroll = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -48,6 +50,7 @@ const { home = false, title, description } = Astro.props;
 			<slot />
 		</main>
 		<Footer divider={ !home } />
+    { progressScroll && <ProgressScroll /> }
 	</body>
 </html>
 <script>

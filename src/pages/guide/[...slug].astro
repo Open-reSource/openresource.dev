@@ -85,7 +85,7 @@ const { Content } = await entry.render();
 )}
 
 { !isIndex && (
-<Layout title={ entry.data.title } description={ entry.data.metaDescription }>
+<Layout title={ entry.data.title } description={ entry.data.metaDescription } progressScroll={true}>
   <div class="text-sm breadcrumbs pb-8">
     <ul>
       <li><a href="/guide">Guide</a></li>
