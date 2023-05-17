@@ -5,7 +5,7 @@ labels: [
   { label: 'community', class: 'badge-primary' },
   { label: 'contribution', class: 'badge-primary' }
 ]
-lastUpdateDate: '2023-05-15'
+lastUpdateDate: '2023-05-17'
 title: 'Can I Take This Issue?'
 ---
 
@@ -182,7 +182,24 @@ Everything can start from the creation of these issues with the issues templates
 * [Description templates on GitLab](https://docs.gitlab.com/ee/user/project/description_templates.html)
 * [Configuring issue templates on GitHub](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
 
-<strong class="text-primary text-xl">Tip: When you don’t assign issues in your repository, it can be reminded in the issue template!</strong>
+<strong class="text-primary text-xl">Tip: When you don’t assign issues in your repository, it can be reminded at the end of the issues!</strong>
+
+At the time of writing, GitHub doesn't provide any options to add some Markdown content at the end of the issues when using issue templates. However, you can use GitHub Actions to do that. Here is an example of a GitHub Action that adds a message for newly created issues:
+
+<div class="card w-full bg-base-100 xs:shadow-xl mb-12 xs:mb-0 not-prose">
+  <div class="card-body p-0 xs:p-8 list-none">
+    <div class="flex justify-between">
+      <h2 class="card-title text-xl xs:text-4xl text-base-content">
+        <a href="https://github.com/Open-reSource/labs-append-markdown-to-issues" class="stretched-link hover:underline font-normal break-all" target="_blank" rel="noopener">
+          <span class="max-w-[50px]">Open-reSource/</span><br/>
+          <strong class="font-bold max-w-[50px]">labs-append-markdown-to-issues</strong>
+        </a>
+      </h2>
+      <img src="https://avatars.githubusercontent.com/u/129324099?s=200&v=4" aria-hidden="true" class="w-[50px] h-[50px] xs:w-[100px] xs:h-[100px] rounded-xl" />
+    </div>
+    <p>[Labs] Automatically append Markdown to issues</p>
+  </div>
+</div>
 
 An infinite way of managing labels is possible. Let's imagine, for example, a "to analyze" label that can be picked up only by a core team member. When this core team member analyzed the issue and provided expectations, clarity, and guidance, the label could be transformed into an "analyzed" label, and a new "ready for dev" label could be applied combined to "high priority" and "low complexity" labels, and a "version 12" label, "bug" or "feature", "core team" if it is reserved for the core team, or "pr welcome" when it is OK for external contributors to work on it. When doing that, contributors can start to help or not, filter the backlog by labels, and the core team can focus on the most important issues. If the workflow is automated, the issue can go to one or another project, be in a roadmap, etc. This is just an example, but you can imagine how powerful it can be.
 
