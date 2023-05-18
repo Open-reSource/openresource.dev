@@ -43,7 +43,9 @@ const allArticles = await getCollection('articles');
         <div class="not-prose">
           <ul class="list-none">
             {
-              allArticles.map(article => 
+              allArticles.sort((a, b) => {
+                return new Date(b.data.creationDate) - new Date(a.data.creationDate)
+              }).map(article =>
                 <li class="flex gap-4">
                   <a class="mr-auto underline text-base-content" href={`/articles/${article.slug}`}>{article.data.title}</a>
                   <span class="ml-auto mb-auto min-w-max inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock mr-2" viewBox="0 0 16 16" aria-hidden="true">
