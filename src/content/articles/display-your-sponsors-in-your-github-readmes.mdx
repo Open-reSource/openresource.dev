@@ -1,0 +1,202 @@
+---
+creationDate: '2023-05-18'
+description: 'Learn how to display the list of your sponsors in your GitHub READMEs thanks to SponsorKit and GitHub Actions.'
+labels: [
+  { label: 'sponsors', class: 'badge-primary' },
+  { label: 'github', class: 'badge-primary' },
+  { label: 'tutorial', class: 'badge-primary' }
+]
+lastUpdateDate: '2023-05-18'
+title: 'Display your sponsors in your GitHub READMEs'
+---
+
+<p class="lead">A simple nice way to reward your sponsors could be to display them in the projects you create on GitHub. And what a better place to do that than in your READMEs? This article will show you how to do that easily!</p>
+
+There are several ways to display your sponsors in your GitHub READMEs, but this article will focus on a single one by using [antfu/sponsorkit](https://github.com/antfu/sponsorkit) toolkit created by [Anthony Fu](https://github.com/antfu).
+
+<div class="card w-full bg-base-100 xs:shadow-xl mb-12 xs:mb-0 not-prose">
+  <div class="card-body p-0 xs:p-8 list-none">
+    <div class="flex justify-between">
+      <h2 class="card-title text-xl xs:text-4xl text-base-content">
+        <a href="https://github.com/antfu/sponsorkit" class="stretched-link hover:underline font-normal break-all" target="_blank" rel="noopener">
+          <span class="max-w-[50px]">antfu/</span><br/>
+          <strong class="font-bold max-w-[50px]">sponsorkit</strong>
+        </a>
+      </h2>
+      <img src="https://avatars.githubusercontent.com/u/11247099?v=4" aria-hidden="true" class="w-[50px] h-[50px] xs:w-[100px] xs:h-[100px] rounded-xl" />
+    </div>
+    <p>💖 Toolkit for generating sponsors images 😄</p>
+  </div>
+</div>
+
+**SponsorKit** is a toolkit for generating sponsors images that supports GitHub Sponsors, Open Collective, Patreon, and Afdian.
+
+And we are going to use it the same way Anthony uses it himself in his [antfu/static](https://github.com/antfu/static) repository.
+
+## Prerequisites
+
+Before starting, you will need to have a GitHub account and have at least one sponsor.
+
+Then, you will need to create a new public repository on GitHub that will host the static files used to display your sponsors in your READMEs. You can name it whatever you want, but we will name it `static` in this article.
+
+Then, you will need to create a new GitHub personal access token (classic) with the `read:org` and `read:user` scopes. You can name it whatever you want, but keep its value in your clipboard because we will need it later. You can find more information about how to create a GitHub token in the [GitHub documentation](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+
+## Content of `static` repository
+
+Once your `static` repository is created, you will need to clone it locally.
+
+Then, the first step will be to copy the entire content of the [antfu/static](https://github.com/antfu/static) repository in your `static` repository. Don't forget the hidden `.gitignore` file, and the hidden `.github` directory.
+
+We are now going to adapt the content of the `static` repository to our needs.
+
+First, please edit the `README.md` file to make it yours.
+
+Second, please edit the `LICENSE` file by keeping the MIT license, and replacing the name of the author by your name.
+
+Then, let's edit the `sponsorkit.config.js` file that contains the configuration of SponsorKit.
+
+Except if you are sponsored by Nuxt, let's remove the `NUXT_LOGO` variable:
+
+```diff
+- const NUXT_LOGO = (width: number, y: number) => `
+- <a xlink:href="https://nuxtlabs.com" class="sponsorkit-link" target="_blank" id="NuxtLabs">
+- <svg x="${(width - 361)/2}" y="${y}" width="361" height="86" viewBox="0 0 361 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+- <path d="M..." fill="white"/>
+- <path d="M..." fill="black"/>
+- </svg>
+- </a>
+-`
+```
+
+And the corresponding special sponsors configuration:
+
+```diff
+    {
+      title: 'Special Sponsor',
+      monthlyDollars: Infinity,
+-     composeAfter(compose,_,config) {
+-       if (config.filter?.({ monthlyDollars: Infinity } as any, []) !== false) { 
+-         compose
+-           .addSpan(20)
+-           .addText('Special Sponsor', 'sponsorkit-tier-title')
+-           .addSpan(10)
+-           .addRaw(NUXT_LOGO(config.width!, compose.height))
+-           .addSpan(130)
+-       }
+-     }
+    },
+```
+
+Obviously, you can play with the configuration after that to adapt it to your needs.
+
+Now, in order to run it locally, you will need to install the dependencies by running `npm i` in your terminal.
+
+The last step is to create a `.env` file at the root of your `static` repository with the following content:
+
+```
+; GitHub provider.
+; Token requires the `read:user` and `read:org` scopes.
+SPONSORKIT_GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SPONSORKIT_GITHUB_LOGIN=username
+```
+
+* `SPONSORKIT_GITHUB_TOKEN` is the GitHub token you created earlier.
+* `SPONSORKIT_GITHUB_LOGIN` is your GitHub username.
+
+The complete documentation of this `.env` file is available in the [SponsorKit usage](https://github.com/antfu/sponsorkit/#usage).
+
+The final step is to run `sh build.sh` in your terminal to generate the static files:
+
+```sh
+ju ߷ ~/j/static ➤ (main) sh build.sh                                                                                                                                                          	(0.060674 hrs)
+                                                                                                                                                                                                  	17:48:16
+SponsorKit v0.8.3
+
+✔ Loaded from cache ./.cache.json                                                                                                                                                                 	17:48:16
+✔ Wrote to ./sponsors.json                                                                                                                                                                        	17:48:16
+ℹ Composing SVG...                                                                                                                                                                                	17:48:16
+✔ Wrote to ./sponsors.svg                                                                                                                                                                         	17:48:16
+✔ Wrote to ./sponsors.png                                                                                                                                                                         	17:48:16
+                                                                                                                                                                                                  	17:48:17
+SponsorKit v0.8.3
+
+✔ Loaded from cache ./.cache.json                                                                                                                                                                 	17:48:17
+✔ Wrote to ./sponsors.wide.json                                                                                                                                                                   	17:48:17
+ℹ Composing SVG...                                                                                                                                                                                	17:48:17
+✔ Wrote to ./sponsors.wide.svg                                                                                                                                                                    	17:48:17
+✔ Wrote to ./sponsors.wide.png                                                                                                                                                                    	17:48:17
+                                                                                                                                                                                                  	17:48:17
+SponsorKit v0.8.3
+
+✔ Loaded from cache ./.cache.json                                                                                                                                                                 	17:48:17
+✔ Wrote to ./sponsors.part1.json                                                                                                                                                                  	17:48:17
+ℹ Composing SVG...                                                                                                                                                                                	17:48:17
+✔ Wrote to ./sponsors.part1.svg                                                                                                                                                                   	17:48:17
+✔ Wrote to ./sponsors.part1.png                                                                                                                                                                   	17:48:18
+                                                                                                                                                                                                  	17:48:18
+SponsorKit v0.8.3
+
+✔ Loaded from cache ./.cache.json                                                                                                                                                                 	17:48:18
+✔ Wrote to ./sponsors.part2.json                                                                                                                                                                  	17:48:18
+ℹ Composing SVG...                                                                                                                                                                                	17:48:18
+✔ Wrote to ./sponsors.part2.svg                                                                                                                                                                   	17:48:18
+✔ Wrote to ./sponsors.part2.png
+```
+
+All the images are now generated in your `static` repository. You can check them out in your file explorer.
+
+**Warning**: Once it's done, please don't forget to remove your GitHub token from the `.env` file for security reasons. You won't probably never re-run it from your local machine.
+
+## Configure the Github Action
+
+Now that we have our `static` repository ready, we are going to configure the GitHub Action that will run it every day, for each push on the `main` branch, or even manually.
+
+This is really simple since it is already done in `.github/workflows/scheduler.yml` file.
+
+You just need to do the following changes:
+
+```diff
+  push:
+-   branches: [ master ]
++   branches: [ main ]
+```
+
+```diff
+- SPONSORKIT_GITHUB_LOGIN: antfu
++ SPONSORKIT_GITHUB_LOGIN: username
+```
+
+* `SPONSORKIT_GITHUB_LOGIN` is your GitHub username.
+* `main` is the branch on which the GitHub Action will run. You can change it if you want but it is now the default branch name on GitHub.
+
+Then, you need to create a GitHub project secret for your `static` project. To do so, go to your repository settings, then to the `Secrets and variables` menu, and create a new repository secret named `SPONSORS_TOKEN` whose value is the GitHub token you created earlier (that is hopefully still in your clipboard).
+
+## Everything's Ready!
+
+That's it! You can now commit and push your changes to your `static` repository.
+
+The GitHub Action will run automatically since it is configured to run on each push on the `main` branch.
+
+## Use the Generated Images in Your READMEs
+
+Now that the GitHub Action has run, you can use the generated images in your READMEs.
+
+For example, you can use the `sponsors.svg` image in your `README.md` file by adding (replace `username` by your GitHub username):
+
+```html
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/username/static/sponsors.svg">
+	<img src='https://cdn.jsdelivr.net/gh/username/static/sponsors.svg'/>
+  </a>
+</p>
+```
+
+**Warning**: GitHub can take a while to render the image in your README. If you don't see it, wait and refresh the page. On my side, it took around 10 minutes to be displayed. As long as the `https://cdn.jsdelivr.net/gh/username/static/sponsors.svg` URL is showing the image, don't worry, it will be displayed in your README soon.
+
+## Final Result
+
+We don't have (yet) any sponsors specifically for Open &lcub;re&rcub;Source, so you can check my own personal sponsors list generated by following this article:
+
+<img src="https://cdn.jsdelivr.net/gh/julien-deramond/static/sponsors.svg" alt="Julien Déramond sponsors list" />
+
+And find it integrated in one of my projects: https://github.com/julien-deramond/update-issue-body#sponsors.
