@@ -6,13 +6,13 @@ labels: [
   { label: 'github', class: 'badge-primary' },
   { label: 'tutorial', class: 'badge-primary' }
 ]
-lastUpdateDate: '2023-05-18'
+lastUpdateDate: '2023-05-19'
 title: 'Display your sponsors in your GitHub READMEs'
 ---
 
-<p class="lead">A simple nice way to reward your sponsors could be to display them in the projects you create on GitHub. And what a better place to do that than in your READMEs? This article will show you how to do that easily!</p>
+<p class="lead">A simple nice way to reward your sponsors could be to showcase them in the projects you create on GitHub. And what a better place to do that than in your READMEs? This article will show you how to do that easily!</p>
 
-There are several ways to display your sponsors in your GitHub READMEs, but this article will focus on a single one by using [antfu/sponsorkit](https://github.com/antfu/sponsorkit) toolkit created by [Anthony Fu](https://github.com/antfu).
+There are several ways to display your sponsors in your GitHub READMEs, but this article will focus on a single one by using [SponsorKit](https://github.com/antfu/sponsorkit) created by [Anthony Fu](https://github.com/antfu).
 
 <div class="card w-full bg-base-100 xs:shadow-xl mb-12 xs:mb-0 not-prose">
   <div class="card-body p-0 xs:p-8 list-none">
@@ -31,67 +31,100 @@ There are several ways to display your sponsors in your GitHub READMEs, but this
 
 **SponsorKit** is a toolkit for generating sponsors images that supports GitHub Sponsors, Open Collective, Patreon, and Afdian.
 
-And we are going to use it the same way Anthony uses it himself in his [antfu/static](https://github.com/antfu/static) repository.
+Here's how Anthony uses it himself in [antfu/unplugin-auto-import README](https://github.com/antfu/unplugin-auto-import#sponsors).
+
+Let's do our own sponsors image showcasing our GitHub sponsors!
 
 ## Prerequisites
 
 Before starting, you will need to have a GitHub account and have at least one sponsor.
 
-Then, you will need to create a new public repository on GitHub that will host the static files used to display your sponsors in your READMEs. You can name it whatever you want, but we will name it `static` in this article.
+Then, you will need to create a new GitHub personal access token (classic) with the `read:org`, and `read:user` scopes that you can name whatever you want, and keep its value somewhere for the next steps of this tutorial.
 
-Then, you will need to create a new GitHub personal access token (classic) with the `read:org` and `read:user` scopes. You can name it whatever you want, but keep its value in your clipboard because we will need it later. You can find more information about how to create a GitHub token in the [GitHub documentation](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+You can find more information about how to create a GitHub token in the [GitHub documentation](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
-## Content of `static` repository
+## Create Your Repository
 
-Once your `static` repository is created, you will need to clone it locally.
+In order to facilitate the process, we have created for you a template repository that you can use to create your own repository: https://github.com/Open-reSource/sponsorkit-starter.
 
-Then, the first step will be to copy the entire content of the [antfu/static](https://github.com/antfu/static) repository in your `static` repository. Don't forget the hidden `.gitignore` file, and the hidden `.github` directory.
+<div class="card w-full bg-base-100 xs:shadow-xl mb-12 xs:mb-0 not-prose">
+  <div class="card-body p-0 xs:p-8 list-none">
+    <div class="flex justify-between">
+      <h2 class="card-title text-xl xs:text-4xl text-base-content">
+        <a href="https://github.com/Open-reSource/sponsorkit-starter" class="stretched-link hover:underline font-normal break-all" target="_blank" rel="noopener">
+          <span class="max-w-[50px]">Open-reSource/</span><br/>
+          <strong class="font-bold max-w-[50px]">sponsorkit-starter</strong>
+        </a>
+      </h2>
+      <img src="https://avatars.githubusercontent.com/u/129324099?s=200&v=4" aria-hidden="true" class="w-[50px] h-[50px] xs:w-[100px] xs:h-[100px] rounded-xl" />
+    </div>
+    <p>Starter template for SponsorKit</p>
+  </div>
+</div>
 
-We are now going to adapt the content of the `static` repository to our needs.
+### From the Starter Template
 
-First, please edit the `README.md` file to make it yours.
+You can click on the "Use this template" button to create your own repository.
 
-Second, please edit the `LICENSE` file by keeping the MIT license, and replacing the name of the author by your name.
+Then, you will need to fill the form with the name of your repository, a description, and choose if you want to make it public or private. Click on the "Create repository from template" button to create your repository.
 
-Then, let's edit the `sponsorkit.config.js` file that contains the configuration of SponsorKit.
+It will launch a GitHub Action that will fail, but don't worry, we will fix that in the next steps.
 
-Except if you are sponsored by Nuxt, let's remove the `NUXT_LOGO` variable:
+### From a New Repository
 
-```diff
-- const NUXT_LOGO = (width: number, y: number) => `
-- <a xlink:href="https://nuxtlabs.com" class="sponsorkit-link" target="_blank" id="NuxtLabs">
-- <svg x="${(width - 361)/2}" y="${y}" width="361" height="86" viewBox="0 0 361 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-- <path d="M..." fill="white"/>
-- <path d="M..." fill="black"/>
-- </svg>
-- </a>
--`
+It is also possible to create your repository from scratch, clone it locally, and then running the following command:
+
+```sh
+npx degit Open-reSource/sponsorkit-starter
 ```
 
-And the corresponding special sponsors configuration:
+## Configure Your Repository
 
-```diff
-    {
-      title: 'Special Sponsor',
-      monthlyDollars: Infinity,
--     composeAfter(compose,_,config) {
--       if (config.filter?.({ monthlyDollars: Infinity } as any, []) !== false) { 
--         compose
--           .addSpan(20)
--           .addText('Special Sponsor', 'sponsorkit-tier-title')
--           .addSpan(10)
--           .addRaw(NUXT_LOGO(config.width!, compose.height))
--           .addSpan(130)
--       }
--     }
-    },
-```
+Your new repository is now created, and should contain the following files:
 
-Obviously, you can play with the configuration after that to adapt it to your needs.
+* `.github/workflows/scheduler.yml` that runs the SponsorKit action on a schedule every day, for each merge on the main branch, or manually.
+* `.env.example` as described in [SponsorKit usage](https://github.com/antfu/sponsorkit/#usage).
+* `build.sh` script to generate the sponsors images.
+* `package.json` relying on the latest version of SponsorKit and containing the build script.
+* `sponsor.config.ts` that contains the configuration for the generation of the sponsors images.
 
-Now, in order to run it locally, you will need to install the dependencies by running `npm i` in your terminal.
+### Change Default Permissions of GITHUB_TOKEN
 
-The last step is to create a `.env` file at the root of your `static` repository with the following content:
+First important thing to do is to change the default permissions of the `GITHUB_TOKEN` that is used by the GitHub Action to commit and push the generated sponsors images.
+
+It can be changed by going to your repository settings, then to the "Actions" section, and choose "Read an write permissions" for the "Workflow permissions" option.
+
+You can find more information about this configuration in the [GitHub documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#configuring-the-default-github_token-permissions).
+
+### Set up the environment variable
+
+By looking at `.github/worfklows/scheduler.yml`, we can see that it relies on a `${{ secrets.SPONSORS_TOKEN }}` environment variable.
+
+We will need to set it up in the GitHub repository settings with "SPONSORS_TOKEN" as a name, and with the value of the GitHub personal access token that we have created in the prerequisites.
+
+You can find more information about how to create a new repository secret in the [GitHub documentation](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository).
+
+### Configure the GitHub Action
+
+Either after having cloned your repository locally, or directly on GitHub, you will need to edit the `.github/worfklows/scheduler.yml` to indicate your GitHub username as a value for "SPONSORKIT_GITHUB_LOGIN".
+
+Commit and push your changes.
+
+## Check Your Generated Images
+
+This latter change will trigger the GitHub Action that will generate your sponsors images, commit, and push them at the root level of your repository with the message _" chore: update sponsors.svg"_.
+
+For example, you can see the generated sponsors images of the [julien-deramond/static](https://github.com/julien-deramond/static) repository created from this same template.
+
+## (Optional) Generate The Images Locally
+<details>
+<summary>More information</summary>
+
+It might be useful to know, even if rarely useful, it is also possible to run it locally.
+
+You will need to install the dependencies by running `npm i` in your terminal.
+
+Then, copy `.env.example` to `.env` still at the root level of your repository with the following content:
 
 ```
 ; GitHub provider.
@@ -103,12 +136,11 @@ SPONSORKIT_GITHUB_LOGIN=username
 * `SPONSORKIT_GITHUB_TOKEN` is the GitHub token you created earlier.
 * `SPONSORKIT_GITHUB_LOGIN` is your GitHub username.
 
-The complete documentation of this `.env` file is available in the [SponsorKit usage](https://github.com/antfu/sponsorkit/#usage).
 
-The final step is to run `sh build.sh` in your terminal to generate the static files:
+The final step is to run `npm run build` in your terminal to generate the static files:
 
 ```sh
-ju ߷ ~/j/static ➤ (main) sh build.sh                                                                                                                                                          	(0.060674 hrs)
+ju ߷ ~/j/static ➤ (main) npm run build                                                                                                                                                          	(0.060674 hrs)
                                                                                                                                                                                                   	17:48:16
 SponsorKit v0.8.3
 
@@ -143,39 +175,10 @@ SponsorKit v0.8.3
 ✔ Wrote to ./sponsors.part2.png
 ```
 
-All the images are now generated in your `static` repository. You can check them out in your file explorer.
+All the images are now generated at the root level of your repository. You can check them out in your file explorer.
 
-**Warning**: Once it's done, please don't forget to remove your GitHub token from the `.env` file for security reasons. You won't probably never re-run it from your local machine.
-
-## Configure the Github Action
-
-Now that we have our `static` repository ready, we are going to configure the GitHub Action that will run it every day, for each push on the `main` branch, or even manually.
-
-This is really simple since it is already done in `.github/workflows/scheduler.yml` file.
-
-You just need to do the following changes:
-
-```diff
-  push:
--   branches: [ master ]
-+   branches: [ main ]
-```
-
-```diff
-- SPONSORKIT_GITHUB_LOGIN: antfu
-+ SPONSORKIT_GITHUB_LOGIN: username
-```
-
-* `SPONSORKIT_GITHUB_LOGIN` is your GitHub username.
-* `main` is the branch on which the GitHub Action will run. You can change it if you want but it is now the default branch name on GitHub.
-
-Then, you need to create a GitHub project secret for your `static` project. To do so, go to your repository settings, then to the `Secrets and variables` menu, and create a new repository secret named `SPONSORS_TOKEN` whose value is the GitHub token you created earlier (that is hopefully still in your clipboard).
-
-## Everything's Ready!
-
-That's it! You can now commit and push your changes to your `static` repository.
-
-The GitHub Action will run automatically since it is configured to run on each push on the `main` branch.
+**Warning**: Once it's done, please don't forget to remove at some point your GitHub token from the `.env` file for security reasons. You won't probably never re-run it from your local machine.
+</details>
 
 ## Use the Generated Images in Your READMEs
 
