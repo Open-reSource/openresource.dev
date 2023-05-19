@@ -74,7 +74,7 @@ Good pull requests—patches, improvements, new features—are a fantastic help.
 
 **Do not create a Pull Request with new content.** New content in the guide (modules or chapters) or in the articles are provided only by the core team.
 
-**However**, if existing content can be improved, Pull Requests are welcome! Notice that in this case, this work is going to be licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+**However**, if existing content can be improved, Pull Requests are welcome! Notice that in this case, this work is going to be licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 Adhering to the following process is the best way to get your work included in the project:
 
@@ -118,9 +118,9 @@ Adhering to the following process is the best way to get your work included in t
 
 7. [Open a Pull Request](https://help.github.com/articles/about-pull-requests/) with a clear title and description against the `main` branch.
 
-**IMPORTANT**: By submitting a patch, you agree to allow the project owners to license your work under the terms of the [MIT License](../LICENSE) (if it includes code changes) and under the terms of the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (if it includes content changes).
+**IMPORTANT**: By submitting a patch, you agree to allow the project owners to license your work under the terms of the [MIT License](../LICENSE) (if it includes code changes) and under the terms of the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (if it includes content changes).
 
 ## License
 
 By contributing your code, you agree to license your contribution under the [MIT License](../LICENSE).
-By contributing to the documentation, you agree to license your contribution under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+By contributing to the documentation, you agree to license your contribution under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).

@@ -62,6 +62,6 @@ Get update on Open {re}Source's development and chat with the project maintainer
 
 Code released under the [MIT License](https://github.com/Open-reSource/openresource.dev/blob/main/LICENSE).
 
-Content (including images) released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/):
+Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
 * `public/images/` directory
 * `src/content/articles` and `src/content/modules` directories

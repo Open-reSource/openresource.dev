@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import readingTime from 'reading-time';
 import { getCollection } from 'astro:content';
 import Feedback from '../../components/Feedback.astro';
+import CreativeCommonMention from '../../components/CreativeCommonMention.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('articles');
@@ -34,6 +35,7 @@ const { Content } = await entry.render();
         <Content />
         <hr>
         <Feedback id={entry.id} type="articles" />
+        <CreativeCommonMention />
       </div>
     </div>
   </div>

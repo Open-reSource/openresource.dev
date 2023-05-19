@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import readingTime from 'reading-time';
 import { getCollection } from 'astro:content';
 import Feedback from '../../components/Feedback.astro';
+import CreativeCommonMention from '../../components/CreativeCommonMention.astro';
 
 export async function getStaticPaths() {
   const modulesEntries = await getCollection('modules', ({ data }) => {
@@ -109,6 +110,7 @@ const { Content } = await entry.render();
           <Content />
           <hr>
           <Feedback id={entry.id} type="modules" />
+          <CreativeCommonMention />
           <div class="flex flex-col xs:flex-row justify-center gap-5 sm:mt-32 items-center mt-16">
             {
               entry.data.id > 1 && (
