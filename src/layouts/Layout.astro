@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../global.css';
 import ProgressScroll from '../components/ProgressScroll.astro';
+import SkipLink from '../components/SkipLink.astro';
 
 export interface Props {
 	description: string;
@@ -45,8 +46,9 @@ const { home = false, title, description, progressScroll = false } = Astro.props
 		<title>Open &lcub;re&rcub;Source - {title}</title>
 	</head>
 	<body>
+    <SkipLink />
 		<Header />
-		<main class={home ? `px-0 pb-0` : `mx-auto max-w-7xl px-2 sm:px-6 lg:px-8`}>
+		<main class={home ? `px-0 pb-0` : `mx-auto max-w-7xl px-2 sm:px-6 lg:px-8`} id="content">
 			<slot />
 		</main>
 		<Footer divider={ !home } />
