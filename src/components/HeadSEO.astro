@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getOgImageUrl } from '../util/getOgImageUrl';
+
+export interface Props {
+	canonicalURL: URL;
+}
+
+const { canonicalURL } = Astro.props;
+const ogImageUrl = getOgImageUrl(canonicalURL.pathname, !!Astro.params.fallback);
+
+const imageSrc = ogImageUrl ?? ''; // TODO: Add a default image (e.g. default-og-image.png)
+const canonicalImageSrc = new URL(imageSrc, Astro.site);
+---
+<!-- OpenGraph Tags -->
+<meta property="og:image" content={canonicalImageSrc} />
+
+<meta property="twitter:image" content={canonicalImageSrc} />
