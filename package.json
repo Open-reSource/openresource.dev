@@ -12,7 +12,7 @@
     "update:showcase": "node scripts/update-showcase.mjs"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^2.1.4",
+    "@astrojs/markdown-remark": "^2.2.1",
     "@astrojs/mdx": "^0.19.1",
     "@astrojs/rss": "^2.4.1",
     "@astrojs/sitemap": "^1.2.2",
