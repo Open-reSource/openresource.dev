@@ -121,3 +121,8 @@ main {
 	outline-offset: 2px;
 	box-shadow: hsl(var(--b1)) 0 0 0 2px;
 }
+
+::selection {
+	background: hsl(var(--p));
+	color: hsl(var(--pc));
+}
