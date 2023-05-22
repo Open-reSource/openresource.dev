@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/markdown-remark": "^2.1.4",
     "@astrojs/mdx": "^0.19.1",
-    "@astrojs/rss": "^2.4.1",
+    "@astrojs/rss": "^2.4.2",
     "@astrojs/sitemap": "^1.2.2",
     "@astrojs/tailwind": "^3.1.2",
     "@astrojs/vercel": "^3.3.0",
