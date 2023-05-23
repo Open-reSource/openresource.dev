@@ -43,6 +43,7 @@ const { home = false, title, description, progressScroll = false } = Astro.props
 		<link rel="manifest" href="/site.webmanifest">
 		<link rel="sitemap" href="/sitemap-index.xml">
 		<link href="https://fosstodon.org/@openresource" rel="me">
+    <link rel="preconnect" href="https://H12KLKNKCO-dsn.algolia.net" crossorigin />
 		<title>Open &lcub;re&rcub;Source - {title}</title>
 	</head>
 	<body>
@@ -57,6 +58,18 @@ const { home = false, title, description, progressScroll = false } = Astro.props
 </html>
 <script>
 	import { inject } from '@vercel/analytics';
+
+  import docsearch from '@docsearch/js';
+
+  import '@docsearch/css';
+
+  docsearch({
+    appId: 'H12KLKNKCO',
+    container: '#docsearch',
+    indexName: 'openresource',
+    apiKey: '11f67572e786353afae4fb75d30b26a8',
+  });
+
  	inject();
 </script>
 <script>
