@@ -142,38 +142,26 @@ class ShowcaseScraper {
     return this.#query<{ repository: Repository }>(`
       query {
         repository(owner: "${owner}", name: "${name}") {
-          name
-          object(expression: "HEAD:README.md") {
-            ... on Blob {
-              text
-            }
-          }
-          mentionableUsers {
-            totalCount
-          }
+          description
           discussions(states: OPEN) {
             totalCount
-          }
-          nameWithOwner
-          description
-          openGraphImageUrl
-          owner {
-            avatarUrl
-            login
           }
           forkCount
           issues(states: OPEN) {
             totalCount
           }
-          stargazerCount
+          mentionableUsers {
+            totalCount
+          }
+          name
+          owner {
+            avatarUrl
+            login
+          }
           pullRequests(states: OPEN) {
             totalCount
           }
-          languages(first:10) {
-            nodes {
-              name
-            }
-          }
+          stargazerCount
           url
         }
     }`);
