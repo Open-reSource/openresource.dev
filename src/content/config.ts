@@ -1,6 +1,7 @@
 import { z, defineCollection } from 'astro:content';
 
 const articlesCollection = defineCollection({
+  type: 'content',
   schema: z.object({
     creationDate: z.string(),
     description: z.string(),
@@ -16,6 +17,7 @@ const articlesCollection = defineCollection({
 });
 
 const modulesCollection = defineCollection({
+  type: 'content',
   schema: z.object({
     id: z.number(),
     creationDate: z.string().optional(),
@@ -27,7 +29,34 @@ const modulesCollection = defineCollection({
   })
 });
 
+const showcaseLinkSchema = z.discriminatedUnion("type", [
+  z.object({
+    type: z.literal("unknown"),
+    url: z.string().url(),
+  }),
+  z.object({
+    type: z.literal("github"),
+    url: z.string().url()
+  }),
+]);
+
+const showcaseSchema = z.object({
+  author: z.string(),
+  links: showcaseLinkSchema.array(),
+});
+
+const showcaseCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    entries: showcaseSchema.array(),
+  }),
+});
+
 export const collections = {
   'articles': articlesCollection,
-  'modules': modulesCollection
+  'modules': modulesCollection,
+  'showcase': showcaseCollection
 };
+
+export type Showcase = z.infer<typeof showcaseSchema>;
+export type ShowcaseLink = z.infer<typeof showcaseLinkSchema>;

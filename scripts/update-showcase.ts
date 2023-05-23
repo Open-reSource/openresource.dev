@@ -2,11 +2,15 @@
 // https://github.com/withastro/astro.build/blob/main/scripts/update-showcase.mjs#L48
 
 import octokit from "@octokit/graphql";
+import type { Repository } from "@octokit/graphql-schema";
 import ghActions from "@actions/core";
 import { parseHTML } from "linkedom";
 import fs from "node:fs/promises";
 import * as dotenv from "dotenv";
 import gh from 'parse-github-url';
+
+import type { Showcase } from "../src/content/config";
+
 dotenv.config();
 
 class ShowcaseScraper {
@@ -18,12 +22,10 @@ class ShowcaseScraper {
   #repo;
   /** The number of the discussion to use as the data source. */
   #discussion;
+  /** Array of origins that should never be added to the showcase. */
+  #blocklist;
 
-  constructor({
-    org = "Open-reSource",
-    repo = "openresource.dev",
-    discussion = 3,
-  } = {}) {
+  constructor( org: string, repo:string, discussion: number, blockedOrigins: string[]) {
     if (!process.env.GITHUB_TOKEN) {
       throw new Error("GITHUB_TOKEN env variable must be set to run.");
     }
@@ -37,92 +39,82 @@ class ShowcaseScraper {
     this.#org = org;
     this.#repo = repo;
     this.#discussion = discussion;
+    this.#blocklist = new Set(blockedOrigins.map((url) => new URL(url).origin))
   }
 
   /**
    * Run the showcase scraper, extract & filter links from the GitHub discussion, and add them to the repo.
-   * @returns {Promise<void>}
    */
-  async run() {
+  async run(): Promise<void> {
     console.log(
       `Fetching comments from ${this.#org}/${this.#repo} discussion #${
         this.#discussion
       }...`
     );
 
-    const commentHtml = await this.#getDiscussionCommentsHTML();
+    const comments = await this.#getDiscussionCommentsHTML();
 
     console.log("Extracting URLs...");
 
-    const myArray = [];
+    const showcases: Showcase[] = [];
 
-    for (const comment of commentHtml) {
-      const hrefs = await this.#extractHrefs(comment);
+    for (const comment of comments) {
+      const hrefs = this.#filterHrefs(this.#extractHrefs(comment.html))
 
       if (hrefs.length > 0) {
-        const enhancedHrefs = [];
+        const links: Showcase['links'] = [];
         for (const href of hrefs) {
           const ghReference = gh(href);
 
-          if (ghReference.repo !== null) {
+          if (ghReference?.owner && ghReference?.name) {
             console.log(`Adding repository data from ${href}...`);
-            const { repository } = await this.#getRepository({owner: ghReference.owner,name: ghReference.name});
+            const { repository } = await this.#getRepository(ghReference.owner, ghReference.name);
 
-            enhancedHrefs.push( {
+            links.push( {
+              type: 'github',
               url: href,
-              repo: repository
+              // FIXME(HiDeoo) 
+              // repo: repository
             });
           } else {
             console.log(`Adding ${href}...`);
-            enhancedHrefs.push({
+            links.push({
+              type: 'unknown',
               url: href
             });
           }
         }
 
-        myArray.push(enhancedHrefs);
+        if (links.length > 0) {
+          showcases.push({ author: comment.author, links });
+        }
       }
     }
 
-    await this.#saveDataFile(myArray);
+    await this.#saveDataFile(showcases);
 
-    this.setActionOutput(myArray);
+    this.setActionOutput(showcases);
   }
 
   /**
    * Execute a GraphQL query to fetch discussion comments from the GitHub API.
-   * @returns {Promise<{
-   *  repository: {
-   *    discussion: {
-   *      bodyHTML: string;
-   *      comments: {
-   *        pageInfo: {
-   *          startCursor: string;
-   *          endCursor: string;
-   *          hasNextPage: boolean;
-   *        }
-   *        nodes: {
-   *          bodyHTML: string
-   *        }[]
-   *      }
-   *    }
-   *  }
-   * }>}
    */
   #getDiscussionComments({ first = 100, after = "null" } = {}) {
-    return this.#query(`query {
+    return this.#query<{ repository: Repository }>(`query {
     repository(owner: "${this.#org}", name: "${this.#repo}") {
       discussion(number: ${this.#discussion}) {
         bodyHTML
         comments(first: ${first}, after: ${after || "null"}) {
           pageInfo {
-            startCursor
             endCursor
             hasNextPage
-           }
-           nodes {
-             bodyHTML
-           }
+          }
+          nodes {
+            author {
+              login
+            }
+            bodyHTML
+          }
          }
        }
      }
@@ -131,12 +123,9 @@ class ShowcaseScraper {
 
   /**
    * Execute a GraphQL query to fetch repository data from the GitHub API.
-   * @returns {Promise<{
-  *  repository
-  * }>}
   */
-  #getRepository({ owner, name} = {}) {
-    return this.#query(`
+  #getRepository(owner: string, name: string) {
+    return this.#query<{ repository: Repository }>(`
       query {
         repository(owner: "${owner}", name: "${name}") {
           name
@@ -177,31 +166,45 @@ class ShowcaseScraper {
 
   /**
    * Get an array of the HTML of all comments in a specific GitHub Discussion
-   * @returns {Promise<string[]>}
    */
   async #getDiscussionCommentsHTML() {
-    /** @type {string[]} */
-    const allCommentsHTML = [];
+    const allCommentsHTML: { author: string; html: string }[] = [];
 
     let hasNextPage = true;
     let after = "";
     while (hasNextPage) {
       const { repository } = await this.#getDiscussionComments({ after });
-      const { bodyHTML, comments } = repository.discussion;
 
-      comments.nodes.forEach((node) => allCommentsHTML.push(node.bodyHTML));
+      if (!repository.discussion) {
+        break;
+      }
+      
+      const { comments } = repository.discussion;
 
-      hasNextPage = comments.pageInfo.hasNextPage;
-      after = comments.pageInfo.endCursor;
+      comments.nodes?.forEach((node) => {
+        if (!node?.author || !node?.bodyHTML) {
+          return;
+        }
+
+        allCommentsHTML.push({ author: node.author.login, html: node.bodyHTML})
+      });
+
+      const endCursor = comments.pageInfo.endCursor;
+      const hasEndCursor = !!endCursor;
+      hasNextPage = comments.pageInfo.hasNextPage && hasEndCursor
+
+      if (hasNextPage && hasEndCursor) {
+        after = endCursor;
+      }
     }
     return allCommentsHTML;
   }
 
   /**
-   * @param {string} html HTML to parse and extract links from
-   * @returns {string[]} Array of URLs found in link `href` attributes.
+   * @param html HTML to parse and extract links from
+   * @returns Array of URLs found in link `href` attributes.
    */
-  #extractHrefs(html) {
+  #extractHrefs(html: string) : string[] {
     const { document } = parseHTML(html);
     const links = document.querySelectorAll("a");
     const hrefs = [...links]
@@ -211,34 +214,45 @@ class ShowcaseScraper {
   }
 
   /**
-   * Create a JSON file in the `src/data` directory.
-   * @param {string[]} content Content of the showcase sites
-   * @returns {Promise<void>}
+   * Filter out URLs we already added or that are excluded by the list of blocked origins.
+   * @param hrefs Array of URLs as returned by `#extractHrefs`.
    */
-  async #saveDataFile(content) {
-    await fs.writeFile(
-      `src/data/showcase.json`,
-      JSON.stringify(content, null, 2),
-      "utf8"
-    );
+  #filterHrefs(hrefs: string[]) : string[] {
+    return hrefs.filter((href) => {
+			const { origin } = new URL(href)
+			return !this.#blocklist.has(origin)
+		})
+  }
+
+  /**
+   * Create a JSON file in the `src/data` directory.
+   * @param showcases Content of the showcase sites
+   */
+  async #saveDataFile(showcases: Showcase[]) {
+    for (const showcase of showcases) {
+      await fs.writeFile(
+        `src/content/showcase/${showcase.author}.json`,
+        JSON.stringify(showcase, null, 2),
+        "utf8"
+      );
+    }
   }
 
   /**
    * Expose data from this run to GitHub Actions for use in other steps.
    * We set a `prBody` output for use when creating a PR from this run’s changes.
-   * @param {string[][]} myArray
    */
-  setActionOutput(myArray) {
+  setActionOutput(showcases: Showcase[]) {
     const prLines = [
       "This PR is auto-generated by a GitHub action that runs every Monday to update the Open {re}Source showcase with data from GitHub and NPM.",
       "",
     ];
 
-    if (myArray.length > 0) {
+    if (showcases.length > 0) {
       prLines.push(
-        "#### Links added in this PR 🆕",
+        "#### Links in this PR 🆕",
         "",
-        ...myArray.map((content) => `- ${content.map(content => content.url).join(" - ")}`),
+        ...showcases.map((showcase) => `- ${showcase.links.map(content => content.url).join(" - ")}`),
         ""
       );
     }
@@ -251,16 +265,11 @@ class ShowcaseScraper {
   }
 }
 
-const scraper = new ShowcaseScraper({
-  org: "Open-reSource",
-  repo: "openresource.dev",
-  discussion: 3,
-  blockedOrigins: [
-    "https://user-images.githubusercontent.com",
-    "https://camo.githubusercontent.com",
-    "https://openresource.dev",
-    "https://www.openresource.dev",
-  ],
-});
+const scraper = new ShowcaseScraper("Open-reSource", "openresource.dev", 3, [
+  "https://user-images.githubusercontent.com",
+  "https://camo.githubusercontent.com",
+  "https://openresource.dev",
+  "https://www.openresource.dev",
+]);
 
 await scraper.run();

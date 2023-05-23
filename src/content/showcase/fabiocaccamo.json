@@ -1,0 +1,73 @@
+{
+  "author": "fabiocaccamo",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/FCUUID"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/django-admin-interface"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/python-benedict"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/FCFileManager"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/django-colorfield"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/django-treenode"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/django-extra-settings"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/python-fsutil"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/FCIPAddressGeocoder"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/django-freeze"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/python-codicefiscale"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/django-redirects"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/python-fontbro"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/utils.js"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/fabiocaccamo/create-matrix-action"
+    }
+  ]
+}
