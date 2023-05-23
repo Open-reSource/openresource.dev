@@ -77,6 +77,7 @@ export const collections = {
 };
 
 export type Showcase = z.infer<typeof showcaseSchema>;
+export type ShowcaseLink = z.infer<typeof showcaseLinkSchema>;
 export type ShowcaseUnknownLink = z.infer<typeof showcaseUnknownLinkSchema>;
 export type ShowcaseGitHubLink = z.infer<typeof showcaseGitHubLinkSchema>;
 export type ShowcaseGitHubRepoLink = z.infer<typeof showcaseGitHubRepoLinkSchema>;
