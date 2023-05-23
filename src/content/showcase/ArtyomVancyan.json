@@ -2,15 +2,45 @@
   "author": "ArtyomVancyan",
   "links": [
     {
-      "type": "github",
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
+      "contributors": 1,
+      "description": "Video thumbnail generator for modern web video players such as Plyr, Videojs, Flowplayer, Fluid Player, etc.",
+      "discussions": 1,
+      "forks": 4,
+      "issues": 0,
+      "name": "thumbnails",
+      "owner": "pysnippet",
+      "prs": 0,
+      "stars": 7,
       "url": "https://github.com/pysnippet/thumbnails"
     },
     {
-      "type": "github",
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
+      "contributors": 1,
+      "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
+      "discussions": 0,
+      "forks": 2,
+      "issues": 4,
+      "name": "django-forbid",
+      "owner": "pysnippet",
+      "prs": 0,
+      "stars": 9,
       "url": "https://github.com/pysnippet/django-forbid"
     },
     {
-      "type": "github",
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/44609997?v=4",
+      "contributors": 1,
+      "description": "Advanced, highly customizable phone input component for Ant Design.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "name": "antd-phone-input",
+      "owner": "ArtyomVancyan",
+      "prs": 0,
+      "stars": 2,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
     }
   ]

@@ -1,136 +1,51 @@
 ---
-export const prerender = true
+export const prerender = true;
 
-import Layout from '../../layouts/Layout.astro';
-import json from '../../data/showcase.json';
-import gh from 'parse-github-url';
-import ShowcaseBanner from '../../components/ShowcaseBanner.astro';
+import { getCollection } from "astro:content";
 
-const {
-  title = 'Showcase',
-  description = 'Explore what the Open {re}Source community builds for the Open Source world.',
-} = Astro.props;
+import Layout from "../../layouts/Layout.astro";
+import ShowcaseBanner from "../../components/showcase/ShowcaseBanner.astro";
+import ShowcaseGitHubLink from "../../components/showcase/ShowcaseGitHubLink.astro";
+import ShowcaseGitHubRepoLink from "../../components/showcase/ShowcaseGitHubRepoLink.astro";
+import ShowcaseUnknownLink from "../../components/showcase/ShowcaseUnknownLink.astro";
+
+const showcaseEntries = await getCollection("showcase");
+const allShowcaseLinks = showcaseEntries
+  .map((entry) => entry.data.links)
+  .flat();
+
+const title = "Showcase";
+const description =
+  "Explore what the Open {re}Source community builds for the Open Source world.";
 ---
-<Layout title={ title } description={ description }>
-  <div class="bg-base-100 py-8 flex flex-col justify-center relative overflow-hidden lg:py-12">
-    <div class="relative w-full px-6 py-12 bg-base-100 shadow-xl shadow-base-300 ring-1 ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
+
+<Layout title={title} description={description}>
+  <div
+    class="bg-base-100 py-8 flex flex-col justify-center relative overflow-hidden lg:py-12"
+  >
+    <div
+      class="relative w-full px-6 py-12 bg-base-100 shadow-xl shadow-base-300 ring-1 ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28"
+    >
       <div class="mt-8 prose prose-slate mx-auto lg:prose-lg">
-        <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary pb-3">Showcase</h1>
+        <h1
+          class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary pb-3"
+        >
+          Showcase
+        </h1>
         <p class="lead">
-          Explore what the Open &lcub;re&rcub;Source community builds for the Open Source world.
+          Explore what the Open &lcub;re&rcub;Source community builds for the
+          Open Source world.
         </p>
         <div class="flex flex-col gap-5 not-prose text-base-content">
-          {json.map((item) => (
-            item.map((obj) => {
-              const gh_link = gh(obj.url);
+          {allShowcaseLinks.map((link) => {
+            if (link.type === 'github_repo') {
+              return <ShowcaseGitHubRepoLink link={link} />
+            } else if (link.type === 'github') {
+              return <ShowcaseGitHubLink link={link} />
+            }
 
-              if (gh_link.hostname == 'github.com') {
-                if (obj.repo) {
-                  return (
-                  <div class="card w-full bg-base-100 xs:shadow-xl mb-12 xs:mb-0">
-                    <div class="card-body p-0 xs:p-8 list-none">
-                      <div class="flex justify-between">
-                        <h2 class="card-title text-xl xs:text-4xl text-base-content">
-                          <a href={ obj.url } class="stretched-link hover:underline font-normal break-all" target="_blank" rel="noopener">
-                            <span class="max-w-[50px]">{ obj.repo.owner.login }/</span><br>
-                            <strong class="font-bold max-w-[50px]">{ obj.repo.name }</strong>
-                          </a>
-                        </h2>
-                        <img src={obj.repo.owner.avatarUrl} aria-hidden="true" class="w-[50px] h-[50px] xs:w-[100px] xs:h-[100px] rounded-xl" />
-                      </div>
-                      <p>{ obj.repo.description }</p>
-                      <div class="grid grid-cols-2 xs:grid-cols-3 gap-3 mt-6">
-                        <div class="flex flex-row gap-3">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-1" viewBox="0 0 16 16">
-                            <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
-                          </svg>
-                          <div class="flex flex-col">
-                            <span class="text-xl">{obj.repo.mentionableUsers.totalCount}</span>
-                            <span class="text-sm">Contributors</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-row gap-3">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-1" viewBox="0 0 16 16">
-                            <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                          </svg>
-                          <div class="flex flex-col">
-                            <span class="text-xl">{obj.repo.stargazerCount}</span>
-                            <span class="text-sm">Stars</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-row gap-3">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-1" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                          </svg>
-                          <div class="flex flex-col">
-                            <span class="text-xl">{obj.repo.issues.totalCount}</span>
-                            <span class="text-sm">Issues</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-row gap-3">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-1" viewBox="0 0 16 16">
-                            <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                            <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
-                          </svg>
-                          <div class="flex flex-col">
-                            <span class="text-xl">{obj.repo.discussions.totalCount}</span>
-                            <span class="text-sm">Discussions</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-row gap-3">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-1" viewBox="0 0 16 16">
-                            <path d="M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM3 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8.5v3a1.5 1.5 0 0 1 1.5 1.5h5.5a.5.5 0 0 1 0 1H10A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5H.5a.5.5 0 0 1 0-1H6A1.5 1.5 0 0 1 7.5 10V7H2a2 2 0 0 1-2-2V4zm1 0v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm6 7.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5z"/>
-                          </svg>
-                          <div class="flex flex-col">
-                            <span class="text-xl">{obj.repo.forkCount}</span>
-                            <span class="text-sm">Forks</span>
-                          </div>
-                        </div>
-                        <div class="flex flex-row gap-3">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mt-1" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                            <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
-                          </svg>
-                          <div class="flex flex-col">
-                            <span class="text-xl">{obj.repo.pullRequests.totalCount}</span>
-                            <span class="text-sm">Pull Requests</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  );
-                }
-
-                return (
-                <div class="card w-full bg-base-100 xs:shadow-xl">
-                  <div class="card-body p-0 xs:p-8 list-none">
-                    <a href={obj.url} class="flex items-center rounded-md decoration-base-content underline break-all" rel="noopener" target="_blank">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="mr-1 min-w-max" viewBox="0 0 16 16" aria-hidden="true">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                      </svg>
-                      <span>{obj.url}</span>
-                    </a>
-                  </div>
-                </div>
-                )
-              }
-              return (
-              <div class="card w-full bg-base-100 xs:shadow-xl">
-                <div class="card-body p-0 xs:p-8 list-none">
-                  <a href={obj.url} class="flex items-center rounded-md decoration-base-content underline break-all" rel="noopener" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="mr-1 min-w-max" viewBox="0 0 16 16" aria-hidden="true">
-                      <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-                    </svg>
-                    <span>{obj.url}</span>
-                  </a>
-                </div>
-              </div>
-              )
-            })
-          ))}
+            return <ShowcaseUnknownLink link={link} />
+          })}
         </div>
         <ShowcaseBanner classes="mt-8" />
       </div>

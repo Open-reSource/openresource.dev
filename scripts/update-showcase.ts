@@ -25,7 +25,7 @@ class ShowcaseScraper {
   /** Array of origins that should never be added to the showcase. */
   #blocklist;
 
-  constructor( org: string, repo:string, discussion: number, blockedOrigins: string[]) {
+  constructor(org: string, repo: string, discussion: number, blockedOrigins: string[]) {
     if (!process.env.GITHUB_TOKEN) {
       throw new Error("GITHUB_TOKEN env variable must be set to run.");
     }
@@ -39,7 +39,7 @@ class ShowcaseScraper {
     this.#org = org;
     this.#repo = repo;
     this.#discussion = discussion;
-    this.#blocklist = new Set(blockedOrigins.map((url) => new URL(url).origin))
+    this.#blocklist = new Set(blockedOrigins.map((url) => new URL(url).origin));
   }
 
   /**
@@ -59,10 +59,10 @@ class ShowcaseScraper {
     const showcases: Showcase[] = [];
 
     for (const comment of comments) {
-      const hrefs = this.#filterHrefs(this.#extractHrefs(comment.html))
+      const hrefs = this.#filterHrefs(this.#extractHrefs(comment.html));
 
       if (hrefs.length > 0) {
-        const links: Showcase['links'] = [];
+        const links: Showcase["links"] = [];
         for (const href of hrefs) {
           const ghReference = gh(href);
 
@@ -70,17 +70,31 @@ class ShowcaseScraper {
             console.log(`Adding repository data from ${href}...`);
             const { repository } = await this.#getRepository(ghReference.owner, ghReference.name);
 
-            links.push( {
-              type: 'github',
+            links.push({
+              type: "github_repo",
+              avatarUrl: repository.owner.avatarUrl,
+              contributors: repository.mentionableUsers.totalCount,
+              description: repository.description ?? "",
+              discussions: repository.discussions.totalCount,
+              forks: repository.forkCount,
+              issues: repository.issues.totalCount,
+              name: repository.name,
+              owner: repository.owner.login,
+              prs: repository.pullRequests.totalCount,
+              stars: repository.stargazerCount,
+              url: repository.url,
+            });
+          } else if (ghReference?.hostname === "github.com") {
+            console.log(`Adding github link ${href}...`);
+            links.push({
+              type: "github",
               url: href,
-              // FIXME(HiDeoo) 
-              // repo: repository
             });
           } else {
             console.log(`Adding ${href}...`);
             links.push({
               type: 'unknown',
-              url: href
+              url: href,
             });
           }
         }
@@ -123,7 +137,7 @@ class ShowcaseScraper {
 
   /**
    * Execute a GraphQL query to fetch repository data from the GitHub API.
-  */
+   */
   #getRepository(owner: string, name: string) {
     return this.#query<{ repository: Repository }>(`
       query {
@@ -160,6 +174,7 @@ class ShowcaseScraper {
               name
             }
           }
+          url
         }
     }`);
   }
@@ -178,7 +193,7 @@ class ShowcaseScraper {
       if (!repository.discussion) {
         break;
       }
-      
+
       const { comments } = repository.discussion;
 
       comments.nodes?.forEach((node) => {
@@ -186,12 +201,15 @@ class ShowcaseScraper {
           return;
         }
 
-        allCommentsHTML.push({ author: node.author.login, html: node.bodyHTML})
+        allCommentsHTML.push({
+          author: node.author.login,
+          html: node.bodyHTML,
+        });
       });
 
       const endCursor = comments.pageInfo.endCursor;
       const hasEndCursor = !!endCursor;
-      hasNextPage = comments.pageInfo.hasNextPage && hasEndCursor
+      hasNextPage = comments.pageInfo.hasNextPage && hasEndCursor;
 
       if (hasNextPage && hasEndCursor) {
         after = endCursor;
@@ -204,7 +222,7 @@ class ShowcaseScraper {
    * @param html HTML to parse and extract links from
    * @returns Array of URLs found in link `href` attributes.
    */
-  #extractHrefs(html: string) : string[] {
+  #extractHrefs(html: string): string[] {
     const { document } = parseHTML(html);
     const links = document.querySelectorAll("a");
     const hrefs = [...links]
@@ -217,11 +235,11 @@ class ShowcaseScraper {
    * Filter out URLs we already added or that are excluded by the list of blocked origins.
    * @param hrefs Array of URLs as returned by `#extractHrefs`.
    */
-  #filterHrefs(hrefs: string[]) : string[] {
+  #filterHrefs(hrefs: string[]): string[] {
     return hrefs.filter((href) => {
-			const { origin } = new URL(href)
-			return !this.#blocklist.has(origin)
-		})
+      const { origin } = new URL(href);
+      return !this.#blocklist.has(origin);
+    });
   }
 
   /**
