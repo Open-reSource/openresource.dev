@@ -4,6 +4,7 @@
 import octokit from "@octokit/graphql";
 import type { Repository } from "@octokit/graphql-schema";
 import ghActions from "@actions/core";
+import { nameToEmoji } from 'gemoji';
 import { parseHTML } from "linkedom";
 import fs from "node:fs/promises";
 import * as dotenv from "dotenv";
@@ -12,6 +13,8 @@ import gh from 'parse-github-url';
 import type { Showcase } from "../src/content/config";
 
 dotenv.config();
+
+const emojiRegex = /:(\+1|[-\w]+):/g
 
 class ShowcaseScraper {
   /** A GraphQL client that uses our authorization token by default. */
@@ -74,7 +77,7 @@ class ShowcaseScraper {
               type: "github_repo",
               avatarUrl: repository.owner.avatarUrl,
               contributors: repository.mentionableUsers.totalCount,
-              description: repository.description ?? "",
+              description: repository.description ? this.#emojify(repository.description) : "",
               discussions: repository.discussions.totalCount,
               forks: repository.forkCount,
               issues: repository.issues.totalCount,
@@ -268,6 +271,46 @@ class ShowcaseScraper {
     } else {
       console.log(prLines.join("\n"));
     }
+  }
+
+  #emojify(text: string) {
+    const slices: string[] = []
+
+    let position = 0 
+    emojiRegex.lastIndex = 0
+    let match = emojiRegex.exec(text)
+
+    while (match) {
+      const code = match[1]
+
+      // If the code is not in the emoji map, strip it out.
+      if (!(code in nameToEmoji)) {
+        position += code.length + 3
+        match = emojiRegex.exec(text)
+        continue
+      }
+
+      // Get the start and end positions of the emoji code including the colons.
+      const start = match.index
+      const end = start + code.length + 2
+      
+      // Append the text before the emoji if there is any.
+      if (start !== position) {
+        slices.push(text.slice(position, start))
+      }
+
+      // Append the emoji.
+      slices.push(nameToEmoji[code])
+
+      // Update the position and find the next match.
+      position = end
+      match = emojiRegex.exec(text)
+    }
+
+    // Append the text after the last emoji if there is any.
+    slices.push(text.slice(position))
+
+    return slices.join("")
   }
 }
 
