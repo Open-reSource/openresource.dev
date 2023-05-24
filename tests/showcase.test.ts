@@ -130,6 +130,44 @@ test("should collect links from the same user spread across multiple comments", 
   );
 });
 
+test("should dedupe identical links from the same user", async () => {
+  const link = getTestUnknownLink();
+
+  const scraper = getTestScrapper([[link, link]]);
+
+  const showcases = await scraper.run();
+
+  expect(showcases.at(0)?.links).toHaveLength(1);
+  expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: "unknown" });
+});
+
+test("should dedupe identical links from multiple users", async () => {
+  const link = getTestUnknownLink();
+
+  // The second comment from a different user should be ignored as it only contains a duplicate link.
+  let scraper = getTestScrapper([[link], [link]]);
+
+  let showcases = await scraper.run();
+
+  expect(showcases).toHaveLength(1);
+
+  expect(showcases.at(0)?.links).toHaveLength(1);
+  expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: "unknown" });
+
+  // The second comment from a different user should only contain a non-duplicate link.
+  scraper = getTestScrapper([[link], [getTestUnknownLink(), link]]);
+
+  showcases = await scraper.run();
+
+  expect(showcases).toHaveLength(2);
+
+  expect(showcases.at(0)?.links).toHaveLength(1);
+  expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: "unknown" });
+
+  expect(showcases.at(1)?.links).toHaveLength(1);
+  expect(showcases.at(1)?.links.at(0)).not.toMatchObject({ url: link, type: "unknown" });
+});
+
 test("should delete the existing showcase content collection before saving showcases to handle deleted comments", async () => {
   const scraper = getTestScrapper([[getTestUnknownLink(), getTestUnknownLink()]]);
 

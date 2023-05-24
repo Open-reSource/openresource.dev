@@ -56,6 +56,7 @@ export class ShowcaseScraper {
     console.info("Extracting URLs...");
 
     const showcasesKeyedByAuthor = new Map<string, Showcase>();
+    const knownLinks = new Set<string>();
 
     for (const comment of comments) {
       const hrefs = this.#filterHrefs(this.#extractHrefs(comment.html));
@@ -98,9 +99,15 @@ export class ShowcaseScraper {
           }
         }
 
-        if (links.length > 0) {
+        const dedupedLinks = links.filter((link) => !knownLinks.has(link.url));
+
+        if (dedupedLinks.length > 0) {
+          for (const link of dedupedLinks) {
+            knownLinks.add(link.url);
+          }
+
           const existingLinks = showcasesKeyedByAuthor.get(comment.author)?.links ?? [];
-          showcasesKeyedByAuthor.set(comment.author, { author: comment.author, links: [...existingLinks, ...links] });
+          showcasesKeyedByAuthor.set(comment.author, { author: comment.author, links: [...existingLinks, ...dedupedLinks] });
         }
       }
     }
