@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import fs from "node:fs/promises";
 import gh from "parse-github-url";
 import { afterAll, beforeAll, expect, test, vi } from "vitest";
 
@@ -93,6 +94,36 @@ test("should collect links from the same user spread across multiple comments", 
   expect(showcases.at(0)?.links).toHaveLength(3);
   expect(showcases.at(0)?.links).toMatchObject(
     [...author_comment_1_links, ...author_comment_2_links].map((link) => ({ url: link, type: "unknown" }))
+  );
+});
+
+test("should save a showcase file per user", async () => {
+  const author_1 = faker.internet.userName();
+  const author_1_links = [faker.internet.url(), faker.internet.url()];
+  const author_2 = faker.internet.userName();
+  const author_2_links = [faker.internet.url()];
+
+  const scraper = getTestScrapper([
+    { author: author_1, links: author_1_links },
+    { author: author_2, links: author_2_links },
+  ]);
+
+  const writeFileMock = vi.mocked(fs.writeFile).mockReset();
+
+  const showcases = await scraper.run();
+
+  expect(writeFileMock).toHaveBeenCalledTimes(2);
+  expect(writeFileMock).toHaveBeenNthCalledWith(
+    1,
+    `src/content/showcase/${author_1}.json`,
+    JSON.stringify(showcases.at(0), null, 2),
+    "utf8"
+  );
+  expect(writeFileMock).toHaveBeenNthCalledWith(
+    2,
+    `src/content/showcase/${author_2}.json`,
+    JSON.stringify(showcases.at(1), null, 2),
+    "utf8"
   );
 });
 
