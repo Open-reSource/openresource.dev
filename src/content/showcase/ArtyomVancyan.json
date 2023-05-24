@@ -22,7 +22,7 @@
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 0,
       "forks": 2,
-      "issues": 2,
+      "issues": 0,
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
