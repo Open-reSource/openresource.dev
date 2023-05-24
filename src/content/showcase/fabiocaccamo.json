@@ -40,7 +40,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1067,
+      "stars": 1068,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -54,7 +54,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 894,
+      "stars": 893,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -124,7 +124,7 @@
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 264,
+      "stars": 263,
       "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
     },
     {
@@ -221,7 +221,7 @@
       "issues": 0,
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 17,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
