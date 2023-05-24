@@ -27,6 +27,7 @@
 ## Status
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![Integration Status](https://github.com/Open-reSource/openresource.dev/actions/workflows/integration.yml/badge.svg)](https://github.com/Open-reSource/openresource.dev/actions/workflows/integration.yml)
 
 ## Quick Start
 
@@ -38,6 +39,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Run the development server                       |
 | `npm run vercel`          | Run in the same conditions as Vercel             |
 | `npm run update:showcase` | Run the showcase script to gather links from https://github.com/orgs/Open-reSource/discussions/3 |
+| `npm run test`            | Run the tests                                    |
 
 ## Bugs and Feature Requests
 
