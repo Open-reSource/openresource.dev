@@ -58,7 +58,7 @@ test("should collect links", async () => {
 });
 
 test("should identify GitHub links", async () => {
-  const link = "http://github.com/user";
+  const link = "https://github.com/user";
 
   const scraper = getTestScrapper([[link]]);
 
@@ -68,13 +68,27 @@ test("should identify GitHub links", async () => {
 });
 
 test("should identify GitHub repo links", async () => {
-  const link = "http://github.com/user/repo";
+  const link = "https://github.com/user/repo";
 
   const scraper = getTestScrapper([[link]]);
 
   const showcases = await scraper.run();
 
   expect(showcases.at(0)?.links).toMatchObject([{ url: link, type: "github_repo" }]);
+});
+
+test("should sanitize GitHub repo links", async () => {
+  const link_1 = "https://github.com/user_1/repo";
+  const link_2 = "https://github.com/user_2/repo/issues";
+  const link_3 = "https://github.com/user_3/repo/blob/main/README.md";
+  const link_4 = "https://github.com/user_4/repo/pulls?q=is%3Apr+is%3Aopen";
+
+  const scraper = getTestScrapper([[link_1, link_2, link_3, link_4]]);
+
+  const showcases = await scraper.run();
+
+  expect(showcases.at(0)?.links.every((link) => link.type === "github_repo")).toBe(true);
+  expect(showcases.at(0)?.links.every((link) => link.url.match(/^https:\/\/github\.com\/\w+\/repo$/))).toBe(true);
 });
 
 test("should collect links from the same user spread across multiple comments", async () => {
@@ -153,8 +167,8 @@ test("should save a showcase file per user", async () => {
  *
  * ```ts
  * getTestScrapper([
- *  ["http://comment1-link1.com", "http://comment1-link2.com"],
- *  ["http://comment2-link1.com", "http://comment2-link2.com"],
+ *  ["https://comment1-link1.com", "https://comment1-link2.com"],
+ *  ["https://comment2-link1.com", "https://comment2-link2.com"],
  * ]);
  * ```
  *
@@ -162,8 +176,8 @@ test("should save a showcase file per user", async () => {
  *
  * ```ts
  * getTestScrapper([
- *  { author: "comment1-author", links: ["http://comment1-link1.com", "http://comment1-link2.com"] },
- *  { author: "comment2-author", links: ["http://comment2-link1.com", "http://comment2-link2.com"] },
+ *  { author: "comment1-author", links: ["https://comment1-link1.com", "https://comment1-link2.com"] },
+ *  { author: "comment2-author", links: ["https://comment2-link1.com", "https://comment2-link2.com"] },
  * ]);
  * ```
  *
@@ -218,7 +232,7 @@ function getTestScrapper(commentsLinks: TestCommentLinks[]) {
         owner: { avatarUrl: faker.image.url(), login: ghRepoLink.owner },
         pullRequests: { totalCount: getTestRepoStatCount() },
         stargazerCount: getTestRepoStatCount(),
-        url: ghRepoLink.url,
+        url: `https://github.com/${ghRepoLink.owner}/${ghRepoLink.name}`,
       },
     });
   }
