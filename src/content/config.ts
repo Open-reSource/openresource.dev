@@ -77,7 +77,6 @@ export type ShowcaseUnknownLink = z.infer<typeof showcaseUnknownLinkSchema>;
 export type ShowcaseGitHubLink = z.infer<typeof showcaseGitHubLinkSchema>;
 export type ShowcaseGitHubRepoLink = z.infer<typeof showcaseGitHubRepoLinkSchema>;
 
-
 export type DeployEntryArticles = CollectionEntry<'articles'> & {
 	data: z.infer<typeof articleSchema>;
 };
@@ -91,34 +90,3 @@ export const collections = {
   'modules': modulesCollection,
   'showcase': showcaseCollection
 };
-
-/*
-
-content: CollectionEntry<'artickes'>['data'];
-
-
-const docs = defineCollection({
-	schema: z.union([
-		baseSchema,
-		backendSchema,
-		cmsSchema,
-		integrationSchema,
-		migrationSchema,
-		tutorialSchema,
-		deploySchema,
-		recipeSchema,
-	]),
-});
-
-export const baseSchema = z
-	.object({
-		type: z.literal('base').optional().default('base'),
-		title: z.string(),
-		description: z.string().optional(),
-		i18nReady: z.boolean().default(false),
-		githubURL: z.string().url().optional(),
-		hasREADME: z.boolean().optional(),
-	})
-	.strict();
-
-  */
