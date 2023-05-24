@@ -7,11 +7,14 @@ import ghActions from "@actions/core";
 import { nameToEmoji } from "gemoji";
 import { parseHTML } from "linkedom";
 import fs from "node:fs/promises";
+import path from "node:path";
 import gh from "parse-github-url";
 
 import type { Showcase } from "../../src/content/config";
 
 const emojiRegex = /:(\+1|[-\w]+):/g;
+
+const showcaseFileLocation = "src/content/showcase";
 
 export class ShowcaseScraper {
   /** A GraphQL client that uses our authorization token by default. */
@@ -104,7 +107,7 @@ export class ShowcaseScraper {
 
     const showcases = Array.from(showcasesKeyedByAuthor.values());
 
-    await this.#saveDataFile(showcases);
+    await this.#saveDataFiles(showcases);
 
     this.setActionOutput(showcases);
 
@@ -230,12 +233,15 @@ export class ShowcaseScraper {
   }
 
   /**
-   * Create a JSON file in the `src/data` directory.
+   * Clear the existing content collection and create JSON files for each showcase entry.
    * @param showcases Content of the showcase sites
    */
-  async #saveDataFile(showcases: Showcase[]) {
+  async #saveDataFiles(showcases: Showcase[]) {
+    await fs.rm(showcaseFileLocation, { recursive: true, force: true });
+    await fs.mkdir(showcaseFileLocation);
+
     for (const showcase of showcases) {
-      await fs.writeFile(`src/content/showcase/${showcase.author}.json`, JSON.stringify(showcase, null, 2), "utf8");
+      await fs.writeFile(path.join(showcaseFileLocation, `${showcase.author}.json`), JSON.stringify(showcase, null, 2), "utf8");
     }
   }
 
