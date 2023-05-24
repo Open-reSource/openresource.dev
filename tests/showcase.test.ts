@@ -44,16 +44,16 @@ test("should collect links", async () => {
 
   expect(showcases).toHaveLength(2);
 
-  const showcase1 = showcases.at(0);
-  const showcase2 = showcases.at(1);
+  const showcase_1 = showcases.at(0);
+  const showcase_2 = showcases.at(1);
 
-  expect(showcase1?.author).toBe(author_1);
-  expect(showcase1?.links).toHaveLength(2);
-  expect(showcase1?.links).toMatchObject(author_1_links.map((link) => ({ url: link, type: "unknown" })));
+  expect(showcase_1?.author).toBe(author_1);
+  expect(showcase_1?.links).toHaveLength(2);
+  expect(showcase_1?.links).toMatchObject(author_1_links.map((link) => ({ url: link, type: "unknown" })));
 
-  expect(showcase2?.author).toBe(author_3);
-  expect(showcase2?.links).toHaveLength(1);
-  expect(showcase2?.links).toMatchObject(author_3_links.map((link) => ({ url: link, type: "unknown" })));
+  expect(showcase_2?.author).toBe(author_3);
+  expect(showcase_2?.links).toHaveLength(1);
+  expect(showcase_2?.links).toMatchObject(author_3_links.map((link) => ({ url: link, type: "unknown" })));
 });
 
 test("should identify GitHub links", async () => {
@@ -74,6 +74,26 @@ test("should identify GitHub repo links", async () => {
   const showcases = await scraper.run();
 
   expect(showcases.at(0)?.links).toMatchObject([{ url: link, type: "github_repo" }]);
+});
+
+test("should collect links from the same user spread across multiple comments", async () => {
+  const author = faker.internet.userName();
+  const author_comment_1_links = [faker.internet.url()];
+  const author_comment_2_links = [faker.internet.url(), faker.internet.url()];
+
+  const scraper = getTestScrapper([
+    { author: author, links: author_comment_1_links },
+    [faker.internet.url()],
+    { author: author, links: author_comment_2_links },
+  ]);
+
+  const showcases = await scraper.run();
+
+  expect(showcases.at(0)?.author).toBe(author);
+  expect(showcases.at(0)?.links).toHaveLength(3);
+  expect(showcases.at(0)?.links).toMatchObject(
+    [...author_comment_1_links, ...author_comment_2_links].map((link) => ({ url: link, type: "unknown" }))
+  );
 });
 
 /**
