@@ -81,19 +81,19 @@ export class ShowcaseScraper {
               owner: repository.owner.login,
               prs: repository.pullRequests.totalCount,
               stars: repository.stargazerCount,
-              url: repository.url,
+              url: this.#sanitizeUrl(repository.url),
             });
           } else if (ghReference?.hostname === "github.com") {
             console.info(`Adding github link ${href}...`);
             links.push({
               type: "github",
-              url: href,
+              url: this.#sanitizeUrl(href),
             });
           } else {
             console.info(`Adding ${href}...`);
             links.push({
               type: "unknown",
-              url: href,
+              url: this.#sanitizeUrl(href),
             });
           }
         }
@@ -112,6 +112,15 @@ export class ShowcaseScraper {
     this.setActionOutput(showcases);
 
     return showcases;
+  }
+
+  /**
+   * Sanitize a URL by removing any query parameters or hashes.
+   */
+  #sanitizeUrl(url: string) {
+    const parsedUrl = new URL(url);
+
+    return `${parsedUrl.protocol}//${parsedUrl.hostname}${parsedUrl.pathname}`;
   }
 
   /**

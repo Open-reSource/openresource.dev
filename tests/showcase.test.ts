@@ -29,11 +29,11 @@ afterAll(() => {
 
 test("should collect links", async () => {
   const author_1 = faker.internet.userName();
-  const author_1_links = [faker.internet.url(), faker.internet.url()];
+  const author_1_links = [getTestUnknownLink(), getTestUnknownLink()];
   const author_2 = faker.internet.userName();
   const author_2_links: string[] = [];
   const author_3 = faker.internet.userName();
-  const author_3_links = [faker.internet.url()];
+  const author_3_links = [getTestUnknownLink()];
 
   const scraper = getTestScrapper([
     { author: author_1, links: author_1_links },
@@ -58,7 +58,7 @@ test("should collect links", async () => {
 });
 
 test("should identify GitHub links", async () => {
-  const link = "https://github.com/user";
+  const link = getTestGitHubLink("user");
 
   const scraper = getTestScrapper([[link]]);
 
@@ -68,7 +68,7 @@ test("should identify GitHub links", async () => {
 });
 
 test("should identify GitHub repo links", async () => {
-  const link = "https://github.com/user/repo";
+  const link = getTestGitHubLink("user", "repo");
 
   const scraper = getTestScrapper([[link]]);
 
@@ -78,10 +78,10 @@ test("should identify GitHub repo links", async () => {
 });
 
 test("should sanitize GitHub repo links", async () => {
-  const link_1 = "https://github.com/user_1/repo";
-  const link_2 = "https://github.com/user_2/repo/issues";
-  const link_3 = "https://github.com/user_3/repo/blob/main/README.md";
-  const link_4 = "https://github.com/user_4/repo/pulls?q=is%3Apr+is%3Aopen";
+  const link_1 = getTestGitHubLink("user_1", "repo");
+  const link_2 = `${getTestGitHubLink("user_2", "repo")}/issues`;
+  const link_3 = `${getTestGitHubLink("user_3", "repo")}/blob/main/README.md`;
+  const link_4 = `${getTestGitHubLink("user_4", "repo")}/pulls?q=is%3Apr+is%3Aopen`;
 
   const scraper = getTestScrapper([[link_1, link_2, link_3, link_4]]);
 
@@ -91,14 +91,33 @@ test("should sanitize GitHub repo links", async () => {
   expect(showcases.at(0)?.links.every((link) => link.url.match(/^https:\/\/github\.com\/\w+\/repo$/))).toBe(true);
 });
 
+test("should sanitize URLs", async () => {
+  const queryString = `?utm_source=test_source&utm_campaign=test-campaign&utm_medium=test_medium#ads`;
+  const unknownLink = getTestUnknownLink();
+  const ghLink = getTestGitHubLink("user");
+  const ghRepoLink = getTestGitHubLink("user", "repo");
+
+  const scraper = getTestScrapper([
+    [`${unknownLink}${queryString}`, `${ghLink}${queryString}`, `${ghRepoLink}${queryString}`],
+  ]);
+
+  const showcases = await scraper.run();
+
+  const links = showcases.at(0)?.links;
+
+  expect(links?.at(0)?.url).toBe(unknownLink);
+  expect(links?.at(1)?.url).toBe(ghLink);
+  expect(links?.at(2)?.url).toBe(ghRepoLink);
+});
+
 test("should collect links from the same user spread across multiple comments", async () => {
   const author = faker.internet.userName();
-  const author_comment_1_links = [faker.internet.url()];
-  const author_comment_2_links = [faker.internet.url(), faker.internet.url()];
+  const author_comment_1_links = [getTestUnknownLink()];
+  const author_comment_2_links = [getTestUnknownLink(), getTestUnknownLink()];
 
   const scraper = getTestScrapper([
     { author: author, links: author_comment_1_links },
-    [faker.internet.url()],
+    [getTestUnknownLink()],
     { author: author, links: author_comment_2_links },
   ]);
 
@@ -112,7 +131,7 @@ test("should collect links from the same user spread across multiple comments", 
 });
 
 test("should delete the existing showcase content collection before saving showcases to handle deleted comments", async () => {
-  const scraper = getTestScrapper([[faker.internet.url(), faker.internet.url()]]);
+  const scraper = getTestScrapper([[getTestUnknownLink(), getTestUnknownLink()]]);
 
   const rmMock = vi.mocked(fs.rm).mockReset();
   const mkdirMock = vi.mocked(fs.mkdir).mockReset();
@@ -129,9 +148,9 @@ test("should delete the existing showcase content collection before saving showc
 
 test("should save a showcase file per user", async () => {
   const author_1 = faker.internet.userName();
-  const author_1_links = [faker.internet.url(), faker.internet.url()];
+  const author_1_links = [getTestUnknownLink(), getTestUnknownLink()];
   const author_2 = faker.internet.userName();
-  const author_2_links = [faker.internet.url()];
+  const author_2_links = [getTestUnknownLink()];
 
   const scraper = getTestScrapper([
     { author: author_1, links: author_1_links },
@@ -232,7 +251,7 @@ function getTestScrapper(commentsLinks: TestCommentLinks[]) {
         owner: { avatarUrl: faker.image.url(), login: ghRepoLink.owner },
         pullRequests: { totalCount: getTestRepoStatCount() },
         stargazerCount: getTestRepoStatCount(),
-        url: `https://github.com/${ghRepoLink.owner}/${ghRepoLink.name}`,
+        url: getTestGitHubLink(ghRepoLink.owner, ghRepoLink.name),
       },
     });
   }
@@ -242,6 +261,14 @@ function getTestScrapper(commentsLinks: TestCommentLinks[]) {
 
 function getTestRepoStatCount() {
   return faker.number.int(10_000);
+}
+
+function getTestUnknownLink() {
+  return faker.internet.url({ appendSlash: true });
+}
+
+function getTestGitHubLink(owner: string, repo?: string) {
+  return `https://github.com/${owner}${repo ? `/${repo}` : ""}`;
 }
 
 type TestCommentLinks = string[] | { author?: string; links: string[] };
