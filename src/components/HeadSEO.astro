@@ -1,18 +1,46 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import { getOgImageUrl } from '../util/getOgImageUrl';
+import type { CollectionEntry } from "astro:content";
+import { getOgImageUrl } from "../util/getOgImageUrl";
 
 export interface Props {
-	canonicalURL: URL;
+	content: CollectionEntry<'articles' | 'modules'>['data'];
+  canonicalURL: URL;
 }
 
-const { canonicalURL } = Astro.props;
+const { content, canonicalURL } = Astro.props;
+
 const ogImageUrl = getOgImageUrl(canonicalURL.pathname, !!Astro.params.fallback);
 
-const imageSrc = ogImageUrl ?? ''; // TODO: Add a default image (e.g. default-og-image.png)
+const imageSrc = ogImageUrl ?? "site.og.imageSrc"; // TODO: Add a default image (e.g. default-og-image.png)
 const canonicalImageSrc = new URL(imageSrc, Astro.site);
+const imageAlt = imageSrc === ogImageUrl ? '' : "site.og.imageAlt"; // TODO: Add a default image alt (e.g. "Default OG Image")
 ---
-<!-- OpenGraph Tags -->
-<meta property="og:image" content={canonicalImageSrc} />
 
-<meta property="twitter:image" content={canonicalImageSrc} />
+
+<!-- Page Metadata -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content={content?.title ?? "site.title"} /> <!-- TODO: Add a default site title -->
+<meta property="og:type" content="article" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content={canonicalImageSrc} />
+<meta property="og:image:alt" content={imageAlt} />
+<meta
+  name="description"
+  property="og:description"
+  content={content?.description ? content.description : "site.description"}
+/> <!-- TODO: Add a default site description -->
+<meta property="og:site_name" content={"site.title"} /> <!-- TODO: Add a default site title -->
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={"open_resource"} />
+<meta name="twitter:title" content={content?.title ?? 'site.title'} /> <!-- TODO: Add a default site title -->
+<meta
+	name="twitter:description"
+	content={content?.description ? content.description : 'site.description'}
+/> <!-- TODO: Add a default site description -->
+<meta name="twitter:image" content={canonicalImageSrc} />
+<meta name="twitter:image:alt" content={imageAlt} />

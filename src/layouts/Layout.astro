@@ -5,18 +5,20 @@ import '../global.css';
 import ProgressScroll from '../components/ProgressScroll.astro';
 import SkipLink from '../components/SkipLink.astro';
 import HeadSEO from '../components/HeadSEO.astro';
+import type { CollectionEntry } from 'astro:content';
 
 export interface Props {
 	description: string;
 	home?: boolean;
 	title: string;
   progressScroll?: boolean;
+  content: CollectionEntry<'articles'>['data'];
 }
 
 // Ensures the canonicalURL always has a trailing slash.
 const canonicalURL = new URL(Astro.url.pathname.replace(/([^/])$/, '$1/'), Astro.site);
 
-const { home = false, title, description, progressScroll = false } = Astro.props;
+const { home = false, title, description, progressScroll = false, content } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -48,7 +50,7 @@ const { home = false, title, description, progressScroll = false } = Astro.props
 		<link rel="sitemap" href="/sitemap-index.xml">
 		<link href="https://fosstodon.org/@openresource" rel="me">
 		<title>Open &lcub;re&rcub;Source - {title}</title>
-    <HeadSEO canonicalURL={canonicalURL} />
+    <HeadSEO content={content} canonicalURL={canonicalURL} />
 	</head>
 	<body>
     <SkipLink />

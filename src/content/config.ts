@@ -1,31 +1,33 @@
-import { z, defineCollection } from 'astro:content';
+import { z, defineCollection, CollectionEntry } from 'astro:content';
+
+const articleSchema = z.object({
+  creationDate: z.string(),
+  description: z.string(),
+  labels: z.array(z.object(
+    {
+      class: z.string(),
+      label: z.string(),
+    }
+  )),
+  lastUpdateDate: z.string(),
+  title: z.string()
+});
 
 const articlesCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    creationDate: z.string(),
-    description: z.string(),
-    labels: z.array(z.object(
-      {
-        class: z.string(),
-        label: z.string(),
-      }
-    )),
-    lastUpdateDate: z.string(),
-    title: z.string()
-  }),
+  schema: articleSchema
+});
+
+const moduleSchema = z.object({
+  id: z.number(),
+  creationDate: z.string().optional(),
+  description: z.string(),
+  lastUpdateDate: z.string().optional(),
+  title: z.string(),
+  soon: z.boolean().optional(),
 });
 
 const modulesCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    id: z.number(),
-    creationDate: z.string().optional(),
-    description: z.string(),
-    lastUpdateDate: z.string().optional(),
-    title: z.string(),
-    soon: z.boolean().optional(),
-  })
+  schema: moduleSchema,
 });
 
 const showcaseUnknownLinkSchema = z.object({
@@ -69,14 +71,54 @@ const showcaseCollection = defineCollection({
   schema: showcaseSchema,
 });
 
+export type Showcase = z.infer<typeof showcaseSchema>;
+export type ShowcaseLink = z.infer<typeof showcaseLinkSchema>;
+export type ShowcaseUnknownLink = z.infer<typeof showcaseUnknownLinkSchema>;
+export type ShowcaseGitHubLink = z.infer<typeof showcaseGitHubLinkSchema>;
+export type ShowcaseGitHubRepoLink = z.infer<typeof showcaseGitHubRepoLinkSchema>;
+
+
+export type DeployEntryArticles = CollectionEntry<'articles'> & {
+	data: z.infer<typeof articleSchema>;
+};
+
+export type DeployEntryModules = CollectionEntry<'modules'> & {
+	data: z.infer<typeof moduleSchema>;
+};
+
 export const collections = {
   'articles': articlesCollection,
   'modules': modulesCollection,
   'showcase': showcaseCollection
 };
 
-export type Showcase = z.infer<typeof showcaseSchema>;
-export type ShowcaseLink = z.infer<typeof showcaseLinkSchema>;
-export type ShowcaseUnknownLink = z.infer<typeof showcaseUnknownLinkSchema>;
-export type ShowcaseGitHubLink = z.infer<typeof showcaseGitHubLinkSchema>;
-export type ShowcaseGitHubRepoLink = z.infer<typeof showcaseGitHubRepoLinkSchema>;
+/*
+
+content: CollectionEntry<'artickes'>['data'];
+
+
+const docs = defineCollection({
+	schema: z.union([
+		baseSchema,
+		backendSchema,
+		cmsSchema,
+		integrationSchema,
+		migrationSchema,
+		tutorialSchema,
+		deploySchema,
+		recipeSchema,
+	]),
+});
+
+export const baseSchema = z
+	.object({
+		type: z.literal('base').optional().default('base'),
+		title: z.string(),
+		description: z.string().optional(),
+		i18nReady: z.boolean().default(false),
+		githubURL: z.string().url().optional(),
+		hasREADME: z.boolean().optional(),
+	})
+	.strict();
+
+  */
