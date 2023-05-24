@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "vercel": "vercel dev",
     "astro": "astro",
-    "update:showcase": "node scripts/update-showcase.mjs"
+    "update:showcase": "tsx scripts/update-showcase.ts"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^2.2.1",
@@ -21,18 +21,22 @@
     "@vercel/analytics": "^1.0.1",
     "astro": "^2.5.5",
     "daisyui": "^2.51.6",
+    "gemoji": "^8.1.0",
     "tailwindcss": "^3.3.2",
     "theme-change": "^2.5.0"
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
     "@octokit/graphql": "^5.0.6",
+    "@octokit/graphql-schema": "^14.5.0",
     "@tailwindcss/typography": "^0.5.9",
+    "@types/parse-github-url": "^1.0.0",
     "dotenv": "^16.0.3",
     "linkedom": "^0.14.26",
     "parse-github-url": "^1.0.2",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
+    "tsx": "^3.12.7",
     "vercel": "^29.4.0"
   }
 }

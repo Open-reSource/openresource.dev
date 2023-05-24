@@ -34,7 +34,7 @@ jobs:
         with:
           branch: ci/docgen-showcase
           token: ${{ secrets.SHOWCASE_PR_GITHUB_TOKEN }}
-          add-paths: src/data/showcase.json
+          add-paths: src/content/showcase/*.json
           commit-message: "ci: update showcase"
           title: "ci: update showcase"
           body: ${{ steps.showcase.outputs.prBody }}
