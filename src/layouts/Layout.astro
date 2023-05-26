@@ -5,6 +5,8 @@ import '../global.css';
 import ProgressScroll from '../components/ProgressScroll.astro';
 import SkipLink from '../components/SkipLink.astro';
 
+import '@docsearch/css';
+
 export interface Props {
 	description: string;
 	home?: boolean;
@@ -61,13 +63,22 @@ const { home = false, title, description, progressScroll = false } = Astro.props
 
   import docsearch from '@docsearch/js';
 
-  import '@docsearch/css';
-
   docsearch({
     appId: 'H12KLKNKCO',
     container: '#docsearch',
     indexName: 'openresource',
     apiKey: '11f67572e786353afae4fb75d30b26a8',
+    placeholder: 'Search Open {re}Source',
+    getMissingResultsUrl: ({ query }) => {
+      let queryExcerpt = encodeURIComponent(query);
+      const description = encodeURIComponent(`The search query "${query}" did not return any results.`);
+
+      if (queryExcerpt.length > 30) {
+        queryExcerpt = `${queryExcerpt.substring(0, 30)}…`;
+      }
+
+      return `https://github.com/Open-reSource/openresource.dev/issues/new?template=bug_report.yml&title=Search%20missing%20results%20for%20%22${queryExcerpt}%22&what-happened=${description}`;
+    },
   });
 
  	inject();

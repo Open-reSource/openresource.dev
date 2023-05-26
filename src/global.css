@@ -116,7 +116,7 @@ main {
 	opacity: 1;
 }
 
-:focus-visible {
+:focus-visible:not(:is(.DocSearch-Input, .DocSearch-Hit > a)) {
 	outline: 4px solid hsl(var(--bc)) !important;
 	outline-offset: 2px;
 	box-shadow: hsl(var(--b1)) 0 0 0 2px;
@@ -125,4 +125,93 @@ main {
 ::selection {
 	background: hsl(var(--p));
 	color: hsl(var(--pc));
+}
+
+/* https://github.com/algolia/docsearch/blob/066539c2c91c3559dcf3a738c8c998693a02465c/packages/docsearch-css/src/_variables.css */
+.DocSearch {
+	--docsearch-text-color: hsl(var(--bc));
+	--docsearch-highlight-color: hsl(var(--p));
+	--docsearch-container-background: hsl(var(--nf) / 0.5);
+	--docsearch-muted-color: hsl(var(--bc) / 0.7);
+
+	--docsearch-modal-background: hsl(var(--b2));
+	/* https://github.com/saadeghi/daisyui/blob/0bf3f4ead3a560e595be37f1ec9ad6767a55544a/src/components/styled/modal.css#LL10C15-L10C52 */
+	--docsearch-modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  --docsearch-searchbox-focus-background: hsl(var(--b1));
+  --docsearch-searchbox-shadow: inset 0 0 0 2px hsl(var(--p));
+
+	--docsearch-hit-color: hsl(var(--bc));
+  --docsearch-hit-active-color: hsl(var(--pc));
+  --docsearch-hit-background: hsl(var(--b1));
+  --docsearch-hit-shadow: none;
+
+	--docsearch-key-gradient: transparent;
+  --docsearch-key-shadow: none;
+
+	--docsearch-footer-background: hsl(var(--b3));
+  --docsearch-footer-shadow: 0 -1px 0 0 hsl(var(--b1) / 0.4);
+}
+
+.DocSearch.DocSearch-Button {
+	background-color: transparent;
+	border-radius: var(--rounded-btn);
+	margin: 0;
+}
+
+.DocSearch.DocSearch-Button:hover {
+	background-color: hsl(var(--nf));
+	color: hsl(var(--nc));
+	box-shadow: none;
+}
+
+.DocSearch.DocSearch-Button:hover :is(.DocSearch-Search-Icon, .DocSearch-Button-Key) {
+	color: hsl(var(--nc));
+}
+
+.DocSearch.DocSearch-Button:hover .DocSearch-Button-Keys {
+	border-color: hsl(var(--nc) / 0.4);
+}
+
+.DocSearch.DocSearch-Button:focus {
+	box-shadow: none;
+}
+
+.DocSearch .DocSearch-Button-Keys {
+	border: 1px solid hsl(var(--bc) / 0.3);
+	border-radius: calc(var(--rounded-btn) / 1.75);
+	min-width: auto;
+	padding: 0.15rem 0.25rem;
+}
+
+.DocSearch .DocSearch-Button-Key {
+	font-size: 0.75rem;
+	margin-right: 0;
+	padding: 0 0.1rem;
+	top: 0;
+	width: auto;
+}
+
+.DocSearch .DocSearch-Button-Key:first-child {
+	font-size: 1rem;
+}
+
+.DocSearch .DocSearch-Input {
+	outline: none;
+}
+
+.DocSearch .DocSearch-Hit-source {
+	color: hsl(var(--bc));
+}
+
+.DocSearch .DocSearch-Hits mark {
+	color: hsl(var(--s));
+}
+
+.DocSearch .DocSearch-Help a {
+	color: hsl(var(--p));
+}
+
+.DocSearch .DocSearch-Help a:hover {
+	text-decoration: underline;
 }
