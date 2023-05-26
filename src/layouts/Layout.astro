@@ -77,7 +77,7 @@ const { home = false, title, description, progressScroll = false } = Astro.props
         queryExcerpt = `${queryExcerpt.substring(0, 30)}…`;
       }
 
-      return `https://github.com/Open-reSource/openresource.dev/issues/new?template=bug_report.yml&title=Search%20missing%20results%20for%20%22${queryExcerpt}%22&what-happened=${description}`;
+      return `https://github.com/Open-reSource/openresource.dev/issues/new?title=Search%20missing%20results%20for%20%22${queryExcerpt}%22&body=${description}&labels=enhancement,search`
     },
   });
 
