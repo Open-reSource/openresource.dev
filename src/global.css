@@ -154,6 +154,7 @@ main {
 }
 
 .DocSearch.DocSearch-Button {
+	background-color: transparent;
 	border-radius: var(--rounded-btn);
 	margin: 0;
 }
