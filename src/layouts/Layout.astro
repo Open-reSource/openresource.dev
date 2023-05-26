@@ -5,6 +5,8 @@ import '../global.css';
 import ProgressScroll from '../components/ProgressScroll.astro';
 import SkipLink from '../components/SkipLink.astro';
 
+import '@docsearch/css';
+
 export interface Props {
 	description: string;
 	home?: boolean;
@@ -60,8 +62,6 @@ const { home = false, title, description, progressScroll = false } = Astro.props
 	import { inject } from '@vercel/analytics';
 
   import docsearch from '@docsearch/js';
-
-  import '@docsearch/css';
 
   docsearch({
     appId: 'H12KLKNKCO',
