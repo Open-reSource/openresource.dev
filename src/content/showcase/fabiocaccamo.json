@@ -12,7 +12,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1555,
+      "stars": 1556,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -26,7 +26,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 1402,
+      "stars": 1405,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -39,8 +39,8 @@
       "issues": 8,
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1068,
+      "prs": 2,
+      "stars": 1070,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -63,7 +63,7 @@
       "contributors": 25,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 97,
+      "forks": 98,
       "issues": 4,
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
@@ -82,7 +82,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 434,
+      "stars": 435,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -137,7 +137,7 @@
       "issues": 6,
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 141,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -204,7 +204,7 @@
       "description": "🧢 friendly font operations on top of fontTools.",
       "discussions": 0,
       "forks": 2,
-      "issues": 2,
+      "issues": 4,
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 3,
