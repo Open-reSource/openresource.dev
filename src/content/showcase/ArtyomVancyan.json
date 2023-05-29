@@ -21,12 +21,12 @@
       "contributors": 1,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 0,
-      "forks": 2,
-      "issues": 0,
+      "forks": 3,
+      "issues": 1,
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 9,
+      "stars": 18,
       "url": "https://github.com/pysnippet/django-forbid"
     },
     {
