@@ -30,11 +30,17 @@ const AnchorLinkIcon = h(
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap({
-    changefreq: 'weekly',
-    priority: 0.7,
-    lastmod: new Date()
-  }), mdx()],
+  integrations: [
+    tailwind(),
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date()
+    }),
+    mdx({
+      optimize: true,
+    })
+  ],
   output: "server",
   adapter: vercel({
     analytics: true
