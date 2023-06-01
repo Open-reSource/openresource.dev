@@ -1,0 +1,11 @@
+---
+import type { ShowcaseGitHubRepoLink } from "../../content/config";
+
+interface Props {
+  language: ShowcaseGitHubRepoLink["languages"][number];
+}
+
+const { language } = Astro.props;
+---
+
+<span class="badge badge-md">{language.name}</span>
