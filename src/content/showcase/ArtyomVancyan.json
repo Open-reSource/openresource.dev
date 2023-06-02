@@ -10,11 +10,7 @@
       "forks": 4,
       "issues": 0,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 100
-        }
+        "Python"
       ],
       "name": "thumbnails",
       "owner": "pysnippet",
@@ -31,16 +27,8 @@
       "forks": 3,
       "issues": 0,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 98
-        },
-        {
-          "color": "#e34c26",
-          "name": "HTML",
-          "percentage": 2
-        }
+        "Python",
+        "HTML"
       ],
       "name": "django-forbid",
       "owner": "pysnippet",
@@ -57,21 +45,9 @@
       "forks": 0,
       "issues": 0,
       "languages": [
-        {
-          "color": "#3178c6",
-          "name": "TypeScript",
-          "percentage": 78
-        },
-        {
-          "color": "#563d7c",
-          "name": "CSS",
-          "percentage": 14
-        },
-        {
-          "color": "#1d365d",
-          "name": "Less",
-          "percentage": 8
-        }
+        "TypeScript",
+        "CSS",
+        "Less"
       ],
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",

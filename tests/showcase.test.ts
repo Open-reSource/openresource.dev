@@ -240,12 +240,7 @@ describe("GitHub repo link languages", () => {
     const showcase_link_2 = showcase?.links.at(1);
 
     function expectLanguagesToMatch(languages: ShowcaseGitHubRepoLink["languages"], linkLanguages: TestRepoLanguage[]) {
-      expect(languages).toMatchObject(
-        linkLanguages.map((language) => ({
-          color: language.node.color,
-          name: language.node.name,
-        }))
-      );
+      expect(languages).toEqual(linkLanguages.map((language) => language.node.name));
     }
 
     assert(showcase_link_1?.type === "github_repo", "Expected the first link to be a GitHub repo.");
@@ -297,83 +292,7 @@ describe("GitHub repo link languages", () => {
 
     assert(showcase_link?.type === "github_repo", "Expected the link to be a GitHub repo.");
     expect(showcase_link.languages).toHaveLength(1);
-    expect(showcase_link.languages.at(0)?.name).toBe(link_language_1.node.name);
-  });
-
-  test("should return a valid percentage for a single language", async () => {
-    const author = faker.internet.userName();
-
-    const scraper = getTestScrapper([
-      {
-        author,
-        links: [{ languages: [getTestRepoLanguage()], url: getTestGitHubLink(author, "repo") }],
-      },
-    ]);
-
-    const showcases = await scraper.run();
-
-    const showcase = showcases.at(0);
-    const showcase_link = showcase?.links.at(0);
-
-    assert(showcase_link?.type === "github_repo", "Expected the link to be a GitHub repo.");
-    expect(showcase_link.languages.at(0)?.percentage).toBe(100);
-  });
-
-  test("should return valid percentages for multiple languages", async () => {
-    const author = faker.internet.userName();
-
-    const scraper = getTestScrapper([
-      {
-        author,
-        links: [
-          {
-            languages: [
-              { ...getTestRepoLanguage(), size: 1000 },
-              { ...getTestRepoLanguage(), size: 2000 },
-            ],
-            url: getTestGitHubLink(author, "repo"),
-          },
-        ],
-      },
-    ]);
-
-    const showcases = await scraper.run();
-
-    const showcase = showcases.at(0);
-    const showcase_link = showcase?.links.at(0);
-
-    assert(showcase_link?.type === "github_repo", "Expected the link to be a GitHub repo.");
-    expect(showcase_link.languages.at(0)?.percentage).toBe(33);
-    expect(showcase_link.languages.at(1)?.percentage).toBe(67);
-  });
-
-  test("should always accumulate language percentages to 100", async () => {
-    const author = faker.internet.userName();
-
-    const scraper = getTestScrapper([
-      {
-        author,
-        links: [
-          {
-            languages: [
-              { ...getTestRepoLanguage(), size: getTestRepoLanguageSize() },
-              { ...getTestRepoLanguage(), size: getTestRepoLanguageSize() },
-              { ...getTestRepoLanguage(), size: getTestRepoLanguageSize() },
-              { ...getTestRepoLanguage(), size: getTestRepoLanguageSize() },
-            ],
-            url: getTestGitHubLink(author, "repo"),
-          },
-        ],
-      },
-    ]);
-
-    const showcases = await scraper.run();
-
-    const showcase = showcases.at(0);
-    const showcase_link = showcase?.links.at(0);
-
-    assert(showcase_link?.type === "github_repo", "Expected the link to be a GitHub repo.");
-    expect(showcase_link.languages?.reduce((acc, language) => acc + language.percentage, 0)).toBe(100);
+    expect(showcase_link.languages.at(0)).toBe(link_language_1.node.name);
   });
 });
 

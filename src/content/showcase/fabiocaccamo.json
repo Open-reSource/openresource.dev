@@ -10,21 +10,9 @@
       "forks": 226,
       "issues": 2,
       "languages": [
-        {
-          "color": "#438eff",
-          "name": "Objective-C",
-          "percentage": 91
-        },
-        {
-          "color": "#F05138",
-          "name": "Swift",
-          "percentage": 4
-        },
-        {
-          "color": "#701516",
-          "name": "Ruby",
-          "percentage": 5
-        }
+        "Objective-C",
+        "Swift",
+        "Ruby"
       ],
       "name": "FCUUID",
       "owner": "fabiocaccamo",
@@ -39,28 +27,12 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 8,
       "forks": 154,
-      "issues": 12,
+      "issues": 13,
       "languages": [
-        {
-          "color": "#563d7c",
-          "name": "CSS",
-          "percentage": 33
-        },
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 33
-        },
-        {
-          "color": "#f1e05a",
-          "name": "JavaScript",
-          "percentage": 22
-        },
-        {
-          "color": "#e34c26",
-          "name": "HTML",
-          "percentage": 12
-        }
+        "CSS",
+        "Python",
+        "JavaScript",
+        "HTML"
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
@@ -77,21 +49,13 @@
       "forks": 41,
       "issues": 9,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 100
-        },
-        {
-          "color": "#fed659",
-          "name": "Q#",
-          "percentage": 0
-        }
+        "Python",
+        "Q#"
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1073,
+      "stars": 1074,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -103,16 +67,8 @@
       "forks": 140,
       "issues": 4,
       "languages": [
-        {
-          "color": "#438eff",
-          "name": "Objective-C",
-          "percentage": 98
-        },
-        {
-          "color": "#701516",
-          "name": "Ruby",
-          "percentage": 2
-        }
+        "Objective-C",
+        "Ruby"
       ],
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
@@ -129,21 +85,9 @@
       "forks": 98,
       "issues": 4,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 96
-        },
-        {
-          "color": "#e34c26",
-          "name": "HTML",
-          "percentage": 2
-        },
-        {
-          "color": "#f1e05a",
-          "name": "JavaScript",
-          "percentage": 2
-        }
+        "Python",
+        "HTML",
+        "JavaScript"
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
@@ -160,26 +104,14 @@
       "forks": 23,
       "issues": 7,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 91
-        },
-        {
-          "color": "#f1e05a",
-          "name": "JavaScript",
-          "percentage": 8
-        },
-        {
-          "color": "#563d7c",
-          "name": "CSS",
-          "percentage": 1
-        }
+        "Python",
+        "JavaScript",
+        "CSS"
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 445,
+      "stars": 446,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -191,16 +123,8 @@
       "forks": 47,
       "issues": 2,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 100
-        },
-        {
-          "color": "#e34c26",
-          "name": "HTML",
-          "percentage": 0
-        }
+        "Python",
+        "HTML"
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
@@ -217,21 +141,9 @@
       "forks": 24,
       "issues": 3,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 98
-        },
-        {
-          "color": "#f1e05a",
-          "name": "JavaScript",
-          "percentage": 2
-        },
-        {
-          "color": "#563d7c",
-          "name": "CSS",
-          "percentage": 0
-        }
+        "Python",
+        "JavaScript",
+        "CSS"
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
@@ -248,16 +160,8 @@
       "forks": 38,
       "issues": 0,
       "languages": [
-        {
-          "color": "#438eff",
-          "name": "Objective-C",
-          "percentage": 95
-        },
-        {
-          "color": "#701516",
-          "name": "Ruby",
-          "percentage": 5
-        }
+        "Objective-C",
+        "Ruby"
       ],
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
@@ -274,11 +178,7 @@
       "forks": 10,
       "issues": 6,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 100
-        }
+        "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
@@ -295,16 +195,8 @@
       "forks": 17,
       "issues": 1,
       "languages": [
-        {
-          "color": "#438eff",
-          "name": "Objective-C",
-          "percentage": 96
-        },
-        {
-          "color": "#701516",
-          "name": "Ruby",
-          "percentage": 4
-        }
+        "Objective-C",
+        "Ruby"
       ],
       "name": "FCIPAddressGeocoder",
       "owner": "fabiocaccamo",
@@ -321,21 +213,9 @@
       "forks": 15,
       "issues": 3,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 96
-        },
-        {
-          "color": "#e34c26",
-          "name": "HTML",
-          "percentage": 3
-        },
-        {
-          "color": "#f1e05a",
-          "name": "JavaScript",
-          "percentage": 1
-        }
+        "Python",
+        "HTML",
+        "JavaScript"
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
@@ -352,11 +232,7 @@
       "forks": 19,
       "issues": 0,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 100
-        }
+        "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
@@ -373,11 +249,7 @@
       "forks": 2,
       "issues": 0,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 100
-        }
+        "Python"
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
@@ -394,11 +266,7 @@
       "forks": 2,
       "issues": 4,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 100
-        }
+        "Python"
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
@@ -415,11 +283,7 @@
       "forks": 5,
       "issues": 0,
       "languages": [
-        {
-          "color": "#f1e05a",
-          "name": "JavaScript",
-          "percentage": 100
-        }
+        "JavaScript"
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
@@ -436,16 +300,8 @@
       "forks": 1,
       "issues": 0,
       "languages": [
-        {
-          "color": "#3572A5",
-          "name": "Python",
-          "percentage": 94
-        },
-        {
-          "color": "#384d54",
-          "name": "Dockerfile",
-          "percentage": 6
-        }
+        "Python",
+        "Dockerfile"
       ],
       "name": "create-matrix-action",
       "owner": "fabiocaccamo",

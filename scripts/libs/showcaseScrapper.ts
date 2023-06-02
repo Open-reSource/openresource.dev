@@ -337,11 +337,8 @@ export class ShowcaseScraper {
     return slices.join("");
   }
 
-  #getRepoLanguages(repository: Repository): ShowcaseGitHubRepoLink["languages"] {
-    let totalSize = 0;
-    let totalPercentage = 0;
-    const languagesWithSizes: (Omit<ShowcaseGitHubRepoLink["languages"][number], "percentage"> & { size: number })[] =
-      [];
+  #getRepoLanguages(repository: Repository) {
+    const languages: ShowcaseGitHubRepoLink["languages"] = []
 
     for (const language of repository.languages?.edges ?? []) {
       // Languages without a color are very rare but are skipped in the GitHub UI so we might as well skip them here.
@@ -355,25 +352,7 @@ export class ShowcaseScraper {
         continue;
       }
 
-      totalSize += language.size;
-
-      languagesWithSizes.push({
-        color: language.node.color,
-        name: language.node.name,
-        size: language.size,
-      });
-    }
-
-    const languages = languagesWithSizes.map(({ size, ...others }) => {
-      const percentage = Math.round((size / totalSize) * 100);
-
-      totalPercentage += percentage;
-
-      return { ...others, percentage };
-    });
-
-    if (languages.length > 0 && totalPercentage !== 100) {
-      languages[languages.length - 1].percentage += 100 - totalPercentage;
+      languages.push(language.node.name);
     }
 
     return languages;
