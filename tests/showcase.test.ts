@@ -1,9 +1,10 @@
 import { faker } from "@faker-js/faker";
 import fs from "node:fs/promises";
 import gh from "parse-github-url";
-import { afterAll, beforeAll, expect, test, vi } from "vitest";
+import { afterAll, assert, beforeAll, describe, expect, test, vi } from "vitest";
 
 import { ShowcaseScraper } from "../scripts/libs/showcaseScrapper";
+import type { ShowcaseGitHubRepoLink } from "../src/content/config";
 
 // Define a mock query function that will be used by the GraphQL client during the test to return fake data.
 const { queryMock } = vi.hoisted(() => ({ queryMock: vi.fn() }));
@@ -214,11 +215,93 @@ test("should save a showcase file per user", async () => {
   );
 });
 
+describe("GitHub repo link languages", () => {
+  test("should collect languages", async () => {
+    const author = faker.internet.userName();
+    const link_1 = getTestGitHubLink(author, "repo_1");
+    const link_1_languages = [getTestRepoLanguage(), getTestRepoLanguage()];
+    const link_2 = getTestGitHubLink(author, "repo_2");
+    const link_2_languages = [getTestRepoLanguage(), getTestRepoLanguage(), getTestRepoLanguage()];
+
+    const scraper = getTestScrapper([
+      {
+        author,
+        links: [
+          { languages: link_1_languages, url: link_1 },
+          { languages: link_2_languages, url: link_2 },
+        ],
+      },
+    ]);
+
+    const showcases = await scraper.run();
+
+    const showcase = showcases.at(0);
+    const showcase_link_1 = showcase?.links.at(0);
+    const showcase_link_2 = showcase?.links.at(1);
+
+    function expectLanguagesToMatch(languages: ShowcaseGitHubRepoLink["languages"], linkLanguages: TestRepoLanguage[]) {
+      expect(languages).toEqual(linkLanguages.map((language) => language.node.name));
+    }
+
+    assert(showcase_link_1?.type === "github_repo", "Expected the first link to be a GitHub repo.");
+    expect(showcase_link_1.languages).toHaveLength(2);
+    expectLanguagesToMatch(showcase_link_1.languages, link_1_languages);
+
+    assert(showcase_link_2?.type === "github_repo", "Expected the second link to be a GitHub repo.");
+    expect(showcase_link_2.languages).toHaveLength(3);
+    expectLanguagesToMatch(showcase_link_2.languages, link_2_languages);
+  });
+
+  test("should ignore languages with no color", async () => {
+    const author = faker.internet.userName();
+    const link = getTestGitHubLink(author, "repo");
+
+    const scraper = getTestScrapper([
+      {
+        author,
+        links: [{ languages: [{ node: { name: faker.lorem.word() }, size: getTestRepoLanguageSize() }], url: link }],
+      },
+    ]);
+
+    const showcases = await scraper.run();
+
+    const showcase = showcases.at(0);
+    const showcase_link = showcase?.links.at(0);
+
+    assert(showcase_link?.type === "github_repo", "Expected the link to be a GitHub repo.");
+    expect(showcase_link.languages).toHaveLength(0);
+  });
+
+  test("should ignore very small amount of Shell language", async () => {
+    const author = faker.internet.userName();
+    const link = getTestGitHubLink(author, "repo");
+    const link_language_1 = getTestRepoLanguage();
+    const link_language_2 = { node: { color: faker.color.rgb(), name: "Shell" }, size: 200 };
+
+    const scraper = getTestScrapper([
+      {
+        author,
+        links: [{ languages: [link_language_1, link_language_2], url: link }],
+      },
+    ]);
+
+    const showcases = await scraper.run();
+
+    const showcase = showcases.at(0);
+    const showcase_link = showcase?.links.at(0);
+
+    assert(showcase_link?.type === "github_repo", "Expected the link to be a GitHub repo.");
+    expect(showcase_link.languages).toHaveLength(1);
+    expect(showcase_link.languages.at(0)).toBe(link_language_1.node.name);
+  });
+});
+
 /**
  * Return a test instance of the ShowcaseScraper class which will use the provided comments links as the data source.
  *
  * It takes an array of comments links as input, and each comment can be either a flat array of links or an object with
- * the comment author and an array of links.
+ * the comment author and an array of link objects containing the link and optionally the repo languages if the link is
+ * a GitHub repo link.
  *
  * - To generate two comments with various links:
  *
@@ -238,12 +321,26 @@ test("should save a showcase file per user", async () => {
  * ]);
  * ```
  *
- * Note that both approaches can be mixed.
+ * - To generate one comments with a GitHub repo link with specified languages:
+ *
+ * ```ts
+ * getTestScrapper([
+ *  {
+ *    author: "comment1-author",
+ *    links: [{
+ *      languages: […], // See the `TestRepoLanguage` type for the structure.
+ *      url: "https://github.com/owner/repo"
+ *    }]
+ *    },
+ * ]);
+ * ```
+ *
+ * Note that all approaches can be mixed.
  */
 function getTestScrapper(commentsLinks: TestCommentLinks[]) {
   const scraper = new ShowcaseScraper("test-org", "test-repo", 0, []);
 
-  let ghRepoLinks: { name: string; owner: string; url: string }[] = [];
+  let ghRepoLinks: { languages: TestRepoLanguage[]; name: string; owner: string; url: string }[] = [];
 
   const commentsNodes = commentsLinks.map((commentLinks, commentIndex) => {
     const isFlatLinks = Array.isArray(commentLinks);
@@ -254,13 +351,19 @@ function getTestScrapper(commentsLinks: TestCommentLinks[]) {
       author: { login: author },
       bodyHTML: links
         .map((link) => {
-          const ghLink = gh(link);
+          const url = typeof link === "string" ? link : link.url;
+          const languages =
+            typeof link === "string"
+              ? Array.from({ length: faker.number.int(10) }, () => getTestRepoLanguage())
+              : link.languages;
+
+          const ghLink = gh(url);
 
           if (ghLink?.name && ghLink?.owner) {
-            ghRepoLinks.push({ name: ghLink.name, owner: ghLink.owner, url: link });
+            ghRepoLinks.push({ languages: languages ?? [], name: ghLink.name, owner: ghLink.owner, url });
           }
 
-          return `<a href="${link}">${link}</a>`;
+          return `<a href="${url}">${url}</a>`;
         })
         .join(" "),
     };
@@ -284,6 +387,7 @@ function getTestScrapper(commentsLinks: TestCommentLinks[]) {
         discussions: { totalCount: getTestRepoStatCount() },
         forkCount: getTestRepoStatCount(),
         issues: { totalCount: getTestRepoStatCount() },
+        languages: { edges: ghRepoLink.languages },
         mentionableUsers: { totalCount: getTestRepoStatCount() },
         name: ghRepoLink.name,
         owner: { avatarUrl: faker.image.url(), login: ghRepoLink.owner },
@@ -309,4 +413,27 @@ function getTestGitHubLink(owner: string, repo?: string) {
   return `https://github.com/${owner}${repo ? `/${repo}` : ""}`;
 }
 
-type TestCommentLinks = string[] | { author?: string; links: string[] };
+function getTestRepoLanguage(): TestRepoLanguage {
+  return {
+    node: {
+      color: faker.color.rgb(),
+      name: faker.lorem.word(),
+    },
+    size: getTestRepoLanguageSize(),
+  };
+}
+
+function getTestRepoLanguageSize() {
+  return faker.number.int(1_000_000);
+}
+
+type TestCommentLink = string | { languages?: TestRepoLanguage[]; url: string };
+type TestCommentLinks = string[] | { author?: string; links: TestCommentLink[] };
+
+interface TestRepoLanguage {
+  node: {
+    color?: string;
+    name: string;
+  };
+  size: number;
+}

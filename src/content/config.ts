@@ -47,6 +47,7 @@ const showcaseGitHubRepoLinkSchema = z.object({
   discussions: z.number(),
   forks: z.number(),
   issues: z.number(),
+  languages: z.array(z.string()),
   name: z.string(),
   owner: z.string(),
   prs: z.number(),

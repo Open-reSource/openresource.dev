@@ -10,7 +10,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import gh from "parse-github-url";
 
-import type { Showcase } from "../../src/content/config";
+import type { Showcase, ShowcaseGitHubRepoLink } from "../../src/content/config";
 
 const emojiRegex = /:(\+1|[-\w]+):/g;
 
@@ -78,6 +78,7 @@ export class ShowcaseScraper {
               discussions: repository.discussions.totalCount,
               forks: repository.forkCount,
               issues: repository.issues.totalCount,
+              languages: this.#getRepoLanguages(repository),
               name: repository.name,
               owner: repository.owner.login,
               prs: repository.pullRequests.totalCount,
@@ -169,6 +170,15 @@ export class ShowcaseScraper {
           forkCount
           issues(states: OPEN) {
             totalCount
+          }
+          languages (first:10, orderBy: { direction: DESC, field: SIZE }) {
+            edges {
+              size
+              node {
+                color
+                name
+              }
+            }
           }
           mentionableUsers {
             totalCount
@@ -325,5 +335,26 @@ export class ShowcaseScraper {
     slices.push(text.slice(position));
 
     return slices.join("");
+  }
+
+  #getRepoLanguages(repository: Repository) {
+    const languages: ShowcaseGitHubRepoLink["languages"] = []
+
+    for (const language of repository.languages?.edges ?? []) {
+      // Languages without a color are very rare but are skipped in the GitHub UI so we might as well skip them here.
+      if (!language?.node.color) {
+        continue;
+      }
+
+      // In most projects, the shell language is only appearing due to pre-commit hooks so we can safely skip
+      // very small amounts of shell code.
+      if (language.node.name === "Shell" && language.size < 2000) {
+        continue;
+      }
+
+      languages.push(language.node.name);
+    }
+
+    return languages;
   }
 }

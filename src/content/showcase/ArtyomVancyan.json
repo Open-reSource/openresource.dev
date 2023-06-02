@@ -9,6 +9,9 @@
       "discussions": 1,
       "forks": 4,
       "issues": 0,
+      "languages": [
+        "Python"
+      ],
       "name": "thumbnails",
       "owner": "pysnippet",
       "prs": 0,
@@ -22,7 +25,11 @@
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 0,
       "forks": 3,
-      "issues": 1,
+      "issues": 0,
+      "languages": [
+        "Python",
+        "HTML"
+      ],
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
@@ -37,6 +44,11 @@
       "discussions": 0,
       "forks": 0,
       "issues": 0,
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "Less"
+      ],
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
       "prs": 0,
