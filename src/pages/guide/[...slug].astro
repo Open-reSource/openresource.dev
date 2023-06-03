@@ -73,7 +73,7 @@ const { Content } = await entry.render();
           orderedFilteredChapters.map((chapter) => {
             if (chapter.data.soon === true) {
               return (
-                <li class="step"><span class="text-left">{ chapter.data.title } <div class="badge">Soon</div></span></li>
+                <li class="step"><span class="text-left">{ chapter.data.title }<div class="badge ml-1">Soon</div></span></li>
               )
             }
             return (<li class="step"><a class="hover:underline text-left" href={`/guide/${ chapter.slug }`}>{ chapter.data.title }</a></li>)
@@ -133,7 +133,7 @@ const { Content } = await entry.render();
           orderedFilteredChapters.map((chapter) => {
             if (chapter.data.soon === true) {
               return (
-                <li class="step"><span class="text-left">{ chapter.data.title } <div class="badge">Soon</div></span></li>
+                <li class="step"><span class="text-left">{ chapter.data.title }<div class="badge ml-1">Soon</div></span></li>
               )
             } else if (chapter.data.id < entry.data.id) {
               return (
