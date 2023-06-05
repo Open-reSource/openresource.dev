@@ -34,7 +34,7 @@
     "@octokit/graphql-schema": "^14.5.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/parse-github-url": "^1.0.0",
-    "dotenv": "^16.0.3",
+    "dotenv": "^16.1.4",
     "linkedom": "^0.14.26",
     "parse-github-url": "^1.0.2",
     "reading-time": "^1.5.0",
