@@ -41,6 +41,6 @@
     "rehype-autolink-headings": "^6.1.1",
     "tsx": "^3.12.7",
     "vercel": "^30.1.2",
-    "vitest": "^0.31.1"
+    "vitest": "^0.31.4"
   }
 }
