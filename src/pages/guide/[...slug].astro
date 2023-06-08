@@ -63,9 +63,12 @@ const { Content } = await entry.render();
         <span class="font-bold">Module { entry.data.id }</span>
         <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary pb-3">{ entry.data.title }</h1>
         <Content />
-        <a href={`/guide/${ orderedFilteredChapters[0].slug }`} class="btn btn-primary mt-3">Start Reading</a>
+        { orderedFilteredChapters.length > 0 &&
+          <a href={`/guide/${ orderedFilteredChapters[0].slug }`} class="btn btn-primary mt-3">Start Reading</a>
+        }
       </div>
     </div>
+    { orderedFilteredChapters.length > 0 &&
     <div class="mt-10 relative w-full py-10 px-6 bg-base-100 shadow-xl shadow-base-300 ring-1 ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl">
       <h2 class="font-bold text-2xl pb-4">Chapters</h2>
       <ul class="steps steps-vertical">
@@ -81,6 +84,7 @@ const { Content } = await entry.render();
         }
       </ul>
     </div>
+    }
   </div>
 </Layout>
 )}
