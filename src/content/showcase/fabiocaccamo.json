@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 8,
       "forks": 153,
-      "issues": 13,
+      "issues": 14,
       "languages": [
         "CSS",
         "Python",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1416,
+      "prs": 2,
+      "stars": 1417,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,15 +47,15 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
       "forks": 42,
-      "issues": 9,
+      "issues": 8,
       "languages": [
         "Python",
         "Q#"
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 1085,
+      "prs": 2,
+      "stars": 1092,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -65,7 +65,7 @@
       "description": "📱 📂 iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
       "forks": 140,
-      "issues": 4,
+      "issues": 5,
       "languages": [
         "Objective-C",
         "Ruby"
@@ -83,7 +83,7 @@
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
       "forks": 98,
-      "issues": 5,
+      "issues": 4,
       "languages": [
         "Python",
         "HTML",
@@ -91,8 +91,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 492,
+      "prs": 1,
+      "stars": 493,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -110,8 +110,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 459,
+      "prs": 1,
+      "stars": 464,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -128,8 +128,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 362,
+      "prs": 1,
+      "stars": 366,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -147,8 +147,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 343,
+      "prs": 1,
+      "stars": 346,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -182,8 +182,8 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 145,
+      "prs": 1,
+      "stars": 146,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -219,8 +219,8 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 86,
+      "prs": 0,
+      "stars": 87,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -236,8 +236,8 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 61,
+      "prs": 1,
+      "stars": 62,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
@@ -253,8 +253,8 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 54,
+      "prs": 1,
+      "stars": 55,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
@@ -270,8 +270,8 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 39,
+      "prs": 1,
+      "stars": 41,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
@@ -287,7 +287,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 6,
+      "prs": 0,
       "stars": 18,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
