@@ -46,9 +46,9 @@
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <a href="/" class={(Astro.url.pathname == '/' ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium"} aria-current={Astro.url.pathname == '/'}>Home</a>
-              <a href="/guide" class={(Astro.url.pathname.includes('/guide') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium"} aria-current={Astro.url.pathname.includes('/guide')}>Guide</a>
-              <a href="/articles" class={(Astro.url.pathname.includes('/articles') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium"} aria-current={Astro.url.pathname.includes('/articles')}>Articles</a>
+              <a href="/guide" class={(Astro.url.pathname.includes('/guide') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium flex items-center"} aria-current={Astro.url.pathname.includes('/guide')}>Guide</a>
+              <a href="/articles" class={(Astro.url.pathname.includes('/articles') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium flex items-center"} aria-current={Astro.url.pathname.includes('/articles')}>Articles</a>
+              <a href="/open-sourcerers" class={(Astro.url.pathname.includes('/open-sourcerers') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium flex items-center"} aria-current={Astro.url.pathname.includes('/open-sourcerers')}>Open Sourcerers</a>
             </div>
           </div>
         </div>
@@ -99,6 +99,7 @@
         <a href="/" class={(Astro.url.pathname == '/' ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname == '/'}>Home</a>
         <a href="/guide" class={(Astro.url.pathname.includes('/guide') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/guide')}>Guide</a>
         <a href="/articles" class={(Astro.url.pathname.includes('/articles') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/articles')}>Articles</a>
+        <a href="/open-sourcerers" class={(Astro.url.pathname.includes('/open-sourcerers') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/open-sourcerers')}>Open Sourcerers</a>
         <select class="theme-choser select select-sm hover:bg-neutral hover:text-neutral-content" data-choose-theme>
           <option value="">Default</option>
           <option value="dark">Dark</option>
