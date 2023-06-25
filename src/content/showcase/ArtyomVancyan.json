@@ -15,7 +15,7 @@
       "name": "thumbnails",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 7,
+      "stars": 8,
       "url": "https://github.com/pysnippet/thumbnails"
     },
     {
@@ -23,8 +23,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
       "contributors": 1,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
-      "discussions": 0,
-      "forks": 3,
+      "discussions": 1,
+      "forks": 4,
       "issues": 0,
       "languages": [
         "Python",
@@ -33,7 +33,7 @@
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 27,
+      "stars": 53,
       "url": "https://github.com/pysnippet/django-forbid"
     },
     {
