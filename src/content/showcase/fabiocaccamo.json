@@ -17,16 +17,16 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1557,
+      "stars": 1560,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
-      "contributors": 25,
+      "contributors": 26,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 8,
-      "forks": 153,
+      "forks": 154,
       "issues": 14,
       "languages": [
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1417,
+      "stars": 1424,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -54,8 +54,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1092,
+      "prs": 3,
+      "stars": 1094,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -129,7 +129,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 366,
+      "stars": 365,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -148,7 +148,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 346,
+      "stars": 348,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -182,7 +182,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 146,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -236,7 +236,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 3,
       "stars": 62,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -254,7 +254,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 55,
+      "stars": 54,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
