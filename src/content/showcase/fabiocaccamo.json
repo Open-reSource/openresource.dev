@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1560,
+      "stars": 1562,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -25,8 +25,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 26,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
-      "discussions": 8,
-      "forks": 154,
+      "discussions": 10,
+      "forks": 155,
       "issues": 14,
       "languages": [
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1424,
+      "prs": 1,
+      "stars": 1429,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -46,7 +46,7 @@
       "contributors": 3,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
-      "forks": 42,
+      "forks": 43,
       "issues": 8,
       "languages": [
         "Python",
@@ -54,8 +54,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 1094,
+      "prs": 2,
+      "stars": 1104,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -100,8 +100,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 3,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
-      "discussions": 1,
-      "forks": 23,
+      "discussions": 2,
+      "forks": 24,
       "issues": 6,
       "languages": [
         "Python",
@@ -111,7 +111,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 464,
+      "stars": 471,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -120,8 +120,8 @@
       "contributors": 14,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 47,
-      "issues": 2,
+      "forks": 48,
+      "issues": 3,
       "languages": [
         "Python",
         "HTML"
@@ -138,7 +138,7 @@
       "contributors": 7,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 1,
-      "forks": 24,
+      "forks": 26,
       "issues": 3,
       "languages": [
         "Python",
@@ -147,8 +147,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 348,
+      "prs": 2,
+      "stars": 353,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -182,8 +182,8 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 146,
+      "prs": 1,
+      "stars": 148,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -201,7 +201,7 @@
       "name": "FCIPAddressGeocoder",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 113,
+      "stars": 114,
       "url": "https://github.com/fabiocaccamo/FCIPAddressGeocoder"
     },
     {
@@ -236,7 +236,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 1,
       "stars": 62,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
