@@ -1,0 +1,25 @@
+{
+  "author": "patkon",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/111341601?v=4",
+      "contributors": 2,
+      "description": "Web Content Management System for Websites, Blogs and Shops",
+      "discussions": 3,
+      "forks": 0,
+      "issues": 4,
+      "languages": [
+        "PHP",
+        "Smarty",
+        "HTML",
+        "SCSS"
+      ],
+      "name": "SwiftyEdit",
+      "owner": "SwiftyEdit",
+      "prs": 0,
+      "stars": 9,
+      "url": "https://github.com/SwiftyEdit/SwiftyEdit"
+    }
+  ]
+}
