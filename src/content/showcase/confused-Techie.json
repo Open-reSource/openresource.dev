@@ -1,0 +1,31 @@
+{
+  "author": "confused-Techie",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/108445160?v=4",
+      "contributors": 498,
+      "description": "A Community-led Hyper-Hackable Text Editor",
+      "discussions": 0,
+      "forks": 87,
+      "issues": 89,
+      "languages": [
+        "JavaScript",
+        "CoffeeScript",
+        "Less",
+        "Scheme",
+        "Ruby",
+        "Shell",
+        "Clojure",
+        "Batchfile",
+        "Dockerfile",
+        "Python"
+      ],
+      "name": "pulsar",
+      "owner": "pulsar-edit",
+      "prs": 30,
+      "stars": 2098,
+      "url": "https://github.com/pulsar-edit/pulsar"
+    }
+  ]
+}
