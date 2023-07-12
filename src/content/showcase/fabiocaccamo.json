@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1431,
+      "stars": 1435,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
       "forks": 42,
-      "issues": 9,
+      "issues": 10,
       "languages": [
         "Python",
         "Q#"
@@ -55,7 +55,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1106,
+      "stars": 1105,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -129,7 +129,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 368,
+      "stars": 369,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -139,7 +139,7 @@
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 1,
       "forks": 26,
-      "issues": 2,
+      "issues": 1,
       "languages": [
         "Python",
         "JavaScript",
@@ -147,7 +147,7 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 354,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
@@ -253,7 +253,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 55,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
