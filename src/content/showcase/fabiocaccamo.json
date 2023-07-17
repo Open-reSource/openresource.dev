@@ -37,25 +37,25 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1435,
+      "stars": 1443,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
-      "contributors": 3,
+      "contributors": 4,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
       "forks": 42,
-      "issues": 10,
+      "issues": 9,
       "languages": [
         "Python",
         "Q#"
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 1105,
+      "prs": 1,
+      "stars": 1108,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -92,7 +92,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 494,
+      "stars": 496,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -111,7 +111,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 477,
+      "stars": 478,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -129,7 +129,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 369,
+      "stars": 370,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -148,7 +148,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 354,
+      "stars": 358,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -270,7 +270,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 1,
       "stars": 41,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -306,7 +306,7 @@
       "name": "create-matrix-action",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 8,
+      "stars": 9,
       "url": "https://github.com/fabiocaccamo/create-matrix-action"
     }
   ]
