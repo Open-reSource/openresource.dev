@@ -5,7 +5,7 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=3182a549834cc1f542d3c82c09c07bda7204a105&v=4",
       "contributors": 1,
-      "description": "Remotely control Wi-Fi-based microcontrollers with the PSP.",
+      "description": "Remotely control Wi-Fi based microcontrollers with the PSP.",
       "discussions": 0,
       "forks": 1,
       "issues": 2,
@@ -17,24 +17,24 @@
       "name": "psp-controller",
       "owner": "diamant3",
       "prs": 0,
-      "stars": 6,
+      "stars": 8,
       "url": "https://github.com/diamant3/psp-controller"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=3182a549834cc1f542d3c82c09c07bda7204a105&v=4",
       "contributors": 1,
-      "description": "Simple GUI tool to gather system information in your computer",
+      "description": "Simple application to gather your system information in your computer. 🔍",
       "discussions": 0,
-      "forks": 0,
+      "forks": 2,
       "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "SYSIG",
       "owner": "diamant3",
-      "prs": 0,
-      "stars": 11,
+      "prs": 1,
+      "stars": 14,
       "url": "https://github.com/diamant3/SYSIG"
     },
     {
@@ -57,7 +57,7 @@
       "name": "pspsdk",
       "owner": "pspdev",
       "prs": 0,
-      "stars": 731,
+      "stars": 733,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]

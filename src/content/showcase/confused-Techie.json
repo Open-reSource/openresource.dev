@@ -16,14 +16,14 @@
         "Scheme",
         "Ruby",
         "Shell",
-        "Clojure",
         "PowerShell",
-        "Batchfile"
+        "Batchfile",
+        "Dockerfile"
       ],
       "name": "pulsar",
       "owner": "pulsar-edit",
-      "prs": 28,
-      "stars": 2114,
+      "prs": 29,
+      "stars": 2144,
       "url": "https://github.com/pulsar-edit/pulsar"
     }
   ]
