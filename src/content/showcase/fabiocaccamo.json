@@ -7,7 +7,7 @@
       "contributors": 4,
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 225,
+      "forks": 224,
       "issues": 2,
       "languages": [
         "Objective-C",
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1563,
+      "stars": 1565,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 1449,
+      "prs": 2,
+      "stars": 1452,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -54,8 +54,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1113,
+      "prs": 5,
+      "stars": 1122,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -73,16 +73,16 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 892,
+      "stars": 894,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
-      "contributors": 25,
+      "contributors": 26,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 98,
+      "forks": 99,
       "issues": 4,
       "languages": [
         "Python",
@@ -91,8 +91,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 497,
+      "prs": 2,
+      "stars": 499,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -110,8 +110,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 481,
+      "prs": 2,
+      "stars": 483,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -128,8 +128,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 371,
+      "prs": 2,
+      "stars": 372,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -147,8 +147,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 360,
+      "prs": 2,
+      "stars": 362,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -182,8 +182,8 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 148,
+      "prs": 2,
+      "stars": 150,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -211,7 +211,7 @@
       "description": "🧊 convert your dynamic django site to a static one with one line of code.",
       "discussions": 0,
       "forks": 15,
-      "issues": 3,
+      "issues": 2,
       "languages": [
         "Python",
         "HTML",
@@ -219,7 +219,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 1,
       "stars": 87,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -236,7 +236,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 62,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -253,8 +253,8 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 55,
+      "prs": 2,
+      "stars": 56,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
@@ -270,7 +270,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 3,
       "stars": 41,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
