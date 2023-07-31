@@ -7,7 +7,7 @@
       "contributors": 1,
       "description": "Remotely control Wi-Fi based microcontrollers with the PSP.",
       "discussions": 0,
-      "forks": 1,
+      "forks": 2,
       "issues": 2,
       "languages": [
         "C",
@@ -17,13 +17,13 @@
       "name": "psp-controller",
       "owner": "diamant3",
       "prs": 0,
-      "stars": 8,
+      "stars": 9,
       "url": "https://github.com/diamant3/psp-controller"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=3182a549834cc1f542d3c82c09c07bda7204a105&v=4",
-      "contributors": 1,
+      "contributors": 2,
       "description": "Simple application to gather your system information in your computer. 🔍",
       "discussions": 0,
       "forks": 2,
@@ -33,7 +33,7 @@
       ],
       "name": "SYSIG",
       "owner": "diamant3",
-      "prs": 1,
+      "prs": 0,
       "stars": 14,
       "url": "https://github.com/diamant3/SYSIG"
     },
@@ -43,7 +43,7 @@
       "contributors": 40,
       "description": "An open-source SDK for PSP homebrew development.",
       "discussions": 0,
-      "forks": 128,
+      "forks": 129,
       "issues": 6,
       "languages": [
         "C",
@@ -57,7 +57,7 @@
       "name": "pspsdk",
       "owner": "pspdev",
       "prs": 0,
-      "stars": 733,
+      "stars": 737,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]
