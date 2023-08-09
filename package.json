@@ -31,7 +31,7 @@
     "@docsearch/js": "^3.5.1",
     "@faker-js/faker": "8.0.2",
     "@octokit/graphql": "^7.0.1",
-    "@octokit/graphql-schema": "^14.24.1",
+    "@octokit/graphql-schema": "^14.27.1",
     "@tailwindcss/typography": "^0.5.9",
     "@types/parse-github-url": "^1.0.0",
     "dotenv": "^16.3.1",
@@ -40,7 +40,7 @@
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "tsx": "^3.12.7",
-    "vercel": "^31.2.1",
+    "vercel": "^31.2.3",
     "vitest": "^0.33.0"
   }
 }
