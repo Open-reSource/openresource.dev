@@ -6,9 +6,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4",
       "contributors": 110,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 29,
-      "forks": 277,
-      "issues": 100,
+      "discussions": 30,
+      "forks": 280,
+      "issues": 101,
       "languages": [
         "Python",
         "Shell",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 6,
-      "stars": 3157,
+      "stars": 3162,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 9,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 139,
+      "forks": 145,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 0,
-      "stars": 788,
+      "stars": 792,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 304,
+      "stars": 307,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -66,7 +66,7 @@
       "contributors": 3,
       "description": "DO NOT FORK, CLICK \"Use this template\" - A github template to start a Flask Project - this uses github actions to generate your project based on the template.",
       "discussions": 0,
-      "forks": 18,
+      "forks": 19,
       "issues": 2,
       "languages": [
         "Python",
@@ -77,7 +77,7 @@
       ],
       "name": "flask-project-template",
       "owner": "rochacbruno",
-      "prs": 0,
+      "prs": 1,
       "stars": 129,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 0,
-      "stars": 2034,
+      "stars": 2038,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
