@@ -52,8 +52,25 @@
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
       "prs": 0,
-      "stars": 3,
+      "stars": 5,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
+      "contributors": 2,
+      "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
+      "discussions": 0,
+      "forks": 2,
+      "issues": 0,
+      "languages": [
+        "Python"
+      ],
+      "name": "fastapi-oauth2",
+      "owner": "pysnippet",
+      "prs": 0,
+      "stars": 4,
+      "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]
 }

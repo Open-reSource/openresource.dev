@@ -7,8 +7,8 @@
       "contributors": 110,
       "description": "Configuration Management for Python ⚙",
       "discussions": 30,
-      "forks": 280,
-      "issues": 101,
+      "forks": 285,
+      "issues": 103,
       "languages": [
         "Python",
         "Shell",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 6,
-      "stars": 3162,
+      "prs": 7,
+      "stars": 3172,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 9,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 145,
+      "forks": 149,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 0,
-      "stars": 792,
+      "stars": 796,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 307,
+      "stars": 309,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -78,7 +78,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 129,
+      "stars": 130,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
