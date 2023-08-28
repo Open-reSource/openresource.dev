@@ -16,11 +16,11 @@
     "@astrojs/markdown-remark": "^2.2.1",
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/rss": "^2.4.4",
-    "@astrojs/sitemap": "^2.0.1",
+    "@astrojs/sitemap": "^2.0.2",
     "@astrojs/tailwind": "^4.0.0",
     "@astrojs/vercel": "^3.8.2",
     "@vercel/analytics": "^1.0.2",
-    "astro": "^2.10.12",
+    "astro": "^2.10.14",
     "daisyui": "^2.52.0",
     "gemoji": "^8.1.0",
     "tailwindcss": "^3.3.3",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
-    "@docsearch/js": "^3.5.1",
+    "@docsearch/js": "^3.5.2",
     "@faker-js/faker": "8.0.2",
     "@octokit/graphql": "^7.0.1",
     "@octokit/graphql-schema": "^14.27.2",
@@ -40,7 +40,7 @@
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "tsx": "^3.12.7",
-    "vercel": "^31.2.3",
+    "vercel": "^32.1.0",
     "vitest": "^0.34.1"
   }
 }
