@@ -7,23 +7,23 @@
       "contributors": 499,
       "description": "A Community-led Hyper-Hackable Text Editor",
       "discussions": 0,
-      "forks": 93,
-      "issues": 88,
+      "forks": 94,
+      "issues": 89,
       "languages": [
         "JavaScript",
         "CoffeeScript",
         "Less",
         "Scheme",
-        "Ruby",
         "Shell",
         "PowerShell",
         "Batchfile",
-        "Dockerfile"
+        "Dockerfile",
+        "Python"
       ],
       "name": "pulsar",
       "owner": "pulsar-edit",
-      "prs": 31,
-      "stars": 2217,
+      "prs": 26,
+      "stars": 2238,
       "url": "https://github.com/pulsar-edit/pulsar"
     }
   ]
