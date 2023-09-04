@@ -46,7 +46,6 @@ export default defineConfig({
     analytics: true
   }),
   site: 'https://openresource.dev',
-  compressHTML: true,
   // used for sitemap
   vite: {
     define: {
