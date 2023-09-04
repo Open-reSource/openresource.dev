@@ -39,7 +39,7 @@
     "parse-github-url": "^1.0.2",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
-    "tsx": "^3.12.7",
+    "tsx": "^3.12.8",
     "vercel": "^32.1.0",
     "vitest": "^0.34.3"
   }
