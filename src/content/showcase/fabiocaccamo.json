@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 10,
       "forks": 157,
-      "issues": 18,
+      "issues": 13,
       "languages": [
         "CSS",
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1481,
+      "stars": 1487,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -55,7 +55,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 1143,
+      "stars": 1144,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -64,7 +64,7 @@
       "contributors": 7,
       "description": "📱 📂 iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
-      "forks": 139,
+      "forks": 140,
       "issues": 5,
       "languages": [
         "Objective-C",
@@ -82,7 +82,7 @@
       "contributors": 26,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 99,
+      "forks": 98,
       "issues": 4,
       "languages": [
         "Python",
@@ -92,7 +92,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 508,
+      "stars": 510,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -111,7 +111,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 489,
+      "stars": 491,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -129,7 +129,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 393,
+      "stars": 394,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -148,7 +148,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 383,
+      "stars": 385,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -270,8 +270,8 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 41,
+      "prs": 2,
+      "stars": 42,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
