@@ -32,7 +32,7 @@
     "@faker-js/faker": "8.0.2",
     "@octokit/graphql": "^7.0.1",
     "@octokit/graphql-schema": "^14.31.0",
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/parse-github-url": "^1.0.0",
     "dotenv": "^16.3.1",
     "linkedom": "^0.15.3",
