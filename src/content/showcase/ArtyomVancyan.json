@@ -41,9 +41,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/44609997?v=4",
       "contributors": 1,
       "description": "Advanced, highly customizable phone input component for Ant Design.",
-      "discussions": 0,
+      "discussions": 1,
       "forks": 0,
-      "issues": 0,
+      "issues": 2,
       "languages": [
         "TypeScript",
         "CSS",
@@ -52,7 +52,7 @@
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
       "prs": 0,
-      "stars": 5,
+      "stars": 7,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
     },
     {
@@ -61,14 +61,14 @@
       "contributors": 2,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 0,
-      "forks": 2,
-      "issues": 2,
+      "forks": 3,
+      "issues": 1,
       "languages": [
         "Python"
       ],
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
-      "prs": 1,
+      "prs": 0,
       "stars": 12,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
