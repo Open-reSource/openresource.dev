@@ -56,7 +56,7 @@
         </div>
         <div class="hidden sm:flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
           <div class="hidden sm:ml-6 sm:block">
-            <select class="theme-choser select select-sm hover:bg-neutral hover:text-neutral-content" data-choose-theme>
+            <select class="theme-choser select select-sm hover:bg-neutral hover:text-neutral-content font-medium" data-choose-theme>
               <option value="">Default</option>
               <option value="dark">Dark</option>
               <option value="light">Light</option>
@@ -100,7 +100,7 @@
         <a href="/guide" class={(Astro.url.pathname.includes('/guide') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/guide')}>Guide</a>
         <a href="/articles" class={(Astro.url.pathname.includes('/articles') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/articles')}>Articles</a>
         <a href="/open-sourcerers" class={(Astro.url.pathname.includes('/open-sourcerers') ? "bg-neutral-focus text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/open-sourcerers')}>Open Sourcerers</a>
-        <select class="theme-choser select select-sm hover:bg-neutral hover:text-neutral-content" data-choose-theme>
+        <select class="theme-choser select select-sm hover:bg-neutral hover:text-neutral-content font-medium" data-choose-theme>
           <option value="">Default</option>
           <option value="dark">Dark</option>
           <option value="light">Light</option>
