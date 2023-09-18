@@ -43,7 +43,12 @@ export default defineConfig({
   ],
   output: "server",
   adapter: vercel({
-    analytics: true
+    webAnalytics: {
+      enabled: true
+    },
+    speedInsights: {
+      enabled: true
+    }
   }),
   site: 'https://openresource.dev',
   // used for sitemap
