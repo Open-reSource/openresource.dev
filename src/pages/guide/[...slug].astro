@@ -101,7 +101,7 @@ const { Content } = await entry.render();
   <div class="flex flex-col xl:flex-row-reverse gap-10">
     <div class="bg-base-100 pb-8 flex flex-col justify-center relative overflow-hidden xl:pb-12">
       <div class="relative w-full px-6 py-6 bg-base-100 md:shadow-xl md:shadow-base-300 md:py-12 xl:shadow-none xl:ring-0 md:ring-1 md:ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pb-28 xl:pb-12">
-        <div class="prose prose-slate mx-auto lg:prose-lg">
+        <article class="prose prose-slate mx-auto lg:prose-lg">
           <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary pb-3">{ entry.data.title }</h1>
           <div class="not-prose text-sm">
             <p>Created: { new Date(entry.data.creationDate).toDateString() }</p>
@@ -127,7 +127,7 @@ const { Content } = await entry.render();
               )
             }
           </div>
-        </div>
+        </article>
       </div>
     </div>
     <div class="p-4 w-full xl:px-0 xl:pt-4 md:max-w-3xl md:mx-auto lg:max-w-4xl xl:max-w-sm">
