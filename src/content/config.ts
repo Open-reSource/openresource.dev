@@ -1,5 +1,14 @@
 import { z, defineCollection } from 'astro:content';
 
+const structuredDataSchema = z.object({
+  article: z.object({
+    headline: z.string().optional(),
+    description: z.string().optional(),
+    datePublished: z.string().optional(),
+    dateModified: z.string().optional(),
+  }).optional()
+});
+
 const articlesCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -12,7 +21,8 @@ const articlesCollection = defineCollection({
       }
     )),
     lastUpdateDate: z.string(),
-    title: z.string()
+    title: z.string(),
+    structuredData: structuredDataSchema.optional(),
   }),
 });
 
@@ -82,3 +92,4 @@ export type ShowcaseLink = z.infer<typeof showcaseLinkSchema>;
 export type ShowcaseUnknownLink = z.infer<typeof showcaseUnknownLinkSchema>;
 export type ShowcaseGitHubLink = z.infer<typeof showcaseGitHubLinkSchema>;
 export type ShowcaseGitHubRepoLink = z.infer<typeof showcaseGitHubRepoLinkSchema>;
+export type StructuredData = z.infer<typeof structuredDataSchema>;

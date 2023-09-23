@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import '../global.css';
 import ProgressScroll from '../components/ProgressScroll.astro';
 import SkipLink from '../components/SkipLink.astro';
+import type { StructuredData } from '../content/config';
 
 import '@docsearch/css';
 
@@ -12,9 +13,37 @@ export interface Props {
 	home?: boolean;
 	title: string;
   progressScroll?: boolean;
+  structuredData: StructuredData;
 }
 
-const { home = false, title, description, progressScroll = false } = Astro.props;
+const { home = false, title, description, progressScroll = false, structuredData } = Astro.props;
+
+let articleSchema;
+if (structuredData?.article) {
+  articleSchema = JSON.stringify({
+    "@context": "https://schema.org/",
+    "@type": "Article",
+    "headline": structuredData?.article?.headline,
+    "description": structuredData?.article?.description,
+    "image": "https://openresource.dev/og-image.png",
+    "author": {
+      "@type": "Person",
+      "name": "Julien Déramond",
+      "url": "https://github.com/julien-deramond/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open &lcub;re&rcub;Source",
+      "url": "https://openresource.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://openresource.dev/android-chrome-192x192.png"
+      }
+    },
+    "datePublished": structuredData?.article?.datePublished,
+    "dateModified": structuredData?.article?.dateModified,
+  });
+}
 ---
 
 <!DOCTYPE html>
@@ -46,7 +75,10 @@ const { home = false, title, description, progressScroll = false } = Astro.props
 		<link rel="sitemap" href="/sitemap-index.xml">
 		<link href="https://fosstodon.org/@openresource" rel="me">
     <link rel="preconnect" href="https://H12KLKNKCO-dsn.algolia.net" crossorigin />
-		<title>Open &lcub;re&rcub;Source - {title}</title>
+    <title>Open &lcub;re&rcub;Source - {title}</title>
+    {
+      articleSchema && <script type="application/ld+json" set:html={articleSchema}></script>
+    }
 	</head>
 	<body>
     <SkipLink />
