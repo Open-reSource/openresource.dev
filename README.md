@@ -58,7 +58,7 @@ Get update on Open {re}Source's development and chat with the project maintainer
 - Follow [@open-re-source on LinkedIn](https://www.linkedin.com/company/open-re-source/).
 - Explore [our GitHub Discussions](https://github.com/orgs/Open-reSource/discussions).
 - Chat with the community and the maintainers on [our Discord channel](https://discord.com/invite/fpUDwEMGwE).
-- Use [our RSS feed](https://www.openresource.dev/rss.xml) to know when articles are out!
+- Use [our RSS feed](https://openresource.dev/rss.xml) to know when articles are out!
 
 ## Copyright and License
 
