@@ -51,7 +51,7 @@ Please read through our [contributing guidelines](https://github.com/Open-reSour
 
 ## Community
 
-Get update on Open {re}Source's development and chat with the project maintainers an community members:
+Get an update on Open {re}Source's development and chat with the project maintainers and community members:
 
 - Follow [@open_resource on Twitter](https://twitter.com/open_resource).
 - Follow [@openresource on Mastodon](https://fosstodon.org/@openresource).
@@ -67,3 +67,7 @@ Code released under the [MIT License](https://github.com/Open-reSource/openresou
 Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
 * `public/images/` directory
 * `src/content/articles` and `src/content/modules` directories
+
+## Thanks
+
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
