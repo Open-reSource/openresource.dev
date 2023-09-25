@@ -33,7 +33,7 @@
     "@octokit/graphql": "^7.0.1",
     "@octokit/graphql-schema": "^14.31.1",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/parse-github-url": "^1.0.0",
+    "@types/parse-github-url": "^1.0.1",
     "dotenv": "^16.3.1",
     "linkedom": "^0.15.3",
     "parse-github-url": "^1.0.2",
