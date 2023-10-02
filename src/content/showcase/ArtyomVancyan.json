@@ -52,7 +52,7 @@
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
       "prs": 0,
-      "stars": 8,
+      "stars": 9,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
     },
     {
@@ -60,7 +60,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
       "contributors": 2,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
-      "discussions": 0,
+      "discussions": 2,
       "forks": 4,
       "issues": 1,
       "languages": [
