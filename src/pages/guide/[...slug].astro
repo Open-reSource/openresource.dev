@@ -117,7 +117,7 @@ const { Content } = await entry.render();
           <CreativeCommonMention />
           <div class="flex flex-col xs:flex-row justify-center gap-5 sm:mt-32 items-center mt-16">
             {
-              entry.data.id > 1 && (
+              entry.data.id > 1 && !orderedFilteredChapters[entry.data.id - 2].data.soon && (
                 <a href={`/guide/${ orderedFilteredChapters[entry.data.id - 2].slug }`} class="btn btn-secondary">Previous chapter</a>
               )
             }
