@@ -19,7 +19,7 @@
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.0.0",
     "@astrojs/vercel": "^5.0.1",
-    "@vercel/analytics": "^1.0.2",
+    "@vercel/analytics": "^1.1.0",
     "astro": "^3.2.2",
     "daisyui": "^3.9.1",
     "gemoji": "^8.1.0",
