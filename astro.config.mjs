@@ -32,11 +32,7 @@ const AnchorLinkIcon = h(
 export default defineConfig({
   integrations: [
     tailwind(),
-    sitemap({
-      changefreq: 'weekly',
-      priority: 0.7,
-      lastmod: new Date()
-    }),
+    sitemap(),
     mdx({
       optimize: true,
     })
