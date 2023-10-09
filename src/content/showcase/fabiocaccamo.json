@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1568,
+      "stars": 1569,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 1511,
+      "prs": 3,
+      "stars": 1515,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -46,7 +46,7 @@
       "contributors": 5,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
-      "forks": 44,
+      "forks": 43,
       "issues": 10,
       "languages": [
         "Python",
@@ -55,7 +55,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1159,
+      "stars": 1163,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -91,8 +91,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 516,
+      "prs": 3,
+      "stars": 517,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -110,26 +110,26 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 0,
-      "stars": 495,
+      "prs": 1,
+      "stars": 497,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
-      "contributors": 15,
+      "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 52,
-      "issues": 4,
+      "forks": 51,
+      "issues": 3,
       "languages": [
         "Python",
         "HTML"
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 7,
-      "stars": 404,
+      "prs": 0,
+      "stars": 406,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -147,8 +147,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 388,
+      "prs": 3,
+      "stars": 389,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -182,7 +182,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 7,
+      "prs": 6,
       "stars": 156,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -219,7 +219,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 5,
+      "prs": 2,
       "stars": 87,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -230,13 +230,13 @@
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 0,
       "forks": 19,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 6,
+      "prs": 4,
       "stars": 64,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -253,7 +253,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 7,
+      "prs": 3,
       "stars": 58,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -287,7 +287,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 0,
       "stars": 19,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
@@ -305,7 +305,7 @@
       ],
       "name": "create-matrix-action",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 9,
       "url": "https://github.com/fabiocaccamo/create-matrix-action"
     }

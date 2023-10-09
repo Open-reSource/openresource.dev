@@ -33,7 +33,7 @@
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 60,
+      "stars": 61,
       "url": "https://github.com/pysnippet/django-forbid"
     },
     {
@@ -42,8 +42,8 @@
       "contributors": 1,
       "description": "Advanced, highly customizable phone input component for Ant Design.",
       "discussions": 1,
-      "forks": 0,
-      "issues": 1,
+      "forks": 2,
+      "issues": 2,
       "languages": [
         "TypeScript",
         "CSS",
@@ -52,7 +52,7 @@
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
       "prs": 0,
-      "stars": 9,
+      "stars": 12,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
     },
     {
@@ -69,7 +69,7 @@
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 12,
+      "stars": 13,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]
