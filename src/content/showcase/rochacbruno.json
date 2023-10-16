@@ -7,7 +7,7 @@
       "contributors": 111,
       "description": "Configuration Management for Python ⚙",
       "discussions": 37,
-      "forks": 307,
+      "forks": 311,
       "issues": 105,
       "languages": [
         "Python",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 7,
-      "stars": 3243,
+      "stars": 3251,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 9,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 169,
+      "forks": 175,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -37,8 +37,8 @@
       ],
       "name": "python-project-template",
       "owner": "rochacbruno",
-      "prs": 1,
-      "stars": 837,
+      "prs": 2,
+      "stars": 844,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 318,
+      "stars": 320,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -66,7 +66,7 @@
       "contributors": 3,
       "description": "DO NOT FORK, CLICK \"Use this template\" - A github template to start a Flask Project - this uses github actions to generate your project based on the template.",
       "discussions": 0,
-      "forks": 21,
+      "forks": 22,
       "issues": 2,
       "languages": [
         "Python",
@@ -78,7 +78,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 135,
+      "stars": 136,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 0,
-      "stars": 2048,
+      "stars": 2049,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]

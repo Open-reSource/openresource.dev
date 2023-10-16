@@ -33,7 +33,7 @@
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 61,
+      "stars": 62,
       "url": "https://github.com/pysnippet/django-forbid"
     },
     {
@@ -52,7 +52,7 @@
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
       "prs": 0,
-      "stars": 12,
+      "stars": 14,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
     },
     {
@@ -62,14 +62,14 @@
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 2,
       "forks": 4,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 13,
+      "stars": 17,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]
