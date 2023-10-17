@@ -31,7 +31,7 @@
     "@docsearch/js": "^3.5.2",
     "@faker-js/faker": "8.2.0",
     "@octokit/graphql": "^7.0.2",
-    "@octokit/graphql-schema": "^14.37.0",
+    "@octokit/graphql-schema": "^14.38.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/parse-github-url": "^1.0.1",
     "dotenv": "^16.3.1",
