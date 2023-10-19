@@ -16,7 +16,7 @@
     "@astrojs/markdown-remark": "^3.3.0",
     "@astrojs/mdx": "^1.1.2",
     "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.1",
+    "@astrojs/sitemap": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
     "@astrojs/vercel": "^5.0.2",
     "@vercel/analytics": "^1.1.1",
