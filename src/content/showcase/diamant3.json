@@ -27,7 +27,7 @@
       "description": "Simple application to gather your system information in your computer. 🔍",
       "discussions": 0,
       "forks": 2,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "Python"
       ],
@@ -56,7 +56,7 @@
       ],
       "name": "pspsdk",
       "owner": "pspdev",
-      "prs": 1,
+      "prs": 2,
       "stars": 754,
       "url": "https://github.com/pspdev/pspsdk"
     }

@@ -15,7 +15,7 @@
       "name": "thumbnails",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 9,
+      "stars": 10,
       "url": "https://github.com/pysnippet/thumbnails"
     },
     {
@@ -33,7 +33,7 @@
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 62,
+      "stars": 63,
       "url": "https://github.com/pysnippet/django-forbid"
     },
     {
@@ -47,11 +47,12 @@
       "languages": [
         "TypeScript",
         "CSS",
+        "Python",
         "Less"
       ],
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
-      "prs": 0,
+      "prs": 1,
       "stars": 14,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
     },
@@ -69,7 +70,7 @@
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 17,
+      "stars": 19,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]
