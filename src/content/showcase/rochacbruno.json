@@ -7,8 +7,8 @@
       "contributors": 111,
       "description": "Configuration Management for Python ⚙",
       "discussions": 37,
-      "forks": 311,
-      "issues": 105,
+      "forks": 312,
+      "issues": 103,
       "languages": [
         "Python",
         "Shell",
@@ -19,16 +19,16 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 7,
-      "stars": 3251,
+      "stars": 3260,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=81dabf7e7676d74207210f82e92f973ba3b45d00&v=4",
-      "contributors": 9,
+      "contributors": 10,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 175,
+      "forks": 177,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 2,
-      "stars": 844,
+      "stars": 849,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
