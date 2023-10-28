@@ -2,7 +2,7 @@ import { z, defineCollection } from 'astro:content';
 
 const OpenGraphSchemaDataSchema = z.object({
   description: z.string(),
-  staticImage: z.boolean(),
+  staticImage: z.boolean().optional(),
   title: z.string(),
   type: z.string(),
 })
