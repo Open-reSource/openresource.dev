@@ -8,7 +8,7 @@ const {
   description = 'Learn about our use of local storage to enhance your browsing experience. Our cookie-free policy prioritizes your privacy and preferences.'
 } = Astro.props;
 ---
-<Layout title={ title } description={ description }>
+<Layout title={ title } description={ description } openGraphData={{title: title, type: "website", staticImage: true, description: description}}>
   <div class="bg-base-100 py-8 flex flex-col justify-center relative overflow-hidden lg:py-12">
     <div class="relative w-full px-6 py-12 bg-base-100 shadow-xl shadow-base-300 ring-1 ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
       <div class="mt-8 prose prose-slate mx-auto lg:prose-lg">

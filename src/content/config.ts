@@ -1,5 +1,12 @@
 import { z, defineCollection } from 'astro:content';
 
+const OpenGraphSchemaDataSchema = z.object({
+  description: z.string(),
+  staticImage: z.boolean(),
+  title: z.string(),
+  type: z.string(),
+})
+
 const structuredDataSchema = z.object({
   article: z.object({
     headline: z.string().optional(),
@@ -87,6 +94,7 @@ export const collections = {
   'showcase': showcaseCollection
 };
 
+export type OpenGraphData = z.infer<typeof OpenGraphSchemaDataSchema>;
 export type Showcase = z.infer<typeof showcaseSchema>;
 export type ShowcaseLink = z.infer<typeof showcaseLinkSchema>;
 export type ShowcaseUnknownLink = z.infer<typeof showcaseUnknownLinkSchema>;
