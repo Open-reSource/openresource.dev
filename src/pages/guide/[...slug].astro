@@ -45,10 +45,11 @@ export async function getStaticPaths() {
 }
 
 const { entry, isIndex, orderedFilteredChapters, module } = Astro.props;
+
 const { Content } = await entry.render();
 ---
 { isIndex && (
-<Layout title={ entry.data.title } description={ entry.data.metaDescription }>
+<Layout title={ entry.data.title } description={ entry.data.metaDescription } openGraphData={{title: entry.data.title, type: "website", description: entry.data.metaDescription}}>
   <div class="bg-base-100 pb-8 flex flex-col justify-center relative overflow-hidden xl:pb-12">
     <div class="md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-4 lg:pb-4">
       <div class="text-sm breadcrumbs px-2">
@@ -90,7 +91,7 @@ const { Content } = await entry.render();
 )}
 
 { !isIndex && (
-<Layout title={ entry.data.title } description={ entry.data.metaDescription } progressScroll={true}>
+<Layout title={ entry.data.title } description={ entry.data.metaDescription } progressScroll={true} openGraphData={{title: entry.data.title, type: "article", description: entry.data.metaDescription}}>
   <div class="text-sm breadcrumbs pb-8">
     <ul>
       <li><a href="/guide">Guide</a></li>

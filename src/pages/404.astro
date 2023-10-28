@@ -1,4 +1,6 @@
 ---
+export const prerender = true
+
 import Layout from '../layouts/Layout.astro';
 
 const {
@@ -6,7 +8,7 @@ const {
   description = 'Join Open Source, learn to create, manage, and contribute to projects with Open {re}Source. Make a difference today by sharing and collaborating.'
 } = Astro.props;
 ---
-<Layout title={ title } description={ description } home={ true }>
+<Layout title={ title } description={ description } home={ true } openGraphData={{title: title, type: "website", staticImage: true, description: description}}>
 	<section class="hero py-40">
 		<div class="hero-content text-center">
 			<div class="max-w-md prose lg:prose-xl">

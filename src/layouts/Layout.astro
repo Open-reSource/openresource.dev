@@ -4,7 +4,8 @@ import Footer from '../components/Footer.astro';
 import '../global.css';
 import ProgressScroll from '../components/ProgressScroll.astro';
 import SkipLink from '../components/SkipLink.astro';
-import type { StructuredData } from '../content/config';
+import type { OpenGraphData, StructuredData } from '../content/config';
+import HeadSEO from '../components/HeadSEO.astro';
 
 import '@docsearch/css';
 
@@ -14,18 +15,23 @@ export interface Props {
 	title: string;
   progressScroll?: boolean;
   structuredData: StructuredData;
+  openGraphData: OpenGraphData;
 }
 
-const { home = false, title, description, progressScroll = false, structuredData } = Astro.props;
+// Ensures the canonicalURL always has a trailing slash.
+const canonicalURL = new URL(Astro.url.pathname.replace(/([^/])$/, '$1/'), Astro.site);
+
+const { home = false, title, description, progressScroll = false, structuredData, openGraphData } = Astro.props;
 
 let articleSchema;
+
 if (structuredData?.article) {
   articleSchema = JSON.stringify({
     "@context": "https://schema.org/",
     "@type": "Article",
     "headline": structuredData?.article?.headline,
     "description": structuredData?.article?.description,
-    "image": "https://openresource.dev/og-image.png",
+    "image": "https://openresource.dev/images/open-graph" + canonicalURL.pathname.slice(0, -1) + ".png",
     "author": {
       "@type": "Person",
       "name": "Julien Déramond",
@@ -76,6 +82,7 @@ if (structuredData?.article) {
 		<link href="https://fosstodon.org/@openresource" rel="me">
     <link rel="preconnect" href="https://H12KLKNKCO-dsn.algolia.net" crossorigin />
     <title>Open &lcub;re&rcub;Source - {title}</title>
+    <HeadSEO canonicalURL={canonicalURL} openGraphData={openGraphData} />
     {
       articleSchema && <script type="application/ld+json" set:html={articleSchema}></script>
     }
