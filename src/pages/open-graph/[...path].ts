@@ -6,7 +6,7 @@ const pages = await import.meta.glob('/src/content/**/*.mdx', { eager: true });
 
 // Convert the glob result to remove the `/src/content` prefix
 Object.keys(pages).forEach(path => {
-  const newPath = path.replace(/^\/src\/content/, '');
+  const newPath = path.replace(/^\/src\/content/, '').replace('/modules', '/guide');
   pages[newPath] = pages[path];
   delete pages[path];
 });
