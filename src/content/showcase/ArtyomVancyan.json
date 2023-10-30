@@ -15,7 +15,7 @@
       "name": "thumbnails",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 10,
+      "stars": 11,
       "url": "https://github.com/pysnippet/thumbnails"
     },
     {
@@ -33,7 +33,7 @@
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 63,
+      "stars": 64,
       "url": "https://github.com/pysnippet/django-forbid"
     },
     {
@@ -52,7 +52,7 @@
       ],
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
-      "prs": 1,
+      "prs": 0,
       "stars": 14,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
     },
