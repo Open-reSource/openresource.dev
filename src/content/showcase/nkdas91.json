@@ -1,0 +1,43 @@
+{
+  "author": "nkdas91",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/67741383?v=4",
+      "contributors": 197,
+      "description": "Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.",
+      "discussions": 0,
+      "forks": 2,
+      "issues": 0,
+      "languages": [
+        "JavaScript",
+        "SCSS",
+        "HTML"
+      ],
+      "name": "materialstyle",
+      "owner": "materialstyle",
+      "prs": 1,
+      "stars": 11,
+      "url": "https://github.com/materialstyle/materialstyle"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/118060385?v=4",
+      "contributors": 1,
+      "description": "Marqueefy is a custom Marquee component used to create horizontal or vertical scrolling content.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "SCSS"
+      ],
+      "name": "marqueefy.github.io",
+      "owner": "marqueefy",
+      "prs": 2,
+      "stars": 3,
+      "url": "https://github.com/marqueefy/marqueefy.github.io"
+    }
+  ]
+}

@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1572,
+      "stars": 1573,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1537,
+      "prs": 1,
+      "stars": 1540,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -54,8 +54,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1248,
+      "prs": 1,
+      "stars": 1251,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -91,7 +91,7 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 519,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
@@ -110,7 +110,7 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 503,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
@@ -128,8 +128,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 407,
+      "prs": 0,
+      "stars": 408,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -147,8 +147,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 392,
+      "prs": 0,
+      "stars": 393,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -182,7 +182,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 160,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -219,7 +219,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 89,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -236,7 +236,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 64,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -253,7 +253,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 59,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
