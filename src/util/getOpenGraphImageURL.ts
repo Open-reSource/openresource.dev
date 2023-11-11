@@ -1,8 +1,3 @@
-import type { GetStaticPathsOptions, GetStaticPathsResult } from 'astro';
-import { getStaticPaths } from '../pages/open-graph/[...path]';
-
-const routes = (await getStaticPaths({} as GetStaticPathsOptions)) as GetStaticPathsResult;
-
 /**
  * Get the path to the Open Graph image for a page
  * @param path Pathname of the page URL.
