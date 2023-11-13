@@ -8,7 +8,7 @@
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
       "forks": 223,
-      "issues": 2,
+      "issues": 1,
       "languages": [
         "Objective-C",
         "Swift",
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1574,
+      "stars": 1576,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -25,7 +25,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 28,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
-      "discussions": 11,
+      "discussions": 12,
       "forks": 161,
       "issues": 13,
       "languages": [
@@ -36,26 +36,27 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1544,
+      "prs": 3,
+      "stars": 1549,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 5,
-      "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
+      "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
-      "forks": 45,
-      "issues": 10,
+      "forks": 46,
+      "issues": 7,
       "languages": [
         "Python",
+        "HTML",
         "Q#"
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1262,
+      "prs": 1,
+      "stars": 1268,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -65,7 +66,7 @@
       "description": "📱 📂 iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
       "forks": 140,
-      "issues": 5,
+      "issues": 4,
       "languages": [
         "Objective-C",
         "Ruby"
@@ -82,7 +83,7 @@
       "contributors": 27,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 99,
+      "forks": 98,
       "issues": 4,
       "languages": [
         "Python",
@@ -91,7 +92,7 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 519,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
@@ -101,7 +102,7 @@
       "contributors": 4,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 27,
+      "forks": 28,
       "issues": 5,
       "languages": [
         "Python",
@@ -110,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 504,
+      "prs": 2,
+      "stars": 506,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -129,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 408,
+      "stars": 411,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -147,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 397,
+      "prs": 2,
+      "stars": 400,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -182,7 +183,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 1,
       "stars": 160,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -193,14 +194,14 @@
       "description": "📱 🌍 iOS geocoder for geocode device IP Address location using GeoIP service(s) and a block-based syntax.",
       "discussions": 0,
       "forks": 17,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "Objective-C",
         "Ruby"
       ],
       "name": "FCIPAddressGeocoder",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 114,
       "url": "https://github.com/fabiocaccamo/FCIPAddressGeocoder"
     },
@@ -219,7 +220,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 89,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -230,13 +231,13 @@
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 1,
       "forks": 19,
-      "issues": 2,
+      "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 0,
       "stars": 64,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -253,7 +254,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 59,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -270,8 +271,8 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 45,
+      "prs": 4,
+      "stars": 51,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
