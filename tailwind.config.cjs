@@ -17,14 +17,7 @@ module.exports = {
 	],
 	daisyui: {
 		themes: [
-      {
-				light: {
-          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
-          "primary-content": "white",
-					"secondary-content": "white",
-					"neutral-content": "white",
-        }
-			},
+      "light",
       "dark",
       "cupcake",
       "bumblebee",

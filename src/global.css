@@ -6,6 +6,10 @@ code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.btn {
+	text-transform: uppercase;
+}
+
 main {
   margin: auto;
   padding: 1.5rem;
@@ -35,14 +39,6 @@ main {
   left: 0;
   z-index: 1;
   content: "";
-}
-
-[data-theme="dark"] svg .text-primary {
-  fill: #8455e0;
-}
-
-[data-theme="dark"] .text-primary {
-  color: #8455e0;
 }
 
 .clipboard-copy {
@@ -80,7 +76,7 @@ main {
 	margin-inline-end: calc(-1 * var(--anchoring-icon-size-x));
 	width: var(--anchoring-icon-size-x);
 	height: var(--anchoring-icon-size-y);
-	color: hsl(var(--bc));
+	color: oklch(var(--bc));
 	text-decoration: none;
 	justify-content: center;
 	vertical-align: baseline;
@@ -116,41 +112,41 @@ main {
 	opacity: 1;
 }
 
-:focus-visible:not(:is(.DocSearch-Input, .DocSearch-Hit > a)) {
-	outline: 4px solid hsl(var(--bc)) !important;
+:focus-visible:not(:is(.DocSearch-Input)) {
+	outline: 4px solid oklch(var(--bc)) !important;
 	outline-offset: 2px;
-	box-shadow: hsl(var(--b1)) 0 0 0 2px;
+	box-shadow: oklch(var(--b1)) 0 0 0 2px;
 }
 
 ::selection {
-	background: hsl(var(--p));
-	color: hsl(var(--pc));
+	background: oklch(var(--p));
+	color: oklch(var(--pc));
 }
 
 /* https://github.com/algolia/docsearch/blob/066539c2c91c3559dcf3a738c8c998693a02465c/packages/docsearch-css/src/_variables.css */
 .DocSearch {
-	--docsearch-text-color: hsl(var(--bc));
-	--docsearch-highlight-color: hsl(var(--p));
-	--docsearch-container-background: hsl(var(--nf) / 0.5);
-	--docsearch-muted-color: hsl(var(--bc) / 0.7);
+	--docsearch-text-color: oklch(var(--bc));
+	--docsearch-highlight-color: oklch(var(--p));
+	--docsearch-container-background: oklch(var(--nf) / 0.5);
+	--docsearch-muted-color: oklch(var(--bc) / 0.7);
 
-	--docsearch-modal-background: hsl(var(--b2));
+	--docsearch-modal-background: oklch(var(--b2));
 	/* https://github.com/saadeghi/daisyui/blob/0bf3f4ead3a560e595be37f1ec9ad6767a55544a/src/components/styled/modal.css#LL10C15-L10C52 */
 	--docsearch-modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
-  --docsearch-searchbox-focus-background: hsl(var(--b1));
-  --docsearch-searchbox-shadow: inset 0 0 0 2px hsl(var(--p));
+  --docsearch-searchbox-focus-background: oklch(var(--b1));
+  --docsearch-searchbox-shadow: inset 0 0 0 2px oklch(var(--p));
 
-	--docsearch-hit-color: hsl(var(--bc));
-  --docsearch-hit-active-color: hsl(var(--pc));
-  --docsearch-hit-background: hsl(var(--b1));
+	--docsearch-hit-color: oklch(var(--bc));
+  --docsearch-hit-active-color: oklch(var(--pc));
+  --docsearch-hit-background: oklch(var(--b1));
   --docsearch-hit-shadow: none;
 
 	--docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
 
-	--docsearch-footer-background: hsl(var(--b3));
-  --docsearch-footer-shadow: 0 -1px 0 0 hsl(var(--b1) / 0.4);
+	--docsearch-footer-background: oklch(var(--b3));
+  --docsearch-footer-shadow: 0 -1px 0 0 oklch(var(--b1) / 0.4);
 }
 
 .DocSearch.DocSearch-Button {
@@ -160,17 +156,17 @@ main {
 }
 
 .DocSearch.DocSearch-Button:hover {
-	background-color: hsl(var(--nf));
-	color: hsl(var(--nc));
+	background-color: oklch(var(--nf));
+	color: oklch(var(--nc));
 	box-shadow: none;
 }
 
 .DocSearch.DocSearch-Button:hover :is(.DocSearch-Search-Icon, .DocSearch-Button-Key) {
-	color: hsl(var(--nc));
+	color: oklch(var(--nc));
 }
 
 .DocSearch.DocSearch-Button:hover .DocSearch-Button-Keys {
-	border-color: hsl(var(--nc) / 0.4);
+	border-color: oklch(var(--nc) / 0.4);
 }
 
 .DocSearch.DocSearch-Button:focus {
@@ -178,7 +174,7 @@ main {
 }
 
 .DocSearch .DocSearch-Button-Keys {
-	border: 1px solid hsl(var(--bc) / 0.3);
+	border: 1px solid oklch(var(--bc) / 0.3);
 	border-radius: calc(var(--rounded-btn) / 1.75);
 	min-width: auto;
 	padding: 0.15rem 0.25rem;
@@ -201,15 +197,15 @@ main {
 }
 
 .DocSearch .DocSearch-Hit-source {
-	color: hsl(var(--bc));
+	color: oklch(var(--bc));
 }
 
 .DocSearch .DocSearch-Hits mark {
-	color: hsl(var(--s));
+	color: oklch(var(--s));
 }
 
 .DocSearch .DocSearch-Help a {
-	color: hsl(var(--p));
+	color: oklch(var(--p));
 }
 
 .DocSearch .DocSearch-Help a:hover {

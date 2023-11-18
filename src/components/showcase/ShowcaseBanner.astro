@@ -1,7 +1,7 @@
 ---
 const { classes, showProjectsButton = false } = Astro.props;
 ---
-<section class={`bg-secondary-focus text-secondary-content not-prose ${classes}`}>
+<section class={`bg-secondary text-secondary-content not-prose ${classes}`}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 sm:py-12 xl:py-24">
     <h2 class="text-2xl sm:text-3xl font-bold sm:text-center mb-8 sm:mb-12 xl:mb-16">Showcase your projects</h2>
     <div class="flex gap-4 flex-col">
@@ -16,8 +16,8 @@ const { classes, showProjectsButton = false } = Astro.props;
         </p>
       </div>
       <div class="flex flex-col xs:flex-row justify-center gap-4 mt-8">
-        <a class="btn btn-neutral" href="https://github.com/orgs/Open-reSource/discussions/3" target="_blank" rel="noopener">Submit project(s)</a>
-        { showProjectsButton && (<a class="btn btn-outline text-primary-content" href="/showcase">Show projects</a>) }
+        <a class="btn" href="https://github.com/orgs/Open-reSource/discussions/3" target="_blank" rel="noopener">Submit project(s)</a>
+        { showProjectsButton && (<a class="btn btn-neutral" href="/showcase">Show projects</a>) }
       </div>
     </div>
   </div>
