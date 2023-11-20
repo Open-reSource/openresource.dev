@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1576,
+      "stars": 1577,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 1549,
+      "stars": 1552,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -46,7 +46,7 @@
       "contributors": 5,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
-      "forks": 46,
+      "forks": 47,
       "issues": 7,
       "languages": [
         "Python",
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 1268,
+      "prs": 2,
+      "stars": 1275,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 899,
+      "stars": 900,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 506,
+      "stars": 509,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -139,7 +139,7 @@
       "contributors": 8,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
-      "forks": 26,
+      "forks": 27,
       "issues": 2,
       "languages": [
         "Python",
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 400,
+      "stars": 402,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -231,13 +231,13 @@
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 1,
       "forks": 19,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 1,
       "stars": 64,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -271,8 +271,8 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 51,
+      "prs": 3,
+      "stars": 52,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {

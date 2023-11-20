@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108445160?v=4",
-      "contributors": 500,
+      "contributors": 501,
       "description": "A Community-led Hyper-Hackable Text Editor",
       "discussions": 0,
       "forks": 105,
-      "issues": 96,
+      "issues": 97,
       "languages": [
         "JavaScript",
         "Less",
@@ -23,7 +23,7 @@
       "name": "pulsar",
       "owner": "pulsar-edit",
       "prs": 23,
-      "stars": 2418,
+      "stars": 2441,
       "url": "https://github.com/pulsar-edit/pulsar"
     }
   ]
