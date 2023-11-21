@@ -34,7 +34,7 @@
     "@octokit/graphql-schema": "^14.43.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/parse-github-url": "^1.0.3",
-    "astro-og-canvas": "^0.3.1",
+    "astro-og-canvas": "^0.3.2",
     "dotenv": "^16.3.1",
     "linkedom": "^0.16.4",
     "parse-github-url": "^1.0.2",
