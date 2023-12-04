@@ -7,7 +7,7 @@
       "contributors": 2,
       "description": "Video thumbnail generator for modern web video players such as Plyr, Videojs, Flowplayer, Fluid Player, etc.",
       "discussions": 1,
-      "forks": 4,
+      "forks": 3,
       "issues": 0,
       "languages": [
         "Python"
@@ -24,7 +24,7 @@
       "contributors": 2,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 1,
-      "forks": 4,
+      "forks": 2,
       "issues": 0,
       "languages": [
         "Python",
@@ -50,7 +50,7 @@
       ],
       "name": "antd-phone-input",
       "owner": "ArtyomVancyan",
-      "prs": 1,
+      "prs": 0,
       "stars": 17,
       "url": "https://github.com/ArtyomVancyan/antd-phone-input"
     },

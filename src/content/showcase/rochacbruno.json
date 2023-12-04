@@ -8,7 +8,7 @@
       "description": "Configuration Management for Python ⚙",
       "discussions": 40,
       "forks": 322,
-      "issues": 107,
+      "issues": 106,
       "languages": [
         "Python",
         "Shell",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 8,
-      "stars": 3314,
+      "stars": 3318,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 10,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 188,
+      "forks": 189,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 2,
-      "stars": 874,
+      "stars": 881,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -47,7 +47,7 @@
       "contributors": 7,
       "description": "DO NOT FORK, CLICK \"Use this template\" - The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.",
       "discussions": 0,
-      "forks": 30,
+      "forks": 31,
       "issues": 10,
       "languages": [
         "Python",
@@ -87,7 +87,7 @@
       "contributors": 28,
       "description": "A quick reference guide for the Pythonista in the process of becoming a Rustacean",
       "discussions": 0,
-      "forks": 74,
+      "forks": 75,
       "issues": 4,
       "languages": [
         "CSS",
@@ -95,8 +95,8 @@
       ],
       "name": "py2rs",
       "owner": "rochacbruno",
-      "prs": 1,
-      "stars": 2052,
+      "prs": 2,
+      "stars": 2055,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
