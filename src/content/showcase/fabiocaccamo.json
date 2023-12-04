@@ -7,8 +7,8 @@
       "contributors": 4,
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 223,
-      "issues": 1,
+      "forks": 224,
+      "issues": 2,
       "languages": [
         "Objective-C",
         "Swift",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 1562,
+      "prs": 4,
+      "stars": 1566,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1280,
+      "prs": 7,
+      "stars": 1296,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -92,8 +92,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 520,
+      "prs": 3,
+      "stars": 522,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -102,8 +102,8 @@
       "contributors": 4,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 28,
-      "issues": 5,
+      "forks": 29,
+      "issues": 7,
       "languages": [
         "Python",
         "JavaScript",
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 515,
+      "prs": 3,
+      "stars": 517,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -129,8 +129,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 411,
+      "prs": 3,
+      "stars": 414,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 405,
+      "prs": 3,
+      "stars": 406,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -183,7 +183,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 3,
       "stars": 161,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -237,7 +237,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 4,
       "stars": 64,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -254,7 +254,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 60,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -271,7 +271,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 6,
       "stars": 53,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -288,7 +288,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 3,
       "stars": 19,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },

@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/111341601?v=4",
       "contributors": 3,
       "description": "Web Content Management System for Websites, Blogs and Shops",
-      "discussions": 7,
+      "discussions": 8,
       "forks": 0,
       "issues": 4,
       "languages": [
@@ -17,7 +17,7 @@
       ],
       "name": "SwiftyEdit",
       "owner": "SwiftyEdit",
-      "prs": 0,
+      "prs": 1,
       "stars": 8,
       "url": "https://github.com/SwiftyEdit/SwiftyEdit"
     }
