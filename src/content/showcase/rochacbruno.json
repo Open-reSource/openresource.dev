@@ -7,7 +7,7 @@
       "contributors": 113,
       "description": "Configuration Management for Python ⚙",
       "discussions": 40,
-      "forks": 322,
+      "forks": 323,
       "issues": 106,
       "languages": [
         "Python",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 8,
-      "stars": 3318,
+      "prs": 10,
+      "stars": 3340,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 10,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 189,
+      "forks": 187,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 2,
-      "stars": 881,
+      "stars": 890,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -47,7 +47,7 @@
       "contributors": 7,
       "description": "DO NOT FORK, CLICK \"Use this template\" - The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.",
       "discussions": 0,
-      "forks": 31,
+      "forks": 32,
       "issues": 10,
       "languages": [
         "Python",
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 324,
+      "stars": 326,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -66,7 +66,7 @@
       "contributors": 3,
       "description": "DO NOT FORK, CLICK \"Use this template\" - A github template to start a Flask Project - this uses github actions to generate your project based on the template.",
       "discussions": 0,
-      "forks": 22,
+      "forks": 21,
       "issues": 2,
       "languages": [
         "Python",
@@ -78,7 +78,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 141,
+      "stars": 142,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 2,
-      "stars": 2055,
+      "stars": 2054,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
