@@ -8,7 +8,7 @@
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
       "forks": 224,
-      "issues": 2,
+      "issues": 1,
       "languages": [
         "Objective-C",
         "Swift",
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 13,
       "forks": 162,
-      "issues": 12,
+      "issues": 13,
       "languages": [
         "CSS",
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1574,
+      "stars": 1581,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
       "forks": 47,
-      "issues": 7,
+      "issues": 8,
       "languages": [
         "Python",
         "HTML",
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1313,
+      "stars": 1320,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -66,7 +66,7 @@
       "description": "📱 📂 iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
       "forks": 140,
-      "issues": 4,
+      "issues": 2,
       "languages": [
         "Objective-C",
         "Ruby"
@@ -84,7 +84,7 @@
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
       "forks": 97,
-      "issues": 4,
+      "issues": 5,
       "languages": [
         "Python",
         "HTML",
@@ -103,7 +103,7 @@
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
       "forks": 29,
-      "issues": 7,
+      "issues": 6,
       "languages": [
         "Python",
         "JavaScript",
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 518,
+      "stars": 522,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,7 +122,7 @@
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
       "forks": 51,
-      "issues": 5,
+      "issues": 2,
       "languages": [
         "Python",
         "HTML"
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 417,
+      "stars": 419,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 408,
+      "stars": 410,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -177,14 +177,14 @@
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 0,
       "forks": 10,
-      "issues": 6,
+      "issues": 5,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 163,
+      "stars": 165,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -231,7 +231,7 @@
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 1,
       "forks": 19,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "Python"
       ],
@@ -265,13 +265,13 @@
       "description": "🧢 friendly font operations on top of fontTools.",
       "discussions": 0,
       "forks": 3,
-      "issues": 2,
+      "issues": 1,
       "languages": [
         "Python"
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 53,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
