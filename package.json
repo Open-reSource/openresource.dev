@@ -17,7 +17,7 @@
     "@astrojs/mdx": "^2.0.1",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.3",
+    "@astrojs/tailwind": "^5.0.4",
     "@astrojs/vercel": "^6.1.0",
     "@vercel/analytics": "^1.1.1",
     "astro": "^4.0.6",
