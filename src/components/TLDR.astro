@@ -1,0 +1,15 @@
+---
+const props = Astro.props;
+---
+<div class="tldr bg-base-200 p-6">
+  <slot/>
+</div>
+<style>
+  .tldr h2 {
+    margin-top: 0;
+  }
+
+  .tldr {
+    color: red !important;
+  }
+</style>
