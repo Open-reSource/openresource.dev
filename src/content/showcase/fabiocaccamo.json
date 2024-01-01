@@ -17,16 +17,16 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1578,
+      "stars": 1580,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
-      "contributors": 29,
+      "contributors": 30,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 13,
-      "forks": 165,
+      "forks": 166,
       "issues": 12,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1589,
+      "stars": 1592,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
       "forks": 47,
-      "issues": 8,
+      "issues": 7,
       "languages": [
         "Python",
         "HTML",
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1328,
+      "prs": 3,
+      "stars": 1333,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 899,
+      "stars": 900,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -84,7 +84,7 @@
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
       "forks": 97,
-      "issues": 5,
+      "issues": 4,
       "languages": [
         "Python",
         "HTML",
@@ -92,7 +92,7 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 6,
       "stars": 527,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 524,
+      "prs": 6,
+      "stars": 526,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -129,8 +129,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 422,
+      "prs": 2,
+      "stars": 423,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -140,7 +140,7 @@
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
       "forks": 27,
-      "issues": 2,
+      "issues": 3,
       "languages": [
         "Python",
         "JavaScript",
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 412,
+      "prs": 6,
+      "stars": 414,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -183,7 +183,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 7,
       "stars": 166,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -237,8 +237,8 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 64,
+      "prs": 2,
+      "stars": 65,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
@@ -254,7 +254,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 6,
       "stars": 60,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -263,15 +263,15 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 3,
       "description": "🧢 friendly font operations on top of fontTools.",
-      "discussions": 0,
+      "discussions": 1,
       "forks": 3,
-      "issues": 1,
+      "issues": 2,
       "languages": [
         "Python"
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 8,
       "stars": 53,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
