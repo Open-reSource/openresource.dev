@@ -127,7 +127,7 @@ main {
 .DocSearch {
 	--docsearch-text-color: oklch(var(--bc));
 	--docsearch-highlight-color: oklch(var(--p));
-	--docsearch-container-background: oklch(var(--nf) / 0.5);
+	--docsearch-container-background: oklch(var(--n) / 0.5);
 	--docsearch-muted-color: oklch(var(--bc) / 0.7);
 
 	--docsearch-modal-background: oklch(var(--b2));
@@ -156,7 +156,7 @@ main {
 }
 
 .DocSearch.DocSearch-Button:hover {
-	background-color: oklch(var(--nf));
+	background-color: oklch(var(--n));
 	color: oklch(var(--nc));
 	box-shadow: none;
 }
