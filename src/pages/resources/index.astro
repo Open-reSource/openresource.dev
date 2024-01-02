@@ -4,8 +4,8 @@ export const prerender = true
 import Layout from '../../layouts/Layout.astro';
 
 const {
-  title = 'Open Sourcerers',
-  description = 'Meet the Open Sourcerers, Open Source enthusiasts who are passionate about sharing their knowledge and experience with the Open Source community.'
+  title = 'Resources',
+  description = 'Resources around Open Source: find books and Open Sourcerers, Open Source enthusiasts who are passionate about sharing their knowledge and experience with the Open Source community.'
 } = Astro.props;
 ---
 <Layout title={ title } description={ description } openGraphData={{title: title, type: "website", staticImage: true, description: description}}>
@@ -30,19 +30,39 @@ const {
       <div class="mt-8 prose prose-slate mx-auto lg:prose-lg">
         <h1>{title}</h1>
         <p class="lead">
-          Meet the Open Sourcerers, Open Source enthusiasts who are passionate about sharing their knowledge and experience with the Open Source community.
         </p>
         <p>
-          The following list gathers Open Sourcerers who dedicate some of their time for quick chats or consultancy.
         </p>
         <hr />
+        <h2>Books</h2>
+        <p>
+          List of recommended books related to making Open Source.
+        </p>
         <div class="not-prose">
           <ul class="list-none">
             <li>
-              <a class="mr-auto underline text-base-content" href="https://antfu.me/chat" target="_blank">Anthony Fu</a>
+              <a class="mr-auto underline text-base-content" href="https://producingoss.com/" target="_blank" rel="noopener">Producing Open Source Software</a> by Karl Fogel
             </li>
             <li>
-              <a class="mr-auto underline text-base-content" href="https://roe.dev/blog/open-invitation" target="_blank">Daniel Roe</a>
+              <a class="mr-auto underline text-base-content" href="https://un.curl.dev" target="_blank" rel="noopener">Uncurled</a> by Daniel Stenberg
+            </li>
+            <li>
+              <a class="mr-auto underline text-base-content" href="https://www.amazon.com/Working-Public-Making-Maintenance-Software/dp/0578675862" target="_blank" rel="noopener">Working in Public: The Making and Maintenance of Open Source Software</a> by Nadia Eghbal
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <h2>Open Sourcerers</h2>
+        <p>
+          List of Open Sourcerers who are passionate about sharing their knowledge and experience with the Open Source community and dedicate some of their time for quick chats or consultancy.
+        </p>
+        <div class="not-prose">
+          <ul class="list-none">
+            <li>
+              <a class="mr-auto underline text-base-content" href="https://antfu.me/chat" target="_blank" rel="noopener">Anthony Fu</a>
+            </li>
+            <li>
+              <a class="mr-auto underline text-base-content" href="https://roe.dev/blog/open-invitation" target="_blank" rel="noopener">Daniel Roe</a>
             </li>
           </ul>
         </div>
