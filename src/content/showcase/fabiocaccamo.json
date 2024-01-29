@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 1606,
+      "prs": 2,
+      "stars": 1607,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 533,
+      "stars": 534,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 426,
+      "stars": 427,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -184,7 +184,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 171,
+      "stars": 172,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
