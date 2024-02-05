@@ -17,16 +17,16 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1581,
+      "stars": 1582,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
-      "contributors": 30,
+      "contributors": 31,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 13,
-      "forks": 169,
+      "forks": 171,
       "issues": 14,
       "languages": [
         "Python",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1607,
+      "prs": 3,
+      "stars": 1611,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1349,
+      "prs": 1,
+      "stars": 1361,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -92,8 +92,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 534,
+      "prs": 1,
+      "stars": 535,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 548,
+      "prs": 1,
+      "stars": 552,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,7 +122,7 @@
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
       "forks": 51,
-      "issues": 2,
+      "issues": 3,
       "languages": [
         "Python",
         "HTML"
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 427,
+      "stars": 430,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 430,
+      "prs": 2,
+      "stars": 435,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,7 +184,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 172,
+      "stars": 174,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -220,7 +220,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 1,
       "stars": 92,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -229,15 +229,15 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 5,
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
-      "discussions": 1,
-      "forks": 19,
-      "issues": 0,
+      "discussions": 2,
+      "forks": 20,
+      "issues": 1,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 1,
       "stars": 66,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -254,8 +254,8 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 60,
+      "prs": 1,
+      "stars": 61,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
@@ -272,7 +272,7 @@
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 54,
+      "stars": 55,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
@@ -288,7 +288,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 4,
       "stars": 19,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
