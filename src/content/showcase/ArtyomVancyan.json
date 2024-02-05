@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
-      "contributors": 2,
+      "contributors": 3,
       "description": "Video thumbnail generator for modern web video players such as Plyr, Videojs, Flowplayer, Fluid Player, etc.",
       "discussions": 1,
       "forks": 3,
@@ -21,7 +21,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
-      "contributors": 2,
+      "contributors": 3,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 1,
       "forks": 2,
@@ -43,7 +43,7 @@
       "description": "Advanced, highly customizable phone input component for Ant Design.",
       "discussions": 1,
       "forks": 5,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "TypeScript"
       ],
@@ -56,7 +56,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
-      "contributors": 3,
+      "contributors": 4,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 2,
       "forks": 5,
