@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4",
-      "contributors": 117,
+      "contributors": 118,
       "description": "Configuration Management for Python ⚙",
       "discussions": 40,
       "forks": 327,
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 8,
-      "stars": 3430,
+      "prs": 7,
+      "stars": 3432,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -47,7 +47,7 @@
       "contributors": 7,
       "description": "DO NOT FORK, CLICK \"Use this template\" - The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.",
       "discussions": 0,
-      "forks": 30,
+      "forks": 31,
       "issues": 10,
       "languages": [
         "Python",
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 2,
-      "stars": 2062,
+      "stars": 2063,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]

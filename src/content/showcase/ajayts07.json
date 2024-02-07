@@ -1,0 +1,26 @@
+{
+  "author": "ajayts07",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/40233791?v=4",
+      "contributors": 21,
+      "description": "The one and only cheatsheet you need for Vue.js",
+      "discussions": 0,
+      "forks": 1,
+      "issues": 2,
+      "languages": [
+        "Vue",
+        "TypeScript",
+        "SCSS",
+        "JavaScript",
+        "CSS"
+      ],
+      "name": "vue-cheatsheet",
+      "owner": "themeselection",
+      "prs": 1,
+      "stars": 77,
+      "url": "https://github.com/themeselection/vue-cheatsheet"
+    }
+  ]
+}
