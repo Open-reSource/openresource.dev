@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1613,
+      "stars": 1616,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
       "forks": 48,
-      "issues": 8,
+      "issues": 9,
       "languages": [
         "Python",
         "HTML",
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 437,
+      "stars": 439,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -289,7 +289,7 @@
       "name": "utils.js",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 19,
+      "stars": 20,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
     {
