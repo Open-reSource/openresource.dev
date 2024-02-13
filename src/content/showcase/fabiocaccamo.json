@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1584,
+      "stars": 1585,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1616,
+      "stars": 1618,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1362,
+      "stars": 1364,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -122,7 +122,7 @@
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
       "forks": 51,
-      "issues": 3,
+      "issues": 4,
       "languages": [
         "Python",
         "HTML"
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 439,
+      "stars": 442,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -177,14 +177,14 @@
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 0,
       "forks": 11,
-      "issues": 5,
+      "issues": 6,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 174,
+      "stars": 175,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
