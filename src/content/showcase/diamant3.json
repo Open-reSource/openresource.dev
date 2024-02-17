@@ -17,7 +17,7 @@
       "name": "psp-controller",
       "owner": "diamant3",
       "prs": 0,
-      "stars": 9,
+      "stars": 10,
       "url": "https://github.com/diamant3/psp-controller"
     },
     {
@@ -26,7 +26,7 @@
       "contributors": 2,
       "description": "Simple application to gather your system information in your computer. 🔍",
       "discussions": 0,
-      "forks": 2,
+      "forks": 3,
       "issues": 1,
       "languages": [
         "Python"
@@ -34,16 +34,16 @@
       "name": "SYSIG",
       "owner": "diamant3",
       "prs": 0,
-      "stars": 14,
+      "stars": 16,
       "url": "https://github.com/diamant3/SYSIG"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/565057?v=4",
-      "contributors": 43,
+      "contributors": 45,
       "description": "An open-source SDK for PSP homebrew development.",
       "discussions": 0,
-      "forks": 134,
+      "forks": 136,
       "issues": 6,
       "languages": [
         "C",
@@ -57,7 +57,7 @@
       "name": "pspsdk",
       "owner": "pspdev",
       "prs": 0,
-      "stars": 768,
+      "stars": 784,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]

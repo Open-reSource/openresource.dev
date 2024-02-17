@@ -7,7 +7,7 @@
       "contributors": 4,
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 224,
+      "forks": 225,
       "issues": 1,
       "languages": [
         "Objective-C",
@@ -17,17 +17,17 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1578,
+      "stars": 1585,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
-      "contributors": 29,
+      "contributors": 31,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 13,
-      "forks": 165,
-      "issues": 12,
+      "forks": 171,
+      "issues": 14,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 1589,
+      "prs": 4,
+      "stars": 1618,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -46,8 +46,8 @@
       "contributors": 5,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
-      "forks": 47,
-      "issues": 8,
+      "forks": 48,
+      "issues": 9,
       "languages": [
         "Python",
         "HTML",
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1328,
+      "stars": 1364,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 899,
+      "stars": 900,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -83,8 +83,8 @@
       "contributors": 27,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 97,
-      "issues": 5,
+      "forks": 96,
+      "issues": 4,
       "languages": [
         "Python",
         "HTML",
@@ -92,8 +92,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 527,
+      "prs": 2,
+      "stars": 535,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 524,
+      "prs": 2,
+      "stars": 554,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,15 +122,15 @@
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
       "forks": 51,
-      "issues": 2,
+      "issues": 4,
       "languages": [
         "Python",
         "HTML"
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 422,
+      "prs": 2,
+      "stars": 430,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -139,8 +139,8 @@
       "contributors": 8,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
-      "forks": 27,
-      "issues": 2,
+      "forks": 28,
+      "issues": 3,
       "languages": [
         "Python",
         "JavaScript",
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 412,
+      "prs": 3,
+      "stars": 442,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -158,7 +158,7 @@
       "contributors": 3,
       "description": "📱 📍 iOS geocoder for forward / reverse geocode user's current location using a block-based syntax.",
       "discussions": 0,
-      "forks": 37,
+      "forks": 36,
       "issues": 0,
       "languages": [
         "Objective-C",
@@ -177,14 +177,14 @@
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 0,
       "forks": 11,
-      "issues": 5,
+      "issues": 6,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 166,
+      "prs": 2,
+      "stars": 175,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -220,8 +220,8 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 89,
+      "prs": 2,
+      "stars": 92,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -229,16 +229,16 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 5,
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
-      "discussions": 1,
-      "forks": 19,
-      "issues": 0,
+      "discussions": 2,
+      "forks": 20,
+      "issues": 1,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 64,
+      "prs": 2,
+      "stars": 66,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
@@ -254,8 +254,8 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 60,
+      "prs": 2,
+      "stars": 61,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
@@ -263,7 +263,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 3,
       "description": "🧢 friendly font operations on top of fontTools.",
-      "discussions": 0,
+      "discussions": 1,
       "forks": 3,
       "issues": 1,
       "languages": [
@@ -271,8 +271,8 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 53,
+      "prs": 2,
+      "stars": 56,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
@@ -288,8 +288,8 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 0,
-      "stars": 19,
+      "prs": 4,
+      "stars": 20,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
     {
@@ -307,7 +307,7 @@
       "name": "create-matrix-action",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 9,
+      "stars": 10,
       "url": "https://github.com/fabiocaccamo/create-matrix-action"
     }
   ]
