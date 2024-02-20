@@ -1,15 +1,31 @@
 ---
 const props = Astro.props;
 ---
-<div class="tldr bg-base-200 p-6">
-  <slot/>
-</div>
-<style>
+<style is:global>
   .tldr h2 {
-    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
   }
 
-  .tldr {
-    color: red !important;
+  .tldr > ol {
+    list-style-type: upper-roman;
+    padding: 0;
+  }
+
+  .tldr > ol > li > ul {
+    list-style-type: circle;
+    padding: 1rem;
+  }
+
+  .tldr > ol > li > ul > li > strong {
+    font-size: 1.5rem;
+  }
+
+  .tldr > ol > li:not(:last-child) {
+    margin-bottom: 2rem;
   }
 </style>
+<div class="tldr not-prose bg-primary text-primary-content p-10">
+  <slot/>
+</div>
