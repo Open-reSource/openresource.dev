@@ -4,8 +4,8 @@ export const prerender = false
 import Layout from '../layouts/Layout.astro';
 
 const {
-  title = 'Your platform for Open Source',
-  description = 'Join Open Source, learn to create, manage, and contribute to projects with Open {re}Source. Make a difference today by sharing and collaborating.'
+  title = 'Your platform for open source',
+  description = 'Join open source, learn to create, manage, and contribute to projects with Open {re}Source. Make a difference today by sharing and collaborating.'
 } = Astro.props;
 ---
 <Layout title={ title } description={ description } home={ true } openGraphData={{title: title, type: "website", staticImage: true, description: description}}>

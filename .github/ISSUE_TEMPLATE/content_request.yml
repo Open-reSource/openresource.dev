@@ -17,7 +17,7 @@ body:
     id: proposal
     attributes:
       label: Proposal
-      description: Provide detailed information for what we should add to help folks in the Open Source world.
+      description: Provide detailed information for what we should add to help folks in the open source world.
     validations:
       required: true
   - type: textarea
