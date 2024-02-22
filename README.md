@@ -7,11 +7,11 @@
 <h1 align="center">openresource.dev</h1>
 
 <p align="center">
-  <b>Open {re}Source is your platform for sharing and discovering the Open Source world.</b>
+  <b>Open {re}Source is your platform for sharing and discovering the open source world.</b>
   <br>
-  Understand how it works, and learn how to create, manage, and contribute to Open Source projects.
+  Understand how it works, and learn how to create, manage, and contribute to open-source projects.
   <br>
-  Join the Open Source community today and start making a difference.
+  Join the open source community today and start making a difference.
 </p>
 
 <p align="center">
