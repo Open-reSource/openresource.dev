@@ -7,7 +7,7 @@
       "contributors": 22,
       "description": "The one and only Vue cheatsheet you will ever need.",
       "discussions": 0,
-      "forks": 2,
+      "forks": 3,
       "issues": 3,
       "languages": [
         "Vue",
@@ -19,7 +19,7 @@
       "name": "vue-cheatsheet",
       "owner": "themeselection",
       "prs": 1,
-      "stars": 82,
+      "stars": 86,
       "url": "https://github.com/themeselection/vue-cheatsheet"
     }
   ]
