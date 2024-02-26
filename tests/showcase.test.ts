@@ -10,7 +10,7 @@ import type { ShowcaseGitHubRepoLink } from "../src/content/config";
 const { queryMock } = vi.hoisted(() => ({ queryMock: vi.fn() }));
 
 // Mock the entire GraphQL client to avoid hitting the GitHub API.
-vi.mock("@octokit/graphql", () => ({ default: { graphql: { defaults: () => queryMock } } }));
+vi.mock("@octokit/graphql", () => ({ graphql: { defaults: () => queryMock } } ));
 
 // Mock the fs module to avoid writing showcase files to the file system during tests.
 vi.mock("node:fs/promises");
