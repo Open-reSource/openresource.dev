@@ -26,8 +26,8 @@
       "contributors": 31,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 14,
-      "forks": 171,
-      "issues": 13,
+      "forks": 169,
+      "issues": 11,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1625,
+      "stars": 1628,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 5,
       "forks": 48,
-      "issues": 9,
+      "issues": 8,
       "languages": [
         "Python",
         "HTML",
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1367,
+      "prs": 1,
+      "stars": 1370,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -66,7 +66,7 @@
       "description": "📱 📂 iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
       "forks": 140,
-      "issues": 2,
+      "issues": 0,
       "languages": [
         "Objective-C",
         "Ruby"
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 536,
+      "stars": 543,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 558,
+      "stars": 565,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -121,7 +121,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 51,
+      "forks": 52,
       "issues": 2,
       "languages": [
         "Python",
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 432,
+      "stars": 433,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 445,
+      "stars": 447,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -237,7 +237,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 66,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -255,7 +255,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 61,
+      "stars": 62,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
@@ -272,7 +272,7 @@
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 56,
+      "stars": 57,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
