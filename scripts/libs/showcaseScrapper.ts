@@ -1,7 +1,7 @@
 // This script is based on the one from Astro:
 // https://github.com/withastro/astro.build/blob/main/scripts/update-showcase.mjs#L48
 
-import octokit from "@octokit/graphql";
+import { graphql } from "@octokit/graphql";
 import type { Repository } from "@octokit/graphql-schema";
 import ghActions from "@actions/core";
 import { nameToEmoji } from "gemoji";
@@ -33,7 +33,7 @@ export class ShowcaseScraper {
       throw new Error("GITHUB_TOKEN env variable must be set to run.");
     }
 
-    this.#query = octokit.graphql.defaults({
+    this.#query = graphql.defaults({
       headers: {
         authorization: `token ${process.env.GITHUB_TOKEN}`,
       },
