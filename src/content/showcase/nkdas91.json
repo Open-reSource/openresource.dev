@@ -38,6 +38,25 @@
       "prs": 2,
       "stars": 2,
       "url": "https://github.com/marqueefy/marqueefy.github.io"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/147735135?v=4",
+      "contributors": 1,
+      "description": "CueSync is a JavaScript library designed to simplify the integration of interactive transcripts into multimedia content.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "SCSS"
+      ],
+      "name": "cuesync.github.io",
+      "owner": "CueSync",
+      "prs": 0,
+      "stars": 1,
+      "url": "https://github.com/CueSync/cuesync.github.io"
     }
   ]
 }

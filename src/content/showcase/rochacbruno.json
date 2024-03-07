@@ -7,8 +7,8 @@
       "contributors": 120,
       "description": "Configuration Management for Python ⚙",
       "discussions": 41,
-      "forks": 283,
-      "issues": 110,
+      "forks": 284,
+      "issues": 114,
       "languages": [
         "Python",
         "Shell",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 10,
-      "stars": 3457,
+      "prs": 11,
+      "stars": 3464,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 948,
+      "stars": 949,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -47,7 +47,7 @@
       "contributors": 7,
       "description": "DO NOT FORK, CLICK \"Use this template\" - The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.",
       "discussions": 0,
-      "forks": 32,
+      "forks": 33,
       "issues": 10,
       "languages": [
         "Python",
@@ -78,7 +78,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 154,
+      "stars": 155,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
