@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1586,
+      "stars": 1587,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1639,
+      "stars": 1642,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 6,
       "forks": 48,
-      "issues": 8,
+      "issues": 9,
       "languages": [
         "Python",
         "HTML",
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1377,
+      "stars": 1382,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 544,
+      "stars": 545,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 571,
+      "stars": 573,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 436,
+      "stars": 437,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -184,7 +184,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 178,
+      "stars": 179,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -255,7 +255,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 62,
+      "stars": 64,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
