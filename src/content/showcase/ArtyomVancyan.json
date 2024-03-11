@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
-      "contributors": 3,
+      "contributors": 4,
       "description": "Video thumbnail generator for modern web video players such as Plyr, Videojs, Flowplayer, Fluid Player, etc.",
       "discussions": 1,
       "forks": 3,
@@ -15,13 +15,13 @@
       "name": "thumbnails",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 10,
+      "stars": 11,
       "url": "https://github.com/pysnippet/thumbnails"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
-      "contributors": 3,
+      "contributors": 4,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 1,
       "forks": 2,
@@ -56,7 +56,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
-      "contributors": 4,
+      "contributors": 5,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 2,
       "forks": 6,
@@ -66,8 +66,8 @@
       ],
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
-      "prs": 1,
-      "stars": 29,
+      "prs": 0,
+      "stars": 30,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]
