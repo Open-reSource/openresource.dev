@@ -3,7 +3,7 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=a5fbc8ce7e582eb5d38eddb638654cf77361900b&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=31f5856f4cc244f3e0d39058e57cb2bb822a3b4a&v=4",
       "contributors": 1,
       "description": "Remotely control Wi-Fi based microcontrollers with the PSP.",
       "discussions": 0,
@@ -22,7 +22,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=a5fbc8ce7e582eb5d38eddb638654cf77361900b&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=31f5856f4cc244f3e0d39058e57cb2bb822a3b4a&v=4",
       "contributors": 2,
       "description": "Simple application to gather your system information in your computer. 🔍",
       "discussions": 0,
@@ -44,7 +44,7 @@
       "description": "An open-source SDK for PSP homebrew development.",
       "discussions": 1,
       "forks": 134,
-      "issues": 5,
+      "issues": 4,
       "languages": [
         "C",
         "Assembly",
@@ -57,7 +57,7 @@
       "name": "pspsdk",
       "owner": "pspdev",
       "prs": 0,
-      "stars": 794,
+      "stars": 795,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]
