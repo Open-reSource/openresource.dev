@@ -37,7 +37,14 @@ module.exports = {
       'garden',
       'halloween',
       'lemonade',
-      'light',
+      {
+        light: {
+          ...require('daisyui/src/theming/themes')['light'],
+          'primary-content': '#fff',
+          'secondary': '#e82a82',
+          'secondary-content': '#fff',
+        },
+      },
       'lofi',
       'luxury',
       'night',
