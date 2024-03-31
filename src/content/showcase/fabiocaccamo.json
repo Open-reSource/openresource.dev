@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 1652,
+      "stars": 1656,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1388,
+      "stars": 1392,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 548,
+      "stars": 549,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 582,
+      "stars": 584,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 441,
+      "stars": 444,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 461,
+      "stars": 462,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,7 +184,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 181,
+      "stars": 183,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -288,8 +288,8 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 20,
+      "prs": 0,
+      "stars": 19,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
     {
