@@ -1,0 +1,25 @@
+{
+  "author": "rossrobino",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/9092984?u=63e39b3fb418d139c770e885e82fbfaa93179e3e&v=4",
+      "contributors": 4,
+      "description": "Headless custom element library",
+      "discussions": 0,
+      "forks": 6,
+      "issues": 0,
+      "languages": [
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "name": "drab",
+      "owner": "rossrobino",
+      "prs": 0,
+      "stars": 200,
+      "url": "https://github.com/rossrobino/drab"
+    }
+  ]
+}
