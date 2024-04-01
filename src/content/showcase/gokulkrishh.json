@@ -1,0 +1,25 @@
+{
+  "author": "gokulkrishh",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/2944237?u=f90ce0b318b38264d07dc557917b03c98d929d9c&v=4",
+      "contributors": 2,
+      "description": "Bookmark manager for the modern web.",
+      "discussions": 1,
+      "forks": 5,
+      "issues": 1,
+      "languages": [
+        "TypeScript",
+        "PLpgSQL",
+        "CSS",
+        "JavaScript"
+      ],
+      "name": "bmrk.cc",
+      "owner": "gokulkrishh",
+      "prs": 0,
+      "stars": 168,
+      "url": "https://github.com/gokulkrishh/bmrk.cc"
+    }
+  ]
+}
