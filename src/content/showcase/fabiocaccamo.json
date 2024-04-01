@@ -8,7 +8,7 @@
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
       "forks": 220,
-      "issues": 1,
+      "issues": 2,
       "languages": [
         "Objective-C",
         "Swift",
@@ -92,7 +92,7 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 549,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
@@ -111,7 +111,7 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 584,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 462,
+      "prs": 3,
+      "stars": 463,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -183,7 +183,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 183,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -254,7 +254,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 65,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -271,7 +271,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 3,
       "stars": 60,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -288,7 +288,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 5,
       "stars": 19,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
