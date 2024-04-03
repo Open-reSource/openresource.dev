@@ -123,6 +123,14 @@ main {
 	color: oklch(var(--pc));
 }
 
+.prose .alert strong {
+	color: inherit;
+}
+
+.prose .alert a {
+	color: inherit;
+}
+
 /* https://github.com/algolia/docsearch/blob/066539c2c91c3559dcf3a738c8c998693a02465c/packages/docsearch-css/src/_variables.css */
 .DocSearch {
 	--docsearch-text-color: oklch(var(--bc));
