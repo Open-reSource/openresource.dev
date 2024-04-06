@@ -1,0 +1,735 @@
+---
+creationDate: '2024-05-03'
+description: 'Analysis and study of the Vue.js GitHub repository.'
+labels: [
+  { label: 'github', class: 'badge-primary' },
+  { label: 'repository', class: 'badge-primary' },
+  { label: 'study', class: 'badge-primary' },
+  { label: 'analysis', class: 'badge-primary' }
+]
+lastUpdateDate: '2024-05-03'
+title: 'Open-Source Repository Analysis: Vue.js'
+---
+
+import Screenshot from '../../components/Screenshot.astro';
+
+<p class="lead">The “Open-Source Repository Analysis” series deeps dive into famous open-source repositories to understand their structure, configuration and specificities so that the open source community get inspired to create and maintain their own open-source projects.</p>
+
+## How This Analysis Works
+
+This article is a one-shot analysis of the Vue.js core repository that happened in April/May 2024. It won't be updated along the way when the repository evolves. It is up to you to check the repository directly for the most up-to-date information, and maybe find some even more interesting things in the future!
+
+The process of analyzing repositories follows a specific series of steps based on the discovery of the repository via the interface:
+- The organization that provides the repository.
+- The right-hand side of the repository page is analyzed first: the about section, the releases, the packages, the deployments, the sponsorship, and the organization.
+- Then, the README file is analyzed with its content and structure.
+- Next, the tabs of the repository are analyzed: issues, pull requests, labels, milestones, discussions, wiki, actions, projects, security, insights.
+- Finally, an analyze of a part of the code with the common files that are helpful in a repository to maintain it and to help the contributors. The code itself of the project is not analyzed as we want to get insights on the good practices and the tools relative to open-source projects.
+
+This article will gather all this information and cross-reference it to provide a comprehensive view of the Vue.js core repository, and its good practices.
+
+In this series, suggestions of improvements can be mentioned. They are just ideas to make it even better or to suggest some other ways of doing things. They are not meant to criticize the maintainers, the contributors of the corresponding repository, or the project itself.
+
+## Vue.js
+
+Vue.js is a popular JavaScript framework for building user interfaces and single-page applications. It was created by [Evan You](https://github.com/yyx990803) and released in 2014. Vue.js is known for its simplicity and flexibility, making it a great choice for developers who want to build modern web applications.
+
+Vue.js is composed of several repositories, each serving a different purpose. This analysis focuses on the main Vue.js GitHub repository:
+
+<div class="card w-full bg-base-100 xs:shadow-xl mb-5 xs:mb-12 not-prose">
+  <div class="card-body p-0 xs:p-8 list-none">
+    <div class="flex justify-between">
+      <h2 class="card-title text-xl xs:text-4xl text-base-content">
+        <a href="https://github.com/vuejs/core" class="stretched-link hover:underline font-normal break-all">
+          <span class="max-w-[50px]">vuejs/</span><br/>
+          <strong class="font-bold max-w-[50px]">core</strong>
+        </a>
+      </h2>
+      <img src="https://avatars.githubusercontent.com/u/6128107?v=4" aria-hidden="true" class="w-[50px] h-[50px] xs:w-[100px] xs:h-[100px] rounded-xl" />
+    </div>
+    <p>🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.</p>
+  </div>
+</div>
+
+## GitHub Organization
+
+This repository is part of the [Vue GitHub organization](https://github.com/vuejs).
+
+The organization page is well configured with a short description, a logo, and links to their website and X account. It is verified and it contains pinned repositories whose the core repository is the first one. Having pinned repositories is really helpful to highlight the most important projects of the organization, especially when there are many repositories.
+
+There could be room for improvement in this page.
+
+1. There is no `.github` repository at the organization level. Having one could be used to store common files like issue templates, pull request templates, etc. Maybe it's not needed for this organization, but it could help to have a centralized place for these files (see [GitHub documentation - Customizing your organization's profile](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile)).
+
+2. In this same `.github` repository, a `.github/profile/README.md` file could be added in the organization repository to explain what the organization is about, what are the main repositories, how to contribute, etc. This file could be used to provide more information to users, contributors, or potential sponsors. Here is an example of what it could look like in our [Open \{re\}Source organization](https://github.com/Open-reSource/).
+
+3. It might be voluntary for various reasons, but the organization doesn't have any sponsorship at the organization level. This would be a way to support the entire organization and its projects, and could be mentioned in the `.github/profile/README.md` file. But this clearly depends on the organization's governance and strategy.
+
+## GitHub About Section
+
+The GitHub about section of the repository is the first thing that users see when they land on the repository page. It is important to have a clear and concise description of the project to give users an idea of what the project is about.
+
+<Screenshot src="/images/open-source-repo-analysis-vue-js-1.png" alt="Screenshot of the GitHub about section of the repository. It contains a short description, a link to the Vue.js website, GitHub links to the readme, MIT license, security policy, activity, and custom properties. Some statistics are rendered as well: 44.2k stars, 762 watching, and 7.8k forks." />
+
+This about section starts with a **description with a nice sentence in a non-formal way with a cool emoji**. This is a good way to catch the attention of the users by showing the personality and friendliness of the project. Emojis can be a tricky thing in terms of accessibility, but having it at the beginning or the end of the sentence is acceptable as it doesn't replace a word in the paragraph.
+
+Then, there is **a link to the website**, which is a good practice to redirect users to the official website of the project.
+
+Good practices are followed since we can see the **readme, license, and security policy links**. The other links are automatically available on all GitHub repositories: **activity, custom properties, stars, watchers, and forks**.
+
+There are room for improvements in this section:
+
+1. The only missing link here is the **code of conduct** because there is no `CODE_OF_CONDUCT.md` file in the repository. More information about this will be provided in the [code of conduct section](#code-of-conduct).
+
+2. There are no topics in the repository such as "javascript", "framework", "vue", and "frontend". This is not a big deal but **topics could help to categorize the repository and make it easier to discover**, even if Vue.js is already well-known by the community.
+
+## Releases, Packages and Deployments
+
+**Releases are included in the home page, showing the latest release and the number of releases.** This is a good way to highlight the latest changes and to show that the project is active, and to find the releases easily.
+
+**Packages and deployments are not used** in this repository.
+
+<Screenshot src="/images/open-source-repo-analysis-vue-js-2.png" alt="Screenshot of the 'Releases' page of the repository showing the 3 latest releases. Two are v3.5.0-alpha.* pre-releases and one is v3.4.26 latest release." />
+
+All the versions are tagged with a `v` prefix and the alpha versions are tagged with an `alpha` suffix. These alpha versions are pre-releases and are not stable versions. This is a good practice to differentiate the stable versions from the pre-releases.
+
+The community is really active in this repository as we can see that between 30 and 60 people reacted to the GitHub releases. This is a good sign of a healthy project with an active community.
+
+If we look at the details of the releases, we can see that the releases are created by `github-actions` which means that they are automatically created by a GitHub Action.
+
+### Releases and Automation
+
+The releases are semi-automated with the help of GitHub Actions. The release process is triggered by a tag push. The release is created by the `Create Release` GitHub Action. This action is triggered by the `push` event on the `refs/tags/*` branch. The action is defined in the [`.github/workflows/release-tag.yml` file](https://github.com/vuejs/core/blob/main/.github/workflows/release-tag.yml), relying on the [`yyx990803/release-tag` GitHub Action](https://github.com/yyx990803/release-tag), a fork of [`actions/create-release`](https://github.com/actions/create-release).
+
+In the [GitHub workflow files](https://github.com/vuejs/core/tree/main/.github/workflows), and in the [executed GitHub Actions](https://github.com/vuejs/core/actions), we can see two other workflows related to the releases:
+- [canary release](https://github.com/vuejs/core/actions/workflows/canary.yml): Automatically release a new canary version of the project every Monday at 1 AM UTC.
+- [canary minor release](https://github.com/vuejs/core/actions/workflows/canary-minor.yml): Automatically release a new canary minor version of the project every Monday at 1 AM UTC.
+
+All this automation is a good way to save time for the maintainers and to ensure that the releases are consistent and follow the same process every time.
+
+## Sponsorship
+
+The sponsorship section is included in the home page where we can see two kinds of sponsorships:
+- [GitHub Sponsor of Evan You](https://github.com/sponsors/yyx990803), the creator of Vue.js project
+- [Open Collective to sponsor the Vue.js project](https://opencollective.com/vuejs) (see the [Open Collective Analysis](#open-collective-analysis))
+
+We are not going to analyze the sponsorship numbers in detail, as it is not the goal of this analysis.
+
+However, we can note that the tiers and the values are slightly different between the GitHub Sponsors and the Open Collective sponsorship.
+
+Here is a **list of interesting counterparts for the sponsors** (depending on the amounts) that could give you some ideas:
+- Receive a Sponsor badge on your profile (this is a the default GitHub behavior for sponsors).
+- The name, logo, or company's logo can be put at different places depending on the amount:
+  - in various sections in `vuejs/core`'s [README](https://github.com/vuejs/core/blob/main/README.md) and [BACKERS](https://github.com/vuejs/core/blob/main/BACKERS.md) files.
+  - on the [sponsor page](https://vuejs.org/sponsor/) of [vuejs.org](https://vuejs.org/).
+  - on the front page of [vuejs.org](https://vuejs.org/).
+  - in [Vite's documentation](https://vitejs.dev/), with more prominent placement and targeting early adopters across multiple frameworks.
+  - the right sidebar of every content page on [vuejs.org](https://vuejs.org/).
+- Listed at https://vuejs.org/partners/ (requiring a pre-approval).
+- Special shout-out from the official @vuejs Twitter account.
+
+An interesting thing to notice is how they **add the page views of the website to show the visibility that the sponsor can have**. This is a good way to show the impact of the sponsorship, and motivate the sponsors to probably increase their sponsorship.
+
+### Display the sponsors in the README
+
+Sponsors are highlighted directly in the second section of the README. It shows the importance of sponsors for the project.
+
+There is a small description that thanks the backers and sponsors, and a link to the full list of backers and sponsors in the `BACKERS.md` file. This is a good way to show the importance of the sponsors and to give them visibility. There is also a link to the sponsoring page on Vue.js website.
+
+At the time of the analysis, there is a small issue with the "Special Sponsor" section in dark mode which is generated differently than the other sponsors image, and also different from the image used in the `BACKERS.md` file.
+
+<Screenshot src="/images/open-source-repo-analysis-vue-js-3.png" alt="Screenshot of the issue observed on dark mode on GitHub, where the 'Special Sponsor' name isn't readable" />
+
+We often see this kind of issue with dark mode on GitHub, especially when the content contains SVGs without background. This is obviously not a big deal.
+
+### Display the Sponsors in a `BACKERS.md`
+
+A [`BACKERS.md`](https://github.com/vuejs/core/blob/main/BACKERS.md) contains the list of backers and sponsors of the project in an SVG image.
+
+This is not a common approach, but definitely a good one, as it gives visibility to the sponsors and backers in a dedicated file that can be easily accessed or referenced from several places.
+
+This is a good way to give visibility to the backers and sponsors and to thank them for their support.
+
+### Sponsor Page on the Website
+
+We learnt by reading the sponsorship tiers that the sponsors can be listed on the [sponsor page](https://vuejs.org/sponsor/) of [vuejs.org](https://vuejs.org/).
+
+If we look at this page, it explains how to become a Vue.js sponsor, as a business or as an individual, the tier benefits, and displays the current sponsors.
+
+This is a good recap of the overall sponsorship program for Vue.js.
+
+There are some improvements that could be made to this page:
+
+1. In the "Tier Benefits" section, the first part until the "Gold" tier contains links to `vuejs.org` and `vuejs/core` repository. From the "Gold" tier, the links are missing to the `vuejs/core` repository and the `BACKERS.md` file. Moreover, the `README.md` file isn't mentioned. There seems to be an inconsistency in the information between the 3 sponsorship information in the website, the GitHub Sponsors page, and the Open Collective page, that could be harmonized to avoid confusion.
+
+2. The sponsors don't appear on Firefox as the data from https://sponsors.vuejs.org/data.json doesn't seem to be reachable for CORS reasons.
+
+### Vue Partners
+
+With the highest tier, the sponsors can become partners of Vue. And these Vue Partners are listed in [a dedicated page](https://vuejs.org/partners/) where it is not simply a list of sponsors anymore, but real presentations of the partners with cards containing the logo, the name, the description, and the link to the website. There is even a "Partner Spotlight".
+
+There is a sense of exclusivity and premium service for the partners. On one hand, it shows the importance of the Vue project and the trust that the partners have in the project. On the other hand, it can be a good way to motivate the sponsors to increase their sponsorship to become partners.
+
+## README
+
+We looked at the right-hand side of the GitHub repository page, now let's dive into the README file.
+
+Except for an analysis, the README file is the first thing that users see when they land on the repository page. It is important to have a clear and concise description of the project to give users an idea of what the project is about, but also to provide with the right pointers to the main important parts of the project.
+
+This README file is well-structured with the following sections:
+- The [**Getting Started**](https://github.com/vuejs/core/blob/main/README.md#getting-started) section is really minimalist with a simple redirection to the documentation. This is a good practice to avoid duplicating and maintaining content. Depending on where your come from when you land on the repository, you may also want to have a quick overview of the project. It could be a good idea to add a short description of the project before this getting started section.
+- We already mentioned the [**Sponsors**](https://github.com/vuejs/core/blob/main/README.md#sponsors) section in the previous part.
+- The [**Questions**](https://github.com/vuejs/core/blob/main/README.md#questions) section redirects to [the official forum](https://forum.vuejs.org/) or [community chat](https://chat.vuejs.org/), and summarizes basic rules for the issues, not to confound the issues with the questions.
+- The [**Issues**](https://github.com/vuejs/core/blob/main/README.md#issues) section reminds the users to respect the issue requirements and to use the new issue helper when opening an issue. This is a good way to avoid issues that are not actionable or that are not clear. They also precise that the non-conforming issues will be closed immediately, showing that it is an important point for the maintainers, and probably recurring.
+- A [**Stay In Touch**](https://github.com/vuejs/core/blob/main/README.md#stay-in-touch) section contains some external links are provided to follow the project on X, a link to the blog, and a link to the job board. Having a job board is not common in open-source projects and shows how Vue.js is a big project with a strong community!
+- There is a [**Contribution**](https://github.com/vuejs/core/blob/main/README.md#contribution) section that links the contributing guide, mentions a curated list of awesome things related to Vue, and shows the contributors of the project. This is a good way to give visibility to the contributors, thank them, but also to create a community by allowing them to share their work.
+- Finally, there is a simple reminder of the [**License**](https://github.com/vuejs/core/blob/main/README.md#license) used in the project which can be really useful for people not familiar with the GitHub repository structure and interface. And it can be also really handy when the README files are gathered by external tools such as package managers for instance.
+
+## Contributing Guide
+
+Some key elements have been spotted in the README file and were only some quick pointers. Let's see what we can find in the [Vue.js Contributing Guide](https://github.com/vuejs/core/blob/main/.github/contributing.md).
+
+The contributing guide is a key element of an open-source project. It is the place where the maintainers explain how to contribute to the project, what are the rules to follow, and what are the best practices to adopt.
+
+### Code of Conduct (CoC)
+
+This is the first time a code of conduct is mentioned in this analysis, and it is directly a link to [the code of conduct from the website](https://vuejs.org/about/coc.html). It is pretty rare to have it mentioned only in the contributing guide.
+
+Usually, the code of conduct is mentioned in the README file and references a `CODE_OF_CONDUCT.md` file. I can understand that the Vue.js project is big and has a lot of repositories, and having a common code of conduct at a higher level in the website as a unique reference is a good idea.
+
+However, having a `CODE_OF_CONDUCT.md` file in the repository could also allow in the about section to have a direct link to the code of conduct too, and to make it easier to find. An improvement could be to create this file in the repository, and simply add a link to the website in this file.
+
+This code of conduct is something we know well in the open-source community, as it is adapted from the [Contributor Covenant version 1.4](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
+
+### [Issue Reporting Guidelines](https://github.com/vuejs/core/blob/main/.github/contributing.md#issue-reporting-guidelines)
+
+The rule, which was also mentioned in the README, is pretty simple:
+
+> Always use https://new-issue.vuejs.org/ to create new issues.
+
+**You should check out this new issue helper, which is pretty amazing!** A lot of pedagogy is put into this helper to guide the user to open the right issue with the right information. This is a good way to avoid issues that are not actionable or that are not clear.
+
+A clear message is contained in this helper that is important and that must allow to save time for the maintainers by avoiding to justify the same things over and over again when they close an issue:
+
+> If you open an issue that does not conform to the requirements, **it will be closed immediately**.
+
+There is even a ready-to-use justification for that: [Why are we so strict about this?](https://new-issue.vuejs.org/?repo=vuejs/core#why-strict).
+
+We won't detail the new issue helper here, but you should definitely check it out! This tool, which is open source by the way too, is really amazing and a gold mine for any open-source maintainers.
+
+However, there is probably room for improvement. It is pretty rare to have a dedicated tool for creating issues. As contributors, we are used to consult the contributing guide to know how to create pull requests, to understand the different statuses of the issues, etc. but we are rather used to create issues directly on GitHub. What makes it more difficult to understand is that there is a [GitHub issue template](https://github.com/vuejs/core/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml) in the repository that allows to create a report. This can be a bit confusing for the contributors.
+
+One possibility to improve this would be to get rid of the [GitHub issue template](https://github.com/vuejs/core/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml) and to add to the [`.github/ISSUE_TEMPLATE/config.yml`](https://github.com/vuejs/core/blob/main/.github/ISSUE_TEMPLATE/config.yml) a new configuration that would redirect the users to the new issue helper. This would avoid any confusion and would make the process more consistent.
+
+### [Pull Request Guidelines](https://github.com/vuejs/core/blob/main/.github/contributing.md#pull-request-guidelines)
+
+This section starts to explain what are the primary Git branches to work on.
+
+The second element is a link to [GitHub > Allowing changes to a pull request branch created from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork). And this is a really good idea to mention this link in the contributing guide to avoid dealing with this kind of issue in the pull requests. It can have a big impact on the maintainers' and contributors' time. Imagine starting to review a pull request and realizing that you can't push changes to the branch because it hasn't been set up correctly...
+
+Then, the section explains different things to consider depending on the type of pull request that we won't mention here in detail, and that are pretty common in contributing guides.
+
+However, two things are worth mentioning.
+
+1. The first one is that the **commit messages must follow their commit message convention** which is stored in a [`.github/commit-convention.md`](https://github.com/vuejs/core/blob/main/.github/commit-convention.md) dedicated file adapted from [Angular's commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular). I particularly like the "TL;DR" section starting the document that gives directly the regex to follow for the commit messages.
+
+    In a spirit to reduce the noise and optimize the time of the maintainers, **commit messages are automatically validated before commit** by invoking [Git Hooks](https://git-scm.com/docs/githooks) via [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks).
+
+2. The second one is that **the pull requests must be linted and formatted before being submitted**. This is a good practice to ensure that the code is clean and consistent, and to avoid back and forth in the review process.
+
+    In a spirit to reduce the noise and optimize everyone's time, **the linting and formatting are automatically applied** with ESLint and Prettier on commit by invoking [Git Hooks](https://git-scm.com/docs/githooks) via [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks). It is enforced by the [`.github/workflows/autofix.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/autofix.yml) GitHub Action for each pull request, or checked by a part of [`.github/workflows/ci.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/ci.yml).
+
+    It is not mentioned, but the latter is also used to run the unit and end-to-end tests on the pull requests.
+
+### [Development Setup](https://github.com/vuejs/core/blob/main/.github/contributing.md#development-setup), [Git Hooks](https://github.com/vuejs/core/blob/main/.github/contributing.md#git-hooks), and [Scripts](https://github.com/vuejs/core/blob/main/.github/contributing.md#scripts)
+
+These sections are rather specific to the Vue.js project and explain how to set up the development environment to work on the project, and use Git hooks and scripts. It is a good practice to have these kinds of sections in the contributing guide to help the contributors to get started quickly.
+
+Something could be improved at the beginning of this section. The first sentence mentions that:
+
+> You will need Node.js version 18.12+[...]
+
+This is a bit confusing as there is a [`.node-version`](https://github.com/vuejs/core/blob/main/.node-version) file referencing Node 20. To have a consistent version, it could be a good idea to point rather to the `.node-version` file.
+
+### [Project Structure](https://github.com/vuejs/core/blob/main/.github/contributing.md#project-structure)
+
+{/* TODO */}
+
+### [Contributing Tests](https://github.com/vuejs/core/blob/main/.github/contributing.md#contributing-tests)
+
+{/* TODO */}
+
+### [Financial Contribution](https://github.com/vuejs/core/blob/main/.github/contributing.md#financial-contribution)
+
+{/* TODO */}
+
+### [Credits](https://github.com/vuejs/core/blob/main/.github/contributing.md#credits)
+
+{/* TODO */}
+
+## Maintenance
+
+### Questions
+
+{/* TODO */}
+{/* Not mentioned in the contributing guide */}
+
+### Labels
+
+{/* TODO */}
+
+### Issues
+
+{/* TODO */}
+
+### Pull Requests
+
+{/* TODO */}
+
+### Projects and Milestones
+
+{/* TODO */}
+
+### Automation
+
+{/* TODO */}
+
+### Dependencies
+
+{/* TODO */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/*
+## Maintenance
+### Issues template
+- https://github.com/vuejs/core/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml
+- https://github.com/vuejs/core/blob/main/.github/ISSUE_TEMPLATE/config.yml
+- issue creator
+*/}
+
+{/*
+## Contribution
+
+Please make sure to read the Contributing Guide before making a pull request. If you have a Vue-related project/component/tool, add it with a pull request to this curated list!
+
+Thank you to all the people who already contributed to Vue!
+
+### Questions
+
+From the README For questions and support please use the official forum or community chat. The issue list of this repo is exclusively for bug reports and feature requests.
+
+### From the README
+
+that adds a link to the contributing guide
+
+This section adds a link to the contributing guide, and we learn that there is a [dedicated repository for the Vue-related projects](https://github.com/vuejs/awesome-vue) which is a curated list of awesome things related to Vue.js. This is a good way to give visibility to this repository and to show that the project is part of a bigger ecosystem.
+
+This is followed by an image that shows the contributors of the project, a nice way to give visibility to the contributors and to show that the project is active. It redirects to the [contributors page of the repository](https://github.com/vuejs/core/graphs/contributors). This image is provided by Open Collective at https://opencollective.com/vuejs/contributors.svg.
+
+### Issues
+
+Please make sure to respect issue requirements and use the new issue helper when opening an issue. Issues not conforming to the guidelines may be closed immediately.
+
+This section is a necessary reminder that the users must respect the issue requirements and use a [new issue helper](https://new-issue.vuejs.org) when opening an issue.
+*/}
+
+{/*
+### Questions
+
+This part is concise and clear with a link to the official forum and the community chat. The official forum being the GitHub Discussions, and the community chat being the Discord server. This is a good way to redirect users to the right place to ask questions and get help.
+
+We also learn something about the project: the issue list of the repository is dedicated exclusively to bug reports and feature requests.
+
+## Issues
+
+At the time of the analysis, there are 720 open issues and 4,073 closed issues. This is a good ratio of closed issues compared to the open ones. This shows that the maintainers are active and that the project is well-maintained.
+
+The amount of open issues could seem high, but this is pretty common for big projects like Vue.js.
+
+23% of opened issues are not labeled, and 71% of closed issues are not labeled. We don't have internal information but we could guess that using labels is a new practice in the project.
+
+<div role="alert" class="alert">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+  <span>**Tips:** You can list unlabeled issues by using the `is:issue is:open no:label` query in the GitHub search bar.</span>
+</div>
+
+## Pull Requests
+
+TODO
+
+*/}
+
+{/* 
+- Bots
+- Comments → trigger actions → https://github.com/vuejs/core/pull/10632#issuecomment-2029431946
+*/}
+
+{/*
+## Labels
+
+53 labels are used in this repository.
+
+<details>
+  <summary>Click to see the list of labels and their usage</summary>
+
+| Label | Description | Used in issues? | Used in PRs? |
+|---|---|---|---|
+| breaking change |  | No | Yes |
+| 🧹 p1-chore | Priority 1: this doesn't change code behavior. | Yes | Yes |
+| browser specific |  | Yes | Yes |
+| 🍰 p2-nice-to-have | Priority 2: this is not breaking anything but nice to have it addressed. | Yes | Yes |
+| can't reproduce |  | Yes | No |
+| dependencies | Pull requests that update a dependency file | No | Yes |
+| duplicate | This issue or pull request already exists | Yes | Yes |
+| easy for merge |  | No | Yes |
+| ❗ p4-important | Priority 4: this fixes bugs that violate documented behavior, or significantly improves perf. | Yes | Yes |
+| 🔥 p5-urgent | Priority 5: this fixes build-breaking bugs that affect most users and should be released ASAP. | Yes | Yes |
+| good first issue | Good for newcomers | Yes | No |
+| 🔨 p3-minor-bug | Priority 3: this fixes a bug, but is an edge case that only affects very specific usage. | Yes | Yes |
+| has PR | A pull request has already been submitted to solve the issue | Yes | No |
+| has workaround  A workaround has been found to avoid the problem | Yes | No |
+| help wanted | Extra attention is needed | Yes | No |
+| invalid | This doesn't seem right | Yes | Yes |
+| 🐞 bug | Something isn't working | Yes | Yes |
+| need discussion |  | Yes | Yes |
+| need documentation | Not necessarily a bug, but proper documentation is needed | No | Yes |
+| need guidance | The approach/solution in the PR is unclear and requires guidance from maintainer to proceed further. | Yes | Yes |
+| need more info | Further information is requested | Yes | Yes |
+| need test | The PR has missing test cases. | No | Yes |
+| 🛑 on hold | This PR can't be merged until other work is finished | Yes | Yes |
+| 🔩 p2-edge-case |  | Yes | Yes |
+| ready for review | This PR requires more reviews | No | Yes |
+| ready to merge | The PR is ready to be merged. | No | Yes |
+| regression |  | Yes | Yes |
+| scope: compiler |  | Yes | Yes |
+| scope: custom elements |  | Yes | Yes |
+| scope: defineModel |  | Yes | Yes |
+| scope: hmr |  | Yes | Yes |
+| scope: infra |  | Yes | Yes |
+| scope: keep-alive |  | Yes | Yes |
+| scope: playground |  | Yes | Yes |
+| scope: reactivity |  | Yes | Yes |
+| scope: reactivityTransform |  | Yes | Yes |
+| scope: script-setup |  | Yes | Yes |
+| scope: sfc |  | Yes | Yes |
+| scope: sfc-style-vars |  | Yes | Yes |
+| scope: slots |  | Yes | Yes |
+| scope: ssr |  | Yes | Yes |
+| scope: suspense |  | Yes | Yes |
+| scope: teleport |  | Yes | Yes |
+| scope: transition |  | Yes | Yes |
+| scope: types |  | Yes | Yes |
+| scope: v2 compat |  | Yes | Yes |
+| scope: v-model |  | Yes | Yes |
+| security | Pull requests that address a security vulnerability | No | Yes |
+| ✨ feature request | New feature or request | Yes | Yes |
+| transferred to rfc discussions | Please manually search in http://github.com/vuejs/rfcs/discussions for the latest discussions | Yes | No |
+| version: minor |  | Yes | Yes |
+| wait changes |  | No | Yes |
+| wontfix | This will not be worked on | Yes | No |
+</details>
+
+As usual, the labels are used in issues and pull requests. The labels are well-organized and cover a wide range of topics from priority to scope, and from bug to feature request. This is a good way to categorize the issues and pull requests and to make it easier to find what you are looking for, and maintainers to prioritize the work.
+
+* We can recognize common labels that are used in many repositories to categorize the issues and pull requests at a high level like `🐞 bug`, `✨ feature request`, `dependencies`, and `security`.
+* Triage labels are there to help the maintainers do their job:
+  * `can't reproduce` or `invalid` can be combined to `need more info` to ask for more information to reproduce the issue.
+  * `duplicate` and `wontfix` informs that the issue or pull request already exists or is not in the scope of the project, and can be closed right away.
+  * `🛑 on hold` is pretty straightforward as it signals that something must be done before.
+  * Sometimes, a workaround can help the community to avoid the problem while waiting for a fix, `has workaround` is used for that.
+* Priorities are used to categorize the issues and pull requests by their importance and urgency from `🧹 p1-chore` to `🔥 p5-urgent`. This helps the maintainers to tackle everything in the right order and also provides some feedback to the community about when the issues and pull requests will be more or less handled.
+* `scope: *` labels are used to categorize the issues and pull requests by the part of the project they are related to. Using a common prefix like `scope:` is actually a very good idea that helps readability and maintainability.
+  * `browser specific` is used in the same spirit.
+* Pretty common too, `good first issue` and `help wanted` are used to help newcomers and to highlight the issues that need more attention.
+* In the review process:
+  * `has PR` can be added to the corresponding issue to avoid duplicate pull requests.
+  * all `need: *` labels and `wait changes` are used to signal that something is missing in the issue or pull request. This is a good way to guide the contributors and to avoid back and forth in the review process. Discussion, guidance, test, more info, and documentation are the most common labels used in this category.
+  * `regression`, `breaking change`, and `version: minor` can be used to evaluate the impact of the changes on the migration process for the community, but also to define when to merge the pull request in the semantic versioning process.
+  * `ready for review`, `easy for merge`, `ready to merge` are used to signal that the pull request is ready for the next step, and help the maintainers to work asynchronously.
+* As often in repositories, there are really specific labels that are used rarely or temporarily like `transferred to rfc discussions`.
+
+Some tiny improvements have been spotted for the labels description. `need guidance` and `🛑 on hold` label descriptions mention the use of these labels for the pull requests but are actually also used for issues.
+
+## Milestones
+
+No milestones are used in this repository.
+
+## Discussions
+
+We are welcomed by a ["Welcome to Vue Discussions!" pinned discussion](https://github.com/vuejs/core/discussions/5902) explaining what are the discussions for, how to use them, and what are the rules. This is a good way to guide the users and to avoid any misunderstanding.
+
+The categories correspond to most open-source projects:
+- **Announcements**: for the project announcements. Actually, this one is only used for the main pinned discussion.
+- **General Discussions**: for general discussions about the project where users can chat about anything and everything here.
+- **Help/Questions**: a place for the community to ask questions and get help.
+- **Ideas**: for sharing ideas for new features.
+- **Polls**: for taking a vote from the community.
+- **Show and tell**: for the community to show off something they've built with Vue.js.
+
+## Wiki
+
+No wiki has been set up in this repository.
+
+## Actions
+
+Different actions are used in this repository. We will dig into them more in details in the [code source analysis](#githubworkflows) but here is what we can see only based on the execution of the actions:
+- [autofix.ci](https://github.com/vuejs/core/actions/workflows/autofix.yml) is used to automatically for each pull request to run prettier and eslint to fix the code style. It is based on [autofix.ci](https://autofix.ci/).
+
+- [ci](https://github.com/vuejs/core/actions/workflows/ci.yml) is used to run the tests on each pull request or pushed branch.
+- [Create Release](https://github.com/vuejs/core/actions/workflows/release-tag.yml) is used to create a new release when a tag is pushed.
+- [ecosystem-ci trigger](https://github.com/vuejs/core/actions/workflows/ecosystem-ci-trigger.yml) is triggered by a `/ecosystem-ci run` comment that will create a workflow dispatch event to run a specific action in the `ecosystem-ci` repository.
+- [Export Size](https://github.com/vuejs/core/actions/workflows/export-size.yml) is used to export the size of the project in a JSON file.
+- [Lock Closed Issues](https://github.com/vuejs/core/actions/workflows/lock-closed-issues.yml) is used to lock the closed issues after 14 inactive days. It uses the [lock-threads](https://github.com/dessant/lock-threads) GitHub action that allows to lock closed issues, pull requests and discussions after a period of inactivity.
+- [size data](https://github.com/vuejs/core/actions/workflows/size-data.yml) is used to export the size data.
+- [size report](https://github.com/vuejs/core/blob/main/.github/workflows/size-report.yml) uses the exported size data, compare it with the previous size data, and create a comment in the pull request with the size difference.
+
+## Projects
+
+First, we can see that there are no template projects in this repository.
+
+Classic projects are the old way of managing projects in GitHub. We can find 2 opened projects and 2 closed projects.
+
+The opened projects are from 2022 and are probably not used anymore and could be closed:
+- [Custom Elements Bugsquash](https://github.com/vuejs/core/projects/5) shows a basic Kanban board with 5 columns: Issues, PRs, Review needed, Ready to Merge, and Done.
+- [Next Patch](https://github.com/vuejs/core/projects/2) shows another board really focused on releasing a patch, with 5 columns: High Priority, Dev/Prod Inconsistency, Open for Review, Done, and Approved by a team member.
+
+The closed projects are from 2020 and 2021 and don't contain any useful information in our quest to find reusable templates or elements to handle open-source project management.
+
+Let's now focus on the actual projects that are opened and used in the repository. They don't use the classic projects but the new projects.
+- [Issue / PR Management](https://github.com/orgs/vuejs/projects/13): For planning purposes. Features not landed will rollover to the next minor. This project contains two tabs:
+  - Overview: with a board of several columns:
+    - Needs Review
+    - In Review: Currently in review
+    - Waiting: Waiting for something in the PR
+    - Needs further expertise: Need input on specific implementation
+    - Ready to merge
+    - Merged: Merged PRs
+    - Stale: Stale PRs, if the functionality is good maybe we can do something about it
+    - Rejected
+    - Breaking: Breaking change PRs
+  - Ready to Merge: a table filtered by pull requests having the "Ready to merge" status, with different columns:
+    - Title
+    - Assignees
+    - Status
+    - Labels
+    - Milestone: that could be removed as the repository doesn't seem to use milestones.
+- [Next Minor](https://github.com/orgs/vuejs/projects/4): For planning purposes - issues not included in the release will be rolled over to the next release. This project only contains one tab named "All" filtering out the done issues and pull requests, with a table with different columns:
+  - Title
+  - Assignees
+  - Status: mostly empty values except one "Todo"
+  - Priority: empty values or from 1 to 4.
+- [Triage Session](https://github.com/orgs/vuejs/projects/10): PRs / issues that need to be discussed in the next face-to-face triage session. This project only contains one tab named "To be discussed" only showing the opened issues, with a table with different columns:
+  - Title: column that can be filtered by status (at least "Todo" and "Done")
+  - Assignees
+  - Labels
+  - Status
+
+## Security
+
+The security tab is well-configured with a security policy defined in the `SECURITY.md` file. This is a good practice to inform the users about the security policy of the project and to guide them on how to report a security vulnerability.
+
+## Insights
+
+Most of the tabs in the Insights section ([Pulse](https://github.com/vuejs/core/pulse), [Contributors](https://github.com/vuejs/core/graphs/contributors), [Commits](https://github.com/vuejs/core/graphs/commit-activity), and [Code frequency](https://github.com/vuejs/core/graphs/code-frequency)) allow us to see the activity of the repository and the contributors. Vue.js is in a great shape with a lot of activity and a lot of contributors. This is a good sign of a healthy project. Keep up the good work!
+
+[Dependency graph](https://github.com/vuejs/core/network/dependencies), [Network](https://github.com/vuejs/core/network), and [Forks](https://github.com/vuejs/core/forks) are not useful for this analysis.
+
+The [Community Standards](https://github.com/vuejs/core/community) is a page that provides information about the community standards of open-source projects on GitHub.
+
+<Screenshot src="/images/Screenshot 2024-04-09 at 21.46.27.png" alt="" />
+
+This page highlights some improvements:
+- As mentioned earlier in this analysis, the project could add a `CODE_OF_CONDUCT.md` file in the repository to make it easier to find; even if the contributing guide redirects to the website where the code of conduct is available.
+- The project could add a pull request template to guide the contributors when opening a pull request.
+- Maintainers could enable the content to be reported in the repository settings where users can report abusive or disruptive content for review and moderation. This is something that can help to moderate the content and that can be enabled by following [GitHub Docs > Managing reported content in your organization's repository](https://docs.github.com/en/communities/moderating-comments-and-conversations/managing-reported-content-in-your-organizations-repository).
+
+
+## Source Files
+
+We won't analyze the source files of the project as it is not the goal of this analysis. We will focus on the common files that are helpful in a repository to maintain it and to help the contributors.
+
+### `.github`
+
+Let's start with the `.github` directory that contains the following files and directories:
+
+#### `.github/ISSUE_TEMPLATE`
+
+The `ISSUE_TEMPLATE` directory allows to configure and store the issue templates to standardize the information you would like contributors to include when they open an issue in your repository. More information can be found in the [GitHub documentation - About issue and pull request templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates).
+
+Let's start by looking at the `config.yml`:
+
+```yml
+blank_issues_enabled: false
+contact_links:
+  - name: Feature Request
+    url: https://github.com/vuejs/rfcs/discussions
+    about: Suggest new features for consideration
+  - name: Discord Chat
+    url: https://chat.vuejs.org
+    about: Ask questions and discuss with other Vue users in real time.
+  - name: Questions & Discussions
+    url: https://github.com/vuejs/core/discussions
+    about: Use GitHub discussions for message-board style questions and discussions.
+  - name: Patreon
+    url: https://www.patreon.com/evanyou
+    about: Love Vue.js? Please consider supporting us via Patreon.
+  - name: Open Collective
+    url: https://opencollective.com/vuejs/donate
+    about: Love Vue.js? Please consider supporting us via Open Collective.
+```
+
+Blank issues are disabled, probably to avoid issues that are not actionable or that are not clear.
+
+Then, we have a list of contact links that will be displayed when [creating a new issue](https://github.com/vuejs/core/issues/new/choose):
+* the feature requests are actually not opened in the issues but are handled in the [GitHub Discussions of the RFCs repository](https://github.com/vuejs/rfcs/discussions)
+* questions and discussions are handled in the [GitHub Discussions of the core repository](https://github.com/vuejs/core/discussions)
+* there is a Discord chat available at https://chat.vuejs.org
+* this is interesting to see that they use this issue template to promote the Patreon and Open Collective sponsorship. This is a good way to give visibility to the sponsorship and to show that the project is supported by the community.
+
+On top of that, there is a [`bug_report.md`](https://raw.githubusercontent.com/vuejs/core/main/.github/ISSUE_TEMPLATE/bug_report.yml) describing the form to fill in when opening a bug report:
+* There is a short introduction that tries to limit the number of issues by asking to create a bug report only if you are sure that it is a bug by providing ways to discuss the issue before opening it by:
+  * reading the docs
+  * asking questions in the Discord chat
+  * asking questions in the GitHub Discussions
+  * look for / ask questions on Stack Overflow
+  * search for existing issues
+* The Vue version is asked to be provided
+* Then, a mandatory link to minimal reproduction is asked to be provided:
+  * by showing the bug in [The SFC Playground](https://play.vuejs.org/) (source code available at https://github.com/vuejs/core/tree/main/packages/sfc-playground).
+  * by setting up a StackBlitz project if the playground is not enough.
+  * by providing a GitHub repository if the playground and StackBlitz are not enough.
+  They also provide [Bug Reproduction Guidelines](https://github.com/vuejs/core/blob/main/.github/bug-repro-guidelines.md) to help the users to provide a good reproduction of the bug. We can also see that, despite the efforts to guide the users, they have to mention that "Please do not just fill in a random link. The issue will be closed if no valid reproduction is provided." which shows that it happened before or continue to happen.
+* Some other information is asked as the:
+  * steps to reproduce
+  * what is expected
+  * what is actually happening
+  * the system information by providing the output of `npx envinfo --system --npmPackages vue --binaries --browsers`
+  * some additional comments
+
+#### `.github/workflows`
+
+This directory contains the GitHub Actions workflows that are used in the repository. By analyzing the files, we can retrieve the information that we deduced from the [actions execution](#actions) in the previous section.
+
+- [`autofix.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/autofix.yml): for each pull request, run prettier and eslint to fix the code style. It is based on [autofix.ci](https://autofix.ci/).
+
+- [`ci.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/ci.yml): for each pull request or pushed branch, run the unit tests on Ubuntu and Windows, the end-to-end tests on Ubuntu, and run eslint, prettier, and the type declaration tests.
+- [`ecosystem-ci-trigger.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/ecosystem-ci-trigger.yml): allows to trigger the `ecosystem-ci` action by commenting `/ecosystem-ci run` in a pull request by authorized Vue.js members.
+- [`lock-closed-issues.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/lock-closed-issues.yml): schedule to lock the closed issues after 14 inactive days. It uses the [lock-threads](https://github.com/dessant/lock-threads) GitHub Action that locks closed issues, pull requests and discussions after a period of inactivity.
+- [`release-tag.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/release-tag.yml): create a new release when a "v*" tag is pushed. It uses the [yyx990803/release-tag](https://github.com/yyx990803/release-tag) GitHub Action for auto creating a release on tag push.
+- [`size-data.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/size-data.yml): allows to export the size data.
+- [`size-report.yml`](https://github.com/vuejs/core/blob/main/.github/workflows/size-report.yml); use the exported size data, compare it with the previous size data, and create a comment in the pull request with the size difference.
+
+#### `.github/.*`
+
+`.github` directory contains a whole set of files and directories that are used to configure the repository and to help the contributors to follow the guidelines and the best practices:
+
+- [`FUNDING.yml`](https://github.com/vuejs/core/blob/main/.github/FUNDING.yml): used to configure the funding of the project so that it is displayed on the repository home page.
+- [`bug-repro-guidelines.md`](https://github.com/vuejs/core/blob/main/.github/bug-repro-guidelines.md) is an independent file that provides guidelines to help the users to provide a good reproduction of the bug. This is a good way to guide the users and to avoid back and forth in the issue report process. This is used in the bug report issue template.
+- [`commit-convention.md`](https://github.com/vuejs/core/blob/main/.github/commit-convention.md) is an independent file the Git commit message convention used in the project adapted from the [Angular's commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular). This is a good way to standardize the commit messages and to make it easier to follow the changes in the project. I particularly like the "TL;DR" section that gives a quick overview of the commit message convention. This file is mentioned in the contributing guide and referenced in a script that verify the commit messages.
+- [`contributing.md`](https://github.com/vuejs/core/blob/main/.github/contributing.md) is an independent file that provides all the information needed to contribute to the project. This is the central place to find all the information about the contribution process that targets external contributors. Different topics are covered:
+  - Code of Conduct (redirecting to the website)
+  - [Issue Reporting Guidelines](https://github.com/vuejs/core/blob/main/.github/contributing.md#issue-reporting-guidelines) mentions that we should always use https://new-issue.vuejs.org/ to create new issues. This approach is really interesting as it probably offers more possibilities compared to the GitHub issue templates. However, it is not clear if the GitHub issue can still be used directly or if it is mandatory to use the new-issue website. An option would be to get rid of the GitHub issue template (`.github/ISSUE_TEMPLATE/bug_report.md`) to avoid confusion, and to redirect to the new-issue website in the `.github/ISSUE_TEMPLATE/config.yml` file.
+  - [Pull Request Guidelines](https://github.com/vuejs/core/blob/main/.github/contributing.md#pull-request-guidelines)
+  - [Development Setup](https://github.com/vuejs/core/blob/main/.github/contributing.md#development-setup) describes how to set up the project locally.
+    - While reading this section, there is maybe a link to do between the recommended Node.js version and the `.node-version` file that is used in the project. For instance, the `.node-version` references the 20 version, whereas the contributing guide recommends the 18.12+ version.
+  - [Scripts](https://github.com/vuejs/core/blob/main/.github/contributing.md#scripts)
+  - [Project Structure](https://github.com/vuejs/core/blob/main/.github/contributing.md#project-structure)
+  - [Contributing Tests](https://github.com/vuejs/core/blob/main/.github/contributing.md#contributing-tests)
+  - [Financial Contribution](https://github.com/vuejs/core/blob/main/.github/contributing.md#financial-contribution) is interesting as we don't often see this in the contributing guide. Financial contributions are actually also contributions!
+- [`maintenance.md`](https://github.com/vuejs/core/blob/main/.github/maintenance.md) is intended for team members responsible for maintaining the project, unlike the `contributing.md` file which is intended for external contributors. This file provides information about the maintenance process and the responsibilities of the maintainers. This is a good way to guide the maintainers and to make sure that everyone is aligned on the maintenance process. As seeking for open-source projects good practices, we are delighted to see what the Vue.js team has put in place a maintenance guide:
+  - [Issue Triage Workflow](https://github.com/vuejs/core/blob/main/.github/maintenance.md#issue-triage-workflow) section provides a detailed workflow to triage the issues in the project. It puts a global visualization of what we tried to understand when analyzing the labels and can be inspiring for our own projects by adapting the complexity of this process to our own needs.
+
+<Screenshot src="/images/Screenshot 2024-05-04 at 10.23.18.png" alt="" />
+
+  - [Pull Request Review Guidelines](https://github.com/vuejs/core/blob/main/.github/maintenance.md#pull-request-review-guidelines) section provides insights on how to review a pull request. This is a good way to guide the maintainers and to make sure that everyone is aligned on the review process. Different types of pull requests are covered:
+    - [Reviewing a Fix](https://github.com/vuejs/core/blob/main/.github/maintenance.md#reviewing-a-fix)
+    - [Reviewing a Refactor](https://github.com/vuejs/core/blob/main/.github/maintenance.md#reviewing-a-refactor)
+    - [Reviewing a Feature](https://github.com/vuejs/core/blob/main/.github/maintenance.md#reviewing-a-feature)
+    - [Common Considerations for All PRs](https://github.com/vuejs/core/blob/main/.github/maintenance.md#common-considerations-for-all-prs)
+  - [PR Merge Rules for Team Members](https://github.com/vuejs/core/blob/main/.github/maintenance.md#pr-merge-rules-for-team-members) section defines the rules to merge a pull request. We can learn that there are 3 different levels of pull requests:
+    - Chore and dependencies bumps can be merged right away
+    - Fixes and refactors needs 2 or more approvals from team members, and can be merged if confident. Otherwise, a "ready for merge" label can be added to signal to the maintainer that the pull request needs a final review before merging.
+    - Features needs 2 or more approvals from team members, and must be labeled as "ready for merge" before being reviewed by the maintainer.
+  - [Git Branch and Release Workflow](https://github.com/vuejs/core/blob/main/.github/maintenance.md#git-branch-and-release-workflow) simply defines the branch and release workflow used in the project. This is a good way to make sure that everyone is aligned on the workflow used in the project.
+- [`renovate.json5`](https://github.com/vuejs/core/blob/main/.github/renovate.json5) allows us to know that the project is using Renovate to keep the dependencies up-to-date.
+- There is no PULL_REQUEST TEMPLATE file in the repository. Vue.js team seems to let the contributors free to describe their pull requests as they want.
+
+### [`.vscode`](https://github.com/vuejs/core/tree/main/.vscode)
+
+`launch.json` and `settings.json` are used to configure the Visual Studio Code settings for the project. This is a good way to share the settings with the contributors and to make sure that everyone is using the same settings.
+
+### [changelogs](https://github.com/vuejs/core/tree/main/changelogs)
+
+This directory stores the previous changelogs of the project: `CHANGELOG-3.0.md`, `CHANGELOG-3.1.md`, `CHANGELOG-3.2.md`, and `CHANGELOG-3.3.md`. This is a good way to keep the history of the changes and to help the users to migrate to the latest version of the project.
+
+These changelogs are referenced at the end of the [`CHANGELOG.md`](#changelogmd) file.
+
+### `.*` files
+
+- [`.git-blame-ignore-revs`](https://github.com/vuejs/core/blob/main/.git-blame-ignore-revs): used to ignore some revisions in the `git blame` command. This is a good example here as the Vue.js team is using it to ignore the `bfe6b459d3a0ce6168611ee1ac7e6e789709df9d` commit which is a commit that put in place (and applied) Prettier and ESLint to the entire project. The style of the code was changed in this commit and it is not relevant when looking at the history of the project.
+- [`.gitignore`](https://github.com/vuejs/core/blob/main/.gitignore): used to exclude some files and directories from the Git repository. This is a good practice to avoid committing files that are not necessary or that are generated by the project.
+- [`.node-version`](https://github.com/vuejs/core/blob/main/.node-version): used to specify the Node.js version used in the project. This is a good practice to inform contributors about the Node.js version to use to work on the project. This file is used by some version managers.
+- `.prettierignore` and `.prettierrc` shows that the project is using Prettier to format the code. This is a good way to keep the code consistent and to avoid formatting issues in the project. We can also see that the project is using ESLint (with the `eslint.config.js`file).
+
+
+
+### [`CHANGELOG.md`](https://github.com/vuejs/core/blob/main/CHANGELOG.md)
+
+At the time of the analysis, the `CHANGELOG.md` file references the latest changes in the 3.4 version of the project, starting from the alpha version of the 3.4.0 release. This is a good way to keep the community informed about the latest changes and to help the users to migrate to the latest version of the project.
+
+At the end of the file, there is a "Previous Changelogs" section that references the previous changelogs of the project that are stored in the [`changelogs` directory](#changelogs) (see above).
+
+
+
+### [`FUNDING.json`](https://github.com/vuejs/core/blob/main/FUNDING.json)
+
+This file references an Ethereum address to fund the project via [Drips](https://www.drips.network): a decentralized funding platform for open-source projects. It shows that the project is open to different ways of funding and that it is part of the decentralized ecosystem.
+
+### [`LICENSE`](https://github.com/vuejs/core/blob/main/LICENSE)
+
+The license file is well-configured with the MIT license. This is a good way to inform the users about the license used in the project and to give them the rights to use, modify, and distribute the project.
+
+### [`README.md`](https://github.com/vuejs/core/blob/main/README.md)
+
+The README file is present and well-structured. We detailed the content of the README file in the [README section](#readme).
+
+### [`SECURITY.md`](https://github.com/vuejs/core/blob/main/SECURITY.md)
+
+The security policy is well-configured with a security policy that informs the users about the security policy of the project and guides them on how to report a security vulnerability. This is a good practice to inform the users about the security policy of the project and to guide them on how to report a security vulnerability.
+
+## Managing End-Of-Life (EOL)
+
+Coming from the [Top GitHub 100 starred repositories](https://github.com/EvanLi/Github-Ranking/blob/master/Top100/Top-100-stars.md) list, I originally stumbled upon https://github.com/vuejs/vue which is in fact the deprecated repository for Vue 2. And this is in fact a good example on how to redirect users to the new repository that will interest us today: https://github.com/vuejs/core:
+- There is an explanation in the GitHub old repository about section with a link to the new repository. This is actually a smart way of doing it because the about section can be used automatically with the GitHub API. If you check the [Top GitHub 100 starred repositories](https://github.com/EvanLi/Github-Ranking/blob/master/Top100/Top-100-stars.md) Markdown file, you will see that the link appears in this table just because it is in the about section.
+
+<Screenshot src="/images/Screenshot 2024-04-06 at 13.39.12.png" alt="" />
+
+- Plus, there is a full explanation of the EOL state in the [old repository README](https://github.com/vuejs/vue/blob/main/README.md) with a redirection to the new repository.
+
+<Screenshot src="/images/Screenshot 2024-04-06 at 13.39.27.png" alt="" />
+
+Note: the deprecated repository is not pinned in the organization repositories pinned
+
+*/}
