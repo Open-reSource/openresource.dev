@@ -12,12 +12,12 @@
       "languages": [
         "PHP",
         "Smarty",
-        "HTML",
-        "SCSS"
+        "SCSS",
+        "HTML"
       ],
       "name": "SwiftyEdit",
       "owner": "SwiftyEdit",
-      "prs": 5,
+      "prs": 1,
       "stars": 9,
       "url": "https://github.com/SwiftyEdit/SwiftyEdit"
     }
