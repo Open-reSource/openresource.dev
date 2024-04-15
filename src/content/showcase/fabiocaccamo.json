@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1588,
+      "stars": 1590,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1665,
+      "prs": 5,
+      "stars": 1668,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1397,
+      "prs": 5,
+      "stars": 1401,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 901,
+      "stars": 902,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -92,8 +92,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 553,
+      "prs": 3,
+      "stars": 555,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 586,
+      "prs": 3,
+      "stars": 589,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -129,8 +129,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 446,
+      "prs": 3,
+      "stars": 448,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -140,7 +140,7 @@
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
       "forks": 28,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "Python",
         "JavaScript",
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 465,
+      "prs": 5,
+      "stars": 467,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -183,7 +183,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 183,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -220,8 +220,8 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 92,
+      "prs": 3,
+      "stars": 93,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -237,7 +237,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 66,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -254,7 +254,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 65,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -271,7 +271,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 61,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },

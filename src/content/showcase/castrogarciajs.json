@@ -8,17 +8,16 @@
       "description": "Open UI. OpenLand's official framework design system 🎨",
       "discussions": 0,
       "forks": 5,
-      "issues": 3,
+      "issues": 0,
       "languages": [
         "TypeScript",
-        "Astro",
         "JavaScript"
       ],
-      "name": "open-ui",
+      "name": "ui",
       "owner": "open-land",
-      "prs": 1,
+      "prs": 0,
       "stars": 4,
-      "url": "https://github.com/open-land/open-ui"
+      "url": "https://github.com/open-land/ui"
     }
   ]
 }

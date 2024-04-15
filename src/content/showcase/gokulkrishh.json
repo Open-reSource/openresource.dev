@@ -7,7 +7,7 @@
       "contributors": 2,
       "description": "Bookmark manager for the modern web.",
       "discussions": 2,
-      "forks": 6,
+      "forks": 7,
       "issues": 1,
       "languages": [
         "TypeScript",
@@ -18,7 +18,7 @@
       "name": "bmrk.cc",
       "owner": "gokulkrishh",
       "prs": 0,
-      "stars": 169,
+      "stars": 179,
       "url": "https://github.com/gokulkrishh/bmrk.cc"
     }
   ]
