@@ -4,9 +4,9 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4",
-      "contributors": 120,
+      "contributors": 121,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 40,
+      "discussions": 46,
       "forks": 287,
       "issues": 113,
       "languages": [
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 7,
-      "stars": 3508,
+      "prs": 6,
+      "stars": 3518,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 10,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 151,
+      "forks": 152,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 978,
+      "stars": 984,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 360,
+      "stars": 361,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {

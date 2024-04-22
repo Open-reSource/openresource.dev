@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 4,
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
-      "discussions": 0,
+      "discussions": 1,
       "forks": 221,
       "issues": 1,
       "languages": [
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1590,
+      "stars": 1591,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -25,7 +25,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 31,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
-      "discussions": 14,
+      "discussions": 15,
       "forks": 171,
       "issues": 11,
       "languages": [
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1668,
+      "stars": 1676,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1401,
+      "stars": 1406,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 555,
+      "stars": 560,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 589,
+      "stars": 592,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 448,
+      "stars": 447,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -140,7 +140,7 @@
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
       "forks": 28,
-      "issues": 0,
+      "issues": 2,
       "languages": [
         "Python",
         "JavaScript",
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 467,
+      "stars": 468,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -289,7 +289,7 @@
       "name": "utils.js",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 20,
+      "stars": 21,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
     {
