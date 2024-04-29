@@ -43,7 +43,7 @@
       "description": "Advanced, highly customizable phone input component for Ant Design.",
       "discussions": 4,
       "forks": 7,
-      "issues": 1,
+      "issues": 2,
       "languages": [
         "TypeScript"
       ],
@@ -67,7 +67,7 @@
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 34,
+      "stars": 36,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]

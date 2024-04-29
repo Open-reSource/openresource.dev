@@ -5,19 +5,21 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/162659053?v=4",
       "contributors": 4,
-      "description": "Open UI. OpenLand's official framework design system 🎨",
+      "description": "`Open UI`. OpenLab's official framework design system",
       "discussions": 0,
-      "forks": 5,
-      "issues": 3,
+      "forks": 4,
+      "issues": 2,
       "languages": [
         "TypeScript",
-        "JavaScript"
+        "JavaScript",
+        "MDX",
+        "CSS"
       ],
-      "name": "ui",
+      "name": "openui",
       "owner": "open-ss-lab",
       "prs": 0,
       "stars": 4,
-      "url": "https://github.com/open-ss-lab/ui"
+      "url": "https://github.com/open-ss-lab/openui"
     }
   ]
 }
