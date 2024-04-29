@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 4,
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
-      "discussions": 1,
+      "discussions": 0,
       "forks": 221,
       "issues": 1,
       "languages": [
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 171,
-      "issues": 11,
+      "issues": 12,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 1676,
+      "prs": 6,
+      "stars": 1679,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1406,
+      "stars": 1409,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 592,
+      "stars": 593,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -121,7 +121,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 52,
+      "forks": 53,
       "issues": 2,
       "languages": [
         "Python",
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 447,
+      "stars": 450,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 468,
+      "stars": 471,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -255,7 +255,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 65,
+      "stars": 66,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {

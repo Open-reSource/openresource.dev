@@ -7,7 +7,7 @@
       "contributors": 121,
       "description": "Configuration Management for Python ⚙",
       "discussions": 46,
-      "forks": 287,
+      "forks": 286,
       "issues": 113,
       "languages": [
         "Python",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 6,
-      "stars": 3516,
+      "stars": 3520,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 984,
+      "stars": 989,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -48,7 +48,7 @@
       "description": "DO NOT FORK, CLICK \"Use this template\" - The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.",
       "discussions": 0,
       "forks": 34,
-      "issues": 10,
+      "issues": 9,
       "languages": [
         "Python",
         "Makefile",
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 361,
+      "stars": 362,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 2067,
+      "stars": 2068,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
