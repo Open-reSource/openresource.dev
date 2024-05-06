@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 1679,
+      "prs": 8,
+      "stars": 1684,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 6,
       "forks": 48,
-      "issues": 9,
+      "issues": 10,
       "languages": [
         "Python",
         "HTML",
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 1409,
+      "prs": 10,
+      "stars": 1419,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 902,
+      "stars": 901,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -92,8 +92,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 560,
+      "prs": 5,
+      "stars": 563,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 593,
+      "prs": 5,
+      "stars": 595,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,15 +122,15 @@
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
       "forks": 53,
-      "issues": 2,
+      "issues": 4,
       "languages": [
         "Python",
         "HTML"
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 450,
+      "prs": 5,
+      "stars": 454,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 471,
+      "prs": 7,
+      "stars": 472,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -177,13 +177,13 @@
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 0,
       "forks": 12,
-      "issues": 3,
+      "issues": 4,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 6,
       "stars": 183,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -220,7 +220,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 93,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -237,7 +237,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 7,
       "stars": 66,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -254,7 +254,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 5,
       "stars": 66,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -271,8 +271,8 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 61,
+      "prs": 8,
+      "stars": 62,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
@@ -281,15 +281,15 @@
       "contributors": 2,
       "description": "👷 🔧 zero dependencies vanilla JavaScript utils.",
       "discussions": 0,
-      "forks": 5,
+      "forks": 6,
       "issues": 0,
       "languages": [
         "JavaScript"
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 21,
+      "prs": 5,
+      "stars": 22,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
     {

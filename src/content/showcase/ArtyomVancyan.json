@@ -15,7 +15,7 @@
       "name": "thumbnails",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 12,
+      "stars": 13,
       "url": "https://github.com/pysnippet/thumbnails"
     },
     {
@@ -43,7 +43,7 @@
       "description": "Advanced, highly customizable phone input component for Ant Design.",
       "discussions": 4,
       "forks": 7,
-      "issues": 2,
+      "issues": 5,
       "languages": [
         "TypeScript"
       ],
@@ -67,7 +67,7 @@
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 36,
+      "stars": 37,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]

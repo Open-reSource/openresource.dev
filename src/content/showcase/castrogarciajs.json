@@ -5,21 +5,23 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/162659053?v=4",
       "contributors": 4,
-      "description": "`Open UI`. OpenLab's official framework design system",
+      "description": "A design system built with the material design style in conjunction with Tailwindcss and Shadcn.",
       "discussions": 0,
       "forks": 4,
-      "issues": 2,
+      "issues": 1,
       "languages": [
         "TypeScript",
+        "Vue",
         "JavaScript",
         "MDX",
-        "CSS"
+        "CSS",
+        "HTML"
       ],
       "name": "openui",
-      "owner": "open-ss-lab",
+      "owner": "OpenLab-dev",
       "prs": 0,
       "stars": 4,
-      "url": "https://github.com/open-ss-lab/openui"
+      "url": "https://github.com/OpenLab-dev/openui"
     }
   ]
 }

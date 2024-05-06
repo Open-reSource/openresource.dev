@@ -1,0 +1,25 @@
+{
+  "author": "crftwrk",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/90394902?v=4",
+      "contributors": 27,
+      "description": "Flexible Bootstrap WordPress starter theme with full WooCommerce support and time-saving plugins",
+      "discussions": 184,
+      "forks": 85,
+      "issues": 4,
+      "languages": [
+        "PHP",
+        "SCSS",
+        "JavaScript",
+        "CSS"
+      ],
+      "name": "bootscore",
+      "owner": "bootscore",
+      "prs": 5,
+      "stars": 279,
+      "url": "https://github.com/bootscore/bootscore"
+    }
+  ]
+}
