@@ -11,6 +11,8 @@ lastUpdateDate: '2024-04-02'
 title: 'Repobeats: GitHub README analytics'
 ---
 
+import ProjectThumbnail from '../../components/ProjectThumbnail.astro'
+
 <p class="lead">[Repobeats](https://repobeats.axiom.co/) is a tool that provides analytics of a GitHub repository that can be embedded in any Markdown file; including its README file.</p>
 
 It is completely free and maintained by [axiom.com](https://axiom.co/), but does not seem to be an open-source project as it is not referenced in [github.com/axiomhq](https://github.com/axiomhq).
@@ -56,20 +58,7 @@ Here is what it looks like for our [openresource.dev GitHub repository](https://
 
 And here is the same kind of data, but on a more active repository like freeCodeCamp:
 
-<div class="card w-full bg-base-100 xs:shadow-xl mb-12 xs:mb-0 not-prose">
-  <div class="card-body p-0 xs:p-8 list-none">
-    <div class="flex justify-between">
-      <h2 class="card-title text-xl xs:text-4xl text-base-content">
-        <a href="https://github.com/freeCodeCamp/freeCodeCamp" class="stretched-link hover:underline font-normal break-all">
-          <span class="max-w-[50px]">freeCodeCamp/</span><br/>
-          <strong class="font-bold max-w-[50px]">freeCodeCamp</strong>
-        </a>
-      </h2>
-      <img src="https://avatars.githubusercontent.com/u/9892522?v=4" aria-hidden="true" class="w-[50px] h-[50px] xs:w-[100px] xs:h-[100px] rounded-xl" />
-    </div>
-    <p>freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free.</p>
-  </div>
-</div>
+<ProjectThumbnail env="freeCodeCamp" repo="freeCodeCamp" img="9892522" description="freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free." />
 
 ![Alt](https://repobeats.axiom.co/api/embed/89be0a1a1c8f641c54f9234a7423e7755352c746.svg 'Repobeats analytics image for freeCodeCamp GitHub repository')
 
