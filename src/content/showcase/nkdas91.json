@@ -8,7 +8,7 @@
       "description": "Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.",
       "discussions": 0,
       "forks": 2,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "JavaScript",
         "SCSS",
@@ -45,8 +45,8 @@
       "contributors": 1,
       "description": "CueSync is a JavaScript library designed to simplify the integration of interactive transcripts into multimedia content.",
       "discussions": 0,
-      "forks": 0,
-      "issues": 0,
+      "forks": 1,
+      "issues": 1,
       "languages": [
         "JavaScript",
         "HTML",
@@ -55,7 +55,7 @@
       "name": "cuesync.github.io",
       "owner": "CueSync",
       "prs": 0,
-      "stars": 2,
+      "stars": 3,
       "url": "https://github.com/CueSync/cuesync.github.io"
     }
   ]
