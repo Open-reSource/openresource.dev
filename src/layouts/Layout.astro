@@ -1,4 +1,6 @@
 ---
+import  SpeedInsights  from '@vercel/speed-insights/astro';
+
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../global.css';
@@ -95,6 +97,7 @@ if (structuredData?.article) {
 		</main>
 		<Footer divider={ !home } />
     { progressScroll && <ProgressScroll /> }
+    <SpeedInsights />
 	</body>
 </html>
 <script>
