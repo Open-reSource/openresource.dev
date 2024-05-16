@@ -31,18 +31,19 @@ const { Content } = await entry.render();
   <div class="bg-base-100 py-8 flex flex-col justify-center relative overflow-hidden lg:py-12">
     <div class="relative w-full px-6 py-12 bg-base-100 shadow-xl shadow-base-300 ring-1 ring-base-200 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
       <article class="mt-8 prose prose-slate mx-auto lg:prose-lg">
-        <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary pb-3">{entry.data.title}</h1>
-        <div class="my-2">
+        <p class="not-prose text-center text-xl font-semibold">{ new Date(entry.data.creationDate).toDateString() }</p>
+        <p class="not-prose text-sm text-center mb-6">Last update: { new Date(entry.data.lastUpdateDate).toDateString() }</p>
+        <h1 class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-center">{entry.data.title}</h1>
+        <div class="text-center -mt-5">
           { entry.data.labels.map((label:{label:string,class:string}) => <div class={`badge ${label.class} me-2`}>{label.label}</div>) }
         </div>
-        <div class="not-prose text-sm">
-          <p>Created: { new Date(entry.data.creationDate).toDateString() }</p>
-          <p>Last update: { new Date(entry.data.lastUpdateDate).toDateString() }</p>
+        <div class="text-sm text-center">
           <span class="min-w-max inline-flex items-center mt-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock mr-2" viewBox="0 0 16 16" aria-hidden="true">
             <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
           </svg><span class="visually-hidden">Estimated reading time</span>{ Math.ceil(readingTime(entry.body).minutes) } min</span>
         </div>
+        <hr>
         <Content />
         <hr>
         <Feedback id={entry.id} type="articles" />
