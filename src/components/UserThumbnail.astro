@@ -1,0 +1,23 @@
+---
+export interface Props {
+  description: string,
+  img: string,
+	user: string
+}
+
+const { description, img, user } = Astro.props;
+---
+
+<div class="card w-full bg-base-100 xs:shadow-xl mb-12 xs:mb-0 not-prose">
+  <div class="card-body p-0 xs:p-8 list-none">
+    <div class="flex justify-between">
+      <h2 class="card-title text-xl xs:text-4xl text-base-content">
+        <a href=`https://github.com/${user}` class="stretched-link hover:underline font-normal break-all">
+          <strong class="font-bold max-w-[50px]">{user}</strong>
+        </a>
+      </h2>
+      <img src=`https://avatars.githubusercontent.com/u/${img}?v=4` aria-hidden="true" class="w-[50px] h-[50px] xs:w-[100px] xs:h-[100px] rounded-xl" />
+    </div>
+    {description && <p>{description}</p>}
+  </div>
+</div>
