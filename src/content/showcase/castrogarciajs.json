@@ -5,10 +5,10 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/162659053?v=4",
       "contributors": 4,
-      "description": "A design system built with Tailwindcss and Shadcn.",
+      "description": "A design system built with TailwindCSS and Shadcn.",
       "discussions": 0,
       "forks": 4,
-      "issues": 18,
+      "issues": 5,
       "languages": [
         "TypeScript",
         "MDX",
@@ -19,7 +19,7 @@
       ],
       "name": "openui",
       "owner": "OpenLab-dev",
-      "prs": 0,
+      "prs": 1,
       "stars": 4,
       "url": "https://github.com/OpenLab-dev/openui"
     }
