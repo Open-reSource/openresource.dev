@@ -39,10 +39,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/151955260?v=4",
-      "contributors": 2,
+      "contributors": 3,
       "description": "Advanced, highly customizable phone input component for Ant Design.",
       "discussions": 4,
-      "forks": 7,
+      "forks": 8,
       "issues": 3,
       "languages": [
         "TypeScript"
@@ -50,7 +50,7 @@
       "name": "antd-phone-input",
       "owner": "typesnippet",
       "prs": 0,
-      "stars": 33,
+      "stars": 37,
       "url": "https://github.com/typesnippet/antd-phone-input"
     },
     {
@@ -67,7 +67,7 @@
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 38,
+      "stars": 40,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]
