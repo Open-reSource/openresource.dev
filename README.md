@@ -20,7 +20,7 @@
   <a href="https://discord.gg/fpUDwEMGwE">Discord</a>
 </p>
 
-## What’s in This Repository
+## What's in This Repository
 
 "openresource.dev" is the repository containing the code source deployed to https://openresource.dev.
 
