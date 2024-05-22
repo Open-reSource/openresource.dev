@@ -273,7 +273,7 @@ export class ShowcaseScraper {
 
   /**
    * Expose data from this run to GitHub Actions for use in other steps.
-   * We set a `prBody` output for use when creating a PR from this run’s changes.
+   * We set a `prBody` output for use when creating a PR from this run's changes.
    */
   setActionOutput(showcases: Showcase[]) {
     const prLines = [
