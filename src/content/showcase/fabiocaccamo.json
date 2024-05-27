@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1592,
+      "stars": 1594,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -26,7 +26,7 @@
       "contributors": 31,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 173,
+      "forks": 174,
       "issues": 14,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1695,
+      "stars": 1700,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -45,9 +45,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=5b4b0d50e583c7a4b970f30b65272e95c549b0fb&v=4",
       "contributors": 5,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
-      "discussions": 6,
+      "discussions": 7,
       "forks": 48,
-      "issues": 10,
+      "issues": 11,
       "languages": [
         "Python",
         "HTML",
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 1430,
+      "prs": 4,
+      "stars": 1431,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 572,
+      "stars": 574,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -102,7 +102,7 @@
       "contributors": 4,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 31,
+      "forks": 30,
       "issues": 5,
       "languages": [
         "Python",
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 600,
+      "stars": 603,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -140,7 +140,7 @@
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
       "forks": 29,
-      "issues": 1,
+      "issues": 2,
       "languages": [
         "Python",
         "JavaScript",
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 483,
+      "stars": 485,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -220,7 +220,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 93,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
