@@ -1,0 +1,25 @@
+{
+  "author": "nousantx",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/160975491?v=4",
+      "contributors": 2,
+      "description": "A CSS Framework without any CSS file :D",
+      "discussions": 0,
+      "forks": 2,
+      "issues": 0,
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "name": "css",
+      "owner": "tenoxui",
+      "prs": 0,
+      "stars": 9,
+      "url": "https://github.com/tenoxui/css"
+    }
+  ]
+}
