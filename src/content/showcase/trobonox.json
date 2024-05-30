@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/57040351?u=c5694c0e9069b8a1e5a865918f82eb72e6564209&v=4",
       "contributors": 5,
       "description": "🪐 Modern offline Kanban board app for Windows, MacOS and Linux. Built with simplicity and user experience in mind.",
-      "discussions": 3,
+      "discussions": 4,
       "forks": 41,
       "issues": 42,
       "languages": [
@@ -20,7 +20,7 @@
       "name": "kanri",
       "owner": "trobonox",
       "prs": 2,
-      "stars": 554,
+      "stars": 555,
       "url": "https://github.com/trobonox/kanri"
     }
   ]
