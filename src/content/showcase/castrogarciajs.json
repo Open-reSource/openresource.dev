@@ -8,20 +8,17 @@
       "description": "A design system built with TailwindCSS and Shadcn.",
       "discussions": 0,
       "forks": 4,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "TypeScript",
-        "MDX",
         "JavaScript",
-        "Vue",
-        "CSS",
-        "HTML"
+        "CSS"
       ],
       "name": "openui",
-      "owner": "OpenLab-dev",
+      "owner": "OpenLabs-dev",
       "prs": 0,
-      "stars": 4,
-      "url": "https://github.com/OpenLab-dev/openui"
+      "stars": 5,
+      "url": "https://github.com/OpenLabs-dev/openui"
     }
   ]
 }
