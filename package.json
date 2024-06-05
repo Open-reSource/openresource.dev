@@ -43,7 +43,7 @@
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^7.1.0",
     "tsx": "^4.11.2",
-    "vercel": "^34.2.4",
+    "vercel": "^34.2.5",
     "vitest": "^1.6.0"
   }
 }
