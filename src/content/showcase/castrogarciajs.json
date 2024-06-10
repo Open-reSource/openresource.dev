@@ -5,7 +5,7 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/162659053?v=4",
       "contributors": 4,
-      "description": "A design system built with TailwindCSS and Shadcn.",
+      "description": "A design system built with TailwindCSS and Radix UI.",
       "discussions": 0,
       "forks": 4,
       "issues": 0,
@@ -14,11 +14,11 @@
         "JavaScript",
         "CSS"
       ],
-      "name": "openui",
+      "name": "ui",
       "owner": "OpenLabs-dev",
-      "prs": 0,
+      "prs": 1,
       "stars": 5,
-      "url": "https://github.com/OpenLabs-dev/openui"
+      "url": "https://github.com/OpenLabs-dev/ui"
     }
   ]
 }
