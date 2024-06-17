@@ -34,7 +34,7 @@
       "name": "SYSIG",
       "owner": "diamant3",
       "prs": 0,
-      "stars": 16,
+      "stars": 17,
       "url": "https://github.com/diamant3/SYSIG"
     },
     {
@@ -43,7 +43,7 @@
       "contributors": 45,
       "description": "An open-source SDK for PSP homebrew development.",
       "discussions": 1,
-      "forks": 136,
+      "forks": 137,
       "issues": 4,
       "languages": [
         "C",
@@ -51,13 +51,13 @@
         "Makefile",
         "CMake",
         "Shell",
-        "Dockerfile",
-        "C++"
+        "C++",
+        "Dockerfile"
       ],
       "name": "pspsdk",
       "owner": "pspdev",
-      "prs": 1,
-      "stars": 826,
+      "prs": 2,
+      "stars": 831,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]
