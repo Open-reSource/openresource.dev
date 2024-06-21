@@ -4,8 +4,8 @@ export const prerender = true
 import Layout from '../../layouts/Layout.astro';
 
 const {
-  title = 'Resources',
-  description = 'Resources around open source: find books and open sourcerers, open source enthusiasts who are passionate about sharing their knowledge and experience with the open source community.'
+  title = 'Books',
+  description = 'Find books related to open source.'
 } = Astro.props;
 ---
 <Layout title={ title } description={ description } openGraphData={{title: title, type: "website", staticImage: true, description: description}}>
@@ -30,13 +30,7 @@ const {
       <div class="mt-8 prose prose-slate mx-auto lg:prose-lg">
         <h1>{title}</h1>
         <p class="lead">
-        </p>
-        <p>
-        </p>
-        <hr />
-        <h2>Books</h2>
-        <p>
-          List of recommended books related to making open source.
+          List of recommended books related to open source.
         </p>
         <div class="not-prose">
           <ul class="list-none">
@@ -48,33 +42,6 @@ const {
             </li>
             <li>
               <a class="mr-auto underline text-base-content" href="https://www.amazon.com/Working-Public-Making-Maintenance-Software/dp/0578675862">Working in Public: The Making and Maintenance of Open-Source Software</a> by Nadia Eghbal
-            </li>
-          </ul>
-        </div>
-        <h2>Podcasts</h2>
-        <p>
-          List of podcasts and interviews related to open source.
-        </p>
-        <div class="not-prose">
-          <ul class="list-none">
-            <li>
-              <a class="mr-auto underline text-base-content" href="https://coffeeandopensource.com">Coffee & Open Source</a> by Isaac Levin
-              <p class="text-sm">Interviews with notable folks in the OSS Community.</p>
-            </li>
-          </ul>
-        </div>
-        <hr />
-        <h2>Open Sourcerers</h2>
-        <p>
-          List of open sourcerers who are passionate about sharing their knowledge and experience with the open source community and dedicate some of their time for quick chats or consultancy.
-        </p>
-        <div class="not-prose">
-          <ul class="list-none">
-            <li>
-              <a class="mr-auto underline text-base-content" href="https://antfu.me/chat">Anthony Fu</a>
-            </li>
-            <li>
-              <a class="mr-auto underline text-base-content" href="https://roe.dev/blog/open-invitation">Daniel Roe</a>
             </li>
           </ul>
         </div>
