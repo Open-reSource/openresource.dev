@@ -48,7 +48,14 @@
             <div class="flex space-x-4">
               <a href="/guide" class={(Astro.url.pathname.includes('/guide') ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium flex items-center"} aria-current={Astro.url.pathname.includes('/guide')}>Guide</a>
               <a href="/articles" class={(Astro.url.pathname.includes('/articles') ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium flex items-center"} aria-current={Astro.url.pathname.includes('/articles')}>Articles</a>
-              <a href="/resources" class={(Astro.url.pathname.includes('/resources') ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium flex items-center"} aria-current={Astro.url.pathname.includes('/resources')}>Resources</a>
+              <div class="dropdown dropdown-content" aria-current={['/books', '/open-sourcerers', '/podcasts'].some(v => Astro.url.pathname.includes(v))}>
+                <div tabindex="0" role="button" class={(['/books', '/open-sourcerers', '/podcasts'].some(v => Astro.url.pathname.includes(v)) ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-sm font-medium flex items-center"}>Resources</div>
+                <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                  <li><a href="/books">Books</a></li>
+                  <li><a href="/open-sourcerers">Open sourcerers</a></li>
+                  <li><a href="/podcasts">Podcasts</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -104,7 +111,16 @@
         <a href="/" class={(Astro.url.pathname == '/' ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname == '/'}>Home</a>
         <a href="/guide" class={(Astro.url.pathname.includes('/guide') ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/guide')}>Guide</a>
         <a href="/articles" class={(Astro.url.pathname.includes('/articles') ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/articles')}>Articles</a>
-        <a href="/resources" class={(Astro.url.pathname.includes('/resources') ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " block rounded-md px-3 py-2 text-base font-medium"} aria-current={Astro.url.pathname.includes('/resources')}>Resources</a>
+
+        <div class="dropdown dropdown-content block" aria-current={['/books', '/open-sourcerers', '/podcasts'].some(v => Astro.url.pathname.includes(v))}>
+          <div tabindex="0" role="button" class={(['/books', '/open-sourcerers', '/podcasts'].some(v => Astro.url.pathname.includes(v)) ? "bg-neutral text-neutral-content" : "hover:bg-neutral hover:text-neutral-content") + " rounded-md px-3 py-2 text-base font-medium"}>Resources</div>
+          <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+            <li><a href="/books">Books</a></li>
+            <li><a href="/open-sourcerers">Open sourcerers</a></li>
+            <li><a href="/podcasts">Podcasts</a></li>
+          </ul>
+        </div>
+
         <select class="theme-choser select select-sm hover:bg-neutral hover:text-neutral-content font-medium" data-choose-theme>
           <option value="">Default</option>
           <hr>
@@ -146,3 +162,8 @@
     </div>
   </nav>
 </header>
+<script is:inline>
+  function resourcesPageHandler(value) {
+    window.location.assign(`${value}`);
+  }
+</script>
