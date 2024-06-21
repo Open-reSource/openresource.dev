@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 
 const {
   title = 'Podcasts',
-  description = 'Find podcasts related to open source.'
+  description = 'Find podcasts and interviews related to open source.'
 } = Astro.props;
 ---
 <Layout title={ title } description={ description } openGraphData={{title: title, type: "website", staticImage: true, description: description}}>
