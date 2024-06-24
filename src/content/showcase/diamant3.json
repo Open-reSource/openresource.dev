@@ -17,7 +17,7 @@
       "name": "psp-controller",
       "owner": "diamant3",
       "prs": 0,
-      "stars": 10,
+      "stars": 11,
       "url": "https://github.com/diamant3/psp-controller"
     },
     {
@@ -43,7 +43,7 @@
       "contributors": 45,
       "description": "An open-source SDK for PSP homebrew development.",
       "discussions": 1,
-      "forks": 137,
+      "forks": 138,
       "issues": 4,
       "languages": [
         "C",
@@ -56,8 +56,8 @@
       ],
       "name": "pspsdk",
       "owner": "pspdev",
-      "prs": 2,
-      "stars": 831,
+      "prs": 1,
+      "stars": 828,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]

@@ -7,7 +7,7 @@
       "contributors": 4,
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 224,
+      "forks": 225,
       "issues": 2,
       "languages": [
         "Objective-C",
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1593,
+      "stars": 1595,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -26,8 +26,8 @@
       "contributors": 31,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 175,
-      "issues": 15,
+      "forks": 176,
+      "issues": 14,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 1718,
+      "stars": 1721,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 11,
-      "stars": 1438,
+      "stars": 1444,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 578,
+      "stars": 580,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 610,
+      "stars": 612,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 491,
+      "stars": 492,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -238,7 +238,7 @@
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 67,
+      "stars": 68,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
