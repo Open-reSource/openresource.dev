@@ -39,6 +39,7 @@ const modulesCollection = defineCollection({
     id: z.number(),
     creationDate: z.string().optional(),
     description: z.string(),
+    finished: z.boolean().optional(),
     lastUpdateDate: z.string().optional(),
     title: z.string(),
     soon: z.boolean().optional(),
