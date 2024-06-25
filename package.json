@@ -13,7 +13,7 @@
     "update:showcase": "tsx scripts/update-showcase.ts"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^5.1.0",
+    "@astrojs/markdown-remark": "^5.1.1",
     "@astrojs/mdx": "^3.1.1",
     "@astrojs/rss": "^4.0.6",
     "@astrojs/sitemap": "^3.1.6",
