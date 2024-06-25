@@ -41,8 +41,7 @@ module.exports = {
         light: {
           ...require('daisyui/src/theming/themes')['light'],
           'primary-content': '#fff',
-          'secondary': '#e82a82',
-          'secondary-content': '#fff',
+          'secondary': '#d02575',
         },
       },
       'lofi',
