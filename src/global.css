@@ -127,7 +127,7 @@ main {
 	color: inherit;
 }
 
-.prose .alert a {
+.prose .alert a:not(.btn) {
 	color: inherit;
 }
 
