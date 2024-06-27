@@ -39,7 +39,7 @@
     "astro-og-canvas": "^0.5.1",
     "dotenv": "^16.4.5",
     "linkedom": "^0.18.3",
-    "parse-github-url": "^1.0.2",
+    "parse-github-url": "^1.0.3",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^7.1.0",
     "tsx": "^4.15.7",
