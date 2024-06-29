@@ -1,0 +1,143 @@
+---
+title: "How to Create a Code of Conduct for an Open-Source Project"
+description: "Build a safe and welcoming community for your open-source project with a clear code of conduct. Learn the essential steps, from defining goals to updating the document, to create guidelines for behavior. Start strong with our expert guidance."
+date: 2023-04-13
+lastUpdated: 2023-04-18
+excerpt: "**Creating a code of conduct is vital for fostering a safe and welcoming community within an open-source project.** Often, this document is prepared before the community even forms, setting clear expectations and behavioral guidelines from the outset. The process includes defining goals and scope, researching existing codes of conduct, drafting, reviewing and approving the document, publishing, and regularly updating it. **Having a code of conduct helps establish a positive social atmosphere, protecting participants and maintainers from unproductive attitudes and ensuring a supportive environment for all.**
+<br><br>
+A well-defined code of conduct outlines expected behaviors, the scope of its application, and procedures for handling violations. **The Contributor Covenant is a widely-adopted example, promoting respect and inclusion within open source communities.** By researching existing codes like the Contributor Covenant, Ubuntu Code of Conduct, and others, project maintainers can identify best practices to incorporate. Once drafted, the document should be reviewed by key stakeholders and communicated clearly to the community. Regular reviews ensure the code remains relevant and effective, fostering a healthy, collaborative environment and addressing any violations appropriately to maintain community standards."
+tags:
+  - Community
+  - Contribution
+---
+<p class="lead">Creating a code of conduct is an essential step in ensuring a safe and welcoming community for an open-source project. In many cases, the code of conduct may be created before the community even exists. This can be beneficial as it ensures that the project starts with clear expectations and guidelines for behavior. The process of creating a code of conduct involves several steps, including defining goals and scope, researching existing codes of conduct, drafting the document, reviewing and approving the document, publishing and communicating the code of conduct, and regularly reviewing and updating the document.</p>
+
+## Why do we need one?
+
+By adopting a code of conduct for your open-source project, you can establish clear expectations for participant behavior, which can help foster a positive social atmosphere within your community. In turn, this can not only protect your participants, but also yourself as the project maintainer, as unproductive attitudes from participants can ultimately make you feel drained or unhappy about your work. By being proactive and enforcing a code of conduct, you can facilitate healthy and constructive behavior, which can reduce the likelihood of issues arising and make your project a more welcoming and supportive environment for all.
+
+## Define the Goals and Scope
+
+The first step is to define the goals and scope of the project. This involves considering the project's purpose, its intended audience, and the types of behavior that are expected from contributors and users. The goals of the code of conduct should be clear and concise and should outline the expectations for all contributors, users, maintainers, and community members.
+
+Defining the goals and scope of a project is the first step in creating a code of conduct. This involves identifying the project's purpose, intended audience, and expected behavior from contributors and users. The code of conduct should have clear and concise goals that outline the expectations for all community members, including contributors, users, and maintainers.
+
+Additionally, a code of conduct should also specify where it applies, who it applies to (including sponsors), what actions will be taken if someone violates it, and how individuals can report any violations. Considering "where it applies", we are often thinking only about issues, pull requests, and discussions, but it can apply also to community events, social media, communication applications, etc.
+
+## Research Existing Codes of Conduct
+
+Whether the community already exists or not, the next step is to research existing codes of conduct to identify what works and what doesn't, but also to have a base to work on. This can be done by reviewing codes of conduct from similar projects or industries. The goal is to identify best practices and guidelines that can be incorporated into the code of conduct.
+
+### Contributor Covenant
+
+The [Contributor Covenant](https://www.contributor-covenant.org/) is a widely-used code of conduct to free and open-source software projects, created by [Coraline Ada Ehmke](https://github.com/CoralineAda) in 2014. This code of conduct outlines specific behaviors that are expected from contributors, such as being respectful of differing viewpoints, avoiding offensive language, and refraining from harassment or discrimination. The goal of the Contributor Covenant is to ensure that everyone can participate in open-source projects without fear of being marginalized or excluded and to promote a culture of kindness and empathy in the tech industry.
+
+It has been adopted by thousands of open-source projects and many prominent companies including Google, Intel, GitLab, and open-source projects including Vue.js, Symfony, Bootstrap. The code outlines specific behaviors expected of contributors, such as being respectful of differing viewpoints and avoiding offensive language. In 2021, it has been included in the [Organization for Ethical Source](https://ethicalsource.dev/). The Contributor Covenant has played a significant role in promoting a culture of kindness and empathy within the open source community.
+
+Adopting the Contributor Covenant as your code of conduct offers several benefits:
+- It is widely recognized within the community, meaning that the values of the community can be instantly communicated and understood.
+- It has been reviewed and adopted by many which makes it a trusted and reliable option.
+- If you are unsure about how to create your own code of conduct, the Contributor Covenant is readily available and can provide a practical starting point for creating conduct that reflects the values of your community.
+- It has been [translated into multiple languages](https://www.contributor-covenant.org/translations/), making it accessible and inclusive for a diverse range of contributors.
+
+:::tip[Looking to make a big impact as an open source contributor?]
+Translate or help to translate the Contributor Covenant into your non-English language. With only five languages currently available in the latest version at the time of writing this article, your contribution can help make the open source community more accessible and inclusive. Visit the [Contributor Covenant GitHub repository](https://github.com/EthicalSource/contributor_covenant#translating) for instructions on how to get started and make a significant difference.
+:::
+
+### Other Existing Codes of Conduct
+
+There are several other well-known codes of conduct in open source, in addition to the Contributor Covenant, or based on it. Here are a few examples:
+- The [Ubuntu Code of Conduct](https://ubuntu.com/community/ethos/code-of-conduct);
+- The [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/) with a very interesting explanation:
+  <blockquote cite="https://www.mozilla.org/en-US/about/governance/policies/participation/">
+    "These guidelines have been adapted with modifications from Mozilla's original Community Participation Guidelines, the [Ubuntu Code of Conduct](https://www.ubuntu.com/about/about-ubuntu/conduct), Mozilla's [View Source Conference Code of Conduct](https://viewsourceconf.org/berlin-2016/code-of-conduct/), and the [Rust Language Code of Conduct](https://www.rust-lang.org/conduct.html), which are based on Stumptown Syndicate's [Citizen Code of Conduct](http://citizencodeofconduct.org/). Additional text from the [LGBTQ in Technology Code of Conduct](http://lgbtq.technology/coc.html) and the [WisCon code of conduct](http://wiscon.net/policies/anti-harassment/code-of-conduct/). This document and all associated processes are only possible with the hard work of many, many Mozillians."
+  </blockquote>  
+- The [Django Code of Conduct](https://www.djangoproject.com/conduct/);
+- The [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct) adapted from the [Node.js Policy on Trolling](https://blog.izs.me/2012/08/policy-on-trolling/) as well as the [Contributor Covenant v1.3.0](https://www.contributor-covenant.org/version/1/3/0/code-of-conduct/);
+- The [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md) adapted from the [Contributor Convenant v2.0](http://contributor-covenant.org/version/2/0/code_of_conduct/);
+
+These are just a few examples of the many codes of conduct that exist in the open source community. Each code of conduct may have its own unique focus and guidelines, but they all share the goal of promoting a respectful and inclusive environment for collaboration and contribution.
+
+## Draft the Code of Conduct
+
+After gathering research and input, the code of conduct can be drafted. The code of conduct should be written in clear and concise language and should be easily understood by all members of the community.
+
+It should include guidelines on behavior, as well as consequences for violating the code of conduct.
+
+It's crucial to specify the actions that will be taken if there is a violation of the code of conduct. Doing so will convey the seriousness with which you take the code of conduct, assure the community that complaints will be fairly and transparently reviewed, and demonstrate your commitment to enforcing the code of conduct. Providing a private way for people to report violations and specifying who will receive those reports are also essential. Lastly, it's important to offer an alternative option for people to report violations if they are related to someone who receives those reports.
+
+## Review and Approval
+
+Once the code of conduct is drafted, it is important to review it with key stakeholders, including legal advisors in some cases, and any other relevant parties. These individuals could provide feedback on the code of conduct and ensure that it is legally sound.
+
+## Publication and Communication
+
+Once the code of conduct is finalized, it should be published and communicated to the community.
+
+This can be done through the:
+- project's website or documentation
+  - with a link in the footer or elsewhere to a code of conduct stored anywhere.
+  - by creating a dedicated page like in [GitLab Code of Conduct](https://about.gitlab.com/community/contribute/code-of-conduct/).
+- other communication channels like Slack, Discord, Mattermost, etc..
+  - In [Astro Lounge Discord](https://astro.build/chat), they have it for example in their "rules" channel which contains a link to their code of conduct stored on GitHub.
+- source code repositories.
+  - For open-source projects, this is mainly where you're going to find it at the root level of the main repository of the organization.
+
+It is important to ensure that all members of the community are aware of the code of conduct and understand its expectations. But it is also important to have it available accessible by anyone and in order to link it if one must be reminded of the rules.
+
+### How to add it to source code repositories
+
+#### GitHub Provides Some Templates
+
+GitHub offers guidance on creating a Code of Conduct through templates available on their website. When adding a new `CODE_OF_CONDUCT` or `CODE_OF_CONDUCT.md` file through the interface at the root level of your repository, you can select from two different templates to add to your project:
+- Contributor Covenant;
+- Citizen Code Of Conduct;
+
+<img src="/images/add-a-code-of-conduct-to-your-project-1.png" alt="Screenshot of GitHub interface showing what happens at this stage of the tutorial" />
+
+You can then complete your code of conduct by filling out a simple form with the required information.
+
+<img src="/images/add-a-code-of-conduct-to-your-project-2.png" alt="Screenshot of GitHub interface showing Contributor Covenant and a form on the right hand side to fill out the contact method and a button to review and submit the form." />
+<img src="/images/add-a-code-of-conduct-to-your-project-3.png" alt="Screenshot of GitHub interface showing Citizen Code of Conduct and a form on the right hand side with different fields and a button to review and submit the form." />
+
+After reviewing your changes, submit them and a `CODE_OF_CONDUCT.md` file will be created at the root level of your repository. You can then view a special display by visiting your repository. An example of this rendering can be seen in the [GitHub Community repository](https://github.com/community/community).
+
+<img src="/images/add-a-code-of-conduct-to-your-project-4.png" alt="Screenshot of GitHub interface showing the rendering of the Code of conduct reference." />
+
+This article may be obsolete in the future regarding some details, please check the latest version of the GitHub documentation for [Adding a code of conduct to your project](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project).
+
+#### Manually
+
+Adding a code of conduct in your repository is a straightforward process that works for all source code repository services, including GitHub, GitLab, BitBucket, and more. Simply create a `CODE_OF_CONDUCT` or `CODE_OF_CONDUCT.md` file at the root level of your repository, depending on whether you prefer the Markdown or simple text format.
+
+While GitHub provides guidance with templates, you can in fact use any code of conduct you prefer. Except for GitHub, even if most of the source code repository services do not offer a dedicated display in repositories for code of conduct files, it is still crucial for open-source projects to incorporate one, as it is considered a best practice. By storing it at the root level of the project, it can be easily referenced and used as a standard for appropriate behavior within the community.
+
+If you have selected the Contributor Covenant as your code of conduct, there is a neat trick to add a badge to your README.md file. You can do this by adding the following code:
+
+```md
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+```
+
+<img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="Contributor Covenant Badge" />
+
+#### Reusable Code of Conduct in GitHub
+
+GitHub provides a convenient feature for reusing a code of conduct across multiple repositories by creating a default code of conduct. This default code of conduct is part of a list of default community health files, including `CONTRIBUTING`,  `FUNDING`, and issue and pull request templates. Any repository owned by the account that does not have its own code of conduct file will use this default one. To set this up, you can create a `.github` public repository and add a `CODE_OF_CONDUCT` or `CODE_OF_CONDUCT.md` file at the root level of the repository.
+
+To see an example of how this works, you can take a look at [our `.github` public GitHub repository](https://github.com/Open-reSource/.github).
+
+This article may be obsolete in the future regarding some details, please check the latest version of the GitHub documentation for [Creating a default community health file](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
+
+## Regular Review and Updates
+
+Finally, the code of conduct should be reviewed and updated regularly to ensure that it remains relevant and effective. This review process should involve the entire community and should be conducted at regular intervals, such as annually.
+
+A useful tip for those using the Contributor Covenant is to subscribe to release notifications [in project's GitHub repository](https://github.com/EthicalSource/contributor_covenant). This way, you can easily stay informed and be alerted when a new version of the code of conduct is released, ensuring that your project stays up-to-date.
+
+## Enforcing the Code of Conduct
+
+It's rare, but in any community, there may come a time when a member violates the code of conduct. When this happens, there are several steps that moderators or maintainers can take to address the situation.
+
+The first step is to gather information about the situation. It's important to treat each community member's voice as important as your own and take any reports seriously. Investigate the matter even if it doesn't match your own experience with that person. Before responding, take time to understand what happened by reading through the person's past comments and conversations to better understand who they are and why they might have acted in such a way. Try to gather perspectives other than your own about this person and their behavior.
+
+Once you have gathered sufficient information, it's important to take appropriate action. Remember that your goal as a moderator or maintainer is to foster a safe, respectful, and collaborative environment. Consider not only how to deal with the situation in question, but how your response will affect the rest of your community's behavior and expectations moving forward. Depending on the severity of the violation, you may choose to give the person in question a public warning and explain how their behavior negatively impacted others or privately reach out to the person to explain how their behavior negatively impacted others. In some cases, stronger action may be necessary, such as suspending or permanently banning the person from the project.

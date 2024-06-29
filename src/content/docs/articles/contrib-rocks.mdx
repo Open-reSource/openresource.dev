@@ -1,0 +1,97 @@
+---
+title: "contrib.rocks: Generate an Image of GitHub Repositories Top Contributors"
+description: "contrib.rocks generates an image of GitHub repositories top contributors."
+date: 2024-04-27
+lastUpdated: 2024-04-27
+excerpt: "**contrib.rocks is an online tool that generates an image showcasing the top contributors of a GitHub repository**, which can be embedded in websites or Markdown files, including README files. This free service, provides a visual representation of repository activity, celebrating and encouraging contributions.
+<br><br>
+Using contrib.rocks is straightforward: visit the website, enter a GitHub repository name, and generate an image representing its top contributors. The tool offers options to customize the image, such as setting the maximum number of contributors and the number of columns. This visual representation can be embedded using provided HTML or Markdown code, enhancing the visibility and appeal of a project's README or website."
+tags:
+  - GitHub
+  - Markdown
+  - Readme
+  - Tools
+---
+import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro'
+
+<p class="lead">[contrib.rocks](https://contrib.rocks/) is a an online tool that generates an image of the top contributors of a GitHub repository that can be embedded in any website or Markdown file; including its README file.</p>
+
+It is completely free and maintained by Suguru Inatomi, a.k.a. [lacolaco](https://github.com/lacolaco). The source code is available on GitHub:
+
+<ShowcaseGitHubRepo env="lacolaco" repo="contributors-img" img="1529180" />
+
+This service allows to give a visual representation of the top contributors of any GitHub repository.
+
+Generating such an image of your GitHub repository top contributors can be a great way to show the activity of your GitHub repository and encourage people to contribute, but also to celebrate your top contributors.
+
+## How to Use
+
+Usage is pretty straightforward:
+
+1. Go to https://contrib.rocks/
+2. Enter a GitHub repository (e.g., `open-reSource/openresource.dev`)
+
+And that's it! You will get the image representing the top contributors of the GitHub repository you entered.
+
+Then, you can click on the "Get Image URL!" button to get the Markdown code to embed the image in your README file for instance.
+
+```md
+<a href="https://github.com/open-reSource/openresource.dev/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=open-reSource/openresource.dev" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+```
+
+You will notice that the first part of the generated Markdown code is in reality HTML code. You can use this HTML code to embed the image in any website or Markdown file.
+
+## Rendering
+
+Here is what it looks like for our [openresource.dev GitHub repository](https://github.com/Open-reSource/openresource.dev):
+
+---
+
+<a href="https://github.com/open-reSource/openresource.dev/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=open-reSource/openresource.dev" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+---
+
+And here is the same rendering, but on a more active repository like [godot](https://github.com/godotengine/godot):
+
+<ShowcaseGitHubRepo env="godotengine" repo="godot" img="6318500" description="Godot Engine – Multi-platform 2D and 3D game engine" />
+
+---
+
+<a href="https://github.com/godotengine/godot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=godotengine/godot" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+---
+
+Some parameters can be added to the URL to customize the image:
+* `max={number}`: Max contributor count (100 by default)
+* `columns={number}`: Max columns (12 by default)
+* `anon={0|1}`: Include anonymous users (false by default)
+
+So if we add `&max=10&columns=2` to the image URL `https://contrib.rocks/image?repo=godotengine/godot` we get the following image with only the top 10 contributors and 2 columns:
+
+```md
+<a href="https://github.com/godotengine/godot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=godotengine/godot&max=10&columns=2" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+```
+
+---
+
+<a href="https://github.com/godotengine/godot/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=godotengine/godot&max=10&columns=2" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).

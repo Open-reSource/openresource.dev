@@ -36,7 +36,10 @@ All commands are run from the root of the project, from a terminal:
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Run the development server                       |
+| `npm run dev`             | Run the development server  at `localhost:4321`  |
+| `npm run build`           | Build your production site                       |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 | `npm run vercel`          | Run in the same conditions as Vercel             |
 | `npm run update:showcase` | Run the showcase script to gather links from https://github.com/orgs/Open-reSource/discussions/3 |
 | `npm run test`            | Run the tests                                    |
@@ -68,8 +71,10 @@ Code released under the [MIT License](https://github.com/Open-reSource/openresou
 
 Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
 * `public/images/` directory
-* `src/content/articles` and `src/content/modules` directories
+* `src/content/docs` directory
 
 ## Thanks
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
+
+[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/small.svg)](https://starlight.astro.build)
