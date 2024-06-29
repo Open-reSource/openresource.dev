@@ -1,0 +1,74 @@
+/* Dark mode colors. */
+:root {
+	--sl-color-accent-low: #191b51;
+	--sl-color-accent: #7480FF;
+	--sl-color-accent-high: #b9c5ff;
+  --sl-color-secondary-low: #3a1624;
+	--sl-color-secondary: #892a75;
+	--sl-color-secondary-high: #eab9c8;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #eceef2;
+	--sl-color-gray-2: #c0c2c7;
+	--sl-color-gray-3: #888b96;
+	--sl-color-gray-4: #545861;
+	--sl-color-gray-5: #353841;
+	--sl-color-gray-6: #24272f;
+	--sl-color-black: #17181c;
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #cbd4ff;
+	--sl-color-accent: #4A00FF;
+	--sl-color-accent-high: #232179;
+  --sl-color-secondary-low: #f49bb7;
+	--sl-color-secondary: #ff5c79;
+	--sl-color-secondary-high: #c1105a;
+	--sl-color-white: #17181c;
+	--sl-color-gray-1: #24272f;
+	--sl-color-gray-2: #353841;
+	--sl-color-gray-3: #545861;
+	--sl-color-gray-4: #888b96;
+	--sl-color-gray-5: #c0c2c7;
+	--sl-color-gray-6: #eceef2;
+	--sl-color-gray-7: #f5f6f8;
+	--sl-color-black: #ffffff;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--sl-color-white);
+  font-weight: 500;
+}
+
+.sl-markdown-content strong {
+  color: var(--sl-color-white)
+}
+
+/* TODO: only apply this change (or without a less contrasted color) only to the dark theme */
+.sl-markdown-content hr:not(:where(.not-content *)) {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sl-markdown-content blockquote {
+  margin-top: 1rem;
+}
+
+.stretched-link:after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: ""
+}
+
+.fw-bold {
+	font-weight: bold;
+}
+
+.rounded-image {
+	display: block;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	width: 6rem;
+	border-radius: 9999px;
+}

@@ -1,0 +1,49 @@
+---
+title: "GitHub Marketplace: Social Preview for Your GitHub Actions"
+description: "Learn how to create and add a social preview image to your GitHub repository to have a better rendering when sharing on social media platforms the link of your GitHub Actions on the GitHub Marketplace."
+date: 2023-09-15
+lastUpdated: 2023-09-18
+excerpt: "**When sharing a GitHub Action on social media, the default preview image might prominently display your GitHub profile picture**, as seen with the \"Update Issue Body\" action on the GitHub Marketplace. To make a more informative and visually appealing preview, you can **add a custom social preview image to your GitHub repository**. This custom image enhances the appearance of social media posts and is also used when sharing links to your GitHub Action on the Marketplace.
+<br><br>
+Creating a custom social preview image is straightforward and guided by GitHub's documentation. The recommended size is 1280x640 pixels for optimal display on high-resolution devices. GitHub provides a template with safe zones to use as a starting point. After designing and uploading the image, tools like opengraph.xyz can verify its appearance across social media platforms. For a ready-made solution, a reusable Figma template named \"GitHub Actions and Repo Social Previews\" simplifies the creation of custom images."
+tags:
+  - GitHub
+  - Communication
+---
+<p class="lead">You are finally ready to share your GitHub Action with the world. You have spent hours working on it, and now it is time to show it off. You open your favorite social media platform, start typing your post, link your GitHub Action on the GitHub Marketplace, click on send, and... your big face is on people's screen!</p>
+
+<img src="/images/github-marketplace-social-preview-for-your-github-actions-1.png" alt="Screenshot of the rendering of the social media preview of the link of my GitHub Action on the GitHub Marketplace with my big face on it" />
+
+This is what happened to me when I shared the [marketplace link of my GitHub Action named "Update Issue Body"](https://github.com/marketplace/actions/update-issue-body).
+
+To be fair, the rendering is different and way better if one shares a link to the [GitHub Action repository itself](https://github.com/julien-deramond/update-issue-body).
+
+<img src="/images/github-marketplace-social-preview-for-your-github-actions-2.png" alt="Screenshot of the rendering of the social media preview of the link of my GitHub Action repository that shows useful information" />
+
+## What Can We Do About It?
+
+It is possible to add a social preview image to your GitHub repository. This image will be used when you share the link to your repository on social media platforms. But this image will also be used when you share the link to your GitHub Action on the GitHub Marketplace!
+
+It is rather easy to do as everything is explained directly in the GitHub documentation [Customizing your repository's social media preview](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview).
+
+At the times of writing, images are recommended to be 1280x640px for best display on high-resolution devices.
+
+While not visible in the documentation itself, GitHub provides in the settings of your repository a template for the social preview image which is pretty handy to get started and to have the safe zones.
+
+<img src="/images/github-marketplace-social-preview-for-your-github-actions-3.png" alt="Repo card template provided by GitHub with safe zones" />
+
+I am not a designer, so I used the template to create my social preview image which has the following rendering:
+
+<img src="/images/github-marketplace-social-preview-for-your-github-actions-4.png" alt="Social preview of my GitHub Action based on the repo card template provided by GitHub with my profile picture, the project name as a title, a description of the project, and my GitHub username" class="border" />
+
+## How To Check If It Works?
+
+After having uploaded the image to your repository, you can check if it works by using online tools like [opengraph.xyz](https://www.opengraph.xyz/).
+
+Whether you use the marketplace link or the repository link, you should see the social preview image.
+
+<img src="/images/github-marketplace-social-preview-for-your-github-actions-5.png" alt="Screenshot of the rendering provided by opengraph.xyz when my new social preview image has been uploaded which works well with all social media platforms" class="border" />
+
+## Find This Template On Figma
+
+Based on this rendering, I have created [a reusable Figma template named "GitHub Actions and Repo Social Previews"](https://www.figma.com/community/file/1285681647987701740) that you can use to create your own social preview image.

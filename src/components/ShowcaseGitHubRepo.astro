@@ -1,0 +1,24 @@
+---
+import { ShowcaseProfile } from 'starlight-showcases'
+
+export interface Props {
+  description: string,
+  env: string,
+  img: string,
+	repo: string
+}
+
+const { description, env, img, repo } = Astro.props;
+
+const picture = img.includes('https://') ? img : `https://avatars.githubusercontent.com/u/${img}?v=4`
+---
+<ShowcaseProfile
+  entries={[
+    {
+      name: `<span style="font-weight: 400">${env}/</span><br/>${repo}`,
+      picture,
+      href: `https://github.com/${env}/${repo}`,
+      description
+    },
+  ]}
+/>
