@@ -6,9 +6,17 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Open {re}Source',
+			logo: {
+				light: './src/assets/logo.svg',
+				dark: './src/assets/logo-dark.svg',
+				replacesTitle: true,
+			},
 			social: {
 				github: 'https://github.com/Open-reSource/openresource.dev',
 			},
+			customCss: [
+				'./src/styles/custom.css'
+			],
 			defaultLocale: 'root',
 			locales: {
 				root: {
