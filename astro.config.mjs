@@ -1,74 +1,119 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import vercel from '@astrojs/vercel/serverless';
-import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { rehypeHeadingIds } from '@astrojs/markdown-remark';
-import { h } from 'hastscript';
-
-const AnchorLinkIcon = h(
-	'span',
-	{ ariaHidden: 'true', class: 'anchor-icon grid items-center' },
-	h(
-		'svg',
-		{
-			width: 16,
-			height: 16,
-			viewBox: '0 0 16 16',
-			xlmns: 'http://www.w3.org/2000/svg',
-      fill: 'currentcolor',
-		},
-		h('path', {
-			d: 'M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z',
-		}),
-    h('path', {
-			d: 'M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z',
-		})
-	)
-);
+import starlight from '@astrojs/starlight';
+import starlightBlog from 'starlight-blog';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    sitemap(),
-    mdx({
-      optimize: true,
-    })
-  ],
-  output: "server",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true
-    }
-  }),
-  site: 'https://openresource.dev',
-  // used for sitemap
-  vite: {
-    define: {
-      'import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID': JSON.stringify(process.env.VERCEL_ANALYTICS_ID)
-    }
-  },
-  markdown: {
-    rehypePlugins: [
-      rehypeHeadingIds,
-      [
-        rehypeAutolinkHeadings,
-        {
-          properties: { class: 'anchor-link' },
-          behavior: 'after',
-          group: () => h('div', { tabIndex: -1, class: "heading-wrapper" }),
-          content: (heading) => [
-            AnchorLinkIcon,
-            h(
-              'span',
-              { 'is:raw': true, class: 'sr-only' },
-              heading?.children[0]?.value
-            )
-          ],
-        }
-      ]
-    ]
-  }
+	integrations: [
+		starlight({
+			plugins: [
+				starlightBlog({
+					title: 'Articles',
+					prefix: 'articles',
+					authors: {
+						julien: {
+							name: 'Julien Déramond',
+							title: 'Open {re}Source • Bootstrap • Orange',
+							picture: 'https://avatars.githubusercontent.com/u/17381666?s=200',
+							url: 'https://github.com/julien-deramond/',
+						}
+					}
+				})
+			],
+			title: 'Open {re}Source',
+			logo: {
+				light: './src/assets/logo.svg',
+				dark: './src/assets/logo-dark.svg',
+				replacesTitle: true,
+			},
+			social: {
+				github: 'https://github.com/Open-reSource/openresource.dev',
+			},
+			customCss: [
+				'./src/styles/custom.css'
+			],
+			defaultLocale: 'root',
+			locales: {
+				root: {
+					label: 'English',
+					lang: 'en'
+				},
+				fr: {
+					label: 'Français',
+					lang: 'fr'
+				},
+			},
+			sidebar: [
+				{
+					label: 'Guide',
+					items: [
+						{
+							label: 'Introduction',
+							link: '/guide/',
+						},
+						{
+							label: 'What Is Open Source?',
+							translations: {
+								fr: 'Qu\'est-ce que l\'open source ?',
+							},
+							items: [
+								{
+									label: 'Introduction',
+									link: '/guide/what-is-open-source',
+								},
+								{
+									label: 'Definition of Open Source',
+									link: '/guide/what-is-open-source/definition-of-open-source',
+								},
+								{
+									label: 'Brief History of Open Source',
+									link: '/guide/what-is-open-source/brief-history-of-open-source',
+								},
+								{
+									label: 'The Significance of Open Source',
+									link: '/guide/what-is-open-source/the-significance-of-open-source',
+								},
+								{
+									label: 'Examples of Successful Open-Source Projects',
+									link: '/guide/what-is-open-source/examples-of-successful-open-source-projects',
+								},
+								{
+									label: 'Types of Open-Source Projects',
+									link: '/guide/what-is-open-source/types-of-open-source-projects',
+								},
+								{
+									label: 'Types of Open-Source Software Projects',
+									link: '/guide/what-is-open-source/types-of-open-source-software-projects',
+								},
+								{
+									label: 'Benefits of Open Source',
+									link: '/guide/what-is-open-source/benefits-of-open-source',
+								}
+							]
+						},
+						{
+							label: 'Getting Started with Open Source',
+							translations: {
+								fr: 'Commencer avec l\'open source',
+							},
+							items: [
+								{
+									label: 'Introduction',
+									link: '/guide/getting-started-with-open-source',
+								},
+							]
+						}
+					]
+				},
+				{
+					label: 'Resources',
+					autogenerate: { directory: 'resources' },
+				},
+				{
+					label: 'Articles',
+					link: '/articles/',
+				}
+			],
+		}),
+	],
 });

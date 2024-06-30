@@ -1,75 +1,54 @@
-<p align="center">
-  <a href="https://openresource.dev/">
-    <img src="https://user-images.githubusercontent.com/17381666/230775291-2f900d5a-5d3b-4f30-86c3-f2dd7714602c.svg" alt="Open {re}Source logo" height="60">
-  </a>
-</p>
+# Starlight Starter Kit: Basics
 
-<h1 align="center">openresource.dev</h1>
+[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-<p align="center">
-  <b>Open {re}Source is your platform for sharing and discovering the open source world.</b>
-  <br>
-  Understand how it works, and learn how to create, manage, and contribute to open-source projects.
-  <br>
-  Join the open source community today and start making a difference.
-</p>
+```
+npm create astro@latest -- --template starlight
+```
 
-<p align="center">
-  <a href="https://openresource.dev">Open {re}Source website</a>
-  ·
-  <a href="https://discord.gg/fpUDwEMGwE">Discord</a>
-</p>
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
 
-## What's in This Repository
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-"openresource.dev" is the repository containing the code source deployed to https://openresource.dev.
+## 🚀 Project Structure
 
-## Status
+Inside of your Astro + Starlight project, you'll see the following folders and files:
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
-[![Integration Status](https://github.com/Open-reSource/openresource.dev/actions/workflows/integration.yml/badge.svg)](https://github.com/Open-reSource/openresource.dev/actions/workflows/integration.yml)
+```
+.
+├── public/
+├── src/
+│   ├── assets/
+│   ├── content/
+│   │   ├── docs/
+│   │   └── config.ts
+│   └── env.d.ts
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
+```
 
-## Quick Start
+Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+
+Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+
+Static assets, like favicons, can be placed in the `public/` directory.
+
+## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Run the development server                       |
-| `npm run vercel`          | Run in the same conditions as Vercel             |
-| `npm run update:showcase` | Run the showcase script to gather links from https://github.com/orgs/Open-reSource/discussions/3 |
-| `npm run test`            | Run the tests                                    |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Bugs and Feature Requests
+## 👀 Want to learn more?
 
-Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Open-reSource/openresource.dev/issues/new/choose).
-
-## Contributing
-
-Please read through our [contributing guidelines](https://github.com/Open-reSource/openresource.dev/blob/main/CONTRIBUTING.md).
-
-## Community
-
-Get an update on Open {re}Source's development and chat with the project maintainers and community members:
-
-- Follow [@open_resource on Twitter](https://twitter.com/open_resource).
-- Follow [@openresource on Mastodon](https://fosstodon.org/@openresource).
-- Follow [@openresource on Bluesky](https://bsky.app/profile/openresource.bsky.social).
-- Follow [@openresource on Threads](https://www.threads.net/@openresource).
-- Follow [@open-re-source on LinkedIn](https://www.linkedin.com/company/open-re-source/).
-- Explore [our GitHub Discussions](https://github.com/orgs/Open-reSource/discussions).
-- Chat with the community and the maintainers on [our Discord channel](https://discord.com/invite/fpUDwEMGwE).
-- Use [our RSS feed](https://openresource.dev/rss.xml) to know when articles are out!
-
-## Copyright and License
-
-Code released under the [MIT License](https://github.com/Open-reSource/openresource.dev/blob/main/LICENSE).
-
-Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
-* `public/images/` directory
-* `src/content/articles` and `src/content/modules` directories
-
-## Thanks
-
-[![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
+Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).

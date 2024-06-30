@@ -1,0 +1,14 @@
+.lead {
+  font-size: 1.125rem;
+}
+
+.sl-markdown-content {
+  strong {
+    color: var(--sl-color-white)
+  }
+}
+
+/* TODO: only apply this change (or without a less contrasted color) only to the dark theme */
+.sl-markdown-content hr:not(:where(.not-content *)) {
+  border-bottom: 1px solid var(--sl-color-white);
+}
