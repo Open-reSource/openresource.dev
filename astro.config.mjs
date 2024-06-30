@@ -38,6 +38,9 @@ export default defineConfig({
 						},
 						{
 							label: 'What Is Open Source?',
+							translations: {
+								fr: 'Qu\'est-ce que l\'open source ?',
+							},
 							items: [
 								{
 									label: 'Introduction',
@@ -46,6 +49,30 @@ export default defineConfig({
 								{
 									label: 'Definition of Open Source',
 									link: '/guide/what-is-open-source/definition-of-open-source',
+								},
+								{
+									label: 'Brief History of Open Source',
+									link: '/guide/what-is-open-source/brief-history-of-open-source',
+								},
+								{
+									label: 'The Significance of Open Source',
+									link: '/guide/what-is-open-source/the-significance-of-open-source',
+								},
+								{
+									label: 'Examples of Successful Open-Source Projects',
+									link: '/guide/what-is-open-source/examples-of-successful-open-source-projects',
+								},
+								{
+									label: 'Types of Open-Source Projects',
+									link: '/guide/what-is-open-source/types-of-open-source-projects',
+								},
+								{
+									label: 'Types of Open-Source Software Projects',
+									link: '/guide/what-is-open-source/types-of-open-source-software-projects',
+								},
+								{
+									label: 'Benefits of Open Source',
+									link: '/guide/what-is-open-source/benefits-of-open-source',
 								}
 							]
 						}
