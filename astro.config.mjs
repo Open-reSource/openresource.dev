@@ -75,6 +75,18 @@ export default defineConfig({
 									link: '/guide/what-is-open-source/benefits-of-open-source',
 								}
 							]
+						},
+						{
+							label: 'Getting Started with Open Source',
+							translations: {
+								fr: 'Commencer avec l\'open source',
+							},
+							items: [
+								{
+									label: 'Introduction',
+									link: '/guide/getting-started-with-open-source',
+								},
+							]
 						}
 					]
 				},
