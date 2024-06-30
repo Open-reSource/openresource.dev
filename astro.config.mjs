@@ -1,10 +1,25 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightBlog from 'starlight-blog';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
+			plugins: [
+				starlightBlog({
+					title: 'Articles',
+					prefix: 'articles',
+					authors: {
+						julien: {
+							name: 'Julien Déramond',
+							title: 'Open {re}Source • Bootstrap • Orange',
+							picture: 'https://avatars.githubusercontent.com/u/17381666?s=96',
+							url: 'https://github.com/julien-deramond/',
+						}
+					}
+				})
+			],
 			title: 'Open {re}Source',
 			logo: {
 				light: './src/assets/logo.svg',
@@ -94,6 +109,10 @@ export default defineConfig({
 					label: 'Resources',
 					autogenerate: { directory: 'resources' },
 				},
+				{
+					label: 'Articles',
+					link: '/articles/',
+				}
 			],
 		}),
 	],
