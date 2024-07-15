@@ -7,8 +7,8 @@
       "contributors": 5,
       "description": "🪐 Modern offline Kanban board app for Windows, MacOS and Linux. Built with simplicity and user experience in mind.",
       "discussions": 4,
-      "forks": 42,
-      "issues": 42,
+      "forks": 43,
+      "issues": 43,
       "languages": [
         "Vue",
         "TypeScript",
@@ -20,7 +20,7 @@
       "name": "kanri",
       "owner": "trobonox",
       "prs": 1,
-      "stars": 590,
+      "stars": 597,
       "url": "https://github.com/trobonox/kanri"
     }
   ]
