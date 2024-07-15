@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1737,
+      "prs": 5,
+      "stars": 1742,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
       "forks": 50,
-      "issues": 11,
+      "issues": 12,
       "languages": [
         "Python",
         "HTML",
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 1452,
+      "prs": 4,
+      "stars": 1456,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -92,7 +92,7 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 591,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 623,
+      "prs": 2,
+      "stars": 625,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -129,7 +129,7 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 459,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 496,
+      "prs": 4,
+      "stars": 498,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -183,7 +183,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 187,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -220,7 +220,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 94,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -237,7 +237,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 68,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -254,7 +254,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 67,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -271,7 +271,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 65,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
