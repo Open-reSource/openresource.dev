@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 4,
-      "stars": 3624,
+      "prs": 3,
+      "stars": 3631,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1062,
+      "stars": 1065,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 371,
+      "stars": 373,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -78,7 +78,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 174,
+      "stars": 175,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
