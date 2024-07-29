@@ -50,7 +50,7 @@
       "name": "antd-phone-input",
       "owner": "typesnippet",
       "prs": 0,
-      "stars": 45,
+      "stars": 47,
       "url": "https://github.com/typesnippet/antd-phone-input"
     },
     {
@@ -66,7 +66,7 @@
       ],
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
-      "prs": 0,
+      "prs": 1,
       "stars": 49,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
