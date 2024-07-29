@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1599,
+      "stars": 1600,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -26,7 +26,7 @@
       "contributors": 31,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 178,
+      "forks": 179,
       "issues": 15,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1745,
+      "stars": 1750,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1459,
+      "stars": 1464,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -65,7 +65,7 @@
       "contributors": 7,
       "description": "📱 📂 iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
-      "forks": 140,
+      "forks": 138,
       "issues": 0,
       "languages": [
         "Objective-C",
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 901,
+      "stars": 902,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 629,
+      "stars": 630,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -121,7 +121,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 52,
+      "forks": 53,
       "issues": 4,
       "languages": [
         "Python",
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 461,
+      "stars": 462,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -139,7 +139,7 @@
       "contributors": 8,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
-      "forks": 29,
+      "forks": 30,
       "issues": 2,
       "languages": [
         "Python",
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 500,
+      "stars": 502,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,7 +184,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 187,
+      "stars": 188,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
