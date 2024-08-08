@@ -1,0 +1,48 @@
+---
+title: Open {re}Source
+description: Join open source, learn to create, manage, and contribute to projects with Open {re}Source. Make a difference today by sharing and collaborating.
+template: splash
+editUrl: false
+hero:
+  tagline: "<span style='font-weight: semi-bold; font-size: var(--sl-text-2xl)'>Your platform for sharing and discovering the open source world.</span><br><span style='color: var(--sl-color-gray-3)'>Understand how it works, and learn how to create, manage, and contribute to open-source projects.<br>Join the open source community today and start making a difference.</span>"
+  actions:
+    - text: Follow the guide
+      link: /guide/
+      icon: right-arrow
+      variant: primary
+    - text: Read the articles
+      link: /articles/
+      icon: open-book
+      variant: secondary
+    - text: GitHub
+      link: https://github.com/Open-reSource/openresource.dev
+      icon: external
+head:
+  - tag: meta
+    attrs:
+      property: "og:type"
+      content: "website"
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import ShowcaseBanner from '../../components/ShowcaseBanner.astro';
+
+## Next steps
+
+<CardGrid stagger>
+	<Card title="Read the guide" icon="open-book">
+		Learn more about open source in [our complete guide](/guide).
+	</Card>
+	<Card title="Read the articles" icon="open-book">
+		Consult [our articles](/articles).
+	</Card>
+	<Card title="Support us" icon="star">
+		<p>**You enjoy the content and the effort?**</p>
+		Consider [dropping a star on our repository](https://github.com/Open-reSource/openresource.dev).
+
+		<p>**Want to do more?**</p>
+		<a href="https://github.com/sponsors/Open-reSource">Consider becoming a sponsor</a>
+	</Card>
+</CardGrid>
+
+<ShowcaseBanner showProjectsButton />

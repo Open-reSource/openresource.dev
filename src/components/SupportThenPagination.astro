@@ -1,0 +1,27 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Pagination.astro';
+import { Aside } from '@astrojs/starlight/components';
+
+const { editUrl } = Astro.props.entry.data;
+---
+
+{ editUrl &&
+	<p class="license"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 2023-2024 © Open Open &lcub;re&rcub;Source</p>
+	<Aside type="note" title="Found a typo, a grammar error or a broken link?">
+		Or this article is missing something important? Please <a href="https://github.com/Open-reSource/openresource.dev/issues/new/choose">create an issue on GitHub</a>.
+	</Aside>
+	<Aside type="tip" title="Found something valuable on this page?">
+		Show your support by <a href="https://github.com/Open-reSource/openresource.dev">dropping us a star on GitHub</a>. Your support helps us grow and reach more people!
+	</Aside>
+}
+
+<Default {...Astro.props}><slot /></Default>
+
+<style>
+	.license,
+	.license a {
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+</style>

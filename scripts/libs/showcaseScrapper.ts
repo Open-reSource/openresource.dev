@@ -1,7 +1,7 @@
 // This script is based on the one from Astro:
 // https://github.com/withastro/astro.build/blob/main/scripts/update-showcase.mjs#L48
 
-import { graphql } from "@octokit/graphql";
+import { graphql } from "@octokit/graphql";
 import type { Repository } from "@octokit/graphql-schema";
 import ghActions from "@actions/core";
 import { nameToEmoji } from "gemoji";
