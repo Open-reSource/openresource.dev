@@ -7,7 +7,7 @@
       "contributors": 4,
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 225,
+      "forks": 226,
       "issues": 2,
       "languages": [
         "Objective-C",
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1600,
+      "stars": 1601,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 179,
-      "issues": 15,
+      "issues": 16,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 1754,
+      "stars": 1759,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 9,
-      "stars": 1468,
+      "stars": 1474,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 902,
+      "stars": 903,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 635,
+      "stars": 638,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 463,
+      "stars": 466,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -139,8 +139,8 @@
       "contributors": 8,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
-      "forks": 30,
-      "issues": 2,
+      "forks": 31,
+      "issues": 3,
       "languages": [
         "Python",
         "JavaScript",
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 7,
-      "stars": 504,
+      "prs": 8,
+      "stars": 505,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -271,7 +271,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 7,
+      "prs": 3,
       "stars": 64,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
