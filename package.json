@@ -34,7 +34,7 @@
     "@faker-js/faker": "^8.4.1",
     "@octokit/graphql": "^8.1.1",
     "@octokit/graphql-schema": "^15.25.0",
-    "@tailwindcss/typography": "^0.5.14",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/parse-github-url": "^1.0.3",
     "astro-og-canvas": "^0.5.3",
     "dotenv": "^16.4.5",
