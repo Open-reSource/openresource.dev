@@ -1,24 +1,24 @@
 {
-  "author": "castrogarciajs",
+  "author": "sebastiandotdev",
   "links": [
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/162659053?v=4",
-      "contributors": 4,
+      "contributors": 3,
       "description": "A design system built with TailwindCSS and Radix UI.",
       "discussions": 0,
-      "forks": 4,
-      "issues": 0,
+      "forks": 3,
+      "issues": 2,
       "languages": [
         "TypeScript",
         "JavaScript",
         "CSS"
       ],
       "name": "ui",
-      "owner": "OpenLabs-dev",
+      "owner": "openlitedotdev",
       "prs": 0,
       "stars": 6,
-      "url": "https://github.com/OpenLabs-dev/ui"
+      "url": "https://github.com/openlitedotdev/ui"
     }
   ]
 }

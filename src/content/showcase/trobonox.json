@@ -3,12 +3,12 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/57040351?u=c5694c0e9069b8a1e5a865918f82eb72e6564209&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/178275234?v=4",
       "contributors": 5,
       "description": "🪐 Modern offline Kanban board app for Windows, MacOS and Linux. Built with simplicity and user experience in mind.",
       "discussions": 4,
-      "forks": 46,
-      "issues": 42,
+      "forks": 50,
+      "issues": 52,
       "languages": [
         "Vue",
         "TypeScript",
@@ -18,10 +18,10 @@
         "Handlebars"
       ],
       "name": "kanri",
-      "owner": "trobonox",
-      "prs": 2,
-      "stars": 625,
-      "url": "https://github.com/trobonox/kanri"
+      "owner": "kanriapp",
+      "prs": 0,
+      "stars": 646,
+      "url": "https://github.com/kanriapp/kanri"
     }
   ]
 }
