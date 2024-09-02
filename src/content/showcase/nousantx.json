@@ -8,7 +8,7 @@
       "description": "A CSS Framework without any CSS file :D",
       "discussions": 0,
       "forks": 2,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "TypeScript",
         "JavaScript",
@@ -18,7 +18,7 @@
       "name": "css",
       "owner": "tenoxui",
       "prs": 0,
-      "stars": 10,
+      "stars": 11,
       "url": "https://github.com/tenoxui/css"
     }
   ]

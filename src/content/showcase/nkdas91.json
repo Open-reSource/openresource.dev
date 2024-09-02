@@ -8,7 +8,7 @@
       "description": "Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.",
       "discussions": 0,
       "forks": 2,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "JavaScript",
         "SCSS",
@@ -17,7 +17,7 @@
       "name": "materialstyle",
       "owner": "materialstyle",
       "prs": 0,
-      "stars": 22,
+      "stars": 23,
       "url": "https://github.com/materialstyle/materialstyle"
     },
     {
@@ -54,7 +54,7 @@
       ],
       "name": "cuesync.github.io",
       "owner": "CueSync",
-      "prs": 0,
+      "prs": 1,
       "stars": 4,
       "url": "https://github.com/CueSync/cuesync.github.io"
     }
