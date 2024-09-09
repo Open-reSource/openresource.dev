@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1604,
+      "stars": 1606,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -26,7 +26,7 @@
       "contributors": 31,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 179,
+      "forks": 180,
       "issues": 16,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 1772,
+      "stars": 1778,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 12,
-      "stars": 1479,
+      "stars": 1482,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 904,
+      "stars": 905,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -84,7 +84,7 @@
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
       "forks": 96,
-      "issues": 4,
+      "issues": 5,
       "languages": [
         "Python",
         "HTML",
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 614,
+      "stars": 615,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -102,7 +102,7 @@
       "contributors": 4,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 31,
+      "forks": 30,
       "issues": 5,
       "languages": [
         "Python",
@@ -184,7 +184,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 187,
+      "stars": 189,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
