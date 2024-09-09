@@ -12,14 +12,16 @@
       "languages": [
         "TypeScript",
         "JavaScript",
+        "Shell",
         "HTML",
-        "CSS"
+        "CSS",
+        "MDX"
       ],
-      "name": "css",
+      "name": "tenoxui",
       "owner": "tenoxui",
       "prs": 0,
-      "stars": 11,
-      "url": "https://github.com/tenoxui/css"
+      "stars": 20,
+      "url": "https://github.com/tenoxui/tenoxui"
     }
   ]
 }

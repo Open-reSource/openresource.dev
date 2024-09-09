@@ -56,10 +56,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4",
-      "contributors": 10,
+      "contributors": 11,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 4,
-      "forks": 10,
+      "forks": 11,
       "issues": 0,
       "languages": [
         "Python"
