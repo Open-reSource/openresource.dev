@@ -1,50 +1,6 @@
 import { z, defineCollection } from 'astro:content';
-
-const OpenGraphSchemaDataSchema = z.object({
-  description: z.string(),
-  staticImage: z.boolean().optional(),
-  title: z.string(),
-  type: z.string(),
-})
-
-const structuredDataSchema = z.object({
-  article: z.object({
-    headline: z.string().optional(),
-    description: z.string().optional(),
-    datePublished: z.string().optional(),
-    dateModified: z.string().optional(),
-  }).optional()
-});
-
-const articlesCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    creationDate: z.string(),
-    description: z.string(),
-    labels: z.array(z.object(
-      {
-        class: z.string(),
-        label: z.string(),
-      }
-    )),
-    lastUpdateDate: z.string(),
-    title: z.string(),
-    structuredData: structuredDataSchema.optional(),
-  }),
-});
-
-const modulesCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    id: z.number(),
-    creationDate: z.string().optional(),
-    description: z.string(),
-    finished: z.boolean().optional(),
-    lastUpdateDate: z.string().optional(),
-    title: z.string(),
-    soon: z.boolean().optional(),
-  })
-});
+import { docsSchema } from '@astrojs/starlight/schema';
+import { blogSchema } from 'starlight-blog/schema';
 
 const showcaseUnknownLinkSchema = z.object({
   type: z.literal("unknown"),
@@ -88,16 +44,18 @@ const showcaseCollection = defineCollection({
   schema: showcaseSchema,
 });
 
+
 export const collections = {
-  'articles': articlesCollection,
-  'modules': modulesCollection,
-  'showcase': showcaseCollection
+  docs: defineCollection({
+    schema: docsSchema({
+      extend: (context) => blogSchema(context)
+    })
+  }),
+  showcase: showcaseCollection
 };
 
-export type OpenGraphData = z.infer<typeof OpenGraphSchemaDataSchema>;
 export type Showcase = z.infer<typeof showcaseSchema>;
 export type ShowcaseLink = z.infer<typeof showcaseLinkSchema>;
 export type ShowcaseUnknownLink = z.infer<typeof showcaseUnknownLinkSchema>;
 export type ShowcaseGitHubLink = z.infer<typeof showcaseGitHubLinkSchema>;
 export type ShowcaseGitHubRepoLink = z.infer<typeof showcaseGitHubRepoLinkSchema>;
-export type StructuredData = z.infer<typeof structuredDataSchema>;

@@ -1,0 +1,21 @@
+---
+import { ShowcaseProfile } from 'starlight-showcases'
+
+export interface Props {
+  description: string,
+  img: string
+  name: string,
+}
+
+const { description, img, name } = Astro.props;
+---
+<ShowcaseProfile
+  entries={[
+    {
+      name: name,
+      picture: `https://avatars.githubusercontent.com/u/${img}?v=4`,
+      href: `https://github.com/${name}`,
+      description: description,
+    },
+  ]}
+/>

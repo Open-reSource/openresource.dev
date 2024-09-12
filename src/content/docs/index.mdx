@@ -1,0 +1,119 @@
+---
+title: Open {re}Source
+description: Join open source, learn to create, manage, and contribute to projects with Open {re}Source. Make a difference today by sharing and collaborating.
+template: splash
+editUrl: false
+hero:
+  tagline: "<p style='font-weight: semi-bold; font-size: var(--sl-text-2xl)'>Your platform for sharing and discovering the open source world</p><p>Understand how it works, and learn how to create, manage, and contribute to open-source projects. Join the open source community today and start making a difference.</p>"
+  image:
+    alt: Open {re}Source logo
+    dark: ../../assets/logo-dark.svg
+    light: ../../assets/logo.svg
+  actions:
+    - text: Follow the guide
+      link: /guide/
+      icon: right-arrow
+      variant: primary
+    - text: Read the articles
+      link: /articles/
+      icon: open-book
+      variant: secondary
+    - text: GitHub
+      link: https://github.com/Open-reSource/openresource.dev
+      icon: external
+      variant: minimal
+head:
+  - tag: meta
+    attrs:
+      property: "og:type"
+      content: "website"
+---
+import Button from '../../components/Button.astro';
+
+<hr style="margin: 0; padding: 0" />
+
+<section class="homepage-section">
+  <div class="container" style="justify-content: center; display: flex">
+    <div class="content" style="text-align: center">
+      <h2>Support Us</h2>
+      <p>Help us continue to build and maintain this project by becoming a sponsor or dropping a star on our GitHub repository.</p>
+      <div class="actions" style="justify-content: center">
+        <Button href="https://github.com/sponsors/Open-reSource" class="action action-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/></svg>Become a sponsor</Button>
+        <Button href="https://github.com/Open-reSource/openresource.dev" class="action action-outline" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>Star on GitHub</Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="margin: 0; padding: 0" />
+
+<section class="homepage-section">
+  <div class="container">
+    <div class="grid">
+      <div class="content">
+        <h2>Showcase Your Project</h2>
+        <p>Showcase your amazing project and inspire others to join our community. Share your work and get feedback from our talented team.</p>
+        <div class="actions">
+          <Button href="https://github.com/orgs/Open-reSource/discussions/3" class="action action-secondary">Submit your project <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.33 10.18a1 1 0 0 1-.77 0 1 1 0 0 1-.62-.93l.01-1.83-8.2 8.2a1 1 0 0 1-1.41-1.42l8.2-8.2H14.7a1 1 0 0 1 0-2h4.25a1 1 0 0 1 1 1v4.25a1 1 0 0 1-.62.93Z"></path><path d="M11 4a1 1 0 1 1 0 2H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4a1 1 0 1 1 2 0v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h4Z"></path></svg></Button>
+          <Button href="/showcase" class="action action-outline">View showcase</Button>
+        </div>
+      </div>
+      <div class="homepage-img">
+        <img src="/images/homepage-showcase.png" width="500" height="400" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="margin: 0; padding: 0" />
+
+<section class="homepage-section homepage-section-mobile-inverted">
+  <div class="container">
+    <div class="grid">
+      <div class="homepage-img">
+        <div class="mockup-phone">
+          <div class="camera"></div>
+          <div class="display">
+            <div class="artboard artboard-demo phone-1">
+              <img src="/images/homepage-guide.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Read the Guide</h2>
+        <p>Dive into our comprehensive guide to learn everything you need to know about open source. From getting started to advanced topics, we've got you covered.</p>
+        <div class="actions">
+          <Button href="/guide" class="action action-secondary">Read the guide</Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr style="margin: 0; padding: 0" />
+
+<section class="homepage-section">
+  <div class="container">
+    <div class="grid">
+      <div class="content">
+        <h2>Read the Articles</h2>
+        <p>Explore our latest articles and blog posts to stay up-to-date with the latest trends, best practices, and industry insights.</p>
+        <div class="actions">
+          <Button href="/articles" class="action action-secondary">Read the articles</Button>
+          <Button href="/articles/rss.xml" class="action action-outline">Subscribe to the RSS feed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></Button>
+        </div>
+      </div>
+      <div class="homepage-img">
+        <div class="mockup-phone">
+          <div class="camera"></div>
+          <div class="display">
+            <div class="artboard artboard-demo phone-1">
+              <img src="/images/homepage-articles.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,301 @@
+/* Dark mode colors. */
+:root {
+	--sl-color-accent-low: #191b51;
+	--sl-color-accent: #7480FF;
+	--sl-color-accent-high: #b9c5ff;
+  --sl-color-secondary-low: #3a1624;
+	--sl-color-secondary: #892a75;
+	--sl-color-secondary-high: #eab9c8;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #eceef2;
+	--sl-color-gray-2: #c0c2c7;
+	--sl-color-gray-3: #888b96;
+	--sl-color-gray-4: #545861;
+	--sl-color-gray-5: #353841;
+	--sl-color-gray-6: #24272f;
+	--sl-color-black: #17181c;
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #cbd4ff;
+	--sl-color-accent: #4A00FF;
+	--sl-color-accent-high: #232179;
+  --sl-color-secondary-low: #f49bb7;
+	--sl-color-secondary: #ff5c79;
+	--sl-color-secondary-high: #c1105a;
+	--sl-color-white: #17181c;
+	--sl-color-gray-1: #24272f;
+	--sl-color-gray-2: #353841;
+	--sl-color-gray-3: #545861;
+	--sl-color-gray-4: #888b96;
+	--sl-color-gray-5: #c0c2c7;
+	--sl-color-gray-6: #eceef2;
+	--sl-color-gray-7: #f5f6f8;
+	--sl-color-black: #ffffff;
+}
+
+/*
+ * Ensure a double outline for focus-visible elements for better accessibility.
+ * For instance, for the primary button having the primary color as the background color.
+ */
+:focus-visible {
+	outline: 4px solid var(--sl-color-accent) !important;
+	outline-offset: 2px;
+	box-shadow: var(--sl-color-black) 0 0 0 2px;
+}
+
+::selection {
+	background: var(--sl-color-accent);
+	color: var(--sl-color-black);
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--sl-color-white);
+  font-weight: 500;
+}
+
+.sl-markdown-content strong {
+  color: var(--sl-color-white)
+}
+
+.sl-markdown-content hr:not(:where(.not-content *)) {
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sl-markdown-content blockquote {
+  margin-top: 1rem;
+}
+
+.sl-markdown-content blockquote p {
+	font-style: italic;
+}
+
+.stretched-link:after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: ""
+}
+
+.fw-bold {
+	font-weight: bold;
+}
+
+.rounded-image {
+	display: block;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	width: 6rem;
+	border-radius: 9999px;
+}
+
+.hero .stack h1 {
+	font-weight: bold;
+}
+
+.hero a {
+	font-weight: 600;
+}
+
+.hero img {
+	padding: 4rem;
+}
+
+.homepage-section {
+	width: 100%;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.homepage-section .container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.homepage-section .grid {
+	display: grid;
+	gap: 2rem;
+}
+
+.homepage-section .content {
+	/* space-y-4 */
+	text-align: center;
+}
+
+.homepage-section .content h2 {
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	font-weight: 700;
+	letter-spacing: -0.05em;
+}
+
+.homepage-section .content > p {
+	color: var(--sl-text-base);
+	max-width: 700px;
+}
+
+.homepage-section .actions {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.homepage-section .homepage-img {
+	display: flex;
+	justify-content: center;
+	margin-top: 0;
+}
+
+.homepage-section .homepage-img > img {
+	aspect-ratio: 500 / 400;
+	object-fit: cover;
+	border-radius: 0.5rem;
+}
+
+@media (min-width: 400px) {
+	.homepage-section .actions {
+		flex-direction: row;;
+	}
+}
+
+@media (min-width: 640px) {
+	.homepage-section .content h2 {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.homepage-section {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+
+	.homepage-section .container {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.homepage-section .grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.homepage-section .content {
+		text-align: left;
+	}
+
+	.homepage-section .content h2 {
+		font-size: 3rem;
+		line-height: 1;
+	}
+
+	.homepage-section .actions {
+		justify-content: flex-start;
+	}
+
+	.homepage-section .content > p {
+		font-size: 1.25rem;
+		line-height: 1.625;
+	}
+}
+
+@media (min-width: 1024px) {
+	.homepage-section {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.homepage-section-mobile-inverted .grid {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+/*
+ * Mockup phone rendering for the homepage based on daisyUI "Phone mockup" component
+ * Available at https://daisyui.com/components/mockup-phone/
+ * Licensed under MIT License
+ */
+
+.mockup-phone {
+  display: inline-block;
+  border: 4px solid #444;
+  border-radius: 50px;
+  background-color: #000;
+  padding: 10px;
+  margin: 0 auto;
+  overflow: hidden
+}
+
+.mockup-phone .camera {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #000;
+  height: 25px;
+  width: 150px;
+  margin: 0 auto;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  z-index: 11;
+}
+
+.mockup-phone .camera:before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 50px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #0c0b0e;
+  transform: translate(-50%,-50%)
+}
+
+.mockup-phone .camera:after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  width: 8px;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #0f0b25;
+}
+
+.mockup-phone .display {
+  overflow: hidden;
+  border-radius: 40px;
+  margin-top: -25px;
+}
+
+.artboard {
+	width: 100%;
+}
+
+.artboard-demo {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.artboard-demo {
+  background-color: white;
+  box-shadow: 0 1px 3px #0000001a,0 1px 2px #0000000f;
+}
+
+.artboard.phone-1 {
+  width: 320px;
+  height: 568px;
+}
+

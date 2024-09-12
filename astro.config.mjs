@@ -1,74 +1,285 @@
-import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import vercel from '@astrojs/vercel/serverless';
-import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { rehypeHeadingIds } from '@astrojs/markdown-remark';
-import { h } from 'hastscript';
-
-const AnchorLinkIcon = h(
-	'span',
-	{ ariaHidden: 'true', class: 'anchor-icon grid items-center' },
-	h(
-		'svg',
-		{
-			width: 16,
-			height: 16,
-			viewBox: '0 0 16 16',
-			xlmns: 'http://www.w3.org/2000/svg',
-      fill: 'currentcolor',
-		},
-		h('path', {
-			d: 'M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z',
-		}),
-    h('path', {
-			d: 'M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z',
-		})
-	)
-);
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
+import vercel from "@astrojs/vercel/serverless";
+import starlightBlog from "starlight-blog";
+import starlightLinksValidator from "starlight-links-validator";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    sitemap(),
-    mdx({
-      optimize: true,
-    })
-  ],
   output: "server",
   adapter: vercel({
     webAnalytics: {
-      enabled: true
-    }
+      enabled: true,
+    },
   }),
-  site: 'https://openresource.dev',
-  // used for sitemap
+  site: "https://openresource.dev",
   vite: {
     define: {
-      'import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID': JSON.stringify(process.env.VERCEL_ANALYTICS_ID)
-    }
+      "import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID": JSON.stringify(
+        process.env.VERCEL_ANALYTICS_ID
+      ),
+    },
   },
-  markdown: {
-    rehypePlugins: [
-      rehypeHeadingIds,
-      [
-        rehypeAutolinkHeadings,
+  redirects: {
+    '/books': '/resources/books',
+    '/events': '/resources/events',
+    '/open-sourcerers': '/resources/open-sourcerers',
+    '/podcasts': '/resources/podcasts',
+  },
+  integrations: [
+    starlight({
+      components: {
+        Footer: "./src/components/Footer.astro",
+        Head: "./src/components/Head.astro",
+        PageTitle: "./src/components/PageTitleThenReadingTime.astro",
+        Pagination: "./src/components/SupportThenPagination.astro",
+        Header: "./src/components/Header.astro",
+      },
+      plugins: [
+        starlightLinksValidator({
+          exclude: ["/articles"],
+        }),
+        starlightBlog({
+          title: "Articles",
+          prefix: "articles",
+          authors: {
+            julien: {
+              name: "Julien Déramond",
+              title: "Open {re}Source • Bootstrap • Orange",
+              picture: "https://avatars.githubusercontent.com/u/17381666?s=200",
+              url: "https://github.com/julien-deramond/",
+            },
+          },
+        }),
+      ],
+      title: "Open {re}Source",
+      favicon: "./favicon.ico",
+      logo: {
+        light: "./src/assets/logo.svg",
+        dark: "./src/assets/logo-dark.svg",
+        replacesTitle: true,
+      },
+      editLink: {
+        baseUrl: "https://github.com/Open-reSource/openresource.dev/edit/main/",
+      },
+      social: {
+        github: "https://github.com/Open-reSource/openresource.dev",
+        discord: "https://discord.gg/fpUDwEMGwE",
+        "x.com": "https://x.com/open_resource",
+        linkedin: "https://linkedin.com/company/open-re-source/",
+        mastodon: "https://fosstodon.org/@openresource",
+        blueSky: "https://bsky.app/profile/openresource.bsky.social",
+        threads: "https://www.threads.net/@openresource",
+      },
+      customCss: ["./src/styles/custom.css"],
+      defaultLocale: "root",
+      locales: {
+        root: {
+          label: "English",
+          lang: "en",
+        },
+      },
+      sidebar: [
         {
-          properties: { class: 'anchor-link' },
-          behavior: 'after',
-          group: () => h('div', { tabIndex: -1, class: "heading-wrapper" }),
-          content: (heading) => [
-            AnchorLinkIcon,
-            h(
-              'span',
-              { 'is:raw': true, class: 'sr-only' },
-              heading?.children[0]?.value
-            )
+          label: "Guide",
+          items: [
+            {
+              label: "Introduction",
+              slug: "guide",
+            },
+            {
+              label: "What Is Open Source?",
+              collapsed: false,
+              items: [
+                {
+                  label: "Introduction",
+                  slug: "guide/what-is-open-source",
+                },
+                {
+                  slug: "guide/what-is-open-source/definition-of-open-source",
+                },
+                {
+                  slug: "guide/what-is-open-source/brief-history-of-open-source",
+                },
+                {
+                  slug: "guide/what-is-open-source/the-significance-of-open-source",
+                },
+                {
+                  slug: "guide/what-is-open-source/examples-of-successful-open-source-projects",
+                },
+                {
+                  slug: "guide/what-is-open-source/types-of-open-source-projects",
+                },
+                {
+                  slug: "guide/what-is-open-source/types-of-open-source-software-projects",
+                },
+                {
+                  slug: "guide/what-is-open-source/benefits-of-open-source",
+                },
+              ],
+            },
+            {
+              label: "Getting Started",
+              collapsed: true,
+              items: [
+                {
+                  label: "Introduction",
+                  slug: "guide/getting-started-with-open-source",
+                },
+                {
+                  slug: "guide/getting-started-with-open-source/source-code-hosting-platforms",
+                },
+                {
+                  slug: "guide/getting-started-with-open-source/finding-open-source-projects",
+                },
+              ],
+            },
+            {
+              label: "Contributing",
+              collapsed: true,
+              items: [
+                {
+                  label: "Introduction",
+                  slug: "guide/contributing-to-open-source-projects",
+                },
+                {
+                  slug: "guide/contributing-to-open-source-projects/finding-open-source-projects",
+                },
+                {
+                  slug: "guide/contributing-to-open-source-projects/contributing-to-open-source",
+                },
+                {
+                  slug: "guide/contributing-to-open-source-projects/getting-involved-in-the-open-source-community",
+                },
+                {
+                  slug: "guide/contributing-to-open-source-projects/building-a-portfolio-with-open-source-contributions",
+                },
+                {
+                  slug: "guide/contributing-to-open-source-projects/overcoming-challenges-in-open-source-contributions",
+                },
+              ],
+            },
+            {
+              label: "Creating",
+              collapsed: true,
+              items: [
+                {
+									label: "Introduction",
+                  slug: "guide/creating-your-own-open-source-project",
+                },
+                {
+                  slug: "guide/creating-your-own-open-source-project/choosing-a-project-idea",
+                },
+                {
+                  slug: "guide/creating-your-own-open-source-project/planning-your-project",
+                },
+                {
+                  slug: "guide/creating-your-own-open-source-project/creating-your-project",
+                },
+                {
+                  slug: "guide/creating-your-own-open-source-project/legal-considerations",
+                },
+                {
+                  slug: "guide/creating-your-own-open-source-project/developing-your-project",
+                },
+                {
+                  slug: "guide/creating-your-own-open-source-project/building-and-engaging-your-community",
+                },
+                {
+									slug: "guide/creating-your-own-open-source-project/contributing-your-project-to-the-open-source-community",
+                  badge: "Coming soon",
+                },
+              ],
+            },
+            {
+              label: "Maintaining",
+              collapsed: true,
+              items: [
+                {
+                  label: "Introduction",
+                  slug: "guide/maintaining-open-source-projects",
+                },
+                {
+                  slug: "guide/maintaining-open-source-projects/introduction-to-open-source-project-maintenance",
+                },
+                {
+									slug: "guide/maintaining-open-source-projects/managing-contributions-and-community-engagement",
+									badge: "Coming soon",
+                },
+                {
+									slug: "guide/maintaining-open-source-projects/managing-project-dependencies",
+									badge: "Coming soon",
+                },
+                {
+                  slug: "guide/maintaining-open-source-projects/fostering-a-strong-and-inclusive-community",
+                },
+                {
+                  slug: "guide/maintaining-open-source-projects/ensuring-project-sustainability",
+									badge: "Coming soon",
+                },
+              ],
+            },
+            {
+              label: "Promoting",
+              collapsed: true,
+              items: [
+                {
+                  label: "Introduction",
+                  slug: "guide/promoting-open-source-projects",
+                },
+                {
+                  slug: "guide/promoting-open-source-projects/introduction-to-project-promotion",
+                },
+                {
+                  slug: "guide/promoting-open-source-projects/building-a-strong-project-identity",
+                },
+                {
+                  slug: "guide/promoting-open-source-projects/crafting-an-engaging-project-website",
+                },
+              ],
+            },
+            {
+              label: "Financing",
+              collapsed: true,
+              items: [
+                {
+                  label: "Introduction",
+                  slug: "guide/financing-open-source-projects",
+                },
+                {
+                  slug: "guide/financing-open-source-projects/importance-and-challenges-of-financing-open-source-projects",
+                },
+                {
+                  slug: "guide/financing-open-source-projects/understanding-funding-models",
+                },
+                {
+                  slug: "guide/financing-open-source-projects/effective-fundraising-strategies",
+                },
+                {
+                  slug: "guide/financing-open-source-projects/resource-allocation-and-budgeting",
+									badge: "Coming soon",
+                },
+                {
+                  slug: "guide/financing-open-source-projects/fostering-a-sustainable-ecosystem",
+									badge: "Coming soon",
+                },
+                {
+                  slug: "guide/financing-open-source-projects/transparency-accountability-and-community-involvement",
+									badge: "Coming soon",
+                },
+              ],
+            },
           ],
-        }
-      ]
-    ]
-  }
+        },
+        {
+          label: "Resources",
+          autogenerate: { directory: "resources" },
+        },
+        {
+          label: "Articles",
+          link: "/articles",
+        },
+      ],
+    }),
+  ],
 });
