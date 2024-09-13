@@ -33,7 +33,7 @@
       "name": "django-forbid",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 65,
+      "stars": 66,
       "url": "https://github.com/pysnippet/django-forbid"
     },
     {
@@ -59,7 +59,7 @@
       "contributors": 11,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 4,
-      "forks": 11,
+      "forks": 12,
       "issues": 0,
       "languages": [
         "Python"

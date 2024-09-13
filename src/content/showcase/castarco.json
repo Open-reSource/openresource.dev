@@ -1,0 +1,62 @@
+{
+  "author": "castarco",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/144210963?v=4",
+      "contributors": 1,
+      "description": "Astro integration to enhance your website's security with SubResource Integrity hashes, Content-Security-Policy headers, and other techniques.",
+      "discussions": 2,
+      "forks": 0,
+      "issues": 14,
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "Astro",
+        "CSS"
+      ],
+      "name": "astro-shield",
+      "owner": "kindspells",
+      "prs": 1,
+      "stars": 42,
+      "url": "https://github.com/kindspells/astro-shield"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/59818922?v=4",
+      "contributors": 1,
+      "description": "Powerful nominal types for your Typescript project",
+      "discussions": 1,
+      "forks": 0,
+      "issues": 2,
+      "languages": [
+        "TypeScript",
+        "JavaScript"
+      ],
+      "name": "nominal",
+      "owner": "Coder-Spirit",
+      "prs": 5,
+      "stars": 72,
+      "url": "https://github.com/Coder-Spirit/nominal"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/59818922?v=4",
+      "contributors": 2,
+      "description": "A library to generate beautiful trees in your website",
+      "discussions": 3,
+      "forks": 4,
+      "issues": 16,
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS"
+      ],
+      "name": "beautiful-tree",
+      "owner": "Coder-Spirit",
+      "prs": 18,
+      "stars": 14,
+      "url": "https://github.com/Coder-Spirit/beautiful-tree"
+    }
+  ]
+}

@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1606,
+      "stars": 1607,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 180,
-      "issues": 16,
+      "issues": 17,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 1778,
+      "stars": 1783,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 12,
-      "stars": 1482,
+      "stars": 1485,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 615,
+      "stars": 618,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 645,
+      "stars": 647,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 508,
+      "stars": 509,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,7 +184,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 189,
+      "stars": 190,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -289,7 +289,7 @@
       "name": "utils.js",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 23,
+      "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
     {
