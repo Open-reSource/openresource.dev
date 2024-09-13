@@ -17,6 +17,8 @@ const { data } = entry;
 
 <Default {...Astro.props}><slot /></Default>
 
+<meta name="author" content="Open {re}Source" />
+
 <meta property="og:image" content={ogImageUrl} />
 <meta property="og:image:alt" content={data.title + '—' + data.description} />
 
