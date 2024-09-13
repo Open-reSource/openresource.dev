@@ -12,6 +12,35 @@ const ogImageUrl = new URL(
 const { entry } = Astro.props;
 const { data } = entry;
 
+const isArticle = Astro.props.slug.startsWith('articles/') && !Astro.props.slug.startsWith('articles/tags') && !Astro.props.slug.match('articles/[0-9]*$');
+
+let articleSchema;
+if (isArticle) {
+  articleSchema = JSON.stringify({
+    "@context": "https://schema.org/",
+    "@type": "Article",
+    "headline": entry.data.title,
+    "description": entry.data.description,
+    "image": "https://openresource.dev/og/" + entry.slug + ".png",
+    "author": {
+      "@type": "Person",
+      "name": "Julien Déramond",
+      "url": "https://github.com/julien-deramond/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open &lcub;re&rcub;Source",
+      "url": "https://openresource.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://openresource.dev/android-chrome-192x192.png"
+      }
+    },
+    "datePublished": entry.data.date,
+    "dateModified": entry.data.lastUpdated,
+  });
+}
+
 // Please note that "og:type" is forced to "article" by Starlight and can't be changed.
 ---
 
@@ -28,3 +57,5 @@ const { data } = entry;
 <meta name="twitter:image:alt" content={data.title + '—' + data.description} />
 
 <link href="https://fosstodon.org/@openresource" rel="me" />
+
+{ articleSchema && <script type="application/ld+json" set:html={articleSchema}></script> }
