@@ -23,7 +23,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
-      "contributors": 31,
+      "contributors": 33,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 180,
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 8,
-      "stars": 1783,
+      "prs": 6,
+      "stars": 1785,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 905,
+      "stars": 906,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 647,
+      "stars": 648,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {

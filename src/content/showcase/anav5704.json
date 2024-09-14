@@ -1,0 +1,25 @@
+{
+  "author": "anav5704",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/71007258?u=c601855251da1e54fc6014f76dfb228dc2f31e67&v=4",
+      "contributors": 1,
+      "description": "Free course for students to learn collaborative coding with Git and GitHub",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "Astro",
+        "TypeScript",
+        "CSS",
+        "JavaScript"
+      ],
+      "name": "CS000",
+      "owner": "anav5704",
+      "prs": 0,
+      "stars": 8,
+      "url": "https://github.com/anav5704/CS000"
+    }
+  ]
+}
