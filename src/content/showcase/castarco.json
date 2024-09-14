@@ -3,7 +3,7 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/144210963?v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/144210963?v=4&s=50",
       "contributors": 1,
       "description": "Astro integration to enhance your website's security with SubResource Integrity hashes, Content-Security-Policy headers, and other techniques.",
       "discussions": 2,
@@ -23,7 +23,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/59818922?v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/59818922?v=4&s=50",
       "contributors": 1,
       "description": "Powerful nominal types for your Typescript project",
       "discussions": 1,
@@ -41,7 +41,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/59818922?v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/59818922?v=4&s=50",
       "contributors": 2,
       "description": "A library to generate beautiful trees in your website",
       "discussions": 3,

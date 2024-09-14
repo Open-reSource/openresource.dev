@@ -3,7 +3,7 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 4,
       "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
@@ -22,7 +22,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 33,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
@@ -42,7 +42,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 5,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
@@ -61,7 +61,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 7,
       "description": "📱 📂 iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
@@ -79,7 +79,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 27,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
@@ -98,7 +98,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 4,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
@@ -117,7 +117,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
@@ -135,7 +135,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 8,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 3,
@@ -154,7 +154,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 3,
       "description": "📱 📍 iOS geocoder for forward / reverse geocode user's current location using a block-based syntax.",
       "discussions": 0,
@@ -172,7 +172,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 1,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 0,
@@ -189,7 +189,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 3,
       "description": "📱 🌍 iOS geocoder for geocode device IP Address location using GeoIP service(s) and a block-based syntax.",
       "discussions": 0,
@@ -207,7 +207,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 4,
       "description": "🧊 convert your dynamic django site to a static one with one line of code.",
       "discussions": 0,
@@ -226,7 +226,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 6,
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 1,
@@ -243,7 +243,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 2,
       "description": " ↪️ ✅ redirects as they should be, with full control.",
       "discussions": 0,
@@ -260,7 +260,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 3,
       "description": "🧢 friendly font operations on top of fontTools.",
       "discussions": 0,
@@ -277,7 +277,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 3,
       "description": "👷 🔧 zero dependencies vanilla JavaScript utils.",
       "discussions": 0,
@@ -294,7 +294,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 1,
       "description": "🧪 💥 GitHub action that creates a non-square matrix parsing a readable config.",
       "discussions": 0,
