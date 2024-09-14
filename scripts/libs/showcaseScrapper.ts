@@ -72,7 +72,7 @@ export class ShowcaseScraper {
 
             links.push({
               type: "github_repo",
-              avatarUrl: repository.owner.avatarUrl,
+              avatarUrl: repository.owner.avatarUrl + "&s=50",
               contributors: repository.mentionableUsers.totalCount,
               description: repository.description ? this.#emojify(repository.description) : "",
               discussions: repository.discussions.totalCount,

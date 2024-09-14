@@ -10,7 +10,7 @@ export interface Props {
 
 const { description, env, img, repo } = Astro.props;
 
-const picture = img.includes('https://') ? img : `https://avatars.githubusercontent.com/u/${img}?v=4`
+const picture = img.includes('https://') ? img : `https://avatars.githubusercontent.com/u/${img}?s=50`
 ---
 <ShowcaseProfile
   entries={[
