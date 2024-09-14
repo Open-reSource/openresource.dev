@@ -17,13 +17,13 @@
         "CoffeeScript",
         "Shell",
         "PEG.js",
-        "PowerShell",
-        "Batchfile"
+        "Batchfile",
+        "Dockerfile"
       ],
       "name": "pulsar",
       "owner": "pulsar-edit",
-      "prs": 39,
-      "stars": 3209,
+      "prs": 38,
+      "stars": 3214,
       "url": "https://github.com/pulsar-edit/pulsar"
     }
   ]
