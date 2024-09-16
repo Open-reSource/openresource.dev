@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1607,
+      "stars": 1608,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 180,
-      "issues": 17,
+      "issues": 16,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 1785,
+      "stars": 1787,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 12,
-      "stars": 1485,
+      "stars": 1484,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 618,
+      "stars": 620,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 648,
+      "stars": 650,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -149,7 +149,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 509,
+      "stars": 510,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,7 +184,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 190,
+      "stars": 191,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -272,7 +272,7 @@
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 64,
+      "stars": 65,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {

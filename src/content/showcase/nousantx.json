@@ -12,9 +12,10 @@
       "languages": [
         "TypeScript",
         "JavaScript",
+        "CSS",
         "Shell",
         "HTML",
-        "CSS",
+        "Svelte",
         "MDX"
       ],
       "name": "tenoxui",
