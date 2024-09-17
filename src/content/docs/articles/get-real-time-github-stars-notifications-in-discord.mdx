@@ -1,0 +1,245 @@
+---
+title: "Get Real-Time GitHub Stars Notifications in Discord"
+description: "Want instant updates when your GitHub repository gets new stars? Set up an easy GitHub Actions workflow to send notifications directly to Discord!"
+date: 2024-09-17
+lastUpdated: 2024-09-17
+excerpt: "After refactoring our website, we noticed a rise in statistics and new stars on our GitHub repository. While GitHub doesn't offer native notifications for new stars, we decided to create our own solution.
+<br><br>
+**This guide walks you through setting up a GitHub Actions workflow to send real-time notifications to a private Discord channel whenever your repository gains new stars**. It's a fun way to track your project's popularity and engage with your community. Follow along as we share our journey of building and tweaking this automation, complete with a screenshot of the notification we received on our phone."
+tags:
+  - Automation
+  - Discord
+  - Discord Webhook
+  - GitHub
+  - GitHub Actions
+  - GitHub API
+  - GitHub Stars
+head:
+  - tag: meta
+    attrs:
+      property: "og:type"
+      content: "website"
+---
+<p class="lead">After the refactoring of this website, folks (maybe you) started to spread the word about it. The statistics started to rise a little bit, and we discovered along the way that the repository holding this website also started to receive some new stars. To our knowledge, there's no native way to get notified by GitHub when you receive stars on your repositories. So, we decided to do something about it!</p>
+
+We know, we know, tracking stars is a little bit linked to the gamification of the open source world, but to be honest, it's still a fun way to keep track of your project's popularity and engage with your community.
+
+So, we decided to build a simple automation that would send a notification to a private Discord channel whenever our GitHub repository receives new stars. There are probably better ways to do this, existing solutions, but where is the fun in that?
+
+After a few times of tweaking and testing, we finally got it working! 🎉
+
+Here is the notification we received on our phone this afternoon:
+
+<img src="/images/get-real-time-github-stars-notifications-in-discord-1.png" alt="Screenshot of the mobile phone showing the Discord notification from the 'Open {re}Source Community' Discord space sent by 'GitHub Stars Bot'. The message is 'The repository has gained new stars! Previous: 60 → Total: 61'" />
+
+And when you click on the notification, here is how the notification appears on Discord, showing the new star count and the repository name:
+
+<img src="/images/get-real-time-github-stars-notifications-in-discord-2.png" alt="Screenshot of the Discord app showing the notification sent by a 'GitHub Stars Bot' app, containing a GitHub star avatar, and the text: 'The repository has gained new stars! Previous: 60 → Total: 61'" style="border-radius: 0.75rem" />
+
+**Cool, right? Here's how it's been done!**
+
+## Step 1: Create a Discord Webhook
+
+To send notifications to Discord, you will need to set up a webhook in your Discord server. Here's how to do it:
+1. Open your Discord server and navigate to the channel where you want to receive notifications. You can create a dedicated private channel for this purpose.
+2. Click on the gear icon next to the channel name to access the channel settings.
+3. Select the "Integrations" tab.
+4. Click on "Webhooks" and then "Create Webhook."
+5. Give your webhook a name (e.g. "GitHub Stars Bot"), and select a nice image.
+6. **Copy the webhook URL, as you will need it later.**
+
+Here's also a link to the [Discord documentation - Intro to Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for more information.
+
+## Step 2: Create a GitHub Repository
+
+Now, let's create a private GitHub repository to store our future GitHub Actions workflow. You can create a new repository or use an existing one, make it public or private, as you prefer.
+
+## Step 3: Create a Secret Variable in GitHub
+
+To securely store your Discord Webhook URL to ensure that sensitive data isn't exposed in your repository code, you will need to create a secret variable in your GitHub repository:
+
+1. Go to your GitHub repository and click on the "Settings" tab.
+2. In the left sidebar, click on "Secrets and variables" and then "Actions."
+3. Click on the "New repository secret" button.
+4. Name your secret `DISCORD_WEBHOOK_URL` and paste the webhook URL you copied from Discord.
+
+## Step 4: Create a GitHub Actions Workflow
+
+:::note[What is GitHub Actions?]
+If your not familiar with GitHub Actions, it allows you to automate workflows directly in your GitHub repository, and it can be triggered based on various events. More information can be found in the [GitHub Actions documentation](https://docs.github.com/en/actions).
+:::
+
+In this repository:
+1. Create a new directory called `.github/workflows`.
+2. Create a new file called for instance `gh-stars-to-discord.yml` (or choose a name you prefer).
+
+### The Algorithm
+
+The algorithm is rather simple:
+* Every hour, the workflow will check the current number of stars on the repository using the GitHub API.
+* While doing so, it will also check the rate limit of the API.
+  * If the rate limit is low, the workflow will stop.
+  * If not, it will compare the current number of stars with the previous number of stars.
+* If there are new stars, it will send a notification to Discord using the webhook URL.
+* Finally, it will save the current number of stars for the next comparison.
+
+### Using the GitHub API
+
+To get started, you will need to use the [GitHub REST API](https://docs.github.com/en/rest) to fetch the star count for your repository. The GitHub API provides a simple way to access information about your repositories, including the number of stars they have received.
+
+There is a public endpoint that you can use to get the star count for a specific repository:
+
+```
+GET https://api.github.com/repos/{owner}/{repo}
+```
+
+Replace `{owner}` with your GitHub username and `{repo}` with the name of your repository. The response will include a JSON object with various details about the repository, including the `stargazers_count` field, which indicates the number of stars.
+
+So for our main repository, you would make a request to:
+
+```
+GET https://api.github.com/repos/Open-reSource/openresource.dev
+```
+
+:::note[Try it out!]
+You can try it out directly in your browser (or using a tool like [Curl](https://github.com/curl/curl)) to see the JSON response. In the browser, you can simply paste the URL into the address bar and hit enter.
+:::
+
+At the time of writing, Open \{re\}Source main repository has 61 stars, so the answer would be:
+
+```json
+{
+  // ...
+  "stargazers_count": 61
+  // ...
+}
+```
+
+:::caution[Be mindful of the GitHub API rate limits]
+Be mindful of the GitHub API rate limits when making requests. You can find more information about the rate limits in the [GitHub API documentation](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting).
+
+At the time of writing, the GitHub API allows for up to 60 requests per hour for unauthenticated requests and up to 5,000 requests per hour for authenticated requests. If you plan to make frequent requests, consider using a personal access token for authentication.
+:::
+
+### The Actual Workflow
+
+Now, let's create the actual workflow:
+1. Clone your repository to your local machine or edit it directly on GitHub.
+2. Add the following YAML code to your `gh-stars-to-discord.yml` file:
+
+:::note
+* Make sure to replace `open-reSource/openresource.dev` with your own repository name.
+* The workflow is set to run every hour, but you can adjust the schedule as needed by changing the `cron` expression.
+* You can change the text of the notification sent to Discord by modifying the `curl` command in the `Compare and notify if new stars` step.
+:::
+
+```yaml
+name: GitHub Stars to Discord
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Every 1 hour. You can change the frequency as needed.
+  workflow_dispatch: # Allows manual triggering
+
+env:
+  DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+  GITHUB_REPOSITORY: 'open-reSource/openresource.dev' # Change this to your repository
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get the current number of stars and check rate limit
+        id: get_stars
+        run: |
+          response=$(curl -s -i https://api.github.com/repos/${{ env.GITHUB_REPOSITORY }})
+          stars=$(echo "$response" | grep -oP '"stargazers_count":\s*\K\d+')
+          rate_limit_remaining=$(echo "$response" | grep -Fi 'X-RateLimit-Remaining:' | awk -F': ' '{print $2}' | tr -d '\r')
+
+          echo "Current stars: $stars"
+          echo "Rate limit remaining: $rate_limit_remaining"
+
+          echo "stars=$stars" >> $GITHUB_OUTPUT
+          echo "rate_limit_remaining=$rate_limit_remaining" >> $GITHUB_OUTPUT
+
+      - name: Stop if rate limit is low
+        if: ${{ steps.get_stars.outputs.rate_limit_remaining < 10 }}
+        run: |
+          echo "Rate limit is low, exiting"
+          exit 1
+
+      - name: Cache previous stars count
+        id: cache_previous_stars
+        uses: actions/cache@v4
+        with:
+          path: previous_stars.txt
+          key: stars-${{ github.repository }}-${{ github.run_id }}
+          restore-keys: |
+            stars-${{ github.repository }}-
+    
+      - name: Load the previous number of stars
+        id: load_previous_stars
+        run: |
+          if [ -f previous_stars.txt ]; then
+            echo "Loading previous stars"
+            PREVIOUS_STARS=$(cat previous_stars.txt)
+          else
+            echo "No previous stars found"
+            PREVIOUS_STARS=0
+          fi
+          echo "Previous stars: $PREVIOUS_STARS"
+          echo "previous_stars=$PREVIOUS_STARS" >> $GITHUB_OUTPUT
+      
+      - name: Compare and notify if new stars
+        if: ${{ steps.get_stars.outputs.stars != steps.load_previous_stars.outputs.previous_stars }}
+        run: |
+          NEW_STARS=${{ steps.get_stars.outputs.stars }}
+          PREVIOUS_STARS=${{ steps.load_previous_stars.outputs.previous_stars }}
+          if [ $NEW_STARS -gt $PREVIOUS_STARS ]; then
+            echo "There are new stars: $NEW_STARS stars (previous: $PREVIOUS_STARS)"
+            curl -H "Content-Type: application/json" \
+              -d "{\"content\": \"The repository has gained new stars! Previous: $PREVIOUS_STARS → Total: $NEW_STARS\"}" \
+              ${DISCORD_WEBHOOK_URL}
+          else
+            echo "No new stars"
+          fi
+
+      - name: Save current stars count
+        run: |
+          echo "${{ steps.get_stars.outputs.stars }}" > previous_stars.txt
+
+      - name: Update cache with new stars count
+        uses: actions/cache@v4
+        with:
+          path: previous_stars.txt
+          key: stars-${{ github.repository }}-${{ github.run_id }}
+```
+
+## Step 5: Run the Workflow
+
+The workflow has a `workflow_dispatch` trigger, which means you can run it manually from the GitHub Actions tab in your repository. You can also wait for the next scheduled run (every hour) to see it in action.
+
+The first time you run the workflow, it will probably send a notification saying that you had 0 stars and now you have X stars (the current number of stars).
+
+:::note
+We voluntarily left some logging in the workflow to help you debug if needed. You can remove or comment out the `echo` statements if you want to clean up the logs.
+
+To check the logs, once your YAML file is pushed to the repository, go to the "Actions" tab, select the workflow, and click on the latest run. All the logs will be displayed there.
+:::
+
+To be honest, we are a little bit lazy, so we didn't implement a complex logic to handle this first run, or even when the count of stars decreases. But you can always improve the workflow to suit your needs! This is just a starting point.
+
+---
+
+**Automation is really cool!** You could do the same thing for your followers in your GitHub profile, send notifications by email, Slack, etc. But automation is not limited to just notifications. You can also automate tasks like deploying your code, running tests, and much more.
+
+**The possibilities are endless!**
+
+A few words before we finish:
+
+* **Want to spam us with stars?** You can add some stars to https://github.com/Open-reSource/openresource.dev. We will be happy to get some notifications on our mobile phones!
+* Please let us know if you'd like to see more automation tutorials like this one!
+* We haven't created a reusable workflow, shared it in the Marketplace, nor created a GitHub Gist. We thought it was easier just to share a little bit of code in this article that you could start from and adapt. If you want it to be stored somewhere with a more formal MIT license, please let us know! But please feel free to use it as you wish.
+
+**Happy coding! 🎉**
