@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 1787,
+      "stars": 1788,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -112,7 +112,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 650,
+      "stars": 652,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -210,7 +210,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 4,
       "description": "🧊 convert your dynamic django site to a static one with one line of code.",
-      "discussions": 0,
+      "discussions": 1,
       "forks": 15,
       "issues": 1,
       "languages": [
