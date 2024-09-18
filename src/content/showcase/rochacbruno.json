@@ -28,7 +28,7 @@
       "contributors": 12,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 164,
+      "forks": 163,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 2075,
+      "stars": 2076,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
