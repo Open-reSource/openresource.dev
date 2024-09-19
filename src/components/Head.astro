@@ -12,7 +12,7 @@ const filteredAstroPropsId = Astro.props.id.replace(/\/index./, '.');
 // - 404
 // - articles.*
 // - articles/[0-9]*/
-const isOgIndex = Astro.props.id.startsWith('articles/tags/') || Astro.props.id.startsWith('articles.') || /^articles\/\d+/.test(Astro.props.id) || Astro.props.id == '404';
+const isOgIndex = Astro.props.id.startsWith('articles/tags/') || Astro.props.id.startsWith('articles.') || /^articles\/\d+/.test(Astro.props.id) || Astro.props.id.startsWith('404');
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
