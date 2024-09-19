@@ -30,6 +30,7 @@ head:
       property: "og:type"
       content: "website"
 ---
+import { Image } from 'astro:assets';
 import Button from '../../components/Button.astro';
 
 <hr style="margin: 0; padding: 0" />
@@ -61,7 +62,7 @@ import Button from '../../components/Button.astro';
         </div>
       </div>
       <div class="homepage-img">
-        <img src="/images/homepage-showcase.webp" width="500" height="400" alt="" />
+        <Image src="/images/homepage-showcase.webp" width="500" height="400" alt="" />
       </div>
     </div>
   </div>
@@ -77,7 +78,7 @@ import Button from '../../components/Button.astro';
           <div class="camera"></div>
           <div class="display">
             <div class="artboard artboard-demo phone-1">
-              <img src="/images/homepage-guide.webp" width="320" height="518" alt="" />
+              <Image src="/images/homepage-guide.webp" width="320" height="518" alt="" />
             </div>
           </div>
         </div>
@@ -111,7 +112,7 @@ import Button from '../../components/Button.astro';
           <div class="camera"></div>
           <div class="display">
             <div class="artboard artboard-demo phone-1">
-              <img src="/images/homepage-articles.webp" width="320" height="512" alt="" />
+              <Image src="/images/homepage-articles.webp" width="320" height="512" alt="" />
             </div>
           </div>
         </div>

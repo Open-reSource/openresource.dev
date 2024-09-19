@@ -11,6 +11,7 @@ tags:
   - Contribution
 ---
 import Chat from '../../../components/Chat.astro'
+import ContentImage from "../../../components/ContentImage.astro";
 import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro'
 
 <p class="lead">Open-source software development is a collaborative effort that relies on volunteers to contribute to the project. Contributors have different skill levels and come from various backgrounds. As such, project maintainers have a crucial role in ensuring that the contributions received are of high quality and meet the project's goals. One way maintainers do this is by providing clear guidelines on how contributors can submit their work. Unfortunately, contributors don't always take the time to read these guidelines, and maintainers don't always assign issues, which can lead to confusion and frustration on both sides. In this article, we'll explore the issue of unassigned contributions and discuss what can be done to address it.</p>
@@ -252,7 +253,7 @@ If you are maintaining OSS projects or communities on different platforms, you m
 
 Writing this article was the occasion to try creating a **semi-automation tool based on labels**. Maintainer can add a "we don't assign issues" label to an issue right after a comment asking to be assigned. This label will trigger a GitHub action that will write a personalized comment explaining that the repo is not handled that way, and then remove this label automatically. We could even hide the original contributor's comment in the process.
 
-<img src="https://user-images.githubusercontent.com/17381666/236413271-12b7b2f2-12b1-4498-99d0-19db8b4b97d8.png" aria-hidden="true" />
+<ContentImage src="https://user-images.githubusercontent.com/17381666/236413271-12b7b2f2-12b1-4498-99d0-19db8b4b97d8.png" alt="" width="720" height="274" />
 
 The source code of this experiment is available on GitHub via the card below.
 
