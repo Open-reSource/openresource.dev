@@ -20,6 +20,8 @@ head:
       property: "og:type"
       content: "website"
 ---
+import ContentImage from "../../../components/ContentImage.astro";
+
 <p class="lead">After the refactoring of this website, folks (maybe you) started to spread the word about it. The statistics started to rise a little bit, and we discovered along the way that the repository holding this website also started to receive some new stars. To our knowledge, there's no native way to get notified by GitHub when you receive stars on your repositories. So, we decided to do something about it!</p>
 
 We know, we know, tracking stars is a little bit linked to the gamification of the open source world, but to be honest, it's still a fun way to keep track of your project's popularity and engage with your community.
@@ -30,11 +32,11 @@ After a few times of tweaking and testing, we finally got it working! 🎉
 
 Here is the notification we received on our phone this afternoon:
 
-<img src="/images/get-real-time-github-stars-notifications-in-discord-1.png" alt="Screenshot of the mobile phone showing the Discord notification from the 'Open {re}Source Community' Discord space sent by 'GitHub Stars Bot'. The message is 'The repository has gained new stars! Previous: 60 → Total: 61'" />
+<ContentImage src="/images/get-real-time-github-stars-notifications-in-discord-1.png" alt="Screenshot of the mobile phone showing the Discord notification from the 'Open {re}Source Community' Discord space sent by 'GitHub Stars Bot'. The message is 'The repository has gained new stars! Previous: 60 → Total: 61'" width="458" height="133" />
 
 And when you click on the notification, here is how the notification appears on Discord, showing the new star count and the repository name:
 
-<img src="/images/get-real-time-github-stars-notifications-in-discord-2.png" alt="Screenshot of the Discord app showing the notification sent by a 'GitHub Stars Bot' app, containing a GitHub star avatar, and the text: 'The repository has gained new stars! Previous: 60 → Total: 61'" style="border-radius: 0.75rem" />
+<ContentImage src="/images/get-real-time-github-stars-notifications-in-discord-2.png" alt="Screenshot of the Discord app showing the notification sent by a 'GitHub Stars Bot' app, containing a GitHub star avatar, and the text: 'The repository has gained new stars! Previous: 60 → Total: 61'" width="458" height="166" />
 
 **Cool, right? Here's how it's been done!**
 

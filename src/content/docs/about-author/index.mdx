@@ -9,11 +9,12 @@ head:
       property: "og:type"
       content: "website"
 ---
+import { Image } from 'astro:assets';
 import Button from '../../../components/Button.astro'
 import FooterLink from '../../../components/FooterLink.astro'
 
 <div class="rounded-image">
-  <img src="/author-profile.jpg" />
+  <Image src="/author-profile.jpg" alt="" width="96" height="96" />
 </div>
 
 <p class="lead">Software front-end engineer at <a href="https://www.orange.com">Orange</a> in Paris, France. Tech lead of <a href="https://system.design.orange.com">Orange Design System</a> and its web framework <a href="https://boosted.orange.com/">Boosted</a> (fork of <a href="https://getbootstrap.com/">Bootstrap</a>). Also <a href="https://getbootstrap.com/">Bootstrap</a> contributor since 2021, and core team member since 2022.</p>
