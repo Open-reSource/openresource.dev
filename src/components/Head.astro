@@ -16,8 +16,8 @@ const isOgIndex = Astro.props.id.startsWith('articles/tags/') || Astro.props.id.
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
-const ogImageUrl = isOgIndex ? '/og/index.png' : new URL(
-  `/og/${filteredAstroPropsId.replace(/\.\w+$/, '.png')}`,
+const ogImageUrl = new URL(
+  isOgIndex ? '/og/index.png' : `/og/${filteredAstroPropsId.replace(/\.\w+$/, '.png')}`,
   Astro.site,
 )
 
