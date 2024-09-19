@@ -2,10 +2,22 @@
 import type { Props } from '@astrojs/starlight/props'
 import Default from '@astrojs/starlight/components/Head.astro'
 
+// Remove the `/index` part of the ID to get the correct path to the image.
+// e.g. `guide/creating-your-own-open-source-project/index.mdx` -> `guide/creating-your-own-open-source-project.mdx`
+//    and the image path will be `og/guide/creating-your-own-open-source-project.png`
+const filteredAstroPropsId = Astro.props.id.replace(/\/index./, '.');
+
+// Force the og:image to be the index image for the homepage for these kind of pages:
+// - articles/tags/*
+// - 404
+// - articles.*
+// - articles/[0-9]*/
+const isOgIndex = Astro.props.id.startsWith('articles/tags/') || Astro.props.id.startsWith('articles.') || /^articles\/\d+/.test(Astro.props.id) || Astro.props.id.startsWith('404.');
+
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
-const ogImageUrl = new URL(
-  `/og/${Astro.props.id.replace(/\.\w+$/, '.png')}`,
+const ogImageUrl = isOgIndex ? '/og/index.png' : new URL(
+  `/og/${filteredAstroPropsId.replace(/\.\w+$/, '.png')}`,
   Astro.site,
 )
 
@@ -49,7 +61,7 @@ if (isArticle) {
 <meta name="author" content="Open {re}Source" />
 
 <meta property="og:image" content={ogImageUrl} />
-<meta property="og:image:alt" content={data.title + '—' + data.description} />
+<meta property="og:image:alt" content={data.title + (data.description ? ('—' + data.description) : '')} />
 
 <meta name="twitter:site" content={"@open_resource"} />
 <meta name="twitter:creator" content={"@JulienDeramond"} />
