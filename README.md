@@ -78,3 +78,9 @@ Content (including images) released under [CC BY-NC-SA 4.0](https://creativecomm
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/small.svg)](https://starlight.astro.build)
+
+## Sponsors
+
+<p align="center">
+  <img src='https://cdn.jsdelivr.net/gh/Open-reSource/sponsors/sponsors.svg'/>
+</p>
