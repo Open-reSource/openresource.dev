@@ -1,0 +1,170 @@
+---
+title: "Add Funding Links to Your 'package.json'"
+description: "Learn how to add funding links to your 'package.json' file to make it easier to support your open-source project."
+date: 2024-09-22
+lastUpdated: 2024-09-22
+excerpt: "**Learn how to enhance your open-source project by adding funding links to your 'package.json'.** This guide highlights the importance of supporting maintainers and explores various ways contributors can provide financial assistance, including platforms like GitHub Sponsors and Open Collective. **By making your funding information visible, you can encourage users to support your project directly.**
+<br><br>
+We'll walk you through the process of implementing the funding field in your 'package.json', ensuring that your project is equipped to receive contributions. Whether it's a simple donation link or a Patreon page, letting the community know you're seeking support can make a difference. With just a few adjustments, you might find that your project receives the backing it deserves!"
+tags:
+  - npm
+  - Funding
+  - Tutorial
+head:
+  - tag: meta
+    attrs:
+      property: "og:type"
+      content: "website"
+---
+import ContentImage from "../../../components/ContentImage.astro";
+
+<p class="lead">Fund your open-source project by adding funding links to your <code>package.json</code> file. Who knows, you might get a coffee or two out of it!</p>
+
+## Funding Open-Source Projects?
+
+If you're not new to the content of Open \{re\}Source, you know a thing or two about the importance of [financing and funding open-source projects](/guide/financing-open-source-projects). The time and effort that maintainers put into their projects are invaluable, and it's essential to support them in any way possible.
+
+Supporting open-source projects can be as simple as starring a repository, contributing to the codebase, or even providing financial support. The latter can be done through platforms like [GitHub Sponsors](https://github.com/sponsors), [Open Collective](https://opencollective.com/), or even through direct donations.
+
+## Packages Are Looking for Funding
+
+Have you ever noticed the funding information displayed when you run the `npm i` command in your terminal?
+
+```
+% npm install
+
+247 packages are looking for funding
+  run `npm fund` for details
+```
+
+### You Can Turn It Off, by the Way
+
+If you're not a fan of the funding information displayed when installing packages, you can turn it off by setting the `--no-fund` flag when running the `npm install` command.
+
+You can also set it as a default behavior by running `npm config set fund false`.
+
+Or you can turn it off in your `.npmrc` file in your home directory (`~/.npmrc`) manually or in your project's `.npmrc` file:
+
+```
+fund = false
+```
+
+## `npm fund` Command
+
+Have you already launched `npm fund` in your terminal? If not, go ahead and do it now in one of your projects.
+
+Here's what it looks like for this repository:
+
+```
+openresource.dev@0.0.0
+├── https://opencollective.com/fakerjs
+│   └── @faker-js/faker@9.0.1
+├── https://dotenvx.com
+│   └── dotenv@16.4.5
+├── https://github.com/sponsors/wooorm
+│   └── gemoji@8.1.0, bcp-47@2.1.0, bcp-47-match@2.0.3, direction@2.0.1, longest-streak@3.1.0, bail@2.0.2, trough@2.2.0, collapse-white-space@2.1.0, comma-separated-tokens@2.0.3, ccount@2.0.1, parse-entities@4.0.1, character-entities-legacy@3.0.0, character-reference-invalid@2.0.1, is-alphanumerical@2.0.1, is-alphabetical@2.0.1, is-decimal@2.0.1, is-hexadecimal@2.0.1, stringify-entities@4.0.4, character-entities-html4@2.1.0, property-information@6.5.0, space-separated-tokens@2.0.2, zwitch@2.0.4, html-void-elements@3.0.0, web-namespaces@2.0.1, markdown-table@3.0.3, import-meta-resolve@4.1.0, decode-named-character-reference@1.0.2, character-entities@2.0.2, devlop@1.1.0, trim-lines@3.0.1, parse-latin@7.0.0, array-iterate@2.0.1
+├── https://opencollective.com/vitest
+│   └── vitest@2.1.1, @vitest/expect@2.1.1, @vitest/mocker@2.1.1, @vitest/pretty-format@2.1.1, @vitest/runner@2.1.1, @vitest/snapshot@2.1.1, @vitest/spy@2.1.1, @vitest/utils@2.1.1, vite-node@2.1.1
+├─┬ https://paulmillr.com/funding/
+│ │ └── chokidar@3.6.0
+│ ├── https://github.com/sponsors/jonschlinkert
+│ │   └── picomatch@2.3.1, picomatch@4.0.2
+│ └── https://github.com/sponsors/sindresorhus
+│     └── binary-extensions@2.3.0, is-plain-obj@4.1.0, markdown-extensions@2.0.0, escape-string-regexp@5.0.0, make-dir@3.1.0, boxen@7.1.1, camelcase@7.0.1, cli-boxes@3.0.0, string-width@5.1.2, type-fest@2.19.0, widest-line@4.0.1, ora@8.1.0, cli-cursor@5.0.0, restore-cursor@5.1.0, onetime@7.0.0, mimic-function@5.0.1, cli-spinners@2.9.2, is-interactive@2.0.0, is-unicode-supported@2.1.0, log-symbols@6.0.0, is-unicode-supported@1.3.0, stdin-discarder@0.2.2, p-limit@2.3.0, p-queue@8.0.1, p-timeout@6.1.2, string-width@7.2.0, get-east-asian-width@1.2.0, is-docker@3.0.0, is-wsl@3.1.0, is-inside-container@1.0.0, find-up-simple@1.0.0, is-absolute-url@4.0.1, get-stream@5.2.0, is-stream@2.0.1, onetime@5.1.2, pretty-ms@7.0.1, time-span@4.0.0
+├── https://github.com/prettier/prettier?sponsor=1
+│   └── prettier@2.8.7
+├── https://github.com/sponsors/epoberezkin
+│   └── ajv@6.12.6
+├── https://github.com/sponsors/feross
+│   └── run-parallel@1.2.0, queue-microtask@1.2.3, safe-buffer@5.2.1
+├─┬ https://github.com/chalk/wrap-ansi?sponsor=1
+│ │ └── wrap-ansi@7.0.0, wrap-ansi@8.1.0
+│ └── https://github.com/chalk/ansi-styles?sponsor=1
+│     └── ansi-styles@4.3.0, ansi-styles@6.2.1
+├── https://opencollective.com/unified
+│   └── hast-util-from-html@2.0.1, hast-util-select@6.0.2, hast-util-has-property@3.0.0, hast-util-to-string@3.0.0, hastscript@9.0.0, mdast-util-directive@3.0.0, mdast-util-to-markdown@2.1.0, mdast-util-phrasing@4.1.0, mdast-util-to-string@4.0.0, rehype@13.0.1, rehype-parse@9.0.0, rehype-format@5.0.0, hast-util-embedded@3.0.0, hast-util-phrasing@3.0.1, hast-util-is-body-ok-link@3.0.0, html-whitespace-sensitive-tag-names@3.0.0, rehype-minify-whitespace@6.0.0, remark-directive@3.0.0, micromark-extension-directive@3.0.1, unified@11.0.5, unist-util-visit@5.0.0, vfile@6.0.3, @mdx-js/mdx@3.0.1, estree-util-build-jsx@3.0.1, estree-util-is-identifier-name@3.0.0, estree-util-to-js@2.0.0, hast-util-to-estree@3.1.0, estree-util-attach-comments@3.0.0, hast-util-whitespace@3.0.0, mdast-util-mdx-expression@2.0.0, mdast-util-mdx-jsx@3.1.3, vfile-message@4.0.2, mdast-util-mdxjs-esm@2.0.1, hast-util-to-jsx-runtime@2.3.0, remark-mdx@3.0.1, mdast-util-mdx@3.0.0, micromark-extension-mdxjs@3.0.0, micromark-extension-mdx-jsx@3.0.1, micromark-extension-mdx-md@2.0.0, micromark-extension-mdxjs-esm@3.0.0, unist-util-position-from-estree@2.0.0, estree-util-visit@2.0.0, hast-util-to-html@9.0.2, rehype-raw@7.0.0, hast-util-raw@9.0.4, hast-util-from-parse5@8.0.1, hastscript@8.0.0, hast-util-parse-selector@4.0.0, vfile-location@5.0.3, hast-util-to-parse5@8.0.0, remark-gfm@4.0.0, mdast-util-gfm@3.0.0, mdast-util-gfm-autolink-literal@2.0.1, mdast-util-find-and-replace@3.0.1, mdast-util-gfm-footnote@2.0.0, mdast-util-gfm-strikethrough@2.0.0, mdast-util-gfm-table@2.0.0, mdast-util-gfm-task-list-item@2.0.0, micromark-extension-gfm@3.0.0, micromark-extension-gfm-autolink-literal@2.1.0, micromark-extension-gfm-footnote@2.1.0, micromark-extension-gfm-strikethrough@2.1.0, micromark-extension-gfm-table@2.1.0, micromark-extension-gfm-tagfilter@2.0.0, micromark-extension-gfm-task-list-item@2.1.0, remark-stringify@11.0.0, hast-util-to-text@4.0.2, hast-util-is-element@3.0.0, unist-util-find-after@5.0.0, unist-util-is@6.0.0, mdast-util-definitions@6.0.0, rehype-stringify@10.0.0, remark-parse@11.0.0, mdast-util-from-markdown@2.0.1, unist-util-stringify-position@4.0.0, remark-rehype@11.1.0, mdast-util-to-hast@13.2.0, unist-util-position@5.0.0, unist-util-remove-position@5.0.0, unist-util-visit-parents@6.0.1, retext@9.0.0, retext-latin@4.0.0, nlcst-to-string@4.0.0, unist-util-modify-children@4.0.0, unist-util-visit-children@3.0.0, retext-stringify@4.0.0, retext-smartypants@6.1.1
+├── https://locize.com
+│   └── i18next@23.15.1
+├── https://github.com/sponsors/antfu
+│   └── oniguruma-to-js@0.3.3
+├── https://github.com/sponsors/colinhacks
+│   └── zod@3.23.8
+├─┬ https://opencollective.com/postcss/
+│ │ └── postcss@8.4.45, postcss-nested@6.2.0
+│ └── https://github.com/sponsors/ai
+│     └── nanoid@3.3.7
+├── https://github.com/sponsors/isaacs
+│   └── glob@7.2.3, rimraf@3.0.2, signal-exit@4.1.0, signal-exit@4.0.2
+├─┬ https://opencollective.com/babel
+│ │ └── @babel/core@7.25.2
+│ └── https://opencollective.com/browserslist
+│     └── browserslist@4.23.3, caniuse-lite@1.0.30001660, update-browserslist-db@1.1.0
+├── https://github.com/sponsors/sibiraj-s
+│   └── ci-info@4.0.0
+├─┬ https://github.com/chalk/strip-ansi?sponsor=1
+│ │ └── strip-ansi@7.1.0
+│ └── https://github.com/chalk/ansi-regex?sponsor=1
+│     └── ansi-regex@6.1.0
+├── https://github.com/vitejs/vite?sponsor=1
+│   └── vite@5.4.6
+├── https://opencollective.com/libvips
+│   └── sharp@0.33.5, @img/sharp-darwin-arm64@0.33.5, @img/sharp-libvips-darwin-arm64@1.0.4
+├─┬ https://github.com/sponsors/fb55
+│ │ └── css-select@5.1.0, css-what@6.1.0, domelementtype@2.3.0
+│ ├── https://github.com/fb55/domhandler?sponsor=1
+│ │   └── domhandler@5.0.3
+│ └─┬ https://github.com/fb55/domutils?sponsor=1
+│   │ └── domutils@3.1.0
+│   └── https://github.com/cheeriojs/dom-serializer?sponsor=1
+│       └── dom-serializer@2.0.0
+├── https://github.com/fb55/htmlparser2?sponsor=1
+│   └── htmlparser2@8.0.2
+├── https://github.com/sponsors/NaturalIntelligence
+│   └── fast-xml-parser@4.5.0
+├─┬ https://github.com/privatenumber/get-tsconfig?sponsor=1
+│ │ └── get-tsconfig@4.8.1
+│ └── https://github.com/privatenumber/resolve-pkg-maps?sponsor=1
+│     └── resolve-pkg-maps@1.0.0
+└── https://github.com/sponsors/ljharb
+    └── minimist@1.2.8
+```
+
+As stated in the [official npm documentation](https://docs.npmjs.com/cli/commands/npm-fund), the `npm fund` command shows funding information for the installed packages in your project.
+
+And there can be a lot of them!
+
+But you might wonder, how can you add funding information to your own project? It can be interesting to let know the world that you are looking for funding, right?
+
+## Adding Funding Links to Your `package.json`
+
+It's quite simple in fact. You can add funding information to your `package.json` file by using the [`funding` field](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#funding).
+
+As stated in the official npm documentation:
+
+> You can specify an object containing a URL that provides up-to-date information about ways to help fund development of your package, a string URL, or an array of objects and string URLs:
+
+```json
+{
+  "funding": [
+    {
+      "type": "individual",
+      "url": "http://example.com/donate"
+    },
+    "http://example.com/donateAlso",
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/my-account"
+    }
+  ]
+}
+```
+
+From there, those who install your package might see the funding information when they run some npm commands. And who knows, they might decide to support your project!
+
+On top of that, if your package is listed on the npm registry, the funding information will be displayed on the package's page with a "Fund this package" button:
+
+<ContentImage src="/images/add-funding-links-to-your-package.json.png" alt="Screenshot the 'Fund this package' npm registry button" width="370" height="50" />
+
+---
+
+**Funding your open-source project might be complicated**, but referencing your funding links a the right places can make it easier for people to support you. And adding funding links to your `package.json` file is a good start! It's not going to make hundreds of people support you, for sure, but it's a good way to let the world know that you are looking for funding; **and little by little, you might get a coffee or two out of it!**
