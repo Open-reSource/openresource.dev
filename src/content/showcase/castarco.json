@@ -8,7 +8,7 @@
       "description": "Astro integration to enhance your website's security with SubResource Integrity hashes, Content-Security-Policy headers, and other techniques.",
       "discussions": 2,
       "forks": 0,
-      "issues": 15,
+      "issues": 14,
       "languages": [
         "TypeScript",
         "JavaScript",
@@ -17,8 +17,8 @@
       ],
       "name": "astro-shield",
       "owner": "kindspells",
-      "prs": 0,
-      "stars": 42,
+      "prs": 5,
+      "stars": 43,
       "url": "https://github.com/kindspells/astro-shield"
     },
     {
@@ -36,7 +36,7 @@
       "name": "nominal",
       "owner": "Coder-Spirit",
       "prs": 5,
-      "stars": 72,
+      "stars": 74,
       "url": "https://github.com/Coder-Spirit/nominal"
     },
     {

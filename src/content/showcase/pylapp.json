@@ -74,7 +74,7 @@
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 2,
       "forks": 6,
-      "issues": 39,
+      "issues": 40,
       "languages": [
         "Python",
         "Shell",
@@ -173,11 +173,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 200,
+      "contributors": 201,
       "description": "Hurl, run and test HTTP requests with plain text.",
-      "discussions": 67,
-      "forks": 478,
-      "issues": 144,
+      "discussions": 68,
+      "forks": 479,
+      "issues": 147,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 0,
-      "stars": 12778,
+      "prs": 1,
+      "stars": 12820,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

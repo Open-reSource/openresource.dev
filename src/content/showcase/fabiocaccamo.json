@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1608,
+      "stars": 1610,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 1788,
+      "stars": 1792,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 12,
-      "stars": 1485,
+      "stars": 1486,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 906,
+      "stars": 907,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -93,16 +93,16 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 620,
+      "stars": 621,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 4,
+      "contributors": 5,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 30,
+      "forks": 31,
       "issues": 5,
       "languages": [
         "Python",
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 654,
+      "prs": 2,
+      "stars": 656,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,7 +130,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 472,
+      "stars": 473,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -138,9 +138,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 8,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
-      "discussions": 3,
+      "discussions": 2,
       "forks": 31,
-      "issues": 4,
+      "issues": 2,
       "languages": [
         "Python",
         "JavaScript",
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 8,
-      "stars": 510,
+      "prs": 7,
+      "stars": 514,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -210,9 +210,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 4,
       "description": "🧊 convert your dynamic django site to a static one with one line of code.",
-      "discussions": 1,
+      "discussions": 0,
       "forks": 15,
-      "issues": 1,
+      "issues": 2,
       "languages": [
         "Python",
         "HTML",
@@ -220,25 +220,25 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 2,
       "stars": 93,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 6,
+      "contributors": 7,
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 1,
-      "forks": 23,
+      "forks": 24,
       "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 7,
-      "stars": 70,
+      "prs": 2,
+      "stars": 71,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
