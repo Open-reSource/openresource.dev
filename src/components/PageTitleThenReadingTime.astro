@@ -7,7 +7,7 @@ const { date } = Astro.props.entry.data;
 const { entry, lang } = Astro.props;
 
 const isGuide = Astro.props.slug.startsWith('guide');
-const displayReadingTime = (isGuide && date) || Astro.props.slug.startsWith('articles') && !Astro.props.slug.startsWith('articles/tags');
+const displayReadingTime = (isGuide && date) || Astro.props.slug.startsWith('articles') && !Astro.props.slug.startsWith('articles/tags') && !Astro.props.slug.startsWith('articles/authors');
 const displayDate = date && isGuide;
 ---
 
