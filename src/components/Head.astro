@@ -9,10 +9,11 @@ const filteredAstroPropsId = Astro.props.id.replace(/\/index./, '.');
 
 // Force the og:image to be the index image for the homepage for these kind of pages:
 // - articles/tags/*
+// - articles/authors/*
 // - 404
 // - articles.*
 // - articles/[0-9]*/
-const isOgIndex = Astro.props.id.startsWith('articles/tags/') || Astro.props.id.startsWith('articles.') || /^articles\/\d+/.test(Astro.props.id) || Astro.props.id.startsWith('404');
+const isOgIndex = Astro.props.id.startsWith('articles/tags/') || Astro.props.id.startsWith('articles.') || /^articles\/\d+/.test(Astro.props.id) || Astro.props.id.startsWith('404') || Astro.props.id.startsWith('articles/authors/');
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
@@ -24,7 +25,7 @@ const ogImageUrl = new URL(
 const { entry } = Astro.props;
 const { data } = entry;
 
-const isArticle = Astro.props.slug.startsWith('articles/') && !Astro.props.slug.startsWith('articles/tags') && !Astro.props.slug.match('articles/[0-9]*$');
+const isArticle = Astro.props.slug.startsWith('articles/') && !Astro.props.slug.startsWith('articles/tags') && !Astro.props.slug.startsWith('articles/authors') && !Astro.props.slug.match('articles/[0-9]*$');
 
 let articleSchema;
 if (isArticle) {

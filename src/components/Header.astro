@@ -3,7 +3,7 @@ import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Header.astro';
 import ProgressScroll from './ProgressScroll.astro';
 
-const displayProgressScroll = Astro.props.slug.startsWith('guide') || Astro.props.slug.startsWith('articles/') && !Astro.props.slug.startsWith('articles/tags') && !Astro.props.slug.match('articles/[0-9]*$');
+const displayProgressScroll = Astro.props.slug.startsWith('guide') || Astro.props.slug.startsWith('articles/') && !Astro.props.slug.startsWith('articles/tags') && !Astro.props.slug.startsWith('articles/authors') && !Astro.props.slug.match('articles/[0-9]*$');
 ---
 <Default {...Astro.props}>
   <slot />
