@@ -2,7 +2,7 @@
 title: "Can I Take This Issue?"
 description: "Learn about the frustration caused by issue assignments in open-source software development and how to tackle it. Get insights here."
 date: 2023-05-15
-lastUpdated: 2023-05-17
+lastUpdated: 2024-09-26
 excerpt: "**Open-source software development thrives on the contributions of volunteers with varying skills and backgrounds.** Project maintainers play a critical role in ensuring these contributions are of high quality and align with the project's goals. **However, issues arise when contributors do not read guidelines or maintainers do not assign issues, leading to confusion and frustration.** This lack of clear communication can leave contributors feeling undervalued and discourage them from contributing further.
 <br><br>
 **Maintainers have different reasons for not assigning issues**, such as limited resources and large communities. Assigning issues can enhance efficiency, accountability, and resource management but may also create perceptions of favoritism or stifle collaboration. To address these challenges, maintainers should establish clear communication channels, use tools like saved replies, and maintain comprehensive contribution guidelines. By fostering a transparent and supportive environment, maintainers can better manage contributions and maintain a healthy, active community."
@@ -10,6 +10,7 @@ tags:
   - Community
   - Contribution
 ---
+import { Badge } from '@astrojs/starlight/components';
 import Chat from '../../../components/Chat.astro'
 import ContentImage from "../../../components/ContentImage.astro";
 import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro'
@@ -192,7 +193,7 @@ At the time of writing, GitHub doesn't provide any options to add some Markdown 
 
 <ShowcaseGitHubRepo env="Open-reSource" repo="labs-append-markdown-to-issues" img="129324099" description="[Labs] Automatically append Markdown to issues" />
 
-An infinite way of managing labels is possible. Let's imagine, for example, a "to analyze" label that can be picked up only by a core team member. When this core team member analyzed the issue and provided expectations, clarity, and guidance, the label could be transformed into an "analyzed" label, and a new "ready for dev" label could be applied combined to "high priority" and "low complexity" labels, and a "version 12" label, "bug" or "feature", "core team" if it is reserved for the core team, or "pr welcome" when it is OK for external contributors to work on it. When doing that, contributors can start to help or not, filter the backlog by labels, and the core team can focus on the most important issues. If the workflow is automated, the issue can go to one or another project, be in a roadmap, etc. This is just an example, but you can imagine how powerful it can be.
+An infinite way of managing labels is possible. Let's imagine, for example, a <Badge variant="note" text="to analyze" /> label that can be picked up only by a core team member. When this core team member analyzed the issue and provided expectations, clarity, and guidance, the label could be transformed into an <Badge variant="note" text="analyzed" /> label, and a new <Badge variant="note" text="ready for dev" /> label could be applied combined to <Badge variant="note" text="high priority" /> and <Badge variant="note" text="low complexity" /> labels, and a <Badge variant="note" text="version 12" /> label, <Badge variant="note" text="bug" /> or <Badge variant="note" text="feature" />, <Badge variant="note" text="core team" /> if it is reserved for the core team, or <Badge variant="note" text="pr welcome" /> when it is OK for external contributors to work on it. When doing that, contributors can start to help or not, filter the backlog by labels, and the core team can focus on the most important issues. If the workflow is automated, the issue can go to one or another project, be in a roadmap, etc. This is just an example, but you can imagine how powerful it can be.
 
 ### Communicate Clearly
 
@@ -251,7 +252,7 @@ It is only a semi-automatic tool but it can help save a lot of time by not repea
 
 If you are maintaining OSS projects or communities on different platforms, you may opt for **decentralized messages and actions** stored in your own environment for transversal usage. Tools like [Alfred](https://www.alfredapp.com/) on macOS could be used in this spirit.
 
-Writing this article was the occasion to try creating a **semi-automation tool based on labels**. Maintainer can add a "we don't assign issues" label to an issue right after a comment asking to be assigned. This label will trigger a GitHub action that will write a personalized comment explaining that the repo is not handled that way, and then remove this label automatically. We could even hide the original contributor's comment in the process.
+Writing this article was the occasion to try creating a **semi-automation tool based on labels**. Maintainer can add a <Badge variant="note" text="we don't assign issues" /> label to an issue right after a comment asking to be assigned. This label will trigger a GitHub action that will write a personalized comment explaining that the repo is not handled that way, and then remove this label automatically. We could even hide the original contributor's comment in the process.
 
 <ContentImage src="https://user-images.githubusercontent.com/17381666/236413271-12b7b2f2-12b1-4498-99d0-19db8b4b97d8.png" alt="" width="720" height="274" />
 
