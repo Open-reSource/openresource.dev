@@ -7,7 +7,7 @@
       "contributors": 5,
       "description": "🪐 Modern offline Kanban board app for Windows, MacOS and Linux. Built with simplicity and user experience in mind.",
       "discussions": 4,
-      "forks": 50,
+      "forks": 53,
       "issues": 57,
       "languages": [
         "Vue",
@@ -19,8 +19,8 @@
       ],
       "name": "kanri",
       "owner": "kanriapp",
-      "prs": 2,
-      "stars": 668,
+      "prs": 1,
+      "stars": 678,
       "url": "https://github.com/kanriapp/kanri"
     }
   ]
