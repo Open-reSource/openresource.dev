@@ -88,6 +88,28 @@ export default defineConfig({
             rel: 'manifest',
             href: '/site.webmanifest'
           }
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'mask-icon',
+            href: '/safari-pinned-tab.svg',
+            color: '#4a01fe'
+          }
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'msapplication-TileColor',
+            content: '#4a01fe'
+          }
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'theme-color',
+            content: '#ffffff'
+          }
         }
       ],
       logo: {
