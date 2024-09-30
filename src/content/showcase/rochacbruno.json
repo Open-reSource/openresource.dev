@@ -6,8 +6,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
       "contributors": 121,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 47,
-      "forks": 287,
+      "discussions": 48,
+      "forks": 289,
       "issues": 119,
       "languages": [
         "Python",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 3,
-      "stars": 3720,
+      "stars": 3726,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 12,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 163,
+      "forks": 165,
       "issues": 10,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1101,
+      "stars": 1107,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -47,7 +47,7 @@
       "contributors": 7,
       "description": "DO NOT FORK, CLICK \"Use this template\" - The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.",
       "discussions": 0,
-      "forks": 36,
+      "forks": 35,
       "issues": 9,
       "languages": [
         "Python",
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 384,
+      "stars": 385,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 2077,
+      "stars": 2078,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]

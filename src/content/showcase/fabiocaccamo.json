@@ -5,7 +5,7 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 4,
-      "description": "📱 🆔 iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
+      "description": "📱 🆔  iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
       "forks": 226,
       "issues": 2,
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1610,
+      "stars": 1611,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 1792,
+      "prs": 7,
+      "stars": 1795,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
       "forks": 49,
-      "issues": 13,
+      "issues": 15,
       "languages": [
         "Python",
         "HTML",
@@ -56,14 +56,14 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 12,
-      "stars": 1486,
+      "stars": 1488,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 7,
-      "description": "📱 📂 iOS file manager on top of NSFileManager for simplifying files management.",
+      "description": "📱 📂  iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
       "forks": 138,
       "issues": 0,
@@ -74,7 +74,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 907,
+      "stars": 908,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -93,7 +93,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 621,
+      "stars": 620,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -102,7 +102,7 @@
       "contributors": 5,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 31,
+      "forks": 32,
       "issues": 5,
       "languages": [
         "Python",
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 656,
+      "prs": 3,
+      "stars": 661,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,7 +122,7 @@
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
       "forks": 53,
-      "issues": 4,
+      "issues": 5,
       "languages": [
         "Python",
         "HTML"
@@ -149,14 +149,14 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 514,
+      "stars": 515,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 3,
-      "description": "📱 📍 iOS geocoder for forward / reverse geocode user's current location using a block-based syntax.",
+      "description": "📱 📍  iOS geocoder for forward / reverse geocode user's current location using a block-based syntax.",
       "discussions": 0,
       "forks": 36,
       "issues": 0,
@@ -184,14 +184,14 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 191,
+      "stars": 193,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 3,
-      "description": "📱 🌍 iOS geocoder for geocode device IP Address location using GeoIP service(s) and a block-based syntax.",
+      "description": "📱 🌍  iOS geocoder for geocode device IP Address location using GeoIP service(s) and a block-based syntax.",
       "discussions": 0,
       "forks": 16,
       "issues": 0,
@@ -237,7 +237,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 71,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },

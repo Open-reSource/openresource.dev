@@ -14,14 +14,12 @@
         "JavaScript",
         "CSS",
         "Shell",
-        "HTML",
-        "Svelte",
-        "MDX"
+        "HTML"
       ],
       "name": "tenoxui",
       "owner": "tenoxui",
       "prs": 0,
-      "stars": 21,
+      "stars": 26,
       "url": "https://github.com/tenoxui/tenoxui"
     }
   ]
