@@ -1,48 +1,50 @@
 ---
 export const prerender = true;
 
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 
-import type { ShowcaseLink } from "../content/config";
-import ShowcaseBanner from "./ShowcaseBanner.astro";
-import ShowcaseGitHubRepo from "./ShowcaseGitHubRepo.astro";
-import { CardGrid, LinkCard } from "@astrojs/starlight/components";
+import type { ShowcaseLink } from '../content/config';
+import ShowcaseBanner from './ShowcaseBanner.astro';
+import ShowcaseGitHubRepo from './ShowcaseGitHubRepo.astro';
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-const showcaseEntries = await getCollection("showcase");
+const showcaseEntries = await getCollection('showcase');
 const allShowcaseLinks: ShowcaseLink[] = shuffleLinks(
-  showcaseEntries.map((entry) => entry.data.links).flat()
+	showcaseEntries.map((entry) => entry.data.links).flat()
 );
 
 // This uses the modern version of the Fisher–Yates shuffle algorithm by Durstenfeld.
 // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
 function shuffleLinks(links: ShowcaseLink[]): ShowcaseLink[] {
-  for (let i = links.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    var temp = links[i];
-    links[i] = links[j];
-    links[j] = temp;
-  }
+	for (let i = links.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		var temp = links[i];
+		links[i] = links[j];
+		links[j] = temp;
+	}
 
-  return links;
+	return links;
 }
 ---
 
 <CardGrid>
-{
-  allShowcaseLinks.map((link: ShowcaseLink) => {
-    if (link.type === "github_repo") {
-      return <ShowcaseGitHubRepo
-        env={link.owner}
-        repo={link.name}
-        description={link.description}
-        img={link.avatarUrl}
-      />
-    } else if (link.type === "github") {
-      return <LinkCard href={link.url} title={link.url} description="Visit this GitHub link" />
-    }
-    return <LinkCard href={link.url} title={link.url} description="Visit this link" />
-  })
-}
+	{
+		allShowcaseLinks.map((link: ShowcaseLink) => {
+			if (link.type === 'github_repo') {
+				return (
+					<ShowcaseGitHubRepo
+						env={link.owner}
+						repo={link.name}
+						description={link.description}
+						img={link.avatarUrl}
+					/>
+				);
+			} else if (link.type === 'github') {
+				return <LinkCard href={link.url} title={link.url} description="Visit this GitHub link" />;
+			}
+			return <LinkCard href={link.url} title={link.url} description="Visit this link" />;
+		})
+	}
 </CardGrid>
 
 <ShowcaseBanner />

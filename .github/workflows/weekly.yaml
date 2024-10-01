@@ -2,7 +2,7 @@ name: Weekly
 
 on:
   schedule:
-    - cron: "0 12 * * Mon"
+    - cron: '0 12 * * Mon'
   workflow_dispatch:
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
           branch: ci/docgen-showcase
           token: ${{ secrets.SHOWCASE_PR_GITHUB_TOKEN }}
           add-paths: src/content/showcase/*.json
-          commit-message: "ci: update showcase"
-          title: "ci: update showcase"
+          commit-message: 'ci: update showcase'
+          title: 'ci: update showcase'
           body: ${{ steps.showcase.outputs.prBody }}
           labels: ci

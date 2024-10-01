@@ -1,46 +1,80 @@
 ---
 const { showProjectsButton = false } = Astro.props;
 
-import { Card } from "@astrojs/starlight/components";
-import Button from "./Button.astro";
+import { Card } from '@astrojs/starlight/components';
+import Button from './Button.astro';
 ---
+
 <section class="showcase-banner">
-  <Card title="Showcase your projects">
-    <p><strong>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong></p>
-    <p style="margin-top: 0px">Submit your open-source project(s), profiles or websites to the showcase and let the community discover your work.</p>
-    <div class="sl-flex actions">
-      <Button class="action action-secondary" href="https://github.com/orgs/Open-reSource/discussions/3">
-        Submit your project(s) <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M19.33 10.18a1 1 0 0 1-.77 0 1 1 0 0 1-.62-.93l.01-1.83-8.2 8.2a1 1 0 0 1-1.41-1.42l8.2-8.2H14.7a1 1 0 0 1 0-2h4.25a1 1 0 0 1 1 1v4.25a1 1 0 0 1-.62.93Z"></path><path d="M11 4a1 1 0 1 1 0 2H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4a1 1 0 1 1 2 0v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h4Z"></path></svg>
-      </Button>
-      { showProjectsButton && 
-        (
-          <Button class="action action-secondary action-minimal" href="/showcase">Show projects <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"></path></svg></Button>
-        )
-      }
-    </div>
-  </Card>
+	<Card title="Showcase your projects">
+		<p>
+			<strong
+				>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong>
+		</p>
+		<p style="margin-top: 0px">
+			Submit your open-source project(s), profiles or websites to the showcase and let the community
+			discover your work.
+		</p>
+		<div class="sl-flex actions">
+			<Button
+				class="action action-secondary"
+				href="https://github.com/orgs/Open-reSource/discussions/3"
+			>
+				Submit your project(s) <svg
+					aria-hidden="true"
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					style="--sl-icon-size: 1.5rem;"
+					><path
+						d="M19.33 10.18a1 1 0 0 1-.77 0 1 1 0 0 1-.62-.93l.01-1.83-8.2 8.2a1 1 0 0 1-1.41-1.42l8.2-8.2H14.7a1 1 0 0 1 0-2h4.25a1 1 0 0 1 1 1v4.25a1 1 0 0 1-.62.93Z"
+					></path><path
+						d="M11 4a1 1 0 1 1 0 2H7a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4a1 1 0 1 1 2 0v4a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h4Z"
+					></path></svg
+				>
+			</Button>
+			{
+				showProjectsButton && (
+					<Button class="action action-secondary action-minimal" href="/showcase">
+						Show projects{' '}
+						<svg
+							aria-hidden="true"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							style="--sl-icon-size: 1.5rem;"
+						>
+							<path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z" />
+						</svg>
+					</Button>
+				)
+			}
+		</div>
+	</Card>
 </section>
 
 <style>
-  section.showcase-banner > :global(.card) {
-    color: var(--sl-color-white);
-    border-left-color: var(--sl-color-secondary);
-    border-left-width: 4px;
-  }
+	section.showcase-banner > :global(.card) {
+		color: var(--sl-color-white);
+		border-left-color: var(--sl-color-secondary);
+		border-left-width: 4px;
+	}
 
-  section.showcase-banner > :global(.card strong) {
-    color: var(--sl-color-secondary-high);
-  }
+	section.showcase-banner > :global(.card strong) {
+		color: var(--sl-color-secondary-high);
+	}
 
-  .actions {
-    gap: 1rem 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+	.actions {
+		gap: 1rem 2rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-  @media (min-width: 50rem) {
-    .actions {
-      justify-content: flex-start;
-    }
-  }
+	@media (min-width: 50rem) {
+		.actions {
+			justify-content: flex-start;
+		}
+	}
 </style>

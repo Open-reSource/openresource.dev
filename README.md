@@ -33,16 +33,16 @@
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Run the development server  at `localhost:4321`  |
-| `npm run build`           | Build your production site                       |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run vercel`          | Run in the same conditions as Vercel             |
+| Command                   | Action                                                                                           |
+| :------------------------ | :----------------------------------------------------------------------------------------------- |
+| `npm install`             | Installs dependencies                                                                            |
+| `npm run dev`             | Run the development server at `localhost:4321`                                                   |
+| `npm run build`           | Build your production site                                                                       |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`                                                 |
+| `npm run astro -- --help` | Get help using the Astro CLI                                                                     |
+| `npm run vercel`          | Run in the same conditions as Vercel                                                             |
 | `npm run update:showcase` | Run the showcase script to gather links from https://github.com/orgs/Open-reSource/discussions/3 |
-| `npm run test`            | Run the tests                                    |
+| `npm run test`            | Run the tests                                                                                    |
 
 ## Bugs and Feature Requests
 
@@ -70,8 +70,9 @@ Get an update on Open {re}Source's development and chat with the project maintai
 Code released under the [MIT License](https://github.com/Open-reSource/openresource.dev/blob/main/LICENSE).
 
 Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
-* `public/images/` directory
-* `src/content/docs` directory
+
+- `public/images/` directory
+- `src/content/docs` directory
 
 ## Thanks
 

@@ -10,42 +10,63 @@ tags:
   - Community
   - Contribution
 ---
-import { Badge } from '@astrojs/starlight/components';
-import Chat from '../../../components/Chat.astro'
-import ContentImage from "../../../components/ContentImage.astro";
-import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro'
 
-<p class="lead">Open-source software development is a collaborative effort that relies on volunteers to contribute to the project. Contributors have different skill levels and come from various backgrounds. As such, project maintainers have a crucial role in ensuring that the contributions received are of high quality and meet the project's goals. One way maintainers do this is by providing clear guidelines on how contributors can submit their work. Unfortunately, contributors don't always take the time to read these guidelines, and maintainers don't always assign issues, which can lead to confusion and frustration on both sides. In this article, we'll explore the issue of unassigned contributions and discuss what can be done to address it.</p>
+import { Badge } from '@astrojs/starlight/components';
+import Chat from '../../../components/Chat.astro';
+import ContentImage from '../../../components/ContentImage.astro';
+import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro';
+
+<p class="lead">
+	Open-source software development is a collaborative effort that relies on
+	volunteers to contribute to the project. Contributors have different skill
+	levels and come from various backgrounds. As such, project maintainers have a
+	crucial role in ensuring that the contributions received are of high quality
+	and meet the project's goals. One way maintainers do this is by providing
+	clear guidelines on how contributors can submit their work. Unfortunately,
+	contributors don't always take the time to read these guidelines, and
+	maintainers don't always assign issues, which can lead to confusion and
+	frustration on both sides. In this article, we'll explore the issue of
+	unassigned contributions and discuss what can be done to address it.
+</p>
 
 ## So Can I Take It or Not?
 
 <Chat type="start" author="Contributor">
-  Hey! Can I take this issue?
+	Hey! Can I take this issue?
 </Chat>
 
 <Chat type="end" author="Maintainer">
-  Hello! As mentioned in <span style="text-decoration: underline">our contributing guidelines</span>, we do not assign issues in this repository. However, if you'd like to contribute a solution, feel free to create a PR directly. Thank you for your interest!
+	Hello! As mentioned in{' '}
+	<span style="text-decoration: underline">our contributing guidelines</span>,
+	we do not assign issues in this repository. However, if you'd like to
+	contribute a solution, feel free to create a PR directly. Thank you for your
+	interest!
 </Chat>
 
 <Chat type="start" author="Contributor">
-  OK thanks!
+	OK thanks!
 </Chat>
 
 This is a common scenario in open-source projects. A contributor sees an issue that they think they can solve, so they ask if they can take it.
 
 <Chat type="end" author="Maintainer" thinking="true">
-  Seriously, again... What do I usually answer? Hmmm...
+	Seriously, again... What do I usually answer? Hmmm...
 </Chat>
 
 If you are the maintainer of this open-source project, you start by receiving a notification. You then go to the issue and take the time to respond to the contributor something you may have already said ten times this week. You then go back to your work, and receive another notification from the same contributor saying basically "OK thanks!".
 
 <Chat type="start" author="Contributor" thinking="true">
-  Seriously? I have already checked the issue, I have the solution!!! They don't trust me. They think I'm not good enough, they don't deserve my contribution...
+	Seriously? I have already checked the issue, I have the solution!!! They don't
+	trust me. They think I'm not good enough, they don't deserve my
+	contribution...
 </Chat>
 
 If you are the contributor, you may feel frustrated. You may have spent time looking for an issue to work on, and you may have even started working on it. You then ask if you can take it, and the maintainer responds by saying that they don't assign issues. You then feel discouraged and decide not to contribute to the project.
 
-<strong style="color: var(--sl-color-text-accent); font-size: 1.25rem; line-height: 1.75rem;">This is a frustrating experience for both the contributor and the maintainer</strong>.
+<strong style="color: var(--sl-color-text-accent); font-size: 1.25rem; line-height: 1.75rem;">
+	This is a frustrating experience for both the contributor and the maintainer
+</strong>
+.
 
 The contributor is left wondering if they can actually work on the issue, and the maintainer is left wondering why the contributor didn't read the contributing guidelines.
 
@@ -152,17 +173,19 @@ In this case, this article may be a good starting point 🙂
 An open-source project can be maintained by a core team working full-time, often linked to a company. Then, issues assignments may be handled differently than in other open-source projects. Indeed, they can rely on a specific agenda and deadlines, so they may assign issues to ensure accountability, clear ownership, prioritization, expertise, and consistency. At the same time, the core team may also allow external contributors to contribute to the project for diverse perspectives, community building, increased productivity, and learning opportunities. In that case, they could not assign issues to external contributors. Here comes our hybrid approach.
 
 As an external contributor, you won't probably be assigned to an issue for several reasons:
-* The issue must be tackled soon and they can't rely on an outsider to deliver a specific task with a deadline.
-* The issue requires extra internal information the contributor can't have access to or internal discussions that happened or will happen and are not tracked, or won't be tracked in the repository.
+
+- The issue must be tackled soon and they can't rely on an outsider to deliver a specific task with a deadline.
+- The issue requires extra internal information the contributor can't have access to or internal discussions that happened or will happen and are not tracked, or won't be tracked in the repository.
 
 However, it might happen, depending on their contributing guidelines, for unprioritized issues that don't have any deadline yet. Most repositories use a dedicated label in this case to let know outsiders that they can help and contribute. And of course, they will probably be happy to review code not related to already planned issues or fixes.
 
 By allowing external contributions to the project, the core team might benefit from:
-* A wide range of new perspectives and ideas.
-* Building a community around the project.
-* Increasing productivity by leveraging the contributions of others.
-* Recruiting members of the community.
-* Learning from the contributions of others and improving their own skills and knowledge.
+
+- A wide range of new perspectives and ideas.
+- Building a community around the project.
+- Increasing productivity by leveraging the contributions of others.
+- Recruiting members of the community.
+- Learning from the contributions of others and improving their own skills and knowledge.
 
 ## How to Address the Issue of Not Assigning Issues
 
@@ -182,8 +205,8 @@ Labeling is very powerful as it can filter the backlog by elements but also be u
 
 Everything can start from the creation of these issues with the issues templates to guide contributors in providing the necessary information when they create an issue. This can include a checklist of requirements that need to be met before an issue can be treated, such as providing a clear description of the problem, steps to reproduce, any relevant logs or errors messages, or motivation if this is a new feature.
 
-* [Description templates on GitLab](https://docs.gitlab.com/ee/user/project/description_templates.html)
-* [Configuring issue templates on GitHub](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
+- [Description templates on GitLab](https://docs.gitlab.com/ee/user/project/description_templates.html)
+- [Configuring issue templates on GitHub](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
 
 :::tip
 When you don't assign issues in your repository, it can be reminded at the end of the issues!
@@ -191,7 +214,12 @@ When you don't assign issues in your repository, it can be reminded at the end o
 
 At the time of writing, GitHub doesn't provide any options to add some Markdown content at the end of the issues when using issue templates. However, you can use GitHub Actions to do that. Here is an example of a GitHub Action that adds a message for newly created issues:
 
-<ShowcaseGitHubRepo env="Open-reSource" repo="labs-append-markdown-to-issues" img="129324099" description="[Labs] Automatically append Markdown to issues" />
+<ShowcaseGitHubRepo
+	env="Open-reSource"
+	repo="labs-append-markdown-to-issues"
+	img="129324099"
+	description="[Labs] Automatically append Markdown to issues"
+/>
 
 An infinite way of managing labels is possible. Let's imagine, for example, a <Badge variant="note" text="to analyze" /> label that can be picked up only by a core team member. When this core team member analyzed the issue and provided expectations, clarity, and guidance, the label could be transformed into an <Badge variant="note" text="analyzed" /> label, and a new <Badge variant="note" text="ready for dev" /> label could be applied combined to <Badge variant="note" text="high priority" /> and <Badge variant="note" text="low complexity" /> labels, and a <Badge variant="note" text="version 12" /> label, <Badge variant="note" text="bug" /> or <Badge variant="note" text="feature" />, <Badge variant="note" text="core team" /> if it is reserved for the core team, or <Badge variant="note" text="pr welcome" /> when it is OK for external contributors to work on it. When doing that, contributors can start to help or not, filter the backlog by labels, and the core team can focus on the most important issues. If the workflow is automated, the issue can go to one or another project, be in a roadmap, etc. This is just an example, but you can imagine how powerful it can be.
 
@@ -203,9 +231,17 @@ By taking the time to establish clear guidelines and protocols for issues assign
 
 Whether maintainers put in place a simple or advanced workflow, it must be clearly explained somewhere. Depending on the amount of information, it can be directly in the Contributing Guidelines or in a Wiki, documentation, etc. linked from the Contributing Guidelines.
 
-<strong style="color: var(--sl-color-text-accent); font-size: 1.25rem; line-height: 1.75rem;">If issues are assigned, make sure that it's clearly explained in the Contributing Guidelines</strong>.
+<strong style="color: var(--sl-color-text-accent); font-size: 1.25rem; line-height: 1.75rem;">
+	If issues are assigned, make sure that it's clearly explained in the
+	Contributing Guidelines
+</strong>
+.
 
-<strong style="color: var(--sl-color-text-accent); font-size: 1.25rem; line-height: 1.75rem;">If issues are not assigned, make sure that it's clearly explained in the Contributing Guidelines</strong>.
+<strong style="color: var(--sl-color-text-accent); font-size: 1.25rem; line-height: 1.75rem;">
+	If issues are not assigned, make sure that it's clearly explained in the
+	Contributing Guidelines
+</strong>
+.
 
 #### The Importance of Contribution Guidelines
 
@@ -229,10 +265,11 @@ So the frustration of maintainers can be understood rather easily, especially if
 Streamers, for example, use pre-defined messages, videos, or FAQs in order not to repeat the same information to the newcomers (who almost always ask the same things based on the streamer's point of view) so that they are not bothered when they are streaming, and the viewers can still have the information. Having tools answering for you, either semi-automatic or automatic, will help not become angry at contributors after repeating the same thing over and over.
 
 In a nutshell:
-* **Make the Contributing Guidelines clear and easy to find.** Ensure that they are prominently displayed on the project's website, README file, in the documentation, in the issues templates, etc. Make sure they are easy to read and understand, with clear instructions on how to contribute and how the issues are handled in the global workflow.
-* **Communicate clearly with contributors.** Even if it is mentioned everywhere, always remind nicely this information to the contributors who make mistakes. Provide clarity and guidance.
-* **Be consistent.** Ensure that the rules for assigning issues are consistent across the project and that all maintainers are aware of them. This can help prevent confusion and ensure that all contributors are treated fairly. Having a unique reference stored in only one place is really handy because maintainers will be able to link this reference instead of reinterpreting the content every time, and maybe not being consistent. Plus, it's always true even if the reference changes.
-* **Consider revisiting the guidelines.** If you find that many contributors are not following the guidelines, it may be worth revising them to be clearer or to better reflect the needs of the project. However, be sure to communicate any changes clearly to existing contributors and provide guidance on how to adjust their contributions accordingly.
+
+- **Make the Contributing Guidelines clear and easy to find.** Ensure that they are prominently displayed on the project's website, README file, in the documentation, in the issues templates, etc. Make sure they are easy to read and understand, with clear instructions on how to contribute and how the issues are handled in the global workflow.
+- **Communicate clearly with contributors.** Even if it is mentioned everywhere, always remind nicely this information to the contributors who make mistakes. Provide clarity and guidance.
+- **Be consistent.** Ensure that the rules for assigning issues are consistent across the project and that all maintainers are aware of them. This can help prevent confusion and ensure that all contributors are treated fairly. Having a unique reference stored in only one place is really handy because maintainers will be able to link this reference instead of reinterpreting the content every time, and maybe not being consistent. Plus, it's always true even if the reference changes.
+- **Consider revisiting the guidelines.** If you find that many contributors are not following the guidelines, it may be worth revising them to be clearer or to better reflect the needs of the project. However, be sure to communicate any changes clearly to existing contributors and provide guidance on how to adjust their contributions accordingly.
 
 Overall, the key is to be patient, clear, and helpful in your interactions with contributors. By doing so, you can create a welcoming and productive community around your open-source project
 
@@ -245,8 +282,9 @@ There are several manual and automatic tools that maintainers can use to help ha
 **Direct communication** is not really a tool, but this is often the way it is handled by maintainers. They can engage with contributors who are unsure about taking up an issue, write down a specific **personalized message**, help clarify any confusion and ensure that contributors feel supported and empowered to contribute in the right way, and even provide alternative issues or areas of the project where the contributor can help. But it takes a huge amount of time, especially in a big community, and the content can be inconsistent.
 
 In most of the Git source code platforms, it is possible to set up **saved replies**:
-* [Comment templates on GitLab](https://docs.gitlab.com/ee/user/profile/comment_templates.html)
-* [Using saved replies on GitHub](https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/using-saved-replies)
+
+- [Comment templates on GitLab](https://docs.gitlab.com/ee/user/profile/comment_templates.html)
+- [Using saved replies on GitHub](https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/using-saved-replies)
 
 It is only a semi-automatic tool but it can help save a lot of time by not repeating over and over the same thing. Maintainers will lose the personalized side but will gain consistency with a clear and precise answer accompanied by links pointing to unique resources.
 
@@ -254,11 +292,21 @@ If you are maintaining OSS projects or communities on different platforms, you m
 
 Writing this article was the occasion to try creating a **semi-automation tool based on labels**. Maintainer can add a <Badge variant="note" text="we don't assign issues" /> label to an issue right after a comment asking to be assigned. This label will trigger a GitHub action that will write a personalized comment explaining that the repo is not handled that way, and then remove this label automatically. We could even hide the original contributor's comment in the process.
 
-<ContentImage src="https://user-images.githubusercontent.com/17381666/236413271-12b7b2f2-12b1-4498-99d0-19db8b4b97d8.png" alt="" width="720" height="274" />
+<ContentImage
+	src="https://user-images.githubusercontent.com/17381666/236413271-12b7b2f2-12b1-4498-99d0-19db8b4b97d8.png"
+	alt=""
+	width="720"
+	height="274"
+/>
 
 The source code of this experiment is available on GitHub via the card below.
 
-<ShowcaseGitHubRepo env="Open-reSource" repo="labs-we-don-t-assign-issues" img="129324099" description="[Labs] &quot;we don't assign issues&quot; label that writes a comment and is then auto-deleted" />
+<ShowcaseGitHubRepo
+	env="Open-reSource"
+	repo="labs-we-don-t-assign-issues"
+	img="129324099"
+	description='[Labs] "we don&apos;t assign issues" label that writes a comment and is then auto-deleted'
+/>
 
 Unfortunately, if there are intermediate comments before maintainers have the time to use this label, it won't work. And it stays semi-automatic.
 

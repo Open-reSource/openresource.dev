@@ -1,6 +1,6 @@
 ---
-title: "Coding LinkedIn Carousels"
-description: "Creating LinkedIn carousels is a great way to share information in a visually appealing format. Learn how to code LinkedIn carousels with this guide."
+title: 'Coding LinkedIn Carousels'
+description: 'Creating LinkedIn carousels is a great way to share information in a visually appealing format. Learn how to code LinkedIn carousels with this guide.'
 date: 2024-09-29
 lastUpdated: 2024-09-29
 excerpt: "**Coding LinkedIn carousels... yes, not using design tools but using developer tools! It's now possible!**<br><br>Learn how to code LinkedIn carousels with Slidev and discover our open-source Slidev theme for LinkedIn carousels named `slidev-theme-linkedin-carousel`."
@@ -11,14 +11,18 @@ tags:
 head:
   - tag: meta
     attrs:
-      property: "og:type"
-      content: "website"
+      property: 'og:type'
+      content: 'website'
 ---
-import { Image } from 'astro:assets';
-import ContentImage from "../../../components/ContentImage.astro";
-import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro'
 
-<p class="lead">Coding LinkedIn carousels... yes, not using design tools but using developer tools! It's now possible!</p>
+import { Image } from 'astro:assets';
+import ContentImage from '../../../components/ContentImage.astro';
+import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro';
+
+<p class="lead">
+	Coding LinkedIn carousels... yes, not using design tools but using developer
+	tools! It's now possible!
+</p>
 
 A few days ago, we shared [a new article on LinkedIn](https://www.linkedin.com/posts/open-re-source_generate-github-repositories-top-contributors-activity-7245171076966559745-sBAM/) and tried to make it more engaging by using a carousel. And creating a carousel on LinkedIn can take a bit of time, especially if you're not that familiar with design tools such as [Canva](https://www.canva.com), [Figma](https://www.figma.com), or even [Penpot](https://penpot.app/), our open-source design tool friend. Even with the tons of templates available out there, customizing them is a lot of work.
 
@@ -37,9 +41,19 @@ There's no really a creator tool for LinkedIn carousels, so you have to create t
 3. Click on the "+" icon, and "Add a document".
 4. Select your PDF file, choose a document title, and LinkedIn will convert it into a carousel.
 
-<ContentImage src="/images/coding-linkedin-carousels-1.png" alt="" width="400" height="320" />
+<ContentImage
+	src="/images/coding-linkedin-carousels-1.png"
+	alt=""
+	width="400"
+	height="320"
+/>
 
-<ContentImage src="/images/coding-linkedin-carousels-2.png" alt="" width="400" height="257" />
+<ContentImage
+	src="/images/coding-linkedin-carousels-2.png"
+	alt=""
+	width="400"
+	height="257"
+/>
 
 ## The Idea
 
@@ -49,7 +63,12 @@ We already use this great tool for presentations, it's called [Slidev](https://s
 
 Slidev is a presentation tool based on Vue.js. It allows you to create beautiful slides with Markdown and code. And it has a feature to export your slides as a PDF file. It is an open-source project, under the MIT license.
 
-<ShowcaseGitHubRepo env="slidevjs" repo="slidev" img="83095831" description="Presentation Slides for Developers" />
+<ShowcaseGitHubRepo
+	env="slidevjs"
+	repo="slidev"
+	img="83095831"
+	description="Presentation Slides for Developers"
+/>
 
 ## How to Code LinkedIn Carousels
 
@@ -88,20 +107,53 @@ However, you'll notice that you still have some design work to do in order to re
 
 **So, we created a theme for LinkedIn carousels called `slidev-theme-linkedin-carousel`**, that is an open-source project under the MIT license.
 
-<ShowcaseGitHubRepo env="Open-reSource" repo="slidev-theme-linkedin-carousel" img="129324099" description="Slidev theme to create LinkedIn carousels" />
+<ShowcaseGitHubRepo
+	env="Open-reSource"
+	repo="slidev-theme-linkedin-carousel"
+	img="129324099"
+	description="Slidev theme to create LinkedIn carousels"
+/>
 
 Here's how it looks like: https://slidev-theme-lk-carousel.netlify.app.
 
 <div style="display: grid; gap: 10px; grid-template-columns: repeat(4, 1fr);">
   <Image src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/1.png" width="200" height="150" style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0" alt="" />
 
-  <Image src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/2.png" width="200" height="150" style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0" alt="" />
+{' '}
+<Image
+	src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/2.png"
+	width="200"
+	height="150"
+	style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0"
+	alt=""
+/>
 
-  <Image src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/3.png" width="200" height="150" style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0" alt="" />
+{' '}
+<Image
+	src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/3.png"
+	width="200"
+	height="150"
+	style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0"
+	alt=""
+/>
 
-  <Image src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/4.png" width="200" height="150" style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0" alt="" />
+{' '}
+<Image
+	src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/4.png"
+	width="200"
+	height="150"
+	style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0"
+	alt=""
+/>
 
-  <Image src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/5.png" width="200" height="150" style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0" alt="" />
+{' '}
+<Image
+	src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/5.png"
+	width="200"
+	height="150"
+	style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0"
+	alt=""
+/>
 
   <Image src="https://cdn.jsdelivr.net/npm/slidev-theme-linkedin-carousel@latest/example-export/6.png" width="200" height="150" style="border: 1px solid lightgray; border-radius: 10px; margin-top: 0" alt="" />
 </div>
@@ -128,7 +180,12 @@ The `example.md` file in the repository is a good starting point to create your 
 
 ---
 
-<p class="lead">That's how you can code LinkedIn carousels. It's a great way to share information in a visually appealing format, and it's also a fun way to learn new things. We hope you enjoyed this guide, and we can't wait to see what you create!</p>
+<p class="lead">
+	That's how you can code LinkedIn carousels. It's a great way to share
+	information in a visually appealing format, and it's also a fun way to learn
+	new things. We hope you enjoyed this guide, and we can't wait to see what you
+	create!
+</p>
 
 Don't hesitate to share your LinkedIn carousels with us, we'd love to see them! See ya [on LinkedIn](https://linkedin.com/company/open-re-source/)!
 

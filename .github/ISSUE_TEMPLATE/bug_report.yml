@@ -1,8 +1,8 @@
 name: Report a bug
 description: Tell us about a bug or issue you may have identified in Open {re}Source.
-title: "Provide a general summary of the issue"
+title: 'Provide a general summary of the issue'
 labels: [bug]
-assignees: "-"
+assignees: '-'
 body:
   - type: checkboxes
     attributes:
