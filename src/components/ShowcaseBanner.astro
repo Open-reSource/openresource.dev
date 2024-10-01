@@ -9,7 +9,8 @@ import Button from './Button.astro';
 	<Card title="Showcase your projects">
 		<p>
 			<strong
-				>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong>
+				>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong
+			>
 		</p>
 		<p style="margin-top: 0px">
 			Submit your open-source project(s), profiles or websites to the showcase and let the community
@@ -20,7 +21,8 @@ import Button from './Button.astro';
 				class="action action-secondary"
 				href="https://github.com/orgs/Open-reSource/discussions/3"
 			>
-				Submit your project(s) <svg
+				<span>Submit your project(s)</span>
+				<svg
 					aria-hidden="true"
 					width="16"
 					height="16"
@@ -37,7 +39,7 @@ import Button from './Button.astro';
 			{
 				showProjectsButton && (
 					<Button class="action action-secondary action-minimal" href="/showcase">
-						Show projects{' '}
+						<span>Show projects </span>
 						<svg
 							aria-hidden="true"
 							width="16"
