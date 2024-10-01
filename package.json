@@ -10,7 +10,9 @@
     "start": "astro dev",
     "test": "vitest",
     "update:showcase": "tsx scripts/update-showcase.ts",
-    "vercel": "vercel dev"
+    "vercel": "vercel dev",
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
@@ -31,6 +33,8 @@
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.5",
     "parse-github-url": "^1.0.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
     "starlight-blog": "^0.13.0",
     "starlight-links-validator": "^0.12.1",
