@@ -16,7 +16,8 @@ const { type, url } = Astro.props;
 	<span>{type}</span>
 </a>
 
-<style>
+<style is:global>
+	.sl-markdown-content .footer-link,
 	.footer-link {
 		display: flex;
 		align-items: center;
@@ -27,6 +28,7 @@ const { type, url } = Astro.props;
 		color: var(--sl-color-text);
 	}
 
+	.sl-markdown-content .footer-link:hover,
 	.footer-link:hover {
 		color: var(--sl-color-secondary);
 		text-decoration-color: var(--sl-color-secondary);
