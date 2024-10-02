@@ -1,6 +1,6 @@
 name: Content request
 description: Suggest new content to include in the guide or as articles in Open {re}Source.
-title: "Suggest new content"
+title: 'Suggest new content'
 labels: [content]
 assignees: []
 body:
