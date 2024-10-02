@@ -43,6 +43,8 @@ All commands are run from the root of the project, from a terminal:
 | `npm run vercel`          | Run in the same conditions as Vercel             |
 | `npm run update:showcase` | Run the showcase script to gather links from https://github.com/orgs/Open-reSource/discussions/3 |
 | `npm run test`            | Run the tests                                    |
+| `npm run prettier:read`   | Run Prettier to check the code style             |
+| `npm run prettier:write`  | Run Prettier to fix the code style               |
 
 ## Bugs and Feature Requests
 
