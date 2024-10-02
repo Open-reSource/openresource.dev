@@ -1,22 +1,29 @@
 ---
-title: "Display Your Sponsors in Your GitHub READMEs"
-description: "Learn how to display the list of your sponsors in your GitHub READMEs thanks to SponsorKit and GitHub Actions."
+title: 'Display Your Sponsors in Your GitHub READMEs'
+description: 'Learn how to display the list of your sponsors in your GitHub READMEs thanks to SponsorKit and GitHub Actions.'
 date: 2023-05-18
 lastUpdated: 2024-09-23
-excerpt: "**Showcasing your sponsors in GitHub READMEs is a great way to acknowledge their support and attract potential sponsors.** An easy way to do this is by using **SponsorKit**, developed by Anthony Fu. SponsorKit generates sponsor images compatible with GitHub Sponsors, Open Collective, Patreon, and Afdian. By following a few steps, you can create and display these sponsor images in your project’s README file. You’ll need a GitHub account, at least one sponsor, and a personal access token. A template repository is available to simplify the setup process."
+excerpt: '**Showcasing your sponsors in GitHub READMEs is a great way to acknowledge their support and attract potential sponsors.** An easy way to do this is by using **SponsorKit**, developed by Anthony Fu. SponsorKit generates sponsor images compatible with GitHub Sponsors, Open Collective, Patreon, and Afdian. By following a few steps, you can create and display these sponsor images in your project’s README file. You’ll need a GitHub account, at least one sponsor, and a personal access token. A template repository is available to simplify the setup process.'
 tags:
   - GitHub
   - Sponsors
   - Tutorial
 ---
-import ContentImage from "../../../components/ContentImage.astro";
-import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro'
 
+import ContentImage from '../../../components/ContentImage.astro';
+import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro';
+
+{/* prettier-ignore */}
 <p class="lead">A simple nice way to reward your sponsors could be to showcase them in the projects you create on GitHub. And what a better place to do that than in your READMEs? This article will show you how to do that easily!</p>
 
 There are several ways to display your sponsors in your GitHub READMEs, but this article will focus on a single one by using [SponsorKit](https://github.com/antfu/sponsorkit) created by [Anthony Fu](https://github.com/antfu).
 
-<ShowcaseGitHubRepo env="antfu" repo="sponsorkit" img="11247099" description="💖 Toolkit for generating sponsors images 😄" />
+<ShowcaseGitHubRepo
+	env="antfu"
+	repo="sponsorkit"
+	img="11247099"
+	description="💖 Toolkit for generating sponsors images 😄"
+/>
 
 **SponsorKit** is a toolkit for generating sponsors images that supports GitHub Sponsors, Open Collective, Patreon, and Afdian.
 
@@ -36,7 +43,12 @@ You can find more information about how to create a GitHub token in the [GitHub 
 
 In order to facilitate the process, we have created for you a template repository that you can use to create your own repository: https://github.com/Open-reSource/sponsorkit-starter.
 
-<ShowcaseGitHubRepo env="Open-reSource" repo="sponsorkit-starter" img="129324099" description="Starter template for SponsorKit" />
+<ShowcaseGitHubRepo
+	env="Open-reSource"
+	repo="sponsorkit-starter"
+	img="129324099"
+	description="Starter template for SponsorKit"
+/>
 
 ### From the Starter Template
 
@@ -58,11 +70,11 @@ npx degit Open-reSource/sponsorkit-starter
 
 Your new repository is now created, and should contain the following files:
 
-* `.github/workflows/scheduler.yml` that runs the SponsorKit action on a schedule every day, for each merge on the main branch, or manually.
-* `.env.example` as described in [SponsorKit usage](https://github.com/antfu/sponsorkit/#usage).
-* `build.sh` script to generate the sponsors images.
-* `package.json` relying on the latest version of SponsorKit and containing the build script.
-* `sponsor.config.ts` that contains the configuration for the generation of the sponsors images.
+- `.github/workflows/scheduler.yml` that runs the SponsorKit action on a schedule every day, for each merge on the main branch, or manually.
+- `.env.example` as described in [SponsorKit usage](https://github.com/antfu/sponsorkit/#usage).
+- `build.sh` script to generate the sponsors images.
+- `package.json` relying on the latest version of SponsorKit and containing the build script.
+- `sponsor.config.ts` that contains the configuration for the generation of the sponsors images.
 
 ### Change Default Permissions of GITHUB_TOKEN
 
@@ -110,9 +122,8 @@ SPONSORKIT_GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 SPONSORKIT_GITHUB_LOGIN=username
 ```
 
-* `SPONSORKIT_GITHUB_TOKEN` is the GitHub token you created earlier.
-* `SPONSORKIT_GITHUB_LOGIN` is your GitHub username.
-
+- `SPONSORKIT_GITHUB_TOKEN` is the GitHub token you created earlier.
+- `SPONSORKIT_GITHUB_LOGIN` is your GitHub username.
 
 The final step is to run `npm run build` in your terminal to generate the static files:
 
@@ -155,6 +166,7 @@ SponsorKit v0.8.3
 All the images are now generated at the root level of your repository. You can check them out in your file explorer.
 
 **Warning**: Once it's done, please don't forget to remove at some point your GitHub token from the `.env` file for security reasons. You won't probably never re-run it from your local machine.
+
 </details>
 
 ## Use the Generated Images in Your READMEs
@@ -165,9 +177,9 @@ For example, you can use the `sponsors.svg` image in your `README.md` file by ad
 
 ```html
 <p align="center">
-  <a href="https://github.com/sponsors/username/" aria-label="Go to username's sponsors page">
-	  <img src='https://cdn.jsdelivr.net/gh/username/static/sponsors.svg'/>
-  </a>
+	<a href="https://github.com/sponsors/username/" aria-label="Go to username's sponsors page">
+		<img src="https://cdn.jsdelivr.net/gh/username/static/sponsors.svg" />
+	</a>
 </p>
 ```
 
@@ -177,6 +189,11 @@ For example, you can use the `sponsors.svg` image in your `README.md` file by ad
 
 You can check my own personal sponsors list generated by following this article:
 
-<ContentImage src="https://cdn.jsdelivr.net/gh/julien-deramond/static/sponsors.svg" alt="Julien Déramond sponsors list" width="720" height="272" />
+<ContentImage
+	src="https://cdn.jsdelivr.net/gh/julien-deramond/static/sponsors.svg"
+	alt="Julien Déramond sponsors list"
+	width="720"
+	height="272"
+/>
 
 And find it integrated in one of my projects: https://github.com/julien-deramond/update-issue-body#sponsors.

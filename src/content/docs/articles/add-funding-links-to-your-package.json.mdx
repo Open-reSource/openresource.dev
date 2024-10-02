@@ -16,8 +16,10 @@ head:
       property: "og:type"
       content: "website"
 ---
-import ContentImage from "../../../components/ContentImage.astro";
 
+import ContentImage from '../../../components/ContentImage.astro';
+
+{/* prettier-ignore */}
 <p class="lead">Fund your open-source project by adding funding links to your <code>package.json</code> file. Who knows, you might get a coffee or two out of it!</p>
 
 ## Funding Open-Source Projects?
@@ -145,17 +147,17 @@ As stated in the official npm documentation:
 
 ```json
 {
-  "funding": [
-    {
-      "type": "individual",
-      "url": "http://example.com/donate"
-    },
-    "http://example.com/donateAlso",
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/my-account"
-    }
-  ]
+	"funding": [
+		{
+			"type": "individual",
+			"url": "http://example.com/donate"
+		},
+		"http://example.com/donateAlso",
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/my-account"
+		}
+	]
 }
 ```
 
@@ -163,7 +165,12 @@ From there, those who install your package might see the funding information whe
 
 On top of that, if your package is listed on the npm registry, the funding information will be displayed on the package's page with a "Fund this package" button:
 
-<ContentImage src="/images/add-funding-links-to-your-package.json.png" alt="Screenshot the 'Fund this package' npm registry button" width="370" height="50" />
+<ContentImage
+	src="/images/add-funding-links-to-your-package.json.png"
+	alt="Screenshot the 'Fund this package' npm registry button"
+	width="370"
+	height="50"
+/>
 
 ---
 

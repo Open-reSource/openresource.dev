@@ -12,8 +12,10 @@ tags:
   - Readme
   - Tools
 ---
-import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro'
 
+import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro';
+
+{/* prettier-ignore */}
 <p class="lead">[contrib.rocks](https://contrib.rocks/) is a an online tool that generates an image of the top contributors of a GitHub repository that can be embedded in any website or Markdown file; including its README file.</p>
 
 It is completely free and maintained by Suguru Inatomi, a.k.a. [lacolaco](https://github.com/lacolaco). The source code is available on GitHub:
@@ -52,7 +54,7 @@ Here is what it looks like for our [openresource.dev GitHub repository](https://
 ---
 
 <a href="https://github.com/open-reSource/openresource.dev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=open-reSource/openresource.dev" />
+	<img src="https://contrib.rocks/image?repo=open-reSource/openresource.dev" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
@@ -61,12 +63,17 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 And here is the same rendering, but on a more active repository like [godot](https://github.com/godotengine/godot):
 
-<ShowcaseGitHubRepo env="godotengine" repo="godot" img="6318500" description="Godot Engine – Multi-platform 2D and 3D game engine" />
+<ShowcaseGitHubRepo
+	env="godotengine"
+	repo="godot"
+	img="6318500"
+	description="Godot Engine – Multi-platform 2D and 3D game engine"
+/>
 
 ---
 
 <a href="https://github.com/godotengine/godot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=godotengine/godot" />
+	<img src="https://contrib.rocks/image?repo=godotengine/godot" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
@@ -74,9 +81,10 @@ Made with [contrib.rocks](https://contrib.rocks).
 ---
 
 Some parameters can be added to the URL to customize the image:
-* `max={number}`: Max contributor count (100 by default)
-* `columns={number}`: Max columns (12 by default)
-* `anon={0|1}`: Include anonymous users (false by default)
+
+- `max={number}`: Max contributor count (100 by default)
+- `columns={number}`: Max columns (12 by default)
+- `anon={0|1}`: Include anonymous users (false by default)
 
 So if we add `&max=10&columns=2` to the image URL `https://contrib.rocks/image?repo=godotengine/godot` we get the following image with only the top 10 contributors and 2 columns:
 
@@ -91,7 +99,7 @@ Made with [contrib.rocks](https://contrib.rocks).
 ---
 
 <a href="https://github.com/godotengine/godot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=godotengine/godot&max=10&columns=2" />
+	<img src="https://contrib.rocks/image?repo=godotengine/godot&max=10&columns=2" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).

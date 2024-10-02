@@ -12,13 +12,16 @@ tags:
   - Readme
   - Tools
 ---
-import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro'
 
+import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro';
+
+{/* prettier-ignore */}
 <p class="lead">[Repobeats](https://repobeats.axiom.co/) is a tool that provides analytics of a GitHub repository that can be embedded in any Markdown file; including its README file.</p>
 
 It is completely free and maintained by [axiom.com](https://axiom.co/), but does not seem to be an open-source project as it is not referenced in [github.com/axiomhq](https://github.com/axiomhq).
 
 This service allows to give a visual representation of the activity of your GitHub repository:
+
 - the number of contributions in the last 30 days
 - the number of opened/closed issues ratio with an associated bar chart of the past month
 - the number of PRs opened with an associated bar chart of the past month
@@ -47,18 +50,23 @@ And that's it! You will get a URL like ours that you can use in your README file
 
 ```markdown
 // Add the following to your README.md to embed Repobeats
-![Alt](https://repobeats.axiom.co/api/embed/da1c940f0135aece8b9942f518b44dacc39bd9ce.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/da1c940f0135aece8b9942f518b44dacc39bd9ce.svg 'Repobeats analytics image')
 ```
 
 ## Rendering
 
 Here is what it looks like for our [openresource.dev GitHub repository](https://github.com/Open-reSource/openresource.dev):
 
-![Alt](https://repobeats.axiom.co/api/embed/da1c940f0135aece8b9942f518b44dacc39bd9ce.svg "Repobeats analytics image for openresource.dev GitHub repository")
+![Alt](https://repobeats.axiom.co/api/embed/da1c940f0135aece8b9942f518b44dacc39bd9ce.svg 'Repobeats analytics image for openresource.dev GitHub repository')
 
 And here is the same kind of data, but on a more active repository like freeCodeCamp:
 
-<ShowcaseGitHubRepo env="freeCodeCamp" repo="freeCodeCamp" img="9892522" description="freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free." />
+<ShowcaseGitHubRepo
+	env="freeCodeCamp"
+	repo="freeCodeCamp"
+	img="9892522"
+	description="freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free."
+/>
 
 ![Alt](https://repobeats.axiom.co/api/embed/89be0a1a1c8f641c54f9234a7423e7755352c746.svg 'Repobeats analytics image for freeCodeCamp GitHub repository')
 

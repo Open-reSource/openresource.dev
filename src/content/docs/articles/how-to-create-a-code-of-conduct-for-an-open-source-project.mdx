@@ -10,8 +10,10 @@ tags:
   - Community
   - Contribution
 ---
-import ContentImage from "../../../components/ContentImage.astro";
 
+import ContentImage from '../../../components/ContentImage.astro';
+
+{/* prettier-ignore */}
 <p class="lead">Creating a code of conduct is an essential step in ensuring a safe and welcoming community for an open-source project. In many cases, the code of conduct may be created before the community even exists. This can be beneficial as it ensures that the project starts with clear expectations and guidelines for behavior. The process of creating a code of conduct involves several steps, including defining goals and scope, researching existing codes of conduct, drafting the document, reviewing and approving the document, publishing and communicating the code of conduct, and regularly reviewing and updating the document.</p>
 
 ## Why do we need one?
@@ -37,6 +39,7 @@ The [Contributor Covenant](https://www.contributor-covenant.org/) is a widely-us
 It has been adopted by thousands of open-source projects and many prominent companies including Google, Intel, GitLab, and open-source projects including Vue.js, Symfony, Bootstrap. The code outlines specific behaviors expected of contributors, such as being respectful of differing viewpoints and avoiding offensive language. In 2021, it has been included in the [Organization for Ethical Source](https://ethicalsource.dev/). The Contributor Covenant has played a significant role in promoting a culture of kindness and empathy within the open source community.
 
 Adopting the Contributor Covenant as your code of conduct offers several benefits:
+
 - It is widely recognized within the community, meaning that the values of the community can be instantly communicated and understood.
 - It has been reviewed and adopted by many which makes it a trusted and reliable option.
 - If you are unsure about how to create your own code of conduct, the Contributor Covenant is readily available and can provide a practical starting point for creating conduct that reflects the values of your community.
@@ -49,11 +52,19 @@ Translate or help to translate the Contributor Covenant into your non-English la
 ### Other Existing Codes of Conduct
 
 There are several other well-known codes of conduct in open source, in addition to the Contributor Covenant, or based on it. Here are a few examples:
+
 - The [Ubuntu Code of Conduct](https://ubuntu.com/community/ethos/code-of-conduct);
 - The [Mozilla Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/) with a very interesting explanation:
   <blockquote cite="https://www.mozilla.org/en-US/about/governance/policies/participation/">
-    "These guidelines have been adapted with modifications from Mozilla's original Community Participation Guidelines, the [Ubuntu Code of Conduct](https://www.ubuntu.com/about/about-ubuntu/conduct), Mozilla's [View Source Conference Code of Conduct](https://viewsourceconf.org/berlin-2016/code-of-conduct/), and the [Rust Language Code of Conduct](https://www.rust-lang.org/conduct.html), which are based on Stumptown Syndicate's [Citizen Code of Conduct](http://citizencodeofconduct.org/). Additional text from the [LGBTQ in Technology Code of Conduct](http://lgbtq.technology/coc.html) and the [WisCon code of conduct](http://wiscon.net/policies/anti-harassment/code-of-conduct/). This document and all associated processes are only possible with the hard work of many, many Mozillians."
-  </blockquote>  
+  	"These guidelines have been adapted with modifications from Mozilla's original Community Participation Guidelines,
+  	the [Ubuntu Code of Conduct](https://www.ubuntu.com/about/about-ubuntu/conduct), Mozilla's [View Source Conference
+  	Code of Conduct](https://viewsourceconf.org/berlin-2016/code-of-conduct/), and the [Rust Language Code of
+  	Conduct](https://www.rust-lang.org/conduct.html), which are based on Stumptown Syndicate's [Citizen Code of
+  	Conduct](http://citizencodeofconduct.org/). Additional text from the [LGBTQ in Technology Code of
+  	Conduct](http://lgbtq.technology/coc.html) and the [WisCon code of
+  	conduct](http://wiscon.net/policies/anti-harassment/code-of-conduct/). This document and all associated processes
+  	are only possible with the hard work of many, many Mozillians."
+  </blockquote>
 - The [Django Code of Conduct](https://www.djangoproject.com/conduct/);
 - The [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct) adapted from the [Node.js Policy on Trolling](https://blog.izs.me/2012/08/policy-on-trolling/) as well as the [Contributor Covenant v1.3.0](https://www.contributor-covenant.org/version/1/3/0/code-of-conduct/);
 - The [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md) adapted from the [Contributor Convenant v2.0](http://contributor-covenant.org/version/2/0/code_of_conduct/);
@@ -77,6 +88,7 @@ Once the code of conduct is drafted, it is important to review it with key stake
 Once the code of conduct is finalized, it should be published and communicated to the community.
 
 This can be done through the:
+
 - project's website or documentation
   - with a link in the footer or elsewhere to a code of conduct stored anywhere.
   - by creating a dedicated page like in [GitLab Code of Conduct](https://about.gitlab.com/community/contribute/code-of-conduct/).
@@ -92,19 +104,40 @@ It is important to ensure that all members of the community are aware of the cod
 #### GitHub Provides Some Templates
 
 GitHub offers guidance on creating a Code of Conduct through templates available on their website. When adding a new `CODE_OF_CONDUCT` or `CODE_OF_CONDUCT.md` file through the interface at the root level of your repository, you can select from two different templates to add to your project:
+
 - Contributor Covenant;
 - Citizen Code Of Conduct;
 
-<ContentImage src="/images/add-a-code-of-conduct-to-your-project-1.png" alt="Screenshot of GitHub interface showing what happens at this stage of the tutorial" width="720" height="190" />
+<ContentImage
+	src="/images/add-a-code-of-conduct-to-your-project-1.png"
+	alt="Screenshot of GitHub interface showing what happens at this stage of the tutorial"
+	width="720"
+	height="190"
+/>
 
 You can then complete your code of conduct by filling out a simple form with the required information.
 
-<ContentImage src="/images/add-a-code-of-conduct-to-your-project-2.png" alt="Screenshot of GitHub interface showing Contributor Covenant and a form on the right hand side to fill out the contact method and a button to review and submit the form." width="720" height="482" />
-<ContentImage src="/images/add-a-code-of-conduct-to-your-project-3.png" alt="Screenshot of GitHub interface showing Citizen Code of Conduct and a form on the right hand side with different fields and a button to review and submit the form." width="720" height="502" />
+<ContentImage
+	src="/images/add-a-code-of-conduct-to-your-project-2.png"
+	alt="Screenshot of GitHub interface showing Contributor Covenant and a form on the right hand side to fill out the contact method and a button to review and submit the form."
+	width="720"
+	height="482"
+/>
+<ContentImage
+	src="/images/add-a-code-of-conduct-to-your-project-3.png"
+	alt="Screenshot of GitHub interface showing Citizen Code of Conduct and a form on the right hand side with different fields and a button to review and submit the form."
+	width="720"
+	height="502"
+/>
 
 After reviewing your changes, submit them and a `CODE_OF_CONDUCT.md` file will be created at the root level of your repository. You can then view a special display by visiting your repository. An example of this rendering can be seen in the [GitHub Community repository](https://github.com/community/community).
 
-<ContentImage src="/images/add-a-code-of-conduct-to-your-project-4.png" alt="Screenshot of GitHub interface showing the rendering of the Code of conduct reference." width="285" height="65" />
+<ContentImage
+	src="/images/add-a-code-of-conduct-to-your-project-4.png"
+	alt="Screenshot of GitHub interface showing the rendering of the Code of conduct reference."
+	width="285"
+	height="65"
+/>
 
 This article may be obsolete in the future regarding some details, please check the latest version of the GitHub documentation for [Adding a code of conduct to your project](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project).
 
@@ -120,11 +153,16 @@ If you have selected the Contributor Covenant as your code of conduct, there is 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 ```
 
-<ContentImage src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="Contributor Covenant Badge" width="156" height="20" />
+<ContentImage
+	src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg"
+	alt="Contributor Covenant Badge"
+	width="156"
+	height="20"
+/>
 
 #### Reusable Code of Conduct in GitHub
 
-GitHub provides a convenient feature for reusing a code of conduct across multiple repositories by creating a default code of conduct. This default code of conduct is part of a list of default community health files, including `CONTRIBUTING`,  `FUNDING`, and issue and pull request templates. Any repository owned by the account that does not have its own code of conduct file will use this default one. To set this up, you can create a `.github` public repository and add a `CODE_OF_CONDUCT` or `CODE_OF_CONDUCT.md` file at the root level of the repository.
+GitHub provides a convenient feature for reusing a code of conduct across multiple repositories by creating a default code of conduct. This default code of conduct is part of a list of default community health files, including `CONTRIBUTING`, `FUNDING`, and issue and pull request templates. Any repository owned by the account that does not have its own code of conduct file will use this default one. To set this up, you can create a `.github` public repository and add a `CODE_OF_CONDUCT` or `CODE_OF_CONDUCT.md` file at the root level of the repository.
 
 To see an example of how this works, you can take a look at [our `.github` public GitHub repository](https://github.com/Open-reSource/.github).
 
