@@ -6,7 +6,6 @@ Please take a moment to review this document in order to make the contribution p
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open-source project. In return, they should reciprocate that respect in addressing your issue or assessing patches and features.
 
-
 ## Using the Issue Tracker
 
 The [issue tracker](https://github.com/Open-reSource/openresource.dev/issues) is the preferred channel for [bug reports](#bug-reports), [features requests](#feature-requests), [content](#content) and [submitting pull requests](#pull-requests), but please respect the following restrictions:
