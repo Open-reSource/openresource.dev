@@ -2,4 +2,4 @@ src/components
 src/content/docs/articles
 src/content/docs/guide
 src/content/docs/resources
-src/content/showcase
+src/content/showcase/*.json
