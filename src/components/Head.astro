@@ -1,6 +1,6 @@
 ---
-import type { Props } from '@astrojs/starlight/props'
-import Default from '@astrojs/starlight/components/Head.astro'
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Head.astro';
 
 // Remove the `/index` part of the ID to get the correct path to the image.
 // e.g. `guide/creating-your-own-open-source-project/index.mdx` -> `guide/creating-your-own-open-source-project.mdx`
@@ -13,45 +13,54 @@ const filteredAstroPropsId = Astro.props.id.replace(/\/index./, '.');
 // - 404
 // - articles.*
 // - articles/[0-9]*/
-const isOgIndex = Astro.props.id.startsWith('articles/tags/') || Astro.props.id.startsWith('articles.') || /^articles\/\d+/.test(Astro.props.id) || Astro.props.id.startsWith('404') || Astro.props.id.startsWith('articles/authors/');
+const isOgIndex =
+	Astro.props.id.startsWith('articles/tags/') ||
+	Astro.props.id.startsWith('articles.') ||
+	/^articles\/\d+/.test(Astro.props.id) ||
+	Astro.props.id.startsWith('404') ||
+	Astro.props.id.startsWith('articles/authors/');
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
 const ogImageUrl = new URL(
-  isOgIndex ? '/og/index.png' : `/og/${filteredAstroPropsId.replace(/\.\w+$/, '.png')}`,
-  Astro.site,
-)
+	isOgIndex ? '/og/index.png' : `/og/${filteredAstroPropsId.replace(/\.\w+$/, '.png')}`,
+	Astro.site
+);
 
 const { entry } = Astro.props;
 const { data } = entry;
 
-const isArticle = Astro.props.slug.startsWith('articles/') && !Astro.props.slug.startsWith('articles/tags') && !Astro.props.slug.startsWith('articles/authors') && !Astro.props.slug.match('articles/[0-9]*$');
+const isArticle =
+	Astro.props.slug.startsWith('articles/') &&
+	!Astro.props.slug.startsWith('articles/tags') &&
+	!Astro.props.slug.startsWith('articles/authors') &&
+	!Astro.props.slug.match('articles/[0-9]*$');
 
 let articleSchema;
 if (isArticle) {
-  articleSchema = JSON.stringify({
-    "@context": "https://schema.org/",
-    "@type": "Article",
-    "headline": entry.data.title,
-    "description": entry.data.description,
-    "image": "https://openresource.dev/og/" + entry.slug + ".png",
-    "author": {
-      "@type": "Person",
-      "name": "Julien Déramond",
-      "url": "https://github.com/julien-deramond/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Open &lcub;re&rcub;Source",
-      "url": "https://openresource.dev/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://openresource.dev/android-chrome-192x192.png"
-      }
-    },
-    "datePublished": entry.data.date,
-    "dateModified": entry.data.lastUpdated,
-  });
+	articleSchema = JSON.stringify({
+		'@context': 'https://schema.org/',
+		'@type': 'Article',
+		headline: entry.data.title,
+		description: entry.data.description,
+		image: 'https://openresource.dev/og/' + entry.slug + '.png',
+		author: {
+			'@type': 'Person',
+			name: 'Julien Déramond',
+			url: 'https://github.com/julien-deramond/',
+		},
+		publisher: {
+			'@type': 'Organization',
+			name: 'Open &lcub;re&rcub;Source',
+			url: 'https://openresource.dev/',
+			logo: {
+				'@type': 'ImageObject',
+				url: 'https://openresource.dev/android-chrome-192x192.png',
+			},
+		},
+		datePublished: entry.data.date,
+		dateModified: entry.data.lastUpdated,
+	});
 }
 
 // Please note that "og:type" is forced to "article" by Starlight and can't be changed.
@@ -62,13 +71,13 @@ if (isArticle) {
 <meta name="author" content="Open {re}Source" />
 
 <meta property="og:image" content={ogImageUrl} />
-<meta property="og:image:alt" content={data.title + (data.description ? ('—' + data.description) : '')} />
+<meta property="og:image:alt" content={data.title + (data.description ? '—' + data.description : '')} />
 
-<meta name="twitter:site" content={"@open_resource"} />
-<meta name="twitter:creator" content={"@JulienDeramond"} />
+<meta name="twitter:site" content={'@open_resource'} />
+<meta name="twitter:creator" content={'@JulienDeramond'} />
 <meta name="twitter:image" content={ogImageUrl} />
 <meta name="twitter:image:alt" content={data.title + '—' + data.description} />
 
 <link href="https://fosstodon.org/@openresource" rel="me" />
 
-{ articleSchema && <script type="application/ld+json" set:html={articleSchema}></script> }
+{articleSchema && <script type="application/ld+json" set:html={articleSchema} />}

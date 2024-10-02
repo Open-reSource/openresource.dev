@@ -1,19 +1,20 @@
 ---
 import { Image } from 'astro:assets';
 ---
+
 <div>
-  <Image src={Astro.props.src} alt={Astro.props.alt} width={Astro.props.width} height={Astro.props.height} />
+	<Image src={Astro.props.src} alt={Astro.props.alt} width={Astro.props.width} height={Astro.props.height} />
 </div>
 
 <style>
-  div {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-  }
+	div {
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+	}
 
-  img {
-    border-radius: .5rem;
-  }
+	img {
+		border-radius: 0.5rem;
+	}
 </style>

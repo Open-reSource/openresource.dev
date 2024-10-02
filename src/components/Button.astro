@@ -2,75 +2,76 @@
 import type { AstroBuiltinAttributes } from 'astro';
 
 export interface Props {
-  href: string,
-  class?: string | undefined;
-  'class:list'?: AstroBuiltinAttributes['class:list'];
+	href: string;
+	class?: string | undefined;
+	'class:list'?: AstroBuiltinAttributes['class:list'];
 }
 
 const { href, class: cssClass, 'class:list': cssClassList } = Astro.props;
 ---
+
 <a href={href} class:list={['sl-flex action', cssClass, cssClassList]}>
-  <slot />
+	<slot />
 </a>
 
 <style>
-  .action {
-    gap: 0.5em;
-    align-items: center;
-    border-radius: 999rem;
-    padding: 0.5rem 1.125rem;
-    background-color: var(--sl-action-bg);
-    color: var(--sl-action-color) !important;
-    line-height: 1.1875;
-    text-decoration: none;
-    font-size: var(--sl-text-sm);
-    font-weight: 600;
-  }
+	.action {
+		gap: 0.5em;
+		align-items: center;
+		border-radius: 999rem;
+		padding: 0.5rem 1.125rem;
+		background-color: var(--sl-action-bg);
+		color: var(--sl-action-color) !important;
+		line-height: 1.1875;
+		text-decoration: none;
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+	}
 
-  .action.action-primary,
-  .action.action-outline.action-primary:hover {
-    --sl-action-bg: var(--sl-color-accent);
-    --sl-action-color: var(--sl-color-black);
-  }
+	.action.action-primary,
+	.action.action-outline.action-primary:hover {
+		--sl-action-bg: var(--sl-color-accent);
+		--sl-action-color: var(--sl-color-black);
+	}
 
-  .action.action-secondary,
-  .action.action-outline.action-secondary:hover {
-    --sl-action-bg: var(--sl-color-secondary-high);
-    --sl-action-color: var(--sl-color-black);
-  }
+	.action.action-secondary,
+	.action.action-outline.action-secondary:hover {
+		--sl-action-bg: var(--sl-color-secondary-high);
+		--sl-action-color: var(--sl-color-black);
+	}
 
-  .action.action-minimal.action-primary {
-    --sl-action-color: var(--sl-color-accent);
-  }
+	.action.action-minimal.action-primary {
+		--sl-action-color: var(--sl-color-accent);
+	}
 
-  .action.action-minimal.action-secondary {
-    --sl-action-color: var(--sl-color-secondary-high);
-  }
+	.action.action-minimal.action-secondary {
+		--sl-action-color: var(--sl-color-secondary-high);
+	}
 
-  .action.action-minimal {
-    --sl-action-bg: transparent;
-    padding-inline: 0;
-  }
+	.action.action-minimal {
+		--sl-action-bg: transparent;
+		padding-inline: 0;
+	}
 
-  .action.action-outline.action-primary {
-    border-color: var(--sl-color-accent);
-    --sl-action-color: var(--sl-color-accent);
-  }
+	.action.action-outline.action-primary {
+		border-color: var(--sl-color-accent);
+		--sl-action-color: var(--sl-color-accent);
+	}
 
-  .action.action-outline.action-secondary {
-    border-color: var(--sl-color-secondary-high);
-    --sl-action-color: var(--sl-color-secondary-high);
-  }
+	.action.action-outline.action-secondary {
+		border-color: var(--sl-color-secondary-high);
+		--sl-action-color: var(--sl-color-secondary-high);
+	}
 
-  .action.action-outline {
-    --sl-action-bg: transparent;
-    border: 1px solid;
-  }
+	.action.action-outline {
+		--sl-action-bg: transparent;
+		border: 1px solid;
+	}
 
-  @media (min-width: 50rem) {
-    .action {
-      font-size: var(--sl-text-base);
-      padding: 1rem 1.25rem;
-    }
-  }
+	@media (min-width: 50rem) {
+		.action {
+			font-size: var(--sl-text-base);
+			padding: 1rem 1.25rem;
+		}
+	}
 </style>
