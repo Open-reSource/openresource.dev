@@ -17,6 +17,8 @@ head:
       content: "website"
 ---
 
+import ContentImage from '../../../components/ContentImage.astro';
+
 {/* prettier-ignore */}
 <p class="lead">Bluesky released starter packs on June 26, 2024. They are personalized invites that allow users to bring people directly into your slice of Bluesky!</p>
 
@@ -42,7 +44,14 @@ We followed the tutorial provided by Bluesky [in their blog post](https://bsky.s
 
 Below is the link to our open source Bluesky starter pack:
 
-[![QR code to access the Open {re}Source Bluesky starter pack](/images/bluesky-starter-pack.png 'Open {re}Source Bluesky starter pack')](https://go.bsky.app/BrzaZ72)
+<a href="https://go.bsky.app/BrzaZ72" style="display: flex; margin-top: 20px; margin-bottom: 20px">
+	<ContentImage
+		src="/images/bluesky-starter-pack.png"
+		alt="Go to the Open {re}Source Bluesky starter pack"
+		width="300"
+		height="430"
+	/>
+</a>
 
 It contains accounts and individuals linked to the open-source world, as well as [the Open Source feed we created for Bluesky](https://bsky.app/profile/did:plc:7qnsmqeluaybzzdfuaic4ulf/feed/aaaitsh7hqhew).
 
