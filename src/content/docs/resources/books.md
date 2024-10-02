@@ -4,9 +4,10 @@ description: Find books related to open source.
 head:
   - tag: meta
     attrs:
-      property: "og:type"
-      content: "website"
+      property: 'og:type'
+      content: 'website'
 ---
+
 List of recommended books related to open source.
 
 - [Producing Open-Source Software](https://producingoss.com/) by Karl Fogel
