@@ -11,7 +11,7 @@
 		if (document) {
 			const progressScroll = document.getElementById('progress-scroll');
 			if (progressScroll) {
-				var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+				var scrollTop = window.scrollY || document.documentElement.scrollTop;
 				var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
 				var progress = (scrollTop / scrollHeight) * 100;
 				progressScroll.style.width = progress + '%';
