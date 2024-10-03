@@ -1,6 +1,7 @@
 ---
 import readingTime from 'reading-time';
 import { getCollection } from 'astro:content';
+import { Icon } from '@astrojs/starlight/components';
 
 export interface Props {
 	slug: string;
@@ -14,8 +15,21 @@ docs.filter((doc) => doc.slug.startsWith(slug)).map((doc) => (guideReadingTime +
 guideReadingTime = Math.ceil(guideReadingTime);
 ---
 
-{
-	guideReadingTime >= 60
-		? `${Math.floor(guideReadingTime / 60)} h ${Math.ceil(guideReadingTime % 60)} min`
-		: `${guideReadingTime} min`
-}
+<p class="sl-flex">
+	<Icon name="seti:clock" />
+	This {slug === 'guide' ? 'guide' : 'module'} will take you approximately
+
+	{
+		guideReadingTime >= 60
+			? `${Math.floor(guideReadingTime / 60)} h ${Math.ceil(guideReadingTime % 60)} min`
+			: `${guideReadingTime} min`
+	}
+
+	to read.
+</p>
+
+<style>
+	svg {
+		margin-right: 0.5rem;
+	}
+</style>
