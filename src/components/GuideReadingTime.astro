@@ -3,11 +3,7 @@ import readingTime from 'reading-time';
 import { getCollection } from 'astro:content';
 import { Icon } from '@astrojs/starlight/components';
 
-export interface Props {
-	slug: string;
-}
-
-const { slug } = Astro.props;
+const slug = Astro.url.pathname.slice(1);
 
 const docs = await getCollection('docs');
 let guideReadingTime = 0;
