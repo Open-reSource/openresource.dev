@@ -2,10 +2,11 @@
 title: Finding Open-Source Projects
 description: Find the perfect open-source project to learn new skills and collaborate with developers. Explore ways to find projects aligned with your interests. Start today!
 date: 2023-04-06
-lastUpdated: 2023-05-17
+lastUpdated: 2024-10-06
 ---
 
 import { Badge } from '@astrojs/starlight/components';
+import ContentImage from '../../../../components/ContentImage.astro';
 
 {/* prettier-ignore */}
 <p class="lead">Open-source projects are a great way to learn new skills, collaborate with other developers, and contribute to the larger tech community. However, finding the right project can be overwhelming. In this chapter, we'll explore some ways to find open-source projects that align with your interests and expertise.</p>
@@ -37,6 +38,14 @@ Finding the right open-source project can be a challenging task, but it's worth 
 Sometimes, you don't need to look far to find an open-source project to contribute to. If you use a particular tool or software regularly and notice areas that could be improved or features that could be added, consider contributing to that project. As a user, you have a unique perspective and understanding of the software, which can be valuable to the project's development.
 
 Additionally, contributing to a project that you already use regularly can be a great way to learn new skills and gain experience in a familiar environment. So don't be afraid to look at the tools and software you already use and consider contributing to their development.
+
+### Github Hidden "Contribute" Page
+
+Although it's not visible from the main interface or mentioned in the official documentation, every GitHub repository includes a hidden "Contribute" page. This page gathers issues that are suitable for new contributors, usually marked with the <Badge text="good first issue" /> label, and provides a link to the repository’s contributing guidelines.
+
+To access this page, simply append `/contribute` to the repository URL. For instance, the "Contribute" page for the Astro repository can be found at https://github.com/withastro/astro/contribute.
+
+<ContentImage src="/images/astro-github-contribute-page.png" width="720" height="290" alt="" />
 
 ## Aggregators and Curated Lists
 
