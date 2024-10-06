@@ -32,9 +32,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
 					families: ['Inter Variable'],
 				},
 			},
-			fonts: [
-				'https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2'
-			]
+			fonts: ['https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2'],
 		};
 	},
 });
