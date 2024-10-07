@@ -36,7 +36,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
     "starlight-blog": "^0.13.0",
-    "starlight-links-validator": "^0.12.2",
+    "starlight-links-validator": "^0.12.3",
     "starlight-showcases": "^0.2.0",
     "tsx": "^4.19.1",
     "vercel": "^37.6.1",
