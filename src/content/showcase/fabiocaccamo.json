@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1611,
+      "stars": 1612,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 7,
-      "stars": 1795,
+      "prs": 9,
+      "stars": 1803,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -55,8 +55,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 12,
-      "stars": 1488,
+      "prs": 13,
+      "stars": 1489,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -83,7 +83,7 @@
       "contributors": 27,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 96,
+      "forks": 94,
       "issues": 5,
       "languages": [
         "Python",
@@ -92,8 +92,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 620,
+      "prs": 6,
+      "stars": 619,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -111,8 +111,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 661,
+      "prs": 6,
+      "stars": 666,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -129,8 +129,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 473,
+      "prs": 6,
+      "stars": 474,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -148,8 +148,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 7,
-      "stars": 515,
+      "prs": 8,
+      "stars": 517,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -183,8 +183,8 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 193,
+      "prs": 6,
+      "stars": 197,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -212,7 +212,7 @@
       "description": "🧊 convert your dynamic django site to a static one with one line of code.",
       "discussions": 0,
       "forks": 15,
-      "issues": 2,
+      "issues": 1,
       "languages": [
         "Python",
         "HTML",
@@ -220,8 +220,8 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 93,
+      "prs": 3,
+      "stars": 94,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -230,15 +230,15 @@
       "contributors": 7,
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 1,
-      "forks": 24,
+      "forks": 23,
       "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 71,
+      "prs": 5,
+      "stars": 72,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
@@ -254,7 +254,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 5,
+      "prs": 6,
       "stars": 67,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -271,7 +271,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 5,
       "stars": 65,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -288,7 +288,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 7,
+      "prs": 9,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
