@@ -37,11 +37,11 @@ export default defineConfig({
 			},
 			plugins: [
 				starlightSidebarTopics([
-          {
-            label: 'Guide',
-            link: '/guide/',
-            icon: 'open-book',
-            items: [
+					{
+						label: 'Guide',
+						link: '/guide/',
+						icon: 'open-book',
+						items: [
 							{
 								label: 'Introduction',
 								slug: 'guide',
@@ -229,22 +229,22 @@ export default defineConfig({
 								],
 							},
 						],
-          },
+					},
 					{
 						label: 'Articles',
-            link: '/articles/',
-            icon: 'seti:odata',
+						link: '/articles/',
+						icon: 'seti:odata',
 						items: [
 							{
 								label: 'Articles',
-								link: '/articles',
-							}
-						]
+								autogenerate: { directory: 'articles' },
+							},
+						],
 					},
 					{
 						label: 'Resources',
-            link: '/resources/books',
-            icon: 'seti:svg',
+						link: '/resources/books',
+						icon: 'seti:svg',
 						items: [
 							{
 								label: 'Books',
@@ -262,9 +262,9 @@ export default defineConfig({
 								label: 'Podcasts',
 								link: '/resources/podcasts',
 							},
-						]
+						],
 					},
-        ]),
+				]),
 				starlightLinksValidator({
 					exclude: ['/articles'],
 				}),
