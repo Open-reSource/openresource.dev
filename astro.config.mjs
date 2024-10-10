@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import vercel from '@astrojs/vercel/serverless';
 import starlightBlog from 'starlight-blog';
 import starlightLinksValidator from 'starlight-links-validator';
+import starlightSidebarTopics from 'starlight-sidebar-topics';
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,6 +36,235 @@ export default defineConfig({
 				Header: './src/components/Header.astro',
 			},
 			plugins: [
+				starlightSidebarTopics([
+					{
+						label: 'Guide',
+						link: '/guide/',
+						icon: 'open-book',
+						items: [
+							{
+								label: 'Introduction',
+								slug: 'guide',
+							},
+							{
+								label: 'What Is Open Source?',
+								collapsed: false,
+								items: [
+									{
+										label: 'Introduction',
+										slug: 'guide/what-is-open-source',
+									},
+									{
+										slug: 'guide/what-is-open-source/definition-of-open-source',
+									},
+									{
+										slug: 'guide/what-is-open-source/brief-history-of-open-source',
+									},
+									{
+										slug: 'guide/what-is-open-source/the-significance-of-open-source',
+									},
+									{
+										slug: 'guide/what-is-open-source/examples-of-successful-open-source-projects',
+									},
+									{
+										slug: 'guide/what-is-open-source/types-of-open-source-projects',
+									},
+									{
+										slug: 'guide/what-is-open-source/types-of-open-source-software-projects',
+									},
+									{
+										slug: 'guide/what-is-open-source/benefits-of-open-source',
+									},
+								],
+							},
+							{
+								label: 'Getting Started',
+								collapsed: true,
+								items: [
+									{
+										label: 'Introduction',
+										slug: 'guide/getting-started-with-open-source',
+									},
+									{
+										slug: 'guide/getting-started-with-open-source/source-code-hosting-platforms',
+									},
+									{
+										slug: 'guide/getting-started-with-open-source/finding-open-source-projects',
+									},
+								],
+							},
+							{
+								label: 'Contributing',
+								collapsed: true,
+								items: [
+									{
+										label: 'Introduction',
+										slug: 'guide/contributing-to-open-source-projects',
+									},
+									{
+										slug: 'guide/contributing-to-open-source-projects/finding-open-source-projects',
+									},
+									{
+										slug: 'guide/contributing-to-open-source-projects/contributing-to-open-source',
+									},
+									{
+										slug: 'guide/contributing-to-open-source-projects/getting-involved-in-the-open-source-community',
+									},
+									{
+										slug: 'guide/contributing-to-open-source-projects/building-a-portfolio-with-open-source-contributions',
+									},
+									{
+										slug: 'guide/contributing-to-open-source-projects/overcoming-challenges-in-open-source-contributions',
+									},
+								],
+							},
+							{
+								label: 'Creating',
+								collapsed: true,
+								items: [
+									{
+										label: 'Introduction',
+										slug: 'guide/creating-your-own-open-source-project',
+									},
+									{
+										slug: 'guide/creating-your-own-open-source-project/choosing-a-project-idea',
+									},
+									{
+										slug: 'guide/creating-your-own-open-source-project/planning-your-project',
+									},
+									{
+										slug: 'guide/creating-your-own-open-source-project/creating-your-project',
+									},
+									{
+										slug: 'guide/creating-your-own-open-source-project/legal-considerations',
+									},
+									{
+										slug: 'guide/creating-your-own-open-source-project/developing-your-project',
+									},
+									{
+										slug: 'guide/creating-your-own-open-source-project/building-and-engaging-your-community',
+									},
+									{
+										slug: 'guide/creating-your-own-open-source-project/contributing-your-project-to-the-open-source-community',
+										badge: 'Coming soon',
+									},
+								],
+							},
+							{
+								label: 'Maintaining',
+								collapsed: true,
+								items: [
+									{
+										label: 'Introduction',
+										slug: 'guide/maintaining-open-source-projects',
+									},
+									{
+										slug: 'guide/maintaining-open-source-projects/introduction-to-open-source-project-maintenance',
+									},
+									{
+										slug: 'guide/maintaining-open-source-projects/managing-contributions-and-community-engagement',
+										badge: 'Coming soon',
+									},
+									{
+										slug: 'guide/maintaining-open-source-projects/managing-project-dependencies',
+										badge: 'Coming soon',
+									},
+									{
+										slug: 'guide/maintaining-open-source-projects/fostering-a-strong-and-inclusive-community',
+									},
+									{
+										slug: 'guide/maintaining-open-source-projects/ensuring-project-sustainability',
+										badge: 'Coming soon',
+									},
+								],
+							},
+							{
+								label: 'Promoting',
+								collapsed: true,
+								items: [
+									{
+										label: 'Introduction',
+										slug: 'guide/promoting-open-source-projects',
+									},
+									{
+										slug: 'guide/promoting-open-source-projects/introduction-to-project-promotion',
+									},
+									{
+										slug: 'guide/promoting-open-source-projects/building-a-strong-project-identity',
+									},
+									{
+										slug: 'guide/promoting-open-source-projects/crafting-an-engaging-project-website',
+									},
+								],
+							},
+							{
+								label: 'Financing',
+								collapsed: true,
+								items: [
+									{
+										label: 'Introduction',
+										slug: 'guide/financing-open-source-projects',
+									},
+									{
+										slug: 'guide/financing-open-source-projects/importance-and-challenges-of-financing-open-source-projects',
+									},
+									{
+										slug: 'guide/financing-open-source-projects/understanding-funding-models',
+									},
+									{
+										slug: 'guide/financing-open-source-projects/effective-fundraising-strategies',
+									},
+									{
+										slug: 'guide/financing-open-source-projects/resource-allocation-and-budgeting',
+										badge: 'Coming soon',
+									},
+									{
+										slug: 'guide/financing-open-source-projects/fostering-a-sustainable-ecosystem',
+										badge: 'Coming soon',
+									},
+									{
+										slug: 'guide/financing-open-source-projects/transparency-accountability-and-community-involvement',
+										badge: 'Coming soon',
+									},
+								],
+							},
+						],
+					},
+					{
+						label: 'Articles',
+						link: '/articles/',
+						icon: 'seti:odata',
+						items: [
+							{
+								label: 'Articles',
+								autogenerate: { directory: 'articles' },
+							},
+						],
+					},
+					{
+						label: 'Resources',
+						link: '/resources/books',
+						icon: 'seti:svg',
+						items: [
+							{
+								label: 'Books',
+								link: '/resources/books',
+							},
+							{
+								label: 'Events',
+								link: '/resources/events',
+							},
+							{
+								label: 'Open Sourcerers',
+								link: '/resources/open-sourcerers',
+							},
+							{
+								label: 'Podcasts',
+								link: '/resources/podcasts',
+							},
+						],
+					},
+				]),
 				starlightLinksValidator({
 					exclude: ['/articles'],
 				}),
@@ -135,207 +365,6 @@ export default defineConfig({
 					lang: 'en',
 				},
 			},
-			sidebar: [
-				{
-					label: 'Guide',
-					items: [
-						{
-							label: 'Introduction',
-							slug: 'guide',
-						},
-						{
-							label: 'What Is Open Source?',
-							collapsed: false,
-							items: [
-								{
-									label: 'Introduction',
-									slug: 'guide/what-is-open-source',
-								},
-								{
-									slug: 'guide/what-is-open-source/definition-of-open-source',
-								},
-								{
-									slug: 'guide/what-is-open-source/brief-history-of-open-source',
-								},
-								{
-									slug: 'guide/what-is-open-source/the-significance-of-open-source',
-								},
-								{
-									slug: 'guide/what-is-open-source/examples-of-successful-open-source-projects',
-								},
-								{
-									slug: 'guide/what-is-open-source/types-of-open-source-projects',
-								},
-								{
-									slug: 'guide/what-is-open-source/types-of-open-source-software-projects',
-								},
-								{
-									slug: 'guide/what-is-open-source/benefits-of-open-source',
-								},
-							],
-						},
-						{
-							label: 'Getting Started',
-							collapsed: true,
-							items: [
-								{
-									label: 'Introduction',
-									slug: 'guide/getting-started-with-open-source',
-								},
-								{
-									slug: 'guide/getting-started-with-open-source/source-code-hosting-platforms',
-								},
-								{
-									slug: 'guide/getting-started-with-open-source/finding-open-source-projects',
-								},
-							],
-						},
-						{
-							label: 'Contributing',
-							collapsed: true,
-							items: [
-								{
-									label: 'Introduction',
-									slug: 'guide/contributing-to-open-source-projects',
-								},
-								{
-									slug: 'guide/contributing-to-open-source-projects/finding-open-source-projects',
-								},
-								{
-									slug: 'guide/contributing-to-open-source-projects/contributing-to-open-source',
-								},
-								{
-									slug: 'guide/contributing-to-open-source-projects/getting-involved-in-the-open-source-community',
-								},
-								{
-									slug: 'guide/contributing-to-open-source-projects/building-a-portfolio-with-open-source-contributions',
-								},
-								{
-									slug: 'guide/contributing-to-open-source-projects/overcoming-challenges-in-open-source-contributions',
-								},
-							],
-						},
-						{
-							label: 'Creating',
-							collapsed: true,
-							items: [
-								{
-									label: 'Introduction',
-									slug: 'guide/creating-your-own-open-source-project',
-								},
-								{
-									slug: 'guide/creating-your-own-open-source-project/choosing-a-project-idea',
-								},
-								{
-									slug: 'guide/creating-your-own-open-source-project/planning-your-project',
-								},
-								{
-									slug: 'guide/creating-your-own-open-source-project/creating-your-project',
-								},
-								{
-									slug: 'guide/creating-your-own-open-source-project/legal-considerations',
-								},
-								{
-									slug: 'guide/creating-your-own-open-source-project/developing-your-project',
-								},
-								{
-									slug: 'guide/creating-your-own-open-source-project/building-and-engaging-your-community',
-								},
-								{
-									slug: 'guide/creating-your-own-open-source-project/contributing-your-project-to-the-open-source-community',
-									badge: 'Coming soon',
-								},
-							],
-						},
-						{
-							label: 'Maintaining',
-							collapsed: true,
-							items: [
-								{
-									label: 'Introduction',
-									slug: 'guide/maintaining-open-source-projects',
-								},
-								{
-									slug: 'guide/maintaining-open-source-projects/introduction-to-open-source-project-maintenance',
-								},
-								{
-									slug: 'guide/maintaining-open-source-projects/managing-contributions-and-community-engagement',
-									badge: 'Coming soon',
-								},
-								{
-									slug: 'guide/maintaining-open-source-projects/managing-project-dependencies',
-									badge: 'Coming soon',
-								},
-								{
-									slug: 'guide/maintaining-open-source-projects/fostering-a-strong-and-inclusive-community',
-								},
-								{
-									slug: 'guide/maintaining-open-source-projects/ensuring-project-sustainability',
-									badge: 'Coming soon',
-								},
-							],
-						},
-						{
-							label: 'Promoting',
-							collapsed: true,
-							items: [
-								{
-									label: 'Introduction',
-									slug: 'guide/promoting-open-source-projects',
-								},
-								{
-									slug: 'guide/promoting-open-source-projects/introduction-to-project-promotion',
-								},
-								{
-									slug: 'guide/promoting-open-source-projects/building-a-strong-project-identity',
-								},
-								{
-									slug: 'guide/promoting-open-source-projects/crafting-an-engaging-project-website',
-								},
-							],
-						},
-						{
-							label: 'Financing',
-							collapsed: true,
-							items: [
-								{
-									label: 'Introduction',
-									slug: 'guide/financing-open-source-projects',
-								},
-								{
-									slug: 'guide/financing-open-source-projects/importance-and-challenges-of-financing-open-source-projects',
-								},
-								{
-									slug: 'guide/financing-open-source-projects/understanding-funding-models',
-								},
-								{
-									slug: 'guide/financing-open-source-projects/effective-fundraising-strategies',
-								},
-								{
-									slug: 'guide/financing-open-source-projects/resource-allocation-and-budgeting',
-									badge: 'Coming soon',
-								},
-								{
-									slug: 'guide/financing-open-source-projects/fostering-a-sustainable-ecosystem',
-									badge: 'Coming soon',
-								},
-								{
-									slug: 'guide/financing-open-source-projects/transparency-accountability-and-community-involvement',
-									badge: 'Coming soon',
-								},
-							],
-						},
-					],
-				},
-				{
-					label: 'Resources',
-					autogenerate: { directory: 'resources' },
-				},
-				{
-					label: 'Articles',
-					link: '/articles',
-				},
-			],
 		}),
 	],
 });

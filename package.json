@@ -38,6 +38,7 @@
     "starlight-blog": "^0.14.1",
     "starlight-links-validator": "^0.12.3",
     "starlight-showcases": "^0.2.0",
+    "starlight-sidebar-topics": "^0.2.0",
     "tsx": "^4.19.1",
     "vercel": "^37.12.1",
     "vitest": "^2.1.3"
