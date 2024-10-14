@@ -83,7 +83,7 @@
       ],
       "name": "floss-toolbox",
       "owner": "Orange-OpenSource",
-      "prs": 7,
+      "prs": 8,
       "stars": 22,
       "url": "https://github.com/Orange-OpenSource/floss-toolbox"
     },
@@ -113,7 +113,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 4,
-      "issues": 14,
+      "issues": 15,
       "languages": [
         "JavaScript",
         "HTML",
@@ -121,7 +121,7 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 0,
+      "prs": 1,
       "stars": 18,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
@@ -131,22 +131,22 @@
       "contributors": 152,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
-      "forks": 15,
-      "issues": 31,
+      "forks": 16,
+      "issues": 29,
       "languages": [
         "TypeScript",
         "Gherkin",
         "HTML",
         "JavaScript",
         "Kotlin",
-        "Dart",
         "CSS",
+        "Dart",
         "Shell",
         "Dockerfile"
       ],
       "name": "uuv",
       "owner": "Orange-OpenSource",
-      "prs": 12,
+      "prs": 13,
       "stars": 101,
       "url": "https://github.com/Orange-OpenSource/uuv"
     },
@@ -157,7 +157,7 @@
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 19,
-      "issues": 29,
+      "issues": 30,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -177,7 +177,7 @@
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 69,
       "forks": 482,
-      "issues": 149,
+      "issues": 153,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 0,
-      "stars": 12895,
+      "prs": 2,
+      "stars": 12920,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

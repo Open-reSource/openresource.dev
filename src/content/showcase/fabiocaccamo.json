@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1612,
+      "stars": 1613,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 180,
-      "issues": 16,
+      "issues": 15,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 9,
-      "stars": 1803,
+      "prs": 3,
+      "stars": 1811,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,16 +47,17 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
       "forks": 49,
-      "issues": 15,
+      "issues": 14,
       "languages": [
         "Python",
         "HTML",
-        "Q#"
+        "Q#",
+        "Qt Script"
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 13,
-      "stars": 1489,
+      "prs": 4,
+      "stars": 1493,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -84,7 +85,7 @@
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
       "forks": 94,
-      "issues": 5,
+      "issues": 4,
       "languages": [
         "Python",
         "HTML",
@@ -93,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 619,
+      "stars": 620,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -103,7 +104,7 @@
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
       "forks": 32,
-      "issues": 5,
+      "issues": 6,
       "languages": [
         "Python",
         "JavaScript",
@@ -112,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 666,
+      "stars": 669,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -149,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 517,
+      "stars": 522,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -183,8 +184,8 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 197,
+      "prs": 1,
+      "stars": 201,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -220,7 +221,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 94,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -237,7 +238,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 5,
+      "prs": 1,
       "stars": 72,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -271,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 5,
+      "prs": 1,
       "stars": 65,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -288,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 9,
+      "prs": 10,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
