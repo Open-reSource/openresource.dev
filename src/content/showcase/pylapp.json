@@ -113,7 +113,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 4,
-      "issues": 15,
+      "issues": 14,
       "languages": [
         "JavaScript",
         "HTML",
@@ -128,11 +128,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 152,
+      "contributors": 153,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
       "forks": 16,
-      "issues": 29,
+      "issues": 28,
       "languages": [
         "TypeScript",
         "Gherkin",
@@ -146,7 +146,7 @@
       ],
       "name": "uuv",
       "owner": "Orange-OpenSource",
-      "prs": 13,
+      "prs": 11,
       "stars": 101,
       "url": "https://github.com/Orange-OpenSource/uuv"
     },
@@ -166,18 +166,18 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 5,
+      "prs": 4,
       "stars": 59,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 204,
+      "contributors": 205,
       "description": "Hurl, run and test HTTP requests with plain text.",
-      "discussions": 69,
-      "forks": 482,
-      "issues": 153,
+      "discussions": 70,
+      "forks": 486,
+      "issues": 154,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 2,
-      "stars": 12920,
+      "prs": 0,
+      "stars": 12966,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

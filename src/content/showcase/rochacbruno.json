@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
-      "contributors": 121,
+      "contributors": 122,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 48,
-      "forks": 290,
-      "issues": 120,
+      "discussions": 49,
+      "forks": 291,
+      "issues": 123,
       "languages": [
         "Python",
         "Shell",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 3,
-      "stars": 3746,
+      "stars": 3756,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1111,
+      "stars": 1116,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 2079,
+      "stars": 2080,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
