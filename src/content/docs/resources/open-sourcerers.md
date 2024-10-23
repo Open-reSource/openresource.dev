@@ -1,6 +1,7 @@
 ---
 title: Open Sourcerers
 description: 'Find open sourcerers: open source enthusiasts who are passionate about sharing their knowledge and experience with the open source community.'
+topic: resources
 head:
   - tag: meta
     attrs:

@@ -41,6 +41,7 @@ export default defineConfig({
 						label: 'Guide',
 						link: '/guide/',
 						icon: 'open-book',
+						id: 'guide',
 						items: [
 							{
 								label: 'Introduction',
@@ -234,6 +235,7 @@ export default defineConfig({
 						label: 'Articles',
 						link: '/articles/',
 						icon: 'seti:odata',
+						id: 'articles',
 						items: [
 							{
 								label: 'Articles',
@@ -245,6 +247,7 @@ export default defineConfig({
 						label: 'Resources',
 						link: '/resources/books',
 						icon: 'seti:svg',
+						id: 'resources',
 						items: [
 							{
 								label: 'Books',
@@ -271,6 +274,7 @@ export default defineConfig({
 				starlightBlog({
 					title: 'Articles',
 					prefix: 'articles',
+					id: 'test',
 					authors: {
 						julien: {
 							name: 'Julien Déramond',

@@ -1,6 +1,7 @@
 ---
 title: Books
 description: Find books related to open source.
+topic: resources
 head:
   - tag: meta
     attrs:

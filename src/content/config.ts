@@ -47,7 +47,7 @@ const showcaseCollection = defineCollection({
 export const collections = {
 	docs: defineCollection({
 		schema: docsSchema({
-			extend: (context) => blogSchema(context),
+			extend: (context) => blogSchema(context).and(z.object({ topic: z.string().default('articles') }))
 		}),
 	}),
 	showcase: showcaseCollection,
