@@ -19,7 +19,7 @@
     "@astrojs/starlight": "^0.28.3",
     "@astrojs/vercel": "^7.8.2",
     "@vercel/analytics": "^1.3.1",
-    "astro": "^4.16.6"
+    "astro": "^4.16.7"
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
@@ -35,11 +35,11 @@
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
-    "starlight-blog": "^0.14.0",
+    "starlight-blog": "^0.14.1",
     "starlight-links-validator": "^0.12.3",
     "starlight-showcases": "^0.2.0",
     "tsx": "^4.19.1",
-    "vercel": "^37.12.0",
+    "vercel": "^37.12.1",
     "vitest": "^2.1.3"
   }
 }
