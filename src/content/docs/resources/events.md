@@ -1,6 +1,7 @@
 ---
 title: Events
 description: Find upcoming events related to open source.
+topic: resources
 head:
   - tag: meta
     attrs:

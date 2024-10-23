@@ -1,6 +1,7 @@
 ---
 title: Podcasts
 description: Find podcasts and interviews related to open source.
+topic: resources
 head:
   - tag: meta
     attrs:
