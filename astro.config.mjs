@@ -241,10 +241,6 @@ export default defineConfig({
 								{
 									slug: 'guide/creating-your-own-open-source-project/building-and-engaging-your-community',
 								},
-								{
-									slug: 'guide/creating-your-own-open-source-project/contributing-your-project-to-the-open-source-community',
-									badge: 'Coming soon',
-								},
 							],
 						},
 						{
@@ -291,6 +287,7 @@ export default defineConfig({
 								},
 								{
 									slug: 'guide/promoting-open-source-projects/crafting-an-engaging-project-website',
+									badge: 'Coming soon',
 								},
 							],
 						},
