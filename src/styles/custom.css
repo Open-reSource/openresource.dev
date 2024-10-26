@@ -55,6 +55,20 @@
 	font-weight: 500;
 }
 
+:is(h1, h2, h3, h4, h5, h6),
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) {
+	letter-spacing: -1px;
+	font-weight: 800;
+	line-height: 1.1;
+}
+
+.sl-markdown-content {
+	color: var(--sl-color-gray-2);
+	font-size: var(--sl-text-lg);
+	line-height: 1.6;
+	font-weight: 400;
+}
+
 .sl-markdown-content strong {
 	color: var(--sl-color-white);
 }
@@ -123,7 +137,6 @@
 }
 
 .homepage-section .content {
-	/* space-y-4 */
 	text-align: center;
 }
 
@@ -131,11 +144,10 @@
 	font-size: 1.875rem;
 	line-height: 2.25rem;
 	font-weight: 700;
-	letter-spacing: -0.05em;
+	letter-spacing: -1px;
 }
 
 .homepage-section .content > p {
-	color: var(--sl-text-base);
 	max-width: 700px;
 }
 
