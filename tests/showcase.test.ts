@@ -29,11 +29,11 @@ afterAll(() => {
 });
 
 test('should collect links', async () => {
-	const author_1 = faker.internet.userName();
+	const author_1 = faker.internet.username();
 	const author_1_links = [getTestUnknownLink(), getTestUnknownLink()];
-	const author_2 = faker.internet.userName();
+	const author_2 = faker.internet.username();
 	const author_2_links: string[] = [];
-	const author_3 = faker.internet.userName();
+	const author_3 = faker.internet.username();
 	const author_3_links = [getTestUnknownLink()];
 
 	const scraper = getTestScrapper([
@@ -112,7 +112,7 @@ test('should sanitize URLs', async () => {
 });
 
 test('should collect links from the same user spread across multiple comments', async () => {
-	const author = faker.internet.userName();
+	const author = faker.internet.username();
 	const author_comment_1_links = [getTestUnknownLink()];
 	const author_comment_2_links = [getTestUnknownLink(), getTestUnknownLink()];
 
@@ -186,9 +186,9 @@ test('should delete the existing showcase content collection before saving showc
 });
 
 test('should save a showcase file per user', async () => {
-	const author_1 = faker.internet.userName();
+	const author_1 = faker.internet.username();
 	const author_1_links = [getTestUnknownLink(), getTestUnknownLink()];
-	const author_2 = faker.internet.userName();
+	const author_2 = faker.internet.username();
 	const author_2_links = [getTestUnknownLink()];
 
 	const scraper = getTestScrapper([
@@ -217,7 +217,7 @@ test('should save a showcase file per user', async () => {
 
 describe('GitHub repo link languages', () => {
 	test('should collect languages', async () => {
-		const author = faker.internet.userName();
+		const author = faker.internet.username();
 		const link_1 = getTestGitHubLink(author, 'repo_1');
 		const link_1_languages = [getTestRepoLanguage(), getTestRepoLanguage()];
 		const link_2 = getTestGitHubLink(author, 'repo_2');
@@ -253,7 +253,7 @@ describe('GitHub repo link languages', () => {
 	});
 
 	test('should ignore languages with no color', async () => {
-		const author = faker.internet.userName();
+		const author = faker.internet.username();
 		const link = getTestGitHubLink(author, 'repo');
 
 		const scraper = getTestScrapper([
@@ -273,7 +273,7 @@ describe('GitHub repo link languages', () => {
 	});
 
 	test('should ignore very small amount of Shell language', async () => {
-		const author = faker.internet.userName();
+		const author = faker.internet.username();
 		const link = getTestGitHubLink(author, 'repo');
 		const link_language_1 = getTestRepoLanguage();
 		const link_language_2 = { node: { color: faker.color.rgb(), name: 'Shell' }, size: 200 };
