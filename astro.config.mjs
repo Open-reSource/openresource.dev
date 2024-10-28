@@ -23,6 +23,7 @@ export default defineConfig({
 		'/events': '/resources/events',
 		'/open-sourcerers': '/resources/open-sourcerers',
 		'/podcasts': '/resources/podcasts',
+		'/resources': '/resources/books',
 		'/rss.xml': '/articles/rss.xml',
 	},
 	integrations: [
