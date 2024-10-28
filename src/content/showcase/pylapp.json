@@ -64,16 +64,16 @@
       "name": "SmoothClicker",
       "owner": "pylapp",
       "prs": 0,
-      "stars": 4,
+      "stars": 5,
       "url": "https://github.com/pylapp/SmoothClicker"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 144,
+      "contributors": 143,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 2,
-      "forks": 6,
+      "forks": 7,
       "issues": 41,
       "languages": [
         "Python",
@@ -90,11 +90,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 148,
+      "contributors": 147,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 0,
-      "issues": 5,
+      "issues": 7,
       "languages": [
         "HTML",
         "JavaScript",
@@ -109,11 +109,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 154,
+      "contributors": 153,
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 4,
-      "issues": 14,
+      "issues": 11,
       "languages": [
         "JavaScript",
         "HTML",
@@ -121,39 +121,39 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 1,
+      "prs": 0,
       "stars": 18,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 153,
+      "contributors": 152,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
-      "forks": 16,
-      "issues": 28,
+      "forks": 17,
+      "issues": 29,
       "languages": [
         "TypeScript",
         "Gherkin",
         "HTML",
         "JavaScript",
         "Kotlin",
-        "CSS",
         "Dart",
+        "CSS",
         "Shell",
         "Dockerfile"
       ],
       "name": "uuv",
       "owner": "Orange-OpenSource",
-      "prs": 11,
-      "stars": 101,
+      "prs": 13,
+      "stars": 103,
       "url": "https://github.com/Orange-OpenSource/uuv"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 168,
+      "contributors": 167,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 19,
@@ -175,9 +175,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
       "contributors": 205,
       "description": "Hurl, run and test HTTP requests with plain text.",
-      "discussions": 70,
+      "discussions": 71,
       "forks": 486,
-      "issues": 154,
+      "issues": 150,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 0,
-      "stars": 12966,
+      "prs": 2,
+      "stars": 12998,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
