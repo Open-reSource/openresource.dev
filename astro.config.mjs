@@ -261,7 +261,6 @@ export default defineConfig({
 								},
 								{
 									slug: 'guide/maintaining-open-source-projects/managing-project-dependencies',
-									badge: 'Coming soon',
 								},
 								{
 									slug: 'guide/maintaining-open-source-projects/fostering-a-strong-and-inclusive-community',
