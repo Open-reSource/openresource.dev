@@ -125,7 +125,7 @@ export default defineConfig({
 				'x.com': 'https://x.com/open_resource',
 				linkedin: 'https://linkedin.com/company/open-re-source/',
 				mastodon: 'https://fosstodon.org/@openresource',
-				blueSky: 'https://bsky.app/profile/openresource.bsky.social',
+				blueSky: 'https://bsky.app/profile/openresource.dev',
 				threads: 'https://www.threads.net/@openresource',
 			},
 			customCss: ['./src/styles/custom.css'],

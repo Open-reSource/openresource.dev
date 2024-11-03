@@ -69,7 +69,7 @@ Get an update on Open {re}Source's development and chat with the project maintai
 
 - Follow [@open_resource on Twitter](https://twitter.com/open_resource).
 - Follow [@openresource on Mastodon](https://fosstodon.org/@openresource).
-- Follow [@openresource on Bluesky](https://bsky.app/profile/openresource.bsky.social).
+- Follow [@openresource on Bluesky](https://bsky.app/profile/openresource.dev).
 - Follow [@openresource on Threads](https://www.threads.net/@openresource).
 - Follow [@open-re-source on LinkedIn](https://www.linkedin.com/company/open-re-source/).
 - Explore [our GitHub Discussions](https://github.com/orgs/Open-reSource/discussions).
