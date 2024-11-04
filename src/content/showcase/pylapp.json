@@ -64,7 +64,7 @@
       "name": "SmoothClicker",
       "owner": "pylapp",
       "prs": 0,
-      "stars": 5,
+      "stars": 6,
       "url": "https://github.com/pylapp/SmoothClicker"
     },
     {
@@ -132,7 +132,7 @@
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
       "forks": 17,
-      "issues": 29,
+      "issues": 31,
       "languages": [
         "TypeScript",
         "Gherkin",
@@ -146,8 +146,8 @@
       ],
       "name": "uuv",
       "owner": "Orange-OpenSource",
-      "prs": 13,
-      "stars": 103,
+      "prs": 16,
+      "stars": 104,
       "url": "https://github.com/Orange-OpenSource/uuv"
     },
     {
@@ -166,7 +166,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 4,
+      "prs": 6,
       "stars": 59,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -177,7 +177,7 @@
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 71,
       "forks": 486,
-      "issues": 150,
+      "issues": 149,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 2,
-      "stars": 12998,
+      "prs": 1,
+      "stars": 13033,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
