@@ -16,14 +16,14 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/starlight": "^0.28.4",
+    "@astrojs/starlight": "^0.28.5",
     "@astrojs/vercel": "^7.8.2",
     "@vercel/analytics": "^1.3.2",
     "astro": "^4.16.8"
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
-    "@faker-js/faker": "^9.1.0",
+    "@faker-js/faker": "^9.2.0",
     "@octokit/graphql": "^8.1.1",
     "@octokit/graphql-schema": "^15.25.0",
     "@types/parse-github-url": "^1.0.3",
@@ -36,7 +36,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
     "starlight-blog": "^0.14.1",
-    "starlight-links-validator": "^0.12.4",
+    "starlight-links-validator": "^0.13.0",
     "starlight-showcases": "^0.2.0",
     "tsx": "^4.19.2",
     "vercel": "^37.14.0",
