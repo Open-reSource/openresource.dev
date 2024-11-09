@@ -82,8 +82,9 @@ Code released under the [MIT License](https://github.com/Open-reSource/openresou
 
 Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
 
-- `public/images/` directory
-- `src/content/docs` directory
+- `public` directory
+- `src/assets` directory
+- `src/content` directory
 
 ## Thanks
 
