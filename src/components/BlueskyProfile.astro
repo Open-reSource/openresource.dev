@@ -1,0 +1,29 @@
+---
+// Thanks to @saurabhdaware for providing this <bsky-widget> component available at https://github.com/saurabhdaware/bsky-widget
+
+export interface Props {
+	handle: string;
+}
+
+const { handle } = Astro.props;
+---
+
+<style>
+	bsky-widget {
+		min-height: 470px;
+		width: 350px;
+	}
+
+	bsky-container {
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+	}
+</style>
+
+<div class="bsky-container">
+	<bsky-widget data-handle={handle}> </bsky-widget>
+</div>
+
+<script src="https://unpkg.com/bsky-widget@~0.0/dist/index.js" type="module"></script>
