@@ -17,7 +17,9 @@ head:
       content: "website"
 ---
 
+import BlueskyProfile from '../../../components/BlueskyProfile.astro';
 import ContentImage from '../../../components/ContentImage.astro';
+import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro';
 
 {/* prettier-ignore */}
 <p class="lead">Bluesky released starter packs on June 26, 2024. They are personalized invites that allow users to bring people directly into your slice of Bluesky!</p>
@@ -60,6 +62,17 @@ It contains accounts and individuals linked to the open-source world, as well as
 We hope you enjoy our starter pack! 🎉
 
 Don't hesitate to share your feedback [with us on Bluesky](https://bsky.app/profile/openresource.dev), suggest new accounts to follow, or even create your own starter pack and share it with us! 🙌
+
+<BlueskyProfile handle="openresource.dev" />
+
+Find this Bluesky profile widget cool? Check this out:
+
+<ShowcaseGitHubRepo
+	env="saurabhdaware"
+	repo="bsky-widget"
+	img="30949385"
+	description="Unofficial Bluesky widget to render cute profile cards in your website ^_^"
+/>
 
 ---
 
