@@ -70,7 +70,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 141,
+      "contributors": 144,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 2,
       "forks": 7,
@@ -90,7 +90,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 145,
+      "contributors": 148,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 0,
@@ -109,11 +109,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 151,
+      "contributors": 154,
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 4,
-      "issues": 11,
+      "issues": 12,
       "languages": [
         "JavaScript",
         "HTML",
@@ -128,7 +128,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 140,
+      "contributors": 143,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
       "forks": 0,
@@ -153,7 +153,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 165,
+      "contributors": 168,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 19,
@@ -166,18 +166,18 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 6,
+      "prs": 5,
       "stars": 59,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 202,
+      "contributors": 205,
       "description": "Hurl, run and test HTTP requests with plain text.",
-      "discussions": 72,
-      "forks": 487,
-      "issues": 150,
+      "discussions": 73,
+      "forks": 490,
+      "issues": 147,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 2,
-      "stars": 13055,
+      "prs": 0,
+      "stars": 13076,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

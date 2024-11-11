@@ -7,15 +7,15 @@
       "contributors": 25,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
-      "forks": 40,
+      "forks": 41,
       "issues": 19,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 6,
-      "stars": 1917,
+      "prs": 3,
+      "stars": 1921,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 109,
+      "stars": 124,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -54,7 +54,7 @@
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 70,
+      "stars": 71,
       "url": "https://github.com/azat-io/eyecons"
     }
   ]
