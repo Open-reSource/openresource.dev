@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/starlight": "^0.28.6",
+    "@astrojs/starlight": "^0.29.0",
     "@astrojs/vercel": "^7.8.2",
     "@vercel/analytics": "^1.3.2",
     "astro": "^4.16.10"
@@ -36,7 +36,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
     "starlight-blog": "^0.14.1",
-    "starlight-links-validator": "^0.13.0",
+    "starlight-links-validator": "^0.13.2",
     "starlight-showcases": "^0.2.0",
     "tsx": "^4.19.2",
     "vercel": "^37.14.0",
