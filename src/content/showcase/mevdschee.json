@@ -7,7 +7,7 @@
       "contributors": 38,
       "description": "Single file PHP script that adds a REST API to a SQL database",
       "discussions": 0,
-      "forks": 1006,
+      "forks": 1007,
       "issues": 83,
       "languages": [
         "PHP",
@@ -17,7 +17,7 @@
       "name": "php-crud-api",
       "owner": "mevdschee",
       "prs": 6,
-      "stars": 3604,
+      "stars": 3609,
       "url": "https://github.com/mevdschee/php-crud-api"
     }
   ]

@@ -7,8 +7,8 @@
       "contributors": 1,
       "description": "Free course for students to learn collaborative coding with Git and GitHub",
       "discussions": 0,
-      "forks": 0,
-      "issues": 0,
+      "forks": 1,
+      "issues": 1,
       "languages": [
         "Astro",
         "TypeScript",
