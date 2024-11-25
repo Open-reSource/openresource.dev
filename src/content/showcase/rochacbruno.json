@@ -7,7 +7,7 @@
       "contributors": 122,
       "description": "Configuration Management for Python ⚙",
       "discussions": 49,
-      "forks": 294,
+      "forks": 293,
       "issues": 126,
       "languages": [
         "Python",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 4,
-      "stars": 3788,
+      "prs": 3,
+      "stars": 3798,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 11,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 167,
+      "forks": 166,
       "issues": 11,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1126,
+      "stars": 1131,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -47,7 +47,7 @@
       "contributors": 6,
       "description": "DO NOT FORK, CLICK \"Use this template\" - The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.",
       "discussions": 0,
-      "forks": 35,
+      "forks": 34,
       "issues": 9,
       "languages": [
         "Python",
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 389,
+      "stars": 391,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -66,7 +66,7 @@
       "contributors": 3,
       "description": "DO NOT FORK, CLICK \"Use this template\" - A github template to start a Flask Project - this uses github actions to generate your project based on the template.",
       "discussions": 0,
-      "forks": 27,
+      "forks": 26,
       "issues": 2,
       "languages": [
         "Python",
@@ -87,7 +87,7 @@
       "contributors": 28,
       "description": "A quick reference guide for the Pythonista in the process of becoming a Rustacean",
       "discussions": 0,
-      "forks": 75,
+      "forks": 76,
       "issues": 4,
       "languages": [
         "CSS",
@@ -95,8 +95,8 @@
       ],
       "name": "py2rs",
       "owner": "rochacbruno",
-      "prs": 3,
-      "stars": 2083,
+      "prs": 5,
+      "stars": 2082,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
