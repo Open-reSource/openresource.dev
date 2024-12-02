@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 7,
+      "contributors": 8,
       "description": "Video thumbnail generator for modern web video players such as Plyr, Videojs, Flowplayer, Fluid Player, etc.",
       "discussions": 1,
       "forks": 3,
@@ -21,7 +21,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 7,
+      "contributors": 8,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 1,
       "forks": 2,
@@ -57,7 +57,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 13,
+      "contributors": 14,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 4,
       "forks": 12,
