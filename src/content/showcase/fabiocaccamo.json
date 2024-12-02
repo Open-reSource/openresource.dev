@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1615,
+      "stars": 1616,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 1838,
+      "prs": 4,
+      "stars": 1847,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 8,
-      "stars": 1513,
+      "prs": 10,
+      "stars": 1514,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,7 +93,7 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 633,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
@@ -112,8 +112,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 683,
+      "prs": 5,
+      "stars": 687,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,8 +130,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 498,
+      "prs": 4,
+      "stars": 500,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,8 +149,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 542,
+      "prs": 6,
+      "stars": 544,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,8 +184,8 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 205,
+      "prs": 5,
+      "stars": 207,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -221,7 +221,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 94,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -232,13 +232,13 @@
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 1,
       "forks": 24,
-      "issues": 1,
+      "issues": 2,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 6,
+      "prs": 7,
       "stars": 74,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -255,7 +255,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 68,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -272,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 5,
+      "prs": 8,
       "stars": 67,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 11,
+      "prs": 12,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
