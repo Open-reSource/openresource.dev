@@ -70,7 +70,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 146,
+      "contributors": 147,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 2,
       "forks": 7,
@@ -90,7 +90,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 150,
+      "contributors": 151,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 2,
@@ -109,11 +109,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 156,
+      "contributors": 157,
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 4,
-      "issues": 11,
+      "issues": 15,
       "languages": [
         "JavaScript",
         "HTML",
@@ -121,14 +121,14 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 0,
+      "prs": 2,
       "stars": 18,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 145,
+      "contributors": 146,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
       "forks": 0,
@@ -153,11 +153,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 170,
+      "contributors": 171,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 19,
-      "issues": 28,
+      "issues": 23,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -166,17 +166,17 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 6,
+      "prs": 8,
       "stars": 60,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 210,
+      "contributors": 213,
       "description": "Hurl, run and test HTTP requests with plain text.",
-      "discussions": 74,
-      "forks": 495,
+      "discussions": 75,
+      "forks": 502,
       "issues": 156,
       "languages": [
         "Rust",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 1,
-      "stars": 13208,
+      "prs": 4,
+      "stars": 13327,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

@@ -8,7 +8,7 @@
       "description": "Astro integration to enhance your website's security with SubResource Integrity hashes, Content-Security-Policy headers, and other techniques.",
       "discussions": 3,
       "forks": 6,
-      "issues": 28,
+      "issues": 29,
       "languages": [
         "TypeScript",
         "JavaScript",
@@ -55,7 +55,7 @@
       "name": "beautiful-tree",
       "owner": "Coder-Spirit",
       "prs": 20,
-      "stars": 16,
+      "stars": 17,
       "url": "https://github.com/Coder-Spirit/beautiful-tree"
     }
   ]
