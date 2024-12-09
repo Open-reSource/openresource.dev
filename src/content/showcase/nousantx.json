@@ -13,7 +13,8 @@
         "TypeScript",
         "JavaScript",
         "HTML",
-        "CSS"
+        "CSS",
+        "Svelte"
       ],
       "name": "tenoxui",
       "owner": "tenoxui",
