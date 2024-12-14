@@ -10,7 +10,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import gh from 'parse-github-url';
 
-import type { Showcase, ShowcaseGitHubRepoLink } from '../../src/content/config';
+import type { Showcase, ShowcaseGitHubRepoLink } from '../../src/content.config';
 
 const emojiRegex = /:(\+1|[-\w]+):/g;
 
