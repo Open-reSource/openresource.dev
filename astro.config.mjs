@@ -11,7 +11,7 @@ export default defineConfig({
 		webAnalytics: {
 			enabled: true,
 		},
-  }),
+	}),
 	site: 'https://openresource.dev',
 	vite: {
 		define: {
@@ -39,7 +39,7 @@ export default defineConfig({
 				starlightLinksValidator({
 					exclude: ['/articles'],
 				}),
-				/*starlightBlog({
+				/* starlightBlog({
 					title: 'Articles',
 					prefix: 'articles',
 					authors: {
@@ -50,7 +50,7 @@ export default defineConfig({
 							url: 'https://github.com/julien-deramond/',
 						},
 					},
-				}),*/
+				}), */
 			],
 			title: 'Open {re}Source',
 			favicon: '/favicon.ico',
