@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1616,
+      "stars": 1617,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -26,8 +26,8 @@
       "contributors": 33,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 181,
-      "issues": 10,
+      "forks": 182,
+      "issues": 11,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1852,
+      "stars": 1855,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 10,
-      "stars": 1515,
+      "stars": 1516,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 689,
+      "stars": 690,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -141,7 +141,7 @@
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
       "forks": 32,
-      "issues": 3,
+      "issues": 4,
       "languages": [
         "Python",
         "JavaScript",
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 552,
+      "stars": 556,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -273,7 +273,7 @@
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 67,
+      "stars": 68,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
