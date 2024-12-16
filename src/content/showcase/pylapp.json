@@ -94,7 +94,7 @@
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 2,
-      "issues": 6,
+      "issues": 7,
       "languages": [
         "HTML",
         "JavaScript",
@@ -103,7 +103,7 @@
       "name": "Tota11ylost",
       "owner": "Orange-OpenSource",
       "prs": 0,
-      "stars": 4,
+      "stars": 5,
       "url": "https://github.com/Orange-OpenSource/Tota11ylost"
     },
     {
@@ -113,7 +113,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 4,
-      "issues": 15,
+      "issues": 16,
       "languages": [
         "JavaScript",
         "HTML",
@@ -121,7 +121,7 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 2,
+      "prs": 1,
       "stars": 18,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
@@ -147,7 +147,7 @@
       "name": "uuv",
       "owner": "Orange-OpenSource",
       "prs": 1,
-      "stars": 0,
+      "stars": 1,
       "url": "https://github.com/Orange-OpenSource/uuv"
     },
     {
@@ -157,7 +157,7 @@
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 19,
-      "issues": 23,
+      "issues": 25,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -166,8 +166,8 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 8,
-      "stars": 60,
+      "prs": 9,
+      "stars": 61,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
     {
@@ -176,8 +176,8 @@
       "contributors": 213,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 75,
-      "forks": 502,
-      "issues": 156,
+      "forks": 504,
+      "issues": 159,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 4,
-      "stars": 13327,
+      "prs": 1,
+      "stars": 13426,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
