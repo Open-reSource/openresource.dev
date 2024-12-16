@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import vercel from '@astrojs/vercel';
-/* import starlightBlog from 'starlight-blog'; */
+import starlightBlog from 'starlight-blog';
 import starlightLinksValidator from 'starlight-links-validator';
 
 // https://astro.build/config
@@ -39,7 +39,7 @@ export default defineConfig({
 				starlightLinksValidator({
 					exclude: ['/articles'],
 				}),
-				/* starlightBlog({
+				starlightBlog({
 					title: 'Articles',
 					prefix: 'articles',
 					authors: {
@@ -50,7 +50,7 @@ export default defineConfig({
 							url: 'https://github.com/julien-deramond/',
 						},
 					},
-				}), */
+				}),
 			],
 			title: 'Open {re}Source',
 			favicon: '/favicon.ico',
