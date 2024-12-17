@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/starlight": "^0.29.3",
-    "@astrojs/vercel": "^7.8.2",
+    "@astrojs/starlight": "^0.30.2",
+    "@astrojs/vercel": "^8.0.1",
     "@vercel/analytics": "^1.4.1",
-    "astro": "^4.16.17"
+    "astro": "^5.0.9"
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
