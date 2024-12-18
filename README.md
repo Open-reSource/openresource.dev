@@ -67,7 +67,7 @@ Please read through our [contributing guidelines](https://github.com/Open-reSour
 
 Get an update on Open {re}Source's development and chat with the project maintainers and community members:
 
-- Follow [@open_resource on Twitter](https://twitter.com/open_resource).
+- Follow [@open_resource on X](https://x.com/open_resource).
 - Follow [@openresource on Mastodon](https://fosstodon.org/@openresource).
 - Follow [@openresource.dev on Bluesky](https://bsky.app/profile/openresource.dev).
 - Follow [@openresource on Threads](https://www.threads.net/@openresource).
