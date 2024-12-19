@@ -31,10 +31,10 @@ const { entry } = Astro.props;
 const { data } = entry;
 
 const isArticle =
-	Astro.props.slug.startsWith('articles/') &&
-	!Astro.props.slug.startsWith('articles/tags') &&
-	!Astro.props.slug.startsWith('articles/authors') &&
-	!Astro.props.slug.match('articles/[0-9]*$');
+	Astro.props.id.startsWith('articles/') &&
+	!Astro.props.id.startsWith('articles/tags') &&
+	!Astro.props.id.startsWith('articles/authors') &&
+	!Astro.props.id.match('articles/[0-9]*$');
 
 let articleSchema;
 if (isArticle) {

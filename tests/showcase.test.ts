@@ -4,7 +4,7 @@ import gh from 'parse-github-url';
 import { afterAll, assert, beforeAll, describe, expect, test, vi } from 'vitest';
 
 import { ShowcaseScraper } from '../scripts/libs/showcaseScrapper';
-import type { ShowcaseGitHubRepoLink } from '../src/content/config';
+import type { ShowcaseGitHubRepoLink } from '../src/content.config';
 
 // Define a mock query function that will be used by the GraphQL client during the test to return fake data.
 const { queryMock } = vi.hoisted(() => ({ queryMock: vi.fn() }));
