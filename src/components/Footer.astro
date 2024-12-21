@@ -6,11 +6,11 @@ import FooterLink from './FooterLink.astro';
 import Button from './Button.astro';
 
 const display =
-	Astro.props.slug == '' ||
-	Astro.props.slug == 'showcase' ||
-	Astro.props.slug == 'cookie-policy' ||
-	Astro.props.slug == 'about-author';
-const currentSlug = Astro.props.slug;
+	Astro.props.id == '' ||
+	Astro.props.id == 'showcase' ||
+	Astro.props.id == 'cookie-policy' ||
+	Astro.props.id == 'about-author';
+const currentSlug = Astro.props.id;
 ---
 
 <Default {...Astro.props}><slot /></Default>

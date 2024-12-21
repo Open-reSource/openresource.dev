@@ -7,12 +7,12 @@ import Default from '@astrojs/starlight/components/PageTitle.astro';
 const { date } = Astro.props.entry.data;
 const { entry, lang } = Astro.props;
 
-const isGuide = Astro.props.slug.startsWith('guide');
+const isGuide = Astro.props.id.startsWith('guide');
 const displayReadingTime =
 	(isGuide && date) ||
-	(Astro.props.slug.startsWith('articles') &&
-		!Astro.props.slug.startsWith('articles/tags') &&
-		!Astro.props.slug.startsWith('articles/authors'));
+	(Astro.props.id.startsWith('articles') &&
+		!Astro.props.id.startsWith('articles/tags') &&
+		!Astro.props.id.startsWith('articles/authors'));
 const displayDate = date && isGuide;
 ---
 
@@ -24,7 +24,7 @@ const displayDate = date && isGuide;
 			{displayReadingTime && (
 				<span class="reading-time">
 					<Icon name="seti:clock" />
-					{Math.ceil(readingTime(entry.body).minutes)} min read
+					{Math.ceil(readingTime(entry.body || '').minutes)} min read
 				</span>
 			)}
 			{displayDate && (

@@ -7,7 +7,7 @@ const slug = Astro.url.pathname.slice(1);
 
 const docs = await getCollection('docs');
 let guideReadingTime = 0;
-docs.filter((doc) => doc.slug.startsWith(slug)).map((doc) => (guideReadingTime += readingTime(doc.body).minutes));
+docs.filter((doc) => doc.id.startsWith(slug)).map((doc) => (guideReadingTime += readingTime(doc.body || '').minutes));
 guideReadingTime = Math.ceil(guideReadingTime);
 ---
 
