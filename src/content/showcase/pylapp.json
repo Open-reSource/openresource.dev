@@ -10,10 +10,10 @@
       "forks": 5,
       "issues": 9,
       "languages": [
-        "Shell",
-        "JavaScript",
-        "CSS",
         "HTML",
+        "JavaScript",
+        "Shell",
+        "CSS",
         "Ruby"
       ],
       "name": "Tips-tools",
@@ -70,7 +70,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 147,
+      "contributors": 146,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 2,
       "forks": 7,
@@ -90,7 +90,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 151,
+      "contributors": 150,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 2,
@@ -128,7 +128,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 146,
+      "contributors": 145,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
       "forks": 0,
@@ -153,11 +153,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 171,
+      "contributors": 170,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 19,
-      "issues": 25,
+      "issues": 26,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -166,17 +166,17 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 9,
+      "prs": 11,
       "stars": 61,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 213,
+      "contributors": 212,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 75,
-      "forks": 504,
+      "forks": 507,
       "issues": 159,
       "languages": [
         "Rust",
@@ -192,7 +192,7 @@
       "name": "hurl",
       "owner": "Orange-OpenSource",
       "prs": 1,
-      "stars": 13426,
+      "stars": 13483,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

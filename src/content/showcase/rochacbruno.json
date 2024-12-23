@@ -7,8 +7,8 @@
       "contributors": 122,
       "description": "Configuration Management for Python ⚙",
       "discussions": 51,
-      "forks": 292,
-      "issues": 126,
+      "forks": 293,
+      "issues": 141,
       "languages": [
         "Python",
         "Shell",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 4,
-      "stars": 3829,
+      "stars": 3836,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 11,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 168,
+      "forks": 170,
       "issues": 11,
       "languages": [
         "Makefile",
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1143,
+      "stars": 1146,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 396,
+      "stars": 397,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2083,
+      "stars": 2082,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
