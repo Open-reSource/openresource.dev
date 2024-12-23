@@ -50,6 +50,8 @@ export default defineConfig({
 							url: 'https://github.com/julien-deramond/',
 						},
 					},
+					recentPostCount: 5,
+					postCount: Infinity,
 				}),
 			],
 			title: 'Open {re}Source',
