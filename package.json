@@ -32,7 +32,7 @@
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.5",
     "parse-github-url": "^1.0.3",
-    "prettier": "3.3.3",
+    "prettier": "3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
     "starlight-blog": "^0.16.1",
