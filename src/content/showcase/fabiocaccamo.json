@@ -7,7 +7,7 @@
       "contributors": 4,
       "description": "📱 🆔  iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 227,
+      "forks": 226,
       "issues": 2,
       "languages": [
         "Objective-C",
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1619,
+      "stars": 1621,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 181,
-      "issues": 11,
+      "issues": 12,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1859,
+      "stars": 1865,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 10,
-      "stars": 1517,
+      "stars": 1518,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 692,
+      "stars": 694,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,7 +122,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 55,
+      "forks": 56,
       "issues": 5,
       "languages": [
         "Python",
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 560,
+      "stars": 562,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
