@@ -8,14 +8,14 @@
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
       "forks": 45,
-      "issues": 10,
+      "issues": 12,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 2,
-      "stars": 2233,
+      "prs": 3,
+      "stars": 2243,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -24,7 +24,7 @@
       "contributors": 1,
       "description": "🐍 CLI tool to analyze and report TODO comments in JavaScript and TypeScript Git repositories",
       "discussions": 0,
-      "forks": 1,
+      "forks": 2,
       "issues": 1,
       "languages": [
         "Rust",
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 282,
+      "stars": 290,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
