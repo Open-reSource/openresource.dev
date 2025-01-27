@@ -78,6 +78,16 @@ test('should identify GitHub repo links', async () => {
 	expect(showcases.at(0)?.links).toMatchObject([{ url: link, type: 'github_repo' }]);
 });
 
+test('should handle GitLab links as unknown', async () => {
+	const link = getTestGitLabLink('user');
+
+	const scraper = getTestScrapper([[link]]);
+
+	const showcases = await scraper.run();
+
+	expect(showcases.at(0)?.links).toMatchObject([{ url: link, type: 'unknown' }]);
+});
+
 test('should sanitize GitHub repo links', async () => {
 	const link_1 = getTestGitHubLink('user_1', 'repo');
 	const link_2 = `${getTestGitHubLink('user_2', 'repo')}/issues`;
@@ -411,6 +421,10 @@ function getTestUnknownLink() {
 
 function getTestGitHubLink(owner: string, repo?: string) {
 	return `https://github.com/${owner}${repo ? `/${repo}` : ''}`;
+}
+
+function getTestGitLabLink(owner: string, repo?: string) {
+	return `https://gitlab.com/${owner}${repo ? `/${repo}` : ''}`;
 }
 
 function getTestRepoLanguage(): TestRepoLanguage {
