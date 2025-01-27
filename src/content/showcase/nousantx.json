@@ -12,9 +12,8 @@
       "languages": [
         "TypeScript",
         "JavaScript",
-        "HTML",
         "CSS",
-        "Svelte"
+        "HTML"
       ],
       "name": "tenoxui",
       "owner": "tenoxui",
