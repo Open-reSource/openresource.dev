@@ -1,0 +1,62 @@
+{
+  "author": "sebousan",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
+      "contributors": 2,
+      "description": "Framework Hugo with Bootstrap and Decap/Sveltia CMS (Github template)",
+      "discussions": 0,
+      "forks": 1,
+      "issues": 4,
+      "languages": [
+        "JavaScript",
+        "Sass"
+      ],
+      "name": "hugolify-template",
+      "owner": "Hugolify",
+      "prs": 0,
+      "stars": 15,
+      "url": "https://github.com/Hugolify/hugolify-template"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
+      "contributors": 2,
+      "description": "Hugolify theme is an Hugo theme with Bootstrap 5",
+      "discussions": 0,
+      "forks": 1,
+      "issues": 6,
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "Sass",
+        "SCSS"
+      ],
+      "name": "hugolify-theme",
+      "owner": "Hugolify",
+      "prs": 0,
+      "stars": 8,
+      "url": "https://github.com/Hugolify/hugolify-theme"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
+      "contributors": 2,
+      "description": "Admin for Hugolify with Decap CMS and Sveltia CMS",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "HTML",
+        "JavaScript",
+        "CSS"
+      ],
+      "name": "hugolify-admin",
+      "owner": "Hugolify",
+      "prs": 0,
+      "stars": 0,
+      "url": "https://github.com/Hugolify/hugolify-admin"
+    }
+  ]
+}

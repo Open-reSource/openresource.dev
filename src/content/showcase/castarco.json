@@ -7,8 +7,8 @@
       "contributors": 3,
       "description": "Astro integration to enhance your website's security with SubResource Integrity hashes, Content-Security-Policy headers, and other techniques.",
       "discussions": 3,
-      "forks": 6,
-      "issues": 30,
+      "forks": 8,
+      "issues": 31,
       "languages": [
         "TypeScript",
         "JavaScript",
@@ -17,8 +17,8 @@
       ],
       "name": "astro-shield",
       "owner": "kindspells",
-      "prs": 3,
-      "stars": 60,
+      "prs": 4,
+      "stars": 70,
       "url": "https://github.com/kindspells/astro-shield"
     },
     {
@@ -36,7 +36,7 @@
       "name": "nominal",
       "owner": "Coder-Spirit",
       "prs": 5,
-      "stars": 78,
+      "stars": 81,
       "url": "https://github.com/Coder-Spirit/nominal"
     },
     {
@@ -45,7 +45,7 @@
       "contributors": 2,
       "description": "A library to generate beautiful trees in your website",
       "discussions": 3,
-      "forks": 4,
+      "forks": 3,
       "issues": 16,
       "languages": [
         "TypeScript",
@@ -54,7 +54,7 @@
       ],
       "name": "beautiful-tree",
       "owner": "Coder-Spirit",
-      "prs": 20,
+      "prs": 22,
       "stars": 17,
       "url": "https://github.com/Coder-Spirit/beautiful-tree"
     }
