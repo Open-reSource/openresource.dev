@@ -66,7 +66,7 @@ export class ShowcaseScraper {
 				for (const href of hrefs) {
 					const ghReference = gh(href);
 
-					if (ghReference?.owner && ghReference?.name) {
+					if (ghReference?.hostname === 'github.com' && ghReference?.owner && ghReference?.name) {
 						console.info(`Adding repository data from ${href}...`);
 						const { repository } = await this.#getRepository(ghReference.owner, ghReference.name);
 
