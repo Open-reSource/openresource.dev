@@ -192,7 +192,7 @@ test('should delete the existing showcase content collection before saving showc
 	expect(mkdirMock).toHaveBeenCalledOnce();
 	expect(writeFileMock).toHaveBeenCalledOnce();
 	expect(rmMock.mock.invocationCallOrder < mkdirMock.mock.invocationCallOrder).toBe(true);
-	expect(mkdirMock.mock.invocationCallOrder < writeFileMock.mock.invocationCallOrder).toBe(true);
+	expect(mkdirMock).toHaveBeenCalledBefore(writeFileMock);
 });
 
 test('should save a showcase file per user', async () => {
