@@ -23,14 +23,14 @@
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
-    "@faker-js/faker": "^9.3.0",
+    "@faker-js/faker": "^9.4.0",
     "@octokit/graphql": "^8.1.2",
     "@octokit/graphql-schema": "^15.25.0",
     "@types/parse-github-url": "^1.0.3",
     "astro-og-canvas": "^0.5.5",
     "dotenv": "^16.4.7",
     "gemoji": "^8.1.0",
-    "linkedom": "^0.18.5",
+    "linkedom": "^0.18.7",
     "parse-github-url": "^1.0.3",
     "prettier": "3.4.2",
     "prettier-plugin-astro": "^0.14.1",
@@ -40,6 +40,6 @@
     "starlight-showcases": "^0.3.0",
     "tsx": "^4.19.2",
     "vercel": "^39.2.5",
-    "vitest": "^2.1.8"
+    "vitest": "^3.0.4"
   }
 }
