@@ -24,7 +24,7 @@
   "devDependencies": {
     "@actions/core": "^1.11.1",
     "@faker-js/faker": "^9.4.0",
-    "@octokit/graphql": "^8.1.2",
+    "@octokit/graphql": "^8.2.0",
     "@octokit/graphql-schema": "^15.25.0",
     "@types/parse-github-url": "^1.0.3",
     "astro-og-canvas": "^0.5.6",
