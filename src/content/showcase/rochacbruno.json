@@ -6,8 +6,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
       "contributors": 121,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 52,
-      "forks": 292,
+      "discussions": 54,
+      "forks": 294,
       "issues": 136,
       "languages": [
         "Python",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 3,
-      "stars": 3860,
+      "prs": 4,
+      "stars": 3877,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1165,
+      "stars": 1169,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
