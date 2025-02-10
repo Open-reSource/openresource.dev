@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
-      "contributors": 121,
+      "contributors": 120,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 54,
-      "forks": 294,
-      "issues": 136,
+      "discussions": 53,
+      "forks": 295,
+      "issues": 141,
       "languages": [
         "Python",
         "Makefile",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 4,
-      "stars": 3877,
+      "prs": 5,
+      "stars": 3882,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1169,
+      "stars": 1168,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 403,
+      "stars": 405,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
@@ -78,7 +78,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 187,
+      "stars": 188,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
@@ -96,7 +96,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2084,
+      "stars": 2083,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
