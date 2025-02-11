@@ -18,7 +18,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.31.1",
     "@astrojs/vercel": "^8.0.6",
-    "@vercel/analytics": "^1.4.1",
+    "@vercel/analytics": "^1.5.0",
     "astro": "^5.2.5"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "starlight-links-validator": "^0.14.2",
     "starlight-showcases": "^0.3.0",
     "tsx": "^4.19.2",
-    "vercel": "^41.0.2",
+    "vercel": "^41.0.3",
     "vitest": "^3.0.5"
   }
 }
