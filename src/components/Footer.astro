@@ -1,16 +1,15 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Footer.astro';
 import { Icon } from '@astrojs/starlight/components';
 import FooterLink from './FooterLink.astro';
 import Button from './Button.astro';
 
 const display =
-	Astro.props.id == '' ||
-	Astro.props.id == 'showcase' ||
-	Astro.props.id == 'cookie-policy' ||
-	Astro.props.id == 'about-author';
-const currentSlug = Astro.props.id;
+	Astro.locals.starlightRoute.id == '' ||
+	Astro.locals.starlightRoute.id == 'showcase' ||
+	Astro.locals.starlightRoute.id == 'cookie-policy' ||
+	Astro.locals.starlightRoute.id == 'about-author';
+const currentSlug = Astro.locals.starlightRoute.id;
 ---
 
 <Default {...Astro.props}><slot /></Default>
