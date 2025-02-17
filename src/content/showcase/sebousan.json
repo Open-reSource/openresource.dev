@@ -42,10 +42,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
-      "contributors": 2,
+      "contributors": 3,
       "description": "Admin for Hugolify with Decap CMS and Sveltia CMS",
       "discussions": 0,
-      "forks": 0,
+      "forks": 1,
       "issues": 0,
       "languages": [
         "HTML",

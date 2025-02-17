@@ -93,8 +93,8 @@
       "contributors": 158,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
-      "forks": 3,
-      "issues": 1,
+      "forks": 4,
+      "issues": 5,
       "languages": [
         "HTML",
         "JavaScript",
@@ -102,7 +102,7 @@
       ],
       "name": "Tota11ylost",
       "owner": "Orange-OpenSource",
-      "prs": 0,
+      "prs": 1,
       "stars": 5,
       "url": "https://github.com/Orange-OpenSource/Tota11ylost"
     },
@@ -113,7 +113,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 4,
-      "issues": 14,
+      "issues": 11,
       "languages": [
         "JavaScript",
         "HTML",
@@ -166,7 +166,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 10,
+      "prs": 12,
       "stars": 64,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -176,8 +176,8 @@
       "contributors": 224,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 79,
-      "forks": 535,
-      "issues": 173,
+      "forks": 537,
+      "issues": 175,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 3,
-      "stars": 14041,
+      "prs": 5,
+      "stars": 14078,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
