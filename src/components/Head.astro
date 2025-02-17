@@ -1,10 +1,9 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Head.astro';
 
 // Add a `.` to the ID to create the correct path to the image.
 // e.g. `guide/creating-your-own-open-source-project` -> `og/guide/creating-your-own-open-source-project.png`
-const filteredAstroPropsId = Astro.props.id ? Astro.props.id + '.' : 'index.png';
+const filteredAstroPropsId = Astro.locals.starlightRoute.id ? Astro.locals.starlightRoute.id + '.' : 'index.png';
 
 // Force the og:image to be the index image for the homepage for these kind of pages:
 // - articles/tags/*
@@ -13,11 +12,11 @@ const filteredAstroPropsId = Astro.props.id ? Astro.props.id + '.' : 'index.png'
 // - articles.*
 // - articles/[0-9]*/
 const isOgIndex =
-	Astro.props.id.startsWith('articles/tags/') ||
-	Astro.props.id.startsWith('articles.') ||
-	/^articles\/\d+/.test(Astro.props.id) ||
-	Astro.props.id.startsWith('404') ||
-	Astro.props.id.startsWith('articles/authors/');
+	Astro.locals.starlightRoute.id.startsWith('articles/tags/') ||
+	Astro.locals.starlightRoute.id.startsWith('articles.') ||
+	/^articles\/\d+/.test(Astro.locals.starlightRoute.id) ||
+	Astro.locals.starlightRoute.id.startsWith('404') ||
+	Astro.locals.starlightRoute.id.startsWith('articles/authors/');
 
 // Get the URL of the generated image for the current page using its
 // ID and replace the file extension with `.png`.
@@ -26,14 +25,14 @@ const ogImageUrl = new URL(
 	Astro.site
 );
 
-const { entry } = Astro.props;
+const { entry } = Astro.locals.starlightRoute;
 const { data } = entry;
 
 const isArticle =
-	Astro.props.id.startsWith('articles/') &&
-	!Astro.props.id.startsWith('articles/tags') &&
-	!Astro.props.id.startsWith('articles/authors') &&
-	!Astro.props.id.match('articles/[0-9]*$');
+	Astro.locals.starlightRoute.id.startsWith('articles/') &&
+	!Astro.locals.starlightRoute.id.startsWith('articles/tags') &&
+	!Astro.locals.starlightRoute.id.startsWith('articles/authors') &&
+	!Astro.locals.starlightRoute.id.match('articles/[0-9]*$');
 
 let articleSchema;
 if (isArticle) {

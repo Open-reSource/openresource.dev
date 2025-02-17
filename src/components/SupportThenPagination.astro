@@ -1,8 +1,7 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Pagination.astro';
 
-const { editUrl } = Astro.props.entry.data;
+const { editUrl } = Astro.locals.starlightRoute.entry.data;
 ---
 
 {

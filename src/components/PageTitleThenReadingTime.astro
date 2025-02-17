@@ -1,18 +1,17 @@
 ---
 import readingTime from 'reading-time';
-import type { Props } from '@astrojs/starlight/props';
 import { Icon } from '@astrojs/starlight/components';
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 
-const { date } = Astro.props.entry.data;
-const { entry, lang } = Astro.props;
+const { date } = Astro.locals.starlightRoute.entry.data;
+const { entry, lang } = Astro.locals.starlightRoute;
 
-const isGuide = Astro.props.id.startsWith('guide');
+const isGuide = Astro.locals.starlightRoute.id.startsWith('guide');
 const displayReadingTime =
 	(isGuide && date) ||
-	(Astro.props.id.startsWith('articles') &&
-		!Astro.props.id.startsWith('articles/tags') &&
-		!Astro.props.id.startsWith('articles/authors'));
+	(Astro.locals.starlightRoute.id.startsWith('articles') &&
+		!Astro.locals.starlightRoute.id.startsWith('articles/tags') &&
+		!Astro.locals.starlightRoute.id.startsWith('articles/authors'));
 const displayDate = date && isGuide;
 ---
 
