@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 8,
+      "contributors": 10,
       "description": "Video thumbnail generator for modern web video players such as Plyr, Videojs, Flowplayer, Fluid Player, etc.",
       "discussions": 1,
       "forks": 3,
@@ -21,7 +21,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 8,
+      "contributors": 10,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 1,
       "forks": 2,
@@ -51,13 +51,13 @@
       "name": "antd-phone-input",
       "owner": "typesnippet",
       "prs": 0,
-      "stars": 67,
+      "stars": 68,
       "url": "https://github.com/typesnippet/antd-phone-input"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 14,
+      "contributors": 16,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 4,
       "forks": 13,
