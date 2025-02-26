@@ -39,7 +39,7 @@
     "starlight-links-validator": "^0.14.3",
     "starlight-showcases": "^0.3.0",
     "tsx": "^4.19.3",
-    "vercel": "^41.2.1",
+    "vercel": "^41.2.2",
     "vitest": "^3.0.7"
   }
 }
