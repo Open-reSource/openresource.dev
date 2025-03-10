@@ -4,10 +4,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/90394902?v=4&s=50",
-      "contributors": 35,
+      "contributors": 36,
       "description": "Flexible Bootstrap WordPress starter theme with full WooCommerce support and built-in SCSS compiler.",
       "discussions": 249,
-      "forks": 98,
+      "forks": 100,
       "issues": 3,
       "languages": [
         "PHP",

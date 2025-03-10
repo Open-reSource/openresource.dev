@@ -10,10 +10,7 @@
       "forks": 2,
       "issues": 1,
       "languages": [
-        "TypeScript",
-        "JavaScript",
-        "CSS",
-        "HTML"
+        "TypeScript"
       ],
       "name": "tenoxui",
       "owner": "tenoxui",

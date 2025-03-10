@@ -26,7 +26,7 @@
       "contributors": 33,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 191,
+      "forks": 192,
       "issues": 10,
       "languages": [
         "Python",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 1892,
+      "prs": 7,
+      "stars": 1894,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 12,
-      "stars": 1541,
+      "prs": 13,
+      "stars": 1546,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,8 +93,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 640,
+      "prs": 3,
+      "stars": 641,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -103,7 +103,7 @@
       "contributors": 6,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 33,
+      "forks": 34,
       "issues": 5,
       "languages": [
         "Python",
@@ -112,8 +112,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 716,
+      "prs": 4,
+      "stars": 719,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,7 +122,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 55,
+      "forks": 57,
       "issues": 5,
       "languages": [
         "Python",
@@ -130,7 +130,7 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 506,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
@@ -140,7 +140,7 @@
       "contributors": 8,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
-      "forks": 32,
+      "forks": 33,
       "issues": 3,
       "languages": [
         "Python",
@@ -149,8 +149,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 570,
+      "prs": 4,
+      "stars": 573,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -177,15 +177,15 @@
       "contributors": 1,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
-      "forks": 14,
+      "forks": 15,
       "issues": 4,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 212,
+      "prs": 2,
+      "stars": 213,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -212,7 +212,7 @@
       "contributors": 4,
       "description": "🧊 convert your dynamic django site to a static one with one line of code.",
       "discussions": 0,
-      "forks": 15,
+      "forks": 16,
       "issues": 1,
       "languages": [
         "Python",
@@ -221,7 +221,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 95,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -238,7 +238,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 7,
+      "prs": 8,
       "stars": 77,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -255,7 +255,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 69,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -272,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 8,
+      "prs": 9,
       "stars": 69,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
