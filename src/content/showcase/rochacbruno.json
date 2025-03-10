@@ -7,8 +7,8 @@
       "contributors": 120,
       "description": "Configuration Management for Python ⚙",
       "discussions": 57,
-      "forks": 296,
-      "issues": 142,
+      "forks": 298,
+      "issues": 141,
       "languages": [
         "Python",
         "Makefile",
@@ -19,16 +19,16 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 5,
-      "stars": 3908,
+      "stars": 3922,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=04a4ee6b77a1b2ac39c78a7a24855c252c4f281a&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=431454c77ca5aad84f84fafb898d0942654ddaee&v=4&s=50",
       "contributors": 11,
       "description": "DO NOT FORK, CLICK ON \"Use this template\" - A github template to start a Python Project - this uses github actions to generate your project based on the template.",
       "discussions": 1,
-      "forks": 172,
+      "forks": 173,
       "issues": 11,
       "languages": [
         "Makefile",
@@ -38,12 +38,12 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1174,
+      "stars": 1179,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=04a4ee6b77a1b2ac39c78a7a24855c252c4f281a&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=431454c77ca5aad84f84fafb898d0942654ddaee&v=4&s=50",
       "contributors": 6,
       "description": "DO NOT FORK, CLICK \"Use this template\" - The base to start an openapi project featuring: SQLModel, Typer, FastAPI, JWT Token Auth, Interactive Shell, Management Commands.",
       "discussions": 0,
@@ -57,12 +57,12 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 410,
+      "stars": 409,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=04a4ee6b77a1b2ac39c78a7a24855c252c4f281a&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=431454c77ca5aad84f84fafb898d0942654ddaee&v=4&s=50",
       "contributors": 3,
       "description": "DO NOT FORK, CLICK \"Use this template\" - A github template to start a Flask Project - this uses github actions to generate your project based on the template.",
       "discussions": 0,
@@ -83,7 +83,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=04a4ee6b77a1b2ac39c78a7a24855c252c4f281a&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=431454c77ca5aad84f84fafb898d0942654ddaee&v=4&s=50",
       "contributors": 28,
       "description": "A quick reference guide for the Pythonista in the process of becoming a Rustacean",
       "discussions": 0,
