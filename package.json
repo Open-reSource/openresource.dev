@@ -17,7 +17,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.32.2",
-    "@astrojs/vercel": "^8.1.1",
+    "@astrojs/vercel": "^8.1.2",
     "@vercel/analytics": "^1.5.0",
     "astro": "^5.4.2"
   },
