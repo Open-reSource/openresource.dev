@@ -1,0 +1,43 @@
+{
+  "author": "Gothsec",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/112715997?u=e56211e5c7222ac82c717eb4b26517d77620ba26&v=4&s=50",
+      "contributors": 1,
+      "description": "Discover movies for developers. Very selected films over 7 stars rating about tech, AI, programming, hacking and more.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 1,
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS"
+      ],
+      "name": "MoviesForDevs",
+      "owner": "Gothsec",
+      "prs": 0,
+      "stars": 1,
+      "url": "https://github.com/Gothsec/MoviesForDevs"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/112715997?u=e56211e5c7222ac82c717eb4b26517d77620ba26&v=4&s=50",
+      "contributors": 2,
+      "description": "Portfolio built with Astro, TypeScript and TailwindCSS.",
+      "discussions": 0,
+      "forks": 34,
+      "issues": 1,
+      "languages": [
+        "Astro",
+        "TypeScript",
+        "JavaScript"
+      ],
+      "name": "Portfolio",
+      "owner": "Gothsec",
+      "prs": 5,
+      "stars": 42,
+      "url": "https://github.com/Gothsec/Portfolio"
+    }
+  ]
+}
