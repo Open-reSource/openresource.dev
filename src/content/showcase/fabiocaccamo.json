@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 192,
-      "issues": 10,
+      "issues": 11,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 1894,
+      "stars": 1900,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -45,7 +45,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 6,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
-      "discussions": 6,
+      "discussions": 7,
       "forks": 46,
       "issues": 9,
       "languages": [
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 13,
-      "stars": 1546,
+      "stars": 1545,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 908,
+      "stars": 909,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 641,
+      "stars": 642,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 719,
+      "stars": 720,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 573,
+      "stars": 577,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
