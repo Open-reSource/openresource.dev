@@ -23,10 +23,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 33,
+      "contributors": 34,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 192,
+      "forks": 193,
       "issues": 11,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 1900,
+      "stars": 1903,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 642,
+      "stars": 644,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 720,
+      "stars": 726,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 506,
+      "stars": 505,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -141,7 +141,7 @@
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
       "forks": 33,
-      "issues": 3,
+      "issues": 4,
       "languages": [
         "Python",
         "JavaScript",
