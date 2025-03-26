@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/178275234?v=4&s=50",
-      "contributors": 15,
+      "contributors": 16,
       "description": "🪐 Modern offline Kanban board app for Windows, MacOS and Linux. Built with simplicity and user experience in mind.",
-      "discussions": 10,
-      "forks": 74,
-      "issues": 71,
+      "discussions": 9,
+      "forks": 73,
+      "issues": 70,
       "languages": [
         "Vue",
         "TypeScript",
@@ -20,7 +20,7 @@
       "name": "kanri",
       "owner": "kanriapp",
       "prs": 5,
-      "stars": 899,
+      "stars": 908,
       "url": "https://github.com/kanriapp/kanri"
     }
   ]

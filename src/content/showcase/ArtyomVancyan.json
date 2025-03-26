@@ -23,7 +23,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
       "contributors": 10,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
-      "discussions": 1,
+      "discussions": 2,
       "forks": 2,
       "issues": 0,
       "languages": [
@@ -51,7 +51,7 @@
       "name": "antd-phone-input",
       "owner": "typesnippet",
       "prs": 0,
-      "stars": 69,
+      "stars": 72,
       "url": "https://github.com/typesnippet/antd-phone-input"
     },
     {
@@ -68,7 +68,7 @@
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 71,
+      "stars": 74,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]
