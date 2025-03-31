@@ -26,7 +26,7 @@
       "contributors": 34,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 193,
+      "forks": 192,
       "issues": 11,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 1903,
+      "stars": 1902,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 13,
-      "stars": 1545,
+      "stars": 1546,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -84,7 +84,7 @@
       "contributors": 27,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 96,
+      "forks": 95,
       "issues": 4,
       "languages": [
         "Python",
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 644,
+      "stars": 646,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 726,
+      "stars": 724,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 505,
+      "stars": 504,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 577,
+      "stars": 578,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -273,7 +273,7 @@
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 9,
-      "stars": 69,
+      "stars": 70,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {

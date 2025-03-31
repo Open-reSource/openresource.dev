@@ -42,7 +42,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/565057?v=4&s=50",
       "contributors": 51,
       "description": "An open-source SDK for PSP homebrew development.",
-      "discussions": 2,
+      "discussions": 3,
       "forks": 156,
       "issues": 6,
       "languages": [
@@ -56,8 +56,8 @@
       ],
       "name": "pspsdk",
       "owner": "pspdev",
-      "prs": 2,
-      "stars": 935,
+      "prs": 3,
+      "stars": 936,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]
