@@ -4,22 +4,22 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
-      "contributors": 120,
+      "contributors": 121,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 59,
+      "discussions": 60,
       "forks": 298,
-      "issues": 141,
+      "issues": 142,
       "languages": [
         "Python",
-        "Makefile",
         "Shell",
+        "Makefile",
         "HTML",
         "HCL"
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 5,
-      "stars": 3937,
+      "prs": 4,
+      "stars": 3953,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1186,
+      "stars": 1189,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
