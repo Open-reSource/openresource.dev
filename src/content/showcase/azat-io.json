@@ -14,8 +14,8 @@
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 3,
-      "stars": 2402,
+      "prs": 4,
+      "stars": 2407,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 340,
+      "stars": 341,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -47,14 +47,14 @@
       "description": "🎨 Advanced VS Code icon theme with adaptive icon colors that match the editor’s color theme",
       "discussions": 0,
       "forks": 2,
-      "issues": 5,
+      "issues": 1,
       "languages": [
         "TypeScript"
       ],
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 78,
+      "stars": 95,
       "url": "https://github.com/azat-io/eyecons"
     }
   ]
