@@ -121,15 +121,43 @@ export default defineConfig({
 			editLink: {
 				baseUrl: 'https://github.com/Open-reSource/openresource.dev/edit/main/',
 			},
-			social: {
-				github: 'https://github.com/Open-reSource/openresource.dev',
-				discord: 'https://discord.gg/fpUDwEMGwE',
-				'x.com': 'https://x.com/open_resource',
-				linkedin: 'https://linkedin.com/company/open-re-source/',
-				mastodon: 'https://fosstodon.org/@openresource',
-				blueSky: 'https://bsky.app/profile/openresource.dev',
-				threads: 'https://www.threads.net/@openresource',
-			},
+			social: [
+				{
+					icon: 'github',
+					label: 'GitHub',
+					href: 'https://github.com/Open-reSource/openresource.dev',
+				},
+				{
+					icon: 'discord',
+					label: 'Discord',
+					href: 'https://discord.gg/fpUDwEMGwE',
+				},
+				{
+					icon: 'x.com',
+					label: 'X',
+					href: 'https://x.com/open_resource',
+				},
+				{
+					icon: 'linkedin',
+					label: 'LinkedIn',
+					href: 'https://linkedin.com/company/open-re-source/',
+				},
+				{
+					icon: 'mastodon',
+					label: 'Mastodon',
+					href: 'https://fosstodon.org/@openresource',
+				},
+				{
+					icon: 'blueSky',
+					label: 'Blue Sky',
+					href: 'https://bsky.app/profile/openresource.dev',
+				},
+				{
+					icon: 'threads',
+					label: 'Threads',
+					href: 'https://www.threads.net/@openresource',
+				},
+			],
 			customCss: ['./src/styles/custom.css'],
 			defaultLocale: 'root',
 			locales: {
