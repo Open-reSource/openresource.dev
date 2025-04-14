@@ -16,7 +16,7 @@
       "name": "hugolify-template",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 18,
+      "stars": 20,
       "url": "https://github.com/Hugolify/hugolify-template"
     },
     {
@@ -36,7 +36,7 @@
       "name": "hugolify-theme",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 11,
+      "stars": 12,
       "url": "https://github.com/Hugolify/hugolify-theme"
     },
     {
@@ -45,7 +45,7 @@
       "contributors": 3,
       "description": "Admin for Hugolify with Decap CMS and Sveltia CMS",
       "discussions": 0,
-      "forks": 1,
+      "forks": 2,
       "issues": 0,
       "languages": [
         "HTML",
