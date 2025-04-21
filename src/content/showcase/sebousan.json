@@ -26,7 +26,7 @@
       "description": "Hugolify theme is an Hugo theme with Bootstrap 5",
       "discussions": 0,
       "forks": 1,
-      "issues": 6,
+      "issues": 5,
       "languages": [
         "JavaScript",
         "HTML",
@@ -42,10 +42,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
-      "contributors": 3,
-      "description": "Admin for Hugolify with Decap CMS and Sveltia CMS",
+      "contributors": 4,
+      "description": "Admin for Hugolify with Decap, Pages and Sveltia CMS",
       "discussions": 0,
-      "forks": 2,
+      "forks": 3,
       "issues": 0,
       "languages": [
         "HTML",

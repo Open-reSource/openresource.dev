@@ -26,8 +26,8 @@
       "contributors": 34,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 191,
-      "issues": 11,
+      "forks": 190,
+      "issues": 12,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1906,
+      "stars": 1914,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 14,
-      "stars": 1544,
+      "stars": 1550,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 647,
+      "stars": 648,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 728,
+      "stars": 732,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 579,
+      "stars": 580,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 212,
+      "stars": 213,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -239,7 +239,7 @@
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 78,
+      "stars": 79,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
