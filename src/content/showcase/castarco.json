@@ -18,7 +18,7 @@
       "name": "astro-shield",
       "owner": "kindspells",
       "prs": 5,
-      "stars": 70,
+      "stars": 72,
       "url": "https://github.com/kindspells/astro-shield"
     },
     {
@@ -27,7 +27,7 @@
       "contributors": 1,
       "description": "Powerful nominal types for your Typescript project",
       "discussions": 1,
-      "forks": 0,
+      "forks": 1,
       "issues": 3,
       "languages": [
         "TypeScript",
@@ -36,7 +36,7 @@
       "name": "nominal",
       "owner": "Coder-Spirit",
       "prs": 5,
-      "stars": 82,
+      "stars": 83,
       "url": "https://github.com/Coder-Spirit/nominal"
     },
     {
