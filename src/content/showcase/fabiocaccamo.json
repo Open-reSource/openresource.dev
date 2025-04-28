@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1628,
+      "stars": 1629,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -26,7 +26,7 @@
       "contributors": 34,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 190,
+      "forks": 191,
       "issues": 12,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1914,
+      "stars": 1919,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 14,
-      "stars": 1550,
+      "prs": 15,
+      "stars": 1554,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 732,
+      "stars": 734,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,7 +122,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 57,
+      "forks": 56,
       "issues": 5,
       "languages": [
         "Python",
@@ -168,7 +168,7 @@
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 263,
+      "stars": 264,
       "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
     },
     {
@@ -203,7 +203,7 @@
       "name": "FCIPAddressGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 116,
+      "stars": 117,
       "url": "https://github.com/fabiocaccamo/FCIPAddressGeocoder"
     },
     {

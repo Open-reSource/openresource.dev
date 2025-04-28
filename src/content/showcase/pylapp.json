@@ -113,7 +113,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 5,
-      "issues": 9,
+      "issues": 10,
       "languages": [
         "JavaScript",
         "HTML",
@@ -122,7 +122,7 @@
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
       "prs": 3,
-      "stars": 19,
+      "stars": 20,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
     {
@@ -157,7 +157,7 @@
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 19,
-      "issues": 14,
+      "issues": 15,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -166,18 +166,18 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 9,
-      "stars": 64,
+      "prs": 10,
+      "stars": 65,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 231,
+      "contributors": 230,
       "description": "Hurl, run and test HTTP requests with plain text.",
-      "discussions": 85,
+      "discussions": 86,
       "forks": 626,
-      "issues": 180,
+      "issues": 182,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 1,
-      "stars": 14558,
+      "prs": 2,
+      "stars": 14623,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
