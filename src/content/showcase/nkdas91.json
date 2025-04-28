@@ -49,12 +49,12 @@
       "issues": 0,
       "languages": [
         "JavaScript",
-        "HTML",
-        "SCSS"
+        "SCSS",
+        "HTML"
       ],
       "name": "cuesync.github.io",
       "owner": "CueSync",
-      "prs": 1,
+      "prs": 0,
       "stars": 3,
       "url": "https://github.com/CueSync/cuesync.github.io"
     }

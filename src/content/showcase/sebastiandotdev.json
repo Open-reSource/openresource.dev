@@ -3,22 +3,22 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/162659053?v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/116913262?u=804197ea4575796bb8b978511875143e14e66377&v=4&s=50",
       "contributors": 3,
       "description": "A design system built with TailwindCSS and Radix UI.",
       "discussions": 0,
-      "forks": 3,
+      "forks": 2,
       "issues": 0,
       "languages": [
         "TypeScript",
         "JavaScript",
         "CSS"
       ],
-      "name": "ui",
-      "owner": "openlite-dev",
+      "name": "openlite-ui",
+      "owner": "sebastiandotdev",
       "prs": 0,
       "stars": 6,
-      "url": "https://github.com/openlite-dev/ui"
+      "url": "https://github.com/sebastiandotdev/openlite-ui"
     }
   ]
 }
