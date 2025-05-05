@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
-      "contributors": 121,
+      "contributors": 122,
       "description": "Configuration Management for Python ⚙",
       "discussions": 61,
       "forks": 300,
-      "issues": 147,
+      "issues": 148,
       "languages": [
         "Python",
         "Shell",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 4,
-      "stars": 3985,
+      "prs": 5,
+      "stars": 3986,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -38,7 +38,7 @@
       "name": "python-project-template",
       "owner": "rochacbruno",
       "prs": 3,
-      "stars": 1199,
+      "stars": 1201,
       "url": "https://github.com/rochacbruno/python-project-template"
     },
     {
@@ -57,7 +57,7 @@
       "name": "fastapi-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 415,
+      "stars": 416,
       "url": "https://github.com/rochacbruno/fastapi-project-template"
     },
     {
