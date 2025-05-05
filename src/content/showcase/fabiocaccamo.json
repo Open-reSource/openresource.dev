@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1919,
+      "prs": 4,
+      "stars": 1925,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -46,7 +46,7 @@
       "contributors": 6,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
-      "forks": 45,
+      "forks": 46,
       "issues": 9,
       "languages": [
         "Python",
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 15,
-      "stars": 1554,
+      "prs": 16,
+      "stars": 1564,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -81,30 +81,30 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 27,
+      "contributors": 28,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
       "forks": 96,
-      "issues": 4,
+      "issues": 2,
       "languages": [
         "Python",
-        "HTML",
-        "JavaScript"
+        "JavaScript",
+        "HTML"
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 648,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 6,
+      "contributors": 7,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
       "forks": 35,
-      "issues": 6,
+      "issues": 5,
       "languages": [
         "Python",
         "JavaScript",
@@ -112,8 +112,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 734,
+      "prs": 0,
+      "stars": 737,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,8 +130,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 503,
+      "prs": 2,
+      "stars": 506,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,8 +149,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 580,
+      "prs": 4,
+      "stars": 581,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,8 +184,8 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 213,
+      "prs": 6,
+      "stars": 214,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -221,8 +221,8 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 95,
+      "prs": 4,
+      "stars": 96,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -239,13 +239,13 @@
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 79,
+      "stars": 80,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 2,
+      "contributors": 3,
       "description": " ↪️ ✅ redirects as they should be, with full control.",
       "discussions": 0,
       "forks": 3,
@@ -255,7 +255,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 71,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },

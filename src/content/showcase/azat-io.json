@@ -7,15 +7,15 @@
       "contributors": 29,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
-      "forks": 48,
-      "issues": 11,
+      "forks": 49,
+      "issues": 13,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 2,
-      "stars": 2531,
+      "prs": 3,
+      "stars": 2542,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -43,10 +43,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
-      "contributors": 1,
+      "contributors": 2,
       "description": "🎨 Advanced VS Code icon theme with adaptive icon colors that match the editor’s color theme",
       "discussions": 0,
-      "forks": 3,
+      "forks": 4,
       "issues": 1,
       "languages": [
         "TypeScript"
@@ -54,7 +54,7 @@
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 100,
+      "stars": 102,
       "url": "https://github.com/azat-io/eyecons"
     }
   ]

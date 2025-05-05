@@ -4,10 +4,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/40233791?v=4&s=50",
-      "contributors": 21,
+      "contributors": 22,
       "description": "The one and only Vue cheatsheet you will ever need.",
       "discussions": 0,
-      "forks": 14,
+      "forks": 15,
       "issues": 4,
       "languages": [
         "Vue",
@@ -20,7 +20,7 @@
       "name": "vue-cheatsheet",
       "owner": "themeselection",
       "prs": 1,
-      "stars": 205,
+      "stars": 206,
       "url": "https://github.com/themeselection/vue-cheatsheet"
     }
   ]
