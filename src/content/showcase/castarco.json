@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/144210963?v=4&s=50",
       "contributors": 3,
       "description": "Astro integration to enhance your website's security with SubResource Integrity hashes, Content-Security-Policy headers, and other techniques.",
-      "discussions": 3,
+      "discussions": 4,
       "forks": 9,
       "issues": 32,
       "languages": [
@@ -18,7 +18,7 @@
       "name": "astro-shield",
       "owner": "kindspells",
       "prs": 6,
-      "stars": 74,
+      "stars": 76,
       "url": "https://github.com/kindspells/astro-shield"
     },
     {
