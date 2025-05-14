@@ -52,6 +52,7 @@ export default defineConfig({
 					},
 					recentPostCount: 5,
 					postCount: Infinity,
+          navigation: 'none'
 				}),
 			],
 			title: 'Open {re}Source',
