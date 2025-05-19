@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1927,
+      "stars": 1929,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 16,
-      "stars": 1566,
+      "stars": 1567,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 647,
+      "stars": 648,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 740,
+      "stars": 741,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -123,7 +123,7 @@
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
       "forks": 56,
-      "issues": 5,
+      "issues": 6,
       "languages": [
         "Python",
         "HTML"
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 582,
+      "stars": 585,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 96,
+      "stars": 97,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -255,8 +255,8 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 0,
-      "stars": 71,
+      "prs": 1,
+      "stars": 73,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {

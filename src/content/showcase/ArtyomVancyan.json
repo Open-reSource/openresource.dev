@@ -43,7 +43,7 @@
       "description": "Advanced, highly customizable phone input component for Ant Design.",
       "discussions": 10,
       "forks": 12,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "TypeScript",
         "JavaScript"
@@ -51,7 +51,7 @@
       "name": "antd-phone-input",
       "owner": "typesnippet",
       "prs": 0,
-      "stars": 74,
+      "stars": 75,
       "url": "https://github.com/typesnippet/antd-phone-input"
     },
     {
