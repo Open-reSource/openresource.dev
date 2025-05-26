@@ -25,44 +25,6 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=7239908c01b8e721752219ed9c16d68645c51a12&v=4&s=50",
-      "contributors": 11,
-      "description": "This template is **archived**.   > UV can now [generate a sample project](https://docs.astral.sh/uv/guides/projects/#creating-a-new-project)   > I recommend using **UV** to bootstrap your peojects.   > [Copier](https://github.com/copier-org/copier) is a tools that can bootstrap projects from templates.  ",
-      "discussions": 1,
-      "forks": 176,
-      "issues": 11,
-      "languages": [
-        "Makefile",
-        "Python",
-        "Dockerfile"
-      ],
-      "name": "python-project-template",
-      "owner": "rochacbruno",
-      "prs": 3,
-      "stars": 1209,
-      "url": "https://github.com/rochacbruno/python-project-template"
-    },
-    {
-      "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=7239908c01b8e721752219ed9c16d68645c51a12&v=4&s=50",
-      "contributors": 6,
-      "description": " This template is **archived**.   > UV can now [generate a sample project](https://docs.astral.sh/uv/guides/projects/#creating-a-new-project)   > I recommend using **UV** to bootstrap your peojects.   > [Copier](https://github.com/copier-org/copier) is a tools that can bootstrap projects from templates.  ",
-      "discussions": 0,
-      "forks": 38,
-      "issues": 9,
-      "languages": [
-        "Python",
-        "Makefile",
-        "Dockerfile"
-      ],
-      "name": "fastapi-project-template",
-      "owner": "rochacbruno",
-      "prs": 1,
-      "stars": 422,
-      "url": "https://github.com/rochacbruno/fastapi-project-template"
-    },
-    {
-      "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=7239908c01b8e721752219ed9c16d68645c51a12&v=4&s=50",
       "contributors": 3,
       "description": "This template is **archived**.   > UV can now [generate a sample project](https://docs.astral.sh/uv/guides/projects/#creating-a-new-project)   > I recommend using **UV** to bootstrap your peojects.   > [Copier](https://github.com/copier-org/copier) is a tools that can bootstrap projects from templates.  ",
       "discussions": 0,
