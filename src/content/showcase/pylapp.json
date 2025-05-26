@@ -73,7 +73,7 @@
       "contributors": 157,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 4,
-      "forks": 9,
+      "forks": 10,
       "issues": 46,
       "languages": [
         "Python",
@@ -84,7 +84,7 @@
       "name": "floss-toolbox",
       "owner": "Orange-OpenSource",
       "prs": 10,
-      "stars": 24,
+      "stars": 25,
       "url": "https://github.com/Orange-OpenSource/floss-toolbox"
     },
     {
@@ -157,7 +157,7 @@
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 20,
-      "issues": 17,
+      "issues": 14,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -176,8 +176,8 @@
       "contributors": 231,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 88,
-      "forks": 632,
-      "issues": 184,
+      "forks": 638,
+      "issues": 187,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 2,
-      "stars": 14785,
+      "prs": 3,
+      "stars": 14886,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
