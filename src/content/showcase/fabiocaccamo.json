@@ -26,7 +26,7 @@
       "contributors": 34,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 191,
+      "forks": 192,
       "issues": 12,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1929,
+      "stars": 1934,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 648,
+      "stars": 649,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 741,
+      "stars": 745,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 506,
+      "stars": 507,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 585,
+      "stars": 586,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -168,7 +168,7 @@
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 264,
+      "stars": 263,
       "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 215,
+      "stars": 216,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -203,7 +203,7 @@
       "name": "FCIPAddressGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 117,
+      "stars": 116,
       "url": "https://github.com/fabiocaccamo/FCIPAddressGeocoder"
     },
     {
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 97,
+      "stars": 98,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -256,7 +256,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 73,
+      "stars": 74,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
@@ -273,7 +273,7 @@
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 9,
-      "stars": 71,
+      "stars": 72,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {
