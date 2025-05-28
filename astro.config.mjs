@@ -141,7 +141,7 @@ export default defineConfig({
 				{
 					icon: 'linkedin',
 					label: 'LinkedIn',
-					href: 'https://linkedin.com/company/open-re-source/',
+					href: 'https://www.linkedin.com/company/open-re-source/',
 				},
 				{
 					icon: 'mastodon',
