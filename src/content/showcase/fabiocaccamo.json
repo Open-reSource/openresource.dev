@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 192,
-      "issues": 12,
+      "issues": 13,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1934,
+      "prs": 5,
+      "stars": 1937,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -93,8 +93,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 649,
+      "prs": 6,
+      "stars": 648,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,8 +112,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 745,
+      "prs": 3,
+      "stars": 748,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,8 +130,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 507,
+      "prs": 3,
+      "stars": 510,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,8 +149,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 586,
+      "prs": 5,
+      "stars": 585,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,7 +184,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 6,
+      "prs": 7,
       "stars": 216,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -221,7 +221,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 5,
       "stars": 98,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -255,7 +255,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 3,
       "stars": 74,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
