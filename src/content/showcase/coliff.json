@@ -1,0 +1,26 @@
+{
+  "author": "coliff",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/42865284?v=4&s=50",
+      "contributors": 73,
+      "description": "⚙️ The static code analysis tool you need for your HTML",
+      "discussions": 7,
+      "forks": 400,
+      "issues": 43,
+      "languages": [
+        "JavaScript",
+        "TypeScript",
+        "MDX",
+        "HTML",
+        "CSS"
+      ],
+      "name": "HTMLHint",
+      "owner": "htmlhint",
+      "prs": 4,
+      "stars": 3137,
+      "url": "https://github.com/htmlhint/HTMLHint"
+    }
+  ]
+}
