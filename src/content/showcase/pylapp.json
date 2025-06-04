@@ -121,7 +121,7 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 3,
+      "prs": 4,
       "stars": 20,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
@@ -166,7 +166,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 10,
+      "prs": 11,
       "stars": 65,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -177,7 +177,7 @@
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 88,
       "forks": 637,
-      "issues": 184,
+      "issues": 185,
       "languages": [
         "Rust",
         "Python",
@@ -192,7 +192,7 @@
       "name": "hurl",
       "owner": "Orange-OpenSource",
       "prs": 2,
-      "stars": 14925,
+      "stars": 14939,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
