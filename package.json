@@ -30,7 +30,7 @@
     "astro-og-canvas": "^0.7.0",
     "dotenv": "^16.5.0",
     "gemoji": "^8.1.0",
-    "linkedom": "^0.18.10",
+    "linkedom": "^0.18.11",
     "parse-github-url": "^1.0.3",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
