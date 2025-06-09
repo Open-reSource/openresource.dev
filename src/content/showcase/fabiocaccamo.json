@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 4,
+      "contributors": 3,
       "description": "📱 🆔  iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
       "forks": 226,
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1631,
+      "stars": 1633,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1938,
+      "stars": 1941,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 16,
-      "stars": 1567,
+      "stars": 1568,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -66,7 +66,7 @@
       "contributors": 7,
       "description": "📱 📂  iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
-      "forks": 137,
+      "forks": 136,
       "issues": 0,
       "languages": [
         "Objective-C",
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 748,
+      "stars": 749,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 511,
+      "stars": 512,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 217,
+      "stars": 218,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -266,7 +266,7 @@
       "description": "🧢 friendly font operations on top of fontTools.",
       "discussions": 0,
       "forks": 4,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "Python"
       ],
