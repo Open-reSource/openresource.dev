@@ -7,7 +7,7 @@
       "contributors": 122,
       "description": "Configuration Management for Python ⚙",
       "discussions": 62,
-      "forks": 300,
+      "forks": 301,
       "issues": 147,
       "languages": [
         "Python",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 3,
-      "stars": 4009,
+      "stars": 4013,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -58,7 +58,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2085,
+      "stars": 2088,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
