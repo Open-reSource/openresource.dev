@@ -50,6 +50,10 @@ export default defineConfig({
 							url: 'https://github.com/julien-deramond/',
 						},
 					},
+					metrics: {
+						readingTime: true,
+						words: 'total',
+					},
 					recentPostCount: 5,
 					postCount: Infinity,
 					navigation: 'none',

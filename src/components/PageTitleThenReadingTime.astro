@@ -1,17 +1,12 @@
 ---
 import readingTime from 'reading-time';
-import { Icon } from '@astrojs/starlight/components';
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 
 const { date } = Astro.locals.starlightRoute.entry.data;
 const { entry, lang } = Astro.locals.starlightRoute;
 
 const isGuide = Astro.locals.starlightRoute.id.startsWith('guide');
-const displayReadingTime =
-	(isGuide && date) ||
-	(Astro.locals.starlightRoute.id.startsWith('articles') &&
-		!Astro.locals.starlightRoute.id.startsWith('articles/tags') &&
-		!Astro.locals.starlightRoute.id.startsWith('articles/authors'));
+const displayReadingTime = isGuide && date;
 const displayDate = date && isGuide;
 ---
 
@@ -19,13 +14,7 @@ const displayDate = date && isGuide;
 
 {
 	(displayDate || displayReadingTime) && (
-		<div class="meta sl-flex">
-			{displayReadingTime && (
-				<span class="reading-time">
-					<Icon name="seti:clock" />
-					{Math.ceil(readingTime(entry.body || '').minutes)} min read
-				</span>
-			)}
+		<div class="sl-text-sm sl-flex">
 			{displayDate && (
 				<p>
 					<time datetime={date.toISOString()}>
@@ -33,24 +22,21 @@ const displayDate = date && isGuide;
 					</time>
 				</p>
 			)}
+			{displayReadingTime && (
+				<span class="reading-time">&nbsp;-&nbsp;{Math.ceil(readingTime(entry.body || '').minutes)} min read</span>
+			)}
 		</div>
 	)
 }
 
 <style>
-	.meta {
-		gap: 0.75rem 3rem;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		font-size: var(--sl-text-sm);
-	}
-
 	.reading-time {
 		display: inline-flex;
 		align-items: center;
+		color: var(--sl-color-gray-3);
 	}
 
-	.reading-time svg {
-		margin-right: 0.5rem;
+	.sl-text-sm {
+		font-size: var(--sl-text-sm);
 	}
 </style>
