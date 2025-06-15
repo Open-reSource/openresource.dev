@@ -45,7 +45,7 @@ export default defineConfig({
 					authors: {
 						julien: {
 							name: 'Julien Déramond',
-							title: 'Open {re}Source • Bootstrap • Orange',
+							title: 'Open {re}Source • Bootstrap • Thales',
 							picture: 'https://avatars.githubusercontent.com/u/17381666?s=100',
 							url: 'https://github.com/julien-deramond/',
 						},
