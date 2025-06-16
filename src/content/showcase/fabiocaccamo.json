@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 192,
-      "issues": 13,
+      "issues": 10,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 1941,
+      "prs": 2,
+      "stars": 1945,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 16,
-      "stars": 1568,
+      "stars": 1571,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 648,
+      "stars": 649,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 749,
+      "stars": 752,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -221,7 +221,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 5,
+      "prs": 6,
       "stars": 98,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -238,7 +238,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 8,
+      "prs": 12,
       "stars": 80,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -266,13 +266,13 @@
       "description": "🧢 friendly font operations on top of fontTools.",
       "discussions": 0,
       "forks": 4,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 9,
+      "prs": 0,
       "stars": 72,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },

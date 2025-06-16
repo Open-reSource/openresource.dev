@@ -41,9 +41,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/151955260?v=4&s=50",
       "contributors": 4,
       "description": "Advanced, highly customizable phone input component for Ant Design.",
-      "discussions": 10,
+      "discussions": 11,
       "forks": 13,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "TypeScript",
         "JavaScript"
@@ -51,7 +51,7 @@
       "name": "antd-phone-input",
       "owner": "typesnippet",
       "prs": 0,
-      "stars": 75,
+      "stars": 77,
       "url": "https://github.com/typesnippet/antd-phone-input"
     },
     {
