@@ -1,0 +1,30 @@
+{
+  "author": "bobsingor",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/195636730?v=4&s=50",
+      "contributors": 1,
+      "description": "A PDF viewer that seamlessly integrates with any JavaScript project",
+      "discussions": 0,
+      "forks": 9,
+      "issues": 5,
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "MDX",
+        "CSS",
+        "Dockerfile",
+        "C++",
+        "HTML",
+        "C",
+        "Makefile"
+      ],
+      "name": "embed-pdf-viewer",
+      "owner": "embedpdf",
+      "prs": 1,
+      "stars": 107,
+      "url": "https://github.com/embedpdf/embed-pdf-viewer"
+    }
+  ]
+}
