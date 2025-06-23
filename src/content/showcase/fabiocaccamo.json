@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1945,
+      "stars": 1947,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 16,
-      "stars": 1571,
+      "stars": 1570,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -103,7 +103,7 @@
       "contributors": 7,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 35,
+      "forks": 36,
       "issues": 5,
       "languages": [
         "Python",
@@ -112,7 +112,7 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 752,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
@@ -177,7 +177,7 @@
       "contributors": 1,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
-      "forks": 14,
+      "forks": 15,
       "issues": 4,
       "languages": [
         "Python"
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 218,
+      "stars": 219,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 98,
+      "stars": 99,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
