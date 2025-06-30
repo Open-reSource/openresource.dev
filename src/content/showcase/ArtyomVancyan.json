@@ -15,7 +15,7 @@
       "name": "thumbnails",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 15,
+      "stars": 16,
       "url": "https://github.com/pysnippet/thumbnails"
     },
     {
@@ -42,7 +42,7 @@
       "contributors": 4,
       "description": "Advanced, highly customizable phone input component for Ant Design.",
       "discussions": 12,
-      "forks": 13,
+      "forks": 14,
       "issues": 1,
       "languages": [
         "TypeScript",

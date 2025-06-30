@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1633,
+      "stars": 1635,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 192,
-      "issues": 10,
+      "issues": 11,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1947,
+      "prs": 3,
+      "stars": 1952,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 649,
+      "stars": 652,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 752,
+      "stars": 754,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 585,
+      "stars": 587,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -256,7 +256,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 74,
+      "stars": 73,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
