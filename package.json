@@ -20,7 +20,7 @@
     "@astrojs/starlight": "^0.34.4",
     "@astrojs/vercel": "^8.2.0",
     "@vercel/analytics": "^1.5.0",
-    "astro": "^5.10.1"
+    "astro": "^5.10.2"
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
