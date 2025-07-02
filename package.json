@@ -29,7 +29,7 @@
     "@octokit/graphql-schema": "^15.26.0",
     "@types/parse-github-url": "^1.0.3",
     "astro-og-canvas": "^0.7.0",
-    "dotenv": "^17.0.0",
+    "dotenv": "^17.0.1",
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.11",
     "parse-github-url": "^1.0.3",
