@@ -8,7 +8,7 @@
       "description": "Configuration Management for Python ⚙",
       "discussions": 62,
       "forks": 300,
-      "issues": 148,
+      "issues": 149,
       "languages": [
         "Python",
         "Shell",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 4,
-      "stars": 4051,
+      "prs": 3,
+      "stars": 4057,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -40,7 +40,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 194,
+      "stars": 195,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
