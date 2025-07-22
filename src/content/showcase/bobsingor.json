@@ -13,17 +13,18 @@
         "TypeScript",
         "JavaScript",
         "MDX",
+        "Vue",
         "CSS",
+        "Shell",
         "Dockerfile",
         "C++",
         "HTML",
-        "C",
-        "Makefile"
+        "C"
       ],
       "name": "embed-pdf-viewer",
       "owner": "embedpdf",
-      "prs": 0,
-      "stars": 139,
+      "prs": 1,
+      "stars": 142,
       "url": "https://github.com/embedpdf/embed-pdf-viewer"
     }
   ]
