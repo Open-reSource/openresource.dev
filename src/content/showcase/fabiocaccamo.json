@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1637,
+      "stars": 1636,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 193,
-      "issues": 12,
+      "issues": 13,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1959,
+      "stars": 1962,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 17,
-      "stars": 1571,
+      "stars": 1572,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 911,
+      "stars": 910,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 654,
+      "stars": 655,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -104,7 +104,7 @@
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
       "forks": 36,
-      "issues": 5,
+      "issues": 6,
       "languages": [
         "Python",
         "JavaScript",
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 759,
+      "stars": 763,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 593,
+      "stars": 594,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -273,7 +273,7 @@
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 73,
+      "stars": 74,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {

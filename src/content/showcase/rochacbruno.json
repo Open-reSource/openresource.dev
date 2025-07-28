@@ -8,7 +8,7 @@
       "description": "Configuration Management for Python ⚙",
       "discussions": 62,
       "forks": 301,
-      "issues": 149,
+      "issues": 150,
       "languages": [
         "Python",
         "Shell",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 3,
-      "stars": 4063,
+      "stars": 4071,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -28,7 +28,7 @@
       "contributors": 3,
       "description": "This template is **archived**.   > UV can now [generate a sample project](https://docs.astral.sh/uv/guides/projects/#creating-a-new-project)   > I recommend using **UV** to bootstrap your peojects.   > [Copier](https://github.com/copier-org/copier) is a tools that can bootstrap projects from templates.  ",
       "discussions": 0,
-      "forks": 27,
+      "forks": 26,
       "issues": 2,
       "languages": [
         "Python",
@@ -40,7 +40,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 195,
+      "stars": 196,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
@@ -58,7 +58,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2090,
+      "stars": 2089,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
