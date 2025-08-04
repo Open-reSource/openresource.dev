@@ -5,9 +5,9 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
       "contributors": 2,
-      "description": "Framework Hugo with Bootstrap and Decap/Sveltia CMS (Github template)",
+      "description": "Framework Hugo with Bootstrap and CMS (Decap, Netlify, Pages, Sveltia) – Github template",
       "discussions": 0,
-      "forks": 3,
+      "forks": 4,
       "issues": 0,
       "languages": [
         "JavaScript",
@@ -55,7 +55,7 @@
       "name": "hugolify-admin",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 3,
+      "stars": 4,
       "url": "https://github.com/Hugolify/hugolify-admin"
     }
   ]
