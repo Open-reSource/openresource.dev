@@ -8,7 +8,7 @@
       "description": "Flexible Bootstrap WordPress starter theme with full WooCommerce support and built-in SCSS compiler.",
       "discussions": 267,
       "forks": 102,
-      "issues": 4,
+      "issues": 3,
       "languages": [
         "PHP",
         "SCSS",
@@ -17,8 +17,8 @@
       ],
       "name": "bootscore",
       "owner": "bootscore",
-      "prs": 7,
-      "stars": 339,
+      "prs": 6,
+      "stars": 340,
       "url": "https://github.com/bootscore/bootscore"
     }
   ]

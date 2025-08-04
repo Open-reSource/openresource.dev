@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
       "contributors": 122,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 62,
+      "discussions": 63,
       "forks": 301,
       "issues": 150,
       "languages": [
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 3,
-      "stars": 4071,
+      "stars": 4080,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -40,7 +40,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 196,
+      "stars": 197,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
@@ -50,7 +50,7 @@
       "description": "A quick reference guide for the Pythonista in the process of becoming a Rustacean",
       "discussions": 0,
       "forks": 76,
-      "issues": 4,
+      "issues": 5,
       "languages": [
         "CSS",
         "Handlebars"
