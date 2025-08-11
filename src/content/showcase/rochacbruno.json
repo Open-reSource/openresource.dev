@@ -19,12 +19,12 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 3,
-      "stars": 4080,
+      "stars": 4089,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=7239908c01b8e721752219ed9c16d68645c51a12&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=6a67ca8f1a1878cd74c14376e6209e96b829ecb2&v=4&s=50",
       "contributors": 3,
       "description": "This template is **archived**.   > UV can now [generate a sample project](https://docs.astral.sh/uv/guides/projects/#creating-a-new-project)   > I recommend using **UV** to bootstrap your peojects.   > [Copier](https://github.com/copier-org/copier) is a tools that can bootstrap projects from templates.  ",
       "discussions": 0,
@@ -45,7 +45,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=7239908c01b8e721752219ed9c16d68645c51a12&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=6a67ca8f1a1878cd74c14376e6209e96b829ecb2&v=4&s=50",
       "contributors": 28,
       "description": "A quick reference guide for the Pythonista in the process of becoming a Rustacean",
       "discussions": 0,
@@ -58,7 +58,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2089,
+      "stars": 2088,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
