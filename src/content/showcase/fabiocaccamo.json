@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1636,
+      "stars": 1637,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -46,7 +46,7 @@
       "contributors": 6,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
-      "forks": 46,
+      "forks": 45,
       "issues": 10,
       "languages": [
         "Python",
@@ -66,7 +66,7 @@
       "contributors": 7,
       "description": "📱 📂  iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
-      "forks": 136,
+      "forks": 135,
       "issues": 0,
       "languages": [
         "Objective-C",
@@ -265,7 +265,7 @@
       "contributors": 3,
       "description": "🧢 friendly font operations on top of fontTools.",
       "discussions": 0,
-      "forks": 4,
+      "forks": 5,
       "issues": 0,
       "languages": [
         "Python"

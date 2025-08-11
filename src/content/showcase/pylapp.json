@@ -157,7 +157,7 @@
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 21,
-      "issues": 12,
+      "issues": 13,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -166,18 +166,18 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 9,
-      "stars": 66,
+      "prs": 12,
+      "stars": 65,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 240,
+      "contributors": 241,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 91,
-      "forks": 654,
-      "issues": 195,
+      "forks": 658,
+      "issues": 194,
       "languages": [
         "Rust",
         "Python",
@@ -192,7 +192,7 @@
       "name": "hurl",
       "owner": "Orange-OpenSource",
       "prs": 3,
-      "stars": 16847,
+      "stars": 17011,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
