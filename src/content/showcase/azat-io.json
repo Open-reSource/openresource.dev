@@ -14,8 +14,8 @@
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 2,
-      "stars": 2647,
+      "prs": 4,
+      "stars": 2659,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -24,7 +24,7 @@
       "contributors": 1,
       "description": "🐍 CLI tool to analyze and report TODO comments in JavaScript and TypeScript Git repositories",
       "discussions": 0,
-      "forks": 4,
+      "forks": 8,
       "issues": 2,
       "languages": [
         "Rust",
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 365,
+      "stars": 469,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
