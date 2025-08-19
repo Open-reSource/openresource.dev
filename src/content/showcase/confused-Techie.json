@@ -8,7 +8,7 @@
       "description": "A Community-led Hyper-Hackable Text Editor",
       "discussions": 0,
       "forks": 156,
-      "issues": 240,
+      "issues": 242,
       "languages": [
         "JavaScript",
         "Less",
@@ -22,8 +22,8 @@
       ],
       "name": "pulsar",
       "owner": "pulsar-edit",
-      "prs": 52,
-      "stars": 3668,
+      "prs": 54,
+      "stars": 3676,
       "url": "https://github.com/pulsar-edit/pulsar"
     }
   ]

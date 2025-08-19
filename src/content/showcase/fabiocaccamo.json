@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 1965,
+      "stars": 1971,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -45,7 +45,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 6,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
-      "discussions": 7,
+      "discussions": 8,
       "forks": 45,
       "issues": 10,
       "languages": [
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 18,
-      "stars": 1575,
+      "stars": 1576,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 910,
+      "stars": 911,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 655,
+      "stars": 656,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 766,
+      "stars": 767,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 595,
+      "stars": 594,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 221,
+      "stars": 222,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {

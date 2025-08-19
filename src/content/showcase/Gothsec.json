@@ -7,7 +7,7 @@
       "contributors": 1,
       "description": "Discover movies for developers. Very selected films over 6.5 rating about tech, AI, programming, hacking and more.",
       "discussions": 0,
-      "forks": 0,
+      "forks": 1,
       "issues": 0,
       "languages": [
         "TypeScript",
@@ -26,7 +26,7 @@
       "contributors": 2,
       "description": "Portfolio built with Astro, React, TypeScript and TailwindCSS.",
       "discussions": 0,
-      "forks": 80,
+      "forks": 79,
       "issues": 1,
       "languages": [
         "Astro",
@@ -35,8 +35,8 @@
       ],
       "name": "Portfolio",
       "owner": "Gothsec",
-      "prs": 1,
-      "stars": 142,
+      "prs": 3,
+      "stars": 141,
       "url": "https://github.com/Gothsec/Portfolio"
     }
   ]
