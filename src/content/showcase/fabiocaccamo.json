@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 193,
-      "issues": 13,
+      "issues": 12,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 1971,
+      "stars": 1975,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -45,7 +45,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
       "contributors": 6,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
-      "discussions": 8,
+      "discussions": 7,
       "forks": 45,
       "issues": 10,
       "languages": [
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 767,
+      "stars": 768,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
