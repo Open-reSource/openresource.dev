@@ -7,7 +7,7 @@
       "contributors": 122,
       "description": "Configuration Management for Python ⚙",
       "discussions": 63,
-      "forks": 301,
+      "forks": 302,
       "issues": 150,
       "languages": [
         "Python",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 3,
-      "stars": 4096,
+      "stars": 4099,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -40,7 +40,7 @@
       "name": "flask-project-template",
       "owner": "rochacbruno",
       "prs": 1,
-      "stars": 197,
+      "stars": 196,
       "url": "https://github.com/rochacbruno/flask-project-template"
     },
     {
@@ -49,7 +49,7 @@
       "contributors": 28,
       "description": "A quick reference guide for the Pythonista in the process of becoming a Rustacean",
       "discussions": 0,
-      "forks": 76,
+      "forks": 75,
       "issues": 5,
       "languages": [
         "CSS",
@@ -58,7 +58,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2089,
+      "stars": 2091,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
