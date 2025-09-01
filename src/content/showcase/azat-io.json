@@ -7,7 +7,7 @@
       "contributors": 29,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
-      "forks": 51,
+      "forks": 53,
       "issues": 10,
       "languages": [
         "TypeScript"
@@ -15,7 +15,7 @@
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
       "prs": 4,
-      "stars": 2664,
+      "stars": 2678,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 471,
+      "stars": 476,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -46,7 +46,7 @@
       "contributors": 2,
       "description": "🎨 Advanced VS Code icon theme with adaptive icon colors that match the editor’s color theme",
       "discussions": 0,
-      "forks": 4,
+      "forks": 6,
       "issues": 1,
       "languages": [
         "TypeScript"
@@ -54,8 +54,59 @@
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 106,
+      "stars": 105,
       "url": "https://github.com/azat-io/eyecons"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
+      "contributors": 2,
+      "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
+      "discussions": 0,
+      "forks": 6,
+      "issues": 0,
+      "languages": [
+        "TypeScript"
+      ],
+      "name": "actions-up",
+      "owner": "azat-io",
+      "prs": 0,
+      "stars": 114,
+      "url": "https://github.com/azat-io/actions-up"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
+      "contributors": 1,
+      "description": "🛰 Monitor how many tokens your code and configs consume in AI tools. Set budgets and get alerts when limits are hit",
+      "discussions": 0,
+      "forks": 1,
+      "issues": 1,
+      "languages": [
+        "TypeScript"
+      ],
+      "name": "token-limit",
+      "owner": "azat-io",
+      "prs": 0,
+      "stars": 54,
+      "url": "https://github.com/azat-io/token-limit"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
+      "contributors": 3,
+      "description": "🧵 ESLint plugin for transforming negated boolean expressions via De Morgan’s laws",
+      "discussions": 0,
+      "forks": 2,
+      "issues": 0,
+      "languages": [
+        "TypeScript"
+      ],
+      "name": "eslint-plugin-de-morgan",
+      "owner": "azat-io",
+      "prs": 1,
+      "stars": 286,
+      "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]
 }

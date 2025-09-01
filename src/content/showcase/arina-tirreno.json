@@ -1,0 +1,26 @@
+{
+  "author": "arina-tirreno",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/171573688?v=4&s=50",
+      "contributors": 5,
+      "description": "tirreno - Open Source Security Analytics. Understand, monitor, and protect your platform from cyberfraud, account threats, and abuse. Get started — free.",
+      "discussions": 0,
+      "forks": 82,
+      "issues": 3,
+      "languages": [
+        "PHP",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "PLpgSQL"
+      ],
+      "name": "tirreno",
+      "owner": "tirrenotechnologies",
+      "prs": 0,
+      "stars": 762,
+      "url": "https://github.com/tirrenotechnologies/tirreno"
+    }
+  ]
+}
