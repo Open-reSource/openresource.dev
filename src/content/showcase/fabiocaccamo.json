@@ -23,11 +23,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 34,
+      "contributors": 35,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 193,
-      "issues": 12,
+      "issues": 10,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 1975,
+      "prs": 3,
+      "stars": 1976,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 18,
-      "stars": 1576,
+      "stars": 1578,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -93,8 +93,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 6,
-      "stars": 656,
+      "prs": 8,
+      "stars": 655,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,8 +112,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 768,
+      "prs": 7,
+      "stars": 766,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 99,
+      "stars": 100,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -238,7 +238,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 13,
+      "prs": 2,
       "stars": 80,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -255,7 +255,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 6,
       "stars": 74,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -272,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 6,
+      "prs": 8,
       "stars": 74,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },

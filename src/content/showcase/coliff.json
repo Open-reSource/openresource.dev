@@ -6,8 +6,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/42865284?v=4&s=50",
       "contributors": 72,
       "description": "⚙️ The static code analysis tool you need for your HTML",
-      "discussions": 8,
-      "forks": 415,
+      "discussions": 7,
+      "forks": 417,
       "issues": 36,
       "languages": [
         "JavaScript",
@@ -18,8 +18,8 @@
       ],
       "name": "HTMLHint",
       "owner": "htmlhint",
-      "prs": 1,
-      "stars": 3192,
+      "prs": 2,
+      "stars": 3193,
       "url": "https://github.com/htmlhint/HTMLHint"
     }
   ]
