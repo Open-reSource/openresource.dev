@@ -1,0 +1,29 @@
+{
+  "author": "zdunecki",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/63718191?v=4&s=50",
+      "contributors": 3,
+      "description": "ambitious docs framework for everyone",
+      "discussions": 0,
+      "forks": 3,
+      "issues": 30,
+      "languages": [
+        "TypeScript",
+        "HTML",
+        "JavaScript",
+        "CSS",
+        "MDX",
+        "Shell",
+        "Dockerfile",
+        "Python"
+      ],
+      "name": "xyd",
+      "owner": "livesession",
+      "prs": 1,
+      "stars": 62,
+      "url": "https://github.com/livesession/xyd"
+    }
+  ]
+}
