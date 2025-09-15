@@ -7,7 +7,7 @@
       "contributors": 5,
       "description": "tirreno - Open Source Security Analytics. Understand, monitor, and protect your app from cyber threats, account threats, and abuse. Get started — free.",
       "discussions": 0,
-      "forks": 81,
+      "forks": 83,
       "issues": 3,
       "languages": [
         "PHP",
@@ -19,7 +19,7 @@
       "name": "tirreno",
       "owner": "tirrenotechnologies",
       "prs": 0,
-      "stars": 771,
+      "stars": 783,
       "url": "https://github.com/tirrenotechnologies/tirreno"
     }
   ]
