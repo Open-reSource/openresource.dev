@@ -7,7 +7,7 @@
       "contributors": 3,
       "description": "📱 🆔  iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 228,
+      "forks": 229,
       "issues": 3,
       "languages": [
         "Objective-C",
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1638,
+      "stars": 1637,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1979,
+      "stars": 1978,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 18,
-      "stars": 1581,
+      "prs": 3,
+      "stars": 1580,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 767,
+      "stars": 766,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -141,7 +141,7 @@
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
       "forks": 34,
-      "issues": 4,
+      "issues": 5,
       "languages": [
         "Python",
         "JavaScript",
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 595,
+      "stars": 597,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -177,7 +177,7 @@
       "contributors": 1,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
-      "forks": 15,
+      "forks": 16,
       "issues": 4,
       "languages": [
         "Python"
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 222,
+      "stars": 223,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -273,7 +273,7 @@
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 74,
+      "stars": 75,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {

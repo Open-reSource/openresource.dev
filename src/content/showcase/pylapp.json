@@ -112,8 +112,8 @@
       "contributors": 175,
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
-      "forks": 5,
-      "issues": 12,
+      "forks": 6,
+      "issues": 13,
       "languages": [
         "JavaScript",
         "HTML",
@@ -121,7 +121,7 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 5,
+      "prs": 4,
       "stars": 20,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
@@ -176,8 +176,8 @@
       "contributors": 242,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 91,
-      "forks": 680,
-      "issues": 194,
+      "forks": 688,
+      "issues": 197,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 0,
-      "stars": 17439,
+      "prs": 1,
+      "stars": 17670,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

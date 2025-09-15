@@ -7,8 +7,8 @@
       "contributors": 3,
       "description": "ambitious docs framework for everyone",
       "discussions": 0,
-      "forks": 3,
-      "issues": 30,
+      "forks": 4,
+      "issues": 32,
       "languages": [
         "TypeScript",
         "HTML",
@@ -21,8 +21,8 @@
       ],
       "name": "xyd",
       "owner": "livesession",
-      "prs": 1,
-      "stars": 62,
+      "prs": 2,
+      "stars": 67,
       "url": "https://github.com/livesession/xyd"
     }
   ]
