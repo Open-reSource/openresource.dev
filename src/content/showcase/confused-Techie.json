@@ -12,18 +12,18 @@
       "languages": [
         "JavaScript",
         "Less",
-        "Scheme",
+        "Tree-sitter Query",
         "CSS",
         "CoffeeScript",
-        "Tree-sitter Query",
         "Shell",
         "PEG.js",
-        "Batchfile"
+        "Batchfile",
+        "Dockerfile"
       ],
       "name": "pulsar",
       "owner": "pulsar-edit",
-      "prs": 52,
-      "stars": 3718,
+      "prs": 50,
+      "stars": 3732,
       "url": "https://github.com/pulsar-edit/pulsar"
     }
   ]
