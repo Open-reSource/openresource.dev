@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1637,
+      "stars": 1636,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1978,
+      "stars": 1979,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 1580,
+      "stars": 1582,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 911,
+      "stars": 909,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -103,7 +103,7 @@
       "contributors": 7,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 37,
+      "forks": 38,
       "issues": 5,
       "languages": [
         "Python",
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 766,
+      "stars": 767,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -168,7 +168,7 @@
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 264,
+      "stars": 263,
       "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
     },
     {
@@ -184,7 +184,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 7,
+      "prs": 8,
       "stars": 223,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -203,7 +203,7 @@
       "name": "FCIPAddressGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 116,
+      "stars": 115,
       "url": "https://github.com/fabiocaccamo/FCIPAddressGeocoder"
     },
     {
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 100,
+      "stars": 101,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -239,7 +239,7 @@
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 80,
+      "stars": 81,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {

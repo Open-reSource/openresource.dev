@@ -48,8 +48,8 @@
       "forks": 3,
       "issues": 0,
       "languages": [
-        "HTML",
         "JavaScript",
+        "HTML",
         "CSS"
       ],
       "name": "hugolify-admin",
