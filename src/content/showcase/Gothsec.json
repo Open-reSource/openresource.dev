@@ -17,7 +17,7 @@
       "name": "MoviesForDevs",
       "owner": "Gothsec",
       "prs": 0,
-      "stars": 5,
+      "stars": 7,
       "url": "https://github.com/Gothsec/MoviesForDevs"
     },
     {
@@ -26,7 +26,7 @@
       "contributors": 2,
       "description": "Portfolio built with Astro, React, TypeScript and TailwindCSS.",
       "discussions": 0,
-      "forks": 83,
+      "forks": 89,
       "issues": 1,
       "languages": [
         "Astro",
@@ -35,8 +35,8 @@
       ],
       "name": "Portfolio",
       "owner": "Gothsec",
-      "prs": 3,
-      "stars": 161,
+      "prs": 4,
+      "stars": 164,
       "url": "https://github.com/Gothsec/Portfolio"
     }
   ]
