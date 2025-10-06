@@ -7,15 +7,15 @@
       "contributors": 29,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
-      "forks": 53,
-      "issues": 10,
+      "forks": 54,
+      "issues": 11,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 1,
-      "stars": 2710,
+      "prs": 2,
+      "stars": 2709,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 487,
+      "stars": 488,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -54,7 +54,7 @@
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 116,
+      "stars": 125,
       "url": "https://github.com/azat-io/eyecons"
     },
     {
@@ -71,7 +71,7 @@
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 1,
-      "stars": 275,
+      "stars": 279,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 287,
+      "stars": 288,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]
