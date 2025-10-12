@@ -18,9 +18,9 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.36.0",
-    "@astrojs/vercel": "^8.2.8",
+    "@astrojs/vercel": "^8.2.9",
     "@vercel/analytics": "^1.5.0",
-    "astro": "^5.14.1"
+    "astro": "^5.14.4"
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
@@ -28,7 +28,7 @@
     "@octokit/graphql": "^9.0.2",
     "@octokit/graphql-schema": "^15.26.0",
     "@types/parse-github-url": "^1.0.3",
-    "astro-og-canvas": "^0.7.0",
+    "astro-og-canvas": "^0.7.1",
     "dotenv": "^17.2.3",
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.12",
@@ -36,7 +36,7 @@
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
-    "starlight-blog": "^0.24.1",
+    "starlight-blog": "^0.24.2",
     "starlight-links-validator": "^0.18.0",
     "starlight-showcases": "^0.3.0",
     "tsx": "^4.20.6",
