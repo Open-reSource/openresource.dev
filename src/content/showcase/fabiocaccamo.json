@@ -26,7 +26,7 @@
       "contributors": 35,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 195,
+      "forks": 197,
       "issues": 10,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1988,
+      "stars": 1991,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 1587,
+      "stars": 1590,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 772,
+      "stars": 775,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 517,
+      "stars": 515,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 603,
+      "stars": 606,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -168,7 +168,7 @@
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 263,
+      "stars": 264,
       "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
     },
     {

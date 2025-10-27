@@ -4,10 +4,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/63718191?v=4&s=50",
-      "contributors": 3,
+      "contributors": 4,
       "description": "ambitious docs framework for everyone",
       "discussions": 0,
-      "forks": 4,
+      "forks": 5,
       "issues": 34,
       "languages": [
         "TypeScript",
@@ -21,8 +21,8 @@
       ],
       "name": "xyd",
       "owner": "livesession",
-      "prs": 2,
-      "stars": 75,
+      "prs": 3,
+      "stars": 83,
       "url": "https://github.com/livesession/xyd"
     }
   ]

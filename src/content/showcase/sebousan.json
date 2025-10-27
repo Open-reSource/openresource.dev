@@ -5,7 +5,7 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
       "contributors": 2,
-      "description": "Framework Hugo with Bootstrap and CMS (Decap, Netlify, Pages, Sveltia) – Github template",
+      "description": "Framework Hugo with Bootstrap and Headless CMS (Decap, Netlify, Pages, Static and Sveltia) – Github template",
       "discussions": 0,
       "forks": 4,
       "issues": 0,
@@ -16,7 +16,7 @@
       "name": "hugolify-template",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 25,
+      "stars": 26,
       "url": "https://github.com/Hugolify/hugolify-template"
     },
     {
@@ -36,14 +36,14 @@
       "name": "hugolify-theme",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 18,
+      "stars": 19,
       "url": "https://github.com/Hugolify/hugolify-theme"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
-      "contributors": 4,
-      "description": "Admin for Hugolify with Decap, Pages and Sveltia CMS",
+      "contributors": 3,
+      "description": "Admin for Hugolify with Headless CMS (Decap, Netlify, Pages, Static and Sveltia CMS)",
       "discussions": 0,
       "forks": 3,
       "issues": 0,
@@ -55,7 +55,7 @@
       "name": "hugolify-admin",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 9,
+      "stars": 10,
       "url": "https://github.com/Hugolify/hugolify-admin"
     }
   ]

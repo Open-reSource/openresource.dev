@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/178275234?v=4&s=50",
-      "contributors": 19,
+      "contributors": 20,
       "description": "🪐 Modern offline Kanban board app for Windows, MacOS and Linux made with Tauri and Nuxt. Built with simplicity and user experience in mind.",
       "discussions": 15,
-      "forks": 118,
-      "issues": 87,
+      "forks": 120,
+      "issues": 89,
       "languages": [
         "Vue",
         "TypeScript",
@@ -19,8 +19,8 @@
       ],
       "name": "kanri",
       "owner": "kanriapp",
-      "prs": 10,
-      "stars": 1421,
+      "prs": 13,
+      "stars": 1471,
       "url": "https://github.com/kanriapp/kanri"
     }
   ]
