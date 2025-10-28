@@ -7,8 +7,8 @@
       "contributors": 80,
       "description": "Digitomize, part of Microsoft for Startups Founders Hub, is an open-source platform that combines two main sections: Contests and User Profiles. It allows users to explore upcoming coding contests and dynamically create developer portfolios.",
       "discussions": 1,
-      "forks": 322,
-      "issues": 17,
+      "forks": 323,
+      "issues": 16,
       "languages": [
         "JavaScript",
         "CSS",
@@ -19,7 +19,7 @@
       "name": "digitomize",
       "owner": "digitomize",
       "prs": 38,
-      "stars": 596,
+      "stars": 597,
       "url": "https://github.com/digitomize/digitomize"
     },
     {

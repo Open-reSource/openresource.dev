@@ -8,14 +8,14 @@
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
       "forks": 54,
-      "issues": 11,
+      "issues": 12,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 2,
-      "stars": 2715,
+      "prs": 4,
+      "stars": 2731,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -54,16 +54,16 @@
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 126,
+      "stars": 127,
       "url": "https://github.com/azat-io/eyecons"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
-      "contributors": 2,
+      "contributors": 3,
       "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
       "discussions": 0,
-      "forks": 10,
+      "forks": 11,
       "issues": 1,
       "languages": [
         "TypeScript"
@@ -71,7 +71,7 @@
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 1,
-      "stars": 283,
+      "stars": 287,
       "url": "https://github.com/azat-io/actions-up"
     },
     {

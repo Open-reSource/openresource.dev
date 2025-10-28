@@ -13,6 +13,7 @@
         "PHP",
         "Smarty",
         "SCSS",
+        "Twig",
         "HTML"
       ],
       "name": "SwiftyEdit",
