@@ -113,7 +113,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 6,
-      "issues": 12,
+      "issues": 13,
       "languages": [
         "JavaScript",
         "HTML",
@@ -166,7 +166,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 10,
+      "prs": 12,
       "stars": 65,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -176,8 +176,8 @@
       "contributors": 254,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 91,
-      "forks": 693,
-      "issues": 202,
+      "forks": 694,
+      "issues": 204,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 2,
-      "stars": 17991,
+      "prs": 1,
+      "stars": 18030,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
