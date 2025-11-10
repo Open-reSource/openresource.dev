@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/195636730?v=4&s=50",
-      "contributors": 5,
+      "contributors": 7,
       "description": "A PDF viewer that seamlessly integrates with any JavaScript project",
       "discussions": 12,
-      "forks": 128,
-      "issues": 62,
+      "forks": 130,
+      "issues": 68,
       "languages": [
         "TypeScript",
         "MDX",
@@ -24,7 +24,7 @@
       "name": "embed-pdf-viewer",
       "owner": "embedpdf",
       "prs": 6,
-      "stars": 2460,
+      "stars": 2534,
       "url": "https://github.com/embedpdf/embed-pdf-viewer"
     }
   ]

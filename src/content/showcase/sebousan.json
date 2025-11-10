@@ -43,7 +43,7 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
       "contributors": 3,
-      "description": "Admin for Hugolify with Headless CMS (Decap, Netlify, Pages, Static and Sveltia CMS)",
+      "description": "Admin for Hugolify allowing the build of the config file for different Headless (Decap, Netlify, Pages, Static and Sveltia CMS)",
       "discussions": 0,
       "forks": 3,
       "issues": 0,

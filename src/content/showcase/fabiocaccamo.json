@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 1991,
+      "stars": 2001,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -46,7 +46,7 @@
       "contributors": 7,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
-      "forks": 45,
+      "forks": 44,
       "issues": 9,
       "languages": [
         "Python",
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1591,
+      "stars": 1596,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 658,
+      "stars": 659,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 777,
+      "stars": 780,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -123,7 +123,7 @@
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
       "forks": 56,
-      "issues": 6,
+      "issues": 7,
       "languages": [
         "Python",
         "HTML"
