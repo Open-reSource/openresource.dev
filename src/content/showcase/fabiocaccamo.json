@@ -7,7 +7,7 @@
       "contributors": 3,
       "description": "📱 🆔  iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 231,
+      "forks": 232,
       "issues": 3,
       "languages": [
         "Objective-C",
@@ -26,8 +26,8 @@
       "contributors": 35,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 197,
-      "issues": 10,
+      "forks": 198,
+      "issues": 11,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 2001,
+      "stars": 2002,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1596,
+      "stars": 1597,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -103,8 +103,8 @@
       "contributors": 7,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 38,
-      "issues": 5,
+      "forks": 37,
+      "issues": 6,
       "languages": [
         "Python",
         "JavaScript",
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 780,
+      "stars": 781,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
