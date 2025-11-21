@@ -41,6 +41,6 @@
     "starlight-showcases": "^0.3.1",
     "tsx": "^4.20.6",
     "vercel": "^48.10.4",
-    "vitest": "^4.0.10"
+    "vitest": "^4.0.12"
   }
 }
