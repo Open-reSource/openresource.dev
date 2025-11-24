@@ -17,7 +17,7 @@
       "name": "materialstyle",
       "owner": "materialstyle",
       "prs": 4,
-      "stars": 43,
+      "stars": 44,
       "url": "https://github.com/materialstyle/materialstyle"
     },
     {
@@ -45,7 +45,7 @@
       "contributors": 1,
       "description": "CueSync is a JavaScript library designed to simplify the integration of interactive transcripts into multimedia content.",
       "discussions": 0,
-      "forks": 1,
+      "forks": 2,
       "issues": 0,
       "languages": [
         "JavaScript",

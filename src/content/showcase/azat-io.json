@@ -14,8 +14,8 @@
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 5,
-      "stars": 2745,
+      "prs": 4,
+      "stars": 2748,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 494,
+      "stars": 495,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -71,7 +71,7 @@
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 1,
-      "stars": 297,
+      "stars": 299,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 291,
+      "stars": 292,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]

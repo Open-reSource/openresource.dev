@@ -36,7 +36,7 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 5,
+      "prs": 6,
       "stars": 2002,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1597,
+      "stars": 1599,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 909,
+      "stars": 910,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 659,
+      "stars": 660,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 516,
+      "stars": 517,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
