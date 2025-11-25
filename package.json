@@ -26,7 +26,7 @@
     "@actions/core": "^1.11.1",
     "@faker-js/faker": "^10.1.0",
     "@octokit/graphql": "^9.0.3",
-    "@octokit/graphql-schema": "^15.26.0",
+    "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
     "astro-og-canvas": "^0.7.2",
     "dotenv": "^17.2.3",
