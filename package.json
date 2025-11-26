@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.5",
-    "@astrojs/starlight": "^0.36.2",
+    "@astrojs/starlight": "^0.36.3",
     "@astrojs/vercel": "^9.0.1",
     "@vercel/analytics": "^1.5.0",
     "astro": "^5.16.0"
@@ -26,7 +26,7 @@
     "@actions/core": "^1.11.1",
     "@faker-js/faker": "^10.1.0",
     "@octokit/graphql": "^9.0.3",
-    "@octokit/graphql-schema": "^15.26.0",
+    "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
     "astro-og-canvas": "^0.7.2",
     "dotenv": "^17.2.3",
@@ -40,7 +40,7 @@
     "starlight-links-validator": "^0.19.1",
     "starlight-showcases": "^0.3.1",
     "tsx": "^4.20.6",
-    "vercel": "^48.10.10",
-    "vitest": "^4.0.13"
+    "vercel": "^48.10.14",
+    "vitest": "^4.0.14"
   }
 }
