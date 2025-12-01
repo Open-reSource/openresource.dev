@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 11,
+      "contributors": 12,
       "description": "Video thumbnail generator for modern web video players such as Plyr, Videojs, Flowplayer, Fluid Player, etc.",
       "discussions": 1,
       "forks": 3,
@@ -21,7 +21,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 11,
+      "contributors": 12,
       "description": "Secure your Django app by controlling the access - grant or deny user access based on device and location, including VPN detection.",
       "discussions": 2,
       "forks": 2,
@@ -51,13 +51,13 @@
       "name": "antd-phone-input",
       "owner": "typesnippet",
       "prs": 0,
-      "stars": 82,
+      "stars": 85,
       "url": "https://github.com/typesnippet/antd-phone-input"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108220139?v=4&s=50",
-      "contributors": 17,
+      "contributors": 18,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 4,
       "forks": 14,
@@ -68,7 +68,7 @@
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 85,
+      "stars": 86,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]

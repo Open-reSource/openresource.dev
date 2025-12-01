@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 2002,
+      "stars": 2006,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -66,7 +66,7 @@
       "contributors": 7,
       "description": "📱 📂  iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
-      "forks": 135,
+      "forks": 134,
       "issues": 0,
       "languages": [
         "Objective-C",
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 910,
+      "stars": 909,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 781,
+      "stars": 782,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 517,
+      "stars": 518,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 608,
+      "stars": 609,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -239,7 +239,7 @@
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 82,
+      "stars": 84,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
