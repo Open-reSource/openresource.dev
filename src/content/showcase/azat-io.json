@@ -7,15 +7,15 @@
       "contributors": 29,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
-      "forks": 54,
-      "issues": 14,
+      "forks": 56,
+      "issues": 17,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 4,
-      "stars": 2748,
+      "prs": 2,
+      "stars": 2755,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 495,
+      "stars": 497,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -60,18 +60,18 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
-      "contributors": 4,
+      "contributors": 5,
       "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
       "discussions": 0,
       "forks": 13,
-      "issues": 1,
+      "issues": 2,
       "languages": [
         "TypeScript"
       ],
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 1,
-      "stars": 299,
+      "stars": 306,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -88,7 +88,7 @@
       "name": "token-limit",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 54,
+      "stars": 55,
       "url": "https://github.com/azat-io/token-limit"
     },
     {
