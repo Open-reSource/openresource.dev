@@ -26,7 +26,7 @@
       "description": "Hugolify theme is an Hugo theme with Bootstrap 5",
       "discussions": 0,
       "forks": 1,
-      "issues": 5,
+      "issues": 4,
       "languages": [
         "JavaScript",
         "HTML",
@@ -46,7 +46,7 @@
       "description": "Admin for Hugolify allowing the build of the config file for different Headless (Decap, Netlify, Pages, Static and Sveltia CMS)",
       "discussions": 0,
       "forks": 3,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "JavaScript",
         "HTML",
