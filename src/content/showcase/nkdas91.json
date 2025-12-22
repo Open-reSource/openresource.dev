@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/67741383?v=4&s=50",
-      "contributors": 195,
+      "contributors": 194,
       "description": "Restyle Bootstrap with Material Style - A Material Design UI Library based on Bootstrap.",
       "discussions": 3,
       "forks": 1,
@@ -27,7 +27,7 @@
       "description": "Marqueefy is a custom Marquee component used to create horizontal or vertical scrolling content.",
       "discussions": 0,
       "forks": 0,
-      "issues": 0,
+      "issues": 1,
       "languages": [
         "JavaScript",
         "HTML",
