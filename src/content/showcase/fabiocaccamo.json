@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1640,
+      "stars": 1641,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 2011,
+      "stars": 2017,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 1601,
+      "stars": 1602,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 661,
+      "stars": 662,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -103,7 +103,7 @@
       "contributors": 8,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 36,
+      "forks": 37,
       "issues": 5,
       "languages": [
         "Python",
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 787,
+      "stars": 790,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 517,
+      "stars": 519,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 610,
+      "stars": 611,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 226,
+      "stars": 232,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {

@@ -4,18 +4,18 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
-      "contributors": 29,
+      "contributors": 31,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
       "forks": 56,
-      "issues": 18,
+      "issues": 11,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 1,
-      "stars": 2764,
+      "prs": 2,
+      "stars": 2768,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 504,
+      "stars": 503,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -54,7 +54,7 @@
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 128,
+      "stars": 127,
       "url": "https://github.com/azat-io/eyecons"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 295,
+      "stars": 297,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]
