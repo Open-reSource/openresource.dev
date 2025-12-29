@@ -73,7 +73,7 @@
       "contributors": 177,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 4,
-      "forks": 10,
+      "forks": 11,
       "issues": 49,
       "languages": [
         "Python",
@@ -84,7 +84,7 @@
       "name": "floss-toolbox",
       "owner": "Orange-OpenSource",
       "prs": 10,
-      "stars": 26,
+      "stars": 27,
       "url": "https://github.com/Orange-OpenSource/floss-toolbox"
     },
     {
@@ -166,7 +166,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 18,
+      "prs": 19,
       "stars": 65,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -176,8 +176,8 @@
       "contributors": 257,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 92,
-      "forks": 698,
-      "issues": 203,
+      "forks": 701,
+      "issues": 204,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 1,
-      "stars": 18285,
+      "prs": 3,
+      "stars": 18323,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

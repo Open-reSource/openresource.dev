@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1641,
+      "stars": 1642,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -26,8 +26,8 @@
       "contributors": 36,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 197,
-      "issues": 9,
+      "forks": 198,
+      "issues": 10,
       "languages": [
         "Python",
         "CSS",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 2017,
+      "stars": 2019,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 1602,
+      "stars": 1604,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -103,7 +103,7 @@
       "contributors": 8,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 37,
+      "forks": 38,
       "issues": 5,
       "languages": [
         "Python",
@@ -122,7 +122,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 55,
+      "forks": 54,
       "issues": 6,
       "languages": [
         "Python",
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 611,
+      "stars": 612,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 232,
+      "stars": 235,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 102,
+      "stars": 103,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -256,7 +256,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 76,
+      "stars": 77,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
