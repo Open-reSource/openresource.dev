@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@actions/core": "^2.0.1",
-    "@faker-js/faker": "^10.1.0",
+    "@faker-js/faker": "^10.2.0",
     "@octokit/graphql": "^9.0.3",
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
