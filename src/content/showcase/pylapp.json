@@ -94,7 +94,7 @@
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 4,
-      "issues": 10,
+      "issues": 11,
       "languages": [
         "HTML",
         "JavaScript",
@@ -102,7 +102,7 @@
       ],
       "name": "Tota11ylost",
       "owner": "Orange-OpenSource",
-      "prs": 0,
+      "prs": 1,
       "stars": 8,
       "url": "https://github.com/Orange-OpenSource/Tota11ylost"
     },
@@ -177,7 +177,7 @@
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 92,
       "forks": 701,
-      "issues": 204,
+      "issues": 203,
       "languages": [
         "Rust",
         "Python",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 3,
-      "stars": 18323,
+      "prs": 2,
+      "stars": 18344,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

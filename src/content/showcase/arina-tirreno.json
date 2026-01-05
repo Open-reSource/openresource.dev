@@ -5,9 +5,9 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/171573688?v=4&s=50",
       "contributors": 5,
-      "description": "Open security analytics. Understand, monitor, and protect your product from cyber threats, account takeovers, bots, and abuse.",
+      "description": "Open security analytics. Understand, monitor, and protect your product from account threats, fraud, and abuse.",
       "discussions": 0,
-      "forks": 98,
+      "forks": 99,
       "issues": 3,
       "languages": [
         "PHP",
@@ -19,7 +19,7 @@
       "name": "tirreno",
       "owner": "tirrenotechnologies",
       "prs": 0,
-      "stars": 931,
+      "stars": 944,
       "url": "https://github.com/tirrenotechnologies/tirreno"
     }
   ]
