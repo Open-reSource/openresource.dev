@@ -26,7 +26,7 @@
       "contributors": 2,
       "description": "Portfolio built with Astro, React, TypeScript and TailwindCSS.",
       "discussions": 0,
-      "forks": 108,
+      "forks": 109,
       "issues": 1,
       "languages": [
         "Astro",
@@ -36,7 +36,7 @@
       "name": "Portfolio",
       "owner": "Gothsec",
       "prs": 1,
-      "stars": 194,
+      "stars": 196,
       "url": "https://github.com/Gothsec/Portfolio"
     }
   ]

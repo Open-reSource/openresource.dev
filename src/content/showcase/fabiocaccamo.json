@@ -26,7 +26,7 @@
       "contributors": 36,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 198,
+      "forks": 199,
       "issues": 10,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 2019,
+      "stars": 2020,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 2,
       "stars": 1604,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 612,
+      "stars": 613,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -168,7 +168,7 @@
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 264,
+      "stars": 265,
       "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 235,
+      "stars": 248,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -265,7 +265,7 @@
       "contributors": 3,
       "description": "🧢 friendly font operations on top of fontTools.",
       "discussions": 0,
-      "forks": 5,
+      "forks": 4,
       "issues": 0,
       "languages": [
         "Python"
