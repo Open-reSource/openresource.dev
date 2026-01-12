@@ -175,9 +175,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
       "contributors": 257,
       "description": "Hurl, run and test HTTP requests with plain text.",
-      "discussions": 92,
-      "forks": 701,
-      "issues": 203,
+      "discussions": 93,
+      "forks": 702,
+      "issues": 197,
       "languages": [
         "Rust",
         "Python",
@@ -192,7 +192,7 @@
       "name": "hurl",
       "owner": "Orange-OpenSource",
       "prs": 2,
-      "stars": 18344,
+      "stars": 18371,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

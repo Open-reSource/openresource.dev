@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 2020,
+      "stars": 2023,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 1604,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 662,
+      "stars": 661,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 790,
+      "stars": 791,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 519,
+      "stars": 520,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -140,7 +140,7 @@
       "contributors": 9,
       "description": "⚙️ config and manage typed extra settings using just the django admin.",
       "discussions": 2,
-      "forks": 33,
+      "forks": 32,
       "issues": 7,
       "languages": [
         "Python",
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 613,
+      "stars": 614,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -178,14 +178,14 @@
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
       "forks": 16,
-      "issues": 4,
+      "issues": 3,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 248,
+      "stars": 253,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
