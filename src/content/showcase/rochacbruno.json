@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
       "contributors": 124,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 64,
+      "discussions": 65,
       "forks": 310,
       "issues": 152,
       "languages": [
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 3,
-      "stars": 4223,
+      "stars": 4228,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -58,7 +58,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2092,
+      "stars": 2093,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
