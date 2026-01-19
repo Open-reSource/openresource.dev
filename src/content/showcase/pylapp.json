@@ -8,7 +8,7 @@
       "description": "Compile references of publications, devices, SoC and tools for technical watch. Provides CLI tool, web page, Ruby server and kind of PWA to search and get results from corpora.",
       "discussions": 0,
       "forks": 5,
-      "issues": 13,
+      "issues": 15,
       "languages": [
         "HTML",
         "JavaScript",
@@ -70,11 +70,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 177,
+      "contributors": 178,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 4,
       "forks": 11,
-      "issues": 49,
+      "issues": 50,
       "languages": [
         "Python",
         "Shell",
@@ -90,7 +90,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 182,
+      "contributors": 183,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 4,
@@ -109,7 +109,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 189,
+      "contributors": 190,
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 7,
@@ -128,7 +128,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 176,
+      "contributors": 177,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
       "forks": 0,
@@ -153,7 +153,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 202,
+      "contributors": 203,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 23,
@@ -166,33 +166,33 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 19,
-      "stars": 65,
+      "prs": 18,
+      "stars": 66,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 257,
+      "contributors": 258,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 93,
       "forks": 702,
-      "issues": 197,
+      "issues": 191,
       "languages": [
         "Rust",
+        "Hurl",
         "Python",
         "Shell",
         "PowerShell",
         "HTML",
         "Roff",
         "JavaScript",
-        "CSS",
-        "Emacs Lisp"
+        "CSS"
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 2,
-      "stars": 18371,
+      "prs": 0,
+      "stars": 18397,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
