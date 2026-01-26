@@ -8,14 +8,14 @@
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
       "forks": 60,
-      "issues": 10,
+      "issues": 9,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 2,
-      "stars": 2786,
+      "prs": 1,
+      "stars": 2794,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 508,
+      "stars": 510,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -47,14 +47,14 @@
       "description": "🎨 Advanced VS Code icon theme with adaptive icon colors that match the editor’s color theme",
       "discussions": 0,
       "forks": 6,
-      "issues": 2,
+      "issues": 1,
       "languages": [
         "TypeScript"
       ],
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 132,
+      "stars": 131,
       "url": "https://github.com/azat-io/eyecons"
     },
     {
@@ -71,7 +71,7 @@
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 333,
+      "stars": 334,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 302,
+      "stars": 303,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]

@@ -7,8 +7,8 @@
       "contributors": 72,
       "description": "⚙️ The static code analysis tool you need for your HTML",
       "discussions": 7,
-      "forks": 433,
-      "issues": 34,
+      "forks": 432,
+      "issues": 35,
       "languages": [
         "JavaScript",
         "TypeScript",
@@ -19,7 +19,7 @@
       "name": "HTMLHint",
       "owner": "htmlhint",
       "prs": 2,
-      "stars": 3308,
+      "stars": 3309,
       "url": "https://github.com/htmlhint/HTMLHint"
     }
   ]
