@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/63718191?v=4&s=50",
-      "contributors": 4,
+      "contributors": 5,
       "description": "ambitious docs framework for everyone",
-      "discussions": 0,
-      "forks": 5,
-      "issues": 36,
+      "discussions": 1,
+      "forks": 6,
+      "issues": 35,
       "languages": [
         "TypeScript",
         "HTML",

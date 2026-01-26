@@ -3,7 +3,7 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/112715997?u=77ae90f32ca7d9427040c27fb5e91c88d6e25ca6&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/112715997?u=107afc8cc5f061740f365e5436c4cda214a8b5c2&v=4&s=50",
       "contributors": 1,
       "description": "Discover movies for developers. Very selected films over 6.5 rating about tech, AI, programming, hacking and more.",
       "discussions": 0,
@@ -22,11 +22,11 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/112715997?u=77ae90f32ca7d9427040c27fb5e91c88d6e25ca6&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/112715997?u=107afc8cc5f061740f365e5436c4cda214a8b5c2&v=4&s=50",
       "contributors": 2,
       "description": "Portfolio template built with Astro, React, TypeScript and TailwindCSS.",
       "discussions": 0,
-      "forks": 112,
+      "forks": 114,
       "issues": 1,
       "languages": [
         "Astro",
@@ -35,8 +35,8 @@
       ],
       "name": "Astro-portfolio",
       "owner": "Gothsec",
-      "prs": 1,
-      "stars": 200,
+      "prs": 2,
+      "stars": 199,
       "url": "https://github.com/Gothsec/Astro-portfolio"
     }
   ]

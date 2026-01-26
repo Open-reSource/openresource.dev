@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/111341601?v=4&s=50",
-      "contributors": 6,
+      "contributors": 7,
       "description": "Web Content Management System for Websites, Blogs and Shops",
       "discussions": 12,
-      "forks": 3,
-      "issues": 11,
+      "forks": 4,
+      "issues": 13,
       "languages": [
         "PHP",
         "Smarty",
@@ -18,7 +18,7 @@
       ],
       "name": "SwiftyEdit",
       "owner": "SwiftyEdit",
-      "prs": 3,
+      "prs": 4,
       "stars": 19,
       "url": "https://github.com/SwiftyEdit/SwiftyEdit"
     }
