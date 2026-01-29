@@ -23,7 +23,7 @@
     "astro": "^5.16.15"
   },
   "devDependencies": {
-    "@actions/core": "^2.0.3",
+    "@actions/core": "^3.0.0",
     "@faker-js/faker": "^10.2.0",
     "@octokit/graphql": "^9.0.3",
     "@octokit/graphql-schema": "^15.26.1",
