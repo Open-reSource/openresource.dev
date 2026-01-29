@@ -3,7 +3,7 @@
 
 import { graphql } from '@octokit/graphql';
 import type { Repository } from '@octokit/graphql-schema';
-import ghActions from '@actions/core';
+import * as ghActions from '@actions/core';
 import { nameToEmoji } from 'gemoji';
 import { parseHTML } from 'linkedom';
 import fs from 'node:fs/promises';
