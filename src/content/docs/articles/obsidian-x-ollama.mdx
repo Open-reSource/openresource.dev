@@ -116,11 +116,21 @@ Let's consider that Obsidian is already installed on your machine. If you haven'
 
 To connect Obsidian to Ollama, you'll need two open source Obsidian community plugins created by [Pavel Frankov](https://github.com/pfrankov):
 
-* AI Providers
-* Local GPT
+- AI Providers
+- Local GPT
 
-<ShowcaseGitHubRepo env="pfrankov" repo="obsidian-local-gpt" img="584632" description="Local Ollama and OpenAI-like GPT's assistance for maximum privacy and offline access " />
-<ShowcaseGitHubRepo env="pfrankov" repo="obsidian-ai-providers" img="584632" description="This plugin is a hub for setting AI providers (OpenAI-like, Ollama and more) in one place. " />
+<ShowcaseGitHubRepo
+	env="pfrankov"
+	repo="obsidian-local-gpt"
+	img="584632"
+	description="Local Ollama and OpenAI-like GPT's assistance for maximum privacy and offline access "
+/>
+<ShowcaseGitHubRepo
+	env="pfrankov"
+	repo="obsidian-ai-providers"
+	img="584632"
+	description="This plugin is a hub for setting AI providers (OpenAI-like, Ollama and more) in one place. "
+/>
 
 ### AI Providers
 
@@ -130,17 +140,16 @@ Let's start by installing the **AI Providers** plugin.
 
 1. In Obsidian, go to "Settings → Community Plugins → Browse" and search for "AI Providers".
 
-    <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-1.png" alt="" width="720" height="320" />
+   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-1.png" alt="" width="720" height="320" />
 
 1. Click "Install", then "Enable" to enable the plugin.
 
 1. Click "Options" to configure the plugin:
-
    - In the "AI providers" section, click "+" to add a new provider.
    - In the "Add new provider" dialog:
      - Select "Ollama" as the provider type.
-      - Click on the refresh icon of the "Model" field to fetch Gemma 3 from your local Ollama installation.
-      - Click "Save" to add the provider.
+     - Click on the refresh icon of the "Model" field to fetch Gemma 3 from your local Ollama installation.
+     - Click "Save" to add the provider.
 
    <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-2.png" alt="" width="420" height="320" />
 
@@ -154,15 +163,14 @@ Then, install the **Local GPT** plugin.
 
 1. In Obsidian, go to "Settings → Community Plugins → Browse" and search for "Local GPT".
 
-    <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-3.png" alt="" width="720" height="320" />
+   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-3.png" alt="" width="720" height="320" />
 
 1. Click "Install", then "Enable" to enable the plugin.
 
 1. Click "Options" to configure the plugin:
+   - In the "Main AI Provider", "Embedding AI Provider", and "Vision AI Provider" sections, select "Ollama ~ gemma3:latest" from the dropdown.
 
-    - In the "Main AI Provider", "Embedding AI Provider", and "Vision AI Provider" sections, select "Ollama ~ gemma3:latest" from the dropdown.
-
-    <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-4.png" alt="" width="720" height="320" />
+   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-4.png" alt="" width="720" height="320" />
 
 </Steps>
 
@@ -201,7 +209,6 @@ The context menu is a quick way to apply AI actions to selected text.
 1. Open any note in Obsidian.
 1. Select some text you want to process with AI.
 1. Press the hot key you assigned for "Local GPT: Show context menu" (e.g., <kbd>⌘ + M</kbd>). It will open a context menu with various AI actions you can perform on the selected text:
-
    - General help
    - Continue writing
    - Summarize

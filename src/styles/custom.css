@@ -314,13 +314,13 @@
 }
 
 kbd {
-  background-color: var(--sl-color-gray-6);
-  border-radius: 6px;
-  box-shadow: inset 0 -1px 0 var(--sl-color-black);
-  color: var(--sl-color-white);
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1;
-  padding: 4px 8px;
-  font-family: monospace;
+	background-color: var(--sl-color-gray-6);
+	border-radius: 6px;
+	box-shadow: inset 0 -1px 0 var(--sl-color-black);
+	color: var(--sl-color-white);
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1;
+	padding: 4px 8px;
+	font-family: monospace;
 }
