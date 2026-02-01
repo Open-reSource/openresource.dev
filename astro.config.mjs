@@ -37,10 +37,7 @@ export default defineConfig({
 			},
 			plugins: [
 				starlightLinksValidator({
-					exclude: [
-            'http://localhost:11434',
-            '/articles'
-          ],
+					exclude: ['http://localhost:11434', '/articles'],
 				}),
 				starlightBlog({
 					title: 'Articles',
