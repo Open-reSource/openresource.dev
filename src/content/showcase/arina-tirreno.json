@@ -5,9 +5,9 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/171573688?v=4&s=50",
       "contributors": 5,
-      "description": "tirreno is an open-source security framework. Event tracking, threat detection, and risk scoring for any product.",
+      "description": "tirreno is an open-source security framework. Event tracking, threat detection, and risk scoring for any application.",
       "discussions": 0,
-      "forks": 103,
+      "forks": 110,
       "issues": 3,
       "languages": [
         "PHP",
@@ -19,7 +19,7 @@
       "name": "tirreno",
       "owner": "tirrenotechnologies",
       "prs": 0,
-      "stars": 1011,
+      "stars": 1047,
       "url": "https://github.com/tirrenotechnologies/tirreno"
     }
   ]

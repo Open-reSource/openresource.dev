@@ -8,7 +8,7 @@
       "description": "Web Content Management System for Websites, Blogs and Shops",
       "discussions": 12,
       "forks": 4,
-      "issues": 13,
+      "issues": 11,
       "languages": [
         "PHP",
         "Smarty",
@@ -18,7 +18,7 @@
       ],
       "name": "SwiftyEdit",
       "owner": "SwiftyEdit",
-      "prs": 4,
+      "prs": 3,
       "stars": 19,
       "url": "https://github.com/SwiftyEdit/SwiftyEdit"
     }
