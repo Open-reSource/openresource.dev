@@ -15,7 +15,7 @@
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
       "prs": 1,
-      "stars": 2794,
+      "stars": 2799,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -47,14 +47,14 @@
       "description": "🎨 Advanced VS Code icon theme with adaptive icon colors that match the editor’s color theme",
       "discussions": 0,
       "forks": 6,
-      "issues": 1,
+      "issues": 3,
       "languages": [
         "TypeScript"
       ],
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 131,
+      "stars": 132,
       "url": "https://github.com/azat-io/eyecons"
     },
     {
@@ -63,7 +63,7 @@
       "contributors": 5,
       "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
       "discussions": 0,
-      "forks": 14,
+      "forks": 13,
       "issues": 1,
       "languages": [
         "TypeScript"
@@ -71,7 +71,7 @@
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 334,
+      "stars": 337,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
