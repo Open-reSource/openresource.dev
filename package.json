@@ -24,11 +24,11 @@
   },
   "devDependencies": {
     "@actions/core": "^3.0.0",
-    "@faker-js/faker": "^10.2.0",
+    "@faker-js/faker": "^10.3.0",
     "@octokit/graphql": "^9.0.3",
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
-    "astro-og-canvas": "^0.10.0",
+    "astro-og-canvas": "^0.10.1",
     "dotenv": "^17.2.4",
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.12",
@@ -40,7 +40,7 @@
     "starlight-links-validator": "^0.19.2",
     "starlight-showcases": "^0.3.1",
     "tsx": "^4.21.0",
-    "vercel": "^50.12.3",
+    "vercel": "^50.13.2",
     "vitest": "^4.0.18"
   }
 }
