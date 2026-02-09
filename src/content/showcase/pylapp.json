@@ -90,11 +90,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 187,
+      "contributors": 188,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
-      "forks": 4,
-      "issues": 11,
+      "forks": 5,
+      "issues": 10,
       "languages": [
         "HTML",
         "JavaScript",
@@ -102,7 +102,7 @@
       ],
       "name": "Tota11ylost",
       "owner": "Orange-OpenSource",
-      "prs": 1,
+      "prs": 0,
       "stars": 8,
       "url": "https://github.com/Orange-OpenSource/Tota11ylost"
     },
@@ -113,7 +113,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 7,
-      "issues": 12,
+      "issues": 13,
       "languages": [
         "JavaScript",
         "HTML",
@@ -121,7 +121,7 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 4,
+      "prs": 7,
       "stars": 21,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
@@ -156,7 +156,7 @@
       "contributors": 207,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
-      "forks": 23,
+      "forks": 22,
       "issues": 14,
       "languages": [
         "Nunjucks",
@@ -177,7 +177,7 @@
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 93,
       "forks": 704,
-      "issues": 193,
+      "issues": 191,
       "languages": [
         "Rust",
         "Hurl",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 0,
-      "stars": 18459,
+      "prs": 1,
+      "stars": 18490,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
