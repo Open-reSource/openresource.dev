@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1643,
+      "stars": 1644,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 200,
-      "issues": 12,
+      "issues": 13,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 2029,
+      "prs": 5,
+      "stars": 2031,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 1604,
+      "stars": 1605,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 794,
+      "stars": 793,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -272,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 75,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
