@@ -103,7 +103,7 @@
       "name": "Tota11ylost",
       "owner": "Orange-OpenSource",
       "prs": 0,
-      "stars": 8,
+      "stars": 9,
       "url": "https://github.com/Orange-OpenSource/Tota11ylost"
     },
     {
@@ -121,7 +121,7 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 7,
+      "prs": 4,
       "stars": 21,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
@@ -156,8 +156,8 @@
       "contributors": 207,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
-      "forks": 22,
-      "issues": 14,
+      "forks": 21,
+      "issues": 16,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -176,8 +176,8 @@
       "contributors": 262,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 93,
-      "forks": 704,
-      "issues": 191,
+      "forks": 703,
+      "issues": 193,
       "languages": [
         "Rust",
         "Hurl",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 1,
-      "stars": 18490,
+      "prs": 2,
+      "stars": 18510,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

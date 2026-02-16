@@ -4,18 +4,18 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
-      "contributors": 33,
+      "contributors": 34,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
-      "forks": 60,
-      "issues": 7,
+      "forks": 61,
+      "issues": 6,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 2807,
+      "stars": 2812,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 509,
+      "stars": 513,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -54,24 +54,24 @@
       "name": "eyecons",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 132,
+      "stars": 134,
       "url": "https://github.com/azat-io/eyecons"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
-      "contributors": 5,
+      "contributors": 6,
       "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
       "discussions": 0,
-      "forks": 13,
-      "issues": 0,
+      "forks": 16,
+      "issues": 3,
       "languages": [
         "TypeScript"
       ],
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 341,
+      "stars": 443,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -88,7 +88,7 @@
       "name": "token-limit",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 57,
+      "stars": 58,
       "url": "https://github.com/azat-io/token-limit"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 303,
+      "stars": 305,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]
