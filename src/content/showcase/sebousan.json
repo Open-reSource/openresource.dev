@@ -25,7 +25,7 @@
       "contributors": 2,
       "description": "Hugolify theme is an Hugo theme with Bootstrap 5",
       "discussions": 0,
-      "forks": 1,
+      "forks": 2,
       "issues": 3,
       "languages": [
         "JavaScript",
@@ -55,7 +55,7 @@
       "name": "hugolify-admin",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 11,
+      "stars": 12,
       "url": "https://github.com/Hugolify/hugolify-admin"
     }
   ]

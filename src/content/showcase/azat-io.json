@@ -14,8 +14,8 @@
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 0,
-      "stars": 2816,
+      "prs": 1,
+      "stars": 2826,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -47,7 +47,7 @@
       "description": "🎨 Advanced VS Code icon theme with adaptive icon colors that match the editor’s color theme",
       "discussions": 0,
       "forks": 6,
-      "issues": 3,
+      "issues": 1,
       "languages": [
         "TypeScript"
       ],
@@ -64,14 +64,14 @@
       "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
       "discussions": 0,
       "forks": 16,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "TypeScript"
       ],
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 459,
+      "stars": 467,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 305,
+      "stars": 306,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]

@@ -26,7 +26,7 @@
       "contributors": 36,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 201,
+      "forks": 202,
       "issues": 13,
       "languages": [
         "Python",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 2032,
+      "stars": 2033,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -46,7 +46,7 @@
       "contributors": 7,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
-      "forks": 43,
+      "forks": 44,
       "issues": 9,
       "languages": [
         "Python",
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 793,
+      "stars": 794,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,7 +130,7 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 521,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 614,
+      "stars": 613,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 258,
+      "stars": 259,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 4,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
