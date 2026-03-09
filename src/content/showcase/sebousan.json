@@ -7,7 +7,7 @@
       "contributors": 2,
       "description": "Framework Hugo with Bootstrap and Headless CMS (Decap, Netlify, Pages, Static and Sveltia) – Github template",
       "discussions": 0,
-      "forks": 4,
+      "forks": 5,
       "issues": 0,
       "languages": [
         "JavaScript",
@@ -25,7 +25,7 @@
       "contributors": 2,
       "description": "Hugolify theme is an Hugo theme with Bootstrap 5",
       "discussions": 0,
-      "forks": 2,
+      "forks": 3,
       "issues": 3,
       "languages": [
         "JavaScript",
@@ -36,7 +36,7 @@
       "name": "hugolify-theme",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 21,
+      "stars": 22,
       "url": "https://github.com/Hugolify/hugolify-theme"
     },
     {
@@ -45,7 +45,7 @@
       "contributors": 3,
       "description": "Admin for Hugolify allowing the build of the config file for different Headless (CloudCannon, Decap, Netlify, Pages, Static, Sveltia and Tina CMS)",
       "discussions": 0,
-      "forks": 3,
+      "forks": 4,
       "issues": 1,
       "languages": [
         "JavaScript",
