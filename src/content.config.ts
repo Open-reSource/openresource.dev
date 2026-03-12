@@ -1,16 +1,17 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { blogSchema } from 'starlight-blog/schema';
 
 const showcaseUnknownLinkSchema = z.object({
 	type: z.literal('unknown'),
-	url: z.string().url(),
+	url: z.url(),
 });
 
 const showcaseGitHubLinkSchema = z.object({
 	type: z.literal('github'),
-	url: z.string().url(),
+	url: z.url(),
 });
 
 const showcaseGitHubRepoLinkSchema = z.object({
@@ -26,7 +27,7 @@ const showcaseGitHubRepoLinkSchema = z.object({
 	owner: z.string(),
 	prs: z.number(),
 	stars: z.number(),
-	url: z.string().url(),
+	url: z.url(),
 });
 
 const showcaseLinkSchema = z.discriminatedUnion('type', [
