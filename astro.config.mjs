@@ -55,7 +55,7 @@ export default defineConfig({
 						words: 'total',
 					},
 					recentPostCount: 5,
-					postCount: Infinity,
+					postCount: Number.MAX_SAFE_INTEGER,
 					navigation: 'none',
 				}),
 			],
