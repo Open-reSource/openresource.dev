@@ -1,0 +1,116 @@
+{
+  "author": "wangjianhao222",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/113531730?u=adc03ad1ee5f5a172a93992125983c4704864441&v=4&s=50",
+      "contributors": 1,
+      "description": "Creates falling binary rain simulating six network stages via dynamic speed, colour, trail, and density. Canvas renders 0/1 digits with Apple fonts. Responsive resizing. Timed phase changes visualise DNS, handshake, request, download surge, parsing, and idle. Entirely front‑end, minimalist, and educational.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "HTML"
+      ],
+      "name": "0110110",
+      "owner": "wangjianhao222",
+      "prs": 0,
+      "stars": 1,
+      "url": "https://github.com/wangjianhao222/0110110"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/113531730?u=adc03ad1ee5f5a172a93992125983c4704864441&v=4&s=50",
+      "contributors": 1,
+      "description": "OpenC by wangjianhao222 is an open-source C/C++ toolkit built with endless toil—countless late nights debugging, refining core libraries, algorithms and system tools. Every module, from math calculators to AI commands, bears the sweat and frustration of relentless development, a heartfelt labor forged through persistent effort.",
+      "discussions": 0,
+      "forks": 1,
+      "issues": 1,
+      "languages": [
+        "C",
+        "CMake",
+        "C++"
+      ],
+      "name": "openc",
+      "owner": "wangjianhao222",
+      "prs": 0,
+      "stars": 9,
+      "url": "https://github.com/wangjianhao222/openc"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/113531730?u=adc03ad1ee5f5a172a93992125983c4704864441&v=4&s=50",
+      "contributors": 1,
+      "description": "OpenPython, crafted with immense dedication and countless hours of effort, is a thoughtful Python project by wangjianhao222. It aims to streamline Python usage with practical tools, intuitive designs and user-friendly features, empowering developers of all levels to code more efficiently. A labor of love for the Python community. 2years",
+      "discussions": 0,
+      "forks": 1,
+      "issues": 1,
+      "languages": [
+        "Python"
+      ],
+      "name": "openpython",
+      "owner": "wangjianhao222",
+      "prs": 0,
+      "stars": 9,
+      "url": "https://github.com/wangjianhao222/openpython"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/113531730?u=adc03ad1ee5f5a172a93992125983c4704864441&v=4&s=50",
+      "contributors": 1,
+      "description": "OPENHTML is my labor of love, built with endless late nights, relentless debugging and countless refinements—every part holds my sweat, frustration and unspoken weariness.",
+      "discussions": 0,
+      "forks": 1,
+      "issues": 1,
+      "languages": [
+        "HTML",
+        "Python",
+        "CSS",
+        "JavaScript"
+      ],
+      "name": "openhtml",
+      "owner": "wangjianhao222",
+      "prs": 0,
+      "stars": 9,
+      "url": "https://github.com/wangjianhao222/openhtml"
+    },
+    {
+      "type": "unknown",
+      "url": "https://private-user-images.githubusercontent.com/113531730/563488337-fccc5e96-cc2a-47e2-8897-478493ec5fe8.jpeg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://private-user-images.githubusercontent.com/113531730/563488426-257ea04e-1b7b-4e44-9095-bab8b5af2c48.jpeg"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/113531730?u=adc03ad1ee5f5a172a93992125983c4704864441&v=4&s=50",
+      "contributors": 1,
+      "description": "A massive Markdown collection of thousands of global websites with Shields.io badges, covering social media, tech, news, design, dev tools, cloud services, music platforms, record labels, and more—all in clickable badge format.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [],
+      "name": "The-global-web-list",
+      "owner": "wangjianhao222",
+      "prs": 0,
+      "stars": 1,
+      "url": "https://github.com/wangjianhao222/The-global-web-list"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/113531730?u=adc03ad1ee5f5a172a93992125983c4704864441&v=4&s=50",
+      "contributors": 1,
+      "description": "Global Software Tools with Shields.io badges: OS (Windows/macOS/Linux), Browsers (Chrome/Firefox), Productivity (Office/Notion), Communication (Slack/Zoom), Design (Adobe/Figma), Development (VS Code/Git/Docker), Security (Norton), Cloud (AWS/Spotify). everysingleday",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 1,
+      "languages": [],
+      "name": "The-software-collection-",
+      "owner": "wangjianhao222",
+      "prs": 0,
+      "stars": 1,
+      "url": "https://github.com/wangjianhao222/The-software-collection-"
+    }
+  ]
+}

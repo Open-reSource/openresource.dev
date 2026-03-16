@@ -8,7 +8,7 @@
       "description": "Configuration Management for Python ⚙",
       "discussions": 65,
       "forks": 313,
-      "issues": 154,
+      "issues": 155,
       "languages": [
         "Python",
         "Shell",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 4,
-      "stars": 4270,
+      "stars": 4272,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
