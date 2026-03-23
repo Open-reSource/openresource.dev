@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1646,
+      "stars": 1647,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 2035,
+      "stars": 2036,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 909,
+      "stars": 908,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 793,
+      "stars": 792,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,7 +122,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 53,
+      "forks": 52,
       "issues": 7,
       "languages": [
         "Python",
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 522,
+      "stars": 523,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {

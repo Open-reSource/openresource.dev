@@ -29,9 +29,7 @@
       "issues": 3,
       "languages": [
         "JavaScript",
-        "HTML",
-        "Sass",
-        "SCSS"
+        "HTML"
       ],
       "name": "hugolify-theme",
       "owner": "Hugolify",
