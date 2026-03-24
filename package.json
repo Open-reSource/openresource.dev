@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@actions/core": "^3.0.0",
-    "@faker-js/faker": "^10.3.0",
+    "@faker-js/faker": "^10.4.0",
     "@octokit/graphql": "^9.0.3",
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
@@ -41,6 +41,6 @@
     "starlight-showcases": "^0.3.2",
     "tsx": "^4.21.0",
     "vercel": "^50.35.0",
-    "vitest": "^4.1.0"
+    "vitest": "^4.1.1"
   }
 }
