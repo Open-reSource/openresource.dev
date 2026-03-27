@@ -18,9 +18,9 @@
   "dependencies": {
     "@astrojs/check": "^0.9.8",
     "@astrojs/starlight": "^0.38.1",
-    "@astrojs/vercel": "^10.0.2",
+    "@astrojs/vercel": "^10.0.3",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^6.0.7"
+    "astro": "^6.1.1"
   },
   "devDependencies": {
     "@actions/core": "^3.0.0",
@@ -40,7 +40,7 @@
     "starlight-links-validator": "^0.20.1",
     "starlight-showcases": "^0.3.2",
     "tsx": "^4.21.0",
-    "vercel": "^50.37.0",
-    "vitest": "^4.1.1"
+    "vercel": "^50.37.1",
+    "vitest": "^4.1.2"
   }
 }
