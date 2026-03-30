@@ -1,0 +1,27 @@
+{
+  "author": "hatemhosny",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/90906587?v=4&s=50",
+      "contributors": 22,
+      "description": "A Code Playground That Just Works!",
+      "discussions": 12,
+      "forks": 241,
+      "issues": 21,
+      "languages": [
+        "TypeScript",
+        "HTML",
+        "SCSS",
+        "JavaScript",
+        "CSS",
+        "Dockerfile"
+      ],
+      "name": "livecodes",
+      "owner": "live-codes",
+      "prs": 5,
+      "stars": 1417,
+      "url": "https://github.com/live-codes/livecodes"
+    }
+  ]
+}

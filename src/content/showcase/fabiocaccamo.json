@@ -7,7 +7,7 @@
       "contributors": 3,
       "description": "📱 🆔  iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 234,
+      "forks": 233,
       "issues": 3,
       "languages": [
         "Objective-C",
@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 1647,
+      "stars": 1646,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 2036,
+      "stars": 2038,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1606,
+      "prs": 5,
+      "stars": 1604,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -84,8 +84,8 @@
       "contributors": 28,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 95,
-      "issues": 2,
+      "forks": 96,
+      "issues": 3,
       "languages": [
         "Python",
         "JavaScript",
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 523,
+      "stars": 524,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 614,
+      "stars": 615,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 261,
+      "stars": 264,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -221,7 +221,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 104,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 6,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },

@@ -7,7 +7,7 @@
       "contributors": 34,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
-      "forks": 62,
+      "forks": 63,
       "issues": 6,
       "languages": [
         "TypeScript"
@@ -15,7 +15,7 @@
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
       "prs": 1,
-      "stars": 2843,
+      "stars": 2852,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -60,10 +60,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
-      "contributors": 6,
+      "contributors": 7,
       "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
       "discussions": 0,
-      "forks": 16,
+      "forks": 17,
       "issues": 0,
       "languages": [
         "TypeScript"
@@ -71,7 +71,7 @@
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 482,
+      "stars": 497,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -88,7 +88,7 @@
       "name": "token-limit",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 61,
+      "stars": 62,
       "url": "https://github.com/azat-io/token-limit"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 308,
+      "stars": 309,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]
