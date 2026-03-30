@@ -22,8 +22,8 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
-      "contributors": 2,
-      "description": "Hugolify theme is an Hugo theme with Bootstrap 5",
+      "contributors": 3,
+      "description": "Hugolify theme is a framework-agnostic core theme for Hugo",
       "discussions": 0,
       "forks": 3,
       "issues": 3,
@@ -34,7 +34,7 @@
       "name": "hugolify-theme",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 22,
+      "stars": 23,
       "url": "https://github.com/Hugolify/hugolify-theme"
     },
     {
