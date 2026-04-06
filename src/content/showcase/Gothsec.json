@@ -24,9 +24,9 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/112715997?u=107afc8cc5f061740f365e5436c4cda214a8b5c2&v=4&s=50",
       "contributors": 2,
-      "description": "Portfolio template built with Astro, React, TypeScript and TailwindCSS.",
+      "description": "Portfolio template built with Astro, React, TypeScript and TailwindCSS. (Handcrafted with Figma)",
       "discussions": 0,
-      "forks": 131,
+      "forks": 132,
       "issues": 1,
       "languages": [
         "Astro",
@@ -36,7 +36,7 @@
       "name": "Astro-portfolio",
       "owner": "Gothsec",
       "prs": 0,
-      "stars": 226,
+      "stars": 227,
       "url": "https://github.com/Gothsec/Astro-portfolio"
     }
   ]
