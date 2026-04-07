@@ -7,8 +7,8 @@
       "contributors": 127,
       "description": "Configuration Management for Python ⚙",
       "discussions": 65,
-      "forks": 315,
-      "issues": 155,
+      "forks": 318,
+      "issues": 156,
       "languages": [
         "Python",
         "Shell",
@@ -19,7 +19,7 @@
       "name": "dynaconf",
       "owner": "dynaconf",
       "prs": 6,
-      "stars": 4276,
+      "stars": 4282,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -49,7 +49,7 @@
       "contributors": 28,
       "description": "A quick reference guide for the Pythonista in the process of becoming a Rustacean",
       "discussions": 0,
-      "forks": 75,
+      "forks": 74,
       "issues": 5,
       "languages": [
         "CSS",
