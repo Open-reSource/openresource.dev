@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
-    "@astrojs/starlight": "^0.38.2",
+    "@astrojs/starlight": "^0.38.3",
     "@astrojs/vercel": "^10.0.4",
     "@vercel/analytics": "^2.0.1",
     "astro": "^6.1.4"
@@ -37,10 +37,10 @@
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
     "starlight-blog": "^0.26.1",
-    "starlight-links-validator": "^0.21.0",
+    "starlight-links-validator": "^0.22.0",
     "starlight-showcases": "^0.3.2",
     "tsx": "^4.21.0",
-    "vercel": "^50.40.0",
-    "vitest": "^4.1.2"
+    "vercel": "^50.41.0",
+    "vitest": "^4.1.3"
   }
 }
