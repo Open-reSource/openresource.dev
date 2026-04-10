@@ -33,14 +33,14 @@
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.12",
     "parse-github-url": "^1.0.4",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.2",
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
     "starlight-blog": "^0.26.1",
-    "starlight-links-validator": "^0.22.0",
+    "starlight-links-validator": "^0.23.0",
     "starlight-showcases": "^0.3.2",
     "tsx": "^4.21.0",
     "vercel": "^50.42.0",
-    "vitest": "^4.1.3"
+    "vitest": "^4.1.4"
   }
 }
