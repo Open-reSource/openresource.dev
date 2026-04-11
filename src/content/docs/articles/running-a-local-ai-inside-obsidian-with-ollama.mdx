@@ -2,8 +2,8 @@
 title: 'Running a Local AI Inside Obsidian with Ollama'
 description: 'Learn to set up Ollama with Obsidian for a completely local AI writing assistant. Step-by-step guide to private, offline AI that works with your notes without sending data to the cloud.'
 date: 2026-02-01
-lastUpdated: 2026-02-01
-excerpt: "**What if your Obsidian notes could think with you, without sending a single word to the cloud?** This article shows you how to build a fully local AI setup inside Obsidian using Ollama and the open Gemma 3 model. You'll learn why local AI makes sense for knowledge work, how to install and test Ollama from the command line, and how to connect it to Obsidian using community plugins for a seamless writing experience.<br><br>By the end of this tutorial, you'll have a private AI assistant that can rewrite text, summarize notes, brainstorm ideas, and help draft content all while keeping full control over your data. This setup combines Obsidian's local-first philosophy with Ollama's open source AI capabilities to create a knowledge workspace that's private, hackable, and built to last, proving that powerful tools don't have to come at the cost of control."
+lastUpdated: 2026-04-11
+excerpt: "**What if your Obsidian notes could think with you, without sending a single word to the cloud?** This article shows you how to build a fully local AI setup inside Obsidian using Ollama and the open Gemma 4 model. You'll learn why local AI makes sense for knowledge work, how to install and test Ollama from the command line, and how to connect it to Obsidian using community plugins for a seamless writing experience.<br><br>By the end of this tutorial, you'll have a private AI assistant that can rewrite text, summarize notes, brainstorm ideas, and help draft content all while keeping full control over your data. This setup combines Obsidian's local-first philosophy with Ollama's open source AI capabilities to create a knowledge workspace that's private, hackable, and built to last, proving that powerful tools don't have to come at the cost of control."
 tags:
   - AI
   - Tools
@@ -21,7 +21,7 @@ import ContentImage from '../../../components/ContentImage.astro';
 import ShowcaseGitHubRepo from '../../../components/ShowcaseGitHubRepo.astro';
 
 {/* prettier-ignore */}
-<p class="lead">**What if your notes could think with you, without sending a single word to the cloud?** In this article, we'll build a fully local AI setup inside Obsidian using Ollama and the open Gemma 3 model. You'll learn why local AI makes sense for knowledge work, how to install and test Ollama from the command line, how to connect it to Obsidian using community plugins, and how to use it for practical, everyday note-taking workflows, all while keeping full control over your data.</p>
+<p class="lead">**What if your notes could think with you, without sending a single word to the cloud?** In this article, we'll build a fully local AI setup inside Obsidian using Ollama and the open Gemma 4 model. You'll learn why local AI makes sense for knowledge work, how to install and test Ollama from the command line, how to connect it to Obsidian using community plugins, and how to use it for practical, everyday note-taking workflows, all while keeping full control over your data.</p>
 
 ---
 
@@ -56,11 +56,11 @@ Together, Obsidian and Ollama create a powerful combination that aligns with ope
 By the end of this article, you'll have:
 
 - Ollama installed and verified from the command line
-- The Gemma 3 model running locally
+- The Gemma 4 model running locally
 - Obsidian configured with community plugins
 - A fully local AI assistant embedded in your notes
 
-Everything described below has been tested using Gemma 3 with Ollama.
+Everything described below has been tested using Gemma 4 with Ollama.
 
 Let's consider that Obsidian is already installed on your machine. If you haven't done so yet, you can download it from [obsidian.md](https://obsidian.md/).
 
@@ -70,10 +70,10 @@ Let's consider that Obsidian is already installed on your machine. If you haven'
 
 <Steps>
 
-1. Install Ollama from the official site at https://ollama.com, or via Homebrew on macOS via
+1. Install Ollama from the official site at https://ollama.com, or on macOS via
 
    ```sh
-   brew install ollama
+   curl -fsSL https://ollama.com/install.sh | sh
    ```
 
 1. Verify the installation by running in your terminal:
@@ -84,10 +84,10 @@ Let's consider that Obsidian is already installed on your machine. If you haven'
 
    The output should show the installed version of Ollama.
 
-1. Pull and run the Gemma 3 model with:
+1. Pull and run the Gemma 4 model with:
 
    ```sh
-   ollama run gemma3
+   ollama run gemma4
    ```
 
    Once the model is downloaded, you'll get an interactive prompt. Test it with:
@@ -148,7 +148,7 @@ Let's start by installing the **AI Providers** plugin.
    - In the "AI providers" section, click "+" to add a new provider.
    - In the "Add new provider" dialog:
      - Select "Ollama" as the provider type.
-     - Click on the refresh icon of the "Model" field to fetch Gemma 3 from your local Ollama installation.
+     - Click on the refresh icon of the "Model" field to fetch Gemma 4 from your local Ollama installation.
      - Click "Save" to add the provider.
 
    <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-2.png" alt="" width="420" height="320" />
@@ -168,7 +168,7 @@ Then, install the **Local GPT** plugin.
 1. Click "Install", then "Enable" to enable the plugin.
 
 1. Click "Options" to configure the plugin:
-   - In the "Main AI Provider", "Embedding AI Provider", and "Vision AI Provider" sections, select "Ollama ~ gemma3:latest" from the dropdown.
+   - In the "Main AI Provider", "Embedding AI Provider", and "Vision AI Provider" sections, select "Ollama ~ gemma4:latest" from the dropdown.
 
    <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-4.png" alt="" width="720" height="320" />
 
@@ -226,7 +226,7 @@ Let's say I've written this article in Obsidian first and wanted to summarize it
 
 <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-7.png" alt="" width="420" height="320" />
 
-Gemma 3 would then generate a concise summary of the selected content directly at the end of my note (this can be configured).
+Gemma 4 would then generate a concise summary of the selected content directly at the end of my note (this can be configured).
 
 <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-8.png" alt="" width="420" height="320" />
 
@@ -253,7 +253,7 @@ The model would then generate a description of the image directly in my note.
 
 ## Everyday Use Cases That Actually Feel Useful
 
-**I just scratched the surface of what you can do with this setup, and honestly, it's pretty useful for specific tasks.** Gemma 3 works well for close-to-the-text stuff: cleaning up messy first drafts, turning rambling meeting notes into actual bullet points, or getting a quick summary when I don't want to reread a long note.
+**I just scratched the surface of what you can do with this setup, and honestly, it's pretty useful for specific tasks.** Gemma 4 works well for close-to-the-text stuff: cleaning up messy first drafts, turning rambling meeting notes into actual bullet points, or getting a quick summary when I don't want to reread a long note.
 
 Response times are decent for most tasks. Not instant, but fast enough to keep you in the flow.
 
