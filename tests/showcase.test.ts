@@ -376,7 +376,8 @@ describe('GitHub repo link languages', () => {
 function getTestScrapper(commentsLinks: TestCommentLinks[]) {
 	const scraper = new ShowcaseScraper('test-org', 'test-repo', 0, []);
 
-	let ghRepoLinks: { languages: TestRepoLanguage[]; name: string; notFound?: boolean; owner: string; url: string }[] = [];
+	let ghRepoLinks: { languages: TestRepoLanguage[]; name: string; notFound?: boolean; owner: string; url: string }[] =
+		[];
 
 	const commentsNodes = commentsLinks.map((commentLinks, commentIndex) => {
 		const isFlatLinks = Array.isArray(commentLinks);
