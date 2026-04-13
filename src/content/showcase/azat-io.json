@@ -15,7 +15,7 @@
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
       "prs": 1,
-      "stars": 2857,
+      "stars": 2860,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
@@ -63,7 +63,7 @@
       "contributors": 8,
       "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
       "discussions": 0,
-      "forks": 17,
+      "forks": 16,
       "issues": 0,
       "languages": [
         "TypeScript"
@@ -71,7 +71,7 @@
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 500,
+      "stars": 508,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 309,
+      "stars": 310,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]
