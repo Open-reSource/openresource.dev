@@ -6,11 +6,24 @@ import { afterAll, assert, beforeAll, describe, expect, test, vi } from 'vitest'
 import { ShowcaseScraper } from '../scripts/libs/showcaseScrapper';
 import type { ShowcaseGitHubRepoLink } from '../src/content.config';
 
-// Define a mock query function that will be used by the GraphQL client during the test to return fake data.
-const { queryMock } = vi.hoisted(() => ({ queryMock: vi.fn() }));
+// Define mocks used by the GraphQL client during tests.
+const { MockGraphqlResponseError, queryMock } = vi.hoisted(() => ({
+	queryMock: vi.fn(),
+	MockGraphqlResponseError: class extends Error {
+		errors: Array<{ type?: string }>;
+
+		constructor(errors: Array<{ type?: string }>) {
+			super('Mock GraphQL response error');
+			this.errors = errors;
+		}
+	},
+}));
 
 // Mock the entire GraphQL client to avoid hitting the GitHub API.
-vi.mock('@octokit/graphql', () => ({ graphql: { defaults: () => queryMock } }));
+vi.mock('@octokit/graphql', () => ({
+	GraphqlResponseError: MockGraphqlResponseError,
+	graphql: { defaults: () => queryMock },
+}));
 
 // Mock the fs module to avoid writing showcase files to the file system during tests.
 vi.mock('node:fs/promises');
@@ -76,6 +89,19 @@ test('should identify GitHub repo links', async () => {
 	const showcases = await scraper.run();
 
 	expect(showcases.at(0)?.links).toMatchObject([{ url: link, type: 'github_repo' }]);
+});
+
+test('should skip GitHub repo links when repository is not found', async () => {
+	const missingRepoLink = getTestGitHubLink('user_1', 'repo_missing');
+	const validRepoLink = getTestGitHubLink('user_2', 'repo_valid');
+
+	const scraper = getTestScrapper([[{ notFound: true, url: missingRepoLink }, validRepoLink]]);
+
+	const showcases = await scraper.run();
+
+	expect(showcases).toHaveLength(1);
+	expect(showcases.at(0)?.links).toHaveLength(1);
+	expect(showcases.at(0)?.links.at(0)).toMatchObject({ type: 'github_repo', url: validRepoLink });
 });
 
 test('should handle GitLab links as unknown', async () => {
@@ -350,7 +376,7 @@ describe('GitHub repo link languages', () => {
 function getTestScrapper(commentsLinks: TestCommentLinks[]) {
 	const scraper = new ShowcaseScraper('test-org', 'test-repo', 0, []);
 
-	let ghRepoLinks: { languages: TestRepoLanguage[]; name: string; owner: string; url: string }[] = [];
+	let ghRepoLinks: { languages: TestRepoLanguage[]; name: string; notFound?: boolean; owner: string; url: string }[] = [];
 
 	const commentsNodes = commentsLinks.map((commentLinks, commentIndex) => {
 		const isFlatLinks = Array.isArray(commentLinks);
@@ -370,7 +396,13 @@ function getTestScrapper(commentsLinks: TestCommentLinks[]) {
 					const ghLink = gh(url);
 
 					if (ghLink?.name && ghLink?.owner) {
-						ghRepoLinks.push({ languages: languages ?? [], name: ghLink.name, owner: ghLink.owner, url });
+						ghRepoLinks.push({
+							languages: languages ?? [],
+							name: ghLink.name,
+							notFound: typeof link === 'string' ? false : link.notFound,
+							owner: ghLink.owner,
+							url,
+						});
 					}
 
 					return `<a href="${url}">${url}</a>`;
@@ -391,6 +423,11 @@ function getTestScrapper(commentsLinks: TestCommentLinks[]) {
 
 	// Each GitHub repository link will trigger a GraphQL query to fetch the repository data so we mock each of them.
 	for (const ghRepoLink of ghRepoLinks) {
+		if (ghRepoLink.notFound) {
+			queryMock.mockRejectedValueOnce(new MockGraphqlResponseError([{ type: 'NOT_FOUND' }]));
+			continue;
+		}
+
 		queryMock.mockReturnValueOnce({
 			repository: {
 				description: faker.lorem.paragraph(),
@@ -441,7 +478,13 @@ function getTestRepoLanguageSize() {
 	return faker.number.int(1_000_000);
 }
 
-type TestCommentLink = string | { languages?: TestRepoLanguage[]; url: string };
+type TestGithubRepoLinkOptions = {
+	languages?: TestRepoLanguage[];
+	notFound?: boolean;
+	url: string;
+};
+
+type TestCommentLink = string | TestGithubRepoLinkOptions;
 type TestCommentLinks = string[] | { author?: string; links: TestCommentLink[] };
 
 interface TestRepoLanguage {

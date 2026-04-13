@@ -1,7 +1,7 @@
 // This script is based on the one from Astro:
 // https://github.com/withastro/astro.build/blob/main/scripts/update-showcase.mjs#L48
 
-import { graphql } from '@octokit/graphql';
+import { GraphqlResponseError, graphql } from '@octokit/graphql';
 import type { Repository } from '@octokit/graphql-schema';
 import * as ghActions from '@actions/core';
 import { nameToEmoji } from 'gemoji';
@@ -68,7 +68,24 @@ export class ShowcaseScraper {
 
 					if (ghReference?.hostname === 'github.com' && ghReference?.owner && ghReference?.name) {
 						console.info(`Adding repository data from ${href}...`);
-						const { repository } = await this.#getRepository(ghReference.owner, ghReference.name);
+						let repository: Repository | null = null;
+
+						try {
+							const result = await this.#getRepository(ghReference.owner, ghReference.name);
+							repository = result.repository;
+						} catch (error: unknown) {
+							if (this.#isRepositoryNotFoundError(error)) {
+								console.warn(`Repository not found, skipping ${href}.`);
+								continue;
+							}
+
+							throw error;
+						}
+
+						if (!repository) {
+							console.warn(`Repository data missing, skipping ${href}.`);
+							continue;
+						}
 
 						links.push({
 							type: 'github_repo',
@@ -363,5 +380,19 @@ export class ShowcaseScraper {
 		}
 
 		return languages;
+	}
+
+	#isRepositoryNotFoundError(error: unknown) {
+		if (!(error instanceof GraphqlResponseError)) {
+			return false;
+		}
+
+		return error.errors.some((entry) => {
+			if (!entry || typeof entry !== 'object' || !('type' in entry)) {
+				return false;
+			}
+
+			return entry.type === 'NOT_FOUND';
+		});
 	}
 }
