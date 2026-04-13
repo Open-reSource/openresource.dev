@@ -486,7 +486,7 @@ type TestGithubRepoLinkOptions = {
 };
 
 type TestCommentLink = string | TestGithubRepoLinkOptions;
-type TestCommentLinks = string[] | { author?: string; links: TestCommentLink[] };
+type TestCommentLinks = TestCommentLink[] | { author?: string; links: TestCommentLink[] };
 
 interface TestRepoLanguage {
 	node: {

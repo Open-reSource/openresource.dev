@@ -387,12 +387,14 @@ export class ShowcaseScraper {
 			return false;
 		}
 
-		return error.errors.some((entry) => {
-			if (!entry || typeof entry !== 'object' || !('type' in entry)) {
-				return false;
-			}
+		return (
+			error.errors?.some((entry) => {
+				if (!entry || typeof entry !== 'object' || !('type' in entry)) {
+					return false;
+				}
 
-			return entry.type === 'NOT_FOUND';
-		});
+				return entry.type === 'NOT_FOUND';
+			}) ?? false
+		);
 	}
 }
