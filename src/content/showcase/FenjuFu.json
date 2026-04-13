@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 51,
+      "contributors": 52,
       "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
       "discussions": 28,
-      "forks": 1138,
-      "issues": 34,
+      "forks": 970,
+      "issues": 29,
       "languages": [
         "Java",
         "TypeScript",
@@ -23,18 +23,18 @@
       ],
       "name": "astron-agent",
       "owner": "iflytek",
-      "prs": 8,
-      "stars": 10951,
+      "prs": 11,
+      "stars": 9601,
       "url": "https://github.com/iflytek/astron-agent"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 21,
+      "contributors": 22,
       "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
-      "discussions": 4,
-      "forks": 812,
-      "issues": 21,
+      "discussions": 5,
+      "forks": 673,
+      "issues": 20,
       "languages": [
         "Java",
         "Python",
@@ -49,18 +49,18 @@
       ],
       "name": "astron-rpa",
       "owner": "iflytek",
-      "prs": 7,
-      "stars": 7424,
+      "prs": 1,
+      "stars": 6262,
       "url": "https://github.com/iflytek/astron-rpa"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 16,
+      "contributors": 19,
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
       "discussions": 0,
-      "forks": 248,
-      "issues": 12,
+      "forks": 304,
+      "issues": 15,
       "languages": [
         "Java",
         "TypeScript",
@@ -75,25 +75,25 @@
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 9,
-      "stars": 2032,
+      "prs": 11,
+      "stars": 2450,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 3,
+      "contributors": 4,
       "description": "从零到工作流，掌握 AstronClaw（云端）与 Loomy（桌面）的 AI 助手实战教程 | A complete tutorial to master AstronClaw (cloud AI) & Loomy (desktop AI)",
       "discussions": 0,
-      "forks": 6,
-      "issues": 0,
+      "forks": 8,
+      "issues": 1,
       "languages": [
         "JavaScript"
       ],
       "name": "astronclaw-tutorial",
       "owner": "iflytek",
       "prs": 0,
-      "stars": 686,
+      "stars": 666,
       "url": "https://github.com/iflytek/astronclaw-tutorial"
     }
   ]
