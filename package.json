@@ -20,7 +20,7 @@
     "@astrojs/starlight": "^0.38.3",
     "@astrojs/vercel": "^10.0.4",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^6.1.5"
+    "astro": "^6.1.6"
   },
   "devDependencies": {
     "@actions/core": "^3.0.0",
@@ -29,7 +29,7 @@
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
     "astro-og-canvas": "^0.11.0",
-    "dotenv": "^17.4.1",
+    "dotenv": "^17.4.2",
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.12",
     "parse-github-url": "^1.0.4",
@@ -40,7 +40,7 @@
     "starlight-links-validator": "^0.23.0",
     "starlight-showcases": "^0.3.2",
     "tsx": "^4.21.0",
-    "vercel": "^50.44.0",
+    "vercel": "^51.1.0",
     "vitest": "^4.1.4"
   }
 }
