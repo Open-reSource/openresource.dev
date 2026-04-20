@@ -1,0 +1,26 @@
+{
+  "author": "anviren",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/235693600?u=f2091ff984824d5de9d58fd7386133f5a3f80a35&v=4&s=50",
+      "contributors": 1,
+      "description": "Omega Walls — a deterministic runtime security layer for RAG and AI agents that detects prompt injection, tool abuse, and data exfiltration via cumulative risk modeling.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "Python",
+        "Jupyter Notebook",
+        "PowerShell",
+        "HTML",
+        "Makefile"
+      ],
+      "name": "omega-walls",
+      "owner": "synqratech",
+      "prs": 0,
+      "stars": 2,
+      "url": "https://github.com/synqratech/omega-walls"
+    }
+  ]
+}
