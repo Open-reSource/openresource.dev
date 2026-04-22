@@ -23,7 +23,7 @@
     "astro": "^6.1.8"
   },
   "devDependencies": {
-    "@actions/core": "^3.0.0",
+    "@actions/core": "^3.0.1",
     "@faker-js/faker": "^10.4.0",
     "@octokit/graphql": "^9.0.3",
     "@octokit/graphql-schema": "^15.26.1",
@@ -40,7 +40,7 @@
     "starlight-links-validator": "^0.23.0",
     "starlight-showcases": "^0.3.2",
     "tsx": "^4.21.0",
-    "vercel": "^51.8.0",
-    "vitest": "^4.1.4"
+    "vercel": "^52.0.0",
+    "vitest": "^4.1.5"
   }
 }
