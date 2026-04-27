@@ -41,7 +41,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/151955260?v=4&s=50",
       "contributors": 4,
       "description": "Advanced, highly customizable phone input component for Ant Design.",
-      "discussions": 12,
+      "discussions": 13,
       "forks": 17,
       "issues": 0,
       "languages": [
@@ -61,7 +61,7 @@
       "contributors": 22,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 4,
-      "forks": 14,
+      "forks": 15,
       "issues": 0,
       "languages": [
         "Python"
@@ -69,7 +69,7 @@
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
       "prs": 0,
-      "stars": 88,
+      "stars": 91,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }
   ]

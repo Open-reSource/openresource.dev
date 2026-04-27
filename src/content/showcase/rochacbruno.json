@@ -7,7 +7,7 @@
       "contributors": 127,
       "description": "Configuration Management for Python ⚙",
       "discussions": 64,
-      "forks": 319,
+      "forks": 320,
       "issues": 156,
       "languages": [
         "Python",
@@ -18,13 +18,13 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 7,
-      "stars": 4285,
+      "prs": 8,
+      "stars": 4289,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=a8b2a440c557e0664491153b8b955659d75c0f00&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=efa3b748f27fa3f3ac6bc6b0d16cc9221b44670b&v=4&s=50",
       "contributors": 3,
       "description": "This template is **archived**.   > UV can now [generate a sample project](https://docs.astral.sh/uv/guides/projects/#creating-a-new-project)   > I recommend using **UV** to bootstrap your peojects.   > [Copier](https://github.com/copier-org/copier) is a tools that can bootstrap projects from templates.  ",
       "discussions": 0,
@@ -45,7 +45,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=a8b2a440c557e0664491153b8b955659d75c0f00&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/458654?u=efa3b748f27fa3f3ac6bc6b0d16cc9221b44670b&v=4&s=50",
       "contributors": 28,
       "description": "A quick reference guide for the Pythonista in the process of becoming a Rustacean",
       "discussions": 0,

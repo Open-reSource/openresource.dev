@@ -11,9 +11,10 @@
       "issues": 0,
       "languages": [
         "Python",
-        "Jupyter Notebook",
-        "PowerShell",
+        "TypeScript",
+        "Jinja",
         "HTML",
+        "PowerShell",
         "Makefile"
       ],
       "name": "omega-walls",

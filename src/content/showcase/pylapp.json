@@ -113,7 +113,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 7,
-      "issues": 13,
+      "issues": 14,
       "languages": [
         "JavaScript",
         "HTML",
@@ -121,7 +121,7 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 3,
+      "prs": 4,
       "stars": 21,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
@@ -157,7 +157,7 @@
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 23,
-      "issues": 20,
+      "issues": 21,
       "languages": [
         "Nunjucks",
         "JavaScript",
@@ -175,8 +175,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
       "contributors": 268,
       "description": "Hurl, run and test HTTP requests with plain text.",
-      "discussions": 94,
-      "forks": 721,
+      "discussions": 95,
+      "forks": 722,
       "issues": 195,
       "languages": [
         "Rust",
@@ -191,8 +191,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 2,
-      "stars": 18782,
+      "prs": 1,
+      "stars": 18818,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
