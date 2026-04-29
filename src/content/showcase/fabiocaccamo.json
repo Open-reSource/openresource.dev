@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 3,
-      "stars": 2040,
+      "stars": 2041,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -46,8 +46,8 @@
       "contributors": 7,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 7,
-      "forks": 46,
-      "issues": 6,
+      "forks": 47,
+      "issues": 7,
       "languages": [
         "Python",
         "HTML",
@@ -56,7 +56,7 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 1603,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
@@ -103,7 +103,7 @@
       "contributors": 8,
       "description": "🌳 probably the best abstract model/admin for your tree based stuff.",
       "discussions": 3,
-      "forks": 37,
+      "forks": 38,
       "issues": 5,
       "languages": [
         "Python",
@@ -112,8 +112,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 797,
+      "prs": 2,
+      "stars": 798,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,8 +130,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 0,
-      "stars": 524,
+      "prs": 1,
+      "stars": 525,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,8 +149,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 615,
+      "prs": 5,
+      "stars": 616,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -177,7 +177,7 @@
       "contributors": 1,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
-      "forks": 17,
+      "forks": 16,
       "issues": 2,
       "languages": [
         "Python"
@@ -221,8 +221,8 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 0,
-      "stars": 105,
+      "prs": 1,
+      "stars": 117,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -255,7 +255,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 79,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -272,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 75,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 0,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
