@@ -7,8 +7,8 @@
       "contributors": 53,
       "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
       "discussions": 28,
-      "forks": 909,
-      "issues": 27,
+      "forks": 912,
+      "issues": 25,
       "languages": [
         "Java",
         "TypeScript",
@@ -24,7 +24,7 @@
       "name": "astron-agent",
       "owner": "iflytek",
       "prs": 4,
-      "stars": 8792,
+      "stars": 8826,
       "url": "https://github.com/iflytek/astron-agent"
     },
     {
@@ -33,7 +33,7 @@
       "contributors": 22,
       "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
       "discussions": 5,
-      "forks": 599,
+      "forks": 600,
       "issues": 20,
       "languages": [
         "Java",
@@ -50,17 +50,17 @@
       "name": "astron-rpa",
       "owner": "iflytek",
       "prs": 1,
-      "stars": 5567,
+      "stars": 5668,
       "url": "https://github.com/iflytek/astron-rpa"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 21,
+      "contributors": 22,
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
       "discussions": 0,
-      "forks": 352,
-      "issues": 16,
+      "forks": 364,
+      "issues": 12,
       "languages": [
         "Java",
         "TypeScript",
@@ -75,8 +75,8 @@
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 11,
-      "stars": 2665,
+      "prs": 9,
+      "stars": 2710,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
@@ -93,7 +93,7 @@
       "name": "astronclaw-tutorial",
       "owner": "iflytek",
       "prs": 0,
-      "stars": 565,
+      "stars": 577,
       "url": "https://github.com/iflytek/astronclaw-tutorial"
     }
   ]
