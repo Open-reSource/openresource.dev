@@ -5,27 +5,6 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/7559007?u=bd30fcc83a4b058ac2bb3d5618d5c0cfda25abfe&v=4&s=50",
       "contributors": 1,
-      "description": "Compile references of publications, devices, SoC and tools for technical watch. Provides CLI tool, web page, Ruby server and kind of PWA to search and get results from corpora.",
-      "discussions": 0,
-      "forks": 5,
-      "issues": 15,
-      "languages": [
-        "HTML",
-        "JavaScript",
-        "Shell",
-        "CSS",
-        "Ruby"
-      ],
-      "name": "Tips-tools",
-      "owner": "pylapp",
-      "prs": 0,
-      "stars": 2,
-      "url": "https://github.com/pylapp/Tips-tools"
-    },
-    {
-      "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/7559007?u=bd30fcc83a4b058ac2bb3d5618d5c0cfda25abfe&v=4&s=50",
-      "contributors": 1,
       "description": "A DIY robot for automation of tests purposes with several clients for calibration or management",
       "discussions": 0,
       "forks": 0,
@@ -166,7 +145,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 22,
+      "prs": 21,
       "stars": 69,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -191,8 +170,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 0,
-      "stars": 18849,
+      "prs": 1,
+      "stars": 18874,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
