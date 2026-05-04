@@ -26,7 +26,7 @@
       "contributors": 37,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 203,
+      "forks": 204,
       "issues": 11,
       "languages": [
         "Python",
@@ -36,7 +36,7 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 6,
       "stars": 2038,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
@@ -46,7 +46,7 @@
       "contributors": 7,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 3,
-      "forks": 47,
+      "forks": 48,
       "issues": 4,
       "languages": [
         "Python",
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 1603,
+      "prs": 5,
+      "stars": 1604,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -66,7 +66,7 @@
       "contributors": 7,
       "description": "📱 📂  iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
-      "forks": 135,
+      "forks": 134,
       "issues": 0,
       "languages": [
         "Objective-C",
@@ -93,8 +93,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 663,
+      "prs": 6,
+      "stars": 662,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,8 +112,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 2,
-      "stars": 799,
+      "prs": 5,
+      "stars": 798,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,7 +130,7 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 4,
       "stars": 524,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
@@ -149,8 +149,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 617,
+      "prs": 8,
+      "stars": 616,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -168,7 +168,7 @@
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 266,
+      "stars": 265,
       "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
     },
     {
@@ -184,7 +184,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 3,
       "stars": 264,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -221,7 +221,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 3,
       "stars": 117,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -238,7 +238,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 3,
       "stars": 87,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -255,7 +255,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 5,
       "stars": 79,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -272,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 3,
       "stars": 75,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 2,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
@@ -306,7 +306,7 @@
       ],
       "name": "create-matrix-action",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 1,
       "stars": 12,
       "url": "https://github.com/fabiocaccamo/create-matrix-action"
     }

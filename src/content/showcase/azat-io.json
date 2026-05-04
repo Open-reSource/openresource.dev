@@ -14,17 +14,17 @@
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 1,
-      "stars": 2859,
+      "prs": 2,
+      "stars": 2861,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/5698350?u=25ab54740f0ee720ad22a001adada2453c574cf2&v=4&s=50",
-      "contributors": 1,
+      "contributors": 2,
       "description": "🐍 CLI tool to analyze and report TODO comments in JavaScript and TypeScript Git repositories",
       "discussions": 0,
-      "forks": 8,
+      "forks": 9,
       "issues": 2,
       "languages": [
         "Svelte",
@@ -37,7 +37,7 @@
       "name": "todoctor",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 516,
+      "stars": 518,
       "url": "https://github.com/azat-io/todoctor"
     },
     {
@@ -71,7 +71,7 @@
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 520,
+      "stars": 519,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 312,
+      "stars": 313,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]
