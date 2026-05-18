@@ -1,5 +1,5 @@
 {
-  "author": "arina-tirreno",
+  "author": "onerrit",
   "links": [
     {
       "type": "github_repo",
@@ -7,7 +7,7 @@
       "contributors": 6,
       "description": "tirreno is an open-source security framework. Event tracking, threat detection, and risk scoring for any application.",
       "discussions": 0,
-      "forks": 139,
+      "forks": 144,
       "issues": 3,
       "languages": [
         "PHP",
@@ -19,7 +19,7 @@
       "name": "tirreno",
       "owner": "tirrenotechnologies",
       "prs": 0,
-      "stars": 1263,
+      "stars": 1286,
       "url": "https://github.com/tirrenotechnologies/tirreno"
     }
   ]

@@ -1,0 +1,24 @@
+{
+  "author": "shantanu-deshmukh",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/2664513?u=310853c1635834f13e657b8c81f4ca11a2590eed&v=4&s=50",
+      "contributors": 2,
+      "description": "Benchmark chunking strategies for your RAG corpus. Get a recommended config. CLI, Python library, and MCP server.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "Python",
+        "Shell",
+        "HTML"
+      ],
+      "name": "chunktuner",
+      "owner": "shantanu-deshmukh",
+      "prs": 0,
+      "stars": 1,
+      "url": "https://github.com/shantanu-deshmukh/chunktuner"
+    }
+  ]
+}

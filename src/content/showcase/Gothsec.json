@@ -26,7 +26,7 @@
       "contributors": 2,
       "description": "Portfolio template built with Astro, React, TypeScript and TailwindCSS. (Handcrafted with Figma)",
       "discussions": 0,
-      "forks": 133,
+      "forks": 136,
       "issues": 1,
       "languages": [
         "Astro",
@@ -35,7 +35,7 @@
       ],
       "name": "Astro-portfolio",
       "owner": "Gothsec",
-      "prs": 5,
+      "prs": 6,
       "stars": 233,
       "url": "https://github.com/Gothsec/Astro-portfolio"
     }

@@ -4,23 +4,25 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/90906587?v=4&s=50",
-      "contributors": 22,
+      "contributors": 23,
       "description": "A Code Playground That Just Works!",
       "discussions": 12,
-      "forks": 248,
-      "issues": 23,
+      "forks": 247,
+      "issues": 22,
       "languages": [
         "TypeScript",
         "HTML",
         "SCSS",
         "JavaScript",
         "CSS",
+        "MDX",
+        "Svelte",
         "Dockerfile"
       ],
       "name": "livecodes",
       "owner": "live-codes",
-      "prs": 5,
-      "stars": 1431,
+      "prs": 6,
+      "stars": 1438,
       "url": "https://github.com/live-codes/livecodes"
     }
   ]

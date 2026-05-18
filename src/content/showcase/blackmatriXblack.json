@@ -1,0 +1,23 @@
+{
+  "author": "blackmatriXblack",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/270301413?u=7f1289e12ba8153d3676360433d2c905047f3abe&v=4&s=50",
+      "contributors": 1,
+      "description": "a tool of windows build with  win32 API",
+      "discussions": 0,
+      "forks": 2,
+      "issues": 0,
+      "languages": [
+        "C",
+        "CMake"
+      ],
+      "name": "windowsmenu",
+      "owner": "blackmatriXblack",
+      "prs": 0,
+      "stars": 6,
+      "url": "https://github.com/blackmatriXblack/windowsmenu"
+    }
+  ]
+}
