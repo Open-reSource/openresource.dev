@@ -364,7 +364,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Resources',
-					autogenerate: { directory: 'resources' },
+					items: [{ autogenerate: { directory: 'resources' } }],
 				},
 				{
 					label: 'Articles',
