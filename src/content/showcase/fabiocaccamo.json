@@ -16,7 +16,7 @@
       ],
       "name": "FCUUID",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 1,
       "stars": 1644,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 2038,
+      "stars": 2039,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -57,7 +57,7 @@
       "name": "python-benedict",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1605,
+      "stars": 1606,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 662,
+      "stars": 663,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 799,
+      "stars": 800,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -177,14 +177,14 @@
       "contributors": 1,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
-      "forks": 17,
+      "forks": 16,
       "issues": 2,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 5,
+      "prs": 4,
       "stars": 267,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 125,
+      "stars": 126,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {

@@ -1,0 +1,26 @@
+{
+  "author": "gregkonush",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/234536857?v=4&s=50",
+      "contributors": 11,
+      "description": "Formula WorkPaper and XLSX recalculation runtime for Node.js services and agent tools: edit cells, recalc, verify readback, persist JSON.",
+      "discussions": 15,
+      "forks": 18,
+      "issues": 16,
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Dockerfile"
+      ],
+      "name": "bilig",
+      "owner": "proompteng",
+      "prs": 0,
+      "stars": 29,
+      "url": "https://github.com/proompteng/bilig"
+    }
+  ]
+}

@@ -16,8 +16,65 @@
       "name": "windowsmenu",
       "owner": "blackmatriXblack",
       "prs": 0,
-      "stars": 6,
+      "stars": 7,
       "url": "https://github.com/blackmatriXblack/windowsmenu"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/270301413?u=7f1289e12ba8153d3676360433d2c905047f3abe&v=4&s=50",
+      "contributors": 1,
+      "description": "Blakcmatrixos was built by blackmatrixblack ,a system for C",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "C",
+        "Assembly",
+        "Python"
+      ],
+      "name": "blackmatrixos",
+      "owner": "blackmatriXblack",
+      "prs": 0,
+      "stars": 0,
+      "url": "https://github.com/blackmatriXblack/blackmatrixos"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/270301413?u=7f1289e12ba8153d3676360433d2c905047f3abe&v=4&s=50",
+      "contributors": 1,
+      "description": "PhysicsWebOS is an experimental physics-focused web operating environment that transforms the browser into an interactive scientific terminal for exploring formulas, constants, calculations, scientists, and physics stories through a command-driven interface. Built with modern web technologies, it combines the feel of a lightweight operating system ",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "name": "physicswebos",
+      "owner": "blackmatriXblack",
+      "prs": 0,
+      "stars": 0,
+      "url": "https://github.com/blackmatriXblack/physicswebos"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/270301413?u=7f1289e12ba8153d3676360433d2c905047f3abe&v=4&s=50",
+      "contributors": 1,
+      "description": "MathOS is a specialized, mathematics-focused operating environment designed to streamline computational workflows, symbolic reasoning, and advanced mathematical modeling",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "name": "mathwebos",
+      "owner": "blackmatriXblack",
+      "prs": 0,
+      "stars": 0,
+      "url": "https://github.com/blackmatriXblack/mathwebos"
     }
   ]
 }

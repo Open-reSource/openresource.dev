@@ -81,7 +81,7 @@
       ],
       "name": "Tota11ylost",
       "owner": "Orange-OpenSource",
-      "prs": 2,
+      "prs": 3,
       "stars": 9,
       "url": "https://github.com/Orange-OpenSource/Tota11ylost"
     },
@@ -145,7 +145,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 23,
+      "prs": 21,
       "stars": 69,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -155,8 +155,8 @@
       "contributors": 269,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 95,
-      "forks": 722,
-      "issues": 196,
+      "forks": 725,
+      "issues": 197,
       "languages": [
         "Rust",
         "Hurl",
@@ -171,7 +171,7 @@
       "name": "hurl",
       "owner": "Orange-OpenSource",
       "prs": 1,
-      "stars": 18914,
+      "stars": 18935,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
