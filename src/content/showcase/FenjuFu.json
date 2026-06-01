@@ -1,0 +1,100 @@
+{
+  "author": "FenjuFu",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
+      "contributors": 55,
+      "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
+      "discussions": 29,
+      "forks": 847,
+      "issues": 16,
+      "languages": [
+        "Java",
+        "TypeScript",
+        "Python",
+        "JavaScript",
+        "SCSS",
+        "Go",
+        "HCL",
+        "Makefile",
+        "Lua",
+        "Shell"
+      ],
+      "name": "astron-agent",
+      "owner": "iflytek",
+      "prs": 5,
+      "stars": 8531,
+      "url": "https://github.com/iflytek/astron-agent"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
+      "contributors": 22,
+      "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
+      "discussions": 5,
+      "forks": 578,
+      "issues": 30,
+      "languages": [
+        "Java",
+        "Python",
+        "Vue",
+        "TypeScript",
+        "HCL",
+        "JavaScript",
+        "Lua",
+        "Makefile",
+        "SCSS",
+        "Batchfile"
+      ],
+      "name": "astron-rpa",
+      "owner": "iflytek",
+      "prs": 3,
+      "stars": 5176,
+      "url": "https://github.com/iflytek/astron-rpa"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
+      "contributors": 25,
+      "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
+      "discussions": 0,
+      "forks": 452,
+      "issues": 13,
+      "languages": [
+        "Java",
+        "TypeScript",
+        "Shell",
+        "JavaScript",
+        "CSS",
+        "Makefile",
+        "YARA",
+        "Dockerfile",
+        "PLpgSQL",
+        "HTML"
+      ],
+      "name": "skillhub",
+      "owner": "iflytek",
+      "prs": 13,
+      "stars": 3273,
+      "url": "https://github.com/iflytek/skillhub"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
+      "contributors": 5,
+      "description": "从零到工作流，掌握 AstronClaw（云端）与 Loomy（桌面）的 AI 助手实战教程 | A complete tutorial to master AstronClaw (cloud AI) & Loomy (desktop AI)",
+      "discussions": 0,
+      "forks": 41,
+      "issues": 1,
+      "languages": [
+        "JavaScript"
+      ],
+      "name": "astronclaw-tutorial",
+      "owner": "iflytek",
+      "prs": 1,
+      "stars": 406,
+      "url": "https://github.com/iflytek/astronclaw-tutorial"
+    }
+  ]
+}
