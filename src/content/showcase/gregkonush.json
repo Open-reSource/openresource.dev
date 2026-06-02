@@ -5,10 +5,10 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/234536857?v=4&s=50",
       "contributors": 11,
-      "description": "Formula WorkPaper and XLSX recalculation runtime for Node.js services and agent tools: edit cells, recalc, verify readback, persist JSON.",
+      "description": "Headless spreadsheet workbooks for Node services and agents, no need for excel or browser",
       "discussions": 15,
-      "forks": 18,
-      "issues": 16,
+      "forks": 19,
+      "issues": 4,
       "languages": [
         "TypeScript",
         "JavaScript",
@@ -18,8 +18,8 @@
       ],
       "name": "bilig",
       "owner": "proompteng",
-      "prs": 0,
-      "stars": 29,
+      "prs": 1,
+      "stars": 30,
       "url": "https://github.com/proompteng/bilig"
     }
   ]
