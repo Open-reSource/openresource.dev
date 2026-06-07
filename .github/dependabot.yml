@@ -3,7 +3,10 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'weekly'
+      interval: "weekly"
+      day: 'monday'
+      time: '05:00'
+      timezone: 'Europe/Paris'
     cooldown:
       default-days: 7
     open-pull-requests-limit: 20
@@ -14,7 +17,10 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'weekly'
+      interval: "weekly"
+      day: 'monday'
+      time: '05:00'
+      timezone: 'Europe/Paris'
     cooldown:
       default-days: 7
     open-pull-requests-limit: 20
