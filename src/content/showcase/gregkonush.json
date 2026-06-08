@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/234536857?v=4&s=50",
-      "contributors": 11,
-      "description": "Headless spreadsheet workbooks for Node services and agents, no need for excel or browser",
+      "contributors": 12,
+      "description": "Bilig WorkPaper: headless spreadsheet formula engine and MCP server for Node agents: complete spreadsheet work autonomously",
       "discussions": 15,
-      "forks": 19,
-      "issues": 4,
+      "forks": 20,
+      "issues": 2,
       "languages": [
         "TypeScript",
         "JavaScript",
@@ -18,7 +18,7 @@
       ],
       "name": "bilig",
       "owner": "proompteng",
-      "prs": 1,
+      "prs": 0,
       "stars": 30,
       "url": "https://github.com/proompteng/bilig"
     }
