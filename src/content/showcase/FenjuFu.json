@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 55,
+      "contributors": 56,
       "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
       "discussions": 29,
-      "forks": 847,
-      "issues": 16,
+      "forks": 850,
+      "issues": 14,
       "languages": [
         "Java",
         "TypeScript",
@@ -23,8 +23,8 @@
       ],
       "name": "astron-agent",
       "owner": "iflytek",
-      "prs": 5,
-      "stars": 8531,
+      "prs": 4,
+      "stars": 8538,
       "url": "https://github.com/iflytek/astron-agent"
     },
     {
@@ -33,7 +33,7 @@
       "contributors": 22,
       "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
       "discussions": 5,
-      "forks": 578,
+      "forks": 576,
       "issues": 30,
       "languages": [
         "Java",
@@ -50,7 +50,7 @@
       "name": "astron-rpa",
       "owner": "iflytek",
       "prs": 3,
-      "stars": 5176,
+      "stars": 5174,
       "url": "https://github.com/iflytek/astron-rpa"
     },
     {
@@ -59,8 +59,8 @@
       "contributors": 25,
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
       "discussions": 0,
-      "forks": 452,
-      "issues": 13,
+      "forks": 476,
+      "issues": 11,
       "languages": [
         "Java",
         "TypeScript",
@@ -75,8 +75,8 @@
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 13,
-      "stars": 3273,
+      "prs": 15,
+      "stars": 3393,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
@@ -93,7 +93,7 @@
       "name": "astronclaw-tutorial",
       "owner": "iflytek",
       "prs": 1,
-      "stars": 406,
+      "stars": 409,
       "url": "https://github.com/iflytek/astronclaw-tutorial"
     }
   ]

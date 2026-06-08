@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 2040,
+      "stars": 2041,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,7 +56,7 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 4,
       "stars": 1606,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 907,
+      "stars": 906,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -122,7 +122,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 53,
+      "forks": 54,
       "issues": 6,
       "languages": [
         "Python",
@@ -130,7 +130,7 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 5,
       "stars": 525,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 617,
+      "stars": 616,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -221,7 +221,7 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 2,
       "stars": 126,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
@@ -238,7 +238,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 87,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -306,7 +306,7 @@
       ],
       "name": "create-matrix-action",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 1,
       "stars": 12,
       "url": "https://github.com/fabiocaccamo/create-matrix-action"
     }
