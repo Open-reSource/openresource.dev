@@ -61,14 +61,14 @@
       "contributors": 23,
       "description": "Easy to integrate OAuth2 authentication with support for several identity providers.",
       "discussions": 4,
-      "forks": 15,
+      "forks": 16,
       "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "fastapi-oauth2",
       "owner": "pysnippet",
-      "prs": 0,
+      "prs": 1,
       "stars": 90,
       "url": "https://github.com/pysnippet/fastapi-oauth2"
     }

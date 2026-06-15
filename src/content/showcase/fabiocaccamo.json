@@ -112,7 +112,7 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 6,
+      "prs": 5,
       "stars": 798,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 126,
+      "stars": 127,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
