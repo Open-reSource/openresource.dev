@@ -7,8 +7,8 @@
       "contributors": 56,
       "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
       "discussions": 29,
-      "forks": 850,
-      "issues": 14,
+      "forks": 853,
+      "issues": 19,
       "languages": [
         "Java",
         "TypeScript",
@@ -23,8 +23,8 @@
       ],
       "name": "astron-agent",
       "owner": "iflytek",
-      "prs": 4,
-      "stars": 8538,
+      "prs": 5,
+      "stars": 8561,
       "url": "https://github.com/iflytek/astron-agent"
     },
     {
@@ -34,7 +34,7 @@
       "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
       "discussions": 5,
       "forks": 576,
-      "issues": 30,
+      "issues": 32,
       "languages": [
         "Java",
         "Python",
@@ -50,7 +50,7 @@
       "name": "astron-rpa",
       "owner": "iflytek",
       "prs": 3,
-      "stars": 5174,
+      "stars": 5177,
       "url": "https://github.com/iflytek/astron-rpa"
     },
     {
@@ -59,8 +59,8 @@
       "contributors": 25,
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
       "discussions": 0,
-      "forks": 476,
-      "issues": 11,
+      "forks": 502,
+      "issues": 16,
       "languages": [
         "Java",
         "TypeScript",
@@ -75,8 +75,8 @@
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 15,
-      "stars": 3393,
+      "prs": 20,
+      "stars": 3472,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
@@ -85,15 +85,15 @@
       "contributors": 5,
       "description": "从零到工作流，掌握 AstronClaw（云端）与 Loomy（桌面）的 AI 助手实战教程 | A complete tutorial to master AstronClaw (cloud AI) & Loomy (desktop AI)",
       "discussions": 0,
-      "forks": 41,
+      "forks": 43,
       "issues": 1,
       "languages": [
         "JavaScript"
       ],
       "name": "astronclaw-tutorial",
       "owner": "iflytek",
-      "prs": 1,
-      "stars": 409,
+      "prs": 2,
+      "stars": 410,
       "url": "https://github.com/iflytek/astronclaw-tutorial"
     }
   ]

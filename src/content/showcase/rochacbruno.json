@@ -6,8 +6,8 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
       "contributors": 129,
       "description": "Configuration Management for Python ⚙",
-      "discussions": 65,
-      "forks": 326,
+      "discussions": 66,
+      "forks": 328,
       "issues": 154,
       "languages": [
         "Python",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 7,
-      "stars": 4302,
+      "prs": 9,
+      "stars": 4307,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
