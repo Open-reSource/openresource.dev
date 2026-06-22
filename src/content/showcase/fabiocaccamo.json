@@ -7,7 +7,7 @@
       "contributors": 3,
       "description": "📱 🆔  iOS UUID / Universally Unique Identifiers library as alternative to UDID and identifierForVendor.",
       "discussions": 0,
-      "forks": 235,
+      "forks": 236,
       "issues": 3,
       "languages": [
         "Objective-C",
@@ -37,7 +37,7 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 2041,
+      "stars": 2042,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 4,
-      "stars": 1606,
+      "prs": 5,
+      "stars": 1607,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -75,7 +75,7 @@
       "name": "FCFileManager",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 906,
+      "stars": 907,
       "url": "https://github.com/fabiocaccamo/FCFileManager"
     },
     {
@@ -177,14 +177,14 @@
       "contributors": 1,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
-      "forks": 16,
-      "issues": 2,
+      "forks": 18,
+      "issues": 3,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 6,
       "stars": 268,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
