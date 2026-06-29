@@ -21,11 +21,11 @@
     "@astrojs/starlight": "^0.40.0",
     "@astrojs/vercel": "^10.0.8",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^6.4.7"
+    "astro": "^6.4.8"
   },
   "devDependencies": {
     "@actions/core": "^3.0.1",
-    "@faker-js/faker": "^10.4.0",
+    "@faker-js/faker": "^10.5.0",
     "@octokit/graphql": "^9.0.3",
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
@@ -41,7 +41,7 @@
     "starlight-links-validator": "^0.24.1",
     "starlight-showcases": "^0.3.2",
     "tsx": "^4.22.4",
-    "vercel": "^54.14.0",
-    "vitest": "^4.1.8"
+    "vercel": "^54.14.5",
+    "vitest": "^4.1.9"
   }
 }
