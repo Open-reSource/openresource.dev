@@ -26,7 +26,7 @@
       "contributors": 37,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 203,
+      "forks": 204,
       "issues": 11,
       "languages": [
         "Python",
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 1607,
+      "prs": 7,
+      "stars": 1606,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -66,7 +66,7 @@
       "contributors": 7,
       "description": "📱 📂  iOS file manager on top of NSFileManager for simplifying files management.",
       "discussions": 0,
-      "forks": 133,
+      "forks": 134,
       "issues": 0,
       "languages": [
         "Objective-C",
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 798,
+      "stars": 800,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -122,7 +122,7 @@
       "contributors": 16,
       "description": "🚧 🛠️ shows a 503 error page when maintenance-mode is on.",
       "discussions": 1,
-      "forks": 54,
+      "forks": 53,
       "issues": 6,
       "languages": [
         "Python",
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 525,
+      "stars": 526,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -150,7 +150,7 @@
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 616,
+      "stars": 617,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 268,
+      "stars": 269,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
