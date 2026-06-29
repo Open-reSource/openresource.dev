@@ -12,8 +12,9 @@
       "languages": [
         "Python",
         "TypeScript",
-        "Jinja",
         "HTML",
+        "Jinja",
+        "JavaScript",
         "PowerShell",
         "Makefile"
       ],

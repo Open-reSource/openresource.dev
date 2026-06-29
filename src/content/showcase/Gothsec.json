@@ -17,7 +17,7 @@
       "name": "MoviesForDevs",
       "owner": "Gothsec",
       "prs": 0,
-      "stars": 12,
+      "stars": 13,
       "url": "https://github.com/Gothsec/MoviesForDevs"
     },
     {
@@ -26,8 +26,8 @@
       "contributors": 2,
       "description": "Portfolio template built with Astro, React, TypeScript and TailwindCSS. (Handcrafted with Figma)",
       "discussions": 0,
-      "forks": 138,
-      "issues": 1,
+      "forks": 139,
+      "issues": 2,
       "languages": [
         "Astro",
         "TypeScript",
@@ -35,8 +35,8 @@
       ],
       "name": "Astro-portfolio",
       "owner": "Gothsec",
-      "prs": 6,
-      "stars": 239,
+      "prs": 7,
+      "stars": 240,
       "url": "https://github.com/Gothsec/Astro-portfolio"
     }
   ]

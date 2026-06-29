@@ -43,8 +43,8 @@
       "contributors": 65,
       "description": "An open-source SDK for PSP homebrew development.",
       "discussions": 4,
-      "forks": 172,
-      "issues": 8,
+      "forks": 173,
+      "issues": 10,
       "languages": [
         "C",
         "Assembly",
@@ -56,8 +56,8 @@
       ],
       "name": "pspsdk",
       "owner": "pspdev",
-      "prs": 1,
-      "stars": 1126,
+      "prs": 0,
+      "stars": 1132,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]
