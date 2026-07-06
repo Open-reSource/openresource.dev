@@ -8,7 +8,7 @@
       "description": "Astro integration to enhance your website's security with SubResource Integrity hashes, Content-Security-Policy headers, and other techniques.",
       "discussions": 4,
       "forks": 11,
-      "issues": 32,
+      "issues": 33,
       "languages": [
         "TypeScript",
         "JavaScript",
