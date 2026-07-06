@@ -11,17 +11,19 @@
       "issues": 35,
       "languages": [
         "TypeScript",
+        "Java",
+        "C#",
+        "Ruby",
+        "Go",
         "JavaScript",
+        "Python",
         "CSS",
         "HTML",
-        "MDX",
-        "Shell",
-        "Dockerfile",
-        "Python"
+        "Shell"
       ],
       "name": "xyd",
       "owner": "livesession",
-      "prs": 3,
+      "prs": 4,
       "stars": 111,
       "url": "https://github.com/livesession/xyd"
     }
