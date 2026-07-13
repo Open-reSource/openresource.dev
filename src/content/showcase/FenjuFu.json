@@ -7,7 +7,7 @@
       "contributors": 56,
       "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
       "discussions": 29,
-      "forks": 860,
+      "forks": 861,
       "issues": 23,
       "languages": [
         "Java",
@@ -23,8 +23,8 @@
       ],
       "name": "astron-agent",
       "owner": "iflytek",
-      "prs": 7,
-      "stars": 8610,
+      "prs": 8,
+      "stars": 8617,
       "url": "https://github.com/iflytek/astron-agent"
     },
     {
@@ -33,8 +33,8 @@
       "contributors": 22,
       "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
       "discussions": 5,
-      "forks": 582,
-      "issues": 37,
+      "forks": 584,
+      "issues": 38,
       "languages": [
         "Java",
         "Python",
@@ -49,8 +49,8 @@
       ],
       "name": "astron-rpa",
       "owner": "iflytek",
-      "prs": 3,
-      "stars": 5200,
+      "prs": 4,
+      "stars": 5209,
       "url": "https://github.com/iflytek/astron-rpa"
     },
     {
@@ -58,9 +58,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
       "contributors": 26,
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
-      "discussions": 3,
-      "forks": 552,
-      "issues": 13,
+      "discussions": 2,
+      "forks": 742,
+      "issues": 16,
       "languages": [
         "Java",
         "TypeScript",
@@ -75,8 +75,8 @@
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 17,
-      "stars": 3774,
+      "prs": 20,
+      "stars": 3998,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
@@ -85,8 +85,8 @@
       "contributors": 8,
       "description": "从零到工作流，掌握 AstronClaw（云端）与 Loomy（桌面）的 AI 助手实战教程 | A complete tutorial to master AstronClaw (cloud AI) & Loomy (desktop AI)",
       "discussions": 0,
-      "forks": 44,
-      "issues": 2,
+      "forks": 43,
+      "issues": 5,
       "languages": [
         "JavaScript"
       ],

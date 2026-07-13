@@ -14,11 +14,13 @@
         "Smarty",
         "SCSS",
         "Twig",
+        "Shell",
+        "JavaScript",
         "HTML"
       ],
       "name": "SwiftyEdit",
       "owner": "SwiftyEdit",
-      "prs": 3,
+      "prs": 4,
       "stars": 21,
       "url": "https://github.com/SwiftyEdit/SwiftyEdit"
     }
