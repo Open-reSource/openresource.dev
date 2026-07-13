@@ -1,0 +1,24 @@
+{
+  "author": "DevilsAutumn",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/83907321?u=b437c604fe119751236fc3af05efbb641fe18507&v=4&s=50",
+      "contributors": 8,
+      "description": "Backend web framework for building applications where a single handler can be exposed as http endpoint, MCP tool or CLI action.",
+      "discussions": 4,
+      "forks": 18,
+      "issues": 6,
+      "languages": [
+        "Python",
+        "JavaScript",
+        "Rust"
+      ],
+      "name": "quater",
+      "owner": "DevilsAutumn",
+      "prs": 6,
+      "stars": 13,
+      "url": "https://github.com/DevilsAutumn/quater"
+    }
+  ]
+}
