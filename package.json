@@ -21,7 +21,7 @@
     "@astrojs/starlight": "^0.41.3",
     "@astrojs/vercel": "^11.0.2",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^7.0.6"
+    "astro": "^7.0.7"
   },
   "devDependencies": {
     "@actions/core": "^3.0.1",
@@ -32,16 +32,16 @@
     "astro-og-canvas": "^0.13.0",
     "dotenv": "^17.4.2",
     "gemoji": "^8.1.0",
-    "linkedom": "^0.18.12",
+    "linkedom": "^0.18.13",
     "parse-github-url": "^1.0.4",
-    "prettier": "^3.9.4",
+    "prettier": "^3.9.5",
     "prettier-plugin-astro": "^0.14.1",
     "reading-time": "^1.5.0",
-    "starlight-blog": "^0.27.0",
+    "starlight-blog": "^0.28.0",
     "starlight-links-validator": "^0.25.2",
     "starlight-showcases": "^0.3.2",
     "tsx": "^4.23.0",
-    "vercel": "^54.20.1",
-    "vitest": "^4.1.9"
+    "vercel": "^55.0.0",
+    "vitest": "^4.1.10"
   }
 }
