@@ -1,0 +1,38 @@
+{
+  "author": "Yohjisakamoto",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/258845643?v=4&s=50",
+      "contributors": 3,
+      "description": "Across 348 long-horizon benchmark sessions, Tura used up to 83.1% fewer turns on the rewrite benchmark and improved the DeepSWE pass rate by up to 16.7 percentage points compared with Codex CLI.",
+      "discussions": 3,
+      "forks": 13,
+      "issues": 2,
+      "languages": [
+        "Rust",
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "PowerShell",
+        "CSS",
+        "Shell",
+        "HTML",
+        "Dockerfile"
+      ],
+      "name": "tura",
+      "owner": "Tura-AI",
+      "prs": 8,
+      "stars": 257,
+      "url": "https://github.com/Tura-AI/tura"
+    },
+    {
+      "type": "unknown",
+      "url": "https://turaai.net/"
+    },
+    {
+      "type": "unknown",
+      "url": "https://turaai.net/benchmark"
+    }
+  ]
+}

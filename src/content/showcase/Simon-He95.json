@@ -1,0 +1,26 @@
+{
+  "author": "Simon-He95",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/57086651?u=88dcc03923780afd16ee5860a563b16ec362fbd5&v=4&s=50",
+      "contributors": 34,
+      "description": "Multi-framework streaming Markdown renderers for AI apps: Vue/Nuxt, React/Next.js, Svelte, and Angular, with Mermaid, KaTeX, Shiki, Monaco, safe HTML, and low-jitter updates.",
+      "discussions": 27,
+      "forks": 167,
+      "issues": 0,
+      "languages": [
+        "Vue",
+        "JavaScript",
+        "TypeScript",
+        "Svelte",
+        "HTML"
+      ],
+      "name": "markstream-vue",
+      "owner": "Simon-He95",
+      "prs": 0,
+      "stars": 2710,
+      "url": "https://github.com/Simon-He95/markstream-vue"
+    }
+  ]
+}

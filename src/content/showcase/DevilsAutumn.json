@@ -8,7 +8,7 @@
       "description": "Backend web framework for building applications where a single handler can be exposed as http endpoint, MCP tool or CLI action.",
       "discussions": 4,
       "forks": 18,
-      "issues": 6,
+      "issues": 8,
       "languages": [
         "Python",
         "JavaScript",
@@ -16,8 +16,8 @@
       ],
       "name": "quater",
       "owner": "DevilsAutumn",
-      "prs": 6,
-      "stars": 13,
+      "prs": 8,
+      "stars": 14,
       "url": "https://github.com/DevilsAutumn/quater"
     }
   ]

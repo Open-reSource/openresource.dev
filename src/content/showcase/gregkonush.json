@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/234536857?v=4&s=50",
       "contributors": 12,
       "description": "Formula workbooks for Node services: edit inputs, recalculate formulas, read outputs, persist WorkPaper JSON, and expose MCP tools.",
-      "discussions": 15,
+      "discussions": 16,
       "forks": 21,
       "issues": 0,
       "languages": [
@@ -18,7 +18,7 @@
       ],
       "name": "bilig",
       "owner": "proompteng",
-      "prs": 1,
+      "prs": 0,
       "stars": 34,
       "url": "https://github.com/proompteng/bilig"
     }

@@ -12,8 +12,8 @@
       "languages": [
         "Go",
         "Shell",
-        "Dockerfile",
-        "JavaScript"
+        "JavaScript",
+        "Dockerfile"
       ],
       "name": "dataflow",
       "owner": "dataflow-operator",
