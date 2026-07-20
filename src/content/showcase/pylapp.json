@@ -30,7 +30,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 194,
+      "contributors": 193,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 4,
       "forks": 10,
@@ -50,7 +50,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 201,
+      "contributors": 200,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 5,
@@ -62,14 +62,14 @@
       ],
       "name": "Tota11ylost",
       "owner": "Orange-OpenSource",
-      "prs": 3,
+      "prs": 1,
       "stars": 9,
       "url": "https://github.com/Orange-OpenSource/Tota11ylost"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 206,
+      "contributors": 205,
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 7,
@@ -81,14 +81,14 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 1,
+      "prs": 4,
       "stars": 21,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 193,
+      "contributors": 192,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
       "forks": 0,
@@ -133,10 +133,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 280,
+      "contributors": 278,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 96,
-      "forks": 732,
+      "forks": 731,
       "issues": 198,
       "languages": [
         "Rust",
@@ -151,8 +151,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 2,
-      "stars": 19063,
+      "prs": 3,
+      "stars": 19075,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]
