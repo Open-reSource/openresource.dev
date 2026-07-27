@@ -10,6 +10,7 @@ dotenv.config();
 const scraper = new ShowcaseScraper('Open-reSource', 'openresource.dev', 3, [
 	'https://user-images.githubusercontent.com',
 	'https://camo.githubusercontent.com',
+	'https://raw.githubusercontent.com',
 	'https://openresource.dev',
 	'https://www.openresource.dev',
 ]);
