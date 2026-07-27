@@ -54,7 +54,7 @@
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 5,
-      "issues": 10,
+      "issues": 9,
       "languages": [
         "HTML",
         "JavaScript",
@@ -73,7 +73,7 @@
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 7,
-      "issues": 12,
+      "issues": 11,
       "languages": [
         "JavaScript",
         "HTML",
@@ -81,7 +81,7 @@
       ],
       "name": "La-Va11ydette",
       "owner": "Orange-OpenSource",
-      "prs": 4,
+      "prs": 3,
       "stars": 21,
       "url": "https://github.com/Orange-OpenSource/La-Va11ydette"
     },
@@ -126,7 +126,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 18,
+      "prs": 17,
       "stars": 69,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -136,8 +136,8 @@
       "contributors": 278,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 96,
-      "forks": 731,
-      "issues": 198,
+      "forks": 730,
+      "issues": 200,
       "languages": [
         "Rust",
         "Hurl",
@@ -151,8 +151,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 3,
-      "stars": 19075,
+      "prs": 1,
+      "stars": 19096,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

@@ -6,9 +6,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/49429147?v=4&s=50",
       "contributors": 70,
       "description": "Mockoon is the easiest and quickest way to run mock APIs locally. No remote deployment, no account required, open source.",
-      "discussions": 330,
+      "discussions": 332,
       "forks": 461,
-      "issues": 44,
+      "issues": 42,
       "languages": [
         "TypeScript",
         "HTML",
@@ -19,8 +19,8 @@
       ],
       "name": "mockoon",
       "owner": "mockoon",
-      "prs": 8,
-      "stars": 8338,
+      "prs": 5,
+      "stars": 8341,
       "url": "https://github.com/mockoon/mockoon"
     }
   ]
