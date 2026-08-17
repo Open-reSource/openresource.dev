@@ -4,27 +4,27 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/195636730?v=4&s=50",
-      "contributors": 19,
+      "contributors": 21,
       "description": "A PDF viewer that seamlessly integrates with any JavaScript project",
       "discussions": 39,
-      "forks": 290,
-      "issues": 158,
+      "forks": 300,
+      "issues": 168,
       "languages": [
         "TypeScript",
         "MDX",
+        "JavaScript",
+        "Shell",
+        "CSS",
+        "Dockerfile",
         "Vue",
         "Svelte",
-        "JavaScript",
         "HTML",
-        "CSS",
-        "Shell",
-        "Dockerfile",
-        "C++"
+        "CMake"
       ],
       "name": "embed-pdf-viewer",
       "owner": "embedpdf",
-      "prs": 38,
-      "stars": 4323,
+      "prs": 37,
+      "stars": 4394,
       "url": "https://github.com/embedpdf/embed-pdf-viewer"
     }
   ]

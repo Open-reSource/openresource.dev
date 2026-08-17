@@ -7,8 +7,8 @@
       "contributors": 58,
       "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
       "discussions": 29,
-      "forks": 875,
-      "issues": 33,
+      "forks": 862,
+      "issues": 31,
       "languages": [
         "Java",
         "TypeScript",
@@ -23,8 +23,8 @@
       ],
       "name": "astron-agent",
       "owner": "iflytek",
-      "prs": 12,
-      "stars": 9390,
+      "prs": 14,
+      "stars": 8957,
       "url": "https://github.com/iflytek/astron-agent"
     },
     {
@@ -33,8 +33,8 @@
       "contributors": 23,
       "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
       "discussions": 5,
-      "forks": 597,
-      "issues": 39,
+      "forks": 574,
+      "issues": 41,
       "languages": [
         "Java",
         "Python",
@@ -50,39 +50,39 @@
       "name": "astron-rpa",
       "owner": "iflytek",
       "prs": 8,
-      "stars": 6015,
+      "stars": 5578,
       "url": "https://github.com/iflytek/astron-rpa"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 27,
+      "contributors": 36,
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
-      "discussions": 2,
-      "forks": 683,
-      "issues": 21,
+      "discussions": 3,
+      "forks": 781,
+      "issues": 44,
       "languages": [
         "Java",
         "TypeScript",
+        "HTML",
         "Shell",
-        "JavaScript",
-        "CSS",
-        "Makefile",
-        "YARA",
-        "Dockerfile",
         "Python",
-        "PLpgSQL"
+        "CSS",
+        "JavaScript",
+        "Makefile",
+        "Go Template",
+        "YARA"
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 20,
-      "stars": 4918,
+      "prs": 10,
+      "stars": 4881,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 8,
+      "contributors": 7,
       "description": "从零到工作流，掌握 AstronClaw（云端）与 Loomy（桌面）的 AI 助手实战教程 | A complete tutorial to master AstronClaw (cloud AI) & Loomy (desktop AI)",
       "discussions": 0,
       "forks": 45,
@@ -92,8 +92,8 @@
       ],
       "name": "astronclaw-tutorial",
       "owner": "iflytek",
-      "prs": 2,
-      "stars": 428,
+      "prs": 1,
+      "stars": 391,
       "url": "https://github.com/iflytek/astronclaw-tutorial"
     },
     {
@@ -102,7 +102,7 @@
       "contributors": 8,
       "description": "Harnessclaw is a powerful, Electron-based desktop application designed to manage, chat with, and operate AI agents and skills seamlessly.",
       "discussions": 0,
-      "forks": 90,
+      "forks": 96,
       "issues": 2,
       "languages": [
         "TypeScript",
@@ -112,8 +112,8 @@
       ],
       "name": "harnessclaw",
       "owner": "harnessclaw",
-      "prs": 4,
-      "stars": 342,
+      "prs": 2,
+      "stars": 308,
       "url": "https://github.com/harnessclaw/harnessclaw"
     },
     {
@@ -122,7 +122,7 @@
       "contributors": 4,
       "description": "An LLM programming assistant engine built with Go, supporting WebSocket, multi-turn dialogues, tool calling, permission control, and skill extension.",
       "discussions": 0,
-      "forks": 91,
+      "forks": 92,
       "issues": 2,
       "languages": [
         "Go",
@@ -133,8 +133,8 @@
       ],
       "name": "harnessclaw-engine",
       "owner": "harnessclaw",
-      "prs": 3,
-      "stars": 283,
+      "prs": 2,
+      "stars": 270,
       "url": "https://github.com/harnessclaw/harnessclaw-engine"
     },
     {
@@ -143,26 +143,26 @@
       "contributors": 7,
       "description": "Official collection of iFLYTEK skills for speech, OCR, translation, proofreading, and multimodal AI capabilities.",
       "discussions": 0,
-      "forks": 25,
-      "issues": 13,
+      "forks": 27,
+      "issues": 15,
       "languages": [
         "Python",
         "JavaScript"
       ],
       "name": "iFly-Skills",
       "owner": "iflytek",
-      "prs": 2,
-      "stars": 213,
+      "prs": 5,
+      "stars": 211,
       "url": "https://github.com/iflytek/iFly-Skills"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 4,
+      "contributors": 3,
       "description": "Agent-native long-term memory that learns after every run. File-native, auditable, and integrated with Pi, Hermes, OpenCode, and OpenClaw.",
       "discussions": 0,
-      "forks": 3,
-      "issues": 2,
+      "forks": 4,
+      "issues": 1,
       "languages": [
         "TypeScript",
         "JavaScript",
@@ -172,17 +172,17 @@
       ],
       "name": "memflywheel",
       "owner": "iflytek",
-      "prs": 3,
-      "stars": 35,
+      "prs": 7,
+      "stars": 39,
       "url": "https://github.com/iflytek/memflywheel"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 6,
+      "contributors": 5,
       "description": "A lightweight low-latency model converting natural home commands into structured data, fine-tuned via SFT and GRPO.",
       "discussions": 0,
-      "forks": 2,
+      "forks": 3,
       "issues": 4,
       "languages": [
         "Python",
@@ -190,8 +190,8 @@
       ],
       "name": "domux",
       "owner": "iflytek",
-      "prs": 1,
-      "stars": 29,
+      "prs": 5,
+      "stars": 30,
       "url": "https://github.com/iflytek/domux"
     }
   ]

@@ -4,11 +4,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/258845643?v=4&s=50",
-      "contributors": 5,
-      "description": "Across 348 long-horizon benchmark sessions, Tura used up to 83.1% fewer turns on the rewrite benchmark and improved the DeepSWE pass rate by up to 16.7 percentage points compared with Codex CLI.",
-      "discussions": 7,
-      "forks": 22,
-      "issues": 5,
+      "contributors": 6,
+      "description": "Build agent that uses 80% less token and delivers better results.",
+      "discussions": 12,
+      "forks": 28,
+      "issues": 3,
       "languages": [
         "Rust",
         "TypeScript",
@@ -22,8 +22,8 @@
       ],
       "name": "tura",
       "owner": "Tura-AI",
-      "prs": 2,
-      "stars": 472,
+      "prs": 1,
+      "stars": 595,
       "url": "https://github.com/Tura-AI/tura"
     },
     {

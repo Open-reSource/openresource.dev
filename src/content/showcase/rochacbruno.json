@@ -4,22 +4,22 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
-      "contributors": 133,
+      "contributors": 141,
       "description": "Configuration Management for Python ⚙",
       "discussions": 65,
-      "forks": 336,
-      "issues": 154,
+      "forks": 343,
+      "issues": 146,
       "languages": [
         "Python",
-        "Shell",
         "Makefile",
+        "Shell",
         "HTML",
         "HCL"
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 19,
-      "stars": 4316,
+      "prs": 15,
+      "stars": 4323,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -58,7 +58,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2090,
+      "stars": 2089,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
