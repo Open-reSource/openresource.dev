@@ -30,7 +30,11 @@
       "languages": [
         "C",
         "Assembly",
-        "Python"
+        "Batchfile",
+        "Python",
+        "Shell",
+        "PowerShell",
+        "Makefile"
       ],
       "name": "blackmatrixos",
       "owner": "blackmatriXblack",

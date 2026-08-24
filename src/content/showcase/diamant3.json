@@ -3,7 +3,7 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=9f3cf72b1e13f7183730a07903cbcf18c83c5c06&v=4&s=50",
       "contributors": 1,
       "description": "Remotely control Wi-Fi based microcontrollers with the PSP.",
       "discussions": 0,
@@ -22,7 +22,7 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/71203851?u=9f3cf72b1e13f7183730a07903cbcf18c83c5c06&v=4&s=50",
       "contributors": 2,
       "description": "Simple application to gather your system information in your computer. 🔍",
       "discussions": 0,
@@ -57,7 +57,7 @@
       "name": "pspsdk",
       "owner": "pspdev",
       "prs": 1,
-      "stars": 1162,
+      "stars": 1168,
       "url": "https://github.com/pspdev/pspsdk"
     }
   ]
