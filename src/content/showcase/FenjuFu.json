@@ -60,7 +60,7 @@
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
       "discussions": 3,
       "forks": 790,
-      "issues": 48,
+      "issues": 46,
       "languages": [
         "Java",
         "TypeScript",
@@ -75,8 +75,8 @@
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 22,
-      "stars": 4903,
+      "prs": 20,
+      "stars": 4904,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
@@ -133,7 +133,7 @@
       ],
       "name": "harnessclaw-engine",
       "owner": "harnessclaw",
-      "prs": 2,
+      "prs": 3,
       "stars": 271,
       "url": "https://github.com/harnessclaw/harnessclaw-engine"
     },
@@ -152,7 +152,7 @@
       "name": "iFly-Skills",
       "owner": "iflytek",
       "prs": 6,
-      "stars": 212,
+      "stars": 213,
       "url": "https://github.com/iflytek/iFly-Skills"
     },
     {
