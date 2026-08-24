@@ -33,7 +33,7 @@
       "contributors": 1,
       "description": "An Android autoclicker app for devices with root",
       "discussions": 0,
-      "forks": 0,
+      "forks": 1,
       "issues": 0,
       "languages": [
         "Java",
@@ -145,7 +145,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 16,
+      "prs": 17,
       "stars": 70,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
