@@ -3,11 +3,11 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/71007258?u=fa79d1662aaf9b5e816ccf5053a49f4fb2037205&v=4&s=50",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/71007258?u=6171a80f7dc581d09288deb33bc1aa04e9ad0828&v=4&s=50",
       "contributors": 1,
       "description": "Free course to learn collaborative coding with Git and GitHub",
       "discussions": 0,
-      "forks": 1,
+      "forks": 2,
       "issues": 1,
       "languages": [
         "Astro",
@@ -17,7 +17,7 @@
       ],
       "name": "CS000",
       "owner": "anav5704",
-      "prs": 0,
+      "prs": 1,
       "stars": 17,
       "url": "https://github.com/anav5704/CS000"
     }

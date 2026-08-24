@@ -1,0 +1,31 @@
+{
+  "author": "bobleer",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/29406332?u=5d7bd60dac6c135d37b593d602ea926ccdc1df35&v=4&s=50",
+      "contributors": 32,
+      "description": "BitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
+      "discussions": 8,
+      "forks": 191,
+      "issues": 73,
+      "languages": [
+        "Rust",
+        "TypeScript",
+        "JavaScript",
+        "SCSS",
+        "CSS",
+        "Python",
+        "HTML",
+        "Shell",
+        "C",
+        "PowerShell"
+      ],
+      "name": "BitFun",
+      "owner": "GCWing",
+      "prs": 25,
+      "stars": 1762,
+      "url": "https://github.com/GCWing/BitFun"
+    }
+  ]
+}

@@ -26,7 +26,7 @@
       "contributors": 37,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 203,
+      "forks": 204,
       "issues": 11,
       "languages": [
         "Python",
@@ -37,16 +37,16 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 2034,
+      "stars": 2036,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 10,
+      "contributors": 11,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 3,
-      "forks": 49,
+      "forks": 50,
       "issues": 5,
       "languages": [
         "Python",
@@ -56,7 +56,7 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 5,
       "stars": 1609,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
@@ -93,7 +93,7 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 7,
       "stars": 661,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 6,
-      "stars": 800,
+      "stars": 803,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,8 +130,8 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 526,
+      "prs": 4,
+      "stars": 527,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -149,8 +149,8 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 617,
+      "prs": 8,
+      "stars": 618,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
     {
@@ -184,7 +184,7 @@
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 4,
       "stars": 269,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -212,7 +212,7 @@
       "contributors": 4,
       "description": "🧊 convert your dynamic django site to a static one with one line of code.",
       "discussions": 0,
-      "forks": 16,
+      "forks": 17,
       "issues": 0,
       "languages": [
         "Python",
@@ -239,7 +239,7 @@
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 88,
+      "stars": 90,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
     {
