@@ -27,7 +27,7 @@
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
       "forks": 204,
-      "issues": 11,
+      "issues": 12,
       "languages": [
         "Python",
         "CSS",
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 8,
-      "stars": 2036,
+      "prs": 9,
+      "stars": 2039,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -84,7 +84,7 @@
       "contributors": 28,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 96,
+      "forks": 95,
       "issues": 3,
       "languages": [
         "Python",
@@ -168,7 +168,7 @@
       "name": "FCCurrentLocationGeocoder",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 265,
+      "stars": 264,
       "url": "https://github.com/fabiocaccamo/FCCurrentLocationGeocoder"
     },
     {
