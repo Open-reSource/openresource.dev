@@ -60,7 +60,7 @@
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
       "discussions": 3,
       "forks": 790,
-      "issues": 47,
+      "issues": 48,
       "languages": [
         "Java",
         "TypeScript",
@@ -75,7 +75,7 @@
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 18,
+      "prs": 22,
       "stars": 4903,
       "url": "https://github.com/iflytek/skillhub"
     },
