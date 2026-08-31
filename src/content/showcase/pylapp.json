@@ -29,25 +29,6 @@
     },
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/7559007?u=bd30fcc83a4b058ac2bb3d5618d5c0cfda25abfe&v=4&s=50",
-      "contributors": 1,
-      "description": "An Android autoclicker app for devices with root",
-      "discussions": 0,
-      "forks": 1,
-      "issues": 0,
-      "languages": [
-        "Java",
-        "AIDL",
-        "Shell"
-      ],
-      "name": "SmoothClicker",
-      "owner": "pylapp",
-      "prs": 0,
-      "stars": 0,
-      "url": "https://github.com/pylapp/SmoothClicker"
-    },
-    {
-      "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
       "contributors": 196,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
@@ -81,7 +62,7 @@
       ],
       "name": "Tota11ylost",
       "owner": "Orange-OpenSource",
-      "prs": 5,
+      "prs": 0,
       "stars": 9,
       "url": "https://github.com/Orange-OpenSource/Tota11ylost"
     },
@@ -135,7 +116,7 @@
       "contributors": 222,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
-      "forks": 24,
+      "forks": 25,
       "issues": 22,
       "languages": [
         "Nunjucks",
@@ -145,7 +126,7 @@
       ],
       "name": "a11y-guidelines",
       "owner": "Orange-OpenSource",
-      "prs": 17,
+      "prs": 18,
       "stars": 70,
       "url": "https://github.com/Orange-OpenSource/a11y-guidelines"
     },
@@ -155,8 +136,8 @@
       "contributors": 283,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 96,
-      "forks": 738,
-      "issues": 200,
+      "forks": 741,
+      "issues": 198,
       "languages": [
         "Rust",
         "Hurl",
@@ -170,8 +151,8 @@
       ],
       "name": "hurl",
       "owner": "Orange-OpenSource",
-      "prs": 6,
-      "stars": 19156,
+      "prs": 5,
+      "stars": 19169,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

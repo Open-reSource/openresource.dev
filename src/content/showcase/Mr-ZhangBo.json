@@ -1,0 +1,24 @@
+{
+  "author": "Mr-ZhangBo",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/29654738?u=a7e6e15aec518c11a1849f414d47facdeda67161&v=4&s=50",
+      "contributors": 1,
+      "description": "Frontend-only CreateForge UI playground for AI image and video workflow planning.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "name": "ai-model-prompt-brief-builder",
+      "owner": "Mr-ZhangBo",
+      "prs": 0,
+      "stars": 0,
+      "url": "https://github.com/Mr-ZhangBo/ai-model-prompt-brief-builder"
+    }
+  ]
+}

@@ -7,8 +7,8 @@
       "contributors": 27,
       "description": "A Code Playground That Just Works!",
       "discussions": 12,
-      "forks": 265,
-      "issues": 26,
+      "forks": 264,
+      "issues": 25,
       "languages": [
         "TypeScript",
         "HTML",
@@ -23,7 +23,7 @@
       "name": "livecodes",
       "owner": "live-codes",
       "prs": 6,
-      "stars": 1485,
+      "stars": 1489,
       "url": "https://github.com/live-codes/livecodes"
     }
   ]

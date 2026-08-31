@@ -4,10 +4,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
-      "contributors": 142,
+      "contributors": 141,
       "description": "Configuration Management for Python ⚙",
       "discussions": 65,
-      "forks": 345,
+      "forks": 346,
       "issues": 147,
       "languages": [
         "Python",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 18,
-      "stars": 4327,
+      "prs": 21,
+      "stars": 4325,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {

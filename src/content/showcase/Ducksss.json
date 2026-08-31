@@ -8,7 +8,7 @@
       "description": "Payload Components: registry-backed Payload CMS blocks installed wired, not pasted.",
       "discussions": 0,
       "forks": 8,
-      "issues": 17,
+      "issues": 14,
       "languages": [
         "TypeScript",
         "MDX",
@@ -18,8 +18,8 @@
       ],
       "name": "payload-components",
       "owner": "Ducksss",
-      "prs": 15,
-      "stars": 28,
+      "prs": 3,
+      "stars": 30,
       "url": "https://github.com/Ducksss/payload-components"
     }
   ]
