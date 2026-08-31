@@ -1,0 +1,30 @@
+{
+  "author": "wsdt",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/47505194?v=4&s=50",
+      "contributors": 2,
+      "description": "The agent-native systems programming language: Meaning in. Verified machine code out. All target OS, memory managed through Ownership & fully interoperable with existing ecosystems & object-oriented AI Agents with payment capability.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "Rust",
+        "JavaScript",
+        "Shell",
+        "C",
+        "PowerShell",
+        "Swift",
+        "Kotlin",
+        "Objective-C",
+        "Python"
+      ],
+      "name": "semaprax",
+      "owner": "wavect",
+      "prs": 0,
+      "stars": 9,
+      "url": "https://github.com/wavect/semaprax"
+    }
+  ]
+}

@@ -7,14 +7,14 @@
       "contributors": 37,
       "description": "☂️ ESLint plugin for sorting various data such as objects, imports, types, enums, JSX props, etc.",
       "discussions": 0,
-      "forks": 65,
+      "forks": 66,
       "issues": 4,
       "languages": [
         "TypeScript"
       ],
       "name": "eslint-plugin-perfectionist",
       "owner": "azat-io",
-      "prs": 3,
+      "prs": 2,
       "stars": 2916,
       "url": "https://github.com/azat-io/eslint-plugin-perfectionist"
     },
@@ -64,14 +64,14 @@
       "description": "🌊 Interactive CLI tool to update GitHub Actions to latest versions with SHA pinning",
       "discussions": 0,
       "forks": 18,
-      "issues": 2,
+      "issues": 3,
       "languages": [
         "TypeScript"
       ],
       "name": "actions-up",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 636,
+      "stars": 637,
       "url": "https://github.com/azat-io/actions-up"
     },
     {
@@ -105,7 +105,7 @@
       "name": "eslint-plugin-de-morgan",
       "owner": "azat-io",
       "prs": 0,
-      "stars": 315,
+      "stars": 316,
       "url": "https://github.com/azat-io/eslint-plugin-de-morgan"
     }
   ]
