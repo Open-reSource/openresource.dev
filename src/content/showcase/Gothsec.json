@@ -26,18 +26,18 @@
       "contributors": 2,
       "description": "Portfolio template built with Astro, React, TypeScript and TailwindCSS. (Handcrafted with Figma)",
       "discussions": 0,
-      "forks": 141,
+      "forks": 143,
       "issues": 1,
       "languages": [
         "Astro",
         "TypeScript",
         "JavaScript"
       ],
-      "name": "Astro-portfolio",
+      "name": "dark-minimal",
       "owner": "Gothsec",
       "prs": 0,
-      "stars": 253,
-      "url": "https://github.com/Gothsec/Astro-portfolio"
+      "stars": 257,
+      "url": "https://github.com/Gothsec/dark-minimal"
     }
   ]
 }

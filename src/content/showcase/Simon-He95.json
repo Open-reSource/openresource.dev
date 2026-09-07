@@ -8,7 +8,7 @@
       "description": "Multi-framework streaming Markdown renderers for AI apps: Vue/Nuxt, React/Next.js, Svelte, and Angular, with Mermaid, KaTeX, stream-diffs code blocks, safe HTML, and low-jitter updates.",
       "discussions": 26,
       "forks": 181,
-      "issues": 1,
+      "issues": 0,
       "languages": [
         "Vue",
         "JavaScript",
@@ -18,8 +18,8 @@
       ],
       "name": "markstream-vue",
       "owner": "Simon-He95",
-      "prs": 1,
-      "stars": 2977,
+      "prs": 0,
+      "stars": 2993,
       "url": "https://github.com/Simon-He95/markstream-vue"
     }
   ]
