@@ -18,15 +18,15 @@
   "dependencies": {
     "@astrojs/check": "^0.9.10",
     "@astrojs/markdown-remark": "^7.2.4",
-    "@astrojs/starlight": "^0.41.7",
-    "@astrojs/vercel": "^11.0.7",
+    "@astrojs/starlight": "^0.41.10",
+    "@astrojs/vercel": "^11.0.8",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^7.2.4"
+    "astro": "^7.2.9"
   },
   "devDependencies": {
     "@actions/core": "^3.0.1",
     "@faker-js/faker": "^10.6.0",
-    "@octokit/graphql": "^9.0.4",
+    "@octokit/graphql": "^9.0.5",
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
     "astro-og-canvas": "^0.13.0",
@@ -40,8 +40,8 @@
     "starlight-blog": "^0.29.0",
     "starlight-links-validator": "^0.25.3",
     "starlight-showcases": "^0.3.2",
-    "tsx": "^4.23.12",
-    "vercel": "^59.5.0",
+    "tsx": "^4.23.13",
+    "vercel": "^59.10.0",
     "vitest": "^4.1.11"
   }
 }
