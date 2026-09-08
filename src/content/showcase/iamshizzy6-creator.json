@@ -1,0 +1,25 @@
+{
+  "author": "iamshizzy6-creator",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/25292366?v=4&s=50",
+      "contributors": 1,
+      "description": "🏙️ Public GitHub repos become a walkable 3D town. Traffic shapes the buildings, residents live there, and Gitber drives you to the right project.",
+      "discussions": 0,
+      "forks": 4,
+      "issues": 0,
+      "languages": [
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Shell"
+      ],
+      "name": "Repolis",
+      "owner": "hyeonsangjeon",
+      "prs": 0,
+      "stars": 24,
+      "url": "https://github.com/hyeonsangjeon/Repolis"
+    }
+  ]
+}

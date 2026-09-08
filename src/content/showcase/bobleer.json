@@ -4,28 +4,28 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/29406332?u=5d7bd60dac6c135d37b593d602ea926ccdc1df35&v=4&s=50",
-      "contributors": 34,
-      "description": "BitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
+      "contributors": 35,
+      "description": "OpenBitFun combines a high-performance agent runtime written in Rust with a polished desktop application. It pairs the depth of a Code Agent with open, general-purpose capabilities for work beyond software development.",
       "discussions": 8,
-      "forks": 213,
-      "issues": 126,
+      "forks": 220,
+      "issues": 77,
       "languages": [
         "Rust",
         "TypeScript",
         "JavaScript",
         "SCSS",
+        "Kotlin",
         "CSS",
+        "Swift",
         "Python",
         "HTML",
-        "Shell",
-        "C",
-        "PowerShell"
+        "Shell"
       ],
-      "name": "BitFun",
+      "name": "OpenBitFun",
       "owner": "GCWing",
-      "prs": 64,
-      "stars": 1879,
-      "url": "https://github.com/GCWing/BitFun"
+      "prs": 4,
+      "stars": 2095,
+      "url": "https://github.com/GCWing/OpenBitFun"
     }
   ]
 }
