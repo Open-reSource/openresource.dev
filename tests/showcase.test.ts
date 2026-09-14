@@ -93,6 +93,25 @@ test('should not add links that are neither GitHub nor GitLab links to the showc
 	expect(showcase_1?.links).toMatchObject([{ url: author_1_links[1], type: 'github' }]);
 });
 
+test('should skip non-absolute hrefs without throwing', async () => {
+	const author_1 = faker.internet.username();
+	const author_1_links = ['#', getTestGitHubProfileLink()];
+	const author_2 = faker.internet.username();
+	const author_2_links = ['#'];
+
+	const scraper = getTestScrapper([
+		{ author: author_1, links: author_1_links },
+		{ author: author_2, links: author_2_links },
+	]);
+
+	const showcases = await scraper.run();
+
+	// author_2 only had an in-page anchor link so they should not appear in the showcase at all.
+	expect(showcases).toHaveLength(1);
+	expect(showcases.at(0)?.author).toBe(author_1);
+	expect(showcases.at(0)?.links).toMatchObject([{ url: author_1_links[1], type: 'github' }]);
+});
+
 test('should identify GitHub links', async () => {
 	const link = getTestGitHubLink('user');
 
