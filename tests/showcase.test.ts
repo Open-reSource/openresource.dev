@@ -43,11 +43,11 @@ afterAll(() => {
 
 test('should collect links', async () => {
 	const author_1 = faker.internet.username();
-	const author_1_links = [getTestUnknownLink(), getTestUnknownLink()];
+	const author_1_links = [getTestGitHubProfileLink(), getTestGitHubProfileLink()];
 	const author_2 = faker.internet.username();
 	const author_2_links: string[] = [];
 	const author_3 = faker.internet.username();
-	const author_3_links = [getTestUnknownLink()];
+	const author_3_links = [getTestGitHubProfileLink()];
 
 	const scraper = getTestScrapper([
 		{ author: author_1, links: author_1_links },
@@ -64,11 +64,33 @@ test('should collect links', async () => {
 
 	expect(showcase_1?.author).toBe(author_1);
 	expect(showcase_1?.links).toHaveLength(2);
-	expect(showcase_1?.links).toMatchObject(author_1_links.map((link) => ({ url: link, type: 'unknown' })));
+	expect(showcase_1?.links).toMatchObject(author_1_links.map((link) => ({ url: link, type: 'github' })));
 
 	expect(showcase_2?.author).toBe(author_3);
 	expect(showcase_2?.links).toHaveLength(1);
-	expect(showcase_2?.links).toMatchObject(author_3_links.map((link) => ({ url: link, type: 'unknown' })));
+	expect(showcase_2?.links).toMatchObject(author_3_links.map((link) => ({ url: link, type: 'github' })));
+});
+
+test('should not add links that are neither GitHub nor GitLab links to the showcase', async () => {
+	const author_1 = faker.internet.username();
+	const author_1_links = [getTestUnsupportedLink(), getTestGitHubProfileLink(), getTestUnsupportedLink()];
+	const author_2 = faker.internet.username();
+	const author_2_links = [getTestUnsupportedLink()];
+
+	const scraper = getTestScrapper([
+		{ author: author_1, links: author_1_links },
+		{ author: author_2, links: author_2_links },
+	]);
+
+	const showcases = await scraper.run();
+
+	// author_2 only had an unsupported link so they should not appear in the showcase at all.
+	expect(showcases).toHaveLength(1);
+
+	const showcase_1 = showcases.at(0);
+
+	expect(showcase_1?.author).toBe(author_1);
+	expect(showcase_1?.links).toMatchObject([{ url: author_1_links[1], type: 'github' }]);
 });
 
 test('should identify GitHub links', async () => {
@@ -104,14 +126,14 @@ test('should skip GitHub repo links when repository is not found', async () => {
 	expect(showcases.at(0)?.links.at(0)).toMatchObject({ type: 'github_repo', url: validRepoLink });
 });
 
-test('should handle GitLab links as unknown', async () => {
+test('should identify GitLab links', async () => {
 	const link = getTestGitLabLink('user');
 
 	const scraper = getTestScrapper([[link]]);
 
 	const showcases = await scraper.run();
 
-	expect(showcases.at(0)?.links).toMatchObject([{ url: link, type: 'unknown' }]);
+	expect(showcases.at(0)?.links).toMatchObject([{ url: link, type: 'gitlab' }]);
 });
 
 test('should sanitize GitHub repo links', async () => {
@@ -130,31 +152,31 @@ test('should sanitize GitHub repo links', async () => {
 
 test('should sanitize URLs', async () => {
 	const queryString = `?utm_source=test_source&utm_campaign=test-campaign&utm_medium=test_medium#ads`;
-	const unknownLink = getTestUnknownLink();
 	const ghLink = getTestGitHubLink('user');
 	const ghRepoLink = getTestGitHubLink('user', 'repo');
+	const glLink = getTestGitLabLink('user');
 
 	const scraper = getTestScrapper([
-		[`${unknownLink}${queryString}`, `${ghLink}${queryString}`, `${ghRepoLink}${queryString}`],
+		[`${ghLink}${queryString}`, `${ghRepoLink}${queryString}`, `${glLink}${queryString}`],
 	]);
 
 	const showcases = await scraper.run();
 
 	const links = showcases.at(0)?.links;
 
-	expect(links?.at(0)?.url).toBe(unknownLink);
-	expect(links?.at(1)?.url).toBe(ghLink);
-	expect(links?.at(2)?.url).toBe(ghRepoLink);
+	expect(links?.at(0)?.url).toBe(ghLink);
+	expect(links?.at(1)?.url).toBe(ghRepoLink);
+	expect(links?.at(2)?.url).toBe(glLink);
 });
 
 test('should collect links from the same user spread across multiple comments', async () => {
 	const author = faker.internet.username();
-	const author_comment_1_links = [getTestUnknownLink()];
-	const author_comment_2_links = [getTestUnknownLink(), getTestUnknownLink()];
+	const author_comment_1_links = [getTestGitHubProfileLink()];
+	const author_comment_2_links = [getTestGitHubProfileLink(), getTestGitHubProfileLink()];
 
 	const scraper = getTestScrapper([
 		{ author: author, links: author_comment_1_links },
-		[getTestUnknownLink()],
+		[getTestGitHubProfileLink()],
 		{ author: author, links: author_comment_2_links },
 	]);
 
@@ -163,23 +185,23 @@ test('should collect links from the same user spread across multiple comments', 
 	expect(showcases.at(0)?.author).toBe(author);
 	expect(showcases.at(0)?.links).toHaveLength(3);
 	expect(showcases.at(0)?.links).toMatchObject(
-		[...author_comment_1_links, ...author_comment_2_links].map((link) => ({ url: link, type: 'unknown' }))
+		[...author_comment_1_links, ...author_comment_2_links].map((link) => ({ url: link, type: 'github' }))
 	);
 });
 
 test('should dedupe identical links from the same user', async () => {
-	const link = getTestUnknownLink();
+	const link = getTestGitHubProfileLink();
 
 	const scraper = getTestScrapper([[link, link]]);
 
 	const showcases = await scraper.run();
 
 	expect(showcases.at(0)?.links).toHaveLength(1);
-	expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: 'unknown' });
+	expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: 'github' });
 });
 
 test('should dedupe identical links from multiple users', async () => {
-	const link = getTestUnknownLink();
+	const link = getTestGitHubProfileLink();
 
 	// The second comment from a different user should be ignored as it only contains a duplicate link.
 	let scraper = getTestScrapper([[link], [link]]);
@@ -189,24 +211,24 @@ test('should dedupe identical links from multiple users', async () => {
 	expect(showcases).toHaveLength(1);
 
 	expect(showcases.at(0)?.links).toHaveLength(1);
-	expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: 'unknown' });
+	expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: 'github' });
 
 	// The second comment from a different user should only contain a non-duplicate link.
-	scraper = getTestScrapper([[link], [getTestUnknownLink(), link]]);
+	scraper = getTestScrapper([[link], [getTestGitHubProfileLink(), link]]);
 
 	showcases = await scraper.run();
 
 	expect(showcases).toHaveLength(2);
 
 	expect(showcases.at(0)?.links).toHaveLength(1);
-	expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: 'unknown' });
+	expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: 'github' });
 
 	expect(showcases.at(1)?.links).toHaveLength(1);
-	expect(showcases.at(1)?.links.at(0)).not.toMatchObject({ url: link, type: 'unknown' });
+	expect(showcases.at(1)?.links.at(0)).not.toMatchObject({ url: link, type: 'github' });
 });
 
 test('should delete the existing showcase content collection before saving showcases to handle deleted comments', async () => {
-	const scraper = getTestScrapper([[getTestUnknownLink(), getTestUnknownLink()]]);
+	const scraper = getTestScrapper([[getTestGitHubProfileLink(), getTestGitHubProfileLink()]]);
 
 	const rmMock = vi.mocked(fs.rm).mockReset();
 	const mkdirMock = vi.mocked(fs.mkdir).mockReset();
@@ -223,9 +245,9 @@ test('should delete the existing showcase content collection before saving showc
 
 test('should save a showcase file per user', async () => {
 	const author_1 = faker.internet.username();
-	const author_1_links = [getTestUnknownLink(), getTestUnknownLink()];
+	const author_1_links = [getTestGitHubProfileLink(), getTestGitHubProfileLink()];
 	const author_2 = faker.internet.username();
-	const author_2_links = [getTestUnknownLink()];
+	const author_2_links = [getTestGitHubProfileLink()];
 
 	const scraper = getTestScrapper([
 		{ author: author_1, links: author_1_links },
@@ -453,12 +475,18 @@ function getTestRepoStatCount() {
 	return faker.number.int(10_000);
 }
 
-function getTestUnknownLink() {
+/** Returns a URL that isn't a GitHub or GitLab link, e.g. to test that it's skipped by the scraper. */
+function getTestUnsupportedLink() {
 	return faker.internet.url({ appendSlash: true });
 }
 
 function getTestGitHubLink(owner: string, repo?: string) {
 	return `https://github.com/${owner}${repo ? `/${repo}` : ''}`;
+}
+
+/** Returns a GitHub profile link, i.e. one that doesn't require mocking a repository GraphQL query. */
+function getTestGitHubProfileLink() {
+	return getTestGitHubLink(faker.internet.username());
 }
 
 function getTestGitLabLink(owner: string, repo?: string) {

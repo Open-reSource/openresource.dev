@@ -4,13 +4,13 @@ import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { blogSchema } from 'starlight-blog/schema';
 
-const showcaseUnknownLinkSchema = z.object({
-	type: z.literal('unknown'),
+const showcaseGitHubLinkSchema = z.object({
+	type: z.literal('github'),
 	url: z.url(),
 });
 
-const showcaseGitHubLinkSchema = z.object({
-	type: z.literal('github'),
+const showcaseGitLabLinkSchema = z.object({
+	type: z.literal('gitlab'),
 	url: z.url(),
 });
 
@@ -31,9 +31,9 @@ const showcaseGitHubRepoLinkSchema = z.object({
 });
 
 const showcaseLinkSchema = z.discriminatedUnion('type', [
-	showcaseUnknownLinkSchema,
 	showcaseGitHubLinkSchema,
 	showcaseGitHubRepoLinkSchema,
+	showcaseGitLabLinkSchema,
 ]);
 
 const showcaseSchema = z.object({
@@ -58,6 +58,6 @@ export const collections = {
 
 export type Showcase = z.infer<typeof showcaseSchema>;
 export type ShowcaseLink = z.infer<typeof showcaseLinkSchema>;
-export type ShowcaseUnknownLink = z.infer<typeof showcaseUnknownLinkSchema>;
 export type ShowcaseGitHubLink = z.infer<typeof showcaseGitHubLinkSchema>;
 export type ShowcaseGitHubRepoLink = z.infer<typeof showcaseGitHubRepoLinkSchema>;
+export type ShowcaseGitLabLink = z.infer<typeof showcaseGitLabLinkSchema>;

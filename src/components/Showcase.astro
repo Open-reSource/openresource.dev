@@ -35,7 +35,7 @@ function shuffleLinks(links: ShowcaseLink[]): ShowcaseLink[] {
 			} else if (link.type === 'github') {
 				return <LinkCard href={link.url} title={link.url} description="Visit this GitHub link" />;
 			}
-			return <LinkCard href={link.url} title={link.url} description="Visit this link" />;
+			return <LinkCard href={link.url} title={link.url} description="Visit this GitLab link" />;
 		})
 	}
 </CardGrid>
