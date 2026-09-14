@@ -11,6 +11,7 @@
       "issues": 0,
       "languages": [
         "C",
+        "C++",
         "CMake"
       ],
       "name": "windowsmenu",

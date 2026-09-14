@@ -1,0 +1,30 @@
+{
+  "author": "sridharkalaibala",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/4673961?v=4&s=50",
+      "contributors": 11,
+      "description": "Free offline-first open source POS and billing software for retail and restaurants. AGPL-3.0-only source; packages include separately licensed components.",
+      "discussions": 4,
+      "forks": 9,
+      "issues": 399,
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "SCSS",
+        "Shell",
+        "PowerShell",
+        "Python",
+        "Batchfile",
+        "PHP"
+      ],
+      "name": "POS",
+      "owner": "Posnic",
+      "prs": 2,
+      "stars": 4,
+      "url": "https://github.com/Posnic/POS"
+    }
+  ]
+}
