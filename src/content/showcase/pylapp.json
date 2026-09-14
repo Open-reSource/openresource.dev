@@ -30,7 +30,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 196,
+      "contributors": 197,
       "description": "A toolbox to help developers and open source referents to not waste their time with manual and boring tasks. Provides simple and light tools to make investigations in source code to look for hot data. Provides also primitives to manage GitHub and GitLab organizations.",
       "discussions": 4,
       "forks": 10,
@@ -43,18 +43,18 @@
       ],
       "name": "floss-toolbox",
       "owner": "Orange-OpenSource",
-      "prs": 12,
+      "prs": 13,
       "stars": 27,
       "url": "https://github.com/Orange-OpenSource/floss-toolbox"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 203,
+      "contributors": 204,
       "description": "Escape game qui a pour objectif de vous offrir une expérience immersive, vous sensibilisant plus particulièrement aux défis auxquels sont confrontés les personnes en situation de handicap numérique",
       "discussions": 0,
       "forks": 5,
-      "issues": 9,
+      "issues": 10,
       "languages": [
         "HTML",
         "JavaScript",
@@ -69,7 +69,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 208,
+      "contributors": 209,
       "description": "Application web qui est une liste de questions / réponses afin de faciliter les audits d’accessibilité entre autre. Tout est prévu pour rajouter / modifier la liste de questions pour l’adapter à ses besoins (performance web, qualité front…). ",
       "discussions": 0,
       "forks": 7,
@@ -88,7 +88,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 195,
+      "contributors": 196,
       "description": "Solution to facilitate the writing and execution of E2E tests understandable by any human",
       "discussions": 0,
       "forks": 0,
@@ -113,7 +113,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 222,
+      "contributors": 223,
       "description": "Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples",
       "discussions": 0,
       "forks": 25,
@@ -133,11 +133,11 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1506386?v=4&s=50",
-      "contributors": 284,
+      "contributors": 285,
       "description": "Hurl, run and test HTTP requests with plain text.",
       "discussions": 97,
-      "forks": 743,
-      "issues": 199,
+      "forks": 744,
+      "issues": 195,
       "languages": [
         "Rust",
         "Hurl",
@@ -152,7 +152,7 @@
       "name": "hurl",
       "owner": "Orange-OpenSource",
       "prs": 6,
-      "stars": 19190,
+      "stars": 19194,
       "url": "https://github.com/Orange-OpenSource/hurl"
     }
   ]

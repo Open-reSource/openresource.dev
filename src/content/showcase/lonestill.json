@@ -4,21 +4,22 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/254313678?u=7aae530d7420980dcb7aa767c5e40bffc3d649e8&v=4&s=50",
-      "contributors": 1,
+      "contributors": 2,
       "description": "Open-source desktop Minecraft launcher for Windows and Linux with isolated instances, Modrinth modpacks, automatic Java, crash diagnostics, and safe backups.",
       "discussions": 2,
-      "forks": 1,
-      "issues": 8,
+      "forks": 3,
+      "issues": 9,
       "languages": [
         "TypeScript",
         "JavaScript",
         "CSS",
+        "Java",
         "HTML"
       ],
       "name": "onyx-launcher",
       "owner": "lonestill",
       "prs": 1,
-      "stars": 2,
+      "stars": 7,
       "url": "https://github.com/lonestill/onyx-launcher"
     }
   ]
