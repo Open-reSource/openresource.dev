@@ -108,12 +108,14 @@ export class ShowcaseScraper {
 							type: 'github',
 							url: this.#sanitizeUrl(href),
 						});
-					} else {
-						console.info(`Adding ${href}...`);
+					} else if (ghReference?.hostname === 'gitlab.com') {
+						console.info(`Adding gitlab link ${href}...`);
 						links.push({
-							type: 'unknown',
+							type: 'gitlab',
 							url: this.#sanitizeUrl(href),
 						});
+					} else {
+						console.info(`Skipping unsupported link ${href}...`);
 					}
 				}
 

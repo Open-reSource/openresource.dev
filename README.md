@@ -42,18 +42,18 @@
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                                                                           |
-| :------------------------ | :----------------------------------------------------------------------------------------------- |
-| `npm install`             | Installs dependencies                                                                            |
-| `npm run dev`             | Run the development server at `localhost:4321`                                                   |
-| `npm run build`           | Build your production site                                                                       |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`                                                 |
-| `npm run astro -- --help` | Get help using the Astro CLI                                                                     |
-| `npm run vercel`          | Run in the same conditions as Vercel                                                             |
-| `npm run update:showcase` | Run the showcase script to gather links from https://github.com/orgs/Open-reSource/discussions/3 |
-| `npm run test`            | Run the tests                                                                                    |
-| `npm run prettier:read`   | Run Prettier to check the code style                                                             |
-| `npm run prettier:write`  | Run Prettier to fix the code style                                                               |
+| Command                   | Action                                                                                                                                       |
+| :------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm install`             | Installs dependencies                                                                                                                        |
+| `npm run dev`             | Run the development server at `localhost:4321`                                                                                               |
+| `npm run build`           | Build your production site                                                                                                                   |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`                                                                                             |
+| `npm run astro -- --help` | Get help using the Astro CLI                                                                                                                 |
+| `npm run vercel`          | Run in the same conditions as Vercel                                                                                                         |
+| `npm run update:showcase` | Run the showcase script to gather GitHub and GitLab links from https://github.com/orgs/Open-reSource/discussions/3 (other links are ignored) |
+| `npm run test`            | Run the tests                                                                                                                                |
+| `npm run prettier:read`   | Run Prettier to check the code style                                                                                                         |
+| `npm run prettier:write`  | Run Prettier to fix the code style                                                                                                           |
 
 ## Bugs and Feature Requests
 
