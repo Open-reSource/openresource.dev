@@ -270,13 +270,19 @@ export class ShowcaseScraper {
 	}
 
 	/**
-	 * Filter out URLs we already added or that are excluded by the list of blocked origins.
+	 * Filter out URLs we already added, that are excluded by the list of blocked origins,
+	 * or that aren't valid absolute URLs (e.g. in-page anchors like `#`, which linkedom
+	 * doesn't resolve against a base URL).
 	 * @param hrefs Array of URLs as returned by `#extractHrefs`.
 	 */
 	#filterHrefs(hrefs: string[]): string[] {
 		return hrefs.filter((href) => {
-			const { origin } = new URL(href);
-			return !this.#blocklist.has(origin);
+			try {
+				const { origin } = new URL(href);
+				return !this.#blocklist.has(origin);
+			} catch {
+				return false;
+			}
 		});
 	}
 
