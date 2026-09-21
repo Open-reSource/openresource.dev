@@ -64,7 +64,9 @@ if (isArticle) {
 // Please note that "og:type" is forced to "article" by Starlight and can't be changed.
 ---
 
-<Default {...Astro.props}><slot /></Default>
+<Default {...Astro.props}>
+	<slot />
+</Default>
 
 <meta name="author" content="Open {re}Source" />
 <meta name="fediverse:creator" content="@openresource@fosstodon.org" />
@@ -79,4 +81,4 @@ if (isArticle) {
 
 <link href="https://fosstodon.org/@openresource" rel="me" />
 
-{articleSchema && <script is:inline type="application/ld+json" set:html={articleSchema} />}
+{articleSchema && <script is:inline type="application/ld+json" set:html={articleSchema}></script>}
