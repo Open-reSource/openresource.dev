@@ -12,14 +12,11 @@ guideReadingTime = Math.ceil(guideReadingTime);
 ---
 
 <p class="sl-flex">
-	<Icon name="seti:clock" /> This {slug === 'guide' || slug === 'guide/' ? 'guide' : 'module'} will take you approximately
-
-	{
-		guideReadingTime >= 60
-			? `${Math.floor(guideReadingTime / 60)} h ${Math.ceil(guideReadingTime % 60)} min`
-			: `${guideReadingTime} min`
-	}
-
+	<Icon name="seti:clock" /> This {slug === 'guide' || slug === 'guide/' ? 'guide' : 'module'} will take you
+	approximately
+	{guideReadingTime >= 60
+		? `${Math.floor(guideReadingTime / 60)} h ${Math.ceil(guideReadingTime % 60)} min`
+		: `${guideReadingTime} min`}
 	to read.
 </p>
 

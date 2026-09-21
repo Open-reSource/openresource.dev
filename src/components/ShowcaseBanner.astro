@@ -7,7 +7,9 @@ import Button from './Button.astro';
 
 <section class="showcase-banner">
 	<Card title="Showcase your projects">
-		<p><strong>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong></p>
+		<p>
+			<strong>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong>
+		</p>
 		<p style="margin-top: 0px">
 			Submit your open-source project(s), profiles or websites to the showcase and let the community discover your work.
 		</p>
@@ -16,14 +18,12 @@ import Button from './Button.astro';
 				Submit your project(s)
 				<Icon name="external" />
 			</Button>
-			{
-				showProjectsButton && (
-					<Button class="action action-secondary action-minimal" href="/showcase">
-						Show projects
-						<Icon name="right-arrow" />
-					</Button>
-				)
-			}
+			{showProjectsButton && (
+				<Button class="action action-secondary action-minimal" href="/showcase">
+					Show projects
+					<Icon name="right-arrow" />
+				</Button>
+			)}
 		</div>
 	</Card>
 </section>

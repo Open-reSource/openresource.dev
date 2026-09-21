@@ -10,24 +10,24 @@ const displayReadingTime = isGuide && date;
 const displayDate = date && isGuide;
 ---
 
-<Default {...Astro.props}><slot /></Default>
+<Default {...Astro.props}>
+	<slot />
+</Default>
 
-{
-	(displayDate || displayReadingTime) && (
-		<div class="sl-text-sm sl-flex">
-			{displayDate && (
-				<p>
-					<time datetime={date.toISOString()}>
-						{date.toLocaleDateString(lang, { dateStyle: 'medium', timeZone: 'UTC' })}
-					</time>
-				</p>
-			)}
-			{displayReadingTime && (
-				<span class="reading-time">&nbsp;-&nbsp;{Math.ceil(readingTime(entry.body || '').minutes)} min read</span>
-			)}
-		</div>
-	)
-}
+{(displayDate || displayReadingTime) && (
+	<div class="sl-text-sm sl-flex">
+		{displayDate && (
+			<p>
+				<time datetime={date.toISOString()}>
+					{date.toLocaleDateString(lang, { dateStyle: 'medium', timeZone: 'UTC' })}
+				</time>
+			</p>
+		)}
+		{displayReadingTime && (
+			<span class="reading-time">&nbsp;-&nbsp;{Math.ceil(readingTime(entry.body || '').minutes)} min read</span>
+		)}
+	</div>
+)}
 
 <style>
 	.reading-time {
