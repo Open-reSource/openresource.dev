@@ -11,20 +11,20 @@
       "issues": 33,
       "languages": [
         "TypeScript",
-        "Rust",
-        "Java",
         "JavaScript",
-        "C#",
-        "Ruby",
-        "Python",
-        "Go",
+        "Rust",
         "CSS",
-        "Makefile"
+        "HTML",
+        "MDX",
+        "Shell",
+        "Vue",
+        "TypeSpec",
+        "Astro"
       ],
       "name": "xyd",
       "owner": "livesession",
       "prs": 3,
-      "stars": 113,
+      "stars": 114,
       "url": "https://github.com/livesession/xyd"
     }
   ]

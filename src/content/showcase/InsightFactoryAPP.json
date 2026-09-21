@@ -1,0 +1,25 @@
+{
+  "author": "InsightFactoryAPP",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/318831521?v=4&s=50",
+      "contributors": 3,
+      "description": "YYLO (why-lo): AI coding-agent orchestration CLI with equivalent yylo and yy launchers.",
+      "discussions": 0,
+      "forks": 6,
+      "issues": 0,
+      "languages": [
+        "Python",
+        "TypeScript",
+        "Shell",
+        "JavaScript"
+      ],
+      "name": "yylo",
+      "owner": "yylo-dev",
+      "prs": 10,
+      "stars": 60,
+      "url": "https://github.com/yylo-dev/yylo"
+    }
+  ]
+}

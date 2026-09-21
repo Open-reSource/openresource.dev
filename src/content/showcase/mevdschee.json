@@ -7,7 +7,7 @@
       "contributors": 39,
       "description": "Single file PHP script that adds a REST API to a SQL database",
       "discussions": 0,
-      "forks": 1028,
+      "forks": 1027,
       "issues": 82,
       "languages": [
         "PHP",
@@ -17,8 +17,26 @@
       "name": "php-crud-api",
       "owner": "mevdschee",
       "prs": 3,
-      "stars": 3739,
+      "stars": 3736,
       "url": "https://github.com/mevdschee/php-crud-api"
+    },
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1288217?u=1b6fcba110f1904f08f4c29bac828a500bc52f52&v=4&s=50",
+      "contributors": 2,
+      "description": "Minesweeper game in Go (cross-platform, built with Fyne) ",
+      "discussions": 0,
+      "forks": 2,
+      "issues": 0,
+      "languages": [
+        "Go",
+        "Shell"
+      ],
+      "name": "fyne-mines",
+      "owner": "mevdschee",
+      "prs": 0,
+      "stars": 40,
+      "url": "https://github.com/mevdschee/fyne-mines"
     }
   ]
 }
