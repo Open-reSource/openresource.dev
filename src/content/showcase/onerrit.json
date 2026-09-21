@@ -5,9 +5,9 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/171573688?v=4&s=50",
       "contributors": 8,
-      "description": "tirreno is a security framework. Event tracking, threat detection, and risk scoring for any product.",
+      "description": "tirreno is a security framework. Detect cyberfraud, account takeovers, and business logic abuse inside your product.",
       "discussions": 0,
-      "forks": 179,
+      "forks": 180,
       "issues": 9,
       "languages": [
         "PHP",
@@ -19,7 +19,7 @@
       "name": "tirreno",
       "owner": "tirrenotechnologies",
       "prs": 0,
-      "stars": 1512,
+      "stars": 1520,
       "url": "https://github.com/tirrenotechnologies/tirreno"
     }
   ]
