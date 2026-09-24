@@ -1,0 +1,131 @@
+---
+export const prerender = true;
+
+import { getCollection } from 'astro:content';
+import {
+	Button,
+	Hero,
+	PostCard,
+	ProjectCard,
+	ProjectGrid,
+	Section,
+	SectionHeader,
+	SiteLayout,
+} from '@deramond.dev/astro';
+import { isoDate, postHref, readingTime, sortPosts } from '@deramond.dev/astro/blog';
+import ShowcaseBanner from '../components/ShowcaseBanner.astro';
+import hero from '../brand/hero.svg';
+
+const modules = (await getCollection('docs'))
+	.filter((entry) => /^guide\/[^/]+$/.test(entry.id))
+	.sort((a, b) => a.id.localeCompare(b.id));
+const order = [
+	'what-is-open-source',
+	'getting-started-with-open-source',
+	'contributing-to-open-source-projects',
+	'creating-your-own-open-source-project',
+	'maintaining-open-source-projects',
+	'promoting-open-source-projects',
+	'financing-open-source-projects',
+];
+modules.sort((a, b) => order.indexOf(a.id.slice(6)) - order.indexOf(b.id.slice(6)));
+
+const articles = sortPosts(await getCollection('articles'), { production: import.meta.env.PROD }).slice(0, 3);
+---
+
+<SiteLayout
+	title="Open {re}Source"
+	description="Join open source, learn to create, manage, and contribute to projects with Open {re}Source. Make a difference today by sharing and collaborating."
+>
+	<Hero
+		title="Your platform for sharing and discovering the open source world"
+		lead="Understand how it works, and learn how to create, manage, and contribute to open source projects. Join the open source community today and start making a difference."
+		image={hero}
+	>
+		<Fragment slot="actions">
+			<Button variant="gold" href="/guide/">
+				Follow the guide
+			</Button>
+			<Button href="/articles/">Read the articles</Button>
+			<Button variant="quiet" href="https://github.com/Open-reSource/openresource.dev">
+				GitHub
+			</Button>
+		</Fragment>
+	</Hero>
+
+	<Section>
+		<SectionHeader num="01" label="Guide" title="Seven modules, from the first contribution to funding" />
+		<ProjectGrid>
+			{modules.map((entry, i) => (
+				<ProjectCard
+					num={String(i + 1).padStart(2, '0')}
+					name={entry.data.title}
+					description={entry.data.description ?? ''}
+					href={`/${entry.id}/`}
+				/>
+			))}
+		</ProjectGrid>
+	</Section>
+
+	<Section>
+		<SectionHeader num="02" label="Articles" title="Latest articles" />
+		<div class="posts">
+			{articles.map((post) => (
+				<PostCard
+					href={postHref('/', 'articles', post.id)}
+					title={post.data.title}
+					description={post.data.description}
+					date={isoDate(post.data.date)}
+					minutes={readingTime(post.body)}
+					tags={post.data.tags}
+				/>
+			))}
+		</div>
+		<div class="more">
+			<Button variant="quiet" href="/articles/">
+				All articles
+			</Button>
+		</div>
+	</Section>
+
+	<Section>
+		<SectionHeader num="03" label="Showcase" title="What the community builds" />
+		<ShowcaseBanner showProjectsButton />
+	</Section>
+
+	<Section>
+		<SectionHeader
+			num="04"
+			label="Support us"
+			title="Keep Open {re}Source going"
+			lead="Help us continue to build and maintain this project by becoming a sponsor or dropping a star on our GitHub repository."
+		/>
+		<div class="actions">
+			<Button href="https://github.com/sponsors/Open-reSource">Become a sponsor</Button>
+			<Button variant="quiet" href="https://github.com/Open-reSource/openresource.dev">
+				Star on GitHub
+			</Button>
+		</div>
+	</Section>
+</SiteLayout>
+
+<style>
+	.posts {
+		display: grid;
+		gap: var(--space-5);
+	}
+
+	@media (min-width: 980px) {
+		.posts {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	.more,
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-3);
+		margin-top: var(--space-7);
+	}
+</style>

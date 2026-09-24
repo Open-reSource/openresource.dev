@@ -1,0 +1,23 @@
+/*
+ * Open {re}Source's own rules, on top of @deramond.dev/astro (loaded after it on every page).
+ * Brand values come from the tokens; nothing here is a colour or a size of its own.
+ */
+
+/* The opening paragraph of a page or an article. */
+.lead {
+	font: var(--type-lead);
+	color: var(--color-fg);
+}
+
+.author-picture img {
+	display: block;
+	width: var(--space-18);
+	height: auto;
+	aspect-ratio: 1;
+	border-radius: var(--radius-pill);
+	border: var(--stroke-ui) solid var(--color-primary-dim);
+}
+
+.author-actions {
+	margin-block: var(--space-7) var(--space-5);
+}

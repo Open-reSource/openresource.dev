@@ -1,5 +1,5 @@
 ---
-import { ShowcaseProfile } from 'starlight-showcases';
+import ShowcaseEntry from './ShowcaseEntry.astro';
 
 export interface Props {
 	description: string;
@@ -10,16 +10,19 @@ export interface Props {
 
 const { description, env, img, repo } = Astro.props;
 
-const picture = img.includes('https://') ? img : `https://avatars.githubusercontent.com/u/${img}?s=50`;
+const picture = img.includes('https://') ? img : `https://avatars.githubusercontent.com/u/${img}?s=96`;
 ---
 
-<ShowcaseProfile
-	entries={[
-		{
-			name: `<span style="font-weight: 400">${env}/</span><br/>${repo}`,
-			picture,
-			href: `https://github.com/${env}/${repo}`,
-			description,
-		},
-	]}
+<ShowcaseEntry
+	name={`<span class="owner">${env}/</span><br/>${repo}`}
+	picture={picture}
+	href={`https://github.com/${env}/${repo}`}
+	description={description}
 />
+
+<style>
+	:global(.owner) {
+		font-weight: var(--font-weight-regular);
+		color: var(--color-muted);
+	}
+</style>

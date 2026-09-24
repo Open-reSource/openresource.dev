@@ -1,31 +1,32 @@
 ---
-import readingTime from 'reading-time';
 import { getCollection } from 'astro:content';
-import { Icon } from '@astrojs/starlight/components';
+import { readingTime } from '@deramond.dev/astro/blog';
 
-const slug = Astro.url.pathname.slice(1);
+// Reading time of the guide, or of one module: every page under the current path.
+const slug = Astro.url.pathname.replace(/^\/|\/$/g, '');
 
 const docs = await getCollection('docs');
-let guideReadingTime = 0;
-docs.filter((doc) => doc.id.startsWith(slug)).map((doc) => (guideReadingTime += readingTime(doc.body || '').minutes));
-guideReadingTime = Math.ceil(guideReadingTime);
+const guideReadingTime = docs
+	.filter((doc) => doc.id !== slug && doc.id.startsWith(`${slug}/`))
+	.reduce((total, doc) => total + readingTime(doc.body), 0);
+const duration =
+	guideReadingTime >= 60
+		? `${Math.floor(guideReadingTime / 60)} h ${Math.ceil(guideReadingTime % 60)} min`
+		: `${guideReadingTime} min`;
 ---
 
-<p class="sl-flex">
-	<Icon name="seti:clock" /> This {slug === 'guide' || slug === 'guide/' ? 'guide' : 'module'} will take you
-	approximately
-	{guideReadingTime >= 60
-		? `${Math.floor(guideReadingTime / 60)} h ${Math.ceil(guideReadingTime % 60)} min`
-		: `${guideReadingTime} min`}
-	to read.
+<p class="reading-time">
+	This {slug === 'guide' ? 'guide' : 'module'} will take you approximately <b>{duration}</b> to read.
 </p>
 
 <style>
-	svg {
-		margin-right: 0.5rem;
+	.reading-time {
+		font: var(--type-mono);
+		color: var(--color-muted);
 	}
 
-	p {
-		align-items: center;
+	b {
+		color: var(--color-fg);
+		font-weight: var(--font-weight-medium);
 	}
 </style>

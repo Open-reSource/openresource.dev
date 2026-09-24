@@ -1,0 +1,62 @@
+---
+// One showcase entry: avatar, name and description, the whole card a link.
+export interface Props {
+	href: string;
+	/** HTML: a repository shows `owner/` above its name. */
+	name: string;
+	picture?: string;
+	description: string;
+}
+
+const { href, name, picture, description } = Astro.props;
+---
+
+<a class="entry not-content" href={href}>
+	{picture && <img src={picture} alt="" width="48" height="48" loading="lazy" />}
+	<span class="text">
+		<span class="name" set:html={name} />
+		<span class="description" set:html={description} />
+	</span>
+</a>
+
+<style>
+	.entry {
+		display: flex;
+		gap: var(--space-4);
+		align-items: flex-start;
+		min-width: 0;
+		padding: var(--space-4);
+		border: var(--stroke-hairline) solid var(--color-line);
+		background: var(--color-panel);
+		color: var(--color-fg);
+		text-decoration: none;
+	}
+
+	.entry:hover,
+	.entry:focus-visible {
+		border-color: var(--color-primary);
+	}
+
+	img {
+		flex: none;
+		border-radius: var(--radius-sm);
+	}
+
+	.text {
+		display: grid;
+		gap: var(--space-1);
+		min-width: 0;
+	}
+
+	.name {
+		font-family: var(--font-family-display);
+		font-weight: var(--font-weight-semibold);
+		overflow-wrap: anywhere;
+	}
+
+	.description {
+		color: var(--color-muted);
+		font-size: var(--font-size-sm);
+		overflow-wrap: anywhere;
+	}
+</style>

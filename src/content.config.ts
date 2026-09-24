@@ -1,8 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
-import { docsLoader } from '@astrojs/starlight/loaders';
-import { docsSchema } from '@astrojs/starlight/schema';
-import { blogSchema } from 'starlight-blog/schema';
+import { docsLoader, docsSchema } from '@deramond.dev/astro/docs';
+import { blogLoader, blogSchema } from '@deramond.dev/astro/blog';
 
 const showcaseGitHubLinkSchema = z.object({
 	type: z.literal('github'),
@@ -50,8 +49,21 @@ export const collections = {
 	docs: defineCollection({
 		loader: docsLoader(),
 		schema: docsSchema({
-			extend: (context) => blogSchema(context),
+			// Pages open with their own lead paragraph: the description stays for meta tags and cards.
+			extend: z.object({
+				hideDescription: z.boolean().default(true),
+				date: z.coerce.date().optional(),
+				lastUpdated: z.coerce.date().optional(),
+			}),
 		}),
+	}),
+	articles: defineCollection({
+		loader: blogLoader({ base: './src/content/articles' }),
+		schema: ({ image }) =>
+			blogSchema({
+				image,
+				extend: z.object({ hideDescription: z.boolean().default(true), excerpt: z.string().optional() }),
+			}),
 	}),
 	showcase: showcaseCollection,
 };
