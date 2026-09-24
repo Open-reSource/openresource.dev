@@ -73,7 +73,7 @@ Content (including images) released under [CC BY-NC-SA 4.0](https://creativecomm
 - `src/assets` directory
 - `src/content` directory
 
-The Open {re}Source mark, favicons and artwork (`src/brand` directory, `.github/header.*`) are not covered by these licenses: all rights reserved.
+The Open {re}Source mark, favicons and artwork (`src/brand`, `src/assets/resources` and `public/covers` directories, `.github/header.*`) are not covered by these licenses: all rights reserved.
 
 ## Thanks
 

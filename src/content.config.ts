@@ -59,9 +59,9 @@ export const collections = {
 	}),
 	articles: defineCollection({
 		loader: blogLoader({ base: './src/content/articles' }),
-		schema: ({ image }) =>
+		// Covers are files in public/covers/ (a URL), so the OG cards can read them too.
+		schema: () =>
 			blogSchema({
-				image,
 				extend: z.object({ hideDescription: z.boolean().default(true), excerpt: z.string().optional() }),
 			}),
 	}),

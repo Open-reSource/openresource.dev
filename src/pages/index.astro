@@ -16,6 +16,10 @@ import { isoDate, postHref, readingTime, sortPosts } from '@deramond.dev/astro/b
 import ShowcaseBanner from '../components/ShowcaseBanner.astro';
 import hero from '../brand/hero.svg';
 
+// One icon per guide module, keyed by the module's folder.
+const icons = import.meta.glob<string>('../brand/modules/*.svg', { query: '?raw', import: 'default', eager: true });
+const iconOf = (id: string) => icons[`../brand/modules/${id.slice('guide/'.length)}.svg`];
+
 const modules = (await getCollection('docs'))
 	.filter((entry) => /^guide\/[^/]+$/.test(entry.id))
 	.sort((a, b) => a.id.localeCompare(b.id));
@@ -62,7 +66,9 @@ const articles = sortPosts(await getCollection('articles'), { production: import
 					name={entry.data.title}
 					description={entry.data.description ?? ''}
 					href={`/${entry.id}/`}
-				/>
+				>
+					<Fragment slot="icon" set:html={iconOf(entry.id)} />
+				</ProjectCard>
 			))}
 		</ProjectGrid>
 	</Section>
@@ -78,6 +84,7 @@ const articles = sortPosts(await getCollection('articles'), { production: import
 					date={isoDate(post.data.date)}
 					minutes={readingTime(post.body)}
 					tags={post.data.tags}
+					cover={post.data.cover}
 				/>
 			))}
 		</div>
