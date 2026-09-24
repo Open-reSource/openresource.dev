@@ -1,13 +1,13 @@
-<p align="center"><a href="https://openresource.dev"><picture><source srcset=".github/header.svg" type="image/svg+xml"><img src=".github/header.png" width="830" alt="Open {re}Source, your platform for sharing and discovering the open source world."></picture></a></p>
+<p align="center"><a href="https://openresource.dev"><picture><source srcset=".github/header.svg" type="image/svg+xml"><img src=".github/header.png" width="830" alt="Open {re}Source. Open source, {re}explained: how it works, how to contribute, how to run your own project."></picture></a></p>
 
 <h1 align="center">openresource.dev</h1>
 
 <p align="center">
-  <b>Open {re}Source is your platform for sharing and discovering the open source world.</b>
+  <b>Open source, {re}explained.</b>
   <br>
-  Understand how it works, and learn how to create, manage, and contribute to open-source projects.
+  How it works, how to contribute, how to run your own project.
   <br>
-  Join the open source community today and start making a difference.
+  A free guide, articles and a showcase by the Open {re}Source community.
 </p>
 
 <p align="center">

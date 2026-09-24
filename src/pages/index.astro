@@ -39,13 +39,15 @@ const articles = sortPosts(await getCollection('articles'), { production: import
 
 <SiteLayout
 	title="Open {re}Source"
-	description="Join open source, learn to create, manage, and contribute to projects with Open {re}Source. Make a difference today by sharing and collaborating."
+	description="Open source, {re}explained. How it works, how to contribute, how to run your own project: a free guide, articles and a showcase."
 >
 	<Hero
-		title="Your platform for sharing and discovering the open source world"
-		lead="Understand how it works, and learn how to create, manage, and contribute to open source projects. Join the open source community today and start making a difference."
+		lead="How it works, how to contribute, how to run your own project. A free guide, articles and a showcase by the Open {re}Source community."
 		image={hero}
 	>
+		<Fragment slot="title">
+			Open source, <em class="d-cy">{'{re}'}</em>explained.
+		</Fragment>
 		<Fragment slot="actions">
 			<Button variant="gold" href="/guide/">
 				Follow the guide

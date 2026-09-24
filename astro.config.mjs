@@ -42,8 +42,7 @@ export default defineConfig({
 		deramond({
 			site: {
 				name: 'Open {re}Source',
-				description:
-					'Your platform for sharing and discovering the open source world. Understand how it works, and learn how to create, manage, and contribute to open source projects.',
+				description: 'Open source, {re}explained. How it works, how to contribute, how to run your own project.',
 			},
 			brand: {
 				mark: './src/brand/mark.svg',
@@ -176,7 +175,13 @@ export default defineConfig({
 					},
 				},
 			},
-			og: { art: './src/brand/og-art.png' },
+			og: {
+				art: './src/brand/og-art.png',
+				name: 'Open {re}Source',
+				title: 'Open source,',
+				accent: '{re}explained.',
+				subtitle: 'How it works, how to contribute, how to run your own project.',
+			},
 			css: ['./src/styles/site.css'],
 			head: [
 				{ tag: 'meta', attrs: { name: 'twitter:site', content: '@open_resource' } },
