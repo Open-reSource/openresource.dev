@@ -17,11 +17,12 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
-    "@astrojs/markdown-remark": "^7.3.0",
-    "@astrojs/starlight": "^0.42.0",
-    "@astrojs/vercel": "^11.0.10",
+    "@astrojs/mdx": "^8.0.2",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/vercel": "^11.0.11",
+    "@deramond.dev/astro": "^0.4.0",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^7.2.9"
+    "astro": "^7.3.5"
   },
   "devDependencies": {
     "@actions/core": "^3.0.1",
@@ -29,17 +30,12 @@
     "@octokit/graphql": "^9.0.5",
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
-    "astro-og-canvas": "^0.13.1",
     "dotenv": "^17.4.2",
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.13",
     "parse-github-url": "^1.0.4",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^1.0.0",
-    "reading-time": "^1.5.0",
-    "starlight-blog": "^0.29.0",
-    "starlight-links-validator": "^0.26.0",
-    "starlight-showcases": "^0.3.2",
     "tsx": "^4.23.13",
     "vercel": "^59.11.7",
     "vitest": "^5.0.0"

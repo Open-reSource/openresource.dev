@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 import type { ShowcaseLink } from '../content.config';
 import ShowcaseBanner from './ShowcaseBanner.astro';
 import ShowcaseGitHubRepo from './ShowcaseGitHubRepo.astro';
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import ShowcaseEntry from './ShowcaseEntry.astro';
 
 const showcaseEntries = await getCollection('showcase');
 const allShowcaseLinks: ShowcaseLink[] = shuffleLinks(showcaseEntries.map((entry) => entry.data.links).flat());
@@ -25,17 +25,42 @@ function shuffleLinks(links: ShowcaseLink[]): ShowcaseLink[] {
 }
 ---
 
-<CardGrid>
+<div class="grid">
 	{allShowcaseLinks.map((link: ShowcaseLink) => {
 		if (link.type === 'github_repo') {
 			return (
 				<ShowcaseGitHubRepo env={link.owner} repo={link.name} description={link.description} img={link.avatarUrl} />
 			);
-		} else if (link.type === 'github') {
-			return <LinkCard href={link.url} title={link.url} description="Visit this GitHub link" />;
 		}
-		return <LinkCard href={link.url} title={link.url} description="Visit this GitLab link" />;
+		const host = link.type === 'github' ? 'GitHub' : 'GitLab';
+		return (
+			<ShowcaseEntry
+				href={link.url}
+				name={link.url.replace(/^https?:\/\/(www\.)?/, '')}
+				description={`Visit this ${host} link`}
+			/>
+		);
 	})}
-</CardGrid>
+</div>
 
 <ShowcaseBanner />
+
+<style>
+	.grid {
+		display: grid;
+		gap: var(--space-4);
+		margin-block: var(--space-7);
+	}
+
+	@media (min-width: 768px) {
+		.grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (min-width: 1180px) {
+		.grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+</style>

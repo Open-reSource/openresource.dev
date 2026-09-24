@@ -8,6 +8,8 @@ head:
       content: 'website'
 ---
 
+![](../../../assets/resources/podcasts.svg)
+
 List of podcasts and interviews related to open source.
 
 - [Coffee & Open Source](https://coffeeandopensource.com) by Isaac Levin – Interviews with notable folks in the <abbr title="Open-Source Software">OSS</abbr> Community.

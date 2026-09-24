@@ -1,53 +1,53 @@
 ---
-const { showProjectsButton = false } = Astro.props;
+import { Button } from '@deramond.dev/astro';
 
-import { Card, Icon } from '@astrojs/starlight/components';
-import Button from './Button.astro';
+const { showProjectsButton = false } = Astro.props;
 ---
 
-<section class="showcase-banner">
-	<Card title="Showcase your projects">
-		<p>
-			<strong>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong>
-		</p>
-		<p style="margin-top: 0px">
-			Submit your open-source project(s), profiles or websites to the showcase and let the community discover your work.
-		</p>
-		<div class="sl-flex actions">
-			<Button class="action action-secondary" href="https://github.com/orgs/Open-reSource/discussions/3">
-				Submit your project(s)
-				<Icon name="external" />
+<section class="showcase-banner d-cut">
+	<h2>Showcase your projects</h2>
+	<p>
+		<strong>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong>
+	</p>
+	<p>
+		Submit your open-source project(s), profiles or websites to the showcase and let the community discover your work.
+	</p>
+	<div class="actions">
+		<Button href="https://github.com/orgs/Open-reSource/discussions/3">Submit your project(s)</Button>
+		{showProjectsButton && (
+			<Button variant="quiet" href="/showcase/">
+				Show projects
 			</Button>
-			{showProjectsButton && (
-				<Button class="action action-secondary action-minimal" href="/showcase">
-					Show projects
-					<Icon name="right-arrow" />
-				</Button>
-			)}
-		</div>
-	</Card>
+		)}
+	</div>
 </section>
 
 <style>
-	section.showcase-banner > :global(.card) {
-		color: var(--sl-color-white);
-		border-left-color: var(--sl-color-secondary);
-		border-left-width: 4px;
+	.showcase-banner {
+		padding: var(--space-7);
+		border: var(--stroke-hairline) solid var(--color-line);
+		border-left: var(--stroke-bracket) solid var(--color-primary);
+		background: var(--color-panel);
 	}
 
-	section.showcase-banner > :global(.card strong) {
-		color: var(--sl-color-secondary-high);
+	h2 {
+		margin: 0 0 var(--space-4);
+		font: var(--type-heading);
+	}
+
+	p {
+		margin: 0 0 var(--space-3);
+		color: var(--color-muted);
+	}
+
+	strong {
+		color: var(--color-fg);
 	}
 
 	.actions {
-		gap: 1rem 2rem;
+		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	@media (min-width: 50rem) {
-		.actions {
-			justify-content: flex-start;
-		}
+		gap: var(--space-3);
+		margin-top: var(--space-5);
 	}
 </style>

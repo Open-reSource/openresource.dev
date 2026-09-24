@@ -1,0 +1,15 @@
+---
+import { Prose, Section, SiteLayout } from '@deramond.dev/astro';
+
+// Layout of the Markdown pages outside the guide (about the author, cookie policy).
+const { frontmatter } = Astro.props;
+---
+
+<SiteLayout title={frontmatter.title} description={frontmatter.description}>
+	<Section>
+		<h1>{frontmatter.title}</h1>
+		<Prose>
+			<slot />
+		</Prose>
+	</Section>
+</SiteLayout>

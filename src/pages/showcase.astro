@@ -1,0 +1,15 @@
+---
+export const prerender = true;
+
+import { Section, SectionHeader, SiteLayout } from '@deramond.dev/astro';
+import Showcase from '../components/Showcase.astro';
+
+const description = 'Explore what the Open {re}Source community builds for the open source world.';
+---
+
+<SiteLayout title="Showcase" description={description}>
+	<Section>
+		<SectionHeader as="h1" num="04" label="Showcase" title="Showcase" lead={description} />
+		<Showcase />
+	</Section>
+</SiteLayout>

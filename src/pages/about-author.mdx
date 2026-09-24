@@ -1,0 +1,41 @@
+---
+layout: ../layouts/Page.astro
+title: 'Julien Déramond'
+description: Find some information about Julien Déramond, the author of Open {re}Source.
+---
+
+export const prerender = true;
+
+import { Image } from 'astro:assets';
+import { Button, SocialLinks } from '@deramond.dev/astro';
+
+<div class="author-picture">
+	<Image src="/author-profile.jpg" alt="" width="96" height="96" />
+</div>
+
+{/* prettier-ignore */}
+<p class="lead">Software front-end engineer at <a href="https://www.thalesgroup.com">Thales</a> in Paris, France. Tech lead of Quantum, the Thales Design System.</p>
+
+Previously, I spent 16 years as a software engineer at <a href="https://www.orange.com">Orange</a>, where I served as Tech Lead for the <a href="https://system.design.orange.com">Orange Design System</a> and its web framework <a href="https://boosted.orange.com/">Boosted</a> (a fork of <a href="https://getbootstrap.com/">Bootstrap</a>). During this time, I contributed to various OSS projects within the <a href="https://github.com/Orange-OpenSource">Orange Open Source organization</a>.
+
+My earlier experience includes developing Qt/QML applications for set-top boxes and creating numerous C/C++ Web Services as Apache modules.
+
+I've been a <a href="https://getbootstrap.com/">Bootstrap</a> contributor since 2021 and joined the core team in 2022. I dedicate my spare time to contributing to various open-source projects whenever I can make a meaningful impact.
+
+Since 2023, I've been maintaining <a href="/">Open \{re}Source</a>, and in 2024, I launched <a href="https://adventofopensource.com">Advent of Open Source</a>. I'm passionate about fostering collaboration between developers, designers, and accessibility practitioners.
+
+Beyond tech, I'm an avid live music enthusiast. You can explore my work in detail on <a href="https://ossinsight.io/analyze/julien-deramond">OSS Insight</a>.
+
+<div class="author-actions">
+	<Button href="https://github.com/sponsors/Open-reSource">Become a sponsor</Button>
+</div>
+
+<SocialLinks
+	links={[
+		{ label: 'GitHub', href: 'https://github.com/julien-deramond' },
+		{ label: 'Bluesky', href: 'https://bsky.app/profile/deramond.dev' },
+		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/julienderamond/' },
+		{ label: 'X', href: 'https://x.com/JulienDeramond' },
+		{ label: 'Twitch', href: 'https://twitch.com/JulienUnderscore' },
+	]}
+/>
