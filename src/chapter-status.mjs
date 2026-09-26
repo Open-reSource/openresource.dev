@@ -7,7 +7,7 @@ import { parse } from 'yaml';
 export const STATUSES = ['stub', 'draft', 'complete'];
 
 /** @param {string | URL} file */
-function frontmatterOf(file) {
+export function frontmatterOf(file) {
 	return parse(fs.readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '') ?? {};
 }
 
