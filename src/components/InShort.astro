@@ -1,0 +1,36 @@
+---
+// The chapter's TL;DR, right after the lead paragraph: 3–5 bullets, no sub-bullets.
+// Same frame as a callout, but the body keeps the full text size and color: this is the content, not a side remark.
+---
+
+<aside class="in-short" aria-label="In short">
+	<p class="in-short__title">In short</p>
+	<div class="in-short__body"><slot /></div>
+</aside>
+
+<style>
+	.in-short {
+		border: var(--stroke-hairline) solid var(--color-line);
+		border-left: 3px solid var(--color-primary);
+		border-radius: 0 var(--radius-md) var(--radius-md) 0;
+		background: var(--color-panel);
+		padding: 14px 16px;
+		margin: var(--space-5) 0;
+	}
+
+	.in-short__title {
+		margin: 0 0 var(--space-2);
+		color: var(--color-primary);
+		font: var(--type-eyebrow);
+		letter-spacing: var(--font-letter-spacing-button);
+		text-transform: uppercase;
+	}
+
+	.in-short__body > :global(:last-child) {
+		margin-bottom: 0;
+	}
+
+	.in-short__body :global(ul) {
+		margin: 0;
+	}
+</style>
