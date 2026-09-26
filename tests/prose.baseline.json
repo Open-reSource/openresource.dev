@@ -92,14 +92,6 @@
     "banned: essential, crucial": 2,
     "exclamation: more than one": 1
   },
-  "docs/guide/creating/planning-your-project.mdx": {
-    "banned: essential, crucial": 6,
-    "banned: In this chapter, we will": 1,
-    "banned: Here are some …": 6,
-    "banned: Remember,": 7,
-    "banned: In conclusion": 1,
-    "lead: more than one": 1
-  },
   "docs/guide/financing/effective-fundraising-strategies.mdx": {
     "exclamation: more than one": 5
   },
