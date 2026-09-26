@@ -40,3 +40,53 @@ jobs:
           title: 'ci: update showcase'
           body: ${{ steps.showcase.outputs.prBody }}
           labels: ci
+
+  links:
+    name: Check External Links
+    if: github.repository_owner == 'Open-reSource'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Check out code using Git
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          cache: npm
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: --root-dir ${{ github.workspace }}/.vercel/output/static '.vercel/output/static/**/*.html'
+          fail: false
+          jobSummary: true
+
+      # One issue, kept up to date: opened (or reopened) with the report when links break, closed when they all pass.
+      - name: Update the report issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+          TITLE: Broken external links
+        run: |
+          number=$(gh api "repos/$GITHUB_REPOSITORY/issues?state=all&labels=ci&per_page=100" \
+            --jq "map(select(.title == env.TITLE and .pull_request == null)) | .[0].number // empty")
+          if [ "$EXIT_CODE" != "0" ]; then
+            if [ -n "$number" ]; then
+              gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/$number" -f state=open -F body=@lychee/out.md > /dev/null
+            else
+              gh api -X POST "repos/$GITHUB_REPOSITORY/issues" -f title="$TITLE" -f 'labels[]=ci' -F body=@lychee/out.md > /dev/null
+            fi
+          elif [ -n "$number" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/$number" -f state=closed -f state_reason=completed > /dev/null
+          fi
