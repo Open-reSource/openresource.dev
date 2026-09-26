@@ -53,7 +53,6 @@ export const collections = {
 			extend: z.object({
 				hideDescription: z.boolean().default(true),
 				date: z.coerce.date().optional(),
-				lastUpdated: z.coerce.date().optional(),
 			}),
 		}),
 	}),
