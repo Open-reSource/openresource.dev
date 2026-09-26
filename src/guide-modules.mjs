@@ -1,5 +1,6 @@
 // Guide modules, in sidebar order. `oldDir` is the folder a module had before the short slugs (2026-09): every page
-// under it gets a 301 to its new URL.
+// under it gets a 301 to its new URL. `merged` maps a page that was folded into another one to where it lives now
+// (`<dir>/<page>`, with an optional `#anchor`): its URLs, old folder included, get a 301 there.
 export const modules = [
 	{
 		label: 'What Is Open Source?',
@@ -10,9 +11,12 @@ export const modules = [
 			'the-significance-of-open-source',
 			'examples-of-successful-open-source-projects',
 			'types-of-open-source-projects',
-			'types-of-open-source-software-projects',
 			'benefits-of-open-source',
 		],
+		merged: {
+			'types-of-open-source-software-projects':
+				'what-is-open-source/types-of-open-source-projects#open-source-software',
+		},
 	},
 	{
 		label: 'Getting Started',
@@ -90,10 +94,16 @@ export const guide = ({ label, dir, pages }) => ({
 // One redirect per page, not `[...slug]`: the Vercel adapter writes a dynamic redirect's target literally.
 /** @type {Record<string, string>} */
 export const moved = Object.fromEntries(
-	modules
-		.filter(({ oldDir }) => oldDir)
-		.flatMap(({ dir, oldDir, pages }) => [
-			[`/guide/${oldDir}`, `/guide/${dir}`],
-			...pages.map((page) => [`/guide/${oldDir}/${page}`, `/guide/${dir}/${page}`]),
-		])
+	modules.flatMap(({ dir, oldDir, pages, merged = {} }) => [
+		...(oldDir
+			? [
+					[`/guide/${oldDir}`, `/guide/${dir}`],
+					...pages.map((page) => [`/guide/${oldDir}/${page}`, `/guide/${dir}/${page}`]),
+				]
+			: []),
+		...Object.entries(merged).flatMap(([page, to]) => [
+			[`/guide/${dir}/${page}`, `/guide/${to}`],
+			...(oldDir ? [[`/guide/${oldDir}/${page}`, `/guide/${to}`]] : []),
+		]),
+	])
 );
