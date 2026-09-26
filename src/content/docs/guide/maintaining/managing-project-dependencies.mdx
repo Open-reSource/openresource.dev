@@ -6,11 +6,9 @@ lastUpdated: 2026-09-26
 ---
 
 {/* prettier-ignore */}
-<p class="lead">**Dependencies are an essential aspect of almost every open-source project.** They are the packages, libraries, and modules your project relies on to function correctly. Managing them effectively is an essential part of maintaining a stable and secure project. In this chapter, we'll explore how to handle dependencies responsibly, covering best practices, tools, and strategies to keep your project healthy as it grows.</p>
+<p class="lead">**Every dependency is code you ship without having written it.** Choose them carefully, lock their versions, update them in small steps, and audit them regularly. That keeps the project stable and secure as it grows.</p>
 
 ## Understanding Project Dependencies
-
-In the simplest terms, in software development, a dependency is a piece of software your project relies on to function properly. Dependencies can be external libraries, packages, modules, or frameworks that your project uses to perform specific tasks or provide functionality.
 
 Dependencies make development faster and more efficient, but they can also bring risks, such as introducing bugs, security vulnerabilities, or even conflicts with other dependencies.
 
@@ -23,7 +21,7 @@ There are two types of dependencies to consider:
 
 ## Choosing Dependencies Wisely
 
-Not all dependencies are created equal, and a big part of managing them involves making good choices from the start. Here are some factors to consider when selecting dependencies:
+A big part of managing dependencies is choosing them well from the start. Look at four things:
 
 1. **Reputation and Popularity**: Choose dependencies that are well-maintained with regular updates, widely used, and backed by good documentation and an active community. This ensures that issues are addressed promptly and that the dependency is reliable.
 2. **License Compatibility**: Each dependency comes with its own license, which can affect how you can use and distribute your project. Ensure that the licenses of all your direct dependencies are compatible with your project's license to avoid legal complications.
@@ -32,14 +30,14 @@ Not all dependencies are created equal, and a big part of managing them involves
 
 ## Dependency Management Tools
 
-Dependency management tools make it easier to track, install, and update the dependencies your project requires. Each language and ecosystem has its own set of tools designed to simplify the process of managing dependencies. Here are some popular dependency management tools:
+Dependency management tools make it easier to track, install, and update the dependencies your project requires. Each ecosystem has its own:
 
 - **JavaScript**: [npm](https://www.npmjs.com/), [Yarn](https://yarnpkg.com/), [pnpm](https://pnpm.io), are popular package managers for JavaScript projects, but there are many others available.
 - **Python**: [pip](https://pypi.org/project/pip/) is the default package manager for Python, while [pipenv](https://pipenv.pypa.io) and [Poetry](https://python-poetry.org/) offer more advanced dependency management features.
 - **Java**: [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/) are commonly used build tools that handle dependency management for Java projects.
 - **Ruby**: [Bundler](https://bundler.io/) is the go-to tool for managing dependencies in Ruby projects.
 
-Familiarize yourself with the tools relevant to your project to streamline your dependency management process. Most dependency management tools have features for locking versions, auditing security, and simplifying updates—features that can significantly ease dependency maintenance over time.
+Most of them have features for locking versions, auditing security, and simplifying updates—features that can significantly ease dependency maintenance over time.
 
 ## Dependencies Versioning
 
@@ -55,7 +53,7 @@ Decide on a versioning strategy for your project early on, and communicate it cl
 
 Pinning or locking dependencies involves specifying exact versions of your project's dependencies to ensure consistency across different environments. By pinning dependencies, you prevent unexpected updates that could introduce breaking changes or security vulnerabilities.
 
-Most dependency management tools provide mechanisms for pinning dependencies. For example, in npm, you can use the `package-lock.json` or `yarn.lock` file to lock dependencies to specific versions. In Python, `Pipfile.lock` or `poetry.lock` serves a similar purpose.
+Most dependency management tools provide mechanisms for pinning dependencies. For example, npm writes a `package-lock.json`, Yarn a `yarn.lock` and pnpm a `pnpm-lock.yaml`: commit it. In Python, `Pipfile.lock` or `poetry.lock` serves a similar purpose.
 
 Pinning dependencies is especially useful for projects that are deployed to multiple environments, such as development, staging, and production. By locking dependencies, you ensure that each environment uses the same versions, reducing the risk of compatibility issues.
 
@@ -64,7 +62,7 @@ Pinning dependencies is especially useful for projects that are deployed to mult
 Updating dependencies is a delicate balance: you want to benefit from new features and security patches, but without introducing breaking changes. Here's how to approach updates:
 
 1. **Use Automation for Updates**: Tools like [Dependabot (GitHub)](https://docs.github.com/code-security/getting-started/dependabot-quickstart-guide) and [Renovate](https://docs.renovatebot.com/) automate dependency updates and can even create pull requests for each new version. These tools typically include tests to ensure compatibility, making the update process more manageable.
-2. **Test Before Upgrading**: Even minor updates can introduce unexpected changes. Before deploying updated dependencies, ensure your testing suite covers essential functionality. If you don't have tests, consider creating them for critical areas before updating.
+2. **Test Before Upgrading**: Even minor updates can introduce unexpected changes. Before deploying updated dependencies, ensure your testing suite covers the main features. If you don't have tests, consider creating them for critical areas before updating.
 3. **Read Release Notes**: Review the release notes for each dependency update to understand what has changed. Look for breaking changes, new features, and security fixes to assess the impact on your project.
 4. **Batch Updates Carefully**: When updating multiple dependencies, it's safer to do so incrementally. Updating everything at once increases the risk of introducing multiple issues simultaneously, making debugging harder.
 5. **Monitor for Security Alerts**: Use tools like [GitHub Advisory Database](https://github.com/advisories), or Dependabot to receive notifications about security vulnerabilities in your dependencies. Address these alerts promptly to keep your project secure.
@@ -79,11 +77,8 @@ Conflicts occur when two or more dependencies rely on incompatible versions of a
 
 ## Security Considerations
 
-Dependencies can introduce security risks, so it's essential to have strategies in place to secure them:
+Dependencies can introduce security risks, so secure them:
 
-1. **Regularly Audit Dependencies**: Use tools like `npm audit`, `pip audit`, `pipenv check`, or others command-line tools to scan your dependencies for known vulnerabilities. Make regular audits a habit to catch security risks early.
+1. **Regularly Audit Dependencies**: Use tools like `npm audit`, `pip-audit`, `pipenv check`, or other command-line tools to scan your dependencies for known vulnerabilities. Make regular audits a habit to catch security risks early.
 2. **Stay Informed**: Monitor announcements from major dependencies for updates on vulnerabilities. Subscribe to mailing lists or security notifications if available. Awareness of risks and updates helps you stay proactive.
 3. **Remove Unused Dependencies**: Regularly review your project for unused dependencies and remove them. Each dependency is a potential security risk or contributes to project bloat, so keep your project lean and clean.
-
-{/* prettier-ignore */}
-<p class="lead">Managing dependencies is an ongoing responsibility in any open-source project. By choosing, updating, and securing dependencies thoughtfully, you help protect your project's reliability and security. Following the best practices in this chapter will prepare you to handle the complexities that come with dependencies, whether you're starting a small project or managing a large, widely-used open-source library.</p>
