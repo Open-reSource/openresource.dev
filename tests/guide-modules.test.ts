@@ -23,7 +23,25 @@ describe('guide modules', () => {
 	});
 
 	test('every redirect lands on a live page, in one hop', () => {
-		expect(Object.entries(moved).filter(([, to]) => !live.includes(to))).toEqual([]);
+		expect(Object.entries(moved).filter(([, to]) => !live.includes(to.split('#')[0]))).toEqual([]);
+	});
+
+	test('a merged page is gone, and all its URLs redirect to the page that absorbed it', () => {
+		const merged = modules.flatMap((module) =>
+			Object.entries(('merged' in module ? module.merged : {}) as Record<string, string>).map(([page, to]) => ({
+				dir: module.dir,
+				oldDir: 'oldDir' in module ? module.oldDir : undefined,
+				page,
+				to,
+			}))
+		);
+		expect(merged.filter(({ dir, page }) => exists(`guide/${dir}/${page}`))).toEqual([]);
+		const unredirected = merged.flatMap(({ dir, oldDir, page, to }) =>
+			[`/guide/${dir}/${page}`, ...(oldDir ? [`/guide/${oldDir}/${page}`] : [])].filter(
+				(from) => moved[from] !== `/guide/${to}`
+			)
+		);
+		expect(unredirected).toEqual([]);
 	});
 
 	test('every page of a renamed module keeps its old URL as a redirect', () => {
