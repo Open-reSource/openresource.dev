@@ -42,6 +42,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run shot -- <url> --out <name>` | Take a screenshot for the guide or an article (see [Screenshots](#screenshots))                                                              |
 | `npm run prettier:check`             | Run Prettier to check the code style                                                                                                         |
 | `npm run prettier:write`             | Run Prettier to fix the code style                                                                                                           |
+| `npm run spellcheck`                 | Spell-check the content; add real words to `cspell.json`                                                                                     |
 
 ## Screenshots
 
