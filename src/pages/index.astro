@@ -25,12 +25,12 @@ const modules = (await getCollection('docs'))
 	.sort((a, b) => a.id.localeCompare(b.id));
 const order = [
 	'what-is-open-source',
-	'getting-started-with-open-source',
-	'contributing-to-open-source-projects',
-	'creating-your-own-open-source-project',
-	'maintaining-open-source-projects',
-	'promoting-open-source-projects',
-	'financing-open-source-projects',
+	'getting-started',
+	'contributing',
+	'creating',
+	'maintaining',
+	'promoting',
+	'financing',
 ];
 modules.sort((a, b) => order.indexOf(a.id.slice(6)) - order.indexOf(b.id.slice(6)));
 
