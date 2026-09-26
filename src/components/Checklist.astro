@@ -1,0 +1,102 @@
+---
+// "Do this now": a Markdown task list (`- [ ] …`) whose boxes can be ticked and stay ticked (localStorage, keyed by `id`),
+// with a "Copy as Markdown" button to paste the list into an issue. Without JS, it's the plain read-only task list.
+import { Button } from '@deramond.dev/astro';
+
+interface Props {
+	id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<open-checklist class="checklist" data-id={id}>
+	<slot />
+	<div class="checklist__actions" hidden>
+		<Button variant="quiet" size="sm" type="button" data-copy>
+			Copy as Markdown
+		</Button>
+		<span class="checklist__status" role="status"></span>
+	</div>
+</open-checklist>
+
+<style>
+	.checklist {
+		display: block;
+		margin: var(--space-5) 0;
+	}
+
+	.checklist :global(.contains-task-list) {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.checklist :global(.task-list-item) {
+		display: flex;
+		gap: 0.6em;
+		align-items: baseline;
+	}
+
+	.checklist :global(.task-list-item input) {
+		flex: none;
+		accent-color: var(--color-primary);
+	}
+
+	.checklist__actions {
+		display: flex;
+		gap: var(--space-3);
+		align-items: center;
+	}
+
+	.checklist__actions[hidden] {
+		display: none;
+	}
+
+	.checklist__status {
+		font: var(--type-mono);
+		color: var(--color-muted);
+	}
+</style>
+
+<script>
+	class OpenChecklist extends HTMLElement {
+		connectedCallback() {
+			const key = `checklist:${this.dataset.id}`;
+			const boxes = [...this.querySelectorAll<HTMLInputElement>('.task-list-item input[type="checkbox"]')];
+			const texts = boxes.map((box) => box.closest('li')!.textContent!.trim());
+
+			// Keyed by item text, so editing or reordering the list doesn't move the ticks around.
+			let saved: Record<string, boolean> = {};
+			try {
+				saved = JSON.parse(localStorage.getItem(key) ?? '{}');
+			} catch {}
+
+			boxes.forEach((box, i) => {
+				box.disabled = false;
+				box.checked = saved[texts[i]] ?? box.checked;
+				box.setAttribute('aria-label', texts[i]);
+				box.addEventListener('change', () => {
+					try {
+						localStorage.setItem(key, JSON.stringify(Object.fromEntries(texts.map((t, j) => [t, boxes[j].checked]))));
+					} catch {}
+				});
+			});
+
+			const actions = this.querySelector<HTMLElement>('.checklist__actions')!;
+			const status = this.querySelector<HTMLElement>('.checklist__status')!;
+			actions.hidden = !navigator.clipboard;
+			this.querySelector('[data-copy]')!.addEventListener('click', async () => {
+				const markdown = texts.map((text, i) => `- [${boxes[i].checked ? 'x' : ' '}] ${text}`).join('\n');
+				try {
+					await navigator.clipboard.writeText(markdown);
+					status.textContent = 'Copied';
+				} catch {
+					status.textContent = 'Copy failed';
+				}
+				setTimeout(() => (status.textContent = ''), 2000);
+			});
+		}
+	}
+
+	customElements.define('open-checklist', OpenChecklist);
+</script>
