@@ -5,6 +5,8 @@ import vercel from '@astrojs/vercel';
 import deramond from '@deramond.dev/astro/integration';
 
 import { modules, guide, moved } from './src/guide-modules.mjs';
+import { satteri } from '@astrojs/markdown-satteri';
+import { chapterStatus } from './src/chapter-status.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -33,6 +35,9 @@ export default defineConfig({
 		'/rss.xml': '/articles/rss.xml',
 		'/articles/authors/julien-déramond': '/articles',
 		...moved,
+	},
+	markdown: {
+		processor: satteri({ mdastPlugins: [chapterStatus] }),
 	},
 	integrations: [
 		mdx(),

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { describe, expect, test } from 'vitest';
 
-import { modules, moved } from '../src/guide-modules.mjs';
+import { guide, isStub, modules, moved } from '../src/guide-modules.mjs';
 
 const root = new URL('../src/content/docs/', import.meta.url);
 const exists = (id: string) =>
@@ -50,5 +50,13 @@ describe('guide modules', () => {
 			.flatMap(({ oldDir, pages }) => [`/guide/${oldDir}`, ...pages.map((page) => `/guide/${oldDir}/${page}`)])
 			.filter((from) => !(from in moved));
 		expect(missing).toEqual([]);
+	});
+
+	test('a stub stays out of the sidebar, every other page is in it', () => {
+		const wrong = modules.flatMap((module) => {
+			const items = guide(module).items;
+			return module.pages.filter((page) => items.includes(`guide/${module.dir}/${page}`) === isStub(module.dir, page));
+		});
+		expect(wrong).toEqual([]);
 	});
 });
