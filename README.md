@@ -64,6 +64,22 @@ npm run shot -- https://github.com/mdn/content/contribute --out contributing-fin
 
 For GitHub pages that need an account, set `GH_SESSION` to the value of your `user_session` cookie on github.com. `tests/images.test.ts` fails on images over 1440px wide, over 1 MB, or PNGs over 300 KB.
 
+## Prose Checks
+
+`tests/prose.test.ts` runs with `npm run test` and fails on:
+
+- banned phrases: "In this chapter, we will", "In conclusion", "It's important to note", "Remember,", "essential", "crucial", "vibrant", "thriving", "delve", "landscape", "journey", "empower", "leverage", "In the simplest terms", "Here are some", "created equal", "Familiarize yourself with",
+- an "Introduction" or "Conclusion" heading,
+- a second `<p class="lead">` in a page (a closing recap),
+- more than one exclamation mark in a page,
+- `lastUpdate:` instead of `lastUpdated:` in the frontmatter.
+
+Code blocks, inline code and URLs are skipped. Pages written before these rules are listed in `tests/prose.baseline.json` with their current counts: a count can go down, never up. After fixing a page, lower or remove its entry, or regenerate the file:
+
+```bash
+UPDATE_PROSE_BASELINE=1 npm run test -- --run prose
+```
+
 ## Bugs and Feature Requests
 
 Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/Open-reSource/openresource.dev/issues/new/choose).

@@ -1,0 +1,198 @@
+{
+  "articles/add-funding-links-to-your-package.json.mdx": {
+    "banned: essential, crucial": 1,
+    "exclamation: more than one": 4
+  },
+  "articles/bluesky-starter-pack.mdx": {
+    "exclamation: more than one": 5
+  },
+  "articles/can-i-take-this-issue.mdx": {
+    "banned: empower, leverage": 1,
+    "exclamation: more than one": 6
+  },
+  "articles/coding-linkedin-carousels.mdx": {
+    "exclamation: more than one": 7
+  },
+  "articles/contrib-rocks.mdx": {
+    "exclamation: more than one": 1
+  },
+  "articles/get-real-time-github-stars-notifications-in-discord.mdx": {
+    "banned: delve, landscape, journey": 1,
+    "exclamation: more than one": 12
+  },
+  "articles/github-ghost-user.mdx": {
+    "exclamation: more than one": 2
+  },
+  "articles/repobeats.mdx": {
+    "exclamation: more than one": 1
+  },
+  "articles/running-a-local-ai-inside-obsidian-with-ollama.mdx": {
+    "banned: In this chapter, we will": 1,
+    "exclamation: more than one": 2
+  },
+  "docs/guide/contributing/building-a-portfolio-with-open-source-contributions.mdx": {
+    "banned: In this chapter, we will": 1,
+    "banned: essential, crucial": 2,
+    "banned: Here are some …": 1,
+    "lead: more than one": 1
+  },
+  "docs/guide/contributing/contributing-to-open-source.mdx": {
+    "banned: Here are some …": 2,
+    "banned: Familiarize yourself with": 1,
+    "banned: essential, crucial": 1,
+    "lead: more than one": 1,
+    "exclamation: more than one": 1
+  },
+  "docs/guide/contributing/finding-open-source-projects.mdx": {
+    "banned: In this chapter, we will": 1
+  },
+  "docs/guide/contributing/getting-involved-in-the-open-source-community.mdx": {
+    "banned: In this chapter, we will": 1,
+    "banned: essential, crucial": 1,
+    "banned: Here are some …": 2,
+    "lead: more than one": 1
+  },
+  "docs/guide/contributing/index.mdx": {
+    "banned: essential, crucial": 1,
+    "banned: delve, landscape, journey": 1,
+    "exclamation: more than one": 1
+  },
+  "docs/guide/contributing/overcoming-challenges-in-open-source-contributions.mdx": {
+    "banned: In this chapter, we will": 1,
+    "banned: essential, crucial": 4,
+    "lead: more than one": 1
+  },
+  "docs/guide/creating/building-and-engaging-your-community.mdx": {
+    "banned: vibrant, thriving": 7,
+    "banned: essential, crucial": 9,
+    "banned: delve, landscape, journey": 3,
+    "banned: Here are some …": 4,
+    "heading: Introduction/Conclusion": 1
+  },
+  "docs/guide/creating/choosing-a-project-idea.mdx": {
+    "banned: In this chapter, we will": 1,
+    "banned: delve, landscape, journey": 1,
+    "lead: more than one": 1
+  },
+  "docs/guide/creating/creating-your-project.mdx": {
+    "banned: In this chapter, we will": 1
+  },
+  "docs/guide/creating/developing-your-project.mdx": {
+    "banned: In this chapter, we will": 2,
+    "heading: Introduction/Conclusion": 1,
+    "banned: essential, crucial": 3,
+    "banned: delve, landscape, journey": 1,
+    "lead: more than one": 1,
+    "exclamation: more than one": 8
+  },
+  "docs/guide/creating/index.mdx": {
+    "banned: essential, crucial": 1
+  },
+  "docs/guide/creating/legal-considerations.mdx": {
+    "banned: essential, crucial": 2,
+    "exclamation: more than one": 1
+  },
+  "docs/guide/creating/planning-your-project.mdx": {
+    "banned: essential, crucial": 6,
+    "banned: In this chapter, we will": 1,
+    "banned: Here are some …": 6,
+    "banned: Remember,": 7,
+    "banned: In conclusion": 1,
+    "lead: more than one": 1
+  },
+  "docs/guide/financing/effective-fundraising-strategies.mdx": {
+    "exclamation: more than one": 5
+  },
+  "docs/guide/financing/importance-and-challenges-of-financing-open-source-projects.mdx": {
+    "banned: essential, crucial": 6,
+    "banned: vibrant, thriving": 1,
+    "banned: empower, leverage": 1,
+    "banned: delve, landscape, journey": 3
+  },
+  "docs/guide/financing/index.mdx": {
+    "banned: empower, leverage": 2,
+    "banned: essential, crucial": 3,
+    "banned: delve, landscape, journey": 2
+  },
+  "docs/guide/getting-started/index.mdx": {
+    "banned: vibrant, thriving": 2,
+    "banned: In this chapter, we will": 1,
+    "banned: empower, leverage": 1
+  },
+  "docs/guide/getting-started/source-code-hosting-platforms.mdx": {
+    "banned: Here are some …": 1,
+    "lead: more than one": 1
+  },
+  "docs/guide/index.mdx": {
+    "banned: delve, landscape, journey": 2,
+    "exclamation: more than one": 1
+  },
+  "docs/guide/maintaining/fostering-a-strong-and-inclusive-community.mdx": {
+    "banned: essential, crucial": 1,
+    "exclamation: more than one": 1
+  },
+  "docs/guide/maintaining/index.mdx": {
+    "banned: essential, crucial": 1,
+    "banned: delve, landscape, journey": 3,
+    "banned: vibrant, thriving": 1
+  },
+  "docs/guide/maintaining/introduction-to-open-source-project-maintenance.mdx": {
+    "banned: vibrant, thriving": 3,
+    "banned: In this chapter, we will": 1,
+    "banned: delve, landscape, journey": 2,
+    "banned: essential, crucial": 1,
+    "lead: more than one": 2
+  },
+  "docs/guide/promoting/building-a-strong-project-identity.mdx": {
+    "banned: essential, crucial": 2,
+    "banned: delve, landscape, journey": 2,
+    "banned: vibrant, thriving": 2,
+    "banned: Not all X are created equal": 1,
+    "banned: empower, leverage": 4,
+    "exclamation: more than one": 6
+  },
+  "docs/guide/promoting/index.mdx": {
+    "banned: essential, crucial": 2,
+    "banned: empower, leverage": 1,
+    "banned: vibrant, thriving": 1,
+    "banned: Remember,": 1
+  },
+  "docs/guide/promoting/introduction-to-project-promotion.mdx": {
+    "banned: vibrant, thriving": 3,
+    "banned: delve, landscape, journey": 4,
+    "banned: In this chapter, we will": 1,
+    "banned: empower, leverage": 1,
+    "lead: more than one": 2
+  },
+  "docs/guide/what-is-open-source/benefits-of-open-source.mdx": {
+    "banned: vibrant, thriving": 1,
+    "banned: empower, leverage": 5,
+    "banned: essential, crucial": 4,
+    "banned: delve, landscape, journey": 1,
+    "exclamation: more than one": 5
+  },
+  "docs/guide/what-is-open-source/examples-of-successful-open-source-projects.mdx": {
+    "banned: In this chapter, we will": 1,
+    "banned: delve, landscape, journey": 2,
+    "banned: vibrant, thriving": 1,
+    "banned: essential, crucial": 1,
+    "lead: more than one": 1
+  },
+  "docs/guide/what-is-open-source/index.mdx": {
+    "banned: empower, leverage": 1
+  },
+  "docs/guide/what-is-open-source/the-significance-of-open-source.mdx": {
+    "banned: empower, leverage": 3,
+    "banned: delve, landscape, journey": 2,
+    "banned: In conclusion": 1,
+    "banned: essential, crucial": 1,
+    "banned: vibrant, thriving": 1,
+    "lead: more than one": 1
+  },
+  "docs/guide/what-is-open-source/types-of-open-source-projects.mdx": {
+    "banned: In this chapter, we will": 1,
+    "banned: essential, crucial": 5,
+    "banned: delve, landscape, journey": 1,
+    "banned: empower, leverage": 4
+  }
+}
