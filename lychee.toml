@@ -1,0 +1,6 @@
+# Link checking with lychee (https://lychee.cli.rs), on the built site in .vercel/output/static.
+# Pull requests check internal links offline, anchors included: see the Links job in .github/workflows/integration.yml.
+
+index_files = ["index.html"]
+include_fragments = "anchor-only"
+no_progress = true
