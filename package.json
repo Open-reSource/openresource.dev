@@ -6,6 +6,7 @@
     "astro": "astro",
     "build": "astro check && astro build",
     "dev": "astro dev",
+    "links": "lychee --offline --root-dir \"$PWD/.vercel/output/static\" '.vercel/output/static/**/*.html'",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
     "preview": "astro preview",
