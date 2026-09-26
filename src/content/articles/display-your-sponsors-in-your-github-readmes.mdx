@@ -82,13 +82,13 @@ Your new repository is now created, and should contain the following files:
 
 First important thing to do is to change the default permissions of the `GITHUB_TOKEN` that is used by the GitHub Action to commit and push the generated sponsors images.
 
-It can be changed by going to your repository settings, then to the "Actions" section, and choose "Read an write permissions" for the "Workflow permissions" option.
+It can be changed by going to your repository settings, then to the "Actions" section, and choose "Read and write permissions" for the "Workflow permissions" option.
 
 You can find more information about this configuration in the [GitHub documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#configuring-the-default-github_token-permissions).
 
 ### Set up the environment variable
 
-By looking at `.github/worfklows/scheduler.yml`, we can see that it relies on a `${{ secrets.SPONSORS_TOKEN }}` environment variable.
+By looking at `.github/workflows/scheduler.yml`, we can see that it relies on a `${{ secrets.SPONSORS_TOKEN }}` environment variable.
 
 We will need to set it up in the GitHub repository settings with "SPONSORS_TOKEN" as a name, and with the value of the GitHub personal access token that we have created in the prerequisites.
 
@@ -96,7 +96,7 @@ You can find more information about how to create a new repository secret in the
 
 ### Configure the GitHub Action
 
-Either after having cloned your repository locally, or directly on GitHub, you will need to edit the `.github/worfklows/scheduler.yml` to indicate your GitHub username as a value for "SPONSORKIT_GITHUB_LOGIN".
+Either after having cloned your repository locally, or directly on GitHub, you will need to edit the `.github/workflows/scheduler.yml` to indicate your GitHub username as a value for "SPONSORKIT_GITHUB_LOGIN".
 
 Commit and push your changes.
 
