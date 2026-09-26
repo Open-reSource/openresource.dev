@@ -15,7 +15,7 @@ export const modules = [
 		],
 		merged: {
 			'types-of-open-source-software-projects':
-				'what-is-open-source/types-of-open-source-projects#open-source-software',
+				'what-is-open-source/types-of-open-source-projects#zoom-on-open-source-software',
 		},
 	},
 	{
