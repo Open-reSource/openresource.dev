@@ -1,6 +1,27 @@
 # Link checking with lychee (https://lychee.cli.rs), on the built site in .vercel/output/static.
-# Pull requests check internal links offline, anchors included: see the Links job in .github/workflows/integration.yml.
+# - Pull requests check internal links offline, anchors included: the Links job in .github/workflows/integration.yml.
+# - Every Monday, external links too: the Links job in .github/workflows/weekly.yml, which keeps one issue up to date.
 
 index_files = ["index.html"]
 include_fragments = "anchor-only"
 no_progress = true
+
+# External links: patient, and a rate limit is not a dead link.
+max_concurrency = 16
+timeout = 20
+max_retries = 2
+accept = ["200..=299", "429"]
+
+exclude = [
+  # The site itself: internal links are checked offline on every pull request.
+  '^https://openresource\.dev/',
+  # Alive, but they answer bots with a login wall or a challenge (checked in a browser, 2026-09-26).
+  '^https://(www\.)?linkedin\.com/',
+  '^https://(www\.)?(x|twitter)\.com/',
+  '^https://(www\.)?openhub\.net/',
+  '^https://moodle\.org/',
+  '^https://(www\.)?mysql\.com/',
+  '^https://(www\.)?figma\.com/',
+  # Alive (curl reaches it), but its TLS setup fails lychee's handshake.
+  '^https://(www\.)?fsf\.org/',
+]
