@@ -142,7 +142,12 @@ Let's start by installing the **AI Providers** plugin.
 
 1. In Obsidian, go to "Settings → Community Plugins → Browse" and search for "AI Providers".
 
-   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-1.png" alt="" width="720" height="320" />
+   <ContentImage
+   	src="/images/running-a-local-ai-inside-obsidian-with-ollama-1.png"
+   	alt="Obsidian’s community plugin browser: a search for “AI Providers”, the plugin by Pavel Frankov and its Install button."
+   	width="720"
+   	height="320"
+   />
 
 1. Click "Install", then "Enable" to enable the plugin.
 
@@ -153,7 +158,12 @@ Let's start by installing the **AI Providers** plugin.
      - Click on the refresh icon of the "Model" field to fetch Gemma 4 from your local Ollama installation.
      - Click "Save" to add the provider.
 
-   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-2.png" alt="" width="420" height="320" />
+   <ContentImage
+   	src="/images/running-a-local-ai-inside-obsidian-with-ollama-2.png"
+   	alt="The “Add new provider” dialog: type Ollama, URL http://localhost:11434, model gemma4:latest."
+   	width="420"
+   	height="320"
+   />
 
 </Steps>
 
@@ -165,14 +175,24 @@ Then, install the **Local GPT** plugin.
 
 1. In Obsidian, go to "Settings → Community Plugins → Browse" and search for "Local GPT".
 
-   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-3.png" alt="" width="720" height="320" />
+   <ContentImage
+   	src="/images/running-a-local-ai-inside-obsidian-with-ollama-3.png"
+   	alt="Obsidian’s community plugin browser: a search for “local gpt”, with Local GPT by Pavel Frankov selected."
+   	width="720"
+   	height="320"
+   />
 
 1. Click "Install", then "Enable" to enable the plugin.
 
 1. Click "Options" to configure the plugin:
    - In the "Main AI Provider", "Embedding AI Provider", and "Vision AI Provider" sections, select "Ollama ~ gemma4:latest" from the dropdown.
 
-   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-4.png" alt="" width="720" height="320" />
+   <ContentImage
+   	src="/images/running-a-local-ai-inside-obsidian-with-ollama-4.png"
+   	alt="Local GPT options: the main, embedding and vision AI providers all set to “Ollama ~ gemma4:latest”."
+   	width="720"
+   	height="320"
+   />
 
 </Steps>
 
@@ -190,7 +210,12 @@ To quickly access Local GPT features, set up hot keys in Obsidian.
    - For "Local GPT: Action Palette", click on "+" and press your desired key combination (e.g., <kbd>⌘ + J</kbd>).
    - For "Local GPT: Show context menu", click on "+" and press your desired key combination (e.g., <kbd>⌘ + M</kbd>).
 
-   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-5.png" alt="" width="720" height="320" />
+   <ContentImage
+   	src="/images/running-a-local-ai-inside-obsidian-with-ollama-5.png"
+   	alt="Obsidian hotkeys filtered on “local”: Action Palette on ⌘ J, Show context menu on ⌘ M."
+   	width="720"
+   	height="320"
+   />
 
 </Steps>
 
@@ -218,7 +243,12 @@ The context menu is a quick way to apply AI actions to selected text.
    - Find action items
    - New System Prompt
 
-   <ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-6.png" alt="" width="720" height="320" />
+   <ContentImage
+   	src="/images/running-a-local-ai-inside-obsidian-with-ollama-6.png"
+   	alt="The Local GPT context menu in a note: General help, Continue writing, Summarize, Fix spelling, Find action items."
+   	width="720"
+   	height="320"
+   />
 
    Please note that you can create your own custom prompts as well.
 
@@ -226,11 +256,21 @@ The context menu is a quick way to apply AI actions to selected text.
 
 Let's say I've written this article in Obsidian first and wanted to summarize it. I would select the text and use the context menu to choose "Summarize".
 
-<ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-7.png" alt="" width="420" height="320" />
+<ContentImage
+	src="/images/running-a-local-ai-inside-obsidian-with-ollama-7.png"
+	alt="A note with the whole article selected and the Local GPT context menu open on Summarize."
+	width="420"
+	height="320"
+/>
 
 Gemma 4 would then generate a concise summary of the selected content directly at the end of my note (this can be configured).
 
-<ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-8.png" alt="" width="420" height="320" />
+<ContentImage
+	src="/images/running-a-local-ai-inside-obsidian-with-ollama-8.png"
+	alt="The summary written at the end of the note: a heading, a short intro, and bullet points on setup, privacy and trade-offs."
+	width="420"
+	height="320"
+/>
 
 ### Using the Action Palette
 
@@ -245,11 +285,21 @@ The action palette allows you to type custom prompts and interact with Local GPT
 
 Let's say I want to analyze an image to describe its content. I would select the image in my note, open the action palette, and type: "Describe this image!"
 
-<ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-9.png" alt="" width="420" height="320" />
+<ContentImage
+	src="/images/running-a-local-ai-inside-obsidian-with-ollama-9.png"
+	alt="The Local GPT action palette over a GitHub logo in a note, with the prompt “Describe this image!”."
+	width="420"
+	height="320"
+/>
 
 The model would then generate a description of the image directly in my note.
 
-<ContentImage src="/images/running-a-local-ai-inside-obsidian-with-ollama-10.png" alt="" width="420" height="320" />
+<ContentImage
+	src="/images/running-a-local-ai-inside-obsidian-with-ollama-10.png"
+	alt="The description written under the GitHub logo: overall, elements (the cat silhouette, the word GitHub) and style."
+	width="420"
+	height="320"
+/>
 
 ---
 
