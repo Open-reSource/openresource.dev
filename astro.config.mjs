@@ -4,10 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 import deramond from '@deramond.dev/astro/integration';
 
-const guide = (label, dir, pages) => ({
-	label,
-	items: [`guide/${dir}`, ...pages.map((page) => `guide/${dir}/${page}`)],
-});
+import { modules, guide, moved } from './src/guide-modules.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,6 +32,7 @@ export default defineConfig({
 		'/resources': '/resources/books',
 		'/rss.xml': '/articles/rss.xml',
 		'/articles/authors/julien-déramond': '/articles',
+		...moved,
 	},
 	integrations: [
 		mdx(),
@@ -100,54 +98,7 @@ export default defineConfig({
 				edit: { repo: 'Open-reSource/openresource.dev' },
 				sidebar: [
 					{ label: 'Guide', items: ['guide'] },
-					guide('What Is Open Source?', 'what-is-open-source', [
-						'definition-of-open-source',
-						'brief-history-of-open-source',
-						'the-significance-of-open-source',
-						'examples-of-successful-open-source-projects',
-						'types-of-open-source-projects',
-						'types-of-open-source-software-projects',
-						'benefits-of-open-source',
-					]),
-					guide('Getting Started', 'getting-started-with-open-source', [
-						'source-code-hosting-platforms',
-						'finding-open-source-projects',
-					]),
-					guide('Contributing', 'contributing-to-open-source-projects', [
-						'finding-open-source-projects',
-						'contributing-to-open-source',
-						'getting-involved-in-the-open-source-community',
-						'building-a-portfolio-with-open-source-contributions',
-						'overcoming-challenges-in-open-source-contributions',
-					]),
-					guide('Creating', 'creating-your-own-open-source-project', [
-						'choosing-a-project-idea',
-						'planning-your-project',
-						'creating-your-project',
-						'legal-considerations',
-						'developing-your-project',
-						'building-and-engaging-your-community',
-					]),
-					guide('Maintaining', 'maintaining-open-source-projects', [
-						'introduction-to-open-source-project-maintenance',
-						'managing-contributions-and-community-engagement',
-						'managing-project-dependencies',
-						'fostering-a-strong-and-inclusive-community',
-						'ensuring-project-sustainability',
-					]),
-					guide('Promoting', 'promoting-open-source-projects', [
-						'introduction-to-project-promotion',
-						'building-a-strong-project-identity',
-						'crafting-an-engaging-project-website',
-					]),
-					guide('Financing', 'financing-open-source-projects', [
-						'importance-and-challenges-of-financing-open-source-projects',
-						'understanding-funding-models',
-						'effective-fundraising-strategies',
-						'resource-allocation-and-budgeting',
-						'fostering-a-sustainable-ecosystem',
-						'transparency-accountability-and-community-involvement',
-					]),
+					...modules.map(guide),
 					{
 						label: 'Resources',
 						items: [
