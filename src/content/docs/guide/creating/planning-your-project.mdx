@@ -28,7 +28,9 @@ import InShort from '../../../../components/InShort.astro';
 
 Two paragraphs in the README: what's broken today, and for whom. If you can't write them, the project isn't ready, however far along the code is.
 
-Then answer the question every visitor asks: **why would I use this over X?** Name X. Look for it on npm, PyPI, crates.io or GitHub before you write more code: if an existing project already solves the problem, a pull request there may be a better use of your evenings than a new repo. If yours does something X doesn't, the sentence that says so is your pitch, and it goes near the top of the README.
+Then answer the question every visitor asks: **why would I use this over X?** Name X, and look for it on npm, PyPI, crates.io or GitHub first: if it already solves the problem, a pull request there may beat a new repo. If yours does something X doesn't, that sentence is your pitch.
+
+Last, decide whether you want contributors or only users. Open source doesn't oblige you to accept code: [SQLite](https://sqlite.org/copyright.html) is open source but not open contribution. Either is fine. Say which in the README: it decides how much of your time goes to reviews.
 
 When: before you make the repo public.
 
@@ -54,7 +56,7 @@ A volunteer project that promises dates breaks the promise. Milestones say what,
 - **v0.x**: other people use it, and things may still break. [SemVer](https://semver.org/#spec-item-4) says a 0.y.z version is for initial development: anything may change at any time.
 - **v1.0**: I'd be embarrassed to break it. From here, a breaking change means a new major version.
 
-On GitHub, a [milestone](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) groups the issues and pull requests that make up a version and shows how many are closed. That's the whole roadmap most projects need. A `ROADMAP.md` becomes useful when people ask "is X planned?" often enough.
+On GitHub, a [milestone](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) groups the issues and pull requests of a version and shows how many are closed: the whole roadmap most projects need. A `ROADMAP.md` becomes useful when people ask "is X planned?" often enough.
 
 When: at the first release anyone else installs.
 
@@ -76,7 +78,7 @@ Decide in advance:
 
 - what you'll close without discussion (anything in the non-goals),
 - how much time a week the project gets from you, and write it in the README if people wait on you,
-- where support questions go, so they stay out of the issues.
+- where conversations happen: GitHub Discussions, a chat, or issues only. Pick one, link it from the README, and answer each question in one app, not three.
 
 Money comes later, if at all. The [Financing module](/guide/financing/) covers it for when the project has users who depend on it.
 
