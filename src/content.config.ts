@@ -3,6 +3,8 @@ import { z } from 'astro/zod';
 import { docsLoader, docsSchema } from '@deramond.dev/astro/docs';
 import { blogLoader, blogSchema } from '@deramond.dev/astro/blog';
 
+import { STATUSES } from './chapter-status.mjs';
+
 const showcaseGitHubLinkSchema = z.object({
 	type: z.literal('github'),
 	url: z.url(),
@@ -53,6 +55,8 @@ export const collections = {
 			extend: z.object({
 				hideDescription: z.boolean().default(true),
 				date: z.coerce.date().optional(),
+				// Read by the sidebar and the status box too (src/chapter-status.mjs), which keep the same list.
+				status: z.enum(STATUSES).default('complete'),
 			}),
 		}),
 	}),

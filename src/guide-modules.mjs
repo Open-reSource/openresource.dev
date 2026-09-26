@@ -1,3 +1,5 @@
+import { statusOf } from './chapter-status.mjs';
+
 // Guide modules, in sidebar order. `oldDir` is the folder a module had before the short slugs (2026-09): every page
 // under it gets a 301 to its new URL. `merged` maps a page that was folded into another one to where it lives now
 // (`<dir>/<page>`, with an optional `#anchor`): its URLs, old folder included, get a 301 there.
@@ -86,9 +88,14 @@ export const modules = [
 	},
 ];
 
+const docs = new URL('content/docs/', import.meta.url);
+
+/** Whether a guide page is a stub: planned, not written. Stubs still build, but stay out of the sidebar. */
+export const isStub = (dir, page) => statusOf(new URL(`guide/${dir}/${page}.mdx`, docs)) === 'stub';
+
 export const guide = ({ label, dir, pages }) => ({
 	label,
-	items: [`guide/${dir}`, ...pages.map((page) => `guide/${dir}/${page}`)],
+	items: [`guide/${dir}`, ...pages.filter((page) => !isStub(dir, page)).map((page) => `guide/${dir}/${page}`)],
 });
 
 // One redirect per page, not `[...slug]`: the Vercel adapter writes a dynamic redirect's target literally.
