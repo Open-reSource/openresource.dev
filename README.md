@@ -29,18 +29,37 @@
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                                                                                                                       |
-| :------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm install`             | Installs dependencies                                                                                                                        |
-| `npm run dev`             | Run the development server at `localhost:4321`                                                                                               |
-| `npm run build`           | Build your production site                                                                                                                   |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`                                                                                             |
-| `npm run astro -- --help` | Get help using the Astro CLI                                                                                                                 |
-| `npm run vercel`          | Run in the same conditions as Vercel                                                                                                         |
-| `npm run update:showcase` | Run the showcase script to gather GitHub and GitLab links from https://github.com/orgs/Open-reSource/discussions/3 (other links are ignored) |
-| `npm run test`            | Run the tests                                                                                                                                |
-| `npm run prettier:read`   | Run Prettier to check the code style                                                                                                         |
-| `npm run prettier:write`  | Run Prettier to fix the code style                                                                                                           |
+| Command                              | Action                                                                                                                                       |
+| :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm install`                        | Installs dependencies                                                                                                                        |
+| `npm run dev`                        | Run the development server at `localhost:4321`                                                                                               |
+| `npm run build`                      | Build your production site                                                                                                                   |
+| `npm run astro ...`                  | Run CLI commands like `astro add`, `astro check`                                                                                             |
+| `npm run astro -- --help`            | Get help using the Astro CLI                                                                                                                 |
+| `npm run vercel`                     | Run in the same conditions as Vercel                                                                                                         |
+| `npm run update:showcase`            | Run the showcase script to gather GitHub and GitLab links from https://github.com/orgs/Open-reSource/discussions/3 (other links are ignored) |
+| `npm run test`                       | Run the tests                                                                                                                                |
+| `npm run shot -- <url> --out <name>` | Take a screenshot for the guide or an article (see [Screenshots](#screenshots))                                                              |
+| `npm run prettier:check`             | Run Prettier to check the code style                                                                                                         |
+| `npm run prettier:write`             | Run Prettier to fix the code style                                                                                                           |
+
+## Screenshots
+
+Screenshots are taken the same way every time with `npm run shot`: a 1440×900 viewport at 2×, no browser chrome, saved to `public/images/` at 1440px wide max, as PNG or WebP when the PNG would be over 300 KB. It uses Playwright's Chromium (`npx playwright install chromium` the first time).
+
+```bash
+npm run shot -- https://github.com/mdn/content/contribute --out contributing-finding-open-source-projects-1 --clip main --box 'a:has-text("Read the contributing guidelines")' --box 'main a:text-is("good first issue")'
+```
+
+| Option                | What it does                                                                                                           |
+| :-------------------- | :--------------------------------------------------------------------------------------------------------------------- |
+| `--out <name>`        | File name in `public/images/`, without extension: `<module>-<chapter>-<n>` for the guide, `<article>-<n>` for articles |
+| `--clip <selector>`   | Capture only this element                                                                                              |
+| `--box <selector>`    | Draw a box around each match, numbered when there are several (repeatable)                                             |
+| `--theme dark\|light` | The page's color scheme, `dark` by default. Boxes are gold on dark, dim cyan on light                                  |
+| `--wait <ms>`         | Wait after the page is loaded                                                                                          |
+
+For GitHub pages that need an account, set `GH_SESSION` to the value of your `user_session` cookie on github.com. `tests/images.test.ts` fails on images over 1440px wide, over 1 MB, or PNGs over 300 KB.
 
 ## Bugs and Feature Requests
 
