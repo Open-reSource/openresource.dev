@@ -12,6 +12,7 @@
     "shot": "tsx scripts/screenshot.ts",
     "spellcheck": "cspell --no-progress",
     "start": "astro dev",
+    "status": "tsx scripts/content-status.ts",
     "test": "vitest",
     "update:deps": "ncu -u",
     "update:showcase": "tsx scripts/update-showcase.ts",
