@@ -9,7 +9,7 @@ import Checklist from '../../../../components/Checklist.astro';
 import InShort from '../../../../components/InShort.astro';
 
 {/* prettier-ignore */}
-<p class="lead">Every `npm install` is a licensing decision, and most of the time it doesn't matter. It matters when you ship code that includes someone else's, when you copy code instead of depending on it, or when your GPL project pulls in an Apache library. Here's the matrix, and the tools that read your dependencies for you.</p>
+<p class="lead">Every dependency you add is a licensing decision, whether it comes from npm, PyPI, Maven Central or crates.io, and most of the time it doesn't matter. It matters when you ship code that includes someone else's, when you copy code instead of depending on it, or when your GPL project pulls in an Apache library. Here's the matrix, and the tools that read your dependencies for you.</p>
 
 <InShort>
 
@@ -31,7 +31,7 @@ import InShort from '../../../../components/InShort.astro';
 
 ## Depending, copying and modifying are three cases
 
-- **Depending** on a package, installed by the user or the build, means your source code stays yours. Obligations start when you distribute something that contains the dependency: a binary, a Docker image, a JavaScript bundle sent to every browser. Then its notices go with it.
+- **Depending** on a package, installed by the user or the build, means your source code stays yours. Obligations start when you distribute something that contains the dependency: a binary, a mobile app, a container image, a JavaScript bundle sent to every browser. Then its notices go with it.
 - **Copying** code into your repository means it keeps its license inside your project. Keep its notice, and mark it: an SPDX header on the file says which license applies where.
 - **Modifying** copyleft code means sharing your modified version under the same license when you distribute it.
 
