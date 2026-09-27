@@ -68,6 +68,7 @@ export const modules = [
 			'managing-contributions-and-community-engagement',
 			'saying-no',
 			'reviewing-pull-requests',
+			'governance',
 			'managing-project-dependencies',
 			'fostering-a-strong-and-inclusive-community',
 			'burnout-succession-and-the-end',
