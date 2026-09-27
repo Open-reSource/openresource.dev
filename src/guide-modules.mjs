@@ -28,6 +28,7 @@ export const modules = [
 			'source-code-hosting-platforms',
 			'finding-open-source-projects',
 			'reading-a-repository',
+			'open-source-etiquette',
 			'git-and-github-basics',
 		],
 	},
