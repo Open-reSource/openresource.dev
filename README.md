@@ -47,21 +47,20 @@ All commands are run from the root of the project, from a terminal:
 
 ## Screenshots
 
-Screenshots are taken the same way every time with `npm run shot`: a 1440×900 viewport at 2×, no browser chrome, saved to `public/images/` at 1440px wide max, as PNG or WebP when the PNG would be over 300 KB. It uses Playwright's Chromium (`npx playwright install chromium` the first time).
+Screenshots are taken the same way every time with `npm run shot`: a 1440×900 viewport at 2×, no browser chrome, always dark, saved to `public/images/` at 1440px wide max, as PNG or WebP when the PNG would be over 300 KB. Pages with a dark theme (GitHub) are shown in it; the others go through Chromium's auto dark mode. It uses Playwright's Chromium (`npx playwright install chromium` the first time).
 
 ```bash
 npm run shot -- https://github.com/mdn/content/contribute --out contributing-finding-open-source-projects-1 --clip main --box 'a:has-text("Read the contributing guidelines")' --box 'main a:text-is("good first issue")'
 ```
 
-| Option                | What it does                                                                                                           |
-| :-------------------- | :--------------------------------------------------------------------------------------------------------------------- |
-| `--out <name>`        | File name in `public/images/`, without extension: `<module>-<chapter>-<n>` for the guide, `<article>-<n>` for articles |
-| `--clip <selector>`   | Capture only this element                                                                                              |
-| `--box <selector>`    | Draw a box around each match, numbered when there are several (repeatable)                                             |
-| `--theme dark\|light` | The page's color scheme, `dark` by default. Boxes are gold on dark, dim cyan on light                                  |
-| `--wait <ms>`         | Wait after the page is loaded                                                                                          |
+| Option              | What it does                                                                                                           |
+| :------------------ | :--------------------------------------------------------------------------------------------------------------------- |
+| `--out <name>`      | File name in `public/images/`, without extension: `<module>-<chapter>-<n>` for the guide, `<article>-<n>` for articles |
+| `--clip <selector>` | Capture only this element                                                                                              |
+| `--box <selector>`  | Draw a gold box around each match, numbered when there are several (repeatable)                                        |
+| `--wait <ms>`       | Wait after the page is loaded                                                                                          |
 
-For GitHub pages that need an account, set `GH_SESSION` to the value of your `user_session` cookie on github.com. `tests/images.test.ts` fails on images over 1440px wide, over 1 MB, or PNGs over 300 KB.
+For GitHub pages that need an account, set `GH_SESSION` to the value of your `user_session` cookie on github.com. `tests/images.test.ts` fails on images over 1440px wide, over 1 MB, PNGs over 300 KB, or light images (mean brightness over 128/255). Images taken before the dark rule are listed in `tests/images.baseline.json`: retake one, then remove it from the list.
 
 ## Prose Checks
 
