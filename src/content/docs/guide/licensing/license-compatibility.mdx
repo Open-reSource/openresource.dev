@@ -1,0 +1,133 @@
+---
+title: 'License Compatibility: What You Can Combine, and the Tools That Check'
+description: Inbound and outbound licenses, depending versus copying, a compatibility matrix checked against the FSF and Apache, AGPL and SSPL, fonts and images, and the tools that read your dependencies.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Every dependency you add is a licensing decision, whether it comes from npm, PyPI, Maven Central or crates.io, and most of the time it doesn't matter. It matters when you ship code that includes someone else's, when you copy code instead of depending on it, or when your GPL project pulls in an Apache library. Here's the matrix, and the tools that read your dependencies for you.</p>
+
+<InShort>
+
+- Inbound is the license you receive code under; outbound is the one you ship under. What you ship has to satisfy every inbound license at once.
+- Depending on a package, copying its code and modifying it are three different cases. Copyleft obligations follow what you distribute.
+- Permissive code goes almost anywhere. Copyleft code only goes into projects under a compatible copyleft license.
+- The classic trap: Apache-2.0 code can't go into a GPL-2.0-only project. GPL-3.0 fixed it.
+- Run a license checker on your dependencies, and read every line that isn't MIT, ISC, BSD or Apache-2.0.
+
+</InShort>
+
+## Inbound, outbound, and the rule between them
+
+**Inbound** licenses are the ones you receive code under: your dependencies, the snippet you copied, the contributions you merge. **Outbound** is the license you publish your project under. The rule: what you distribute has to satisfy every inbound license at the same time.
+
+- Permissive inbound code (MIT, BSD, Apache-2.0) asks for little: keep its notices, and for Apache-2.0, state your changes. It fits under almost any outbound license.
+- Copyleft inbound code (GPL, AGPL) asks that the combined work be distributed under the same license. If your outbound license is permissive, you can't ship it inside.
+- Weak copyleft (MPL-2.0, LGPL-3.0) draws a smaller boundary: its files, or its library, stay under their license, and the rest of your project doesn't have to.
+
+## Depending, copying and modifying are three cases
+
+- **Depending** on a package, installed by the user or the build, means your source code stays yours. Obligations start when you distribute something that contains the dependency: a binary, a mobile app, a container image, a JavaScript bundle sent to every browser. Then its notices go with it.
+- **Copying** code into your repository means it keeps its license inside your project. Keep its notice, and mark it: an SPDX header on the file says which license applies where.
+- **Modifying** copyleft code means sharing your modified version under the same license when you distribute it.
+
+Whether linking to a GPL library makes your program a derived work is the question lawyers disagree on. The Free Software Foundation says it does; others argue that dynamic linking doesn't. The LGPL exists to make the answer explicit: linking is allowed. If the answer matters to your business, don't settle it from a guide.
+
+## The matrix
+
+Can code under the license in the column go into a project released under the license in the row? Checked against the [FSF's license list](https://www.gnu.org/licenses/license-list.html) (as of September 2026):
+
+| Project ↓ includes → | MIT, BSD | Apache-2.0 | MPL-2.0 | LGPL-3.0 | GPL-2.0-only | GPL-3.0 | AGPL-3.0 |
+| -------------------- | :------: | :--------: | :-----: | :------: | :----------: | :-----: | :------: |
+| MIT, BSD, Apache-2.0 |    ✓     |     ✓      |    ◐    |    ◐     |      ✗       |    ✗    |    ✗     |
+| GPL-2.0-only         |    ✓     |     ✗      |    ✓    |    ✗     |      ✓       |    ✗    |    ✗     |
+| GPL-3.0              |    ✓     |     ✓      |    ✓    |    ✓     |      ✗       |    ✓    |    ✓     |
+| AGPL-3.0             |    ✓     |     ✓      |    ✓    |    ✓     |      ✗       |    ✓    |    ✓     |
+
+✓: yes. ◐: as a separate part, whose files (MPL) or library (LGPL) keep their license. ✗: no.
+
+- **Apache-2.0 into GPL-2.0-only is the classic trap.** The FSF has never considered them compatible, because of Apache-2.0's patent termination and indemnification clauses ([Apache's explanation](https://www.apache.org/licenses/GPL-compatibility.html)). GPL-3.0 accepts Apache-2.0 code; the reverse doesn't work.
+- **GPL-2.0-only and GPL-3.0 don't mix**, but most GPL-2.0 code is "or later", and then it can be used under GPL-3.0.
+- **MPL-2.0 goes into GPL projects** through its section 3.3, unless the author marked it "Incompatible With Secondary Licenses".
+- **GPL-3.0 and AGPL-3.0 can be combined**: each part keeps its own license, and the AGPL's network clause applies to the combination.
+
+Companies often write their own version of this table. The Apache Software Foundation's [third-party license policy](https://www.apache.org/legal/resolved.html) sorts licenses in three groups: Category A (MIT, BSD, ISC and similar) can be included in Apache projects; Category B (MPL-2.0, EPL, the SIL Open Font License) only in binary form, labeled; Category X (GPL, LGPL, AGPL, the SSPL, Creative Commons non-commercial licenses) never.
+
+## The SaaS gap: AGPL, then SSPL
+
+The GPL's obligations start when you distribute a program. A company running GPL code as a web service distributes nothing, so it owes nothing: that's the gap. AGPL-3.0 closes it by asking you to offer your modified source to the users who interact with the program over a network.
+
+Some companies decided that wasn't enough. MongoDB moved to its Server Side Public License (SSPL) for releases from [October 16, 2018](https://www.mongodb.com/legal/licensing/server-side-public-license/faq): offering MongoDB as a service requires releasing the source of the whole service around it. The SSPL isn't an OSI-approved license, so MongoDB stopped being open source. Elastic followed with the SSPL and its own license in [January 2021](https://www.elastic.co/blog/licensing-change), then added AGPL-3.0 as an option in [August 2024](https://www.elastic.co/blog/elasticsearch-is-open-source-again), to be able to call Elasticsearch open source again.
+
+## Not everything in a repository is code
+
+Fonts, images and docs have their own licenses, and they mix differently:
+
+- **Fonts** usually come under the [SIL Open Font License](https://openfontlicense.org/) (`OFL-1.1`). You can bundle them with software, commercial or not, but not sell them on their own.
+- **Images and documentation**: CC-BY-4.0 asks for credit. CC-BY-SA-4.0 adds share-alike, a copyleft for content, and since [October 8, 2015](https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/), CC-BY-SA-4.0 material can go into GPL-3.0 works, one way.
+- **Non-commercial licenses aren't open source.** "NC" discriminates against a field of use, which the Open Source Definition forbids. This guide is an example: its code is MIT, its content is CC-BY-NC-SA-4.0. You can read it, share it and adapt it, but not use it commercially, and that makes the content not open source.
+
+## Let a tool read your dependencies
+
+Nobody reads 400 package licenses by hand. A checker lists them from your lock file. This site's production dependencies, on September 27, 2026:
+
+```bash
+npx license-checker-rseidelsohn --production --summary
+```
+
+```text
+├─ MIT: 309
+├─ ISC: 22
+├─ Apache-2.0: 12
+├─ BlueOak-1.0.0: 10
+├─ BSD-2-Clause: 10
+├─ BSD-3-Clause: 5
+├─ MPL-2.0: 5
+├─ OFL-1.1: 3
+├─ CC0-1.0: 2
+├─ LGPL-3.0-or-later: 1
+├─ Python-2.0: 1
+└─ MIT*: 1
+```
+
+Everything below BSD needed a look. The three `OFL-1.1` packages are this site's fonts. The `LGPL-3.0-or-later` one is libvips, the image library that sharp loads as a separate binary. The five `MPL-2.0` ones are build tools (Lightning CSS, resvg, Satori) used unmodified. And the `MIT*` is the site itself: the star means the tool guessed, because this site's `package.json` has no `license` field. [Choosing a License](/guide/licensing/choosing-a-license/#apply-it-in-three-places) says to add it.
+
+Then make it a rule. `--onlyAllow` fails on the first license outside the list, which is what a CI step needs:
+
+```bash
+npx license-checker-rseidelsohn --production --onlyAllow "MIT;ISC;BSD-2-Clause;BSD-3-Clause;Apache-2.0"
+```
+
+The same job, in other ecosystems:
+
+| Tool                                                                                                                                                                                            | For                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [license-checker-rseidelsohn](https://www.npmjs.com/package/license-checker-rseidelsohn)                                                                                                        | npm, the maintained fork of `license-checker`                         |
+| [pip-licenses](https://pypi.org/project/pip-licenses/)                                                                                                                                          | Python packages in an environment                                     |
+| [cargo-deny](https://github.com/EmbarkStudios/cargo-deny)                                                                                                                                       | Rust, with an allow list of licenses                                  |
+| [`npm sbom`](https://docs.npmjs.com/cli/v11/commands/npm-sbom)                                                                                                                                  | An SPDX or CycloneDX software bill of materials, for compliance teams |
+| [GitHub's dependency graph](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository) | An SPDX export of any repository's dependencies                       |
+
+For the files in your own repository, [REUSE](https://reuse.software/) checks that each one declares its license. Companies add commercial scanners on top, which also look for copied snippets.
+
+## Do this now
+
+<Checklist id="license-compatibility">
+
+- [ ] Run a license checker on your production dependencies.
+- [ ] Read every line that isn't MIT, ISC, BSD or Apache-2.0, and write down why it's fine, or replace the package.
+- [ ] Add an allow list to CI, so a new license shows up in a pull request.
+- [ ] List the non-code files in your repository (fonts, images, docs) and the license of each.
+
+</Checklist>
+
+## Go further
+
+- [The FSF's license list](https://www.gnu.org/licenses/license-list.html): every license it has reviewed, with its GPL compatibility.
+- [Apache's third-party license policy](https://www.apache.org/legal/resolved.html): a real compatibility policy, in categories, with the reasons.
+- [Choosing a License](/guide/licensing/choosing-a-license/): the outbound side, for your own project.
+- [REUSE](https://reuse.software/): declaring the license of every file, so tools don't have to guess.
