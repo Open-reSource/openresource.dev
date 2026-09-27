@@ -1,37 +1,105 @@
 ---
 title: Finding Open-Source Software to Use
-description: Where to find open-source software for a need, whether an app, a tool or a library, and how to tell if a project is worth relying on.
+description: Where to find an open-source app, tool or library, and what to check before you rely on it, from the license to the security Scorecard.
 date: 2023-06-04
 lastUpdated: 2026-09-27
 ---
 
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+
 {/* prettier-ignore */}
-<p class="lead">One of the easiest ways to discover open-source projects is by exploring various directories and lists available on the internet.</p>
+<p class="lead">Search where your platform already installs software from, not the whole web. Then check what's specific to using a project: whether its license allows what you'll do with it, whether releases keep coming without known vulnerabilities, and what its security practices look like. The repository itself gets five more minutes, in the next chapter.</p>
+
+<InShort>
+
+- Start in the registry or store you install from: npm, PyPI, Homebrew, Flathub, F-Droid.
+- Running an app and shipping a library aren't the same license question.
+- The latest release and the known advisories tell you whether it's safe to keep.
+- The OpenSSF Scorecard grades security practices. Read the red checks, not the total.
+- An archived repository or a recent license change is a reason to look twice.
+
+</InShort>
 
 Looking for a project to contribute to rather than software to use? See [Finding a Project to Contribute To](/guide/contributing/finding-open-source-projects/).
 
-These platforms provide curated collections of open-source projects, making it convenient for users to find projects based on different criteria. Some popular open-source directories and lists include:
+The running example is [Prettier](https://prettier.io/), a code formatter: a tool you install from npm.
 
-## GitHub Explore
+## Search where the software is installed from
 
-[GitHub Explore](https://github.com/explore) is an excellent resource to find popular and trending open-source projects across various domains. You can browse through categories, such as web development, machine learning, or data science, to discover exciting projects.
+Registries and stores list what you can actually install, with a version, a license and a download count. A web search lists what someone wrote about.
 
-## GitLab Explore
+| You need                   | Look first in                                                                                                                                                                                             |
+| :------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A library                  | Your ecosystem's registry: [npm](https://www.npmjs.com/), [PyPI](https://pypi.org/), [crates.io](https://crates.io/), [Packagist](https://packagist.org/), [Maven Central](https://central.sonatype.com/) |
+| A command-line tool        | Your package manager: [Homebrew](https://formulae.brew.sh/), apt, dnf, or the language registry                                                                                                           |
+| A desktop app on Linux     | [Flathub](https://flathub.org/). It lists proprietary apps too: check the license on the app page                                                                                                         |
+| An Android app             | [F-Droid](https://f-droid.org/), which only lists free and open-source apps                                                                                                                               |
+| A list of options by topic | [Awesome lists](https://github.com/sindresorhus/awesome) and [GitHub topics](https://github.com/topics)                                                                                                   |
 
-[GitLab Explore](https://gitlab.com/explore) offers a similar functionality to GitHub Explore and allows you to explore a vast array of open-source projects hosted on the GitLab platform.
+Two ecosystems can answer the same need: Prettier is on npm and on [Homebrew](https://formulae.brew.sh/formula/prettier). Install it from the one you already keep up to date.
 
-## Awesome Lists
+## The license question depends on what you'll do with it
 
-Awesome Lists are community-curated lists of open-source projects categorized by topic. These lists cover a wide range of domains, from programming languages to frameworks, libraries, and tools. You can find these lists on platforms like GitHub, or GitLab by searching for "awesome" followed by your area of interest (e.g., "awesome python" or "awesome data science").
+**Running an app or a tool**: any license approved by the Open Source Initiative lets you use it for any purpose, at work included. The [Open Source Definition](https://opensource.org/osd) forbids restricting fields of endeavor.
 
-## Package Registries
+**Shipping a library inside your code**: the license travels with your project. Permissive licenses (MIT, Apache-2.0, BSD) ask you to keep the notice. Copyleft licenses (GPL, AGPL) can require you to publish your own code under the same terms when you distribute it, or, for the AGPL, when people use it over a network.
 
-Every ecosystem has a registry you can search by keyword: [npm](https://www.npmjs.com/) for JavaScript, [PyPI](https://pypi.org/) for Python, [crates.io](https://crates.io/) for Rust, [Packagist](https://packagist.org/) for PHP. Download counts show how widely a package is used.
+Read the license as an SPDX identifier on the registry page, not as a badge in the README. [Open Source Insights](https://deps.dev/npm/prettier) shows it for every version, next to the known vulnerabilities and the packages that depend on it.
 
-## Open Hub
+<ContentImage
+	src="/images/getting-started-finding-open-source-projects-1.png"
+	width="720"
+	height="710"
+	alt="Open Source Insights for Prettier 3.9.9: no security advisories, MIT license, no dependencies, and the packages that depend on it."
+/>
 
-[Open Hub](https://www.openhub.net/) (formerly known as Ohloh) provides a comprehensive directory of open-source projects with detailed metrics, such as codebase size, contributors, and project activity. It offers a powerful search functionality to find projects based on various criteria.
+Prettier 3.9.9, published September 23, 2026: MIT, no known advisories, no dependencies of its own, and 154 million downloads on npm the week of September 19 (as of September 2026). **A package with no dependencies brings one supply chain into your project, not dozens.**
 
-## Check the repository before you rely on it
+For an app, look at where the binaries come from: the project's own release page, or a store that builds from the source, as F-Droid does.
 
-Before you install an app, adopt a tool or add a library to your dependencies, give its repository five minutes: the commit history, the health files, how issues are answered, the pull request queue, who writes the code. [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/) walks through each signal.
+## The Scorecard grades practices: read the checks
+
+The [OpenSSF Scorecard](https://scorecard.dev/) scans public repositories on a regular schedule and scores security practices from 0 to 10: code review, a security policy, pinned dependencies, signed releases, fuzzing. Open `scorecard.dev/viewer/?uri=github.com/<owner>/<repo>`, or find it on the project's deps.dev page.
+
+<ContentImage
+	src="/images/getting-started-finding-open-source-projects-2.png"
+	width="720"
+	height="450"
+	alt="OpenSSF Scorecard for prettier/prettier: 5.6 out of 10, with Code-Review at 0 and Maintained at 10."
+/>
+
+Prettier scores 5.6 (scan of September 21, 2026). The total (1) hides the story. Code-Review (2) is 0: in the recent changes Scorecard checked, it found no sign of a review by a second person before the merge. Maintained, Security-Policy and License are at 10. That's a fact about how the team works, not a vulnerability.
+
+Use the Scorecard to compare two candidates, and read the low checks that matter for your use. For a tool that runs in your CI, Token-Permissions and Pinned-Dependencies matter more than Fuzzing.
+
+## Three red flags
+
+- **The repository is archived.** GitHub shows a banner and the repository is read-only: nobody will fix the next bug.
+- **A single maintainer is asking for help.** "Looking for maintainers" in the README or a pinned issue isn't a reason to stay away. It's a reason to plan for the day you have to replace the project.
+- **The license changed.** Open the history of the `LICENSE` file. Terraform's shows [a commit on August 10, 2023](https://github.com/hashicorp/terraform/commit/b145fbc) moving it from the MPL to the Business Source License, which isn't open source. The community forked the last MPL version as [OpenTofu](https://opentofu.org/).
+
+## Then read the repository
+
+The license and the releases say whether you may and should use a project. The repository says whether someone will still be there next year: the commit history, the health files, how issues are answered, the pull request queue, who writes the code. [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/) walks through each signal.
+
+## Do this now
+
+<Checklist id="finding-open-source-software-to-use">
+
+- [ ] Search the registry, package manager or store you install from before a web search.
+- [ ] Read the license identifier and check it allows what you'll do: run it, or ship it inside your code.
+- [ ] Check the latest release date and the known advisories on the registry or on deps.dev.
+- [ ] Open the Scorecard and read the checks at 0 that matter for how you'll use the project.
+- [ ] Look at the history of the `LICENSE` file for a license change.
+- [ ] Give the repository five minutes with [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/).
+
+</Checklist>
+
+## Go further
+
+- [Open Source Insights](https://deps.dev/): license, versions, advisories and dependents of npm, PyPI, Maven, Go, Cargo and NuGet packages, one page per package.
+- [Scorecard checks](https://github.com/ossf/scorecard/blob/main/docs/checks.md): what each check measures and how it's scored, to read a 0 correctly.
+- [The Open Source Definition](https://opensource.org/osd): the ten criteria a license meets to be open source, and why "source-available" isn't.
+- [Finding a Project to Contribute To](/guide/contributing/finding-open-source-projects/): the same search, when you want to give back instead.
