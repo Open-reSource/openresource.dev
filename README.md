@@ -53,12 +53,13 @@ Screenshots are taken the same way every time with `npm run shot`: a 1440×900 v
 npm run shot -- https://github.com/mdn/content/contribute --out contributing-finding-open-source-projects-1 --clip main --box 'a:has-text("Read the contributing guidelines")' --box 'main a:text-is("good first issue")'
 ```
 
-| Option              | What it does                                                                                                           |
-| :------------------ | :--------------------------------------------------------------------------------------------------------------------- |
-| `--out <name>`      | File name in `public/images/`, without extension: `<module>-<chapter>-<n>` for the guide, `<article>-<n>` for articles |
-| `--clip <selector>` | Capture only this element                                                                                              |
-| `--box <selector>`  | Draw a gold box around each match, numbered when there are several (repeatable)                                        |
-| `--wait <ms>`       | Wait after the page is loaded                                                                                          |
+| Option              | What it does                                                                                                                                                                     |
+| :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--out <name>`      | File name in `public/images/`, without extension: `<module>-<chapter>-<n>` for the guide, `<article>-<n>` for articles                                                           |
+| `--clip <selector>` | Capture only this element                                                                                                                                                        |
+| `--margin <px>`     | With `--clip`: keep that much of the page around the element, so a box flush with its edge keeps its number, and capture from the full page, so a sticky header doesn't cover it |
+| `--box <selector>`  | Draw a gold box around each match, numbered when there are several (repeatable)                                                                                                  |
+| `--wait <ms>`       | Wait after the page is loaded                                                                                                                                                    |
 
 For GitHub pages that need an account, set `GH_SESSION` to the value of your `user_session` cookie on github.com. `tests/images.test.ts` fails on images over 1440px wide, over 1 MB, PNGs over 300 KB, or light images (mean brightness over 128/255). Images taken before the dark rule are listed in `tests/images.baseline.json`: retake one, then remove it from the list.
 

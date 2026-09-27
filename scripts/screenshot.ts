@@ -1,12 +1,14 @@
 // Screenshots for the guide and articles, taken the same way every time: 1440×900 at 2×, no browser chrome, always
 // dark, optional boxes around the elements to look at, saved at 1440px wide max in public/images/.
 //
-//   npm run shot -- <url> --out <slug>-<n> [--clip <selector>] [--box <selector>]... [--wait <ms>]
+//   npm run shot -- <url> --out <slug>-<n> [--clip <selector> [--margin <px>]] [--box <selector>]... [--wait <ms>]
 //
 // Always dark: the page gets `prefers-color-scheme: dark`, and Chromium's auto dark mode darkens the pages that have no
 // dark theme of their own (pages that do, like GitHub, keep theirs). --box draws a rounded 3px rectangle in brand gold
 // around each match, numbered when there are several, on the image after capture. GH_SESSION (the value of GitHub's
-// `user_session` cookie) signs the page in, for GitHub pages that need an account. The file is a PNG, or a WebP when the PNG would be over 300 KB.
+// `user_session` cookie) signs the page in, for GitHub pages that need an account. --margin keeps that many pixels of the
+// page around the clip, so a box on an element flush with the clip's edge keeps its number, and captures from the full page,
+// so a sticky header doesn't cover a clip taller than the viewport. The file is a PNG, or a WebP when the PNG would be over 300 KB.
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
@@ -18,6 +20,7 @@ const { values, positionals } = parseArgs({
 	options: {
 		out: { type: 'string' },
 		clip: { type: 'string' },
+		margin: { type: 'string', default: '0' },
 		box: { type: 'string', multiple: true, default: [] },
 		wait: { type: 'string', default: '0' },
 	},
@@ -26,7 +29,7 @@ const { values, positionals } = parseArgs({
 const [url] = positionals;
 if (!url || !values.out) {
 	console.error(
-		'Usage: npm run shot -- <url> --out <slug>-<n> [--clip <selector>] [--box <selector>]... [--wait <ms>]'
+		'Usage: npm run shot -- <url> --out <slug>-<n> [--clip <selector> [--margin <px>]] [--box <selector>]... [--wait <ms>]'
 	);
 	process.exit(1);
 }
@@ -64,10 +67,26 @@ try {
 	// Boxes are drawn on the image, not in the page: Chromium's auto dark mode would recolor anything added to the page.
 	const clip = values.clip ? page.locator(values.clip).first() : undefined;
 	if (clip) await clip.scrollIntoViewIfNeeded();
-	const origin = (clip && (await clip.boundingBox())) || { x: 0, y: 0 };
+	const margin = Number(values.margin);
+	const bounds = clip && (await clip.boundingBox());
+	const origin = bounds ? { x: bounds.x - margin, y: bounds.y - margin } : { x: 0, y: 0 };
 	const boxes = (await Promise.all(values.box.map((selector) => page.locator(selector).all()))).flat();
 	const rects = (await Promise.all(boxes.map((box) => box.boundingBox()))).filter((rect) => rect !== null);
-	const capture = clip ? await clip.screenshot() : await page.screenshot();
+	const scroll = await page.evaluate(() => ({ x: window.scrollX, y: window.scrollY }));
+	const capture =
+		bounds && margin > 0
+			? await page.screenshot({
+					fullPage: true,
+					clip: {
+						x: origin.x + scroll.x,
+						y: origin.y + scroll.y,
+						width: bounds.width + margin * 2,
+						height: bounds.height + margin * 2,
+					},
+				})
+			: clip
+				? await clip.screenshot()
+				: await page.screenshot();
 
 	const { width: pixels = 0, height: rows = 0 } = await sharp(capture).metadata();
 	const { color, ink } = annotation;

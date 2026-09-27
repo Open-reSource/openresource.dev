@@ -1,70 +1,301 @@
 ---
-title: Contributing to Open Source
-description: Connect, learn and give back to open source by contributing. Learn ways to contribute, best practices, and submitting a Pull Request. Start today!
+title: Your First Contribution, Step by Step
+description: One real first contribution to Bootstrap, from the issue to the merge, with every screen and command you'll see, and what to do when something goes wrong.
 date: 2023-04-08
-lastUpdated: 2023-04-08
+lastUpdated: 2026-09-27
 ---
 
-{/* prettier-ignore */}
-<p class="lead">Contributing to open source is a great way to learn new skills, make valuable connections, and give back to the community. This chapter will cover different ways to contribute to open source, best practices for contributing, and how to submit a Pull Request or patch to an open-source project.</p>
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
 
-## Different Ways to Contribute to Open Source
-
-There are many different ways to contribute to open-source projects, even if you're not a developer. Here are some of the most common ways:
-
-1. <strong>Code Contributions</strong>: This is the most obvious way to contribute to open-source projects. You can
-   write new code or improve existing code. Before starting to work on any issue, make sure to read the documentation
-   and familiarize yourself with the codebase. This will make your contributions more valuable and ensure that you're
-   following the project's guidelines.
-2. <strong>Documentation</strong>: Documentation is an essential part of any open-source project. Good documentation
-   helps new contributors get started and makes it easier for others to understand how the project works. You can
-   contribute by writing documentation, updating existing documentation, or translating documentation into different
-   languages.
-3. <strong>Testing</strong>: Testing is critical for ensuring that open-source projects work as expected. You can
-   contribute by writing tests for new or existing code, or by helping to triage and fix issues that are reported by
-   other users.
-4. <strong>Design</strong>: Open-source projects need good design just like any other software project. You can
-   contribute by creating or improving user interfaces, designing logos, or creating other visual assets for the
-   project.
-
-## Best Practices for Contributing to Open-Source Projects
-
-When contributing to open-source projects, there are several best practices to keep in mind. Here are some of the most important:
-
-1. <strong>Follow the Code of Conduct</strong>: Every open-source project has a code of conduct that outlines the
-   expected behavior of contributors. Make sure to read and follow the code of conduct to ensure that your contributions
-   are respectful and professional.
-2. <strong>Communicate Clearly and Respectfully</strong>: Good communication is key to successful open-source
-   contributions. Make sure to be clear and concise in your communications, and be respectful of others' opinions and
-   perspectives.
-3. <strong>Test Your Changes</strong>: Before submitting a Pull Request or patch, make sure to test your changes
-   thoroughly. This will help ensure that your code works as expected and doesn't introduce any new issues.
-4. <strong>Be Patient and Persistent</strong>: Contributing to open source can be challenging, especially if you're new
-   to the project or the community. Be patient and persistent, and don't be afraid to ask for help or clarification if
-   you need it. Open-source projects are maintained by volunteers, so it may take some time for your contributions to be
-   reviewed and merged.
-
-## How to Submit a Pull Request or Patch to an Open-Source Project
-
-Submitting a Pull Request or patch to an open-source project can seem daunting at first, but it's actually a straightforward process. Here are the general steps you'll need to follow:
-
-1. <strong>Fork the Project</strong>: First, fork the project on [GitHub](https://github.com) or another version control
-   platform. This will create a copy of the project that you can work on without affecting the original codebase.
-2. <strong>Clone the Project</strong>: Next, clone the project to your local machine. This will create a copy of the
-   project on your computer that you can work on.
-3. <strong>Make your Changes</strong>: Next, make your changes to the code or documentation as needed. Make sure to
-   follow the project's guidelines and test your changes thoroughly.
-4. <strong>Submit a Pull Request or Patch</strong>: Once you're ready to submit your changes, create a Pull Request or
-   patch and submit it to the project. Make sure to include a clear description of your changes and why they're valuable
-   to the project.
-5. <strong>Wait for Feedback</strong>: After submitting your Pull Request or patch, you'll need to wait for feedback
-   from the project maintainers or other contributors. Be patient and responsive to feedback, and be willing to make
-   changes as needed to ensure that your contributions are valuable to the project.
-6. <strong>Merge Your Changes</strong>: Once your Pull Request or patch has been reviewed and accepted, the project
-   maintainers will merge your changes into the main codebase. Congratulations, you've now contributed to an open-source
-   project!
-
----
+{/* cspell:ignore indivdual */}
 
 {/* prettier-ignore */}
-<p class="lead">Contributing to open source is a great way to learn new skills, make valuable connections, and give back to the community. Whether you're a developer, a designer, a writer, or just someone who's passionate about open source, there are many different ways to contribute. By following best practices and submitting high-quality contributions, you can make a real difference in the open source community. So why not get started today and start contributing to your favorite open-source projects?</p>
+<p class="lead">This is one first contribution to Bootstrap, from the issue to the merge, with every screen you'll see. It fixed one line of documentation and took ten days, most of them waiting for a review. We replayed the local steps on the same commit, so the commands and their output are real.</p>
+
+<InShort>
+
+- Start from an issue and the project's `CONTRIBUTING.md`, not from the code.
+- Run the project before you change it. Warnings during the install are normal; a command that doesn't start is not.
+- Keep the change as small as the issue. Run the checks CI will run, before you push.
+- A PR description answers four questions: what, why, how you tested it, and what it looks like.
+- Reply to every review comment. If nothing happens for two weeks, ask once, politely, what's missing.
+
+</InShort>
+
+The spine of this chapter is [twbs/bootstrap#41691](https://github.com/twbs/bootstrap/pull/41691), stefan-korn's first pull request to Bootstrap. It had no review back-and-forth, so the review steps come from [twbs/bootstrap#41143](https://github.com/twbs/bootstrap/pull/41143), Kelketek's first one. Both were merged by Julien, who maintains Bootstrap and this guide.
+
+| Step                | #41691 (stefan-korn)   | #41143 (Kelketek)                |
+| ------------------- | ---------------------- | -------------------------------- |
+| Pull request opened | August 27, 2025        | January 7, 2025                  |
+| First review        | September 6, 2025      | January 12, 2025                 |
+| Merged              | September 6, 2025      | April 8, 2025                    |
+| Change              | 1 file, 1 line changed | 1 file, 2 lines added, 1 removed |
+
+## Start from an issue, yours or someone else's
+
+stefan-korn was reading the Tables page of the Bootstrap docs and noticed the code example for colored tables left out the `.table` class. Before writing any code, they opened an issue with the project's template: prerequisites checked (1), the problem in one sentence with a link to the page (2). The pull request that fixed it shows up in the issue's sidebar (3).
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-1.webp"
+	width="720"
+	height="600"
+	alt="Bootstrap issue 41690: the template's three prerequisites checked, a one-sentence description, and the linked pull request in the sidebar."
+/>
+
+The issue does two things for you. It checks with the maintainers that the bug is a bug, and it gives your pull request something to close. If an issue already exists, read its comments before you start: someone may be on it, and the maintainers may have said how they want it fixed. [Finding a Project to Contribute To](/guide/contributing/finding-open-source-projects/) covers how to pick one.
+
+## Read CONTRIBUTING.md before you touch the code
+
+Every project that wants contributions has a `CONTRIBUTING.md`, at the root or in `.github/`. Bootstrap's says when to ask first and when to just send the pull request:
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-2.webp"
+	width="720"
+	height="450"
+	alt="The Pull requests section of Bootstrap's CONTRIBUTING.md: ask first before any significant pull request, go ahead for trivial things."
+/>
+
+A one-line docs fix is a trivial thing: no need to ask. A new component is not. The same file lists the commands to run and the branch to target.
+
+**The guide can be out of date, so check it against the repository.** Bootstrap's `CONTRIBUTING.md` sends docs contributors to `site/content/docs/`, but the file stefan-korn edited lives in `site/src/content/docs/` (as of September 2026). Search the repository for a sentence from the page you want to fix, and you'll land on the right file.
+
+## Say you're on it only if the project wants you to
+
+Some projects want a comment ("I'll take this, here's my plan") before you start, and assign the issue. Others never assign, and the first good pull request wins. Bootstrap is in the second group, and stefan-korn opened the pull request the same day as the issue.
+
+Look for the rule in `CONTRIBUTING.md`. If there's none, a short comment with your plan costs nothing, but "Can I work on this?" with no plan doesn't help anyone. [Can I Take This Issue?](/articles/can-i-take-this-issue/) explains both sides.
+
+## Fork, clone, branch: three commands and one button
+
+You can't push to Bootstrap, so you push to your own copy of it: the fork. Click **Fork** at the top of the repository page, keep the defaults, then clone your fork and create a branch:
+
+```bash
+git clone https://github.com/<your-username>/bootstrap.git
+cd bootstrap
+git remote add upstream https://github.com/twbs/bootstrap.git
+git switch -c docs-table-variants-class
+```
+
+- `upstream` points to the original repository, so you can pull its latest changes later.
+- The branch name says what it does. Never work on `main`: you'll need it clean to sync your fork.
+- Bootstrap's full history is 226,404 objects and 328 MB (as of September 2026). The clone took two minutes on our connection.
+
+The [GitHub docs on forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) show the Fork screen if you've never seen it.
+
+## Run the project before you change it
+
+Install the dependencies and start the documentation site, as the README says:
+
+```bash
+npm install
+npm run docs-serve
+```
+
+On our machine, the install printed five `EBADENGINE` warnings, 13 deprecation warnings, and this:
+
+```text
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: '@jest/diff-sequences@30.0.1',
+npm warn EBADENGINE   required: { node: '^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0' },
+npm warn EBADENGINE   current: { node: 'v23.1.0', npm: '11.19.1' }
+npm warn EBADENGINE }
+added 1284 packages in 5s
+npm warn install-scripts 3 packages have install scripts not yet covered by allowScripts:
+npm warn install-scripts   esbuild@0.25.9 (postinstall: node install.js)
+npm warn install-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn install-scripts   sharp@0.33.5 (install: node install/check)
+```
+
+None of this stopped the docs from starting on `http://localhost:9001`. Warnings aren't errors. What matters is whether the command the README gives you works.
+
+- `EBADENGINE` means your Node.js version isn't one the project supports. Node 23 is an odd-numbered release; use the version the project's CI uses. Bootstrap's docs workflow ran on Node 22 at the time; today it reads the version from `.nvmrc` (24.18.0, as of September 2026), and so can you with `nvm use`.
+- The `install-scripts` warning comes from recent npm versions, which don't run a package's install scripts until you approve them. If the project breaks because of it, `npm install-scripts approve <package>` lets the script run.
+- When the command itself fails, search the project's issues for the error message before you open a new one. Someone has usually hit it before.
+
+## Make the smallest change that fixes the issue
+
+The fix was one line in `site/src/content/docs/content/tables.mdx`:
+
+```diff
+- ...getData('theme-colors').map((themeColor) => `<table class="table-${themeColor.name}">...</table>`),
++ ...getData('theme-colors').map((themeColor) => `<table class="table table-${themeColor.name}">...</table>`),
+```
+
+The docs server reloads, and the example on your machine now shows the class:
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-3.webp"
+	width="720"
+	height="634"
+	alt="The table variants code example running locally, every table tag now starting with class table before the color class."
+/>
+
+Don't fix the typo two paragraphs down, and don't reformat the file. Each extra change is one more thing the reviewer has to check, and a reason to wait. Open a second pull request for it.
+
+Then run the checks CI will run. `CONTRIBUTING.md` says `npm run test`, which runs everything and takes a while. For a docs change, the checks that matter are formatting and spelling:
+
+```bash
+npx prettier --config site/.prettierrc.json -c site/src/content/docs/content/tables.mdx
+npx cspell --config .cspell.json site/src/content/docs/content/tables.mdx
+```
+
+```text
+All matched files use Prettier code style!
+CSpell: Files checked: 1, Issues found: 0 in 0 files.
+```
+
+## Write the commit message the maintainer would have written
+
+stefan-korn's commit was `twbs#41690: [docs] Tables doc - Variants code examples miss table class`: the issue's title. It describes the bug, not the change. When Julien merged, he squashed the commits and rewrote the message:
+
+```text
+Docs: Add `.table` class to color tables example (#41691)
+```
+
+Write that one yourself. Say what the commit does, in the imperative, with the area first if the project uses a prefix (`git log --oneline` shows the habit). Put the issue reference in the body:
+
+```bash
+git commit -m "Docs: add the .table class to the table variants example" -m "Fixes #41690"
+```
+
+## Push, then fill in every section of the pull request template
+
+```bash
+git push -u origin docs-table-variants-class
+```
+
+GitHub prints a link to open the pull request; the repository page shows a **Compare & pull request** button too. Bootstrap's template asks for a description, the motivation, the type of change and a checklist. stefan-korn linked the issue (1) and ticked only what they had done (2):
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-4.png"
+	width="720"
+	height="552"
+	alt="The description of pull request 41691: fixes 41690, and a checklist with contributing guidelines and documentation ticked, lint and tests not."
+/>
+
+`fixes #41690` in the description closes the issue when the pull request merges. The **Files changed** tab shows what the reviewer will read: one file (1), one line (2).
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-5.png"
+	width="720"
+	height="152"
+	alt="The Files changed tab of pull request 41691: tables.mdx, one line removed and one added with the table class."
+/>
+
+> [!TIP]
+> Every pull request description answers four questions: **what** changed, **why**, **how you tested it**, and **what it looks like** (a screenshot for anything visual). "fixes #41690" worked here because the issue already said what and why, and the change was one line. The bigger the change, the more the description has to carry. Not sure about your approach? Open the pull request as a **draft**: maintainers can comment on the direction before you polish it.
+
+## A red check is a to-do list, not a verdict
+
+Once the pull request is open, CI runs the project's checks on it. #41691 passed all 14 on the first try. Yours might not, so we made it fail on purpose: one typo in the first sentence of the Variants section, then the spell check Bootstrap's CI runs.
+
+```text
+site/src/content/docs/content/tables.mdx:19:55 - Unknown word (indivdual) fix: (individual)
+CSpell: Files checked: 1, Issues found: 1 in 1 file.
+```
+
+On GitHub, the failed check shows up in the pull request with a red cross; **Details** opens the same output. It gives the file, the line, the column and the fix. Fix it on your branch, commit, push: the pull request updates and CI runs again. No need to open a new one, and no need to apologize.
+
+If a check fails on something you didn't touch, say so in a comment. Flaky tests and broken `main` branches happen, and maintainers would rather know.
+
+## Reply to every review comment, then let the maintainer resolve it
+
+Kelketek's pull request clarified a comment in Bootstrap's Sass docs. Five days later, mdo, Bootstrap's co-creator, suggested a better wording, as a suggestion block:
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-6.png"
+	width="720"
+	height="211"
+	alt="A review comment by mdo with a Suggested change block replacing one line of the Sass docs."
+/>
+
+As the author, you see a **Commit suggestion** button under it: one click, and the change is a commit on your branch. mdo couldn't apply it himself:
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-7.png"
+	width="720"
+	height="114"
+	alt="mdo's reply: Shucks, I don't have edit access so can't merge this suggestion myself."
+/>
+
+**Leave "Allow edits by maintainers" ticked when you open the pull request.** It lets maintainers push small fixes to your branch instead of asking you. Kelketek had opened the pull request from a fork owned by an organization, where the option doesn't exist ([GitHub's docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)): fork to your personal account for your contributions.
+
+Kelketek applied the suggestion by hand the next day and said so: "I've squashed in your suggestion and re-pushed!". Reply to every comment, even with "Done", so the reviewer knows what to look at again. Review comments come in three kinds:
+
+| Kind     | Looks like                              | What to do                                                    |
+| -------- | --------------------------------------- | ------------------------------------------------------------- |
+| Nit      | "nit: missing period"                   | Fix it. It's small by definition.                             |
+| Question | "Why not use the existing helper?"      | Answer it. Change the code only if the answer is "no reason". |
+| Request  | A suggestion block, "Please add a test" | Do it, or explain why not and let the maintainer decide.      |
+
+## After two weeks of silence, ask once
+
+Kelketek then waited. Nothing happened for 80 days, until this:
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-8.png"
+	width="720"
+	height="114"
+	alt="Kelketek's comment on April 3, 2025: at-mdo, is there anything else you need me to do here?"
+/>
+
+One line, no guilt, a question the maintainer can answer. Julien replied two days later, and the pull request was merged three days after that. Most projects are maintained on evenings and weekends: silence usually means nobody has had time, not that your work is unwanted.
+
+- Wait two weeks before the first ping, less if `CONTRIBUTING.md` says so.
+- Ask what's missing rather than when it'll be merged.
+- Ping once. If nothing happens after that, move on to another issue: the pull request stays open, and someone may pick it up later.
+
+## Merged: clean up and sync your fork
+
+On #41691, the review was an approval and a sentence explaining the decision:
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-9.png"
+	width="720"
+	height="220"
+	alt="Julien's approval of pull request 41691, with a comment agreeing to add the table class and thanking stefan-korn."
+/>
+
+Then the merge, with the checks that ran on it:
+
+<ContentImage
+	src="/images/contributing-contributing-to-open-source-10.png"
+	width="720"
+	height="101"
+	alt="The merge event of pull request 41691: commit a715174 merged into twbs:main on September 6, 2025, 14 checks passed."
+/>
+
+The issue closed on its own, and stefan-korn's comments in the repository now carry a **Contributor** badge. Clean up:
+
+```bash
+git switch main
+git pull upstream main
+git push origin main
+git branch -D docs-table-variants-class
+```
+
+- `git branch -d` refuses to delete a branch that was squashed, because its commits aren't on `main` under the same hashes. `-D` forces it: GitHub has the pull request.
+- **Delete branch** on the merged pull request removes the copy on your fork.
+- Your next contribution starts from an up-to-date `main`, with a new branch.
+
+## Do this now
+
+<Checklist id="contributing-to-open-source">
+
+- [ ] Find the `CONTRIBUTING.md` of the project you want to contribute to, and read the section on pull requests.
+- [ ] Check which Node.js (or Python, or Go) version its CI uses, often in `.nvmrc` or the workflow files, and install that one.
+- [ ] Clone it and run the command its README gives you, before you change anything.
+- [ ] Before you push, run the checks CI will run: the workflows in `.github/workflows/` list them.
+- [ ] Open your pull request from a fork on your personal account, with "Allow edits by maintainers" ticked.
+- [ ] Put a reminder in your calendar two weeks after you open it.
+
+</Checklist>
+
+## Go further
+
+- [twbs/bootstrap#41691](https://github.com/twbs/bootstrap/pull/41691) and [#41143](https://github.com/twbs/bootstrap/pull/41143): the two pull requests in this chapter, to read in full.
+- [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/): check the project is alive before you spend an evening on it.
+- [Can I Take This Issue?](/articles/can-i-take-this-issue/): why some projects assign issues and others never do.
+- [About pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews): every button a reviewer can press, from GitHub's docs.
