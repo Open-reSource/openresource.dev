@@ -102,7 +102,7 @@ export default defineConfig({
 				status: false,
 				edit: { repo: 'Open-reSource/openresource.dev' },
 				sidebar: [
-					{ label: 'Guide', items: ['guide'] },
+					{ label: 'Guide', items: ['guide', 'guide/checklists'] },
 					...modules.map(guide),
 					{
 						label: 'Resources',

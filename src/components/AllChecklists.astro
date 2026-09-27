@@ -1,0 +1,45 @@
+---
+// Every chapter's "Do this now" checklist on one page, by module, in sidebar order, each linking back to its chapter.
+// The lists are read from the chapters' MDX and rendered with the same `id`: a box ticked here is ticked there too.
+// Stubs (planned, not written) stay out, as in the sidebar.
+import { getCollection } from 'astro:content';
+import { markdownToHtml } from 'satteri';
+import { checklistsIn } from '../checklists.mjs';
+import { modules } from '../guide-modules.mjs';
+import Checklist from './Checklist.astro';
+
+const docs = new Map((await getCollection('docs')).map((doc) => [doc.id, doc]));
+const sections = modules
+	.map(({ dir, label, pages }) => ({
+		dir,
+		label,
+		chapters: pages
+			.map((page) => docs.get(`guide/${dir}/${page}`))
+			.filter((doc) => doc && doc.data.status !== 'stub')
+			.flatMap((doc) =>
+				checklistsIn(doc!.body ?? '').map(({ id, list }) => ({
+					id,
+					href: `/${doc!.id}/`,
+					title: doc!.data.title,
+					html: markdownToHtml(list, { features: { smartPunctuation: true } }).html,
+				}))
+			),
+	}))
+	.filter(({ chapters }) => chapters.length > 0);
+---
+
+{sections.map(({ dir, label, chapters }) => (
+	<section>
+		<h2 id={dir}>{label}</h2>
+		{chapters.map(({ id, href, title, html }) => (
+			<>
+				<h3 id={id}>
+					<a href={`${href}#do-this-now`}>{title}</a>
+				</h3>
+				<Checklist id={id}>
+					<Fragment set:html={html} />
+				</Checklist>
+			</>
+		))}
+	</section>
+))}
