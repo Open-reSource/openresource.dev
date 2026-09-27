@@ -1,0 +1,131 @@
+---
+title: 'Saying No: Five Replies That Keep Contributors Coming Back'
+description: Why no is the default answer to a feature request, how to write your non-goals down, and five saved replies for the five kinds of no, with real examples.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">The most useful word in maintenance is "no", and the second is "because". A project that accepts everything becomes nothing in particular, and a maintainer who can't decline burns out first. Here's how to say it so that people keep contributing.</p>
+
+<InShort>
+
+- Every feature you merge is code you maintain for years. No is the default; yes needs a reason.
+- Write your non-goals in the README. A no then points to a page, not to your mood.
+- There are five kinds of no: out of scope, not now, not like this, not ever, and not me. Save a reply for each.
+- Ask what problem a request solves before you judge the solution.
+- Close what you won't do, with the reason. And say yes fast where you can.
+
+</InShort>
+
+## Every yes is a promise to maintain it
+
+A merged feature is not done. It's documentation to keep current, tests to keep green, bug reports to answer and a behavior you can't remove without breaking someone. The contributor who wrote it may never come back; you'll own it for years.
+
+Projects that last say it out loud. Prettier's [option philosophy](https://prettier.io/docs/option-philosophy) explains that its options exist for historical reasons, and that "we won't add more of them". esbuild's [FAQ](https://esbuild.github.io/faq/#production-readiness) lists what it won't build into its core, and says scope is limited to what its maintainer wants to build and maintain. Neither is rude: both save every future requester a wait.
+
+## Write your non-goals down
+
+A non-goals section turns "I don't want to" into "the project doesn't do this, see the README". It takes three lines. mio, the I/O library under Tokio, has one in its [README](https://github.com/tokio-rs/mio#non-goals): file operations, thread pools and timers are "left to the user or higher-level libraries".
+
+```md
+## Non-goals
+
+- A graphical interface. Use the CLI, or one of the front ends listed in the wiki.
+- Plugins in the core. The plugin API is there so that they can live elsewhere.
+```
+
+Link it from `CONTRIBUTING.md` and from the feature request template. The best time to write it is before the first request you'll have to decline.
+
+## Five kinds of no, with the reply to save
+
+GitHub lets you store [saved replies](https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/about-saved-replies) in your settings and insert them from any comment box. Write these five once, then adapt a line each time: a reply that is obviously pasted reads as a door closing.
+
+### Out of scope: it's a good idea for something else
+
+The request makes sense, just not in this project. Say where it fits instead. mdo, Bootstrap's co-creator, answered a request for more `display: table-*` utilities ([twbs/bootstrap#41719](https://github.com/twbs/bootstrap/issues/41719)) by pointing to the utility API that lets anyone add them, and explaining that Bootstrap's defaults aim at what most people need.
+
+```md
+Thanks for the idea. It's outside what this project aims to do: see the non-goals in the README (link). It would work well as a plugin, and the plugin docs show how to write one (link). I'm closing this, but if you build it, post the link here: others will find it.
+```
+
+### Not now: we'd take it, nobody has time
+
+The feature fits, but no maintainer will write it soon. Say so, and let someone else pick it up.
+
+```md
+This fits the project, but none of us will get to it before the next major version. I've labeled it `help wanted`: if you'd like to work on it, comment here with your approach first, and we'll review it.
+```
+
+### Not like this: the right problem, the wrong fix
+
+A pull request that solves a real problem the wrong way deserves a precise no: what's wrong, and what you would merge.
+
+```md
+Thanks for this. The problem is real, but this approach (reason in one sentence). What we'd merge instead: (what a good fix looks like). If you want to rework it, I'll review it. If not, no problem: I'll leave the issue open for someone else.
+```
+
+### Not ever: stop waiting
+
+Some requests contradict what the project is. Close them as **not planned**, with the reason and the workaround, so the reporter stops waiting. On [twbs/bootstrap#41563](https://github.com/twbs/bootstrap/issues/41563), a request for per-component CSS files, Julien first showed how to build exactly that from the Sass sources. mdo closed it three months later as "won't implement for now": the workaround was already in the thread.
+
+```md
+We won't do this, because (reason in one sentence). You can get the same result with (workaround, link). I'm closing this as not planned so that nobody waits for it, and I've added it to the FAQ for the next person who asks.
+```
+
+### Not me: nobody here can review this
+
+Sometimes the no is about you: the pull request touches an area nobody on the team knows well enough to review safely. Say it, and turn it into a call for help.
+
+```md
+I don't know (area) well enough to review this safely, and nobody else on the team does either. If someone reading this has that experience, a review would help. And if you'd like to help maintain the (area) part, I'd welcome it: (link to how people join the team).
+```
+
+## Ask what the request is for
+
+A feature request is someone's solution to their problem. Before you judge the solution, ask about the problem: there may be a way that already works, or a better fix. When someone asked for utility classes to align placeholder text differently from the value ([twbs/bootstrap#41926](https://github.com/twbs/bootstrap/issues/41926)), mdo's reply began: "You'll have to tell me more about why".
+
+```md
+What are you trying to do when you need this? A short example of your use case would help us see whether there's a way that already works, or what the right fix would be.
+```
+
+Then ask who else needs it. If you're open to a feature once enough people want it, say so in the issue, and sort by 👍 to check: `sort:reactions-+1-desc` in the issue search ([Open Source Etiquette](/guide/getting-started/open-source-etiquette/#react-with--dont-comment-1) explains why reactions beat comments).
+
+## Close what you won't do
+
+**"Won't fix" is not an insult. It tells the reporter to stop waiting.** The insult is the issue that stays open for four years without an answer. On VS Code, 286 open issues older than four years had no comment at all (as of September 2026).
+
+GitHub has had a **Close as not planned** option [since May 2022](https://github.blog/changelog/2022-05-19-the-new-github-issues-may-19th-update/): it tells everyone the issue was read and declined, not fixed. Use it, with one sentence of reason. When the same request keeps coming back, put the answer in an FAQ and link it.
+
+## When the reply is angry
+
+A no sometimes gets an angry answer. Three rules:
+
+1. **Don't answer within the hour.** The reply you'd write now is the one you'd regret.
+2. **Answer the content once**, calmly, if there is any. Repeat the reason, not the argument.
+3. **Then stop.** If it goes on, point to the code of conduct, and [lock the conversation](https://docs.github.com/en/communities/moderating-comments-and-conversations/locking-conversations) as "too heated". Nobody is owed a debate.
+
+## Say yes fast where you can
+
+A no lands better from a project that visibly says yes. Merge the small docs fix the day it arrives, thank people by name in release notes, and label the issues you'd welcome as `good first issue`. People who have seen you say yes will believe your no has a reason.
+
+## Do this now
+
+<Checklist id="saying-no">
+
+- [ ] Write a "Non-goals" section in your README, even three lines, and link it from `CONTRIBUTING.md`.
+- [ ] Save the five replies above in your GitHub settings, reworded in your own voice.
+- [ ] Find the oldest open issue you know you won't do, and close it as not planned, with the reason.
+- [ ] Label `help wanted` the issues you'd merge but won't write yourself.
+
+</Checklist>
+
+## Go further
+
+- [Prettier's option philosophy](https://prettier.io/docs/option-philosophy): a no written once, for every future request.
+- [About saved replies](https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/about-saved-replies): how to create them and insert them from GitHub's comment box.
+- [Open Source Etiquette](/guide/getting-started/open-source-etiquette/): the same conversations, from the contributor's side.
+- [Can I Take This Issue?](/articles/can-i-take-this-issue/): the question maintainers answer most, and how to answer it once.

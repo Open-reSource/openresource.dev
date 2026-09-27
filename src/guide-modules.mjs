@@ -66,6 +66,7 @@ export const modules = [
 		pages: [
 			'introduction-to-open-source-project-maintenance',
 			'managing-contributions-and-community-engagement',
+			'saying-no',
 			'managing-project-dependencies',
 			'fostering-a-strong-and-inclusive-community',
 			'ensuring-project-sustainability',
