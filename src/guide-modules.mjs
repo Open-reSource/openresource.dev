@@ -64,7 +64,7 @@ export const modules = [
 	{
 		label: 'Licensing & Legal',
 		dir: 'licensing',
-		pages: ['choosing-a-license', 'license-compatibility', 'relicensing', 'cla-vs-dco'],
+		pages: ['choosing-a-license', 'license-compatibility', 'relicensing', 'cla-vs-dco', 'non-code-licenses'],
 	},
 	{
 		label: 'Maintaining',

@@ -1,0 +1,139 @@
+---
+title: "Licenses for Things That Aren't Code: Docs, Fonts, Hardware, Data and Models"
+description: Creative Commons for docs and images, the OFL for fonts, CERN-OHL for hardware, ODbL and CC0 for data, and what "open" means for model weights. What to use, and what's open.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">A software license is written for code, and it fits a blog post, a font, a dataset or a circuit board badly. Each of them has its own family of licenses, with its own traps: Creative Commons' "NonCommercial" option isn't open, a font can't be sold on its own, and most model weights come with use restrictions. Here's what to use for each, and whether the result counts as open.</p>
+
+<InShort>
+
+- Docs and images: CC BY 4.0 or CC BY-SA 4.0. Code samples in the docs get a code license, because readers copy them.
+- Anything with NonCommercial (NC) or NoDerivatives (ND) isn't open. That includes this guide's content, under CC BY-NC-SA 4.0.
+- Fonts: the SIL Open Font License. Hardware: one of the three CERN-OHL v2 licenses. Data: CC BY 4.0, ODbL or CC0.
+- Model weights under Apache-2.0 or MIT are openly licensed. The OSI's definition of open-source AI also asks for the code and enough information about the training data to rebuild the model.
+
+</InShort>
+
+## Pick by what you publish
+
+| You publish                       | Use                                                                                    | Open, as of September 2026                                                                    |
+| --------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Code                              | MIT, Apache-2.0, GPL-3.0… ([Choosing a License](/guide/licensing/choosing-a-license/)) | Yes, if the OSI approved it                                                                   |
+| Documentation, articles, images   | CC BY 4.0, or CC BY-SA 4.0 to keep adaptations open                                    | Yes. Any NC or ND variant: no                                                                 |
+| Code samples in the documentation | CC0 1.0, or the project's code license                                                 | Yes                                                                                           |
+| Fonts                             | SIL Open Font License 1.1 (`OFL-1.1`)                                                  | Yes, approved by the OSI                                                                      |
+| Hardware designs                  | CERN-OHL-P-2.0, -W-2.0 or -S-2.0                                                       | Yes, all three approved by the OSI                                                            |
+| Data                              | CC BY 4.0, ODbL 1.0, or CC0 1.0                                                        | Yes, all three conform to the Open Definition                                                 |
+| Model weights                     | Apache-2.0 or MIT, with the code and training data information                         | The weights are openly licensed; the model is open source if it meets the OSI's AI definition |
+
+The rest of this chapter is the reasoning behind each row.
+
+## Six Creative Commons licenses, and two of them are open
+
+[Creative Commons](https://creativecommons.org/about/cclicenses/) combines four conditions into six licenses, all at version 4.0 since [November 25, 2013](https://creativecommons.org/2013/11/25/ccs-next-generation-licenses-welcome-version-4-0/), plus CC0 to waive everything:
+
+| License           | Credit the author | Adaptations under the same license | Commercial use | Adaptations allowed | Open |
+| ----------------- | :---------------: | :--------------------------------: | :------------: | :-----------------: | :--: |
+| `CC0-1.0`         |         –         |                 –                  |       ✓        |          ✓          |  ✓   |
+| `CC-BY-4.0`       |         ✓         |                 –                  |       ✓        |          ✓          |  ✓   |
+| `CC-BY-SA-4.0`    |         ✓         |                 ✓                  |       ✓        |          ✓          |  ✓   |
+| `CC-BY-NC-4.0`    |         ✓         |                 –                  |       ✗        |          ✓          |  ✗   |
+| `CC-BY-NC-SA-4.0` |         ✓         |                 ✓                  |       ✗        |          ✓          |  ✗   |
+| `CC-BY-ND-4.0`    |         ✓         |                 –                  |       ✓        |          ✗          |  ✗   |
+| `CC-BY-NC-ND-4.0` |         ✓         |                 –                  |       ✗        |          ✗          |  ✗   |
+
+"Open" here means both lists agree: Creative Commons counts only CC BY, CC BY-SA and CC0 as [free cultural works](https://creativecommons.org/public-domain/freeworks/), and the [Open Definition](https://opendefinition.org/licenses/) lists only those among its conformant licenses. It's the same rule as the Open Source Definition for code: no restriction on who may use the work, or for what.
+
+**NonCommercial is where most people trip.** The legal code allows uses "not primarily intended for or directed towards commercial advantage or monetary compensation" ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode.en)), and Creative Commons needed a [whole page](https://wiki.creativecommons.org/wiki/NonCommercial_interpretation) to interpret it. A company's internal wiki, a paid course, a book: each is a question. This guide is an example. Its code is MIT, its content is CC BY-NC-SA 4.0: free to read, share and adapt, but not for commercial use, and so not open by either definition.
+
+Creative Commons itself [recommends against](https://creativecommons.org/faq/) its licenses for software: they say nothing about distributing source code, or about patents. The one bridge: CC BY-SA 4.0 material can go into a GPL-3.0 work since [October 8, 2015](https://creativecommons.org/compatible-licenses/), one way only.
+
+## Docs: CC BY for the prose, a code license for the samples
+
+Large projects license their documentation under a Creative Commons license, or under the code's own license:
+
+| Documentation                                              | Documentation license                                        | Code in the repository    |
+| ---------------------------------------------------------- | ------------------------------------------------------------ | ------------------------- |
+| [GitHub Docs](https://github.com/github/docs)              | CC BY 4.0, for the content, assets and data folders          | MIT                       |
+| [Kubernetes](https://github.com/kubernetes/website)        | CC BY 4.0                                                    | CC BY 4.0, the whole site |
+| [MDN](https://github.com/mdn/content/blob/main/LICENSE.md) | CC BY-SA 2.5, and CC0 for code samples since August 20, 2010 | –                         |
+| [The Rust book](https://github.com/rust-lang/book)         | MIT or Apache-2.0                                            | MIT or Apache-2.0         |
+
+**Readers copy code samples into their projects**, and a sample under CC BY or CC BY-SA would bring its conditions with it. MDN puts its samples under CC0, so they can go anywhere. Licensing the whole book under the code's license, like the Rust book, avoids the question when that license is permissive.
+
+The GNU Free Documentation License (GFDL), written for software manuals, is rarely a good choice for new projects. Its "invariant sections", which nobody may modify or remove, made Debian vote in [March 2006](https://www.debian.org/vote/2006/vote_001) that GFDL works are free only without them. Wikipedia, once GFDL-only, now licenses new text under CC BY-SA 4.0, since its terms of use of [June 7, 2023](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use).
+
+## Fonts: the OFL lets anyone ship them, not sell them alone
+
+The [SIL Open Font License](https://openfontlicense.org/) 1.1, unchanged since February 26, 2007, is the default for open fonts. The OSI approved it on [April 1, 2009](https://opensource.org/license/OFL-1.1). Inter and JetBrains Mono use it, and so do 2,007 of the font families in [Google Fonts](https://github.com/google/fonts) (as of September 2026; 44 more are Apache-2.0).
+
+Two clauses make it a font license:
+
+- **Bundle it, don't sell it alone.** A font under the OFL can ship inside any software, commercial or not, but it may not be "sold by itself" ([OFL FAQ](https://openfontlicense.org/ofl-faq/)).
+- **Reserved Font Names.** An author may reserve the font's name: a modified version then needs another name. The SPDX identifiers say which applies: `OFL-1.1-RFN` or `OFL-1.1-no-RFN`. Google Fonts [recommends against](https://github.com/googlefonts/gf-docs/tree/main/ProjectChecklist) reserving names: the OFL counts subsetting and converting a font for the web as modifications, which a reserved name would forbid under the original name.
+
+## Hardware: CERN-OHL, in three strengths
+
+Hardware designs (schematics, board layouts, CAD files) need a license that talks about manufacturing, not compiling. CERN released version 2 of its Open Hardware Licence on [March 12, 2020](https://cern-ohl.web.cern.ch/), in three variants, and the OSI approved all three on [January 15, 2021](https://opensource.org/license/cern-ohl-s-2.0):
+
+| Variant          | Like            | A product that uses the design must                                |
+| ---------------- | --------------- | ------------------------------------------------------------------ |
+| `CERN-OHL-P-2.0` | MIT, Apache-2.0 | Keep the notices                                                   |
+| `CERN-OHL-W-2.0` | LGPL, MPL       | Share changes to the design itself, not to what it's combined with |
+| `CERN-OHL-S-2.0` | GPL             | Share the source of the whole design                               |
+
+Bitaxe, an open-source Bitcoin miner, uses [CERN-OHL-S-2.0](https://github.com/skot/bitaxe). Older projects use the TAPR Open Hardware License (2007) or CC BY-SA 4.0, like most Arduino boards. The [Solderpad Hardware License](https://solderpad.org/licenses/SHL-2.1/) adapts Apache-2.0 to hardware: CVA6, a RISC-V processor core from the OpenHW Group, [uses it](https://github.com/openhwgroup/cva6).
+
+The Open Source Hardware Association (OSHWA) certifies projects against its [definition](https://oshwa.org/definition/): 3,431 were [certified](https://certification.oshwa.org/list.html) as of September 2026. Open hardware covers the design files. The firmware that runs on the board is software, and needs its own license.
+
+## Data: ODbL, CC BY, or CC0
+
+Facts aren't copyrightable, but collections of them can be protected. In the European Union, a database that took a "substantial investment" to build gets its own right for 15 years ([Directive 96/9/EC](https://eur-lex.europa.eu/eli/dir/1996/9/oj/eng)), whatever its contents. A data license has to cover it.
+
+- **CC BY 4.0 and CC0 1.0** do: the 4.0 licenses license database rights "under the same license conditions as copyright" ([Creative Commons' FAQ](https://creativecommons.org/faq/)). Wikidata publishes all its structured data under [CC0](https://www.wikidata.org/wiki/Wikidata:Licensing).
+- **The Open Database License (ODbL)**, from [Open Data Commons](https://opendatacommons.org/licenses/), is share-alike for databases: a public database derived from yours stays under the ODbL. OpenStreetMap [switched to it](https://osmfoundation.org/wiki/Licence/About_The_Licence_Change) from CC BY-SA 2.0 on September 12, 2012.
+- **Terms of use aren't a license.** Common Crawl, the web archive behind many AI training sets, grants a "limited, non-assignable" right under its terms, and the pages it contains keep their authors' copyright.
+
+## Models: openly licensed weights aren't the whole model
+
+A trained model has weights, the code that trains and runs it, and the data it learned from. A license on the weights covers the weights. On [October 28, 2024](https://opensource.org/blog/the-open-source-initiative-announces-the-release-of-the-industrys-first-open-source-ai-definition), the OSI published the [Open Source AI Definition](https://opensource.org/ai/open-source-ai-definition) 1.0, which asks for all three: the weights and the code under open-source terms, and "sufficiently detailed information about the data used to train the system", enough for a skilled person to build a substantially equivalent one. The models its [validation](https://opensource.org/ai/faq) found to pass include Pythia, OLMo and T5.
+
+The licenses on popular models, as of September 2026:
+
+| Model                                                        | License                                                                                                                        | Open-source license |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | :-----------------: |
+| [OLMo 2](https://huggingface.co/allenai/OLMo-2-1124-7B), Ai2 | Apache-2.0, with its training data published under ODC-By                                                                      |          ✓          |
+| [Qwen3](https://qwenlm.github.io/blog/qwen3/), Alibaba       | Apache-2.0 (April 29, 2025)                                                                                                    |          ✓          |
+| [DeepSeek-R1](https://api-docs.deepseek.com/news/news250120) | MIT (January 20, 2025)                                                                                                         |          ✓          |
+| Mistral 7B, Mistral                                          | [Apache-2.0](https://mistral.ai/news/announcing-mistral-7b) (September 27, 2023); some later Mistral models use other licenses |          ✓          |
+| Gemma, Google                                                | Gemma Terms of Use for Gemma 1 to 3, with a prohibited-use policy; Apache-2.0 for Gemma 4 (March 2026)                         |    Gemma 4 only     |
+| [Llama 4](https://www.llama.com/llama4/license/), Meta       | Llama 4 Community License: a separate license above 700 million monthly active users, and an acceptable-use policy             |          ✗          |
+| [BLOOM](https://huggingface.co/bigscience/bloom), BigScience | BigScience RAIL 1.0 (May 19, 2022): use restrictions listed in an attachment                                                   |          ✗          |
+
+Use restrictions are what disqualify a license: the Open Source Definition forbids discriminating against a field of use, even a harmful one. The OSI said so of Llama 2 in [July 2023](https://opensource.org/blog/metas-llama-2-license-is-not-open-source), and again in [February 2025](https://opensource.org/blog/metas-llama-license-is-still-not-open-source), after Llama's acceptable-use policy withheld the multimodal models from people and companies in the European Union.
+
+**"Open weights" is the honest name for a model with an openly licensed download and no training data.** Qwen3 and DeepSeek-R1 are open weights under open-source licenses; OLMo 2 is also open source by the OSI's definition.
+
+## Do this now
+
+<Checklist id="non-code-licenses">
+
+- [ ] List what your repository contains besides code (docs, images, fonts, data, designs), and write down the license of each.
+- [ ] Put code samples in your documentation under a code license (CC0 or your project's license), and say so.
+- [ ] Before using a CC-licensed image or text in anything commercial, check that its license has no NC.
+- [ ] Before building on a model, read its license for a user threshold or a list of prohibited uses.
+
+</Checklist>
+
+## Go further
+
+- [Creative Commons' license chooser](https://creativecommons.org/chooser/): answers a few questions, gives the license and the notice to paste.
+- [The OFL FAQ](https://openfontlicense.org/ofl-faq/): every question about embedding, subsetting and selling fonts.
+- [The Open Source AI Definition](https://opensource.org/ai/open-source-ai-definition): what the OSI requires of a model, and its FAQ on why data information and not the data itself.
+- [License Compatibility](/guide/licensing/license-compatibility/): what happens when these licenses meet code in the same repository.
