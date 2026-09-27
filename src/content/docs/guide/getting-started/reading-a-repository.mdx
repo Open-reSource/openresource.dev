@@ -10,12 +10,12 @@ import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
 
 {/* prettier-ignore */}
-<p class="lead">Five minutes on a repository tell you whether someone is home: before you install the app, build on the library, or spend an afternoon on a pull request. Read the last commit, the health files, how the newest issues were answered, the oldest open pull requests and who writes the code. Stars measure attention, not maintenance.</p>
+<p class="lead">Five minutes on a repository tell you whether someone is home: before you install the app, build on the library, or spend an afternoon on a pull request. Read the first page of commits, the health files, how the newest issues were answered, the oldest open pull requests and who writes the code. Stars measure attention, not maintenance.</p>
 
 <InShort>
 
 - Stars count people who clicked a button once. Read the pull request queue instead.
-- The top of the page gives the last commit, the license and the health files in one screen.
+- One page of commit history shows the rhythm, the people and the kind of work. One commit shows nothing.
 - Open the five newest issues: how fast a maintainer answered, and how, is the project's real policy.
 - Sort open pull requests by oldest. Two years of "Review required" means nobody decides.
 - Count the people who commit. A project one person carries stops when they do.
@@ -40,22 +40,37 @@ Both are alive: Prettier merged 121 pull requests that month, 60 of them from pe
 
 ## The top of the page says if anyone is home
 
-The repository's front page answers the first questions without a click: when the code last changed (1), and what the project is, where it lives, under which license and with which health files (2).
+The repository's front page answers the first questions without a click: what the project is, where it lives, under which license and with which health files (2). The commit count (1) opens the history, the next stop.
 
 <ContentImage
 	src="/images/getting-started-reading-a-repository-1.png"
 	width="720"
 	height="450"
-	alt="Starlight's repository page: the last commit, 3 days old, and the About box with website, topics, license and health files."
+	alt="Starlight's repository page: the link to its 3,776 commits, and the About box with website, topics, license and health files."
 />
-
-Read the last commit's author too. Here it's a release bot, which is fine, since a bot only releases what people merged. A repository where the only recent commits are dependency bumps is on autopilot.
 
 The About box, in order of what its absence means:
 
 - **No license**: nobody may use, copy or modify the code, whatever the README says. [No license means no permission](https://choosealicense.com/no-permission/).
 - **No description or website**: the project isn't trying to be found. Fine for a personal tool, a warning for something you'll rely on.
 - **No "Contributing" or "Security policy" link**: you'll learn the rules in review, and a vulnerability report has nowhere private to go.
+
+## One page of commits shows the rhythm
+
+The latest commit is one data point: a typo fix yesterday says as little as a quiet month. Open the history with the commit count and read its first page, grouped by day.
+
+<ContentImage
+	src="/images/getting-started-reading-a-repository-6.png"
+	width="720"
+	height="450"
+	alt="Starlight's commit history grouped by day: fixes and features by several people, with a release bot's commits in between."
+/>
+
+Three things to read on it:
+
+- **The span.** Starlight's first page covers September 2 to 24, 2026, with commits on 14 of those 23 days. A page that covers two years is a project that moves slowly: fine for a finished tool, a warning for one with open bugs.
+- **Who.** 14 people and a release bot on that page. The same name on every line is the question the contributors graph answers, [further down](#count-the-people-not-the-commits).
+- **What.** Fixes and features, or only releases and dependency bumps. Starlight has 5 release commits out of 35. A page of bot bumps and nothing else is a project on autopilot.
 
 ## The README answers three questions on the first screen
 
@@ -140,7 +155,7 @@ Pick a project you use or want to contribute to, and run through the list. Green
 
 <Checklist id="reading-a-repository">
 
-- [ ] The last commit by a person is less than three months old.
+- [ ] The first page of commits spans weeks or months, not years, and has people on it, not only bots.
 - [ ] The repository has a license, a description and a contributing guide.
 - [ ] The README says what the project does, how to try it and where to ask, on the first screen.
 - [ ] Community standards (`/community`) shows the files a contributor needs: contributing guide, code of conduct, security policy, templates.
