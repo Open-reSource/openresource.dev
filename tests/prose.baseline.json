@@ -83,10 +83,6 @@
     "banned: empower, leverage": 1,
     "banned: delve, landscape, journey": 3
   },
-  "docs/guide/getting-started/source-code-hosting-platforms.mdx": {
-    "banned: Here are some \u2026": 1,
-    "lead: more than one": 1
-  },
   "docs/guide/maintaining/fostering-a-strong-and-inclusive-community.mdx": {
     "banned: essential, crucial": 1,
     "exclamation: more than one": 1
