@@ -5,8 +5,8 @@
 //
 // Always dark: the page gets `prefers-color-scheme: dark`, and Chromium's auto dark mode darkens the pages that have no
 // dark theme of their own (pages that do, like GitHub, keep theirs). --box draws a rounded 3px rectangle in brand gold
-// around each match, numbered when there are several. GH_SESSION (the value of GitHub's `user_session` cookie) signs the page in, for GitHub
-// pages that need an account. The file is a PNG, or a WebP when the PNG would be over 300 KB.
+// around each match, numbered when there are several, on the image after capture. GH_SESSION (the value of GitHub's
+// `user_session` cookie) signs the page in, for GitHub pages that need an account. The file is a PNG, or a WebP when the PNG would be over 300 KB.
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
@@ -61,50 +61,33 @@ try {
 	await page.goto(url, { waitUntil: 'networkidle' });
 	await page.waitForTimeout(Number(values.wait));
 
+	// Boxes are drawn on the image, not in the page: Chromium's auto dark mode would recolor anything added to the page.
+	const clip = values.clip ? page.locator(values.clip).first() : undefined;
+	if (clip) await clip.scrollIntoViewIfNeeded();
+	const origin = (clip && (await clip.boundingBox())) || { x: 0, y: 0 };
 	const boxes = (await Promise.all(values.box.map((selector) => page.locator(selector).all()))).flat();
-	for (const [i, element] of boxes.entries()) {
-		const rect = await element.boundingBox();
-		if (!rect) continue;
-		await page.evaluate(
-			({ rect, n, color, ink }) => {
-				const pad = 4;
-				const box = document.createElement('div');
-				Object.assign(box.style, {
-					position: 'absolute',
-					left: `${rect.x + window.scrollX - pad}px`,
-					top: `${rect.y + window.scrollY - pad}px`,
-					width: `${rect.width + pad * 2}px`,
-					height: `${rect.height + pad * 2}px`,
-					border: `3px solid ${color}`,
-					borderRadius: '8px',
-					boxSizing: 'border-box',
-					pointerEvents: 'none',
-					zIndex: '2147483647',
-				});
-				if (n) {
-					const badge = document.createElement('span');
-					badge.textContent = String(n);
-					Object.assign(badge.style, {
-						position: 'absolute',
-						left: '-14px',
-						top: '-14px',
-						width: '24px',
-						height: '24px',
-						borderRadius: '50%',
-						background: color,
-						color: ink,
-						font: '600 13px/24px system-ui, sans-serif',
-						textAlign: 'center',
-					});
-					box.append(badge);
-				}
-				document.body.append(box);
-			},
-			{ rect, n: boxes.length > 1 ? i + 1 : 0, ...annotation }
-		);
-	}
+	const rects = (await Promise.all(boxes.map((box) => box.boundingBox()))).filter((rect) => rect !== null);
+	const capture = clip ? await clip.screenshot() : await page.screenshot();
 
-	const shot = values.clip ? await page.locator(values.clip).first().screenshot() : await page.screenshot();
+	const { width: pixels = 0, height: rows = 0 } = await sharp(capture).metadata();
+	const { color, ink } = annotation;
+	const pad = 4;
+	const stroke = 3;
+	const marks = rects.map((rect, i) => {
+		const x = rect.x - origin.x - pad;
+		const y = rect.y - origin.y - pad;
+		const frame = `<rect x="${x + stroke / 2}" y="${y + stroke / 2}" width="${rect.width + pad * 2 - stroke}" height="${rect.height + pad * 2 - stroke}" rx="8" fill="none" stroke="${color}" stroke-width="${stroke}"/>`;
+		const badge =
+			rects.length > 1
+				? `<circle cx="${x - 2}" cy="${y - 2}" r="12" fill="${color}"/><text x="${x - 2}" y="${y - 2}" dy="0.35em" text-anchor="middle" font-family="sans-serif" font-weight="600" font-size="13" fill="${ink}">${i + 1}</text>`
+				: '';
+		return frame + badge;
+	});
+	const overlay = `<svg xmlns="http://www.w3.org/2000/svg" width="${pixels}" height="${rows}" viewBox="0 0 ${pixels / 2} ${rows / 2}">${marks.join('')}</svg>`;
+	const shot = await sharp(capture)
+		.composite([{ input: Buffer.from(overlay) }])
+		.png()
+		.toBuffer();
 	const resized = sharp(shot).resize({ width: MAX_WIDTH, withoutEnlargement: true });
 	const png = await resized.clone().png({ compressionLevel: 9 }).toBuffer();
 	const [file, data] =
