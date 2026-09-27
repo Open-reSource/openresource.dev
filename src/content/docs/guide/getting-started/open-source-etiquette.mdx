@@ -1,0 +1,159 @@
+---
+title: 'Open Source Etiquette: Talking to Strangers Who Owe You Nothing'
+description: How to ask, wait, disagree and thank in issues, pull requests and chats, with a message not to send and a better one for each rule, and what to do when someone crosses the line.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Chat from '../../../../components/Chat.astro';
+import Checklist from '../../../../components/Checklist.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Everyone in open source is a volunteer until proven otherwise, including the maintainer you're about to mention. That changes how you ask, how you wait and how you disagree. None of it is complicated, and most people learn it the hard way, in public.</p>
+
+<InShort>
+
+- Search first, and say where you looked.
+- React with 👍 instead of commenting "+1": a comment notifies everyone subscribed, a reaction nobody.
+- Wait two weeks, then ask what's missing. "Any update?" only notifies everyone again.
+- Say how you'll do it before you spend a weekend on it.
+- Disagree with the code, not the person, in sentences someone can read in their second language. Say thanks in the thread.
+
+</InShort>
+
+Each rule below comes with a message not to send and a better one. The messages are ours; the situations are the ones maintainers see every week.
+
+## Search first, and say where you looked
+
+A maintainer's first reflex with a new question is to search for it. Saying where you looked saves them that step, and shows you tried.
+
+<Chat type="end" author="Not this">
+	Is there a way to use this with Vite?
+</Chat>
+
+<Chat type="start" author="This">
+	I couldn't find Vite in the docs or in closed issues (I searched "vite" and "esm"). Is it supported? If it is, I'm
+	happy to write the docs page.
+</Chat>
+
+One question or one bug per issue: a thread about three problems gets closed when the first one is fixed. For bugs, [How to Write a Bug Report That Gets Fixed](/guide/contributing/writing-a-bug-report/) covers what to put in.
+
+## React with 👍, don't comment "+1"
+
+Every comment on an issue sends a notification, often an email, to everyone subscribed to it. On a popular issue, "+1" reaches hundreds of people and tells them nothing new. In January 2016, maintainers of projects across GitHub signed an open letter, [Dear GitHub](https://github.com/dear-github/dear-github), that asked for exactly this: content-less "+1" comments "serve only to spam the maintainers and any others subscribed to the issue". GitHub [shipped reactions](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) two months later.
+
+<Chat type="end" author="Not this">
+	+1, we really need this too. Any news?
+</Chat>
+
+<Chat type="start" author="This">
+	(a 👍 on the issue, and a comment only with something new:) It also happens on 5.3.8 with Safari 18, not only Chrome.
+	Reproduction on CodePen: (link)
+</Chat>
+
+A reaction notifies nobody and still counts: maintainers sort issues by it with `sort:reactions-+1-desc` in the search bar. To follow the issue, click **Subscribe** in its sidebar. That's what most "+1" comments are really for.
+
+## Wait two weeks, then ask what's missing
+
+Most maintainers work on evenings and weekends, in a time zone that isn't yours. A week of silence on an issue or a pull request is normal. "Any update?" after three days notifies everyone again and asks a question with no useful answer.
+
+<Chat type="end" author="Not this">
+	Any update??
+</Chat>
+
+<Chat type="start" author="This">
+	Is there anything else you need from me here?
+</Chat>
+
+The second one is real: Kelketek posted it on a Bootstrap pull request after 80 days, and it was merged within a week. [Your First Contribution](/guide/contributing/contributing-to-open-source/#after-two-weeks-of-silence-ask-once) tells the full story: wait two weeks, ask once, ask what's missing rather than when.
+
+## Say how before you spend a weekend on it
+
+A pull request nobody asked for can be the wrong approach, or a feature the project doesn't want. A short comment first costs you five minutes and can save you two days.
+
+<Chat type="end" author="Not this">
+	Can I work on this?
+</Chat>
+
+<Chat type="start" author="This">
+	I'd like to fix this. My plan: move the check into `parseConfig()` and add a test for empty files. Does that fit, or
+	would you rather handle it another way?
+</Chat>
+
+"Can I work on this?" asks for permission; the second one asks for a decision a maintainer can make in one reply. Some projects never assign issues and just want the pull request: `CONTRIBUTING.md` says which. [Can I Take This Issue?](/articles/can-i-take-this-issue/) explains both sides.
+
+## Disagree with the code, not the person
+
+Review comments are short because reviewers are busy, not because they're angry. Read them as questions about the code, and answer the same way: with the reason, and with room for the maintainer to decide.
+
+<Chat type="end" author="Not this">
+	This is wrong, the old version was obviously better. Did you even test it?
+</Chat>
+
+<Chat type="start" author="This">
+	I kept the loop because it avoids a new array on every render, which showed up in the profile on large tables (numbers
+	in the description). Happy to switch to `map()` if you'd rather keep it simple.
+</Chat>
+
+- If a maintainer says no after your reason, the project is theirs. Say you disagree once, then accept it, or fork: that's what the license is for.
+- "You" in a review is about the code ("you're calling this twice"), and reads as an attack when it isn't. "This is called twice" says the same.
+
+## Write for someone reading in their second language
+
+The person reading your message may live anywhere, read it on a phone at night, and read English as a second or third language. Idioms and sarcasm don't translate, and in text, sarcasm reads as contempt.
+
+<Chat type="end" author="Not this">
+	lol this whole thing is a dumpster fire since 4.2, anyone wanna take a crack at it?
+</Chat>
+
+<Chat type="start" author="This">
+	Since 4.2, the app crashes on every save. Could someone look at it? I can test a fix.
+</Chat>
+
+- Short sentences, one idea each. Code, versions and error messages as text, in code blocks.
+- Translation tools are fine, and nobody minds. Write in your language and translate it; say so if you want.
+- No row of exclamation marks and no capitals for urgency. Nothing in a public issue tracker is urgent to anyone but you.
+
+## Say thanks in the thread
+
+A fix that works for you rarely gets a comment: people upgrade and move on. A thank-you in the issue costs a line, and it's often the only feedback a maintainer gets that something they did helped.
+
+<Chat type="end" author="Not this">
+	(closes the tab)
+</Chat>
+
+<Chat type="start" author="This">
+	Tested 5.3.8 on our app, fixed. Thanks for the quick turnaround.
+</Chat>
+
+It goes both ways. When CyrilKrylatov worked out that a report on [twbs/bootstrap#42242](https://github.com/twbs/bootstrap/issues/42242) wasn't Bootstrap's bug, Julien closed the issue with thanks to the reporter and to Cyril, by name. Thanking the people who help triage, answer or review is how a project keeps them.
+
+## When someone crosses the line, the code of conduct is for you too
+
+Most projects have a `CODE_OF_CONDUCT.md`, and it protects contributors as much as maintainers. If someone insults you, harasses you or keeps pushing after a no:
+
+- **Don't answer in kind.** One calm sentence, or nothing. The thread is public, and the next reader will judge both of you.
+- **Report it to the project**: the code of conduct names a contact, often an email address. Include links to the comments.
+- **Report it to GitHub** when it's abuse or spam: the **⋯** menu on a comment has **Report content** ([GitHub's docs](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam)). You can also [block the user](https://docs.github.com/en/communities/maintaining-your-safety-on-github/blocking-a-user-from-your-personal-account) from your account.
+
+Maintainers have tools of their own: they can [hide a comment](https://docs.github.com/en/communities/moderating-comments-and-conversations/managing-disruptive-comments) as off-topic or abusive, or lock a conversation that has gone too far. When one of your comments is hidden, read the reason, and don't post it again.
+
+## Do this now
+
+<Checklist id="open-source-etiquette">
+
+- [ ] Open the `CONTRIBUTING.md` of a project you use, and find how it wants questions and ideas: issues, Discussions or a chat.
+- [ ] Find its `CODE_OF_CONDUCT.md`, and the contact it gives for reports.
+- [ ] Next time you're about to comment "+1", react with 👍 and click **Subscribe** instead.
+- [ ] Before you post your next comment, read it once as the maintainer, on a Sunday evening.
+- [ ] Say thanks on one issue that got fixed for you.
+
+</Checklist>
+
+## Go further
+
+- [Dear GitHub](https://github.com/dear-github/dear-github): the 2016 letter from maintainers, and GitHub's answer below it. Most of what it asked for exists today.
+- [Can I Take This Issue?](/articles/can-i-take-this-issue/): the most common question on issue trackers, from both sides.
+- [How to Write a Bug Report That Gets Fixed](/guide/contributing/writing-a-bug-report/): the same courtesy, applied to a bug report.
+- [Non-Code Contributions Maintainers Actually Want](/guide/contributing/non-code-contributions/): once you know how to talk to a project, ways to help it.
