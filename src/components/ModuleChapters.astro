@@ -1,0 +1,83 @@
+---
+// The chapters of the current module, in sidebar order, each with its reading time. On the guide root page, the
+// modules instead, each with its description. Stubs (planned, not written) stay out, as in the sidebar.
+import { getCollection } from 'astro:content';
+import { readingTime } from '@deramond.dev/astro/blog';
+import { modules } from '../guide-modules.mjs';
+
+const slug = Astro.url.pathname.replace(/^\/|\/$/g, '');
+const docs = new Map((await getCollection('docs')).map((doc) => [doc.id, doc]));
+const current = modules.find(({ dir }) => `guide/${dir}` === slug);
+
+type Item = { href: string; label: string; meta?: string; description?: string };
+const items: Item[] = current
+	? current.pages
+			.map((page) => docs.get(`guide/${current.dir}/${page}`))
+			.filter((doc) => doc && doc.data.status !== 'stub')
+			.map((doc) => ({ href: `/${doc!.id}/`, label: doc!.data.title, meta: `${readingTime(doc!.body ?? '')} min` }))
+	: modules.map(({ dir, label }) => ({
+			href: `/guide/${dir}/`,
+			label,
+			description: docs.get(`guide/${dir}`)?.data.description,
+		}));
+---
+
+<ol class="chapters">
+	{items.map(({ href, label, meta, description }) => (
+		<li class="chapters__item">
+			<div class="chapters__main">
+				<a href={href}>{label}</a>
+				{description && <p class="chapters__description">{description}</p>}
+			</div>
+			{meta && <span class="chapters__meta">{meta}</span>}
+		</li>
+	))}
+</ol>
+
+<style>
+	.chapters {
+		list-style: none;
+		counter-reset: chapter;
+		margin: var(--space-5) 0;
+		padding: 0;
+		border-top: var(--stroke-hairline) solid var(--color-line);
+	}
+
+	.chapters__item {
+		display: flex;
+		gap: var(--space-3);
+		align-items: baseline;
+		margin: 0;
+		padding: var(--space-3) 0;
+		border-bottom: var(--stroke-hairline) solid var(--color-line);
+	}
+
+	.chapters__item::before {
+		counter-increment: chapter;
+		content: counter(chapter, decimal-leading-zero);
+		flex: none;
+		font: var(--type-mono);
+		color: var(--color-muted);
+	}
+
+	.chapters__main {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.chapters__main a {
+		font-weight: var(--font-weight-medium);
+	}
+
+	.chapters__description {
+		margin: var(--space-1) 0 0;
+		color: var(--color-muted);
+		font: var(--type-small);
+	}
+
+	.chapters__meta {
+		flex: none;
+		font: var(--type-mono);
+		color: var(--color-muted);
+	}
+</style>

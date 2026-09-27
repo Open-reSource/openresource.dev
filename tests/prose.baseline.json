@@ -52,11 +52,6 @@
     "banned: Here are some …": 2,
     "lead: more than one": 1
   },
-  "docs/guide/contributing/index.mdx": {
-    "banned: essential, crucial": 1,
-    "banned: delve, landscape, journey": 1,
-    "exclamation: more than one": 1
-  },
   "docs/guide/contributing/overcoming-challenges-in-open-source-contributions.mdx": {
     "banned: In this chapter, we will": 1,
     "banned: essential, crucial": 4,
@@ -85,9 +80,6 @@
     "lead: more than one": 1,
     "exclamation: more than one": 8
   },
-  "docs/guide/creating/index.mdx": {
-    "banned: essential, crucial": 1
-  },
   "docs/guide/creating/legal-considerations.mdx": {
     "banned: essential, crucial": 2,
     "exclamation: more than one": 1
@@ -101,32 +93,13 @@
     "banned: empower, leverage": 1,
     "banned: delve, landscape, journey": 3
   },
-  "docs/guide/financing/index.mdx": {
-    "banned: empower, leverage": 2,
-    "banned: essential, crucial": 3,
-    "banned: delve, landscape, journey": 2
-  },
-  "docs/guide/getting-started/index.mdx": {
-    "banned: vibrant, thriving": 2,
-    "banned: In this chapter, we will": 1,
-    "banned: empower, leverage": 1
-  },
   "docs/guide/getting-started/source-code-hosting-platforms.mdx": {
     "banned: Here are some …": 1,
     "lead: more than one": 1
   },
-  "docs/guide/index.mdx": {
-    "banned: delve, landscape, journey": 2,
-    "exclamation: more than one": 1
-  },
   "docs/guide/maintaining/fostering-a-strong-and-inclusive-community.mdx": {
     "banned: essential, crucial": 1,
     "exclamation: more than one": 1
-  },
-  "docs/guide/maintaining/index.mdx": {
-    "banned: essential, crucial": 1,
-    "banned: delve, landscape, journey": 3,
-    "banned: vibrant, thriving": 1
   },
   "docs/guide/maintaining/introduction-to-open-source-project-maintenance.mdx": {
     "banned: vibrant, thriving": 3,
@@ -142,12 +115,6 @@
     "banned: Not all X are created equal": 1,
     "banned: empower, leverage": 4,
     "exclamation: more than one": 6
-  },
-  "docs/guide/promoting/index.mdx": {
-    "banned: essential, crucial": 2,
-    "banned: empower, leverage": 1,
-    "banned: vibrant, thriving": 1,
-    "banned: Remember,": 1
   },
   "docs/guide/promoting/introduction-to-project-promotion.mdx": {
     "banned: vibrant, thriving": 3,
@@ -169,9 +136,6 @@
     "banned: vibrant, thriving": 1,
     "banned: essential, crucial": 1,
     "lead: more than one": 1
-  },
-  "docs/guide/what-is-open-source/index.mdx": {
-    "banned: empower, leverage": 1
   },
   "docs/guide/what-is-open-source/the-significance-of-open-source.mdx": {
     "banned: empower, leverage": 3,
