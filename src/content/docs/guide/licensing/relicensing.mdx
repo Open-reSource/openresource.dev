@@ -1,0 +1,152 @@
+---
+title: 'Relicensing: The Source-Available Wave, and the Forks That Answered'
+description: MongoDB, Elastic, HashiCorp, Redis and others left open source between 2018 and 2025. The timeline, the licenses they moved to, the forks, and what it means for you.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">A license change is the moment a project says out loud who it was for. Between 2018 and 2025, MongoDB, Elastic, HashiCorp, Redis and others answered "not for the cloud providers" and moved to licenses that aren't open source; the community answered with forks, and Elastic and Redis later added an open-source license back. Here's the timeline, the licenses, and what it changes when you pick a dependency, sign a CLA or choose a license.</p>
+
+<InShort>
+
+- The pattern: a company-owned infrastructure project gets popular, cloud providers sell it as a service, the company moves to a source-available license, the community forks the last open-source version.
+- SSPL, BSL, ELv2, RSAL and FSL all forbid some form of competing with the company. None is an open-source license. BSL and FSL turn into one after a few years.
+- Old versions keep their license: OpenSearch, OpenTofu, Valkey and Apache Pekko are forks of the last open-source release, now hosted by foundations.
+- A company can relicense contributors' copyleft code only if they signed a CLA. Foundation-owned projects are much harder to relicense.
+- The other direction exists: Grafana, Plausible and MinIO moved to AGPL-3.0, and Elastic and Redis added it back.
+
+</InShort>
+
+## Popular, resold as a service, relicensed, forked
+
+The cases below differ in the details and share a shape:
+
+1. **A company owns the project.** It employs most maintainers, holds the trademark, and often asks outside contributors to sign a contributor license agreement (CLA).
+2. **The project becomes infrastructure.** A database, a search engine, a provisioning tool: something people run as a service.
+3. **Cloud providers sell it as a service.** The license allows it, and the provider doesn't have to contribute back or pay.
+4. **The company changes the license of future releases** to one that forbids offering the software as a competing service.
+5. **The community forks the last open-source release,** often with the backing of the cloud providers the change was aimed at, and a foundation takes the fork.
+
+MongoDB's press release says it plainly: its popularity had led "some organizations to test the boundaries of the AGPL" ([MongoDB, October 16, 2018](https://www.mongodb.com/company/newsroom/press-releases/mongodb-issues-new-server-side-public-license-for-mongodb-community-server)). Elastic's announcement names Amazon ([Elastic, January 14, 2021](https://www.elastic.co/blog/licensing-change)).
+
+## The timeline, 2018–2025
+
+Every date comes from the company's or the fork's own announcement.
+
+| When               | Project                  | Change                                                                                               | What came next                                                                                                                                                                                                                          |
+| ------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| August 2018        | Redis Labs' modules      | AGPL-3.0 → Apache-2.0 with the Commons Clause                                                        | RSAL in [February 2019](https://redis.io/blog/redis-labs-modules-license-changes/). Redis itself stayed BSD-3-Clause ([Redis, August 22, 2018](https://redis.io/blog/redis-license-bsd-will-remain-bsd/))                               |
+| October 16, 2018   | MongoDB                  | AGPL-3.0 → SSPL                                                                                      | Submitted to the OSI, [withdrawn in March 2019](https://lists.opensource.org/pipermail/license-review_lists.opensource.org/2019-March/003989.html)                                                                                      |
+| December 14, 2018  | Confluent Platform       | Apache-2.0 → Confluent Community License, for some components                                        | Apache Kafka itself unchanged ([Confluent](https://www.confluent.io/blog/license-changes-confluent-platform/))                                                                                                                          |
+| June 4, 2019       | CockroachDB              | Apache-2.0 → BSL, from version 19.2                                                                  | A single proprietary license from [November 18, 2024](https://www.cockroachlabs.com/blog/enterprise-license-announcement/), free for small companies                                                                                    |
+| November 6, 2019   | Sentry                   | BSD-3-Clause → BSL ([Sentry](https://blog.sentry.io/relicensing-sentry/))                            | Its own Functional Source License (FSL) in November 2023                                                                                                                                                                                |
+| January 14, 2021   | Elasticsearch and Kibana | Apache-2.0 → SSPL or Elastic License                                                                 | AWS [announced a fork](https://aws.amazon.com/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/) a week later: [OpenSearch](https://aws.amazon.com/blogs/opensource/introducing-opensearch/), launched April 12, 2021 |
+| September 7, 2022  | Akka                     | Apache-2.0 → BSL, from version 2.7                                                                   | [Apache Pekko](https://incubator.apache.org/projects/pekko.html), a fork of Akka 2.6, entered the Apache incubator on October 24, 2022                                                                                                  |
+| August 10, 2023    | HashiCorp's products     | MPL-2.0 → BSL ([HashiCorp](https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license)) | The OpenTF fork on [August 25, 2023](https://github.com/opentofu/manifesto/blob/main/announcement.html), renamed [OpenTofu](https://www.linuxfoundation.org/press/announcing-opentofu) at the Linux Foundation on September 20, 2023    |
+| March 20, 2024     | Redis                    | BSD-3-Clause → RSALv2 or SSPL, from version 7.4                                                      | [Valkey](https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community), at the Linux Foundation on March 28, 2024, continuing from Redis 7.2.4                                                          |
+| August 29, 2024    | Elasticsearch and Kibana | Adds AGPL-3.0 as a third option                                                                      | First shipped in 8.16.0, on November 12, 2024 ([Elastic](https://www.elastic.co/blog/elasticsearch-is-open-source-again))                                                                                                               |
+| May 1, 2025        | Redis                    | Adds AGPL-3.0 as a third option, from Redis 8                                                        | Announced with antirez, Redis's creator, back at the company since December 2024 ([Redis](https://redis.io/blog/agplv3/))                                                                                                               |
+| September 30, 2025 | Liquibase Community      | Apache-2.0 → FSL, from version 5.0                                                                   | Each release becomes Apache-2.0 two years later ([Liquibase](https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl))                                                                                                    |
+
+Two more dates explain the rest of the story. IBM [completed its acquisition of HashiCorp](https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform) on February 27, 2025: Terraform's license now names IBM as the licensor. And in May 2025, Synadia asked to take NATS out of the Cloud Native Computing Foundation (CNCF) and move its server to the BSL; the [settlement of May 1, 2025](https://www.cncf.io/announcements/2025/05/01/cncf-and-synadia-align-on-securing-the-future-of-the-nats-io-project/) kept NATS under Apache-2.0, with its trademarks at the Linux Foundation. **A project whose name and repository belong to a foundation can't be relicensed by one company.**
+
+## Five licenses, none of them open source
+
+Each company wrote its own license, or took one off the shelf. They differ in what they forbid and whether they expire:
+
+| License                                                                    | Written by    | What it forbids                                                                                                        | Becomes open source                                       | SPDX                          |
+| -------------------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------------- |
+| [SSPL](https://www.mongodb.com/legal/licensing/server-side-public-license) | MongoDB, 2018 | Nothing outright: offering the program as a service requires releasing the source of the whole service stack around it | Never                                                     | `SSPL-1.0`                    |
+| [BSL 1.1](https://mariadb.com/bsl11/)                                      | MariaDB, 2016 | Production use, except what each licensor's "Additional Use Grant" allows                                              | On its Change Date, four years after each release at most | `BUSL-1.1`                    |
+| [Elastic License 2.0](https://www.elastic.co/licensing/elastic-license)    | Elastic, 2021 | Providing the software "as a hosted or managed service", and working around its license keys                           | Never                                                     | `Elastic-2.0`                 |
+| [RSALv2](https://redis.io/legal/rsalv2-agreement/)                         | Redis, 2022   | Making the software's functionality available to third parties as a service                                            | Never                                                     | None                          |
+| [FSL 1.1](https://fsl.software/)                                           | Sentry, 2023  | A "Competing Use": a commercial product or service that substitutes for the software                                   | Two years after each release, under MIT or Apache-2.0     | `FSL-1.1-MIT`, `FSL-1.1-ALv2` |
+
+The [Commons Clause](https://commonsclause.com/), used by Redis Labs in 2018, isn't a license but a condition added on top of one: it takes away the right to sell the software, hosting and support included.
+
+- **None is open source.** The Open Source Definition forbids discriminating against a field of use, and each of these rules one out. The OSI said so of the SSPL in a [statement of January 19, 2021](https://opensource.org/blog/the-sspl-is-not-an-open-source-license). The BSL says it itself: its text reads that it "is not an Open Source license".
+- BSL and FSL expire. Every release of a BSL project turns into an open-source license (the "Change License") on its Change Date; the FSL does it after two years. Terraform 1.6.0, the first release under the BSL, becomes MPL-2.0 four years after its publication.
+- `BSL-1.0` is the Boost license. The SPDX identifier of the Business Source License is `BUSL-1.1`: a manifest that says `BSL-1.0` declares a permissive license.
+
+In August 2024, Sentry launched [Fair Source](https://blog.sentry.io/sentry-is-now-fair-source/), a name for licenses like the FSL: source available, free for most uses, open source after a delay. It's a label, not an OSI category.
+
+## Old versions keep their license, so forks can start from them
+
+A license change applies to the releases published after it. Everything published before stays under the old license, and anyone can keep developing it. Every fork in the timeline started from the last open-source release:
+
+| Fork                                      | Forked from                       | Hosted by                                                                             |
+| ----------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------- |
+| [OpenSearch](https://opensearch.org/)     | Elasticsearch 7.10.2 (Apache-2.0) | The OpenSearch Software Foundation, at the Linux Foundation, since September 16, 2024 |
+| [Apache Pekko](https://pekko.apache.org/) | Akka 2.6 (Apache-2.0)             | The Apache Software Foundation, a top-level project since March 2024                  |
+| [OpenTofu](https://opentofu.org/)         | Terraform before 1.6.0 (MPL-2.0)  | The Linux Foundation, then the CNCF since April 23, 2025                              |
+| [Valkey](https://valkey.io/)              | Redis 7.2.4 (BSD-3-Clause)        | The Linux Foundation                                                                  |
+
+Two things made these forks last. They had backers: AWS started OpenSearch; Valkey launched with AWS, Google Cloud, Oracle, Ericsson and Snap; OpenTofu with companies that sold services on top of Terraform. **And a foundation holds them, so no single company can do to the fork what was done to the original.**
+
+A fork diverges from the day it starts. OpenTofu 1.6.0 shipped on [January 10, 2024](https://www.linuxfoundation.org/press/opentofu-announces-general-availability), and Terraform and OpenTofu have added different features since. Switching from one to the other is easy in the first months, and gets harder with every release.
+
+## A CLA is what makes relicensing possible
+
+[Choosing a License](/guide/licensing/choosing-a-license/#you-can-only-relicense-what-you-own) covers the rule: you can only relicense what you own. The license of the code decides how much the company needs from its contributors.
+
+- **Permissive code** (MIT, BSD, Apache-2.0) already lets anyone ship it under other terms, as long as the notices stay. Redis, under BSD-3-Clause, could move to RSAL without asking anyone.
+- **Copyleft code** (MPL, GPL, AGPL) can only be relicensed with every contributor's agreement, or a CLA that grants that right. Terraform, under MPL-2.0, asks for one ([its contributing guide](https://github.com/hashicorp/terraform/blob/main/.github/CONTRIBUTING.md)).
+
+Elastic's CLA states the purpose in one sentence: it doesn't transfer copyright, but gives Elastic "the right to distribute your code without restriction" ([Elastic's contributing guide](https://github.com/elastic/elasticsearch/blob/main/CONTRIBUTING.md)). That's what a CLA is for, and it's why a copyleft project that uses the Developer Certificate of Origin (DCO) instead, like the Linux kernel, can't be relicensed by anyone.
+
+## What it changes for you
+
+### When you deploy it
+
+- **Check the license of each release, not of the project.** Pinning an old version keeps the old license; upgrading past the change date accepts the new one.
+- **Read the Additional Use Grant.** Each BSL licensor writes its own. Terraform's allows production use, except offering it "to third parties on a hosted or embedded basis" to compete with IBM's paid version, and says internal use doesn't compete ([Terraform's LICENSE](https://github.com/hashicorp/terraform/blob/main/LICENSE)). What counts as competing is the licensor's call, and it can change with the licensor's product line.
+- **Prefer infrastructure a foundation holds** when you can choose. It's no guarantee, but it's a license change that needs more than one company's decision.
+
+### When you contribute
+
+- **Read the CLA before you sign it.** If it grants the company the right to relicense your contributions, your code can end up under a license that isn't open source. Many contributors sign anyway: it's a decision to make with the facts.
+- **A DCO only asks you to certify that you may contribute your code.** It grants the project no other right, relicensing included.
+
+### When you found a company around your project
+
+- **The reason to relicense is real.** A cloud provider selling your software without contributing takes customers you need to pay the people who write it.
+- **So is the cost.** Four of the changes got a fork that lasted, two of them backed by the cloud providers the change was aimed at, and Elastic and Redis came back to an open-source license within four years.
+- **Decide before the first contributor.** A project that starts under the FSL or the BSL tells contributors and users what it is on day one. Changing the license of a popular project breaks a promise people built on.
+
+## The other direction: AGPL-3.0
+
+Some companies facing the same problem chose a license that is open source and still closes the SaaS gap: AGPL-3.0, which asks anyone running a modified version as a service to offer its source ([License Compatibility](/guide/licensing/license-compatibility/#the-saas-gap-agpl-then-sspl) explains the gap).
+
+| When             | Project                  | Change                                                                                                                                                                                          |
+| ---------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| October 12, 2020 | Plausible Analytics      | MIT → AGPL-3.0 ([Plausible](https://plausible.io/blog/open-source-licenses))                                                                                                                    |
+| April 20, 2021   | Grafana, Loki and Tempo  | Apache-2.0 → AGPL-3.0 ([Grafana Labs](https://grafana.com/blog/2021/04/20/grafana-loki-tempo-relicensing-to-agplv3/))                                                                           |
+| May 2021         | MinIO                    | Apache-2.0 → AGPL-3.0 ([MinIO](http://web.archive.org/web/20210615125424/https://blog.min.io/from-open-source-to-free-and-open-source-minio-is-now-fully-licensed-under-gnu-agplv3/), archived) |
+| August 29, 2024  | Elasticsearch and Kibana | AGPL-3.0 added next to SSPL and ELv2                                                                                                                                                            |
+| May 1, 2025      | Redis                    | AGPL-3.0 added next to RSALv2 and SSPL                                                                                                                                                          |
+
+AGPL-3.0 is a compromise that holds: an open-source license the OSI approved, that competitors are reluctant to use, since running a modified version as a service means publishing the changes. Google [forbids it internally](https://opensource.google/documentation/reference/using/agpl-policy); that's the point.
+
+A license doesn't keep a project open by itself, though. MinIO, still under AGPL-3.0, put its repository in maintenance mode on December 3, 2025. Since February 12, 2026, its README opens with "THIS REPOSITORY IS NO LONGER MAINTAINED" and lists editions of AIStor, its commercial product, as the alternatives ([minio/minio](https://github.com/minio/minio)). The license keeps every published version open. Nothing obliges the company to publish the next one.
+
+## Do this now
+
+<Checklist id="relicensing">
+
+- [ ] List the databases, search engines and infrastructure tools you run, and check the license of the exact version you deploy.
+- [ ] For each one under the BSL, read its Additional Use Grant, and write down why your use is allowed.
+- [ ] Before a big contribution to a company-owned project, read its CLA and check whether it lets the company relicense your code.
+- [ ] If you're starting a company around your project, pick its license now, the way you'd pick it if the project got popular.
+
+</Checklist>
+
+## Go further
+
+- [The SSPL is not an open source license](https://opensource.org/blog/the-sspl-is-not-an-open-source-license), by the OSI: why, in the words of the organization that decides.
+- [HashiCorp adopts the Business Source License](https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license) and [the OpenTofu announcement](https://www.linuxfoundation.org/press/announcing-opentofu): both sides of one change, from the people who made them.
+- [Introducing the Functional Source License](https://blog.sentry.io/introducing-the-functional-source-license-freedom-without-free-riding/), by Sentry: the case for delayed open source, from a company that uses it.
+- [License Compatibility](/guide/licensing/license-compatibility/): what you can combine, and the tools that read your dependencies' licenses.
