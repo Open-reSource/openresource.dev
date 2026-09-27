@@ -24,7 +24,12 @@ export const modules = [
 		label: 'Getting Started',
 		dir: 'getting-started',
 		oldDir: 'getting-started-with-open-source',
-		pages: ['source-code-hosting-platforms', 'finding-open-source-projects', 'reading-a-repository'],
+		pages: [
+			'source-code-hosting-platforms',
+			'finding-open-source-projects',
+			'reading-a-repository',
+			'git-and-github-basics',
+		],
 	},
 	{
 		label: 'Contributing',
