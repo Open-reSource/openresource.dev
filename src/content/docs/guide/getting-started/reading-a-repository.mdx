@@ -1,0 +1,161 @@
+---
+title: Reading a Repository in Five Minutes
+description: The signals that tell you, in five minutes, whether anyone maintains a project, answers strangers and merges their work. Stars aren't one of them.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Five minutes on a repository tell you whether someone is home: before you depend on it, before you spend an afternoon on a pull request. Read the last commit, the health files, how the newest issues were answered, the oldest open pull requests and who writes the code. Stars measure attention, not maintenance.</p>
+
+<InShort>
+
+- Stars count people who clicked a button once. Read the pull request queue instead.
+- The top of the page gives the last commit, the license and the health files in one screen.
+- Open the five newest issues: how fast a maintainer answered, and how, is the project's real policy.
+- Sort open pull requests by oldest. Two years of "Review required" means nobody decides.
+- Count the people who commit. A project one person carries stops when they do.
+
+</InShort>
+
+The running example is [withastro/starlight](https://github.com/withastro/starlight), a documentation theme. The screens are GitHub's; GitLab and Codeberg show the same signals under other names.
+
+## Stars measure attention, not maintenance
+
+Stars go up when a project trends and never come down. They say nothing about whether anyone reads new issues. Two healthy projects:
+
+| As of Sept. 2026  | Starlight | Prettier |
+| :---------------- | --------: | -------: |
+| Stars             |      9.3k |    52.3k |
+| PRs merged, 30 d  |        47 |      121 |
+| Open PRs          |        21 |      283 |
+| Open for 1 year + |         4 |      187 |
+| Open issues       |         8 |    1,154 |
+
+Both are alive: Prettier merged 121 pull requests that month, 60 of them from people rather than bots. What differs is the queue. **To depend on a project, read the merge rate. To contribute to one, read the queue**: that's where your pull request will wait.
+
+## The top of the page says if anyone is home
+
+The repository's front page answers the first questions without a click: when the code last changed (1), and what the project is, where it lives, under which license and with which health files (2).
+
+<ContentImage
+	src="/images/getting-started-reading-a-repository-1.png"
+	width="720"
+	height="450"
+	alt="Starlight's repository page: the last commit, 3 days old, and the About box with website, topics, license and health files."
+/>
+
+Read the last commit's author too. Here it's a release bot, which is fine, since a bot only releases what people merged. A repository where the only recent commits are dependency bumps is on autopilot.
+
+The About box, in order of what its absence means:
+
+- **No license**: nobody may use, copy or modify the code, whatever the README says. [No license means no permission](https://choosealicense.com/no-permission/).
+- **No description or website**: the project isn't trying to be found. Fine for a personal tool, a warning for something you'd depend on.
+- **No "Contributing" or "Security policy" link**: you'll learn the rules in review, and a vulnerability report has nowhere private to go.
+
+## The README answers three questions on the first screen
+
+Scroll to the README and give it one screen. It should tell you what the project does, how to try it, and where to ask or contribute. If you have to read the source to learn what the thing is for, the documentation you'll need later won't be better.
+
+## Health files show the project expects strangers
+
+GitHub scores every public repository against its [recommended community standards](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/about-community-profiles-for-public-repositories). Add `/community` to the repository URL, or open Insights, then Community standards. Starlight ticks all eight lines.
+
+<ContentImage
+	src="/images/getting-started-reading-a-repository-2.png"
+	width="720"
+	height="439"
+	alt="Starlight's Community Standards checklist, all eight items ticked: description, README, code of conduct, contributing, license, security policy, templates."
+/>
+
+Missing files on a one-person side project are normal. **On a project that asks for contributors, a missing contributing guide means the rules exist only in the maintainers' heads.**
+
+## The five newest issues are the project's real policy
+
+The issue count says little: a popular project collects issues faster than anyone can close them. Open the five newest issues opened by people outside the team, and look at the first answer from someone with a Member, Collaborator or Owner badge.
+
+On [Starlight #4194](https://github.com/withastro/starlight/issues/4194), a bug report opened on September 11, 2026, a maintainer answered 2 hours 32 minutes later: thanks, an admission that the case wasn't tested, the upstream fix to follow, and a version to stay on meanwhile.
+
+<ContentImage
+	src="/images/getting-started-reading-a-repository-4.png"
+	width="720"
+	height="184"
+	alt="A reply from a Member on a Starlight bug report: thanks, the upstream work in progress, and the version to use until then."
+/>
+
+Of the four latest issues opened by outsiders, three got a maintainer's comment within about 12 hours, the fourth a label within three days. What to look for:
+
+- **A human answer within a week**, even a label or "can you share a reproduction?".
+- **The tone.** How maintainers answer a vague report is how they'll review your pull request.
+- **Issues closed by a stale bot with no human comment**: the project has stopped reading.
+
+## Sort pull requests by oldest
+
+The pull request list sorts newest first, which hides the answer you want. Sort by oldest (2), or use this search:
+
+```text
+is:pr is:open sort:created-asc
+```
+
+<ContentImage
+	src="/images/getting-started-reading-a-repository-3.png"
+	width="720"
+	height="450"
+	alt="Starlight's open pull requests sorted by oldest: the first, from an outside contributor, was opened in April 2024."
+/>
+
+Starlight's oldest open pull request dates from April 2024 (1), and only four are more than a year old. Look at why the old ones wait. "Changes requested" means the ball is with the author. "Review required" for a year means nobody decided, and yours may join them.
+
+Dependency bots tell you the same thing faster. Search for `is:pr is:open author:app/dependabot` (or `app/renovate`): a pile of bumps nobody merged means nobody is watching the dependencies either.
+
+## Count the people, not the commits
+
+Open Insights, then Contributors. The graph shows commits per week to the default branch, then one card per person.
+
+<ContentImage
+	src="/images/getting-started-reading-a-repository-5.png"
+	width="720"
+	height="450"
+	alt="Starlight's contributors graph over three months: steady weekly commits, and two top contributors with similar activity."
+/>
+
+Starlight had 40 people commit to its main branch over three months, bots excluded, and nobody wrote more than a sixth of the 178 commits (as of September 2026). **When one person writes nearly everything, the project's future is that person's free time.** It's not a reason to stay away, but it's the first thing to check before you depend on it.
+
+## Let a tool do the counting
+
+For a second opinion, or a repository too big to eyeball:
+
+- [OSS Insight](https://ossinsight.io/analyze/withastro/starlight) charts stars, issues, pull requests and response times over years. Replace the owner and repository in the URL.
+- [Ecosyste.ms](https://repos.ecosyste.ms/hosts/GitHub/repositories/withastro%2Fstarlight) lists a repository's maintainers, activity, dependents and packages across registries.
+
+Both read the same data as your five minutes. They help when you're comparing several projects, not as a replacement for reading one issue thread.
+
+## Do this now
+
+Pick a project you use or want to contribute to, and run through the list. Green on most lines is a workshop. Red on the queue and the answers is a museum: fine to read, slow to contribute to.
+
+<Checklist id="reading-a-repository">
+
+- [ ] The last commit by a person is less than three months old.
+- [ ] The repository has a license, a description and a contributing guide.
+- [ ] The README says what the project does, how to try it and where to ask, on the first screen.
+- [ ] Community standards (`/community`) shows the files a contributor needs: contributing guide, code of conduct, security policy, templates.
+- [ ] Of the five newest issues from outsiders, most got a human answer within a week.
+- [ ] The answers are specific and polite, even to vague reports.
+- [ ] Sorted by oldest, few open pull requests are more than a year old.
+- [ ] Dependency bot pull requests get merged, not piled up.
+- [ ] At least two people commit regularly.
+- [ ] The latest release, if the project publishes releases, is less than six months old.
+
+</Checklist>
+
+## Go further
+
+- [About community profiles for public repositories](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/about-community-profiles-for-public-repositories): what GitHub's checklist checks, from the maintainer's side.
+- [CHAOSS metrics](https://chaoss.community/kb-metrics-and-metrics-models/): the research community that defines project health metrics, for when five minutes isn't enough.
+- [Finding Open-Source Software to Use](/guide/getting-started/finding-open-source-projects/): where to look for a project, and what to check before you add it to your dependencies.
+- [Finding a Project to Contribute To](/guide/contributing/finding-open-source-projects/): once a repository passes this check, how to find the issue to start with.
