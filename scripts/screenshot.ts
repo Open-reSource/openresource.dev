@@ -1,10 +1,11 @@
-// Screenshots for the guide and articles, taken the same way every time: 1440×900 at 2×, no browser chrome, the page's
-// dark or light theme, optional boxes around the elements to look at, saved at 1440px wide max in public/images/.
+// Screenshots for the guide and articles, taken the same way every time: 1440×900 at 2×, no browser chrome, always
+// dark, optional boxes around the elements to look at, saved at 1440px wide max in public/images/.
 //
-//   npm run shot -- <url> --out <slug>-<n> [--clip <selector>] [--box <selector>]... [--theme dark|light] [--wait <ms>]
+//   npm run shot -- <url> --out <slug>-<n> [--clip <selector>] [--box <selector>]... [--wait <ms>]
 //
-// --box draws a rounded 3px rectangle around each match, numbered when there are several: brand gold on dark UI,
-// brand dim cyan on light UI. GH_SESSION (the value of GitHub's `user_session` cookie) signs the page in, for GitHub
+// Always dark: the page gets `prefers-color-scheme: dark`, and Chromium's auto dark mode darkens the pages that have no
+// dark theme of their own (pages that do, like GitHub, keep theirs). --box draws a rounded 3px rectangle in brand gold
+// around each match, numbered when there are several. GH_SESSION (the value of GitHub's `user_session` cookie) signs the page in, for GitHub
 // pages that need an account. The file is a PNG, or a WebP when the PNG would be over 300 KB.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,33 +19,31 @@ const { values, positionals } = parseArgs({
 		out: { type: 'string' },
 		clip: { type: 'string' },
 		box: { type: 'string', multiple: true, default: [] },
-		theme: { type: 'string', default: 'dark' },
 		wait: { type: 'string', default: '0' },
 	},
 });
 
 const [url] = positionals;
-const theme = values.theme === 'light' ? 'light' : 'dark';
 if (!url || !values.out) {
 	console.error(
-		'Usage: npm run shot -- <url> --out <slug>-<n> [--clip <selector>] [--box <selector>]... [--theme dark|light]'
+		'Usage: npm run shot -- <url> --out <slug>-<n> [--clip <selector>] [--box <selector>]... [--wait <ms>]'
 	);
 	process.exit(1);
 }
 
-// Brand colors, 3:1 or more on the background of their theme (gold 11.8:1 on GitHub dark, dim cyan 5.0:1 on GitHub light).
-const annotation = theme === 'dark' ? { color: '#FCC514', ink: '#141416' } : { color: '#2D7579', ink: '#FFFFFF' };
+// Brand gold, 11.8:1 on GitHub's dark background.
+const annotation = { color: '#FCC514', ink: '#141416' };
 
 const MAX_WIDTH = 1440;
 const MAX_PNG = 300 * 1024;
 const dir = path.resolve(import.meta.dirname, '../public/images');
 
-const browser = await chromium.launch();
+const browser = await chromium.launch({ args: ['--blink-settings=forceDarkModeEnabled=true'] });
 try {
 	const context = await browser.newContext({
 		viewport: { width: 1440, height: 900 },
 		deviceScaleFactor: 2,
-		colorScheme: theme,
+		colorScheme: 'dark',
 	});
 	if (process.env.GH_SESSION) {
 		await context.addCookies([
