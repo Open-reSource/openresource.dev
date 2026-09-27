@@ -68,6 +68,8 @@ Then hand over what only you can do, in stages. **Two people should be able to p
 - **Publishing**: through an npm organization's team, or through [trusted publishing](https://docs.npmjs.com/trusted-publishers) from CI, not through your personal token. PyPI and crates.io have the same.
 - **Everything else**: the domain, DNS, the social accounts, the CI secrets. Write the list down in the repository, and rotate the secrets when someone leaves.
 
+[Governance](/guide/maintaining/governance/) covers writing the roles down, so that the next person knows what they're taking on.
+
 ## Hand over in stages, to someone you know
 
 In November 2018, the maintainer of event-stream, a package still downloaded 7 million times a week in September 2026, explained why he had given it away: someone "wanted to maintain the module, so I gave it to him" ([event-stream#116](https://github.com/dominictarr/event-stream/issues/116)). The new maintainer added a dependency, flatmap-stream, that carried encrypted code aimed at Copay, a Bitcoin wallet app ([event-stream#115](https://github.com/dominictarr/event-stream/issues/115)). The original maintainer didn't use the package anymore, and got nothing for maintaining it. That's the usual story.
