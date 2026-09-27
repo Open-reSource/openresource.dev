@@ -36,7 +36,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`                      | Build your production site                                                                                                                   |
 | `npm run astro ...`                  | Run CLI commands like `astro add`, `astro check`                                                                                             |
 | `npm run astro -- --help`            | Get help using the Astro CLI                                                                                                                 |
-| `npm run vercel`                     | Run in the same conditions as Vercel                                                                                                         |
 | `npm run update:showcase`            | Run the showcase script to gather GitHub and GitLab links from https://github.com/orgs/Open-reSource/discussions/3 (other links are ignored) |
 | `npm run test`                       | Run the tests                                                                                                                                |
 | `npm run shot -- <url> --out <name>` | Take a screenshot for the guide or an article (see [Screenshots](#screenshots))                                                              |
@@ -79,6 +78,18 @@ Code blocks, inline code and URLs are skipped. Pages written before these rules 
 ```bash
 UPDATE_PROSE_BASELINE=1 npm run test -- --run prose
 ```
+
+## Dependency Overrides
+
+When a dependency pulls an outdated package with a security alert and its latest release still does, `package.json` pins the patched version under `overrides`, scoped to that dependency:
+
+```json
+"overrides": {
+  "satori": { "fflate": "0.7.5" }
+}
+```
+
+`tests/overrides.test.ts` fails as soon as an override is no longer needed: the dependency is gone, or now asks for the patched version itself. The update that makes an override useless has to remove it.
 
 ## Bugs and Feature Requests
 
