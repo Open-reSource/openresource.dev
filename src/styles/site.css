@@ -26,3 +26,8 @@
 pre {
 	tab-size: 2;
 }
+
+/* Markdown blocks hold prose (a saved reply, an issue template): wrap it instead of scrolling. Copying keeps the lines. */
+pre[data-language='md'] {
+	white-space: pre-wrap;
+}
