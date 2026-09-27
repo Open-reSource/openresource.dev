@@ -1,0 +1,139 @@
+---
+title: 'Burnout, Succession and the End of a Project'
+description: Read your bus factor, recognize burnout, find a co-maintainer, hand a project over without an event-stream moment, and archive it cleanly when it's time.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Every project ends. The good endings are planned: a co-maintainer, a handover, an archive notice, a fork you point people to. The bad ones are a maintainer who stops answering, and thousands of installs that never find out. This chapter covers the years before that, and the week after.</p>
+
+<InShort>
+
+- Your bus factor is in Insights > Contributors. If one bar holds almost every commit, it's yours.
+- Burnout looks like dread before you open your notifications. Unwatch, post an away notice, say no, and find a co-maintainer before you need one.
+- Two people should be able to publish a release. Neither should be a stranger: event-stream and xz both began with a handover to someone nobody knew.
+- To stop, say so: a README notice, a final release, `npm deprecate`, then GitHub's archive setting.
+- The license already lets anyone fork. Pointing to the fork or the alternative you trust is the last useful thing you can do.
+
+</InShort>
+
+## Your bus factor is a number you can read
+
+Open **Insights > Contributors** on your repository, and set the period to the whole history. One bar per person, sized by commits. Two projects, as of September 2026:
+
+|                           | esbuild     | Starlight     |
+| :------------------------ | :---------- | :------------ |
+| Top contributor's commits | 96% (evanw) | 27% (delucis) |
+| Second contributor's      | under 1%    | 24% (HiDeoo)  |
+| Commits, top 100 people   | 4,446       | 5,477         |
+
+esbuild is fast, widely used and actively maintained, and almost all of it is Evan Wallace's work. That's a choice, and a fine one, as long as everyone knows: if he stops, esbuild stops. Starlight would lose its two main people and still have others who know the code. **Know which one you are, and say it in your README if it's the first.** [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/) is the same check, from the user's side.
+
+## Burnout looks like dread, not tiredness
+
+Tired is fixed by a weekend. Burnout isn't. In maintainers, it tends to look the same: a knot in the stomach at the notification count, resentment of the people who use your work, weekends that are either all open source or none, and issues answered at midnight because otherwise they'll pile up. Nolan Lawson described that inbox in 2017, in [What it feels like to be an open-source maintainer](https://nolanlawson.com/2017/03/05/what-it-feels-like-to-be-an-open-source-maintainer/), and it hasn't changed.
+
+What helps, in order of effort:
+
+- **Turn the volume down.** Watch releases only, or only the threads you're in. The issues will be there when you look.
+- **Say you're away.** A line at the top of the README, or GitHub's **Busy** status, sets expectations without an apology to each person.
+- **Say no more often.** [Saying No](/guide/maintaining/saying-no/) has the replies.
+- **Share the load**, with a co-maintainer: the next section.
+- **Get paid**, sometimes. Money doesn't fix burnout, but it can buy the hours it takes. [Financing](/guide/financing/) covers how.
+
+This isn't medical advice. If it's been more than a bad month, talk to someone whose job it is.
+
+## Find a co-maintainer before you need one
+
+The right person is rarely the one with the biggest pull request. It's the one who already triages issues, answers questions and reviews other people's code, without being asked. Ask them directly, or post the question in the open:
+
+```md
+## Looking for a co-maintainer
+
+I've maintained (project) alone since (year), and I can't give it the time it deserves anymore. I'm looking for one or two people to share it with.
+
+What it involves: triaging issues, reviewing pull requests, and eventually releases. A few hours a week, when you can.
+How it works: triage rights first, then write access, then release rights after a few months.
+
+If you're interested, comment here or email me at (address). Having contributed before helps; it isn't required.
+```
+
+Then hand over what only you can do, in stages. **Two people should be able to publish a release**, so a security fix doesn't wait for one person's holiday:
+
+- **Publishing**: through an npm organization's team, or through [trusted publishing](https://docs.npmjs.com/trusted-publishers) from CI, not through your personal token. PyPI and crates.io have the same.
+- **Everything else**: the domain, DNS, the social accounts, the CI secrets. Write the list down in the repository, and rotate the secrets when someone leaves.
+
+## Hand over in stages, to someone you know
+
+In November 2018, the maintainer of event-stream, a package still downloaded 7 million times a week in September 2026, explained why he had given it away: someone "wanted to maintain the module, so I gave it to him" ([event-stream#116](https://github.com/dominictarr/event-stream/issues/116)). The new maintainer added a dependency, flatmap-stream, that carried encrypted code aimed at Copay, a Bitcoin wallet app ([event-stream#115](https://github.com/dominictarr/event-stream/issues/115)). The original maintainer didn't use the package anymore, and got nothing for maintaining it. That's the usual story.
+
+In March 2024, Andres Freund [found a backdoor](https://www.openwall.com/lists/oss-security/2024/03/29/4) in xz, a compression library in most Linux systems. The attacker, "Jia Tan", had been a diligent contributor for more than two years before becoming a co-maintainer, helped by accounts pressuring the tired original maintainer to accept help ([Russ Cox's timeline](https://research.swtch.com/xz-timeline)). Two years of good pull requests weren't enough.
+
+Neither story says "never hand over". They say: **trust is built in public, over time, and release rights come last.**
+
+1. Announce it in the open, with the issue above.
+2. Let the new maintainer triage and review for months, in public, where others can see their work.
+3. Give write access, then release rights, and keep your own for six months at least.
+4. Transfer the repository and the package name only when you'd trust them with your own account.
+
+## If you stop, say so
+
+Ending a project is fine. Disappearing isn't: people keep installing it, and keep waiting for answers. Say it where they'll see it. GitHub announced the end of its Atom editor on [June 8, 2022](https://github.blog/news-insights/product-news/sunsetting-atom/), six months ahead, with a notice at the top of the README:
+
+<ContentImage
+	src="/images/maintaining-burnout-succession-and-the-end-2.png"
+	width="720"
+	height="66"
+	alt="A quote at the top of Atom's README: Atom and all repositories under Atom will be archived on December 15, 2022, with a link to the announcement."
+/>
+
+After one last update in early 2023, the repository was archived. It's still there, read-only, with its code, its history and its last release:
+
+<ContentImage
+	src="/images/maintaining-burnout-succession-and-the-end-1.webp"
+	width="720"
+	height="450"
+	alt="Atom's repository on GitHub: a banner saying it was archived on March 3, 2023 and is read-only, a Public archive label and release 1.60.0."
+/>
+
+Smaller projects do the same in fewer steps. request's author announced [maintenance mode](https://github.com/request/request/issues/3142) in an issue in 2019, and the package's npm deprecation message points to it. Moment.js's docs open with "Moment.js is a legacy project in maintenance mode", and its [project status](https://momentjs.com/docs/#/-project-status/) page recommends alternatives.
+
+1. **Put a notice at the top of the README**, with the date and where to go instead:
+
+   ```md
+   > [!WARNING]
+   > This project is no longer maintained, as of (month year). It still works, but it won't get fixes, including security fixes. For new projects, use (alternative, link).
+   ```
+
+2. **Publish a final release**, so the notice reaches the package page too.
+3. **Deprecate the package**, with the same pointer: `npm deprecate my-package "No longer maintained, use (alternative)"` ([npm's docs](https://docs.npmjs.com/cli/v11/commands/npm-deprecate)). Every install then prints it.
+4. **Archive the repository** in its settings: issues, pull requests and code become read-only, and you can undo it ([GitHub's docs](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)).
+
+## The license already lets anyone fork
+
+A fork doesn't need your permission: that's what the license is for. OpenTofu forked Terraform ([September 2023](https://www.linuxfoundation.org/press/announcing-opentofu)) and Valkey forked Redis ([March 2024](https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community)) after license changes, against the wishes of the companies that owned them.
+
+What you can add is your word. Pointing your README and your deprecation message to a fork you trust makes it the successor for everyone who reads them. Transfer the package name to its maintainers only once they've earned it, as with any handover. If you can't vouch for anyone, point to alternatives instead, and let the name retire with the project.
+
+## Do this now
+
+<Checklist id="burnout-succession-and-the-end">
+
+- [ ] Open Insights > Contributors on your project, over its whole history, and read your share.
+- [ ] Write down what only you can do: publish, the domain, DNS, secrets, social accounts.
+- [ ] Give release rights to a second person you trust, through an npm organization or trusted publishing.
+- [ ] Name your successor in your head. Then write it down in the repository, with what they'd need.
+
+</Checklist>
+
+## Go further
+
+- [What it feels like to be an open-source maintainer](https://nolanlawson.com/2017/03/05/what-it-feels-like-to-be-an-open-source-maintainer/), by Nolan Lawson: the inbox, from the inside.
+- [Maintaining balance for open source maintainers](https://opensource.guide/maintaining-balance-for-open-source-maintainers/), from GitHub's Open Source Guides: boundaries, tools and taking breaks.
+- [Timeline of the xz open source attack](https://research.swtch.com/xz-timeline), by Russ Cox: how two years of trust were built, day by day.
+- [Saying No](/guide/maintaining/saying-no/): the first thing to try when it's too much.

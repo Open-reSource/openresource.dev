@@ -70,8 +70,11 @@ export const modules = [
 			'reviewing-pull-requests',
 			'managing-project-dependencies',
 			'fostering-a-strong-and-inclusive-community',
-			'ensuring-project-sustainability',
+			'burnout-succession-and-the-end',
 		],
+		merged: {
+			'ensuring-project-sustainability': 'maintaining/burnout-succession-and-the-end',
+		},
 	},
 	{
 		label: 'Promoting',
