@@ -1,69 +1,135 @@
 ---
 title: Finding a Project to Contribute To
-description: Where to find an open-source project to contribute to, from the tools you already use to good-first-issue aggregators.
+description: Where to find a project to contribute to, from the tools you already use to issue searches, aggregators and yearly events, and how to pick the issue.
 date: 2023-04-06
-lastUpdated: 2026-09-26
+lastUpdated: 2026-09-27
 ---
 
 import { Badge } from '@deramond.dev/astro';
+import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
 
 {/* prettier-ignore */}
-<p class="lead">Open-source projects are a great way to learn new skills, collaborate with other developers, and contribute to the larger tech community. However, finding the right project can be overwhelming. In this chapter, we'll explore some ways to find open-source projects that align with your interests and expertise.</p>
+<p class="lead">The best project to contribute to is one you already use: you know where it hurts, and its maintainers care about your use case. When nothing comes to mind, search for issues labeled for newcomers, and check the repository before you start. Aggregators and yearly events narrow the search, but they don't replace that check.</p>
+
+<InShort>
+
+- Start with your own dependencies, tools and editor extensions, and the bug you hit last week.
+- Add `/contribute` to a GitHub repository's URL to see its issues for newcomers.
+- A GitHub issue search finds thousands of <Badge>good first issue</Badge> labels. Narrow it with qualifiers, and don't trust the label alone.
+- Aggregators pre-filter the projects. Events like Hacktoberfest, Google Summer of Code and Outreachy put a date on it.
+- Before you pick an issue, give the repository five minutes, then say on the issue what you plan to do.
+
+</InShort>
 
 Looking for software to use rather than a project to contribute to? See [Finding Open-Source Software to Use](/guide/getting-started/finding-open-source-projects/).
 
-## How to Find Open-Source Projects That Interest You
+## Start with what you already use
 
-The first step in finding an open-source project is to identify your interests and skills. Consider the programming languages, frameworks, or tools that you're most comfortable with and passionate about. This will help you narrow down your search and find projects that align with your expertise.
+You already know the projects that matter to you: they're in your lockfile, your terminal and your editor. List them:
 
-Another approach is to think about the types of problems or projects that interest you. For example, if you're interested in machine learning, you can search for open-source projects related to that field. You can also explore different open-source platforms and communities to find projects that align with your interests.
+```bash
+npm ls --depth=0
+```
 
-## Where to Look for Open-Source Projects
+```bash
+pip list --not-required
+```
 
-There are many open-source platforms and communities where you can find projects to contribute to. Some of the most popular platforms include [GitHub](https://github.com/), [GitLab](https://gitlab.com) and [SourceForge](https://sourceforge.net/). These platforms have a large collection of open-source projects covering various programming languages, tools, and domains.
+```bash
+brew leaves
+```
 
-- [GitHub](https://github.com/) is the most popular platform for hosting open-source projects, with millions of projects available. You can explore projects by searching for keywords or browsing different categories.
-- [GitLab](https://gitlab.com) is another popular platform, which offers a similar set of features as GitHub.
-- [SourceForge](https://sourceforge.net/) is a platform that has been around for a long time and hosts a wide range of open-source projects.
+Then think of the last time one of them got in your way: a confusing error message, a missing example in the docs, a bug you worked around. Search its issue tracker for it. If it's already reported, the issue is your starting point. If it isn't, reporting it well is a contribution in itself.
 
-## Sometimes, You Don't Need to Look That Far
+**A fix to something you use is a fix you can test yourself**, and a maintainer can tell.
 
-Sometimes, you don't need to look far to find an open-source project to contribute to. If you use a particular tool or software regularly and notice areas that could be improved or features that could be added, consider contributing to that project. As a user, you have a unique perspective and understanding of the software, which can be valuable to the project's development.
+## Every GitHub repository has a Contribute page
 
-Additionally, contributing to a project that you already use regularly can be a great way to learn new skills and gain experience in a familiar environment. So don't be afraid to look at the tools and software you already use and consider contributing to their development.
+Add `/contribute` to a repository's URL. GitHub lists the open issues labeled <Badge>good first issue</Badge> and links the contributing guidelines. It isn't linked from the repository's page, so few people know about it.
 
-### GitHub Hidden "Contribute" Page
-
-Although it's not visible from the main interface or mentioned in the official documentation, every GitHub repository includes a hidden "Contribute" page. This page gathers issues that are suitable for new contributors, usually marked with the <Badge>good first issue</Badge> label, and provides a link to the repository's contributing guidelines.
-
-To access this page, simply append `/contribute` to the repository URL. For instance, the "Contribute" page for MDN's content repository is at https://github.com/mdn/content/contribute: the contributing guidelines (1) and each good first issue (2, 3).
+For MDN's content repository, [github.com/mdn/content/contribute](https://github.com/mdn/content/contribute) shows the contributing guidelines and two good first issues (as of September 2026).
 
 <ContentImage
 	src="/images/contributing-finding-open-source-projects-1.png"
 	width="720"
 	height="253"
-	alt="GitHub’s Contribute page for mdn/content: a link to the contributing guidelines and two issues labeled good first issue."
+	alt="GitHub's Contribute page for mdn/content: a link to the contributing guidelines and two issues labeled good first issue."
 />
 
-## Aggregators and Curated Lists
+The page is often empty, even on big projects: on September 26, 2026, Astro, Bootstrap, Vite and Starlight had no good first issue. An empty page doesn't mean the project wants no help. Look for a <Badge>help wanted</Badge> label in the issues, and read the contributing guide.
 
-If you still can't find an open-source project that interests you, don't worry, there are other resources available to help you find the perfect project. Aggregators and curated lists are great tools for discovering open-source projects based on different criteria, such as programming languages, domains, or difficulty level.
+## Search issues across GitHub, then narrow it down
 
-- [goodfirstissue.dev](https://goodfirstissue.dev/) curates easy pickings from popular open-source projects and narrows down projects for new open-source contributors.
+GitHub's issue search takes the same qualifiers as the issue list. Start broad, sorted by newest:
 
-  The projects are added manually by the community via pull requests in the repository and must meet certain criteria such as having at least 3 issues labeled as <Badge>good first issue</Badge>, at least 10 contributors, a README.md with detailed setup instructions, and a CONTRIBUTING.md with guidelines for new contributors. The projects must also be maintained.
+```text
+is:issue is:open label:"good first issue" language:TypeScript no:assignee
+```
 
-  You can filter projects by programming languages.
+<ContentImage
+	src="/images/contributing-finding-open-source-projects-2.webp"
+	width="720"
+	height="450"
+	alt="GitHub issue search for good first issues in TypeScript: 50.1k results, the second one an 'add a quote' issue with six beginner labels."
+/>
 
-- [Up For Grabs](https://up-for-grabs.net/) is a list of projects which have curated tasks specifically for new contributors.
+That's 50.1k results (1) on September 27, 2026. The second one (2) is the 1,318th "add an anime quote" issue of the same repository, with six beginner labels. **A label says someone wants help, not that the work is worth your afternoon.** Narrow the search:
 
-  They gather projects that actively want help and label some of their issues with known labels like <Badge>up-for-grabs</Badge>, <Badge>good first issue</Badge>, <Badge>help wanted</Badge>, etc.
+| Qualifier                             | What it keeps                                                     |
+| :------------------------------------ | :---------------------------------------------------------------- |
+| `no:assignee`                         | Issues nobody has claimed                                         |
+| `created:>2026-06-01`                 | Recent issues: the maintainers still remember them                |
+| `comments:<5`                         | Issues without a crowd already on them                            |
+| `org:withastro` or `repo:mdn/content` | One organization or one repository, once you've picked it         |
+| `label:"help wanted"`                 | Projects that don't use the <Badge>good first issue</Badge> label |
 
-  You can filter projects by programming languages, difficulty level, and more.
+Bookmark the search URL: it's a list you can come back to every week. The [search syntax](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests) has the rest of the qualifiers.
 
-- [For Good First Issue](https://forgoodfirstissue.github.com/) is a list of open source projects on the [Digital Public Goods (DPGs)](https://digitalpublicgoods.net/digital-public-goods/).
+## Aggregators do the first filter
 
-  The projects' topics are related to fighting climate change, to solving world hunger, and more.
+These sites list projects that want contributors, so you start from a shortlist instead of 50,000 issues. All were updated in 2026:
 
-  You can filter projects by programming languages, and Sustainable Development Goals (SDGs).
+- [goodfirstissue.dev](https://goodfirstissue.dev/): projects added by pull request, with criteria: at least 3 open issues with a beginner label, 10 contributors, a README with setup instructions, a contributing guide, recent activity and an open-source license. Filter by language.
+- [Up For Grabs](https://up-for-grabs.net/): each project declares the label it uses for newcomer tasks, so you land on the right list. Filter by language and tag.
+- [For Good First Issue](https://forgoodfirstissue.github.com/): social impact and civic tech projects, filterable by language and by the UN Sustainable Development Goal they work on.
+- [CodeTriage](https://www.codetriage.com/): subscribe to a repository and get one of its open issues by email every day. Good for learning a project before you write code for it.
+- [awesome-for-beginners](https://github.com/MunGell/awesome-for-beginners): a list of projects with beginner-friendly labels, grouped by language.
+
+## Events put a date on it
+
+A deadline helps, and some events come with a mentor or a stipend. The [community chapter](/guide/contributing/getting-involved-in-the-open-source-community/) covers them in more detail.
+
+| Event                                                         | When                                                                                                       | What                                                                                     |
+| :------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+| [Hacktoberfest](https://hacktoberfest.com/)                   | October                                                                                                    | Pull requests to participating projects during the month                                 |
+| [24 Pull Requests](https://24pullrequests.com/)               | December 1 to 24                                                                                           | One pull request a day until Christmas                                                   |
+| [Advent of Open Source](https://adventofopensource.com/)      | December                                                                                                   | Ours: a challenge a day for 25 days, to create or improve your own repositories          |
+| [Google Summer of Code](https://summerofcode.withgoogle.com/) | Applications in March and April (March 18 to April 2 in 2026), coding over the summer                      | A paid, mentored project with an open-source organization                                |
+| [Outreachy](https://www.outreachy.org/)                       | Two cohorts, from May and from December. Applications open months before (February 6 to 13, 2026, for May) | Paid, remote internships for people facing under-representation or systemic bias in tech |
+
+## Check the project, then claim the issue
+
+A good issue in a project nobody maintains is a pull request nobody merges. Give the repository five minutes with [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/): how the newest issues were answered and how old the oldest open pull requests are tell you whether yours will get a review.
+
+Then comment on the issue before you write code. Say what you plan to do, ask whether it's still wanted, and follow what the contributing guide says about assignment: some projects assign issues, others take the first good pull request.
+
+## Do this now
+
+<Checklist id="finding-a-project-to-contribute-to">
+
+- [ ] List the dependencies, tools and editor extensions you use every day, and open their issue trackers.
+- [ ] Open `/contribute` on two of them.
+- [ ] Bookmark an issue search for your language, with `no:assignee` and a recent `created:` date.
+- [ ] Pick three candidate issues and give each repository the five-minute check.
+- [ ] Comment on one: what you plan to do, and whether it's still wanted.
+
+</Checklist>
+
+## Go further
+
+- [Searching issues and pull requests](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests): every qualifier GitHub's search understands.
+- [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/): the check to run before you invest an afternoon.
+- [Contributing to Open Source](/guide/contributing/contributing-to-open-source/): what to do once you've picked the issue.
+- [Getting Involved in the Open Source Community](/guide/contributing/getting-involved-in-the-open-source-community/): the events and programs in more detail.
