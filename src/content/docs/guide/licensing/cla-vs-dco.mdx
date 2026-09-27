@@ -1,0 +1,138 @@
+---
+title: 'CLA or DCO: What You Sign When You Contribute'
+description: Inbound equals outbound, the one-line DCO sign-off, and contributor license agreements. What each gives the project, what to check before you sign, and which to ask for.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">When you open a pull request, you license your code to the project. Most projects rely on their own license for that, some ask for a one-line sign-off in each commit (a DCO), and some for a signed agreement (a CLA). Here's what each one gives the project, what to read before you click "I agree", and which one to ask for when you're the maintainer.</p>
+
+<InShort>
+
+- With nothing signed, your contribution comes under the project's license: "inbound=outbound", written into GitHub's terms.
+- A DCO is a `Signed-off-by:` line, added with `git commit -s`. It certifies that you may contribute the code, and grants nothing more.
+- A CLA is a license to the project's owner, usually wider than the project's license: often the right to sublicense, sometimes to relicense.
+- Before signing a CLA, check two things: whether it assigns your copyright, and whether it lets the owner distribute your code under other terms.
+- As a maintainer: the DCO, unless you have a reason and a lawyer. Decide before the first outside pull request.
+
+</InShort>
+
+## Without a signature, inbound equals outbound
+
+A project doesn't need you to sign anything to use your code. GitHub's terms of service settle it for every repository with a license: when you contribute to one, "you license that Content under the same terms" ([section D.6](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#6-contributions-under-repository-license)). The clause names the principle: "inbound=outbound". The license you receive the code under is the license you contribute under.
+
+It also says what overrides it: a separate agreement, "such as a contributor license agreement". That's the choice every project makes, on purpose or not:
+
+| The project asks for          | You give                                              | Used by, as of September 2026                                    |
+| ----------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------- |
+| Nothing                       | Your code, under the project's license                | Most projects on GitHub                                          |
+| A DCO sign-off in each commit | The same, plus a statement that you may contribute it | Linux, Git, GCC, Node.js, OpenTofu, Valkey                       |
+| A signed CLA                  | A license to the project's owner, often a wider one   | Google, Microsoft, Meta, Kubernetes, CPython, HashiCorp, Elastic |
+
+Django asked whether it still needed its CLA, and [made it optional](https://github.com/django/django/commit/0dac3dd4a1573b3c9cef3aea6a98440decfc5460) on February 9, 2026: "It's not clear that CLAs are needed", given inbound=outbound. Contributors whose employer requires one can still sign it.
+
+## A DCO is one line: you may contribute this code
+
+The Developer Certificate of Origin started in the Linux kernel. Linus Torvalds [proposed it in May 2004](https://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html) "to document that chain of trust", after SCO's lawsuits had questioned where Linux code came from, and version 1.1, the current one, [went in on June 14, 2005](https://github.com/torvalds/linux/commit/cbd83da82b15). The [full text](https://developercertificate.org/) is four short clauses. By signing off, you certify that:
+
+1. you wrote the code and may submit it under the project's license, or
+2. it's based on earlier work under a compatible open-source license, or
+3. someone who certified one of the above gave it to you, unchanged;
+4. and you understand that the contribution and your sign-off are public, and kept.
+
+**The sign-off is a line in the commit message**, with your name and email:
+
+```text
+Fix the timeout on slow connections
+
+Signed-off-by: Ada Lovelace <ada@example.com>
+```
+
+`git commit -s` adds it from your `user.name` and `user.email` ([Git's docs](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt--s)). Git has no setting to do it by default, on purpose: signing off is a statement you make for each commit.
+
+Projects check it with the [DCO GitHub App](https://github.com/apps/dco). A commit without a sign-off, or with one that doesn't match the commit's author, stops the pull request with a check that asks for action, and explains the fix:
+
+<ContentImage
+	src="/images/licensing-cla-vs-dco-1.webp"
+	width="720"
+	height="643"
+	alt="OpenTofu's DCO check: one commit incorrectly signed off, and the fix, git rebase HEAD~1 --signoff, then a force push."
+/>
+
+`git rebase --signoff` adds the missing line to every commit of your branch ([Git's docs](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---signoff)); force-push the branch afterwards. For commits made in GitHub's web editor, maintainers can [require a sign-off](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-the-commit-signoff-policy-for-your-repository) in the repository settings. It doesn't cover commits pushed from the command line: that's what the app is for.
+
+Several projects dropped their CLA for a DCO: Chef ([October 3, 2016](https://www.chef.io/blog/introducing-developer-certificate-of-origin)), GitLab ([November 1, 2017](https://about.gitlab.com/press/releases/2017-11-01-gitlab-transitions-contributor-license/)) and Spring ([January 6, 2025](https://spring.io/blog/2025/01/06/hello-dco-goodbye-cla-simplifying-contributions-to-spring/)). Node.js, which had the DCO text in its contributing guide for years, [made the sign-off required](https://github.com/nodejs/node/commit/c02bee3c619da93099b89b3322ed07b86990dff1) in April 2026.
+
+## A CLA is a license to the owner, often a wider one
+
+A contributor license agreement is a contract between you and the project's owner: a company, or a foundation. The reference text is the Apache Software Foundation's [individual CLA](https://www.apache.org/licenses/contributor-agreements.html), which most others adapt. It grants the foundation:
+
+- a copyright license on your contribution: "perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable", **with the right to sublicense**;
+- a patent license on your patents that the contribution uses;
+- and nothing else: "You reserve all right, title, and interest" in your contribution. You keep your copyright.
+
+When you contribute on your employer's time, your employer may own the code, and a corporate CLA (CCLA), signed by the company, covers its employees. Ask before your first contribution, not after.
+
+A bot checks the signature on each pull request. [CLA Assistant](https://github.com/cla-assistant/cla-assistant), a free service run by SAP, is the common one: it comments, links the agreement, and you sign with your GitHub account.
+
+<ContentImage
+	src="/images/licensing-cla-vs-dco-2.png"
+	width="720"
+	height="165"
+	alt="The CLA assistant bot on a TimescaleDB pull request: CLA not signed yet, and a link to the Contributor License Agreement."
+/>
+
+The large projects run their own: Google's, Microsoft's and Meta's bots, and the Linux Foundation's [EasyCLA](https://docs.linuxfoundation.org/lfx/easycla/v2-current/contributors/individual-contributor), which Kubernetes uses. Kubernetes asks for both: the CNCF's [charter](https://github.com/cncf/foundation/blob/main/charter.md) requires a DCO sign-off on all code, and each project may add a CLA on top.
+
+Some agreements go further and assign your copyright to the owner. The Free Software Foundation asked for that on GNU projects for decades, so that it could [enforce the GPL](https://www.gnu.org/licenses/why-assign.html) as the copyright holder. GCC [stopped requiring it](https://gcc.gnu.org/pipermail/gcc/2021-June/236182.html) on June 1, 2021, and glibc [followed](https://sourceware.org/pipermail/libc-alpha/2021-July/129577.html) in August 2021; both accept a DCO sign-off instead.
+
+## The right to sublicense is the right to change the license
+
+A project under a copyleft license can only move to other terms with every contributor's agreement ([Relicensing](/guide/licensing/relicensing/#a-cla-is-what-makes-relicensing-possible) explains why). A CLA that grants the right to sublicense is that agreement, signed in advance.
+
+HashiCorp's CLA grants it the right to "sublicense, and distribute Your Contributions" ([HashiCorp CLA](https://www.hashicorp.com/cla)). On August 10, 2023, HashiCorp moved Terraform from the MPL to the Business Source License, which isn't open source. Redis went the other way round: its contributing guide said contributions came under the Redis license, and the [same commit](https://github.com/redis/redis/commit/0b34396924eca4edc524469886dc5be6c77ec4ed) that moved Redis to RSALv2 and SSPL on March 20, 2024 replaced that sentence with a CLA.
+
+A CLA isn't a plan to relicense: Apache's grants the same right, to a foundation that [releases all its software](https://www.apache.org/licenses/) under the Apache License. It's the option. **When a company owns the project, read its CLA as the terms your code may one day be distributed under.**
+
+## Before you click "I agree"
+
+Read the agreement once per project. It's usually two pages, and three questions cover it:
+
+1. **Do you keep your copyright?** A license is the norm; an assignment gives the code away.
+2. **Can the owner distribute your code under other terms?** Look for "sublicense" or "any license". If the owner is a foundation with an open-source mission, that's how it's meant. If it's a company, see the section above.
+3. **Does your employer need to sign?** If you write the code at work, or your employment contract covers code you write at home, ask before you sign as an individual.
+
+Then decide. Not signing is fine: the pull request won't be merged, and that's the whole consequence. Many contributors sign anyway, for a project they want to improve. Both are decisions made with the facts.
+
+For a DCO, check your commit email: the sign-off is public and kept forever, per clause 4. Use the address you want attached to your name, the same as your commits' author.
+
+## As a maintainer, pick the DCO unless you have a reason
+
+- **Nothing at all** works for most projects: inbound=outbound already gives you a license to every contribution.
+- **The DCO** adds a record, per commit, that the contributor says they may contribute the code. It costs one app, one line in your `CONTRIBUTING.md`, and a rebase for first-time contributors who forget.
+- **A CLA** makes sense when a company or a foundation needs a patent grant from contributors, or plans to sell the same code under a commercial license (dual licensing). It needs a lawyer to write it, a bot to check it, and contributors willing to sign it. Say in your contributing guide why you ask for it: contributors will read it anyway.
+
+**Decide before the first outside pull request.** A CLA added later only covers contributions made after it. The ones before stay under inbound=outbound, and changing their license needs those contributors, one by one.
+
+## Do this now
+
+<Checklist id="cla-vs-dco">
+
+- [ ] Set `git config --global user.email` to the address you want in public sign-offs, and check that GitHub links it to your account.
+- [ ] Before your next contribution to a company-owned project, read its CLA and answer the three questions above.
+- [ ] If you contribute at work, find out whether your employer has signed a corporate CLA with the projects you contribute to.
+- [ ] If you maintain a project, write down in `CONTRIBUTING.md` what contributors agree to: inbound=outbound, a DCO sign-off, or a CLA, and why.
+
+</Checklist>
+
+## Go further
+
+- [developercertificate.org](https://developercertificate.org/): the DCO's full text, shorter than this section.
+- [The Apache individual CLA](https://www.apache.org/licenses/contributor-agreements.html): the reference text most other CLAs start from.
+- [CLA vs DCO for Django contributors](https://forum.djangoproject.com/t/cla-vs-dco-for-django-contributors/42399): a project weighing both in public, before making its CLA optional.
+- [Relicensing](/guide/licensing/relicensing/): what companies did with the right to sublicense, from MongoDB to Redis.

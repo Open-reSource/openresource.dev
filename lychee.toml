@@ -22,6 +22,8 @@ exclude = [
   '^https://moodle\.org/',
   '^https://(www\.)?mysql\.com/',
   '^https://(www\.)?figma\.com/',
+  # Answers scripted requests with a 403; the Wayback Machine captured its pages alive in September 2026.
+  '^https://(www\.)?gnu\.org/',
   # Alive (curl reaches it), but its TLS setup fails lychee's handshake.
   '^https://(www\.)?fsf\.org/',
 ]
