@@ -14,25 +14,17 @@ import {
 } from '@deramond.dev/astro';
 import { isoDate, postHref, readingTime, sortPosts } from '@deramond.dev/astro/blog';
 import ShowcaseBanner from '../components/ShowcaseBanner.astro';
+import { modules as guideModules } from '../guide-modules.mjs';
 import hero from '../brand/hero.svg';
 
 // One icon per guide module, keyed by the module's folder.
 const icons = import.meta.glob<string>('../brand/modules/*.svg', { query: '?raw', import: 'default', eager: true });
 const iconOf = (id: string) => icons[`../brand/modules/${id.slice('guide/'.length)}.svg`];
 
-const modules = (await getCollection('docs'))
-	.filter((entry) => /^guide\/[^/]+$/.test(entry.id))
-	.sort((a, b) => a.id.localeCompare(b.id));
-const order = [
-	'what-is-open-source',
-	'getting-started',
-	'contributing',
-	'creating',
-	'maintaining',
-	'promoting',
-	'financing',
-];
-modules.sort((a, b) => order.indexOf(a.id.slice(6)) - order.indexOf(b.id.slice(6)));
+// The guide's modules, in sidebar order: the module list is the one source, so a new module lands here on its own and
+// other pages at the guide's root (like /guide/checklists/) don't.
+const docs = new Map((await getCollection('docs')).map((entry) => [entry.id, entry]));
+const modules = guideModules.map(({ dir }) => docs.get(`guide/${dir}`)!);
 
 const articles = sortPosts(await getCollection('articles'), { production: import.meta.env.PROD }).slice(0, 3);
 ---
@@ -60,7 +52,7 @@ const articles = sortPosts(await getCollection('articles'), { production: import
 	</Hero>
 
 	<Section>
-		<SectionHeader num="01" label="Guide" title="Seven modules, from the first contribution to funding" />
+		<SectionHeader num="01" label="Guide" title="Eight modules, from the first contribution to funding" />
 		<ProjectGrid>
 			{modules.map((entry, i) => (
 				<ProjectCard

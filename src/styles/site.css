@@ -37,3 +37,8 @@ pre[data-language='md'] {
 .d-table code {
 	overflow-wrap: normal;
 }
+
+/* A first column is a list of names: `BSD-2-Clause` or `suggestion:` stays on one line, hyphens included. */
+.d-table td:first-child code {
+	white-space: nowrap;
+}
