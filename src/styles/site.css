@@ -21,3 +21,8 @@
 .author-actions {
 	margin-block: var(--space-7) var(--space-5);
 }
+
+/* Prettier indents the code in MDX code blocks with tabs: show them as wide as its `tabWidth`, not 8 columns. */
+pre {
+	tab-size: 2;
+}
