@@ -1,0 +1,145 @@
+---
+title: "Trademarks, Names and Logos: What Your License Doesn't Cover"
+description: An open-source license covers the code, not the name. What a trademark adds, what WordPress and Rust teach, and how to write, register and hold one.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">An MIT license lets anyone take your code and ship it. It says nothing about calling the fork by your project's name, putting your logo on it, or selling "YourProject Pro". That's trademark law, and a one-page policy in your repository decides most of it before anyone asks.</p>
+
+<InShort>
+
+- Open-source licenses grant copyright, not the name: Apache-2.0 and MPL-2.0 say so, MIT and the GPL don't mention it.
+- Whoever holds the name keeps it. Forks become Jenkins, Valkey or OpenTofu.
+- Write a short policy: allow the truthful uses ("works with", "for", unmodified copies), ask for the rest. Over-reaching gets you the Rust backlash.
+- Register when money or a company is involved, or let a foundation hold the name. A CC license on the logo file doesn't license the trademark.
+
+</InShort>
+
+## Your license covers the code, not the name
+
+Copyright protects the code and exists as soon as you write it. A trademark protects a name or a logo used to identify a product, and exists through use or registration. An open-source license only deals with the first.
+
+| License    | What it says about names                                                                                                                                          |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Apache-2.0 | [Section 6](https://www.apache.org/licenses/LICENSE-2.0#trademarks): no permission to use the licensor's trademarks, except to describe where the work comes from |
+| MPL-2.0    | [Section 2.3](https://www.mozilla.org/en-US/MPL/2.0/): no rights in the contributors' trademarks or logos                                                         |
+| GPL-3.0    | Nothing by default. [Section 7(e)](https://www.gnu.org/licenses/gpl-3.0.html#section7) lets you add a term declining trademark rights                             |
+| BSD-3      | [Contributors' names](https://opensource.org/license/bsd-3-clause) can't be used to endorse derived products: an endorsement clause, not a trademark grant        |
+| MIT        | Nothing                                                                                                                                                           |
+
+Silence doesn't grant the name either. Under MIT, a fork can use your code; whether it can use your name depends on trademark law, and on the policy you publish.
+
+**In the United States, a trademark exists from its use** in commerce, registered or not ([USPTO](https://www.uspto.gov/trademarks/basics/why-register-your-trademark)): `™` is for any mark, `®` only for a registered one. In the European Union, "an EU trade mark shall be obtained by registration" ([Regulation 2017/1001](https://eur-lex.europa.eu/eli/reg/2017/1001/oj/eng), article 6), and France's national law says the same. Outside the US, an unregistered project name has little protection.
+
+## Whoever holds the name keeps it
+
+When a project splits, the code goes both ways and the name stays with its owner. Every well-known fork got a new name for that reason:
+
+| Fork                                                                                  | Date               | Why the new name                                                                                                                      |
+| ------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Iceweasel, from Firefox                                                               | November 2006      | Mozilla didn't allow its name on Debian's patched builds. Debian [went back](https://bugs.debian.org/815006) to Firefox in March 2016 |
+| LibreOffice, from OpenOffice.org                                                      | September 28, 2010 | Oracle kept the OpenOffice.org name, and gave it to the Apache Software Foundation on June 1, 2011                                    |
+| [Jenkins](https://www.jenkins.io/blog/2011/01/29/jenkins/), from Hudson               | January 29, 2011   | Oracle held the Hudson name; the community voted 214 to 14 to rename                                                                  |
+| [io.js](https://blog.izs.me/2014/12/iojs/), from Node.js                              | December 2014      | Joyent held the Node.js trademark. The two merged back as Node.js 4.0 in September 2015                                               |
+| [OpenTofu](https://www.linuxfoundation.org/press/announcing-opentofu), from Terraform | September 20, 2023 | First called OpenTF, renamed when it joined the Linux Foundation                                                                      |
+| [Valkey](https://valkey.io/topics/history/), from Redis                               | March 28, 2024     | Redis Ltd owns the Redis trademark                                                                                                    |
+
+The fork that loses the name also loses the search results, the package name and the "it's the same thing" for users. [Relicensing](/guide/licensing/relicensing/) tells the other half of the Valkey and OpenTofu stories.
+
+## WordPress vs WP Engine: a trademark fight over GPL code
+
+WordPress is GPL-licensed: anyone may host it, modify it and sell services around it. Since 2024, its name has been the subject of a lawsuit between Automattic, whose CEO is WordPress co-founder Matt Mullenweg, and WP Engine, a WordPress host. The dates, from the court docket and both parties' posts:
+
+| Date               | What happened                                                                                                                                                                                                                                                                                                                                      |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| June 7, 2010       | Automattic [transfers](https://storage.courtlistener.com/recap/gov.uscourts.cand.437474/gov.uscourts.cand.437474.238.1.pdf) the WordPress trademark to the WordPress Foundation, and gets back an exclusive license for hosting                                                                                                                    |
+| September 20, 2024 | Automattic proposes a trademark license to WP Engine: 8% of its gross revenue, in royalties or in staff working on WordPress. Mullenweg criticizes WP Engine in his WordCamp US keynote                                                                                                                                                            |
+| September 21, 2024 | "[WP Engine is not WordPress](https://wordpress.org/news/2024/09/wp-engine/)", on wordpress.org                                                                                                                                                                                                                                                    |
+| September 23, 2024 | Cease-and-desist letters both ways: [WP Engine](https://wpengine.com/wp-content/uploads/2024/09/Cease-and-Desist-Letter-to-Automattic-and-Request-to-Preserve-Documents-Sent.pdf) calls the demand extortion, [Automattic](https://automattic.com/2024/wp-engine-cease-and-desist.pdf) alleges infringement of the WordPress and WooCommerce marks |
+| September 24, 2024 | The Foundation's trademark policy changes. "WP" was free to use "in any way you see fit" since 2010; it now asks not to confuse people, and names WP Engine                                                                                                                                                                                        |
+| September 25, 2024 | WP Engine is [banned](https://wordpress.org/news/2024/09/wp-engine-banned/) from wordpress.org                                                                                                                                                                                                                                                     |
+| October 2, 2024    | WP Engine sues Automattic and Mullenweg in the Northern District of California                                                                                                                                                                                                                                                                     |
+| October 12, 2024   | WP Engine's Advanced Custom Fields plugin is [taken over](https://wordpress.org/news/2024/10/secure-custom-fields/) on wordpress.org as Secure Custom Fields                                                                                                                                                                                       |
+| December 10, 2024  | A [preliminary injunction](https://storage.courtlistener.com/recap/gov.uscourts.cand.437474/gov.uscourts.cand.437474.64.0.pdf) orders WP Engine's access and plugin restored                                                                                                                                                                       |
+| October 23, 2025   | Automattic, Mullenweg, the Foundation and WooCommerce [counterclaim](https://automattic.com/2025/10/24/counterclaims/) for trademark infringement                                                                                                                                                                                                  |
+| September 24, 2026 | The court [rules](https://storage.courtlistener.com/recap/gov.uscourts.cand.437474/gov.uscourts.cand.437474.410.0.pdf) that Automattic and Mullenweg can't bring the trademark claims themselves: the Foundation owns the marks. Whether WP Engine's use is fair is not decided yet                                                                |
+
+The jury trial is set for October 19, 2027. Whoever wins, two points don't depend on the verdict:
+
+- **Who holds the mark decides who can enforce it.** The Foundation owns the name, so in court the trademark claims are the Foundation's, not the company's or its founder's.
+- **A policy is a promise people build on.** For 14 years, the policy said "WP" was free to use. It changed during the dispute, and WP Engine's complaint cites the change.
+
+## Write a short policy, and allow the obvious
+
+A trademark policy says what anyone may do with the name without asking, and what needs permission. For a small project, a page is enough.
+
+| Allow without asking                                          | Ask first                                            |
+| ------------------------------------------------------------- | ---------------------------------------------------- |
+| True statements: "works with X", "plugin for X", "based on X" | A modified build distributed under the name X        |
+| Unmodified copies, under the name X                           | A product, company or domain name that starts with X |
+| Talks, articles, meetups, the logo as a link to the project   | Anything that suggests the project endorses you      |
+| Non-commercial stickers and t-shirts                          | Selling merchandise                                  |
+
+The OpenJS Foundation, which holds the Node.js marks, puts the second column in one rule: `<your product> for Node.js` is fine, `Node.js <your product>` isn't.
+
+**Over-reaching costs more than it protects.** The Rust Foundation published a draft policy on April 6, 2023. It asked crates to use `-rs` rather than `rust` in their names, required events using the name to ban firearms, and forbade changing the logo's colors. The Rust project's directors on the Foundation board [apologized](https://blog.rust-lang.org/inside-rust/2023/04/12/trademark-policy-draft-feedback/) that the wider project had been "insufficiently included", and the Foundation said the draft "clearly needs improvement". The [final policy](https://rustfoundation.org/policy/rust-trademark-policy/), approved on January 23, 2025, allows "Rust" in crate names for things that work with Rust, and the logo in other colors.
+
+Policies worth copying, from the shortest:
+
+| Policy                                                     | Why copy it                                                                               |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [Git](https://git-scm.com/about/trademark)                 | One page. Allows "for Git" and "based on Git", forbids "Gitalicious" and "Git++"          |
+| [Python](https://www.python.org/psf/trademarks/)           | Free user groups and free products named after Python are allowed. The text itself is CC0 |
+| [Debian](https://www.debian.org/trademark)                 | Allows merchandise, commercial included, if you say whether Debian gets any of the money  |
+| [OpenJS Foundation](https://trademark-policy.openjsf.org/) | The "for X" rule, with correct and incorrect examples                                     |
+| [FOSSmarks](https://fossmarks.org/)                        | Not a policy: a guide to writing one, under CC BY 4.0                                     |
+
+## Register when there's money, or hand the name to a foundation
+
+You don't need a registration to write a policy, but you need one to enforce it easily. [GitHub's trademark policy](https://docs.github.com/en/site-policy/content-removal-policies/github-trademark-policy), for example, requires a registration number with a report. Register when a company sells around the project, when a fork or a lookalike could confuse users, or when a foundation asks.
+
+Filing fees for one class, as of September 2026, before any lawyer:
+
+| Office                                                                                            | Fee                                                      |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| [USPTO](https://www.uspto.gov/trademarks/basics/how-much-does-it-cost), United States             | $350 per class                                           |
+| [EUIPO](https://www.euipo.europa.eu/en/trade-marks/before-applying/fees-payments), European Union | €850, €50 for the second class, €150 for each after      |
+| [UK IPO](https://www.gov.uk/how-to-register-a-trade-mark/start-your-application), United Kingdom  | £205, £60 for each extra class                           |
+| [WIPO Madrid](https://www.wipo.int/en/web/madrid-system/fees/sched), several countries at once    | 653 CHF, plus a fee per country, on top of a home filing |
+
+Software is class 9, a hosted service class 42. A registration lasts 10 years, renewable.
+
+A foundation can hold the name for you, and pay for it from the project's budget. [Open Source Collective](https://docs.oscollective.org/for-hosted-member-projects/trademarks-and-ip) holds trademarks for its hosted projects on request. The Software Freedom Conservancy holds Git's, and Software in the Public Interest holds Debian's. [Governance](/guide/maintaining/governance/#join-a-foundation-when-others-depend-on-you) compares the foundations.
+
+## A CC license on the logo licenses the picture, not the mark
+
+A logo is both a work, under copyright, and a mark. The two can go different ways:
+
+- **Git**: the logo, by Jason Long, is under [CC BY 3.0](https://git-scm.com/community/logos). Anyone can copy and modify the image; the trademark policy still decides what it can be used to name.
+- **Python**: the logo has no Creative Commons license. Its use follows the trademark policy only.
+- **Open \{re\}Source**: the code is MIT, the content CC BY-NC-SA 4.0, and the README says the mark, favicons and artwork are "not covered by these licenses: all rights reserved".
+
+If you put the logo under CC BY, say in the same place that the trademark policy still applies. Fonts have their own version of this: the OFL's [Reserved Font Names](/guide/licensing/non-code-licenses/#fonts-the-ofl-lets-anyone-ship-them-not-sell-them-alone) keep a modified font from using the original name.
+
+## Do this now
+
+<Checklist id="trademarks">
+
+- [ ] Search your project's name in the USPTO and EUIPO databases, and in your package registry, before you grow attached to it.
+- [ ] Add a "Trademark" section to your README, or a `TRADEMARK.md`: who holds the name, what's allowed without asking, whom to ask for the rest.
+- [ ] Say which license covers your logo, and that it doesn't cover the trademark.
+- [ ] If a company sells around your project, register the name or ask your foundation to.
+
+</Checklist>
+
+## Go further
+
+- [FOSSmarks](https://fossmarks.org/): trademark law for open-source projects, explained by lawyers, with examples.
+- [Git's trademark policy](https://git-scm.com/about/trademark): the shortest complete policy to start from.
+- [The WP Engine v. Automattic docket](https://www.courtlistener.com/docket/69221176/wpengine-inc-v-automattic-inc/): every filing, with the injunction and the rulings as PDFs.
+- [Building a Strong Project Identity](/guide/promoting/building-a-strong-project-identity/): choosing the name and the logo in the first place.
