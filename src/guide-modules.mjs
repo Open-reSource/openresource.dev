@@ -39,6 +39,7 @@ export const modules = [
 			'finding-open-source-projects',
 			'contributing-to-open-source',
 			'writing-a-bug-report',
+			'non-code-contributions',
 			'getting-involved-in-the-open-source-community',
 			'building-a-portfolio-with-open-source-contributions',
 			'overcoming-challenges-in-open-source-contributions',
