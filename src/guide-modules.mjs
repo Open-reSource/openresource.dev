@@ -69,6 +69,7 @@ export const modules = [
 			'saying-no',
 			'reviewing-pull-requests',
 			'governance',
+			'security-for-maintainers',
 			'managing-project-dependencies',
 			'fostering-a-strong-and-inclusive-community',
 			'burnout-succession-and-the-end',

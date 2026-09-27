@@ -1,0 +1,164 @@
+---
+title: 'Security for Maintainers: Before, During and After the First Report'
+description: A SECURITY.md, private reports, what to do when one arrives, advisories and CVEs, the CI settings that stop supply chain attacks, Scorecard, who can help, and the EU Cyber Resilience Act.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">You will get a security report. It will arrive as a public issue titled "URGENT", as an email from a company you've never heard of asking for a CVE, or as a patch from a helpful new co-maintainer. This chapter is what to have in place before that day, and what to do on it.</p>
+
+<InShort>
+
+- Before the first report: a `SECURITY.md`, private vulnerability reporting, two-factor authentication for every maintainer, and no long-lived publish tokens.
+- When one arrives: acknowledge it, reproduce it, fix it in private, agree on a date with the reporter, then publish the fix and the advisory together.
+- GitHub is a CVE Numbering Authority: one advisory form gets you a CVE, and Dependabot alerts everyone who depends on you.
+- Your CI is part of your release: pin actions to a commit, restrict token permissions, publish from CI with provenance.
+- The EU Cyber Resilience Act mostly concerns companies that ship your code. Expect their questions.
+
+</InShort>
+
+## Before the first report: one file and four settings
+
+**A `SECURITY.md` tells reporters where to go instead of a public issue.** GitHub shows it in the repository's **Security** tab, next to the **Report a vulnerability** button (1). Bootstrap, which Julien maintains, promises an acknowledgment within three business days (2):
+
+<ContentImage
+	src="/images/maintaining-security-for-maintainers-1.png"
+	width="720"
+	height="450"
+	alt="Bootstrap's Security tab: a Report a vulnerability button, and its SECURITY.md promising to acknowledge reports within 3 business days."
+/>
+
+It needs four things: which versions get fixes, how to report, how fast you'll answer, and whether you pay bounties (usually not). A template:
+
+```md
+# Security policy
+
+## Supported versions
+
+Only the latest minor release gets security fixes: (4.2.x) as of (month year).
+
+## Reporting a vulnerability
+
+Please don't open a public issue. Use "Report a vulnerability" in the Security tab, or email (address).
+
+We'll acknowledge your report within (3 business days), and keep you informed until the fix is published. We don't pay bounties, but we credit reporters in the advisory, unless you'd rather not be named.
+```
+
+Then four settings:
+
+- **Private vulnerability reporting**, in the repository's security settings: reporters get a form, and the report reaches the maintainers privately, as a draft advisory ([GitHub's docs](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/configuring-private-vulnerability-reporting-for-a-repository)).
+- **Two-factor authentication for everyone with write access**, required at the organization level.
+- **No long-lived publish tokens.** [Trusted publishing](https://docs.npmjs.com/trusted-publishers) lets CI publish to npm with a short-lived identity instead of a token that can leak. PyPI and crates.io offer the same.
+- **Secret scanning and push protection**, free on public repositories: GitHub blocks a push that contains a known type of secret ([GitHub's docs](https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection)).
+
+## When a report arrives
+
+1. **Acknowledge it** within the time your `SECURITY.md` promises, even if all you can say is "received, looking at it".
+2. **Reproduce it.** Ask for the missing steps. Many reports are real; some are a misunderstanding, and some are generated nonsense.
+3. **Rate it.** [CVSS](https://www.first.org/cvss/v4-0/) turns "how bad is it" into a score from 0 to 10, and GitHub's advisory form has the calculator. It's a common language, not a verdict: don't spend a day on the decimal.
+4. **Fix it in private.** A draft advisory can open a [temporary private fork](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/collaborating-in-a-temporary-private-fork-to-resolve-a-repository-security-vulnerability), where you and the reporter work on the fix without publishing it.
+5. **Agree on a date** with the reporter, then publish the release and the advisory together.
+
+**Ninety days is the deadline many researchers work with.** Google's Project Zero gives vendors 90 days to fix, and 30 more for users to update ([its policy](https://googleprojectzero.blogspot.com/p/vulnerability-disclosure-policy.html)). A small project can usually fix faster, and should. If you need more time, say so early: reporters are patient with maintainers who answer.
+
+## One advisory gets you a CVE and alerts every user
+
+A **repository security advisory** is a form on GitHub: affected versions, patched versions, severity, a description, a workaround if there is one, and credits. GitHub is a CVE Numbering Authority, so the same form can request a CVE identifier ([GitHub's docs](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories)). Once published and reviewed, the advisory enters the GitHub Advisory Database, and Dependabot alerts every repository that depends on an affected version.
+
+The advisory for the tj-actions compromise shows what a good one contains: what happened, in plain words (1), and the version that fixes it (2):
+
+<ContentImage
+	src="/images/maintaining-security-for-maintainers-2.webp"
+	width="720"
+	height="450"
+	alt="GitHub advisory CVE-2025-30066 for tj-actions/changed-files: high severity, affected up to 45.0.7, patched in 46.0.1, and a summary of the attack."
+/>
+
+## Your CI is part of your release
+
+Two attacks, a year apart, went through the build rather than the code.
+
+**tj-actions/changed-files, March 2025.** Attackers rewrote the version tags of a GitHub Action used by more than 23,000 repositories so that they pointed to a malicious commit. Every workflow that referenced a tag, like `@v45`, ran it and printed its secrets into the build logs, public on public repositories ([CISA's alert](https://www.cisa.gov/news-events/alerts/2025/03/18/supply-chain-compromise-third-party-tj-actionschanged-files-cve-2025-30066-and-reviewdogaction)). Workflows that pinned the action to a full commit SHA kept running the old code.
+
+**xz, March 2024.** Part of the backdoor was "solely in the distributed tarballs", as Andres Freund [wrote](https://www.openwall.com/lists/oss-security/2024/03/29/4): not in the Git repository anyone could review. A release built in public CI from the tagged source, with a provenance attestation, leaves no room for a file that exists only in the tarball.
+
+The settings that would have helped, and cost an afternoon:
+
+```yaml
+# The token can read, nothing more.
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # A commit SHA can't be moved. Dependabot updates it.
+      - uses: actions/checkout@<full-commit-sha> # v5
+```
+
+- **Pin third-party actions to a full commit SHA.** GitHub's [hardening guide](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions) calls it the only way to use an action as an immutable release.
+- **Set `permissions:`** in every workflow, and grant write access only to the job that needs it.
+- **Don't check out a pull request's code in a `pull_request_target` workflow**: it runs with your secrets. GitHub Security Lab calls these ["pwn requests"](https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/).
+- **Publish from CI with provenance**: `npm publish --provenance`, or GitHub's [artifact attestations](https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds), so users can check where a release was built.
+- **Audit your workflows** with [zizmor](https://docs.zizmor.sh/), which flags these patterns and more.
+
+## Scorecard: run it, read the top three findings
+
+[OpenSSF Scorecard](https://scorecard.dev/) checks a repository against 18 practices and gives each a score out of 10. Bootstrap's, as of September 22, 2026:
+
+<ContentImage
+	src="/images/maintaining-security-for-maintainers-3.png"
+	width="720"
+	height="450"
+	alt="Bootstrap's OpenSSF Scorecard: 7.3 overall, with Signed-Releases and Vulnerabilities at 0, Code-Review at 4 and Branch-Protection at 8."
+/>
+
+7.3 out of 10, and the low scores need reading, not obeying. Signed-Releases at 0 is real: Bootstrap's releases have no signed artifacts. Vulnerabilities at 0 flags known, unfixed vulnerabilities, often in development dependencies that never ship. Fuzzing, also at 0, matters for parsers and hardly for a CSS framework. Fix what applies to your project, and write down why the rest doesn't. The [OpenSSF Best Practices badge](https://www.bestpractices.dev/) is the same idea, as a questionnaire.
+
+## You don't have to do it alone
+
+- **[OpenSSF](https://openssf.org/)** publishes the tools above, and a [guide to coordinated disclosure](https://github.com/ossf/oss-vulnerability-guide) with templates.
+- **[Alpha-Omega](https://alpha-omega.dev/)**, a Linux Foundation project, funds security work in widely used projects.
+- **The [GitHub Secure Open Source Fund](https://github.com/open-source/github-secure-open-source-fund)** gives $10,000 per selected project, paid to its maintainers, with a security program (as of September 2026).
+- **[OSTIF](https://ostif.org/)** organizes security audits for open-source projects.
+- **The [oss-security](https://oss-security.openwall.org/wiki/mailing-lists/oss-security) mailing list** is where vulnerabilities in open source are discussed once public, and where Linux distributions look.
+
+Bug bounty platforms bring reports, and more of them are generated by AI tools and wrong. curl's [contribution guidelines](https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md#on-ai-use-in-curl) require reporters to disclose AI use, and ban those who submit made-up reports. Say what you expect in your `SECURITY.md`.
+
+## The EU Cyber Resilience Act, briefly
+
+The [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act) (Regulation (EU) 2024/2847) sets security requirements for software and hardware sold in the EU. It entered into force on December 10, 2024. Manufacturers have had to report actively exploited vulnerabilities since September 11, 2026, and the main obligations apply from December 11, 2027.
+
+- **Open source is in scope only when it's supplied in the course of a commercial activity.** Accepting donations without making a profit isn't one ([the regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng), recitals 15 and 18).
+- **An "open-source software steward"** is a legal person, like a foundation, that supports open-source software intended for commercial use. It must have a cybersecurity policy and cooperate with authorities, with lighter obligations than a manufacturer (Article 24).
+- **The companies that ship your code are manufacturers.** They have to handle vulnerabilities in their components, yours included. Expect more reports, more questions about your security process, and sometimes offers of help.
+
+This is not legal advice. If you sell or support your project commercially, read the regulation, or ask someone whose job it is.
+
+## Do this now
+
+<Checklist id="security-for-maintainers">
+
+- [ ] Add a `SECURITY.md` with supported versions, how to report and your response time.
+- [ ] Turn on private vulnerability reporting.
+- [ ] Require two-factor authentication for everyone with write access.
+- [ ] Replace long-lived publish tokens with trusted publishing.
+- [ ] Set `permissions: contents: read` at the top of every workflow.
+- [ ] Pin third-party actions to full commit SHAs, and let Dependabot update them.
+- [ ] Turn on secret scanning and push protection.
+- [ ] Run Scorecard, and fix the first finding that applies to your project.
+
+</Checklist>
+
+## Go further
+
+- [The OpenSSF vulnerability disclosure guide](https://github.com/ossf/oss-vulnerability-guide): the whole process for open-source maintainers, with message templates.
+- [About repository security advisories](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories): drafts, private forks, CVEs and publishing, from GitHub's docs.
+- [Preventing pwn requests](https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/), from GitHub Security Lab: the workflow mistake behind many CI compromises.
+- [Burnout, Succession and the End of a Project](/guide/maintaining/burnout-succession-and-the-end/): the xz story, from the handover side.
