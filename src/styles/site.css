@@ -31,3 +31,9 @@ pre {
 pre[data-language='md'] {
 	white-space: pre-wrap;
 }
+
+/* The theme lets inline code break anywhere, which lets a table squeeze a column of code until `suggestion:` splits in
+   two. In a table, keep code whole: the column takes the width of its longest span, and the table scrolls if it must. */
+.d-table code {
+	overflow-wrap: normal;
+}

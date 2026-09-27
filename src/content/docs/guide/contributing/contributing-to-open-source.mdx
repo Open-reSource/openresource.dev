@@ -8,6 +8,7 @@ lastUpdated: 2026-09-27
 import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
+import ReviewCommentLabels from '../../../partials/review-comment-labels.mdx';
 
 {/* cspell:ignore indivdual */}
 
@@ -222,13 +223,9 @@ As the author, you see a **Commit suggestion** button under it: one click, and t
 
 **Leave "Allow edits by maintainers" ticked when you open the pull request.** It lets maintainers push small fixes to your branch instead of asking you. Kelketek had opened the pull request from a fork owned by an organization, where the option doesn't exist ([GitHub's docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)): fork to your personal account for your contributions.
 
-Kelketek applied the suggestion by hand the next day and said so: "I've squashed in your suggestion and re-pushed!". Reply to every comment, even with "Done", so the reviewer knows what to look at again. Review comments come in three kinds:
+Kelketek applied the suggestion by hand the next day and said so: "I've squashed in your suggestion and re-pushed!". Reply to every comment, even with "Done", so the reviewer knows what to look at again. Many reviewers label their comments with [Conventional Comments](https://conventionalcomments.org/), or something close. Here's what each label asks of you:
 
-| Kind     | Looks like                              | What to do                                                    |
-| -------- | --------------------------------------- | ------------------------------------------------------------- |
-| Nit      | "nit: missing period"                   | Fix it. It's small by definition.                             |
-| Question | "Why not use the existing helper?"      | Answer it. Change the code only if the answer is "no reason". |
-| Request  | A suggestion block, "Please add a test" | Do it, or explain why not and let the maintainer decide.      |
+<ReviewCommentLabels />
 
 ## After two weeks of silence, ask once
 
