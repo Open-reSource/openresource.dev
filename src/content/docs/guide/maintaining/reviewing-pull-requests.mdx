@@ -1,0 +1,188 @@
+---
+title: 'Reviewing Pull Requests: What to Check, What to Say, When to Close'
+description: A ten-second triage before the diff, a review checklist, labels that say what's blocking, words that keep people contributing, closing kindly, and merging so the history tells the story.
+date: 2026-09-27
+lastUpdated: 2026-09-27
+---
+
+import Chat from '../../../../components/Chat.astro';
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+import ReviewCommentLabels from '../../../partials/review-comment-labels.mdx';
+
+{/* prettier-ignore */}
+<p class="lead">A review has two readers: the person who wrote the code, and whoever reads the thread in three years to understand why. Write for both. Here's what to check, how to label each comment so the author knows what's blocking, and when to close instead of asking for another round.</p>
+
+<InShort>
+
+- Spend ten seconds before the diff: is there an issue, is it in scope, does the pull request do what its title says.
+- Check correctness, tests, docs and breaking changes, and ask to split anything too big to review in one sitting.
+- Label every comment: `issue`, `suggestion`, `question`, `nitpick`, blocking or not.
+- Send one review, not twenty comments. Use suggestion blocks, and approve with nits when nits are all that's left.
+- Close in a day rather than ghost for a year. When you merge, keep every author in the commit.
+
+</InShort>
+
+## Ten seconds before the diff
+
+Reading a diff takes minutes; deciding whether to read it takes seconds. Before you open **Files changed**:
+
+- **Is there an issue**, and does the pull request say which? Without one, you're reviewing a decision nobody made.
+- **Is it in scope?** A well-written feature the project doesn't want is still a no. [Saying No](/guide/maintaining/saying-no/) has the replies.
+- **Does it do what the title says**, and only that? Three unrelated changes are three pull requests.
+- **Is CI green**, and did the author fill in the template? If not, say so in one line and wait: it's the author's turn.
+
+## What to check in the diff
+
+A review checklist keeps you from checking the style and missing the bug. Copy this one into your review when it helps:
+
+<Checklist id="pull-request-review">
+
+- [ ] It fixes the issue, all of it and only it.
+- [ ] A bug fix comes with a test that fails without the fix.
+- [ ] Docs, examples and the changelog follow the change in behavior.
+- [ ] No breaking change hides in it: public API, options, defaults, output format.
+- [ ] Anything visible works with a keyboard and a screen reader, and new strings can be translated.
+- [ ] It's small enough to review in one sitting.
+- [ ] CI is green, on the checks that matter for this change.
+
+</Checklist>
+
+**Ask to split anything much over 400 changed lines.** A [SmartBear study of a team at Cisco](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/) found that reviewers find fewer defects beyond 200 to 400 lines at a time. A big pull request gets a skim, not a review, and both of you know it.
+
+## Label every comment
+
+The same sentence can be a blocker or a passing thought, and the author can't tell which. Say it. [Conventional Comments](https://conventionalcomments.org/) gives each comment a label, and the author a clear next step:
+
+<ReviewCommentLabels />
+
+In a Canonical documentation theme, a reviewer flagged a quoting detail as `nitpick [non-blocking]` (1). The author fixed it anyway, and said so (2):
+
+<ContentImage
+	src="/images/maintaining-reviewing-pull-requests-1.webp"
+	width="720"
+	height="510"
+	alt="A review comment labeled nitpick non-blocking about a double-quoted variable, and the author's reply: agreed, it is fixed now."
+/>
+
+Label the good parts too. One `praise:` on the part that was done well costs a line, and tells the author what to keep doing.
+
+## Send one review, not twenty comments
+
+Every comment you post on its own sends a notification. Click **Start a review** instead of **Add single comment**, write all your comments, then submit them together with a verdict: **Comment**, **Approve** or **Request changes**.
+
+- **Use suggestion blocks** for small changes: the **Add a suggestion** button in the comment toolbar turns your fix into one the author applies with a click. [Your First Contribution](/guide/contributing/contributing-to-open-source/#reply-to-every-review-comment-then-let-the-maintainer-resolve-it) shows one from the author's side.
+- **Approve with nits** when only nits are left: "Approved. Two nitpicks below, take them or leave them." Another round for a missing period costs the contributor a day.
+- **Fix the last details yourself** when "Allow edits by maintainers" is ticked, and say what you changed.
+
+## Write the comment you'd want to receive
+
+Review the code, not the person. Ask before you assert: you may be missing the reason.
+
+<Chat type="end" author="Not this">
+	Why would you do it like this? This is wrong.
+</Chat>
+
+<Chat type="start" author="This">
+	question: why a new helper here? `formatDate()` in `utils.ts` looks like it does the same, unless I'm missing a case.
+</Chat>
+
+<Chat type="end" author="Not this">
+	You forgot the tests.
+</Chat>
+
+<Chat type="start" author="This">
+	issue (blocking): this changes the output for empty strings. Could you add a test for that case? The others are in
+	`tests/format.test.ts`.
+</Chat>
+
+- "Could you" and "what about" leave room for a better idea. "You should" doesn't.
+- "This is called twice" says the same as "you're calling this twice", without pointing at anyone.
+- Be specific about what "done" looks like. "Needs work" is not a review.
+
+## Close in a day rather than ghost for a year
+
+A pull request you won't merge doesn't get better by waiting. Close it with the reason, as soon as you know. On [twbs/bootstrap#42911](https://github.com/twbs/bootstrap/pull/42911), a pull request that touched Sass variables in Bootstrap 5 just before the Bootstrap 6 alpha, Julien closed it the day after it was opened:
+
+<ContentImage
+	src="/images/maintaining-reviewing-pull-requests-2.png"
+	width="720"
+	height="155"
+	alt="Julien's comment: thanks, but we won't change the reboot and variables Sass files for v5, as the v6 alpha is landing soon."
+/>
+
+The author answered "Makes total sense, thanks for taking a look!" and offered to check the same values on the v6 branch instead. A clear no, within a day, kept a contributor. The four common reasons, with a reply for each:
+
+- **Out of scope**: the replies in [Saying No](/guide/maintaining/saying-no/#five-kinds-of-no-with-the-reply-to-save).
+- **Superseded**:
+
+  ```md
+  Closing this in favor of #123, which fixes the same thing and was further along. Thanks for the work: (what from this pull request was used, if anything).
+  ```
+
+- **No response**:
+
+  ```md
+  Closing, since this has waited for changes for (N) weeks. No problem at all: if you come back to it, reopen it or open a new one, and we'll pick up where we left off.
+  ```
+
+- **Too far off**:
+
+  ```md
+  Thanks for the effort. This would need a rewrite more than a review: (the main reasons). I'm closing it so that it doesn't sit here. If you want to try again, start from (issue or approach), and comment on the issue before you write code.
+  ```
+
+## Merge so that the history tells the story
+
+**Squash, and rewrite the commit message.** The branch's "fix typo" and "address review" commits help nobody later. The squashed commit's first line is what `git log` and the changelog show: say what changed, in the project's format. When Julien merged stefan-korn's first contribution, he replaced the issue's title with "Docs: Add `.table` class to color tables example".
+
+**Keep every author.** Check the end of the message before you confirm: everyone who wrote code on the branch needs a `Co-authored-by:` line to be credited on GitHub. That squashed commit, [a715174](https://github.com/twbs/bootstrap/commit/a715174c5), shows both stefan-korn and Julien as authors. To credit reviewers and people who helped in the thread too, [Better GitHub Co-Authors](https://github.com/delucis/better-github-coauthors) adds a button to the merge box that collects them.
+
+**Label for the release notes.** GitHub [generates release notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes) from merged pull requests, grouped by label. One label at merge time saves writing the changelog later.
+
+## Share the load
+
+One maintainer reviewing everything is a queue, and eventually a burnout. Spread it:
+
+- **A `CODEOWNERS` file** requests reviews automatically, by path. Bootstrap's has three lines:
+
+  ```text
+  *.js    @twbs/js-review
+  *.css   @twbs/css-review
+  *.scss  @twbs/css-review
+  ```
+
+  A pull request that touches Sass requests a review from the CSS team, as a code owner, without anyone asking:
+
+  <ContentImage
+  	src="/images/maintaining-reviewing-pull-requests-3.png"
+  	width="720"
+  	height="77"
+  	alt="A pull request timeline event: bobby404-K requested a review from a team as a code owner."
+  />
+
+- **Rotate within the team.** GitHub [assigns team reviews](https://docs.github.com/en/organizations/organizing-members-into-teams/managing-code-review-settings-for-your-team) round robin or by load, so the same person doesn't get every request.
+- **Make sure a ping finds someone.** This guide tells contributors to ask once after two weeks of silence. Watch the repository, or at least its pull requests, so that the ping reaches a person.
+
+## Review AI-assisted pull requests like any other
+
+A pull request written with an AI tool gets the same review, and the same bar. curl's [contribution guidelines](https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md#on-ai-use-in-curl) accept AI-assisted code as long as it follows every normal requirement, and put the burden on the author. What changes is the question to ask: can the author explain the change in their own words? If they can't answer a `question:`, close it with the "too far off" reply.
+
+## Do this now
+
+<Checklist id="reviewing-pull-requests">
+
+- [ ] Add a `CODEOWNERS` file to your project, even with one line.
+- [ ] Save the three closing replies above in your GitHub settings.
+- [ ] Close the oldest open pull request you know you won't merge, with the reason.
+- [ ] In your next review, label every comment, and add one `praise:`.
+
+</Checklist>
+
+## Go further
+
+- [Conventional Comments](https://conventionalcomments.org/): the full list of labels and decorations, with examples.
+- [About pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews): every button a reviewer can press, from GitHub's docs.
+- [Saying No](/guide/maintaining/saying-no/): the replies for pull requests that shouldn't be merged at all.
+- [Your First Contribution, Step by Step](/guide/contributing/contributing-to-open-source/): the same review, from the contributor's side.
