@@ -37,3 +37,13 @@ pre[data-language='md'] {
 .d-table code {
 	overflow-wrap: normal;
 }
+
+/* A first column is a list of names: `BSD-2-Clause` or `suggestion:` stays on one line, hyphens included. */
+.d-table td:first-child code {
+	white-space: nowrap;
+}
+
+/* The theme indents top-level lists by 1.25em but leaves nested ones at the browser's 40px: indent them the same. */
+.d-prose li > :is(ul, ol) {
+	padding-left: 1.25em;
+}

@@ -14,6 +14,11 @@ describe('guide modules', () => {
 		expect(live.filter((url) => !exists(url.slice(1)))).toEqual([]);
 	});
 
+	test('every module has its icon for the homepage', () => {
+		const icon = (dir: string) => fs.existsSync(new URL(`../src/brand/modules/${dir}.svg`, import.meta.url));
+		expect(modules.filter(({ dir }) => !icon(dir)).map(({ dir }) => dir)).toEqual([]);
+	});
+
 	test('no two pages share a URL', () => {
 		expect(live.filter((url, i) => live.indexOf(url) !== i)).toEqual([]);
 	});
