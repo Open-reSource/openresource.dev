@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 3,
       "forks": 58,
-      "issues": 5,
+      "issues": 6,
       "languages": [
         "Python",
         "HTML",
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 129,
+      "stars": 130,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -256,7 +256,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 0,
-      "stars": 78,
+      "stars": 79,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
