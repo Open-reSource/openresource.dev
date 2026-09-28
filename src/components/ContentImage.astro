@@ -1,20 +1,97 @@
 ---
 import { Image } from 'astro:assets';
+
+const { src, alt, width, height } = Astro.props;
+const fullSize = typeof src === 'string' ? src : src.src;
 ---
 
-<div>
-	<Image src={Astro.props.src} alt={Astro.props.alt} width={Astro.props.width} height={Astro.props.height} />
+<div class="content-image">
+	<a href={fullSize} aria-haspopup="dialog">
+		<Image src={src} alt={alt} width={width} height={height} />
+		<span class="d-visually-hidden">(full size)</span>
+	</a>
+	<dialog aria-label={alt}>
+		<form method="dialog">
+			<button class="d-mono">Close</button>
+		</form>
+		<img data-src={fullSize} alt={alt} width={width} height={height} />
+	</dialog>
 </div>
 
+<script>
+	// The link opens the original file without JavaScript. With it, the image opens in a dialog on the page:
+	// Escape, the Close button or a click anywhere closes it, and focus goes back to the link.
+	for (const root of document.querySelectorAll<HTMLElement>('.content-image')) {
+		const dialog = root.querySelector('dialog')!;
+		const full = dialog.querySelector('img')!;
+		root.querySelector('a')!.addEventListener('click', (e) => {
+			if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+			e.preventDefault();
+			// Loaded on first open only: most readers never open most images.
+			full.src ||= full.dataset.src!;
+			dialog.showModal();
+		});
+		dialog.addEventListener('click', () => dialog.close());
+	}
+</script>
+
 <style>
-	div {
+	.content-image {
 		width: 100%;
 		height: auto;
 		display: flex;
 		justify-content: center;
 	}
 
+	a {
+		display: block;
+		cursor: zoom-in;
+	}
+
 	img {
 		border: var(--stroke-hairline) solid var(--color-line);
+	}
+
+	dialog {
+		max-width: calc(100vw - 32px);
+		max-height: calc(100dvh - 32px);
+		padding: 0;
+		overflow: visible;
+		background: transparent;
+		border: 0;
+		cursor: zoom-out;
+	}
+
+	dialog::backdrop {
+		background: color-mix(in srgb, var(--color-bg) 90%, transparent);
+	}
+
+	dialog img {
+		display: block;
+		max-width: calc(100vw - 32px);
+		max-height: calc(100dvh - 80px);
+		width: auto;
+		height: auto;
+		background: var(--color-panel);
+	}
+
+	form {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: var(--space-2);
+	}
+
+	button {
+		background: var(--color-panel);
+		color: var(--color-fg);
+		border: var(--stroke-hairline) solid var(--color-line);
+		border-radius: var(--radius-sm);
+		padding: 4px 10px;
+		font-size: var(--font-size-xs);
+		cursor: pointer;
+	}
+
+	button:hover {
+		border-color: var(--color-muted);
 	}
 </style>
