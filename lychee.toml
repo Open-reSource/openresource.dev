@@ -11,10 +11,16 @@ max_concurrency = 16
 timeout = 20
 max_retries = 2
 accept = ["200..=299", "429"]
+# No browser user agent: Anubis, the bot wall of many open source hosts (invent.kde.org), challenges any "Mozilla" one.
+
+# Examples of local servers (like Ollama's http://localhost:11434) are not links to check.
+exclude_loopback = true
 
 exclude = [
   # The site itself: internal links are checked offline on every pull request.
   '^https://openresource\.dev/',
+  # Its spec items get their ids from JavaScript, so lychee cannot find the fragment (checked in a browser, 2026-09-28).
+  '^https://semver\.org/#spec-item-',
   # Alive, but they answer bots with a login wall or a challenge (checked in a browser, 2026-09-26).
   '^https://(www\.)?linkedin\.com/',
   '^https://(www\.)?(x|twitter)\.com/',
@@ -22,6 +28,16 @@ exclude = [
   '^https://moodle\.org/',
   '^https://(www\.)?mysql\.com/',
   '^https://(www\.)?figma\.com/',
+  # Alive, but a Cloudflare (or similar) bot wall answers scripted requests with a 403 (checked in a browser, 2026-09-28).
+  '^https://(www\.)?canva\.com/',
+  '^https://support\.discord\.com/',
+  '^https://codepen\.io/',
+  '^https://(www\.)?(indiegogo|kickstarter|patreon)\.com/',
+  '^https://(www\.)?reddit\.com/',
+  '^https://(www\.)?npmjs\.com/',
+  '^https://sourceforge\.net/',
+  '^https://(www\.)?courtlistener\.com/',
+  '^https://(www\.)?euipo\.europa\.eu/',
   # Answers scripted requests with a 403; the Wayback Machine captured its pages alive in September 2026.
   '^https://(www\.)?gnu\.org/',
   # Alive (curl reaches it), but its TLS setup fails lychee's handshake.
