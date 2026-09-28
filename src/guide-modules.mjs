@@ -83,14 +83,15 @@ export const modules = [
 			'managing-contributions-and-community-engagement',
 			'saying-no',
 			'reviewing-pull-requests',
+			'community',
 			'governance',
 			'security-for-maintainers',
 			'managing-project-dependencies',
-			'fostering-a-strong-and-inclusive-community',
 			'burnout-succession-and-the-end',
 		],
 		merged: {
 			'ensuring-project-sustainability': 'maintaining/burnout-succession-and-the-end',
+			'fostering-a-strong-and-inclusive-community': 'maintaining/community',
 		},
 	},
 	{
