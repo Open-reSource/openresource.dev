@@ -1,0 +1,319 @@
+---
+title: 'The Files That Turn a Repository Into a Project'
+description: README, LICENSE, CONTRIBUTING, code of conduct, SECURITY, FUNDING.yml, CHANGELOG, templates and CODEOWNERS, each with the smallest version that works.
+date: 2024-03-30
+lastUpdated: 2026-09-28
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">A repository is a folder with a contract, and the contract is a handful of files most people copy from somewhere without reading. Each one answers a question a stranger would otherwise ask you in an issue. Here's what each file is for, the smallest version that works, and where GitHub shows it.</p>
+
+<InShort>
+
+- The README sells the project on one screen: what it does, what it looks like, how to install it, how to use it.
+- `LICENSE`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` and `SECURITY.md` can start at a few lines. Chalk's contributing guide is one sentence.
+- GitHub finds these files at the root, in `docs/` or in `.github/`, links them in the About box, and scores them on a Community Standards page.
+- Issue forms, `FUNDING.yml`, a changelog and `CODEOWNERS` can wait for the first issues, sponsors, releases and co-maintainers.
+- A public `.github` repository gives every repository of an account the same defaults, except the license.
+
+</InShort>
+
+## GitHub reads the files and shows them to everyone
+
+**GitHub looks for these files by name, in `.github/`, then at the root, then in `docs/`, and links what it finds.** The About box of [chalk](https://github.com/chalk/chalk), a terminal color library with 42 million dependents on GitHub as of September 2026, lists five of them:
+
+<ContentImage
+	src="/images/creating-repository-files-1.png"
+	width="304"
+	height="383"
+	alt="Chalk's About box: its description and topics, then Readme, MIT license, Code of conduct, Contributing, Security policy."
+/>
+
+The names aren't case-sensitive. Chalk's files are `readme.md`, `license`, `code-of-conduct.md`, `contributing.md` and `.github/security.md`, and GitHub finds them all. Uppercase is a convention, not a requirement.
+
+| File                     | Answers                                  | Add it            |
+| :----------------------- | :--------------------------------------- | :---------------- |
+| `README.md`              | What is this, and how do I use it?       | Day one           |
+| `LICENSE`                | Am I allowed to use it?                  | Day one           |
+| `CODE_OF_CONDUCT.md`     | How do people treat each other here?     | Before you share  |
+| `CONTRIBUTING.md`        | How do I send a change?                  | Before you share  |
+| `SECURITY.md`            | Where do I report a vulnerability?       | Before you share  |
+| `.github/ISSUE_TEMPLATE` | What do you need in a bug report?        | First issues      |
+| `.github/FUNDING.yml`    | Can I pay you?                           | When you want it  |
+| `CHANGELOG.md`           | What changed, and will it break my code? | First release     |
+| `CODEOWNERS`             | Who reviews what?                        | Second maintainer |
+
+The files work on any forge. Where GitLab and Codeberg look for them is [further down](#gitlab-and-codeberg-read-the-same-files-from-their-own-folders).
+
+## The README sells the project on one screen
+
+**A visitor decides in one screen whether to keep reading, so that screen says what the project does and how to start.** The first screen of [HTTPX](https://github.com/encode/httpx), an HTTP client for Python, has all of it: a logo, a one-line pitch, two badges, what it supports, the install command and a first request with its output:
+
+<ContentImage
+	src="/images/creating-repository-files-2.webp"
+	width="720"
+	height="700"
+	alt="Top of HTTPX's README: logo, 'A next-generation HTTP client for Python', two badges, pip install httpx, then a first request."
+/>
+
+The order that works for most projects:
+
+1. **The name and one sentence** on what it does, in words a newcomer searches for.
+2. **What it looks like**: a screenshot, a GIF of the terminal, or the output of the example.
+3. **Install**: one command per package manager you support.
+4. **Usage in 30 seconds**: the smallest example that does something real.
+5. **Links**: the docs, how to contribute, the license.
+
+Two or three badges are enough. HTTPX's say whether the tests pass and which version is out; downloads, stars and "PRs welcome" add nothing a reader needs to decide.
+
+The smallest README that passes the one-screen test:
+
+````md
+# pageweigh
+
+Print the size of every page of a website, largest first.
+
+![pageweigh listing six pages with their sizes in KB](docs/demo.png)
+
+## Install
+
+```sh
+npm install --global pageweigh
+```
+
+## Usage
+
+```sh
+pageweigh https://example.com
+```
+
+## Contributing and license
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). MIT licensed.
+````
+
+**The common mistake: a README that starts with the history of the project.** Why you built it can go in a section further down, or in a blog post. A "Non-goals" section, on the other hand, saves you replies: [Saying No](/guide/maintaining/saying-no/#write-your-non-goals-down) explains why. The reader's side of all this is in [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/#the-readme-answers-three-questions-on-the-first-screen).
+
+## LICENSE goes in the repository, not only in the manifest
+
+**Without a `LICENSE` file, nobody has the right to use your code, whatever the README says.** Put the full text at the root, and the SPDX identifier in your manifest (`package.json`, `pyproject.toml`, `Cargo.toml`). [Choosing a License](/guide/licensing/choosing-a-license/#apply-it-in-three-places) covers which one and where it goes.
+
+It's the one file the `.github` repository trick, [further down](#one-github-repository-sets-the-defaults-for-all-the-others), can't provide: GitHub requires it in each repository, so that it ships with every clone and every package.
+
+## A code of conduct names who to write to
+
+**A code of conduct is only as good as its contact line.** Most projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/), version 3.0 since 2025, and the template leaves a placeholder where the reporting address goes. A GitHub code search for `[INSERT CONTACT METHOD]`, the placeholder of version 2, finds 4,608 files named `CODE_OF_CONDUCT.md`, as of September 28, 2026: rules nobody can enforce, because nobody can report a breach.
+
+Use an address more than one person reads, and turn on **Settings** › **Moderation options** › **Reported content**, so contributors can flag a comment to you without leaving GitHub. [How to Create a Code of Conduct](/articles/how-to-create-a-code-of-conduct-for-an-open-source-project) compares the templates.
+
+## CONTRIBUTING.md is for the reply you'd otherwise retype
+
+**Most people won't read it, and that's fine: it's the link you paste when a pull request skips the rules.** GitHub links it when someone opens an issue or a pull request, and that's as close as it gets to being read first.
+
+Chalk's `contributing.md` is one sentence pointing to the code of conduct. That's a start. What saves you the most replies:
+
+```md
+# Contributing
+
+## Before you start
+
+Open an issue before any change bigger than a typo or a one-line fix, so we can agree on the approach before you write it. Issues labeled `good first issue` are ready to take: say so in a comment, no need to wait for an answer.
+
+## Setup
+
+git clone https://github.com/(owner)/(repo).git
+cd (repo)
+npm install
+npm test
+
+## Pull requests
+
+- One change per pull request, with a test when it fixes a bug.
+- Commit messages follow Conventional Commits: `fix: …`, `feat: …`, `docs: …`.
+- We review within a week. If you've heard nothing after two, ping us in the pull request.
+
+## AI tools
+
+(Your policy, or a link to it.)
+```
+
+**The common mistake: setup steps nobody has run since they were written.** Clone the repository into a new folder once a year and follow your own guide to the letter. Two more lines belong here when they apply: how you handle AI-assisted contributions ([a policy you can copy](/guide/ai/contribution-policy/)), and what contributors agree to when they send code ([CLA or DCO](/guide/licensing/cla-vs-dco/)).
+
+## SECURITY.md is one link and a promise you can keep
+
+**A `SECURITY.md` sends vulnerability reports to a private channel instead of a public issue.** Chalk's is two lines: a link to the private reporting form, and "No AI slop will be accepted". Yours needs the versions you fix, where to report and how fast you'll answer. [Security for Maintainers](/guide/maintaining/security-for-maintainers/#before-the-first-report-one-file-and-four-settings) has a template and the settings that go with it.
+
+## Issue forms ask the questions before you have to
+
+**An issue form asks for what your first reply would have asked: the version, the steps, what happened.** It's a YAML file in `.github/ISSUE_TEMPLATE/`, and GitHub turns it into a form with required fields. The smallest useful bug form:
+
+```yaml
+# .github/ISSUE_TEMPLATE/bug.yml
+name: Bug report
+description: Something doesn't work as documented.
+labels: ['bug']
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The output of `pageweigh --version`.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The smallest input that shows the bug. A link to a repository or a gist is best.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what happened instead
+    validations:
+      required: true
+```
+
+A `config.yml` next to it turns off blank issues and sends questions and vulnerabilities where they belong:
+
+```yaml
+# .github/ISSUE_TEMPLATE/config.yml
+blank_issues_enabled: false
+contact_links:
+  - name: Question
+    url: https://github.com/(owner)/(repo)/discussions
+    about: Ask in Discussions, not in an issue.
+  - name: Security vulnerability
+    url: https://github.com/(owner)/(repo)/security/advisories/new
+    about: Report it privately.
+```
+
+A pull request template is a Markdown file, `.github/pull_request_template.md`, pasted into every new pull request:
+
+```md
+Fixes #
+
+- [ ] Tests pass locally
+- [ ] Docs updated, if behavior changed
+```
+
+**The common mistake: fifteen required fields.** People fill them with "N/A" or leave for a project that asks less. Three questions get a better report than fifteen. The contributor's side is [How to Write a Bug Report That Gets Fixed](/guide/contributing/writing-a-bug-report/).
+
+## FUNDING.yml turns on the Sponsor button
+
+**Four lines in `.github/FUNDING.yml` add a Sponsor button to the repository and a list of where the money goes.** Chalk's file:
+
+```yaml
+github: [sindresorhus, Qix-]
+open_collective: sindresorhus
+tidelift: npm/chalk
+custom: https://sindresorhus.com/donate
+```
+
+GitHub renders it in the sidebar, one line per key:
+
+<ContentImage
+	src="/images/creating-repository-files-3.png"
+	width="304"
+	height="323"
+	alt="Chalk's Sponsor this project box: two GitHub Sponsors profiles, then Open Collective, Tidelift and a custom donation link."
+/>
+
+GitHub Sponsors takes up to four people or one organization; Open Collective, Liberapay, Ko-fi, Polar, thanks.dev and a few others take one account each, and `custom` takes up to four links ([GitHub's docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository)). Package managers have their own field for the same links: [Add Funding Links to Your package.json](/articles/add-funding-links-to-your-packagejson/).
+
+## A changelog is written for the people upgrading
+
+**A changelog says what changed for the people who use the project, not for the people who wrote it.** A dump of the git log fails that test: "Merge branch 'main'" tells nobody whether their code breaks. [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) is the format most hand-written ones follow, newest version first, with an `Unreleased` section on top:
+
+```md
+# Changelog
+
+## [Unreleased]
+
+## [1.2.0] - 2026-09-28
+
+### Added
+
+- `--json` prints the result as JSON.
+
+### Fixed
+
+- Pages with a redirect were counted twice.
+```
+
+If you publish GitHub Releases with generated notes instead, keep a `CHANGELOG.md` anyway, one line long, pointing to the releases page: it's the first place people look.
+
+## Small config files end the small arguments
+
+**A few files settle, once, what would otherwise come back in review.**
+
+- **`CODEOWNERS`**, in `.github/`, the root or `docs/`, requests reviews from the right people automatically. The last matching line wins, so the catch-all goes first:
+
+  ```txt
+  *        @alice
+  /docs/   @bob
+  ```
+
+  Turn on **Require review from Code Owners** in a branch rule to make one of their approvals mandatory.
+
+- **`.editorconfig`** sets indentation, line endings and the final newline for every editor that supports it.
+- **`.gitattributes`** with `* text=auto eol=lf` stops Windows line endings from turning a one-line change into a whole-file diff.
+- **A version file** pins the toolchain: `.nvmrc`, `.python-version`, `rust-toolchain.toml`, or `.tool-versions` for asdf and mise.
+
+## GitLab and Codeberg read the same files, from their own folders
+
+**README, LICENSE, CONTRIBUTING, SECURITY and CHANGELOG are plain files: they work on every forge as they are.** What changes from one forge to the next is where the templates and `CODEOWNERS` live, and what the forge does with them:
+
+| File                  | GitLab                                                         | Codeberg (Forgejo)                                                                                   |
+| :-------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| Issue templates       | `.gitlab/issue_templates/*.md`, Markdown only, no forms        | `issue_template/` in `.forgejo/`, `.gitea/` or `.github/`, with the same YAML forms and `config.yml` |
+| Pull request template | `.gitlab/merge_request_templates/*.md`                         | `pull_request_template.md` in the same folders                                                       |
+| `CODEOWNERS`          | Root, `docs/` or `.gitlab/`, on the Premium and Ultimate tiers | Root, `docs/` or `.forgejo/`, with regular expressions (`src/.* @alice`), not glob patterns          |
+| `FUNDING.yml`         | No equivalent                                                  | No equivalent                                                                                        |
+
+Forgejo also reads `.github/`, GitLab doesn't. A project that moves from GitHub to Codeberg keeps its issue forms without a change; one that moves to GitLab rewrites each form as a Markdown template in `.gitlab/`. [Source Code Hosting Platforms](/guide/getting-started/source-code-hosting-platforms/) compares the forges themselves.
+
+## One .github repository sets the defaults for all the others
+
+**A public repository named `.github` in your account or organization provides these files to every repository that has none of its own.** It works for `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `FUNDING.yml`, and issue and pull request templates ([GitHub's docs](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)). Chalk's organization keeps a single file in its `.github` repository, `funding.yml`, so every chalk repository gets a Sponsor button.
+
+Two limits. A default file isn't part of a clone or a download, so someone reading the code offline doesn't see it. And it can't be a license: that one lives in each repository.
+
+## GitHub's checklist is a to-do list, not a grade
+
+**`/(owner)/(repo)/community` lists the files GitHub expects and ticks the ones it found.** Chalk, with every file a contributor needs, still has three open items:
+
+<ContentImage
+	src="/images/creating-repository-files-4.png"
+	width="720"
+	height="442"
+	alt="Chalk's Community Standards: six items ticked; issue templates, pull request template and content reports still open."
+/>
+
+A library with a narrow scope and two maintainers can live without issue templates. Your project may too. Open the page for yours, and decide item by item.
+
+## Do this now
+
+<Checklist id="repository-files">
+
+- [ ] Open `/(owner)/(repo)/community` on your repository, and list what's missing.
+- [ ] Read your README's first screen as a stranger: does it say what the project does and show it?
+- [ ] Search your code of conduct for a placeholder, and put a real address in it.
+- [ ] Clone your repository into a new folder and follow `CONTRIBUTING.md` to the letter. Fix the first step that fails.
+- [ ] Add a `SECURITY.md` that points to private vulnerability reporting.
+- [ ] Add one issue form, for bugs, with three required fields.
+
+</Checklist>
+
+## Go further
+
+- [GitHub's community health files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file): every file GitHub reads, and where it looks.
+- [Syntax for issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms): every field type, from dropdowns to file uploads.
+- [Forge-specific repository folders](https://nesbitt.io/2026/02/22/forge-specific-repository-folders.html), by Andrew Nesbitt: which folder GitHub, GitLab, Gitea, Forgejo and Bitbucket read, and the traps when a project lives on several.
+- [Keep a Changelog](https://keepachangelog.com/en/1.1.0/): the format, and the reasons behind each rule, on one page.
+- [Contributor Covenant 3.0](https://www.contributor-covenant.org/version/3/0/): the code of conduct most projects start from.

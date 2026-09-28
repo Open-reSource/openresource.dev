@@ -54,11 +54,12 @@ export const modules = [
 			'choosing-a-project-idea',
 			'planning-your-project',
 			'creating-your-project',
-			'developing-your-project',
+			'repository-files',
 			'building-and-engaging-your-community',
 		],
 		merged: {
 			'legal-considerations': 'licensing/choosing-a-license',
+			'developing-your-project': 'creating/repository-files',
 		},
 	},
 	{
