@@ -115,6 +115,11 @@ export const modules = [
 			'transparency-accountability-and-community-involvement',
 		],
 	},
+	{
+		label: 'Open Source & AI',
+		dir: 'ai',
+		pages: ['contribution-policy'],
+	},
 ];
 
 const docs = new URL('content/docs/', import.meta.url);
