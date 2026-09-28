@@ -114,9 +114,9 @@ Get an update on Open {re}Source's development and chat with the project maintai
 
 ## Copyright and License
 
-Code released under the [MIT License](https://github.com/Open-reSource/openresource.dev/blob/main/LICENSE).
+Code released under the [MIT License](LICENSE).
 
-Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/):
+Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) ([full text](LICENSE-CONTENT)):
 
 - `public` directory
 - `src/assets` directory
