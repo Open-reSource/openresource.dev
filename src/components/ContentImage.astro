@@ -1,9 +1,15 @@
 ---
 import { Image } from 'astro:assets';
+
+const { src, alt, width, height } = Astro.props;
+const fullSize = typeof src === 'string' ? src : src.src;
 ---
 
 <div>
-	<Image src={Astro.props.src} alt={Astro.props.alt} width={Astro.props.width} height={Astro.props.height} />
+	<a href={fullSize}>
+		<Image src={src} alt={alt} width={width} height={height} />
+		<span class="d-visually-hidden">(full size)</span>
+	</a>
 </div>
 
 <style>
@@ -12,6 +18,11 @@ import { Image } from 'astro:assets';
 		height: auto;
 		display: flex;
 		justify-content: center;
+	}
+
+	a {
+		display: block;
+		cursor: zoom-in;
 	}
 
 	img {
