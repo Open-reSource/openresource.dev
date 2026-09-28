@@ -1,0 +1,169 @@
+---
+title: Running a Community Without It Running You
+description: Who is in your community, which two channels to open, how to bring contributors back, how to credit them, a rhythm you can keep, and what to do in a conflict.
+date: 2026-09-28
+lastUpdated: 2026-09-28
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import { Badge } from '@deramond.dev/astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Most of a project's community never writes a word, and most contributors send one pull request and leave. You don't need six channels, a newsletter and a Discord to fix that. You need one place where answers stay findable, a second contribution that's easier than the first, credit where people see it, and a plan for the day two people fall out.</p>
+
+<InShort>
+
+- Design for the one-time contributor: in Bootstrap, 16 of the 20 people with a merged pull request in a year had exactly one.
+- Open two channels: one where answers stay findable (Discussions, a forum), one for talking (a chat). Say which is which in the README.
+- Credit people where GitHub shows it: release notes, `Co-authored-by:` trailers, the Contributors section of a release.
+- Pick a rhythm you'd keep in a bad month. Release notes every release beat a newsletter that stops at issue three.
+- A technical disagreement, a personal clash and a code of conduct breach end in three different ways. Know which one you're in.
+
+</InShort>
+
+## Most of your community never says a word
+
+A community is everyone who depends on the project, not the people in the chat. Bootstrap, from September 28, 2025 to September 27, 2026:
+
+| Step                        | People                                                      |
+| --------------------------- | ----------------------------------------------------------- |
+| Download it from npm        | 6,970,246 downloads in the week of September 21, 2026 alone |
+| Open an issue               | 117 people, 184 issues                                      |
+| Get a pull request merged   | 20 people, not counting bots                                |
+| … of whom, exactly one      | 16                                                          |
+| Merge the 531 pull requests | 2: Mark Otto and Julien Déramond                            |
+
+Every project looks like this: a very wide top, a thin middle, and a few people at the bottom who do most of the work. Each step needs something different from you:
+
+| Who          | What they need from you                                                                           |
+| ------------ | ------------------------------------------------------------------------------------------------- |
+| Users        | Docs, and a place to ask that isn't the issue tracker                                             |
+| Contributors | Issues ready to take, a quick first review, credit                                                |
+| Maintainers  | Shared rights, a way to decide ([governance](/guide/maintaining/governance/)), a way to step back |
+| Advocates    | Something to share: release notes, a post, a demo                                                 |
+
+**Don't design the community for the few people who already do everything.** Design it for the person who sends one pull request, so that the second one is easier.
+
+## Pick two channels, not six
+
+Six channels is how a community dies quietly. The Discord is where questions go to be forgotten, the mailing list is where two people argue, and the forum is where nobody posts because they don't know if it's still a thing. Pick one place for questions that must be findable next year, one for talking, and say so in the README.
+
+Tailwind CSS says it in one line of its README: help, best practices and feature ideas go to GitHub Discussions. As of September 28, 2026, its Help category holds 6,619 questions, 2,453 of them marked as answered: each one is a search result the next person finds instead of asking again.
+
+<ContentImage
+	src="/images/maintaining-community-1.png"
+	width="368"
+	height="310"
+	alt="Tailwind CSS's Discussions categories: Announcements, General, Help, Ideas, Kind words, Show and tell. Help is highlighted."
+/>
+
+Six categories, and only Help is set to accept answers. The options, as of September 2026:
+
+| Channel                                                      | Findable next year?                                                                                                         | Readable without an account? | Cost for an open-source project                                                             |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------- |
+| [GitHub Discussions](https://docs.github.com/en/discussions) | Yes, by search engines and GitHub search. Answers can be marked                                                             | Yes                          | Free                                                                                        |
+| [Discourse](https://www.discourse.org/)                      | Yes                                                                                                                         | Yes                          | [Free hosting](https://www.discourse.org/open-source) for projects it accepts, or self-host |
+| A mailing list                                               | Yes, when the archive is public                                                                                             | Yes                          | Free on most hosts                                                                          |
+| [Zulip](https://zulip.com/for/open-source/)                  | Inside Zulip: web-public channels can be searched, but [not by search engines](https://zulip.com/help/public-access-option) | Yes, for web-public channels | Cloud Standard is free for open-source projects                                             |
+| [Matrix](https://matrix.org/)                                | Inside Matrix                                                                                                               | Usually not                  | Free on public servers                                                                      |
+| [Discord](https://discord.com/)                              | No, unless a bot like [Answer Overflow](https://www.answeroverflow.com/) publishes the channels                             | No                           | Free                                                                                        |
+| [Slack](https://slack.com/)                                  | No: the free plan hides messages after 90 days and, since August 26, 2024, deletes them after a year                        | No                           | Free plan, or paid per member                                                               |
+
+A chat is fine for talking, pairing and the thank-yous. It's the wrong place for the answer to "how do I configure X", because nobody will find it there next month. When a good answer happens in the chat, copy it to Discussions or to the docs.
+
+Point people to the right place before they open an issue: the `contact_links` of `.github/ISSUE_TEMPLATE/config.yml` put your channels on the "New issue" page. [The Files That Turn a Repository Into a Project](/guide/creating/repository-files/#issue-forms-ask-the-questions-before-you-have-to) has the file. And write in the README how long an answer usually takes: a volunteer project across time zones answers in days, not minutes, and saying so is kinder than silence.
+
+## Make the second contribution easier than the first
+
+The one-time contributor didn't necessarily have a bad time. Most had one fix to make, and made it. Some would come back, if the way back were obvious:
+
+- **Keep a few good first issues ready.** An issue deserves the <Badge>good first issue</Badge> label when someone new could fix it without asking you anything: the problem, the file to change, and what "done" looks like. Readers of [Finding a Project to Contribute To](/guide/contributing/finding-open-source-projects/) look for it on your `/contribute` page. Remove the label from issues nobody should start.
+- **Review the first pull request fast.** A reply in two days to a first-timer is worth more than a perfect review in two weeks. [Reviewing Pull Requests](/guide/maintaining/reviewing-pull-requests/) covers what to say.
+- **Suggest the next step in the thank-you.** "Merged, thanks! If you want another one, #1234 is in the same file." That sentence is most of what a mentorship program does.
+- **Publish the list.** This Week in Rust, 670 issues as of September 23, 2026, has a "Call for Participation" section every week: tasks from Rust projects, picked for people who "did not know where to start".
+
+What a new contributor needs to read before they start lives in `CONTRIBUTING.md`, not in a welcome message: see [the files chapter](/guide/creating/repository-files/#contributingmd-is-for-the-reply-youd-otherwise-retype).
+
+## Credit people where GitHub shows it
+
+A thank-you in a comment scrolls away. Credit that stays is credit people can link to, and GitHub displays three kinds of it for free:
+
+1. **"New Contributors" in the release notes.** GitHub's [generated release notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes) list who made their first contribution. Keep that section when you edit the notes by hand.
+2. **The Contributors section of a release.** Every user you `@mention` in the notes gets their avatar under the release ([GitHub's docs](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)). Link the pull request and name its author, and the release shows everyone who made it.
+3. **`Co-authored-by:` trailers** on squashed commits, so everyone who wrote code, or shaped it in review, shows up as an author. [Reviewing Pull Requests](/guide/maintaining/reviewing-pull-requests/#merge-so-that-the-history-tells-the-story) has the details and a tool that collects them.
+
+Jest's v30.5.2 release, on September 18, 2026, shows the first two, and the gap between them:
+
+<ContentImage
+	src="/images/maintaining-community-2.webp"
+	width="720"
+	height="557"
+	alt="Jest v30.5.2 release: features and fixes, then New Contributors with one first-time contributor, and a Contributors section with one avatar."
+/>
+
+The notes welcome one new contributor (1), who is also the only avatar under Contributors (2): the other fixes link their pull requests without naming their authors, so the people behind them aren't listed.
+
+Credit for work that isn't code needs one more step. The [All Contributors](https://allcontributors.org/) bot adds people to a table in the README, with an emoji per kind of contribution, from a comment like `@all-contributors please add @jane for doc`. [contrib.rocks](https://contrib.rocks/) turns a repository's contributor list into one image to paste in the README.
+
+A project can go further and build its own. [Astro Badges](https://astro.badg.es/) gives every Astro contributor a page and a badge for their contributions, that they can put on their GitHub profile or website. Julien's, for example:
+
+[![@julien-deramond Astro contributions](https://astro.badg.es/v2/contributor/julien-deramond.svg)](https://astro.badg.es/contributor/julien-deramond/)
+
+Chris Swithinbank shared the [source code](https://github.com/delucis/astro-badge), for projects that want the same.
+
+## Keep a rhythm you'd keep in a bad month
+
+A newsletter that stops at issue three says the project stopped too. Pick the cadence you'd keep in your worst month, not your best one:
+
+| Cadence       | What                                                             | Example                                                                                                                                |
+| ------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Every release | Release notes that say what changed for the reader, with credits | GitHub Releases, generated then edited                                                                                                 |
+| Every month   | A short "what happened", even when not much did                  | Astro's [What's new in Astro](https://astro.build/blog/whats-new-january-2024/), every month from at least January 2024 to August 2026 |
+| Every week    | A newsletter, only with several editors                          | [This Week in Rust](https://this-week-in-rust.org/), weekly, edited by eleven people as of September 2026                              |
+
+**Release notes every release are the rhythm most projects can keep.** They're already a list of what changed and who did it. A monthly post is the next step; a weekly one takes a team.
+
+An announcement goes where people already are: a pinned discussion in the Announcements category, the project's accounts, and the chat. One post, three links.
+
+## Three kinds of conflict, three different exits
+
+Most conflicts in a project fall into three kinds, and each ends differently. Treating one as another is how a technical argument becomes a personal one.
+
+| Kind                     | Looks like                                                  | Ends with                                                                                                                     |
+| ------------------------ | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| A technical disagreement | Two approaches, each with good arguments, in a pull request | A decision, by the process in your [governance](/guide/maintaining/governance/). Write it down, with the reason, and move on. |
+| A personal clash         | The same two people, on every thread                        | A private conversation with each of them, about the behavior, not the topic. Keep the technical decision separate.            |
+| A code of conduct breach | Insults, harassment, a pattern of hostility                 | Enforcement, in private, by the people named in the code of conduct.                                                          |
+
+For breaches, the [Contributor Covenant 3.0](https://www.contributor-covenant.org/version/3/0/code_of_conduct/) gives an enforcement ladder: a private warning, then temporarily limited activities, then a temporary suspension, then a permanent ban. Most cases stop at the first step. Use the ladder even if you use another code of conduct: it makes the response proportionate and predictable, and people accept a rule they could read in advance better than a decision made on the spot.
+
+GitHub gives you the tools for each step:
+
+- **Hide a comment**, with a reason, instead of deleting it: the thread stays readable ([managing disruptive comments](https://docs.github.com/en/communities/moderating-comments-and-conversations/managing-disruptive-comments)).
+- **Lock a conversation** that has stopped being useful. [Saying No](/guide/maintaining/saying-no/#when-the-reply-is-angry) has the reply to post before you lock.
+- **Limit interactions** on the repository for 24 hours up to 6 months, to existing users, prior contributors or collaborators only, when a link to your project lands somewhere big and the drive-by comments start ([interaction limits](https://docs.github.com/en/communities/moderating-comments-and-conversations/limiting-interactions-in-your-repository)).
+- **Block a user** from the organization, for the top of the ladder ([blocking a user](https://docs.github.com/en/communities/maintaining-your-safety-on-github/blocking-a-user-from-your-organization)).
+
+Handle the case in private, and say in public only what the community needs to know: "this thread is locked", not the details. And don't moderate alone for long: a code of conduct needs [a contact line](/guide/creating/repository-files/#a-code-of-conduct-names-who-to-write-to) more than one person reads.
+
+## Do this now
+
+<Checklist id="community">
+
+- [ ] Write in the README where to ask questions and where to chat, and how long an answer usually takes.
+- [ ] Turn on Discussions, or pick a forum, and add it to `contact_links` in the issue template config.
+- [ ] Label three issues as good first issue, each with the file to change and what "done" looks like.
+- [ ] Name the authors in your next release notes, with an `@mention`, and keep the New Contributors section.
+- [ ] Pick one cadence you can keep, and put the next date in your calendar.
+- [ ] Check that your code of conduct names more than one person to contact, and that they know it.
+
+</Checklist>
+
+## Go further
+
+- [Building Welcoming Communities](https://opensource.guide/building-community/), in GitHub's Open Source Guides: the same ground, with more on making contributors feel welcome.
+- [The Art of Community](https://www.jonobacon.com/books/artofcommunity/) by Jono Bacon: the book on community management for open source, free under a Creative Commons license.
+- [Contributor Covenant 3.0 enforcement guidelines](https://www.contributor-covenant.org/version/3/0/code_of_conduct/): the four steps of the ladder, each with the event, the consequence and the repair.
+- [How to Create a Code of Conduct](/articles/how-to-create-a-code-of-conduct-for-an-open-source-project): picking the text, and who enforces it.
