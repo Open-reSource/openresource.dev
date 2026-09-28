@@ -30,7 +30,7 @@ import InShort from '../../../../components/InShort.astro';
 	src="/images/creating-repository-files-1.png"
 	width="304"
 	height="383"
-	alt="Chalk's About box: a one-line description, topics, then links to Readme, MIT license, Code of conduct, Contributing and Security policy."
+	alt="Chalk's About box: its description and topics, then Readme, MIT license, Code of conduct, Contributing, Security policy."
 />
 
 The names aren't case-sensitive. Chalk's files are `readme.md`, `license`, `code-of-conduct.md`, `contributing.md` and `.github/security.md`, and GitHub finds them all. Uppercase is a convention, not a requirement.
@@ -51,13 +51,13 @@ GitLab reads `README`, `LICENSE`, `CONTRIBUTING` and `CHANGELOG` the same way, a
 
 ## The README sells the project on one screen
 
-**A visitor decides in one screen whether to keep reading, so that screen says what the project does and shows it.** Chalk's first screen is a logo, a one-line description, three badges and an image of every style the library prints:
+**A visitor decides in one screen whether to keep reading, so that screen says what the project does and how to start.** The first screen of [sharp](https://github.com/lovell/sharp), an image processing library, says what it converts, how fast, and where it runs, then gives the install command and a first example, without a single badge:
 
 <ContentImage
 	src="/images/creating-repository-files-2.webp"
 	width="720"
-	height="564"
-	alt="The top of chalk's README: the logo, 'Terminal string styling done right', three badges, and a block of text in every style chalk supports."
+	height="659"
+	alt="Top of sharp's README: what it converts, 4x-5x faster than ImageMagick, where it runs, a docs link, then npm install sharp."
 />
 
 The order that works for most projects:
@@ -68,7 +68,7 @@ The order that works for most projects:
 4. **Usage in 30 seconds**: the smallest example that does something real.
 5. **Links**: the docs, how to contribute, the license.
 
-Three badges is plenty. Each one is an image from a third-party service, and when we captured chalk's README on September 28, 2026, one of its three didn't load. A build status, the latest version and the license say what a reader wants to know; downloads, stars and "PRs welcome" say it again.
+Three badges is plenty. Each one is an image from a third-party service: on September 28, 2026, chalk's "npm dependents" badge showed as a broken image, because the service behind it answered with an error. A build status, the latest version and the license say what a reader wants to know; downloads, stars and "PRs welcome" say it again.
 
 The smallest README that passes the one-screen test:
 
@@ -279,7 +279,7 @@ Two limits. A default file isn't part of a clone or a download, so someone readi
 	src="/images/creating-repository-files-4.png"
 	width="720"
 	height="442"
-	alt="Chalk's Community Standards checklist: six items ticked, and three open: issue templates, pull request template, and content reports."
+	alt="Chalk's Community Standards: six items ticked; issue templates, pull request template and content reports still open."
 />
 
 A library with a narrow scope and two maintainers can live without issue templates. Your project may too. Open the page for yours, and decide item by item.
