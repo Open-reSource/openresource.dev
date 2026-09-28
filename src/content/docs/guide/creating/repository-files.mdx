@@ -47,7 +47,7 @@ The names aren't case-sensitive. Chalk's files are `readme.md`, `license`, `code
 | `CHANGELOG.md`           | What changed, and will it break my code? | First release     |
 | `CODEOWNERS`             | Who reviews what?                        | Second maintainer |
 
-GitLab reads `README`, `LICENSE`, `CONTRIBUTING` and `CHANGELOG` the same way, and takes templates from `.gitlab/issue_templates/` and `.gitlab/merge_request_templates/`.
+The files work on any forge. Where GitLab and Codeberg look for them is [further down](#gitlab-and-codeberg-read-the-same-files-from-their-own-folders).
 
 ## The README sells the project on one screen
 
@@ -265,6 +265,19 @@ If you publish GitHub Releases with generated notes instead, keep a `CHANGELOG.m
 - **`.gitattributes`** with `* text=auto eol=lf` stops Windows line endings from turning a one-line change into a whole-file diff.
 - **A version file** pins the toolchain: `.nvmrc`, `.python-version`, `rust-toolchain.toml`, or `.tool-versions` for asdf and mise.
 
+## GitLab and Codeberg read the same files, from their own folders
+
+**README, LICENSE, CONTRIBUTING, SECURITY and CHANGELOG are plain files: they work on every forge as they are.** What changes from one forge to the next is where the templates and `CODEOWNERS` live, and what the forge does with them:
+
+| File                  | GitLab                                                         | Codeberg (Forgejo)                                                                                   |
+| :-------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| Issue templates       | `.gitlab/issue_templates/*.md`, Markdown only, no forms        | `issue_template/` in `.forgejo/`, `.gitea/` or `.github/`, with the same YAML forms and `config.yml` |
+| Pull request template | `.gitlab/merge_request_templates/*.md`                         | `pull_request_template.md` in the same folders                                                       |
+| `CODEOWNERS`          | Root, `docs/` or `.gitlab/`, on the Premium and Ultimate tiers | Root, `docs/` or `.forgejo/`, with regular expressions (`src/.* @alice`), not glob patterns          |
+| `FUNDING.yml`         | No equivalent                                                  | No equivalent                                                                                        |
+
+Forgejo also reads `.github/`, GitLab doesn't. A project that moves from GitHub to Codeberg keeps its issue forms without a change; one that moves to GitLab rewrites each form as a Markdown template in `.gitlab/`. [Source Code Hosting Platforms](/guide/getting-started/source-code-hosting-platforms/) compares the forges themselves.
+
 ## One .github repository sets the defaults for all the others
 
 **A public repository named `.github` in your account or organization provides these files to every repository that has none of its own.** It works for `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `FUNDING.yml`, and issue and pull request templates ([GitHub's docs](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)). Chalk's organization keeps a single file in its `.github` repository, `funding.yml`, so every chalk repository gets a Sponsor button.
@@ -301,5 +314,6 @@ A library with a narrow scope and two maintainers can live without issue templat
 
 - [GitHub's community health files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file): every file GitHub reads, and where it looks.
 - [Syntax for issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms): every field type, from dropdowns to file uploads.
+- [Forge-specific repository folders](https://nesbitt.io/2026/02/22/forge-specific-repository-folders.html), by Andrew Nesbitt: which folder GitHub, GitLab, Gitea, Forgejo and Bitbucket read, and the traps when a project lives on several.
 - [Keep a Changelog](https://keepachangelog.com/en/1.1.0/): the format, and the reasons behind each rule, on one page.
 - [Contributor Covenant 3.0](https://www.contributor-covenant.org/version/3/0/): the code of conduct most projects start from.
