@@ -118,7 +118,7 @@ export const modules = [
 	{
 		label: 'Open Source & AI',
 		dir: 'ai',
-		pages: ['contribution-policy'],
+		pages: ['contribution-policy', 'contributing-with-ai-tools'],
 	},
 ];
 

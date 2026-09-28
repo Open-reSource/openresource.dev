@@ -1,0 +1,124 @@
+---
+title: Contributing with AI Tools Without Annoying Maintainers
+description: What maintainers check when your contribution came out of an AI tool, where their rules live, five checks before you push, and how to disclose it in one line.
+date: 2026-09-28
+lastUpdated: 2026-09-28
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+import AiDisclosure from '../../../partials/ai-disclosure.mdx';
+
+{/* prettier-ignore */}
+<p class="lead">Most projects accept contributions made with AI tools, and a few ban them. What gets a pull request closed, or its author blocked, is output nobody read, ran or understood, and a lot of it. Read the project's rules, check your change as if you had typed every line, and say in one line what the tool did.</p>
+
+<InShort>
+
+- Find the project's AI rules before you start: `CONTRIBUTING.md`, an AI policy file, the pull request template. They're for you to read, not your agent.
+- Before you push: run it, explain every line, cut what the issue didn't ask for, check the API exists, write the description yourself.
+- Disclose in one line: the tool, what it did, and what you checked.
+- Never send a bug or security report you haven't reproduced. curl bans on the first fake one.
+- One pull request at a time, opened by you. If a maintainer asks whether you used AI, say yes.
+
+</InShort>
+
+## The rules are in the repository, and they're for you
+
+Before the first line of code, look for the project's AI rules: a section of the contributing guide, a file of their own, or the developer docs.
+
+| Project                                                                                         | Where                               | What it asks                                                           |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------- |
+| [Ghostty](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md)                        | `AI_POLICY.md`                      | Disclose any use: the tool, and how much of the work it did            |
+| [LLVM](https://github.com/llvm/llvm-project/blob/main/llvm/docs/AIToolPolicy.md)                | `llvm/docs/AIToolPolicy.md`         | Disclose substantial generated content, with an `Assisted-by:` trailer |
+| [Node.js](https://github.com/nodejs/node/blob/main/doc/contributing/ai-guidelines.md)           | `doc/contributing/ai-guidelines.md` | Disclose the tool and how you verified its output                      |
+| [CPython](https://devguide.python.org/getting-started/ai-tools/)                                | The developer's guide               | Disclosure appreciated, not required                                   |
+| [curl](https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md#on-ai-use-in-curl)           | A section of `CONTRIBUTE.md`        | Disclose any AI help in a security report or an issue                  |
+| [QEMU](https://www.qemu.org/docs/master/devel/code-provenance.html#use-of-ai-generated-content) | The developer docs                  | No AI-generated code at all                                            |
+
+Then open the pull request template: an "AI tools" section there is the rule too. The policies differ on disclosure, and [the chapter for maintainers](/guide/ai/contribution-policy/#three-postures-one-rule-they-all-share) compares them. If you find nothing, disclose anyway: it costs one line.
+
+**Read the rules yourself.** In February 2026, a Ghostty contributor [explained](https://github.com/ghostty-org/ghostty/pull/10818) that they had asked their tool to make the commit follow the contributing guide. The tool added a `Co-Authored-By:` trailer and stopped there; the policy also asks how much of the work the tool did. A maintainer answered that the guides "are for _you_ to read, not for your AI agent to read."
+
+## Five checks before you push
+
+Every policy, ban or not, keeps one rule: you answer for every line you send, whoever typed it. LLVM's [policy](https://github.com/llvm/llvm-project/blob/main/llvm/docs/AIToolPolicy.md) gives the test: "a contribution should be worth more to the project than the time it takes to review it." These five checks are what makes it worth more:
+
+1. **It builds and the tests pass, on your machine.** Run the same checks as the CI, as in [your first contribution](/guide/contributing/contributing-to-open-source/). Read the tests the tool changed: CPython's [guidelines](https://devguide.python.org/getting-started/ai-tools/) forbid altering or bypassing a test to make it pass, because tools do.
+2. **You can explain every line.** Ghostty's policy: if you can't explain what your change does "without the aid of AI tools, do not contribute". The maintainer will ask, and "the tool wrote it" isn't an answer.
+3. **Nothing the issue didn't ask for.** Tools rename variables, reformat files and tidy the function next door. Revert all of it: every extra line is one more to review, and a twelve-file diff for a one-line bug gets closed.
+4. **Every function you call exists, in this version.** Tools mix up versions and libraries, and invent flags. Check each call against the documentation for the version the project uses, not the latest one.
+5. **The words are yours.** LLVM strongly recommends writing pull request descriptions yourself, and Node.js forbids automated replies to review comments. A description three times longer than the diff is the first sign maintainers notice. A translation tool is fine: CPython lists writing in a language that isn't yours among the acceptable uses.
+
+## Disclose in one line: the tool, what it did, what you checked
+
+A good disclosure is short and specific. This fix to Ghostty was merged by Mitchell Hashimoto on September 14, 2026; the last line tells the reviewer where the tool helped and where the author took over:
+
+<ContentImage
+	src="/images/ai-contributing-with-ai-tools-1.png"
+	width="720"
+	height="472"
+	alt="A Ghostty pull request description: problem, cause and fix, testing, then an AI Disclosure heading and one line under it."
+/>
+
+"Used Copilot" says too little; three paragraphs about your workflow say too much. If the project's template has an "AI tools" section, fill it in. If it doesn't, this one works in any description:
+
+<AiDisclosure />
+
+In commits, use the project's trailer if it has one. The Linux kernel, LLVM and Fedora ask for `Assisted-by:`; the kernel [switched to](https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst) `Assisted-by: LLM`, without the model's name, in August 2026, and Node.js keeps brand names out of commit messages. If the project asks for a `Signed-off-by:` line, only you add it: a tool can't certify the [DCO](/guide/licensing/cla-vs-dco/).
+
+## AI tools help you read code, not replace your judgment
+
+The uses that don't annoy anyone are the ones where the tool works for you and you do the part the maintainer sees:
+
+| Use                                                     | Why it's fine, or not                                                        |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Explaining a module you don't know yet                  | You still read the code; you get there faster. CPython lists it first        |
+| Tracing a call path to find a bug                       | What the Ghostty fix above used it for. You check the path, then write a fix |
+| Writing tests for a fix you understand                  | You know what the test must prove, so you can tell when it doesn't           |
+| Writing in a language that isn't yours                  | The ideas are yours; the grammar is the tool's                               |
+| "Improving" code nobody asked about                     | Review work for the maintainer, for a change nobody needs                    |
+| Fixing a good first issue                               | Forbidden by LLVM and Node.js: it's there to teach a newcomer the project    |
+| Letting an agent open pull requests or comments for you | Forbidden by LLVM and Node.js without the project's approval                 |
+| Filing a bug or security report the tool found          | Only after you reproduce it yourself. See below                              |
+
+## Reproduce every report before you send it
+
+A generated report looks real, which is the problem. On January 2, 2024, curl's Daniel Stenberg [published two](https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/). The first claimed that the fix for a curl vulnerability had leaked before its release; its author said they had used Bard, and the report mixed details from old security issues into one that never happened. The second described a buffer overflow in curl's WebSocket code, in good English, with a proposed fix; there was no overflow. When a report is made to look better, Daniel wrote, "it takes a longer time for us to research and eventually discard it."
+
+curl's [contributing guide](https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md#on-ai-use-in-curl) now says it plainly: if a tool found the problem, you must say so in the report, and "We ban users immediately who submit made up fake reports to the project." So reproduce it on the latest release, put the steps in the report, and say what you couldn't test. [How to Write a Bug Report That Gets Fixed](/guide/contributing/writing-a-bug-report/) covers the rest.
+
+## Send one pull request, then wait
+
+Volume is a behavior, with or without AI. On October 3, 2020, DigitalOcean made Hacktoberfest [opt-in for projects](https://web.archive.org/web/20201006123431/https://hacktoberfest.digitalocean.com/hacktoberfest-update), three days into the event, after a wave of low-effort pull requests sent to earn the event's T-shirt. Its [recap](https://www.digitalocean.com/blog/hacktoberfest-recap2020) counted 9,598 of 621,104 pull requests flagged as spam or invalid. AI tools made those pull requests free to write, and projects answered with limits:
+
+- **GitHub caps you.** Since [June 17, 2026](https://github.blog/changelog/2026-06-17-limit-open-pull-requests-for-users-without-write-access/), a project can limit how many pull requests you have open at once without write access.
+- **Ghostty needs a voucher.** A maintainer must vouch for you before your first pull request, or a bot closes it.
+- **LLVM labels it.** Unreviewed output gets a canned reply, then an `extractive` label, then the moderators.
+
+Open one pull request, answer its review, get it merged or closed, then open the next. The same fix sent to twenty projects in one afternoon reads as a bot, even when you wrote it.
+
+## Asked if you used AI, say yes
+
+On January 2, 2026, Mitchell Hashimoto reviewed a Ghostty pull request that selects a whole URL on double-click, and started with "Was this AI? We require AI be disclosed." The author [answered](https://github.com/ghostty-org/ghostty/pull/10132) the same day: "Yes, I used Opus to help with this and reviewed/tested the code myself." Five days later, Mitchell approved it with a commit of his own, and it was merged.
+
+Another pull request was [closed](https://github.com/ghostty-org/ghostty/pull/10574#issuecomment-3850569285) on February 5, 2026, "First, and most importantly," because the author hadn't disclosed. Node.js's [guidelines](https://github.com/nodejs/node/blob/main/doc/contributing/ai-guidelines.md) go further: contributors who are dishonest about using AI may be blocked. The honest answer gets a review; the other one gets you remembered.
+
+## Do this now
+
+<Checklist id="contributing-with-ai-tools">
+
+- [ ] Before your next contribution, read the project's AI rules yourself: `CONTRIBUTING.md`, any AI policy file, the pull request template.
+- [ ] Save the disclosure line above as a snippet, and fill it in whenever a tool wrote part of a change.
+- [ ] Before you push, read your own diff and revert every line the issue didn't ask for.
+- [ ] Check that your tool doesn't add `Signed-off-by:` or other trailers to your commits on its own.
+- [ ] Reproduce any bug a tool found for you before you report it, and say in the report that a tool found it.
+
+</Checklist>
+
+## Go further
+
+- [LLVM's AI Tool Use Policy](https://github.com/llvm/llvm-project/blob/main/llvm/docs/AIToolPolicy.md): why unreviewed output "extracts" work from maintainers, in the clearest words we found.
+- [The I in LLM stands for intelligence](https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/): the two curl reports, with Daniel Stenberg's replies.
+- [AI-Assisted Contributions: A Policy You Can Copy](/guide/ai/contribution-policy/): the same rules, from the maintainer's side, with curl's numbers.
+- [Your First Contribution, Step by Step](/guide/contributing/contributing-to-open-source/): the path from issue to merge, which a tool doesn't change.
