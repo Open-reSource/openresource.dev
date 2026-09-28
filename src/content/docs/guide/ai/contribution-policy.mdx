@@ -1,0 +1,170 @@
+---
+title: 'AI-Assisted Contributions: A Policy You Can Copy'
+description: What curl, Gentoo, QEMU, Ghostty, LLVM and the Linux kernel decided about AI-generated contributions, the three postures, and a policy to paste.
+date: 2026-09-28
+lastUpdated: 2026-09-28
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Since 2024, projects from curl to the Linux kernel have written down what they accept from AI tools. Their answers range from "disclose it" to "don't even use it to find bugs", and almost all of them share one rule: the person who submits is responsible for every line. Here's what they decided, which posture fits which project, and a policy you can paste into your contributing guide.</p>
+
+<InShort>
+
+- The damage came from volume without a human behind it: in 2025, fewer than one in twenty of curl's security reports was real.
+- Projects took three postures: ban (Gentoo, QEMU, Servo, Zig), disclose (the Linux kernel, Ghostty, LLVM, Mesa, Fedora), or allow with responsibility (curl, CPython, Node.js).
+- Every policy keeps the same rule: the submitter must understand, test and defend every line.
+- You can't detect AI output reliably. Ask the author to explain the change instead, and close on the rule it broke.
+- Since 2026, GitHub lets you restrict pull requests to collaborators and cap the open pull requests of everyone else.
+
+</InShort>
+
+## The problem arrived as volume, not as bad code
+
+Maintainers didn't write policies because AI-written code is worse than a human's. They wrote them because generating a plausible pull request, issue or security report now costs its sender nothing, and reviewing one still costs a maintainer an hour.
+
+curl has the numbers, because its bug bounty paid for every valid security report on HackerOne. Daniel Stenberg, its lead developer, published them as they changed:
+
+| Period                | curl's security reports, as published by Daniel Stenberg                                                                                                         |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| April 2019 – Dec 2023 | 415 reports, 64 confirmed vulnerabilities ([January 2, 2024](https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/))                      |
+| 2025                  | About 20% AI slop, about 5% valid ([July 14, 2025](https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/))                                           |
+| January 31, 2026      | Bug bounty ends: "Not even one in twenty was real" ([January 26, 2026](https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/))                  |
+| January – April 2026  | Twice 2025's volume, 15–16% confirmed, "almost every security report now uses AI" ([April 22, 2026](https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/)) |
+
+Each report took three or four of curl's seven security team members between 30 minutes and three hours. The last row matters as much as the others: once the money was gone, the slop went with it, and the AI tools stayed. Reports got better, not fewer.
+
+Pull requests followed. Mitchell Hashimoto tightened Ghostty's rules on [January 22, 2026](https://github.com/ghostty-org/ghostty/commit/f00de7ee4b9bbc5a0fb5f4c06755780c773a0f5e) because the bad contributions had grown "by 10x if not more", and wrote: "This is not an anti-AI stance. This is an anti-idiot stance." tldraw [started closing](https://github.com/tldraw/tldraw/issues/7695) every pull request from outside contributors on January 15, 2026. A preprint that measured 294 repositories found that pull requests grew in 2025 while merge rates fell, most of all for one-time contributors: 18% below the study's counterfactual ([Afroz et al., July 4, 2026](https://arxiv.org/abs/2607.04003)).
+
+## Three postures, one rule they all share
+
+Every policy we found falls into one of three postures. They differ on disclosure and on whether AI output is allowed at all:
+
+| Posture                   | What it says                              | Projects, with the date of their policy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ban                       | No AI-generated content in contributions  | [Gentoo](https://wiki.gentoo.org/wiki/Project:Council/AI_policy) (April 14, 2024), [NetBSD](https://www.netbsd.org/developers/commit-guidelines.html) (May 15, 2024, unless core approves), [Servo](https://book.servo.org/contributing/getting-started.html) (June 27, 2024), [QEMU](https://www.qemu.org/docs/master/devel/code-provenance.html#use-of-ai-generated-content) (June 24, 2025), [Zig](https://ziglang.org/code-of-conduct/) (November 22, 2025)                                                                                                                                                                                                         |
+| Disclose                  | Allowed, and you must say so              | [Ghostty](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md) (August 19, 2025), [Fedora](https://docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/) (October 22, 2025), [Django](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/submitting-patches/) (January 8, 2026), [LLVM](https://github.com/llvm/llvm-project/blob/main/llvm/docs/AIToolPolicy.md) (January 16, 2026), [Mesa](https://gitlab.freedesktop.org/mesa/mesa/-/blob/main/docs/submittingpatches.rst) (April 6, 2026), [Linux](https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst) (7.0, April 12, 2026) |
+| Allow with responsibility | Allowed; disclosure welcome, not required | [CPython](https://devguide.python.org/getting-started/ai-tools/) (October 22, 2024), [curl](https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md#on-ai-use-in-curl) (May 15, 2025, except security reports), [Node.js](https://github.com/nodejs/node/blob/main/doc/contributing/ai-guidelines.md) (August 12, 2026)                                                                                                                                                                                                                                                                                                                                             |
+
+**Whatever the posture, the rule underneath is the same: you answer for what you send.** The Linux kernel's [guidelines](https://github.com/torvalds/linux/blob/master/Documentation/process/generated-content.rst) put it in one sentence: "You are expected to understand and to be able to defend everything you submit." CPython's says the submitter is responsible "regardless of whether AI tools were used". Node.js adds that disclosing is not a disclaimer.
+
+The bans rest on two arguments. The first is legal: QEMU's contributors certify the [DCO](/guide/licensing/cla-vs-dco/) on every patch, and QEMU considers that nobody can certify output whose "copyright and license status" is ill-defined. The second is the review cost: Gentoo's policy cites the "unfair human effort" of finding a tool's mistakes. Gentoo adds ethics (training data, energy, spam), and says the council will revisit it.
+
+Disclosure takes a form contributors already know. The Linux kernel asks for an `Assisted-by:` trailer, next to the human's `Signed-off-by:`, and forbids the tool from signing off: "Only humans can legally certify the Developer Certificate of Origin".
+
+<ContentImage
+	src="/images/ai-contribution-policy-1.png"
+	width="720"
+	height="133"
+	alt="A Linux kernel commit message ending with Assisted-by: LLM, then Signed-off-by lines from the author and the maintainer."
+/>
+
+Which one fits your project depends on what you can afford to review, not on what you think of AI:
+
+- **Ban** if your license or your downstream depends on provenance: a distribution that ships everything it accepts, or a project under a DCO or copyleft whose lawyers can't live with the uncertainty. Know that you can't enforce it by detection; you enforce it by making the contributor say they complied.
+- **Disclose** if you receive outside pull requests every week. It costs contributors one line and tells your reviewers where to look harder. It's where most of the 2025–2026 policies landed.
+- **Allow with responsibility** if your CI already filters most bad changes. curl can: its end-of-bounty post says 200 CI jobs catch bad pull requests before a human reads them, and its problem was security reports, which no test suite checks.
+
+## A policy you can paste
+
+Our policy below takes the disclosure posture and the rules most projects share. Copy it into your `CONTRIBUTING.md` and change what doesn't fit: the text in the block is in the public domain ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)), no attribution needed.
+
+```md
+## AI tools
+
+You may use AI tools to contribute. You're responsible for what you send, as if you had written every line yourself.
+
+- **Say so.** If a tool wrote a significant part of your change, name it in the pull request description. Line completion doesn't count.
+- **Understand it.** You must be able to explain every line in your own words. If a maintainer asks and you can't, we close the pull request.
+- **Run it.** Build and test the change yourself before you open the pull request. "The tool says it works" isn't a test.
+- **Keep it small.** No changes unrelated to the issue, however tidy.
+- **Reproduce first.** Don't open an issue or a security report from AI output you haven't reproduced yourself. Put the steps in the report. Unverified reports are closed without reply, and repeat senders are blocked.
+- **Write to us yourself.** Descriptions, comments and replies to reviews are yours. Translation tools are fine.
+- **No unattended agents.** Don't let a tool open pull requests, issues or comments here without you reviewing each one first.
+- **Leave good first issues to people learning the project.** Don't solve them with AI tools.
+- **Sign off yourself.** If this project asks for a `Signed-off-by:` line, only a human adds it.
+
+Maintainers may close contributions that break these rules without a detailed review.
+```
+
+Each line comes from projects that needed it:
+
+- **"Say so"** is Ghostty's, Fedora's and the Linux kernel's rule, limited to significant use: nobody wants a disclosure for autocomplete.
+- **"Understand it"** is in every policy above, ban or not. It's also the one you can check, by asking.
+- **"Reproduce first"** is curl's and Django's rule for security reports, extended to issues. Django [closes unverified AI reports](https://docs.djangoproject.com/en/dev/internals/security/) without a response.
+- **"Write to us yourself"** is Jellyfin's [rule](https://jellyfin.org/docs/general/contributing/llm-policies): its code may be LLM-assisted, its conversations may not.
+- **"No unattended agents"** and **"good first issues"** are LLVM's and Node.js's. A good first issue exists to teach a newcomer the project, and a tool that solves it teaches nobody.
+- **"Sign off yourself"** is the Linux kernel's, for projects that use the DCO.
+
+Then add a line to your pull request template, so that disclosure is a checkbox and not a confession:
+
+```md
+### AI tools
+
+- [ ] I didn't use AI tools for this change, or only for line completion.
+- [ ] I used: <!-- tool and what for -->. I reviewed, ran and can explain every line.
+```
+
+## Ask for an explanation, not a detector
+
+You'll see the signs: an API that doesn't exist in your version, a refactor nobody asked for, a description three times longer than the diff, confident and wrong. Humans do all of these too, and detection tools are wrong often enough that you shouldn't close anything on their score.
+
+**Ask the one question a tool can't answer for the author: why this change, in their own words.** [Reviewing Pull Requests](/guide/maintaining/reviewing-pull-requests/#review-ai-assisted-pull-requests-like-any-other) uses the `question:` label for it. An author who answers gets a normal review. One who pastes a generated answer, or doesn't answer, gets closed under "Understand it", with no accusation.
+
+When volume is the problem, limit volume. GitHub added three settings in 2026:
+
+| Setting, in Settings › General                   | Since                                                                                                                      | What it does                                                                             |
+| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Pull requests: collaborators only                | [February 13, 2026](https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access/) | Everyone can read and comment; only people with write access can open one                |
+| Limit on open pull requests without write access | [June 17, 2026](https://github.blog/changelog/2026-06-17-limit-open-pull-requests-for-users-without-write-access/)         | Caps how many each outside contributor has open at once; drafts don't count; bypass list |
+| Issues: collaborators only                       | [June 29, 2026](https://github.blog/changelog/2026-06-29-restrict-issue-creation-to-collaborators-only/)                   | Only people with write access can open issues                                            |
+
+The cap is the one to try first: it doesn't close the door, it slows down whoever sends ten pull requests in an hour. Collaborators-only is what tldraw did by hand, and it turns your project into a read-only one for outsiders.
+
+Ghostty built a middle way: a vouch list. A pull request from someone not on it is closed by a bot, and a maintainer can vouch for them in one comment. On this translation, a maintainer vouched 37 seconds after the bot's comment, and the pull request was merged the next morning:
+
+<ContentImage
+	src="/images/ai-contribution-policy-2.png"
+	width="720"
+	height="181"
+	alt="The ghostty-vouch bot on a pull request: authors must be vouched, this one isn't, and the pull request will be closed."
+/>
+
+For security reports, the rule from [Security for Maintainers](/guide/maintaining/security-for-maintainers/) applies: say in your `SECURITY.md` that a report needs a reproduction, and that AI use must be disclosed.
+
+## Don't accuse, and don't pretend it isn't happening
+
+This section is our opinion, from reading the policies above and the threads around them.
+
+- **Close on the rule, not on the suspicion.** "This looks AI-generated" can't be proven and starts an argument. "This changes files the issue doesn't touch" or "you couldn't explain this function" can, and it's what you'd say to a human.
+- **Hold yourself to the rule you write.** Ghostty exempts its maintainers and says so, and that's a legitimate choice. A policy that bans a tool the maintainers use in secret isn't one: contributors notice.
+- **Write something, even short.** Without a policy, each reviewer decides alone, and two contributors doing the same thing get two answers. Three lines in `CONTRIBUTING.md` are better than a perfect policy next year.
+- **Publish your blocklist only if you're ready to maintain it.** Ghostty keeps a public list of people it denounced. A public list is a public accusation: someone will ask to be removed.
+
+## The copyright question isn't settled
+
+In the United States, output with no human author can't be copyrighted. The Copyright Office's [report of January 29, 2025](https://www.copyright.gov/newsnet/2025/1060.html) says AI output is protected "only where a human author has determined sufficient expressive elements", and that prompts alone aren't enough. The courts agreed in [Thaler v. Perlmutter](https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.pdf) (March 18, 2025), and the Supreme Court [declined the appeal](https://www.supremecourt.gov/docket/docketfiles/html/public/25-449.html) on March 2, 2026. Code a person wrote with a tool's help can still be theirs.
+
+What that means for a contribution under your license, and for code a model reproduces from its training data, is open, and it differs from country to country. It's the strongest argument for the bans. [Licenses for Things That Aren't Code](/guide/licensing/non-code-licenses/) covers what's known about model licenses. For a real dispute, ask a lawyer.
+
+## Do this now
+
+<Checklist id="contribution-policy">
+
+- [ ] Add an "AI tools" section to your `CONTRIBUTING.md`: the policy above, or your own in three lines.
+- [ ] Add the "AI tools" checkboxes to your pull request template.
+- [ ] Add to your `SECURITY.md` that a report needs a reproduction and must disclose AI use.
+- [ ] If outside pull requests outnumber your reviews, set a limit on open pull requests without write access.
+- [ ] Save a reply that asks the author to explain the change in their own words.
+
+</Checklist>
+
+## Go further
+
+- [The end of the curl bug-bounty](https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/): six years of numbers, and why the money was the problem.
+- [Linux kernel guidelines for tool-generated content](https://github.com/torvalds/linux/blob/master/Documentation/process/generated-content.rst): the shortest policy from the largest project, with the reasons.
+- [LLVM's AI Tool Use Policy](https://github.com/llvm/llvm-project/blob/main/llvm/docs/AIToolPolicy.md): the most detailed "disclose" policy, with rules for agents.
+- [Ghostty's AI Usage Policy](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md): the strictest policy that still allows AI, with the vouch system behind it.
