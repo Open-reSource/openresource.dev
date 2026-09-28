@@ -7,7 +7,7 @@
       "contributors": 12,
       "description": "Formula workbooks for Node services: edit inputs, recalculate formulas, read outputs, persist WorkPaper JSON, and expose MCP tools.",
       "discussions": 15,
-      "forks": 19,
+      "forks": 17,
       "issues": 1,
       "languages": [
         "TypeScript",
@@ -19,7 +19,7 @@
       "name": "bilig",
       "owner": "proompteng",
       "prs": 0,
-      "stars": 36,
+      "stars": 35,
       "url": "https://github.com/proompteng/bilig"
     }
   ]
