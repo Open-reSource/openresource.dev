@@ -4,10 +4,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/108943737?v=4&s=50",
-      "contributors": 141,
+      "contributors": 142,
       "description": "Configuration Management for Python ⚙",
       "discussions": 65,
-      "forks": 346,
+      "forks": 348,
       "issues": 147,
       "languages": [
         "Python",
@@ -58,7 +58,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 5,
-      "stars": 2087,
+      "stars": 2088,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
