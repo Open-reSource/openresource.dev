@@ -59,7 +59,7 @@ npm run shot -- https://github.com/mdn/content/contribute --out contributing-fin
 | `--clip <selector>` | Capture only this element                                                                                                                                                        |
 | `--margin <px>`     | With `--clip`: keep that much of the page around the element, so a box flush with its edge keeps its number, and capture from the full page, so a sticky header doesn't cover it |
 | `--box <selector>`  | Draw a gold box around each match, numbered when there are several (repeatable)                                                                                                  |
-| `--wait <ms>`       | Wait after the page is loaded                                                                                                                                                    |
+| `--wait <ms>`       | Wait after the page is loaded and scrolled to `--clip`, for pages that animate on scroll                                                                                         |
 
 For GitHub pages that need an account, set `GH_SESSION` to the value of your `user_session` cookie on github.com. `tests/images.test.ts` fails on images over 1440px wide, over 1 MB, PNGs over 300 KB, or light images (mean brightness over 128/255). Images taken before the dark rule are listed in `tests/images.baseline.json`: retake one, then remove it from the list.
 

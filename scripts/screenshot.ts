@@ -62,11 +62,12 @@ try {
 	}
 	const page = await context.newPage();
 	await page.goto(url, { waitUntil: 'networkidle' });
-	await page.waitForTimeout(Number(values.wait));
 
 	// Boxes are drawn on the image, not in the page: Chromium's auto dark mode would recolor anything added to the page.
 	const clip = values.clip ? page.locator(values.clip).first() : undefined;
 	if (clip) await clip.scrollIntoViewIfNeeded();
+	// After the scroll: some pages only start an animation (a counter, a fade-in) when the element comes into view.
+	await page.waitForTimeout(Number(values.wait));
 	const margin = Number(values.margin);
 	const bounds = clip && (await clip.boundingBox());
 	const boxes = (await Promise.all(values.box.map((selector) => page.locator(selector).all()))).flat();
