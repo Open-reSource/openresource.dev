@@ -30,7 +30,7 @@ import InShort from '../../../../components/InShort.astro';
 	src="/images/maintaining-security-for-maintainers-1.png"
 	width="720"
 	height="450"
-	alt="Bootstrap's Security tab: a Report a vulnerability button, and its SECURITY.md promising to acknowledge reports within 3 business days."
+	alt="Bootstrap's Security tab: a Report a vulnerability button, and a SECURITY.md: reports acknowledged within 3 business days."
 />
 
 It needs four things: which versions get fixes, how to report, how fast you'll answer, and whether you pay bounties (usually not). A template:
@@ -76,7 +76,7 @@ The advisory for the tj-actions compromise shows what a good one contains: what 
 	src="/images/maintaining-security-for-maintainers-2.webp"
 	width="720"
 	height="450"
-	alt="GitHub advisory CVE-2025-30066 for tj-actions/changed-files: high severity, affected up to 45.0.7, patched in 46.0.1, and a summary of the attack."
+	alt="Advisory CVE-2025-30066 for tj-actions/changed-files: high severity, affects up to 45.0.7, patched in 46.0.1, with a summary."
 />
 
 ## Your CI is part of your release
@@ -116,7 +116,7 @@ jobs:
 	src="/images/maintaining-security-for-maintainers-3.png"
 	width="720"
 	height="450"
-	alt="Bootstrap's OpenSSF Scorecard: 7.3 overall, with Signed-Releases and Vulnerabilities at 0, Code-Review at 4 and Branch-Protection at 8."
+	alt="Bootstrap's OpenSSF Scorecard: 7.3 overall; Signed-Releases and Vulnerabilities 0, Code-Review 4, Branch-Protection 8."
 />
 
 7.3 out of 10, and the low scores need reading, not obeying. Signed-Releases at 0 is real: Bootstrap's releases have no signed artifacts. Vulnerabilities at 0 flags known, unfixed vulnerabilities, often in development dependencies that never ship. Fuzzing, also at 0, matters for parsers and hardly for a CSS framework. Fix what applies to your project, and write down why the rest doesn't. The [OpenSSF Best Practices badge](https://www.bestpractices.dev/) is the same idea, as a questionnaire.

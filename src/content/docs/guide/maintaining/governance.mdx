@@ -2,7 +2,7 @@
 title: 'Governance: Who Decides, and How to Write It Down'
 description: The governance models open-source projects use, with their real documents, a GOVERNANCE.md template, contributor ladders, RFCs, votes and vetoes, foundations, and what happens when the founder leaves.
 date: 2026-09-27
-lastUpdated: 2026-09-27
+lastUpdated: 2026-09-30
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
@@ -80,7 +80,7 @@ People who contribute often want to know what comes next, and maintainers need a
 	src="/images/maintaining-governance-1.png"
 	width="720"
 	height="213"
-	alt="Kubernetes' contributor roles: member, reviewer, approver and subproject owner, with responsibilities, requirements and where each is defined."
+	alt="Kubernetes' contributor roles: member, reviewer, approver, subproject owner, each with responsibilities and requirements."
 />
 
 Each role is defined somewhere a machine can read, like an `OWNERS` file, so tools know who can approve what. The top of the ladder matters as much: Kubernetes keeps `emeritus_approvers` in its `OWNERS` files, Node.js has emeritus collaborators, and Astro has alumni. Stepping back should be a status, not a disappearance. [Burnout, Succession and the End of a Project](/guide/maintaining/burnout-succession-and-the-end/) covers why.
@@ -98,7 +98,7 @@ Rust's process shows the parts that matter. On [rust-lang/rfcs#3958](https://git
 	src="/images/maintaining-governance-2.png"
 	width="720"
 	height="456"
-	alt="Rust's rfcbot comment on RFC 3958: team members' approvals as checkboxes, two resolved concerns, and the rule to enter the final comment period."
+	alt="rfcbot on Rust RFC 3958: team approvals as checkboxes, two resolved concerns, and the rule for the final comment period."
 />
 
 The final comment period opened on August 26, 2026, closed ten days later with a decision to merge, and the RFC was merged the next day. A deadline for objections is what turns a discussion into a decision.
