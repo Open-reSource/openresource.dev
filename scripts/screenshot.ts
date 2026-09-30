@@ -62,27 +62,38 @@ try {
 	}
 	const page = await context.newPage();
 	await page.goto(url, { waitUntil: 'networkidle' });
-	await page.waitForTimeout(Number(values.wait));
 
 	// Boxes are drawn on the image, not in the page: Chromium's auto dark mode would recolor anything added to the page.
 	const clip = values.clip ? page.locator(values.clip).first() : undefined;
 	if (clip) await clip.scrollIntoViewIfNeeded();
+	// After the scroll: some pages only start an animation (a counter, a fade-in) when the element comes into view.
+	await page.waitForTimeout(Number(values.wait));
 	const margin = Number(values.margin);
 	const bounds = clip && (await clip.boundingBox());
-	const origin = bounds ? { x: bounds.x - margin, y: bounds.y - margin } : { x: 0, y: 0 };
 	const boxes = (await Promise.all(values.box.map((selector) => page.locator(selector).all()))).flat();
 	const rects = (await Promise.all(boxes.map((box) => box.boundingBox()))).filter((rect) => rect !== null);
-	const scroll = await page.evaluate(() => ({ x: window.scrollX, y: window.scrollY }));
+	const { scroll, page: size } = await page.evaluate(() => ({
+		scroll: { x: window.scrollX, y: window.scrollY },
+		page: { width: document.documentElement.scrollWidth, height: document.documentElement.scrollHeight },
+	}));
+	// The margin stops at the page's edges: Playwright clamps the capture there, so the boxes must use the same origin.
+	const area = bounds && {
+		x: Math.max(0, bounds.x + scroll.x - margin),
+		y: Math.max(0, bounds.y + scroll.y - margin),
+		right: Math.min(size.width, bounds.x + scroll.x + bounds.width + margin),
+		bottom: Math.min(size.height, bounds.y + scroll.y + bounds.height + margin),
+	};
+	const origin =
+		area && margin > 0
+			? { x: area.x - scroll.x, y: area.y - scroll.y }
+			: bounds
+				? { x: bounds.x, y: bounds.y }
+				: { x: 0, y: 0 };
 	const capture =
-		bounds && margin > 0
+		area && margin > 0
 			? await page.screenshot({
 					fullPage: true,
-					clip: {
-						x: origin.x + scroll.x,
-						y: origin.y + scroll.y,
-						width: bounds.width + margin * 2,
-						height: bounds.height + margin * 2,
-					},
+					clip: { x: area.x, y: area.y, width: area.right - area.x, height: area.bottom - area.y },
 				})
 			: clip
 				? await clip.screenshot()
