@@ -1,0 +1,77 @@
+---
+// The facts about one project, in a card at the top of its section: since when, under which license, who decides, and
+// one number with its date. Hand-entered: every value comes from a source the text links, and the number says when.
+interface Props {
+	name: string;
+	href: string;
+	since: string;
+	license: string;
+	decides: string;
+	number: string;
+}
+
+const { name, href, since, license, decides, number } = Astro.props;
+---
+
+<aside class="project-stats" aria-label={`${name} in numbers`}>
+	<p class="project-stats__name">
+		<a href={href}>{name}</a>
+	</p>
+	<dl class="project-stats__facts">
+		<div>
+			<dt>Since</dt>
+			<dd>{since}</dd>
+		</div>
+		<div>
+			<dt>License</dt>
+			<dd>{license}</dd>
+		</div>
+		<div>
+			<dt>Who decides</dt>
+			<dd>{decides}</dd>
+		</div>
+		<div class="project-stats__number">
+			<dt>In numbers</dt>
+			<dd>{number}</dd>
+		</div>
+	</dl>
+</aside>
+
+<style>
+	.project-stats {
+		border: var(--stroke-hairline) solid var(--color-line);
+		border-left: 3px solid var(--color-primary);
+		border-radius: 0 var(--radius-md) var(--radius-md) 0;
+		background: var(--color-panel);
+		padding: var(--space-3) var(--space-4);
+		margin: var(--space-4) 0;
+	}
+
+	.project-stats__name {
+		margin: 0 0 var(--space-2);
+		font: var(--type-eyebrow);
+		letter-spacing: var(--font-letter-spacing-button);
+		text-transform: uppercase;
+	}
+
+	.project-stats__facts {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+		gap: var(--space-2) var(--space-4);
+		margin: 0;
+	}
+
+	.project-stats__facts dt {
+		color: var(--color-muted);
+		font: var(--type-mono-label);
+	}
+
+	.project-stats__facts dd {
+		margin: 0;
+		font: var(--type-small);
+	}
+
+	.project-stats__number {
+		grid-column: 1 / -1;
+	}
+</style>
