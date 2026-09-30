@@ -2,7 +2,7 @@
 title: How to Write a Bug Report That Gets Fixed
 description: Search first, link a minimal reproduction, say what you expected and when it started, then stay around. Plus feature requests, and why security bugs never go in an issue.
 date: 2026-09-27
-lastUpdated: 2026-09-27
+lastUpdated: 2026-09-30
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
@@ -87,7 +87,7 @@ BiggerNoise's report for [twbs/bootstrap#41379](https://github.com/twbs/bootstra
 
 Another contributor opened [the fix](https://github.com/twbs/bootstrap/pull/41511), merged seven weeks later. If you know the last version that worked, say it. If you don't, installing two or three older versions to find out takes less time than waiting for someone to ask.
 
-The versions go in too: the project's, and whatever runs it (browser and OS for a CSS library, Node.js or Python for a tool). `npm ls <package>` gives the installed version, not the one your `package.json` asks for. [`npx envinfo --system --browsers`](https://github.com/tabrindle/envinfo) prints the rest in one block.
+The versions go in too: the project's, and whatever runs it (browser and OS for a CSS library, Node.js or Python for a tool). Your package manager gives the installed version, not the one your manifest asks for: `npm ls <package>`, `pip show <package>`, `cargo tree -i <crate>`. [`npx envinfo --system --browsers`](https://github.com/tabrindle/envinfo) prints the rest in one block.
 
 ## Keep your guesses for the end
 

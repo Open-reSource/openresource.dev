@@ -2,7 +2,7 @@
 title: Non-Code Contributions Maintainers Actually Want
 description: Docs, triage, translation, accessibility, testing, answers, writing and money. A first task under an hour for each, where to find one, and a real contribution that landed.
 date: 2026-09-27
-lastUpdated: 2026-09-27
+lastUpdated: 2026-09-30
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
@@ -22,16 +22,16 @@ import InShort from '../../../../components/InShort.astro';
 
 </InShort>
 
-| Contribution  | A first task, under an hour                                        | Where to find it                                          |
-| ------------- | ------------------------------------------------------------------ | --------------------------------------------------------- |
-| Documentation | Fix the sentence that confused you                                 | The page you just read                                    |
-| Triage        | Reproduce an open bug report and comment with what you found       | Newest issues without a label or an answer                |
-| Translation   | Translate one page into your language                              | The project's Weblate or Crowdin page, or its i18n folder |
-| Accessibility | Tab through a page, or turn on your OS's contrast mode, and report | The project's own docs site                               |
-| Testing       | Install the beta and run your project on it                        | `npm install <package>@beta`, or the release notes        |
-| Answers       | Answer one question in Discussions                                 | Unanswered discussions, newest first                      |
-| Writing       | Write the tutorial you wished existed                              | Your blog, then the project's newsletter or list          |
-| Money         | Sponsor a project you use                                          | The **Sponsor** button on its repository                  |
+| Contribution  | A first task, under an hour                                        | Where to find it                                                                  |
+| ------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| Documentation | Fix the sentence that confused you                                 | The page you just read                                                            |
+| Triage        | Reproduce an open bug report and comment with what you found       | Newest issues without a label or an answer                                        |
+| Translation   | Translate one page into your language                              | The project's Weblate or Crowdin page, or its i18n folder                         |
+| Accessibility | Tab through a page, or turn on your OS's contrast mode, and report | The project's own docs site                                                       |
+| Testing       | Install the beta and run your project on it                        | `npm install <package>@beta`, `pip install --pre <package>`, or the release notes |
+| Answers       | Answer one question in Discussions                                 | Unanswered discussions, newest first                                              |
+| Writing       | Write the tutorial you wished existed                              | Your blog, then the project's newsletter or list                                  |
+| Money         | Sponsor a project you use                                          | The **Sponsor** button on its repository                                          |
 
 ## Fix the sentence that confused you
 
@@ -84,7 +84,7 @@ Design works the same way: an issue with a screenshot of what's wrong and a mock
 
 ## Try the next version before it ships
 
-A bug found in a beta is fixed before anyone depends on it. Many packages publish betas and release candidates under an npm tag (`npm install vite@beta` gives you Vite's), and the release notes ask for feedback.
+A bug found in a beta is fixed before anyone depends on it. Many packages publish betas and release candidates next to the stable version, and the release notes ask for feedback. Your package manager skips them unless you ask: `npm install vite@beta` gives you Vite's, `pip install --pre <package>` the latest pre-release of a Python package.
 
 pricop was reading the docs of Bootstrap 6, still in development, and noticed every component looked small. The base font size had moved from `1rem` to `14px`. Their issue, [twbs/bootstrap#42061](https://github.com/twbs/bootstrap/issues/42061), explained what it broke for users who set a larger default font size in their browser. A month later, [#42119](https://github.com/twbs/bootstrap/pull/42119), "v6: Restore 16px base font-size", was merged.
 
@@ -119,7 +119,7 @@ Talks work the same: a ten-minute talk at a local meetup about how you used a pr
 
 ## Money is a contribution too
 
-A monthly sponsorship pays for a maintainer's time, the one thing none of the above can. Look for the **Sponsor** button at the top of a repository, or a `funding` field in `package.json` (`npm fund` lists them for your dependencies).
+A monthly sponsorship pays for a maintainer's time, the one thing none of the above can. Look for the **Sponsor** button at the top of a repository: it comes from the repository's `.github/FUNDING.yml`, whatever the language. Some package managers also list the funding links of everything you install: `npm fund` for JavaScript, `composer fund` for PHP.
 
 - A few dollars a month from you, and a real amount from your company if it uses the project. [Understanding Funding Models](/guide/financing/understanding-funding-models/) covers where the money goes.
 - One-time donations help too, on [Open Collective](https://opencollective.com/) or GitHub Sponsors.
