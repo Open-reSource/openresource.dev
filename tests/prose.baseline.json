@@ -92,13 +92,6 @@
     "banned: delve, landscape, journey": 1,
     "exclamation: more than one": 5
   },
-  "docs/guide/what-is-open-source/examples-of-successful-open-source-projects.mdx": {
-    "banned: In this chapter, we will": 1,
-    "banned: delve, landscape, journey": 2,
-    "banned: vibrant, thriving": 1,
-    "banned: essential, crucial": 1,
-    "lead: more than one": 1
-  },
   "docs/guide/what-is-open-source/the-significance-of-open-source.mdx": {
     "banned: empower, leverage": 3,
     "banned: delve, landscape, journey": 2,

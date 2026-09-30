@@ -1,80 +1,230 @@
 ---
-title: Examples of Successful Open-Source Projects
-description: Explore successful and impactful open-source projects that transformed industries and challenged proprietary models. Discover their history, features, and impact. Join the movement!
+title: Ten Successful Projects and What to Steal From Them
+description: Linux, curl, SQLite, PostgreSQL, Kubernetes, Blender, Godot, VS Code, Astro and Bootstrap. What success means for each, and one thing to copy.
 date: 2023-04-09
-lastUpdated: 2026-09-26
+lastUpdated: 2026-09-30
 ---
 
-{/* prettier-ignore */}
-<p class="lead">Open-source software has become an integral part of the technology landscape, providing innovative solutions, promoting collaboration, and driving innovation. Many Open-source projects have become hugely successful, transforming entire industries and challenging traditional proprietary software models. In this chapter, we will explore some of the most successful open-source projects, including their history, features, and impact, and discuss why they have been so successful.</p>
-
-## Case Studies of Successful Open-Source Projects
-
-### Apache HTTP Server
-
-The Apache HTTP Server is a free and open-source web server software, first released in 1995. It was the most widely used web server for two decades, and still ran 22% of websites in September 2026 according to [W3Techs](https://w3techs.com/technologies/overview/web_server). Apache is known for its scalability, flexibility, and security. Its success can be attributed to its community-driven development model, which ensures the software is constantly evolving to meet the needs of its users.
-
-### Git
-
-Git is a free and open-source distributed version control system that is widely used for software development. It was created by Linus Torvalds in 2005 and has since become the most widely used version control system. Git is known for its speed, scalability, and flexibility. Its success can be attributed to its community-driven development model, which ensures the software is constantly improving and meeting the needs of its users.
-
-### LibreOffice
-
-LibreOffice is a free and open-source office suite that provides a range of productivity tools, including word processing, spreadsheets, and presentations. It was first released in 2011 as a fork of OpenOffice.org and is now the default office suite of most Linux distributions. LibreOffice is known for its compatibility, stability, and customizability. Its success can be attributed to its community-driven development model, which ensures the software is constantly improving and meeting the needs of its users.
-
-### Linux
-
-Linux is a free and open-source operating system kernel that powers a wide range of devices, from smartphones to supercomputers. It was first released in 1991 by Linus Torvalds and has since become the leading operating system on servers. Linux is known for its stability, security, and customizability. Its success can be attributed to its robust community, which contributes to its development, testing, and support.
-
-### Mozilla Firefox
-
-Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation. It was created in 2002, first released in 2004, and has since become one of the most popular web browsers. Firefox is known for its speed, security, and user-friendly interface. Its success can be attributed to its robust community, which contributes to its development, testing, and marketing. Firefox has also become a symbol of the open source movement, demonstrating the power of community-driven software development.
-
-### Python
-
-Python is a free and open-source programming language created by Guido van Rossum in 1991. It has since become one of the most widely used programming languages, known for its simplicity, readability, and versatility. Python's success can be attributed to its community-driven development model, which ensures the language is constantly evolving to meet the needs of its users. Python has become the language of choice for many developers, from beginners to experts, and is used in a wide range of applications, from web development to data science. Its source code is available on GitHub at [github.com/python/cpython](https://github.com/python/cpython).
-
-### WordPress
-
-WordPress is a free and open-source content management system that powers over 40% of all websites on the internet. It was first released in 2003 and has since become the most widely used content management system. WordPress is known for its ease of use, flexibility, and scalability. Its success can be attributed to its thriving community, which develops plugins, themes, and extensions that extend its functionality and customization options.
-
-## Why These Projects Have Been Successful
-
-- <strong>Community-driven development model</strong>: All of these projects have been successful because they follow a
-  community-driven development model, which allows for a diverse range of contributors to contribute to the software.
-  This ensures that the software is constantly improving and meeting the needs of its users.
-- <strong>Focus on user experience</strong>: Another factor that has contributed to the success of these projects is
-  their focus on user experience. All of these projects prioritize usability, simplicity, and accessibility, making them
-  appealing to a wide range of users.
-- <strong>Openness and transparency</strong>: The open source philosophy of openness and transparency has also
-  contributed to the success of these projects. By making the source code available to anyone, these projects have
-  attracted a wide range of contributors who have helped improve the software, fix bugs, and add new features.
-- <strong>Customizability</strong>: Many of these successful open-source projects offer a high degree of
-  customizability, allowing users to tailor the software to their specific needs. This has helped attract a diverse
-  range of users, from individuals to large enterprises.
-- <strong>Strong communities</strong>: All of these successful open-source projects have strong communities of
-  contributors, users, and supporters. These communities provide valuable feedback, support, and promotion, which helps
-  the projects grow and thrive.
-
-## Lessons Learned From Successful Open-Source Projects
-
-- <strong>Collaboration is key</strong>: Successful open-source projects rely on collaboration between contributors,
-  users, and supporters. Collaboration helps ensure the software meets the needs of its users, and that bugs are fixed
-  quickly.
-- <strong>User experience is critical</strong>: Successful open-source projects prioritize user experience, ensuring
-  that the software is easy to use and accessible to a wide range of users.
-- <strong>Transparency and openness are essential</strong>: Openness and transparency are core values of the open source
-  movement, and have contributed to the success of many open-source projects. By making the source code available to
-  anyone, these projects have attracted a wide range of contributors, which has helped improve the software and drive
-  innovation.
-- <strong>Strong communities are vital</strong>: Successful open-source projects have strong communities of
-  contributors, users, and supporters. These communities provide valuable feedback, support, and promotion, which helps
-  the projects grow and thrive.
-- <strong>Constant evolution is necessary</strong>: Successful open-source projects are constantly evolving, with new
-  features, improvements, and bug fixes being added all the time. This ensures that the software stays up-to-date and
-  meets the changing needs of its users.
-
----
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+import ProjectStats from '../../../../components/ProjectStats.astro';
 
 {/* prettier-ignore */}
-<p class="lead">Open-source software has become an integral part of the technology landscape, providing innovative solutions, promoting collaboration, and driving innovation. The success of many open-source projects, such as Mozilla Firefox, Apache HTTP Server, Linux, WordPress, and LibreOffice, can be attributed to their community-driven development model, focus on user experience, openness and transparency, customizability, and strong communities. By understanding the lessons learned from these successful Open-source projects, we can continue to drive innovation and transform entire industries. And you can use these lessons to help you build your own successful open-source project.</p>
+<p class="lead">Success in open source doesn't look like success anywhere else. The most deployed database in the world calls itself "not open-contribution", and one of the most installed tools has had the same lead for 28 years. Here are ten projects, what "successful" means for each, and one thing you can steal from each of them.</p>
+
+<InShort>
+
+- Success has no single shape: a trillion SQLite databases, 2,652 developers on one Linux release, €281,282 a month for Blender.
+- No license, governance model or funding model is common to all ten. Some have a company behind them, most don't.
+- What they share: each one wrote down how it works. Who decides, how to contribute, where the money goes.
+- Each section ends with the one thing you can copy into your own project.
+
+</InShort>
+
+## Ten projects, no common recipe
+
+As of September 2026:
+
+| Project                                                            | Since | License               | Who decides                                   |
+| ------------------------------------------------------------------ | ----- | --------------------- | --------------------------------------------- |
+| [Linux](#linux-write-down-who-owns-what)                           | 1991  | GPL-2.0               | Linus Torvalds, through subsystem maintainers |
+| [curl](#curl-work-in-public-and-say-who-pays)                      | 1998  | curl                  | Daniel Stenberg                               |
+| [SQLite](#sqlite-open-source-without-pull-requests)                | 2000  | Public domain         | A small team led by Richard Hipp              |
+| [PostgreSQL](#postgresql-spread-the-keys-across-employers)         | 1996  | PostgreSQL            | A Core Team of seven and 31 committers        |
+| [Kubernetes](#kubernetes-give-it-to-a-foundation-none-of-you-owns) | 2014  | Apache-2.0            | A Steering Committee of seven and 24 SIGs     |
+| [Blender](#blender-publish-the-money)                              | 2002  | GPL-2.0-or-later      | The Blender Foundation                        |
+| [Godot](#godot-budget-on-the-floor-not-on-the-peak)                | 2014  | MIT                   | The Godot Foundation                          |
+| [VS Code](#vs-code-say-where-the-repository-ends)                  | 2015  | MIT, for "Code - OSS" | Microsoft                                     |
+| [Astro](#astro-docs-are-contributions)                             | 2021  | MIT                   | Its core team, with a company behind it       |
+| [Bootstrap](#bootstrap-give-the-project-its-own-organization)      | 2011  | MIT                   | The founding team and a few core contributors |
+
+A dictator, a committee, a foundation, a company: each model shows up here at least once. **None of them is the reason these projects work. Writing it down is.**
+
+## Linux: write down who owns what
+
+<ProjectStats
+	name="Linux kernel"
+	href="https://www.kernel.org/"
+	since="1991"
+	license="GPL-2.0 with the syscall note"
+	decides="Linus Torvalds, through subsystem maintainers"
+	number="2,652 developers from 249 employers in kernel 7.2 (LWN, August 2026)"
+/>
+
+Kernel 7.2 took 16,418 changes from 2,652 developers, 613 of them contributing for the first time, according to [LWN's statistics](https://lwn.net/Articles/1088776/): a record. Nobody reads all of that. The [kernel's process documentation](https://docs.kernel.org/process/2.Process.html) says it plainly: "no single developer could possibly inspect and select every patch unassisted". So each part of the code has a maintainer and a tree, and patches climb a chain of trust to Linus.
+
+The map of that chain is one text file. As of September 30, 2026, [`MAINTAINERS`](https://github.com/torvalds/linux/blob/master/MAINTAINERS) has about 3,330 entries in 30,218 lines: for any file, who reviews it, which list to write to, and which tree it goes through.
+
+**Steal this: write down who owns what.** For your project, it's a `CODEOWNERS` file, from the day there's a second maintainer ([The Files That Turn a Repository Into a Project](/guide/creating/repository-files/)).
+
+## curl: work in public, and say who pays
+
+<ProjectStats
+	name="curl"
+	href="https://curl.se/"
+	since="1998"
+	license="curl (MIT-style)"
+	decides="Daniel Stenberg"
+	number="Over twenty billion installations (curl.se, September 2026)"
+/>
+
+curl's [governance document](https://github.com/curl/curl/blob/master/docs/GOVERNANCE.md) says the project "matches a standard BDFL (Benevolent Dictator For Life) style project", with Daniel Stenberg as the dictator. It works because the dictator does everything in public: the code, the decisions, and a [blog](https://daniel.haxx.se/blog/) about the project. The `THANKS` file lists about 3,786 names as of September 2, 2026.
+
+The money follows the same logic. curl's [sponsors page](https://curl.se/sponsors.html) says "the best way to sponsor this project is to allow a paid engineer or two to spend work hours on curl", and the governance document says who pays Daniel: "Daniel works for wolfSSL".
+
+**Steal this: work in public, and write down who pays.** Both answer the question a company asks before it lets an engineer spend work hours on your project.
+
+## SQLite: open source without pull requests
+
+<ProjectStats
+	name="SQLite"
+	href="https://sqlite.org/"
+	since="2000"
+	license="Public domain"
+	decides="A small team, led by Richard Hipp"
+	number="Over one trillion databases in active use (the project's estimate, April 2026)"
+/>
+
+SQLite counts [more than 4 billion smartphones](https://sqlite.org/mostdeployed.html), each with hundreds of SQLite databases. It's open source by any definition: the code is in the public domain. It's not open to contributions, and [says so](https://sqlite.org/copyright.html):
+
+<ContentImage
+	src="/images/what-is-open-source-examples-of-successful-open-source-projects-1.png"
+	width="1440"
+	height="197"
+	alt="SQLite's copyright page, Open-Source, not Open-Contribution: patches need an affidavit putting them in the public domain."
+/>
+
+The page even asks people "not be offended if we rewrite your patch from scratch". That's the price of keeping every line in the public domain, and the project would rather tell you than let you find out.
+
+**Steal this: you can be open source and not take pull requests.** Say so in the README and in `CONTRIBUTING.md`, before someone spends a weekend on one.
+
+## PostgreSQL: spread the keys across employers
+
+<ProjectStats
+	name="PostgreSQL"
+	href="https://www.postgresql.org/"
+	since="1996, as PostgreSQL"
+	license="PostgreSQL (MIT-style)"
+	decides="A Core Team of seven and 31 committers"
+	number="7 Core Team members from 6 different employers (September 2026)"
+/>
+
+"What company owns PostgreSQL?" is in the [press FAQ](https://www.postgresql.org/about/press/faq/), and the answer is one word: "None." The project is "an unincorporated association of volunteers and companies". Companies pay people to work on it, and none of them holds it: as of September 2026, the seven members of the [Core Team](https://www.postgresql.org/developer/core/) work for six different employers. The [31 committers](https://www.postgresql.org/developer/committers/) are added about once a year, by a vote of the existing ones.
+
+**Steal this: spread the keys across employers.** When a company that pays a maintainer walks away, the project shouldn't walk away with it.
+
+## Kubernetes: give it to a foundation none of you owns
+
+<ProjectStats
+	name="Kubernetes"
+	href="https://kubernetes.io/"
+	since="2014"
+	license="Apache-2.0"
+	decides="A Steering Committee of seven, and 24 SIGs"
+	number="102,858 contributors from 10,171 companies, all time (CNCF DevStats, September 2026)"
+/>
+
+Google wrote Kubernetes, then gave it away on purpose. When the Cloud Native Computing Foundation was announced on July 21, 2015, Google [contributed Kubernetes](https://www.cncf.io/announcements/2015/06/21/new-cloud-native-computing-foundation-to-drive-alignment-among-container-technologies/) as its seed project, and [its IP moved to the foundation](https://www.cncf.io/projects/kubernetes/) in March 2016. Competitors could now contribute to something they didn't hand to a rival.
+
+They did. Google and Red Hat made 83% of the contributions before the project joined the CNCF, and 46% by June 2023, according to [a CNCF report on the project](https://www.cncf.io/reports/kubernetes-project-journey-report/).
+
+**Steal this: if you want competitors to contribute, put the project somewhere none of you owns.** [Governance](/guide/maintaining/governance/#join-a-foundation-when-others-depend-on-you) covers when that's worth it.
+
+## Blender: publish the money
+
+<ProjectStats
+	name="Blender"
+	href="https://www.blender.org/"
+	since="2002, under the GPL"
+	license="GPL-2.0-or-later"
+	decides="The Blender Foundation, a Dutch non-profit"
+	number="€281,282 a month from 7,666 individuals and 44 companies (September 2026)"
+/>
+
+Blender became open source because its users bought it. In July 2002, the "Free Blender" campaign raised €110,000 in seven weeks "to regain Blender from its investors" ([Blender's history](https://www.blender.org/about/history/)). The project has shown its money ever since. The [Development Fund](https://fund.blender.org/) puts the monthly total on its home page:
+
+<ContentImage
+	src="/images/what-is-open-source-examples-of-successful-open-source-projects-2.png"
+	width="1440"
+	height="219"
+	alt="Blender Development Fund: €281,282 monthly contribution, 7666 individuals, 44 corporate members."
+/>
+
+Every grant has been [published on blender.org since 2011](https://fund.blender.org/about/), and the [2025 annual report](https://download.blender.org/foundation/Blender-Foundation-Annual-Report-2025.pdf) itemizes €5,713,078 of income, €928,192 of it from individual fund members.
+
+**Steal this: publish what comes in and what it pays for.** Open Collective shows the first half for you; the second is a blog post a year.
+
+## Godot: budget on the floor, not on the peak
+
+<ProjectStats
+	name="Godot"
+	href="https://godotengine.org/"
+	since="2014, as open source"
+	license="MIT"
+	decides="The Godot Foundation, a Dutch non-profit, since 2022"
+	number="€35,249 a month from 1,817 members (September 2026)"
+/>
+
+Godot moved its donations from Patreon to its own [Development Fund](https://godotengine.org/article/godot-developer-fund/) on September 12, 2023, to "significantly reduce platform fees". Patreon had brought $15,366 a month at the start of 2023. The new fund started at €25,591 a month and reached €54,754 by the end of the year, according to the [Godot Foundation's 2023 report](https://godot.foundation/downloads/Godot-Foundation-Annual-Report-2023.pdf).
+
+Then it came down. As of September 30, 2026, [the fund](https://fund.godotengine.org/) brings in €35,249 a month: more than twice what Patreon brought at the start of 2023, and a third less than the peak.
+
+**Steal this: budget on the floor, not on the peak.** A spike in attention is a good month, not a salary.
+
+## VS Code: say where the repository ends
+
+<ProjectStats
+	name="VS Code"
+	href="https://github.com/microsoft/vscode"
+	since="2015, as open source"
+	license="MIT, for Code - OSS"
+	decides="Microsoft"
+	number="193,297 stars on GitHub (September 2026)"
+/>
+
+The repository and the product are two different things, and the [README](https://github.com/microsoft/vscode) says so: Visual Studio Code "is a distribution of the Code - OSS repository with Microsoft-specific customizations released under a traditional Microsoft product license". The source is MIT. The editor you download isn't.
+
+Users noticed. [VSCodium](https://vscodium.com/) ships the MIT build with telemetry off. And because the [Marketplace terms](https://cdn.vsassets.io/v/M264_20251020.18/_content/Microsoft-Visual-Studio-Marketplace-Terms-of-Use.pdf) limit its extensions to Microsoft's products, the Eclipse Foundation runs [Open VSX](https://open-vsx.org/) for everyone else: 18,658 extensions as of September 30, 2026.
+
+**Steal this: if your product and your repository differ, say where the line is.** Microsoft's README does it in one sentence.
+
+## Astro: docs are contributions
+
+<ProjectStats
+	name="Astro"
+	href="https://astro.build/"
+	since="2021"
+	license="MIT"
+	decides="Its core team, under GOVERNANCE.md"
+	number="1,377 contributors to the docs, 1,242 to the framework (GitHub, September 2026)"
+/>
+
+Astro's documentation repository has more contributors than the framework itself, as of September 30, 2026. That's by design. The project's [governance](https://github.com/withastro/.github/blob/main/GOVERNANCE.md) counts "updating documentation or fixing a typo" as a contribution, the docs have their own [contribution guide](https://contribute.docs.astro.build/), and the community translates them into 13 languages. [Astro Badges](https://astro.badg.es/) gives a badge for a first docs pull request and a first translation, like it does for code.
+
+The company behind Astro [joined Cloudflare](https://astro.build/blog/joining-cloudflare/) on January 16, 2026, with the promise that "Astro stays open-source and MIT-licensed".
+
+**Steal this: count docs and translations as contributions,** in your governance and in your credits. The [community chapter](/guide/maintaining/community/#credit-people-where-github-shows-it) has the ways to credit them.
+
+## Bootstrap: give the project its own organization
+
+<ProjectStats
+	name="Bootstrap"
+	href="https://getbootstrap.com/"
+	since="2011"
+	license="MIT"
+	decides="The founding team and a small group of core contributors"
+	number="6,954,089 npm downloads in the week of September 22 to 28, 2026"
+/>
+
+Mark Otto and Jacob Thornton created Bootstrap at Twitter and [released it on August 19, 2011](https://getbootstrap.com/docs/5.3/about/overview/). A year later, on September 29, 2012, Mark wrote that they had ["begun working to move Bootstrap into its own open source organization"](https://blog.getbootstrap.com/2012/09/29/onward/). On July 27, 2013, the repository [moved to `twbs/bootstrap`](https://blog.getbootstrap.com/2013/07/27/bootstrap-3-rc1/), where it still is.
+
+Bootstrap kept shipping after that, including breaking changes: [v5, on May 5, 2021](https://blog.getbootstrap.com/2021/05/05/bootstrap-5/), removed jQuery. Twelve people are on [the team](https://getbootstrap.com/docs/5.3/about/team/) as of September 2026, and Julien, who writes this guide, is one of them.
+
+**Steal this: put the project in its own organization,** not in your employer's account or your personal one. Moving it later took Bootstrap ten months.
+
+## Go further
+
+- [The Many Shapes of Open Source](/guide/what-is-open-source/types-of-open-source-projects/): the map these ten sit on, and what open source ships beyond software.
+- [Governance](/guide/maintaining/governance/): the models behind the "who decides" column, and how to pick one.
+- [LWN's kernel development statistics](https://lwn.net/Articles/1088776/): who wrote kernel 7.2, by developer and by employer, published for every release.
+- [curl's governance document](https://github.com/curl/curl/blob/master/docs/GOVERNANCE.md): a one-page model for a project led by one person.
