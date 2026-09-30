@@ -2,7 +2,7 @@
 title: "Get Real-Time GitHub Stars Notifications in Discord"
 description: "Want instant updates when your GitHub repository gets new stars? Set up an easy GitHub Actions workflow to send notifications directly to Discord!"
 date: 2024-09-17
-lastUpdated: 2024-09-17
+lastUpdated: 2026-09-30
 excerpt: "After refactoring our website, we noticed a rise in statistics and new stars on our GitHub repository. While GitHub doesn't offer native notifications for new stars, we decided to create our own solution.
 <br><br>
 **This guide walks you through setting up a GitHub Actions workflow to send real-time notifications to a private Discord channel whenever your repository gains new stars**. It's a fun way to track your project's popularity and engage with your community. Follow along as we share our journey of building and tweaking this automation, complete with a screenshot of the notification we received on our phone."
@@ -122,7 +122,7 @@ GET https://api.github.com/repos/Open-reSource/openresource.dev
 > [!NOTE] Try it out!
 > You can try it out directly in your browser (or using a tool like [Curl](https://github.com/curl/curl)) to see the JSON response. In the browser, you can simply paste the URL into the address bar and hit enter.
 
-At the time of writing, Open \{re\}Source main repository has 61 stars, so the answer would be:
+In September 2024, when this article was written, the Open \{re\}Source main repository had 61 stars, so the answer was:
 
 ```json
 {
@@ -135,7 +135,7 @@ At the time of writing, Open \{re\}Source main repository has 61 stars, so the a
 > [!WARNING] Be mindful of the GitHub API rate limits
 > Be mindful of the GitHub API rate limits when making requests. You can find more information about the rate limits in the [GitHub API documentation](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting).
 >
-> At the time of writing, the GitHub API allows for up to 60 requests per hour for unauthenticated requests and up to 5,000 requests per hour for authenticated requests. If you plan to make frequent requests, consider using a personal access token for authentication.
+> As of September 2026, the GitHub API allows for up to 60 requests per hour for unauthenticated requests and up to 5,000 requests per hour for authenticated requests. If you plan to make frequent requests, consider using a personal access token for authentication.
 
 ### The Actual Workflow
 
