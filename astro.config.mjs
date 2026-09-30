@@ -101,6 +101,8 @@ export default defineConfig({
 				],
 				status: false,
 				edit: { repo: 'Open-reSource/openresource.dev' },
+				// "Report a problem": fills the `page` and `updated` fields of .github/ISSUE_TEMPLATE/content_problem.yml.
+				report: { repo: 'Open-reSource/openresource.dev', template: 'content_problem.yml' },
 				sidebar: [
 					// No number: the modules count from 01, as on the homepage.
 					{ label: 'Guide', num: false, items: ['guide', 'guide/checklists'] },
