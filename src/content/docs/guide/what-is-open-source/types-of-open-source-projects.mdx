@@ -1,80 +1,132 @@
 ---
-title: Types of Open-Source Projects
-description: Explore the diverse world of open-source projects! Learn about open-source software, hardware, data, communities, and more in this comprehensive guide. Dive into the heart of collaborative innovation.
+title: The Many Shapes of Open Source
+description: Software, hardware, data, content, science, education, government and standards. The map of what open source ships, with a real project in each box.
 date: 2023-10-05
-lastUpdated: 2026-09-26
+lastUpdated: 2026-09-30
 ---
 
+import CategoryMap from '../../../../components/CategoryMap.astro';
+import InShort from '../../../../components/InShort.astro';
+
 {/* prettier-ignore */}
-<p class="lead">Open-source projects come in various forms, each with its unique characteristics and objectives. Understanding the different types of open-source projects is essential to navigate the diverse landscape of collaborative, community-driven initiatives. In this chapter, we will explore the various types of open-source projects, shedding light on their purposes, methodologies, and contributions to the broader open source ecosystem.</p>
+<p class="lead">Open source started as a way to ship software and became a way to ship anything with a source: a circuit board, a map, an encyclopedia, a standard. The artifact changes, the rules don't: a license that lets anyone use, change and share it, a place to contribute, and people who maintain it. Here is the map, with a real project in each box.</p>
 
-## Open-Source Software
+<InShort>
 
-**Open-Source Software (OSS)** is perhaps the most well-known and widely recognized type of open-source project. It encompasses software applications, libraries, operating systems, and more, developed collaboratively by a community of contributors. The key defining aspect of OSS is the availability of the source code, which can be freely accessed, modified, and distributed. Popular examples include the Linux kernel, Mozilla Firefox, and the Apache web server.
+- Software is most of open source, from the kernel on the world's supercomputers to the framework in your dependencies.
+- Beyond software, the source is a design (Arduino), a dataset (OpenStreetMap), a text (Wikipedia), a paper (arXiv) or a standard (HTML).
+- The rules are the same everywhere, so the rest of this guide talks about software and the advice translates.
+- A NonCommercial license makes content free to read, not open: MIT OpenCourseWare and Khan Academy are in that case.
 
-Software is most of what people mean by open source: see the [zoom on open-source software](#zoom-on-open-source-software) at the end of this chapter.
+</InShort>
 
-## Open-Source Hardware
+## Open source ships anything with a source
 
-**Open-Source Hardware (OSH)** takes the principles of open source into the realm of physical objects. OSH projects involve the design and distribution of hardware components, often accompanied by detailed documentation. This approach allows for transparency and encourages innovation in fields like electronics, robotics, and 3D printing. One well-known example is the [Arduino](https://arduino.cc) platform, which provides open hardware and software for creating interactive projects.
+<CategoryMap
+	label="The shapes of open source: nine kinds of software, and seven kinds of projects beyond software. Each box links to its section."
+	groups={[
+		{
+			label: 'Software',
+			categories: [
+				{ label: 'Operating systems', href: '#operating-systems', examples: 'Linux, Debian' },
+				{ label: 'Languages', href: '#programming-languages', examples: 'Python, Rust, Go' },
+				{ label: 'Databases', href: '#databases', examples: 'SQLite, PostgreSQL, Valkey' },
+				{ label: 'Infrastructure', href: '#infrastructure', examples: 'curl, Kubernetes, nginx' },
+				{ label: 'Frameworks', href: '#frameworks-and-libraries', examples: 'React, Django, Bootstrap' },
+				{ label: 'Developer tools', href: '#developer-tools', examples: 'Git, VS Code, Neovim' },
+				{ label: 'Desktop apps', href: '#desktop-apps', examples: 'Blender, GIMP, LibreOffice' },
+				{ label: 'Games', href: '#games-and-engines', examples: 'Godot' },
+				{ label: 'Security', href: '#security', examples: 'OpenSSL, Wireshark' },
+			],
+		},
+		{
+			label: 'Beyond software',
+			categories: [
+				{ label: 'Hardware', href: '#hardware', examples: 'Arduino, RISC-V' },
+				{ label: 'Data', href: '#data', examples: 'OpenStreetMap, Wikidata' },
+				{ label: 'Content', href: '#content', examples: 'Wikipedia, Creative Commons' },
+				{ label: 'Science', href: '#science', examples: 'arXiv, Jupyter, Zenodo' },
+				{ label: 'Education', href: '#education', examples: 'Moodle' },
+				{ label: 'Government', href: '#government', examples: 'Developers Italia' },
+				{ label: 'Standards', href: '#standards', examples: 'HTML, HTTP, SPDX' },
+			],
+		},
+	]}
+/>
 
-## Open Data and Open Content
-
-In the age of information, **Open Data and Open Content** have gained prominence. These projects focus on making data and creative content freely available to the public. **Open Data** initiatives provide access to datasets, fostering research, analysis, and data-driven decision-making. **Open Content** includes works like books, music, and artwork released under licenses that allow modification and redistribution. [Wikipedia](https://wikipedia.org), with its collaborative encyclopedia, exemplifies Open Content, while [Data.gov](https://data.gov) showcases Open Data efforts.
-
-## Open-Source Communities and Forums
-
-**Open-Source Communities and Forums** serve as platforms for knowledge exchange, discussion, and collaboration among enthusiasts, developers, and users. These online communities facilitate communication, troubleshooting, and the sharing of best practices. They play a crucial role in nurturing the growth of open-source projects by fostering a sense of belonging and support.
-
-## Open-Source Educational Resources
-
-Education is a fundamental aspect of the open source movement. **Open-Source Educational Resources** encompass textbooks, courses, tutorials, and learning materials that are freely accessible and modifiable. These resources empower learners and educators to customize and distribute educational content, democratizing knowledge. The [Khan Academy](https://khanacademy.org) and [MIT OpenCourseWare](https://ocw.mit.edu) are prime examples of open source educational initiatives.
-
-## Open-Source Initiatives for Social Good
-
-Open source isn't just about code; it's also about making a positive impact on society. **Open-Source Initiatives for Social Good** aim to address various social and humanitarian challenges. Projects under this category may include software for disaster response, healthcare solutions, or environmental monitoring. One notable example is the [Humanitarian OpenStreetMap Team (HOT)](https://www.hotosm.org), which leverages open source mapping tools to assist disaster-affected communities.
-
-## Open Source Foundations and Organizations
-
-Many open-source projects are supported by **Open Source Foundations and Organizations** that provide governance, funding, and resources. These entities play a crucial role in ensuring the sustainability and longevity of projects. [The Apache Software Foundation](https://apache.org), [the Linux Foundation](https://linuxfoundation.org), and the [Free Software Foundation](https://www.fsf.org) are well-established examples of organizations that support a wide range of open source efforts.
-
-## Open Source in Government
-
-Governments worldwide are recognizing the benefits of open-source solutions. **Open Source in Government** refers to the adoption of open-source software and principles in public-sector operations. This approach promotes transparency, cost-effectiveness, and collaboration in government agencies. Initiatives like [Code.gov](https://code.gov) in the United States promote the sharing of government-developed code as open source.
-
-## Open Source in Science and Research
-
-**Open Source in Science and Research** is a growing movement that emphasizes transparency and collaboration in scientific endeavors. Researchers and institutions share not only their findings but also their methodologies and tools as open-source resources. This fosters reproducibility and accelerates scientific progress. The [Open Science Framework (OSF)](https://osf.io) and [arXiv](https://arxiv.org) are prominent platforms in this category.
+The boxes differ in what they ship, not in how they work. **Every one of them needs a license that grants the freedoms, a way to contribute and someone who maintains it.** That's why the rest of this guide talks about software: replace "pull request" with "edit" and "release" with "dataset dump", and the advice holds.
 
 ## Zoom on Open-Source Software
 
-### Operating Systems
+### Operating systems
 
-**Operating systems (OS)** are the backbone of any computer or device. They manage hardware resources and provide a platform for running other software. Open-source operating systems, such as Linux distributions (e.g., [Debian](https://www.debian.org/), [Fedora](https://fedoraproject.org/), [Ubuntu](https://ubuntu.com/)), are renowned for their stability, security, and flexibility. They empower users and developers to customize the system to their specific needs.
+[Linux](https://www.kernel.org/) runs every one of the 500 systems on the [June 2026 TOP500 list](https://www.top500.org/statistics/details/osfam/1/) of the fastest supercomputers. Distributions package it with everything else: [Debian](https://www.debian.org/intro/about) has over 70,000 packages and almost a thousand active developers, as of September 2026.
+
+### Programming languages
+
+The languages most code is written in are open source themselves, each under its own license: [Rust](https://github.com/rust-lang/rust) under MIT and Apache 2.0, [Go](https://github.com/golang/go) under BSD-3-Clause, [TypeScript](https://github.com/microsoft/TypeScript) under Apache 2.0, and [Python](https://www.python.org/psf/) under the PSF License, with a foundation that funds user groups: $655,000 in grants to 257 groups in 61 countries in 2024.
 
 ### Databases
 
-**Open-source databases** are crucial for storing, retrieving, and managing data efficiently. Projects like [MySQL](https://mysql.com/), [PostgreSQL](https://postgresql.org), and [MongoDB](https://mongodb.com) offer versatile solutions for various data storage and processing requirements. Open-source databases are widely used in web applications, big data, and enterprise environments.
+[SQLite](https://sqlite.org/mostdeployed.html) estimates over one trillion SQLite databases in active use, as of April 2026: more than 4 billion smartphones, each with hundreds of them. [PostgreSQL](https://www.postgresql.org/) covers the server side. [Valkey](https://valkey.io/) shows what happens when a license changes: the Linux Foundation [launched it on March 28, 2024](https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community), from Redis 7.2.4, the last version under the BSD license.
 
-### Web Servers
+### Infrastructure
 
-**Web servers** are software applications that handle HTTP requests and responses, serving web content to users' browsers. [Apache HTTP Server](https://httpd.apache.org/) and [NGINX](https://nginx.com/) are popular Open-source web server projects known for their reliability and performance. They are essential components of the internet's infrastructure, powering countless websites and web applications.
+[curl](https://curl.se/) runs in over twenty billion installations, as of September 2026, by its author's count. [Kubernetes](https://kubernetes.io/) runs the containers and [nginx](https://nginx.org/) serves the pages.
 
-### Programming Languages
+### Frameworks and libraries
 
-Open-source programming languages are the building blocks of software development. They provide developers with the tools to create diverse applications. Examples include:
+This is where most developers meet open source first, as a dependency: [React](https://react.dev/), [Django](https://www.djangoproject.com/), [Astro](https://astro.build/) or [Bootstrap](https://getbootstrap.com/). Bootstrap alone was downloaded 6,954,089 times from npm in the week of September 22 to 28, 2026.
 
-- **[Python](https://www.python.org/)**: Known for its simplicity and readability, Python is a versatile language used in web development, scientific computing, and automation.
-- **[Ruby](https://ruby-lang.org)**: Ruby's elegant syntax and framework, Ruby on Rails, make it a favorite for web development.
-- **[Go](https://go.dev/)**: Developed by Google, Go is efficient and designed for systems programming and web services.
+### Developer tools
 
-### Content Management Systems
+[Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git) exists because a tool wasn't open: the Linux kernel used BitKeeper until 2005, when its free-of-charge license was revoked. [VS Code](https://github.com/microsoft/vscode) is a subtler case: its source, "Code - OSS", is MIT, and the Visual Studio Code you download is Microsoft's build of it, under a Microsoft product license. [Neovim](https://neovim.io/) is open all the way down.
 
-**Content Management Systems (CMS)** simplify the creation and management of digital content, including websites and blogs. [WordPress](https://wordpress.org/), [Joomla](https://joomla.org/), and [Drupal](https://drupal.org/) are prominent open-source CMS platforms. They empower non-technical users to publish and manage content online without extensive coding knowledge.
+### Desktop apps
 
-### Other Types of Software
+[Blender](https://fund.blender.org/) is funded by its users: €281,282 a month from 7,666 individuals and 44 companies, as of September 2026. [GIMP](https://www.gimp.org/), [LibreOffice](https://www.libreoffice.org/) and [Krita](https://krita.org/) cover images, office documents and painting.
 
-- **Graphics Software**: Projects like [GIMP (GNU Image Manipulation Program)](https://gimp.org) provide powerful tools for image editing and graphic design.
-- **Office Suites**: [LibreOffice](https://libreoffice.org) and [Apache OpenOffice](https://openoffice.org) are open source alternatives to proprietary office productivity software.
-- **Security Tools**: Open-source security tools like [Wireshark](https://wireshark.org) and [Snort](https://snort.org) help protect networks and systems from threats.
-- **Educational Software**: Projects like [Moodle](https://moodle.org) offer e-learning solutions for educators and learners.
+### Games and engines
+
+[Godot](https://godotengine.org/) is a game engine under the MIT license, funded the same way: €35,259 a month from 1,818 members of its [Development Fund](https://fund.godotengine.org/), as of September 2026.
+
+### Security
+
+[OpenSSL](https://www.openssl.org/) is the TLS library behind a large part of the web's HTTPS. [Heartbleed](https://www.openssl.org/news/secadv/20140407.txt), a bug in it disclosed on April 7, 2014, showed how little funding it had: on May 29, 2014, the Linux Foundation's Core Infrastructure Initiative [announced funding](https://www.linuxfoundation.org/press/press-release/the-linux-foundations-core-infrastructure-initiative-announces-new-backers-first-projects-to-receive-support-and-advisory-board-members) for two full-time OpenSSL developers. [Wireshark](https://www.wireshark.org/) is on the other side: the tool you use to see what's on the wire.
+
+## Beyond software, the source is a design, a dataset or a text
+
+### Hardware
+
+[Arduino](https://support.arduino.cc/hc/en-us/articles/4415094490770) publishes most of its board designs under CC BY-SA 4.0, so a board derived from one must be open too. [RISC-V](https://riscv.org/) opens one level lower, the instruction set of a processor: more than 4,500 members across 70 countries, as of October 2024.
+
+### Data
+
+[OpenStreetMap](https://www.openstreetmap.org/stats/data_stats.html) is a map of the world anyone can edit: 10,895,164 registered users on September 30, 2026. [Wikidata](https://www.wikidata.org/wiki/Special:Statistics) is the same idea for facts: 123,517,303 items, as of September 2026.
+
+### Content
+
+[Wikipedia](https://en.wikipedia.org/wiki/Special:Statistics) had 7,246,018 articles in English as of September 2026, each under a Creative Commons license. [Creative Commons](https://creativecommons.org/about/) is to content what the MIT or GPL license is to code: a ready-made text that says what others can do with your work.
+
+### Science
+
+[arXiv](https://arxiv.org/stats/monthly_submissions) has received 3,190,690 papers as of September 30, 2026, free to read before any journal publishes them. [Jupyter](https://jupyter.org/about) came out of IPython in 2014 and runs the notebooks much of that research is done in. [Zenodo](https://about.zenodo.org/), launched by CERN and OpenAIRE in May 2013, archives the data and code behind a paper, and its own code is open too.
+
+### Education
+
+[Moodle](https://stats.moodle.org/) is an open-source learning platform: 147,221 registered sites in 236 countries, as of September 2026. The famous course libraries are another matter: [MIT OpenCourseWare](https://ocw.mit.edu/about/) and [Khan Academy](https://support.khanacademy.org/hc/en-us/articles/202262954) use CC BY-NC-SA. **NonCommercial means free to read and share, not open**: the [definition](/guide/what-is-open-source/definition-of-open-source/) doesn't allow restrictions on who uses a work, or for what.
+
+### Government
+
+Italy asks its public bodies to publish their software and describe it in a [`publiccode.yml`](https://yml.publiccode.tools/) file, which feeds the national [Developers Italia catalogue](https://catalogo-software.developers.italia.it/). The United States had code.gov; as of September 2026, the address redirects to a page about the Federal Source Code Policy.
+
+### Standards
+
+The web runs on open standards, written in the open. [HTML](https://html.spec.whatwg.org/) is a living standard, updated on September 29, 2026. HTTP is defined by the IETF in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html), June 2022. [SPDX](https://spdx.dev/about/overview/), the format for listing the licenses in a project, became the international standard ISO/IEC 5962 in 2021.
+
+## Go further
+
+- [Definition of Open Source](/guide/what-is-open-source/definition-of-open-source/): the criteria every box on the map has to meet.
+- [Examples of Successful Open-Source Projects](/guide/what-is-open-source/examples-of-successful-open-source-projects/): a few of these projects, told in more detail.
+- [The Open Definition](https://opendefinition.org/od/2.1/en/), by the Open Knowledge Foundation: what "open" means for data and content.
+- [The Open Source Hardware Definition](https://oshwa.org/definition/), by the Open Source Hardware Association: the same for hardware.

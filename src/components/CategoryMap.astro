@@ -1,0 +1,95 @@
+---
+// A map of categories in groups: each group a labeled frame, each category a box that links to its section, with a
+// few examples under its name. HTML, not an SVG: the grid reflows to one column on a phone and the text stays legible.
+type Category = { label: string; href: string; examples: string };
+type Group = { label: string; categories: Category[] };
+
+interface Props {
+	label: string;
+	groups: Group[];
+}
+
+const { label, groups } = Astro.props;
+---
+
+<figure class="category-map" aria-label={label}>
+	{groups.map((group, index) => (
+		<div class:list={['category-map__group', { 'category-map__group--alt': index % 2 }]}>
+			<p class="category-map__title" id={`category-map-${index}`}>
+				{group.label}
+			</p>
+			<ul class="category-map__list" aria-labelledby={`category-map-${index}`}>
+				{group.categories.map(({ label, href, examples }) => (
+					<li class="category-map__item">
+						<a href={href}>{label}</a>
+						<span class="category-map__examples">{examples}</span>
+					</li>
+				))}
+			</ul>
+		</div>
+	))}
+</figure>
+
+<style>
+	.category-map {
+		display: grid;
+		gap: var(--space-4);
+		margin: var(--space-5) 0;
+	}
+
+	.category-map__group {
+		--accent: var(--color-primary);
+		border: var(--stroke-hairline) solid var(--color-line);
+		border-top: 3px solid var(--accent);
+		border-radius: 0 0 var(--radius-md) var(--radius-md);
+		background: var(--color-panel);
+		padding: var(--space-3) var(--space-4) var(--space-4);
+	}
+
+	.category-map__group--alt {
+		--accent: var(--color-illustration-azure);
+	}
+
+	.category-map__title {
+		margin: 0 0 var(--space-3);
+		color: var(--accent);
+		font: var(--type-eyebrow);
+		letter-spacing: var(--font-letter-spacing-button);
+		text-transform: uppercase;
+	}
+
+	.category-map__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		gap: var(--space-2);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.category-map__item {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-1);
+		margin: 0;
+		padding: var(--space-2) var(--space-3);
+		border: var(--stroke-hairline) solid var(--color-line);
+		border-radius: var(--radius-sm);
+		background: var(--color-bg);
+	}
+
+	.category-map__item a {
+		font-weight: 600;
+	}
+
+	.category-map__examples {
+		color: var(--color-muted);
+		font: var(--type-small);
+	}
+
+	@media (max-width: 30rem) {
+		.category-map__list {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+</style>
