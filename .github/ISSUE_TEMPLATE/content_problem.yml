@@ -1,0 +1,42 @@
+name: Report a problem on a page
+description: A typo, an outdated fact, an unclear sentence or a broken link on a page of Open {re}Source.
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The page's address. Filled in when you come from the "Report a problem" link.
+      placeholder: https://openresource.dev/guide/…
+    validations:
+      required: true
+  - type: input
+    id: updated
+    attributes:
+      label: Edited
+      description: The page's "Edited" date, so we know which version you read. Filled in from the link.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's wrong?
+      options:
+        - A typo or a grammar mistake
+        - Outdated (a fact, a number, a screenshot, a UI that changed)
+        - Wrong
+        - Unclear
+        - A broken link
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: sentence
+    attributes:
+      label: Where
+      description: Paste the sentence, or name the section or the image.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What it should say
+      description: If you know. A link to your source helps us check it.
