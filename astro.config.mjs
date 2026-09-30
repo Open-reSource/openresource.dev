@@ -102,7 +102,8 @@ export default defineConfig({
 				status: false,
 				edit: { repo: 'Open-reSource/openresource.dev' },
 				sidebar: [
-					{ label: 'Guide', items: ['guide', 'guide/checklists'] },
+					// No number: the modules count from 01, as on the homepage.
+					{ label: 'Guide', num: false, items: ['guide', 'guide/checklists'] },
 					...modules.map(guide),
 					{
 						label: 'Resources',
