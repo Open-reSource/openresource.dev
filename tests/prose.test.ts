@@ -25,6 +25,7 @@ const banned: [string, RegExp][] = [
 	['Here are some …', /\bHere are (some|a few)\b/gi],
 	['Not all X are created equal', /\bcreated equal\b/gi],
 	['Familiarize yourself with', /\bFamiliari[sz]e yourself\b/gi],
+	['recently, nowadays, at the time of writing', /\b(recently|nowadays|at the time of writing)\b/gi],
 ];
 
 const rules: Rule[] = [
