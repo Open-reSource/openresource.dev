@@ -2,7 +2,7 @@
 title: 'Burnout, Succession and the End of a Project'
 description: Read your bus factor, recognize burnout, find a co-maintainer, hand a project over without an event-stream moment, and archive it cleanly when it's time.
 date: 2026-09-27
-lastUpdated: 2026-09-27
+lastUpdated: 2026-09-30
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
@@ -17,7 +17,7 @@ import InShort from '../../../../components/InShort.astro';
 - Your bus factor is in Insights > Contributors. If one bar holds almost every commit, it's yours.
 - Burnout looks like dread before you open your notifications. Unwatch, post an away notice, say no, and find a co-maintainer before you need one.
 - Two people should be able to publish a release. Neither should be a stranger: event-stream and xz both began with a handover to someone nobody knew.
-- To stop, say so: a README notice, a final release, `npm deprecate`, then GitHub's archive setting.
+- To stop, say so: a README notice, a final release, a deprecation notice on the package registry, then GitHub's archive setting.
 - The license already lets anyone fork. Pointing to the fork or the alternative you trust is the last useful thing you can do.
 
 </InShort>
@@ -113,7 +113,7 @@ Smaller projects do the same in fewer steps. request's author announced [mainten
    ```
 
 2. **Publish a final release**, so the notice reaches the package page too.
-3. **Deprecate the package**, with the same pointer: `npm deprecate my-package "No longer maintained, use (alternative)"` ([npm's docs](https://docs.npmjs.com/cli/v11/commands/npm-deprecate)). Every install then prints it.
+3. **Deprecate the package** on its registry, with the same pointer. On npm, `npm deprecate my-package "No longer maintained, use (alternative)"` ([npm's docs](https://docs.npmjs.com/cli/v11/commands/npm-deprecate)) makes every install print it. On PyPI, [archiving the project](https://blog.pypi.org/posts/2025-01-30-archival/) puts a notice on its page.
 4. **Archive the repository** in its settings: issues, pull requests and code become read-only, and you can undo it ([GitHub's docs](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)).
 
 ## The license already lets anyone fork
@@ -128,7 +128,7 @@ What you can add is your word. Pointing your README and your deprecation message
 
 - [ ] Open Insights > Contributors on your project, over its whole history, and read your share.
 - [ ] Write down what only you can do: publish, the domain, DNS, secrets, social accounts.
-- [ ] Give release rights to a second person you trust, through an npm organization or trusted publishing.
+- [ ] Give release rights to a second person you trust: a co-owner on the package registry, or trusted publishing from CI.
 - [ ] Name your successor in your head. Then write it down in the repository, with what they'd need.
 
 </Checklist>
