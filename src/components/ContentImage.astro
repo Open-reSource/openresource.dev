@@ -36,12 +36,10 @@ const fullSize = typeof src === 'string' ? src : src.src;
 </script>
 
 <style>
-	/* Block elements in prose are spaced by their bottom margin only: same as tables and code frames. */
+	/* Block elements in prose are spaced by their bottom margin only: same as tables and code frames.
+	   Same measure and left edge as the paragraphs around it, like a Markdown image. */
 	.content-image {
-		width: 100%;
-		height: auto;
-		display: flex;
-		justify-content: center;
+		max-width: calc(var(--layout-measure) * 1em);
 		margin: 0 0 1.25em;
 	}
 
