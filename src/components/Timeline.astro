@@ -1,0 +1,119 @@
+---
+// A dated sequence drawn in the brand's sparse grammar: a cyan rail, one disc per entry, the year in mono, and at most
+// one gold disc for the entry that matters (`accent`). Real text, so it reads at every width and in a screen reader.
+export interface Entry {
+	year: string;
+	title: string;
+	detail?: string;
+	accent?: boolean;
+}
+
+export interface Props {
+	entries: Entry[];
+	label: string;
+}
+
+const { entries, label } = Astro.props;
+---
+
+<ol class="timeline" aria-label={label}>
+	{entries.map(({ year, title, detail, accent }) => (
+		<li class:list={['timeline__entry', { 'timeline__entry--accent': accent }]}>
+			<span class="timeline__year">{year}</span>
+			<span class="timeline__rail" aria-hidden="true" />
+			<span class="timeline__body">
+				<span class="timeline__title">{title}</span>
+				{detail && <span class="timeline__detail">{detail}</span>}
+			</span>
+		</li>
+	))}
+</ol>
+
+<style>
+	/* Block elements in prose are spaced by their bottom margin only: same as images, tables and code frames. */
+	.timeline {
+		list-style: none;
+		margin: 0 0 1.25em;
+		padding: 0;
+	}
+
+	.timeline__entry {
+		display: grid;
+		grid-template-columns: 3.5rem 1.5rem minmax(0, 1fr);
+		column-gap: var(--space-2);
+		/* The year sits on the title's first baseline, whatever their sizes. */
+		align-items: first baseline;
+		margin: 0;
+		padding: 0;
+	}
+
+	.timeline__year {
+		color: var(--color-primary);
+		font-family: var(--font-family-mono);
+		font-size: var(--font-size-sm);
+		font-variant-numeric: tabular-nums;
+		text-align: right;
+	}
+
+	/* The rail: a bracket-weight cyan line, and a disc on it. The line runs the whole column, so entries join.
+	   The rail inherits the title's font and line height, so 0.5lh is the middle of the title's first line. */
+	.timeline__rail {
+		position: relative;
+		align-self: stretch;
+	}
+
+	.timeline__rail::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: calc(50% - var(--stroke-bracket) / 2);
+		width: var(--stroke-bracket);
+		background: var(--color-primary);
+	}
+
+	.timeline__entry:first-child .timeline__rail::before {
+		top: 0.5lh;
+	}
+
+	.timeline__entry:last-child .timeline__rail::before {
+		bottom: calc(100% - 0.5lh);
+	}
+
+	.timeline__rail::after {
+		content: '';
+		position: absolute;
+		top: calc(0.5lh - 6px);
+		left: calc(50% - 6px);
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: var(--color-primary);
+	}
+
+	/* One gold per decision: the entry the reader is here for. */
+	.timeline__entry--accent .timeline__rail::after {
+		background: var(--color-accent);
+	}
+
+	.timeline__body {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		padding-bottom: var(--space-5);
+	}
+
+	.timeline__entry:last-child .timeline__body {
+		padding-bottom: 0;
+	}
+
+	.timeline__title {
+		color: var(--color-fg);
+		font-weight: 600;
+	}
+
+	.timeline__detail {
+		color: var(--color-muted);
+		font-size: var(--font-size-sm);
+	}
+</style>
