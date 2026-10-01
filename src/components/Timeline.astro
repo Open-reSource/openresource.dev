@@ -41,12 +41,13 @@ const { entries, label } = Astro.props;
 		display: grid;
 		grid-template-columns: 3.5rem 1.5rem minmax(0, 1fr);
 		column-gap: var(--space-2);
+		/* The year sits on the title's first baseline, whatever their sizes. */
+		align-items: first baseline;
 		margin: 0;
 		padding: 0;
 	}
 
 	.timeline__year {
-		padding-top: 2px;
 		color: var(--color-primary);
 		font-family: var(--font-family-mono);
 		font-size: var(--font-size-sm);
@@ -54,9 +55,11 @@ const { entries, label } = Astro.props;
 		text-align: right;
 	}
 
-	/* The rail: a bracket-weight cyan line, and a disc on it. The line runs the whole column, so entries join. */
+	/* The rail: a bracket-weight cyan line, and a disc on it. The line runs the whole column, so entries join.
+	   The rail inherits the title's font and line height, so 0.5lh is the middle of the title's first line. */
 	.timeline__rail {
 		position: relative;
+		align-self: stretch;
 	}
 
 	.timeline__rail::before {
@@ -70,17 +73,17 @@ const { entries, label } = Astro.props;
 	}
 
 	.timeline__entry:first-child .timeline__rail::before {
-		top: 8px;
+		top: 0.5lh;
 	}
 
 	.timeline__entry:last-child .timeline__rail::before {
-		bottom: calc(100% - 8px);
+		bottom: calc(100% - 0.5lh);
 	}
 
 	.timeline__rail::after {
 		content: '';
 		position: absolute;
-		top: 2px;
+		top: calc(0.5lh - 6px);
 		left: calc(50% - 6px);
 		width: 12px;
 		height: 12px;
