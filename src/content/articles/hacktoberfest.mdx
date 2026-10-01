@@ -1,0 +1,183 @@
+---
+title: "Hacktoberfest: What It Is, How to Join, and What It Did to Open Source"
+description: "What Hacktoberfest is, how to take part in October 2026 now that pull requests no longer count, and what twelve years of it did to open source, good and bad."
+date: 2026-10-01
+excerpt: "**Every October since 2014, Hacktoberfest has asked developers to send pull requests to open source projects.** It produced more than 2.4 million accepted pull requests, thousands of first contributions, and, in 2020, a wave of spam that maintainers still talk about. On August 19, 2026, its new organizers, MLH and DEV, dropped the rule that defined it: pull requests no longer count. The month is now 300+ in-person Fests, online challenges about open-source AI, and stickers.
+<br><br>
+**This article explains the event for a first October and for a tenth.** How it worked until 2025 and why the rules you'll still find on projects say what they say, what replaces them in 2026, how to register and what to do in person or online, how to run your own October as a maintainer or a project, and what twelve editions did to open source, on both sides of the ledger."
+authors: julien
+cover: /covers/hacktoberfest.svg
+tags:
+  - Community
+  - Contribution
+  - Events
+---
+
+import { Badge } from '@deramond.dev/astro';
+import Chat from '../../components/Chat.astro';
+import ContentImage from '../../components/ContentImage.astro';
+import Timeline from '../../components/Timeline.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Every October since 2014, Hacktoberfest has asked developers to send pull requests to open source projects and get a T-shirt for it. It made hundreds of thousands of first contributions happen, and it buried maintainers under spam more than once. On August 19, 2026, its new organizers dropped the rule that defined it: pull requests no longer count. This is what Hacktoberfest is in 2026, how to take part whether it's your first October or your tenth, and what the event did to open source along the way.</p>
+
+## What Hacktoberfest is
+
+Hacktoberfest is a free, month-long event that runs every October. [DigitalOcean](https://www.digitalocean.com/) launched it in 2014 with a simple deal: open four pull requests on GitHub during the month, get a T-shirt. 676 people registered that first year and 505 completed it. By 2018, [106,582 had registered](https://www.digitalocean.com/blog/a-review-of-hacktoberfest-year-5); by 2020, [169,886](https://www.digitalocean.com/blog/hacktoberfest-recap2020). Over twelve editions, DigitalOcean counts [more than 2.4 million accepted pull and merge requests](https://www.digitalocean.com/blog/hacktoberfest-2025-wrapup) sent to open source projects.
+
+<ContentImage
+	src="/images/hacktoberfest-1.png"
+	alt="Hacktoberfest 2026 homepage: a world map of Fests, with 146 in India, powered by MLH and DEV, DigitalOcean presenting."
+	width="720"
+	height="450"
+/>
+
+In 2026, [Major League Hacking](https://mlh.io/) (MLH) and [DEV](https://dev.to/) run the event, with DigitalOcean as presenting partner. The theme is "AI belongs to everyone", and the month is built around 300+ one-day, in-person events called Fests, an online program of challenges and livestreams about open-source AI, and virtual stickers that turn into a real sticker pack in the mail. Anyone aged 13 or older can take part, and it costs nothing.
+
+What it is no longer is a pull request counter. To understand why that matters, and to read the labels and contributing guides projects still carry, you need the old rules first.
+
+## The rules you'll still find on projects
+
+For eleven editions, the event was a checklist, and projects wrote their contributing guides, labels and issue templates around it. Those are still there, so a newcomer in October 2026 meets both sets of rules at once.
+
+<Timeline
+	label="Hacktoberfest's rules, 2014 to 2026"
+	entries={[
+		{
+			year: '2014',
+			title: 'Four pull requests to any public repository, a T-shirt in return',
+			detail: '676 registered, 505 completed',
+		},
+		{
+			year: '2020',
+			title:
+				'Projects opt in with the hacktoberfest topic; pull requests count once merged or labeled hacktoberfest-accepted; spam disqualifies',
+			detail:
+				'Changed on October 3, three days into the event. 169,886 registered, 9,598 pull requests flagged as spam or invalid',
+		},
+		{
+			year: '2023',
+			title: 'No more T-shirt: a digital badge, and a tree planted for the first 50,000 accepted first pull requests',
+			detail: '98,855 registered, 118,469 accepted pull requests',
+		},
+		{
+			year: '2025',
+			title: 'Six pull requests instead of four; a T-shirt again for the first 10,000 to finish',
+			detail: '56,768 registered, 87,929 accepted pull requests, 23,592 repositories opted in',
+		},
+		{
+			year: '2026',
+			title: 'Pull requests no longer count: 300+ Fests, online challenges and stickers, run by MLH and DEV',
+			detail: 'Announced on August 19, 2026',
+			accent: true,
+		},
+	]}
+/>
+
+Until 2025, you registered on hacktoberfest.com with your GitHub or GitLab account and opened your pull requests between October 1 and October 31. A pull request counted when the repository carried the <Badge>hacktoberfest</Badge> topic, or when a maintainer put the <Badge>hacktoberfest-accepted</Badge> label on it, and when it was merged, approved or labeled as accepted. It then sat in a seven-day review window during which a maintainer could still mark it <Badge>spam</Badge> or <Badge>invalid</Badge>. Two spam pull requests and you were out. The count went from four to [six in 2025](https://www.digitalocean.com/blog/how-to-participate-hacktoberfest-2025).
+
+The reward moved too. The T-shirt ran from 2014 to 2022. For the [tenth edition](https://www.digitalocean.com/blog/ten-years-hacktoberfest), DigitalOcean replaced it with a digital badge from Holopin and a tree for the first 50,000 people to get a first pull request accepted: producing over 50,000 T-shirts and shipping them around the world had taken most of the program's budget, and in many countries the customs fees cost more than the shirt. In 2025 a limited T-shirt came back for the first 10,000 people with six merged pull requests.
+
+## What changed in 2026, and why
+
+The announcement came from Jess Lee and Ryan Swift on August 19, 2026, on [MLH's blog](https://blog.mlh.com/hacktoberfest-2026-ai-belongs-to-everyone-3jl8). The format had started to work against the people it depended on. Maintainers, they wrote, "began to burn out under the volume of low-effort, box-checking pull requests", and AI tools made it trivial to generate one without generating any value.
+
+<ContentImage
+	src="/images/hacktoberfest-2.png"
+	alt="The Hacktoberfest FAQ, 'Pull requests and open source' section, with 'Do I still submit pull requests to earn swag?' boxed."
+	width="720"
+	height="170"
+/>
+
+The [FAQ](https://hacktoberfest.com/questions/) answers that question in one sentence: pull requests and merge requests no longer count toward rewards, because the organizers are "listening to maintainer feedback and no longer actively incentivizing PRs". The same answer encourages you to work on open source anyway. Three things replace the counter.
+
+**Fests.** A Fest is a one-day, in-person event hosted by a local organizer: either a Hack Day, a mini-hackathon with workshops, prizes and MLH funding, or a Meetup, with less structure and no prizes. On October 1, 2026, the [directory](https://hacktoberfest.com/fests/) listed 382 of them: 284 Hack Days, 54 Meetups, 33 MLH member events and 9 pop-ups, 146 of them in India.
+
+<ContentImage
+	src="/images/hacktoberfest-3.png"
+	alt="The Find a Fest page: 382 events in total, 284 Hack Days, 54 Meetups, with a search box and featured events in October."
+	width="720"
+	height="450"
+/>
+
+**An online program.** DEV runs a [Weekend Challenge](https://dev.to/challenges/hacktoberfest) from October 2, then four weekly Open-Source AI Challenges starting October 5, 12, 19 and 26, with cash prizes. MLH runs [Global Hack Week](https://events.mlh.com/events/14553-global-hack-week-hacktoberfest) from October 9 to 15: daily workshops streamed on Twitch, mini-events on the MLH Discord, and social, technical and design challenges that earn points. The suggested projects are things like writing your first `skills.md`, building an open source agent, or fine-tuning an open-weight model. The launch livestream is on October 1 at 15:00 UTC.
+
+**Stickers.** Signing in to [My Hacktoberfest](https://hacktoberfest.com/my/) with a MyMLH account and adding your address earns the first two virtual stickers. Every activity earns another: a livestream, a challenge submission, a Fest check-in, joining the Discord. At three, a real sticker pack is mailed to you, 8 to 12 weeks after the month ends. At ten you get a holographic one, and at fifteen you enter a raffle for T-shirts and Arduino boards. T-shirts are otherwise handed out at Fests only, and not guaranteed.
+
+<ContentImage
+	src="/images/hacktoberfest-5.webp"
+	alt="The Attend online page: 'Earn stickers, and get stickers shipped to your door', with a sheet of hexagonal virtual stickers."
+	width="720"
+	height="450"
+/>
+
+## How to take part
+
+### If it's your first October
+
+1. **Register.** Go to [hacktoberfest.com](https://hacktoberfest.com/), open My Hacktoberfest and sign in with a MyMLH account. Add your address if you want the sticker pack. Registration stays open until October 31.
+2. **Pick a Fest or go online.** Search the [directory](https://hacktoberfest.com/fests/) by city. A Hack Day asks for a laptop and a day; a Meetup asks for an evening. Online, create a DEV account for the challenges, register for Global Hack Week, and join the MLH Discord. Each challenge publishes its prompt when it opens.
+3. **Make a pull request anyway, to a project you use.** The sticker no longer depends on it, which is the best reason to do it: nobody is rewarding a one-line change to a README, so the change you make can be one that matters. [Finding a Project to Contribute To](/guide/contributing/finding-open-source-projects/) covers where to look, and [Contributing to Open Source](/guide/contributing/contributing-to-open-source/) the pull request itself, from the fork to the review.
+4. **Read the project's October rules before you start.** Projects that took part in past editions still carry the <Badge>hacktoberfest</Badge> topic, which GitHub counts on 147,637 public repositories on October 1, 2026, and their contributing guides still say what counts for them. Some ask you to comment on the issue and wait before writing code. One pull request at a time: open it, answer its review, then open the next.
+
+<ContentImage
+	src="/images/hacktoberfest-4.png"
+	alt="GitHub's hacktoberfest topic page, 147,637 repositories boxed, and free-programming-books first with the topic tag boxed."
+	width="720"
+	height="450"
+/>
+
+### If you've done this before
+
+**Host a Fest.** Anyone can [apply](https://hacktoberfest.com/host/) with a description of their community and a format. A Hack Day comes with MLH funding for food and prizes, swag for the participants, help with the program and a listing in the directory; a Meetup gets the swag and the listing. Confirmation is rolling, within a week of a complete application.
+
+**Review and mentor.** A Fest full of first pull requests needs people who can read a diff and explain a review. If you maintain a project, the chapter on [reviewing pull requests](/guide/maintaining/reviewing-pull-requests/) is the job description.
+
+**Run your own October.** The official counter is gone, but nothing stops a project from running its own. [Kestra](https://kestra.io/hacktoberfest) does, with two tracks, a podium per track, and merchandise for every merged pull request. Its rules are the ones that keep such a program healthy: the issue must be linked from the pull request, you ask to be assigned before you start, and only two of your pull requests can be open at a time. [Meilisearch](https://www.meilisearch.com/blog/hacktoberfest-stories-from-contributor-to-manager) has tagged eligible issues and offered swag for years, and answers fast; that is how Bruno Casali went from a Ruby integration contributor in 2021 to the team's lead, with a job offer ten days after his first pull request.
+
+<ContentImage
+	src="/images/hacktoberfest-6.png"
+	alt="Kestra's Hacktoberfest 2026 page: 'Put your October pull requests into Kestra', two tracks, submissions October 1 to 31."
+	width="720"
+	height="450"
+/>
+
+**Decide whether your project opts in.** The topic no longer summons a badge, so the October wave should be smaller; it won't be zero, because tutorials, lists and a decade of habit still point newcomers at it. If you want them, do what Jessica Wilkins did for freeCodeCamp's quiz site in 2022, when she [merged 356 pull requests](https://www.freecodecamp.org/news/what-i-learned-as-a-hacktoberfest-repo-maintainer/) in the month: issue templates with required fields, issues written with the expected code in them, a contributing guide rewritten for beginners, labels for <Badge>hacktoberfest</Badge>, <Badge>first-timers-only</Badge> and <Badge>spam</Badge>, and saved replies so the hundredth answer is as kind as the first. If you don't want them, remove the topic, say so in the contributing guide, and use the limits: since June 17, 2026, GitHub lets a repository cap how many pull requests a user without write access can have open, and interaction limits can restrict new accounts for a day or a week. [Saying No](/guide/maintaining/saying-no/) has the replies to save.
+
+## The good
+
+Hacktoberfest is where a lot of people's first pull request happened, and the numbers are not small. In 2018, 46,088 people completed the challenge. In 2021, [294,451 pull requests were accepted](https://www.digitalocean.com/blog/hacktoberfest-2021-recap) by maintainers. In 2019, [673 in-person gatherings](https://www.digitalocean.com/blog/recapping-hacktoberfest-6) took place in 393 cities and 73 countries. In DigitalOcean's [2023 survey](https://www.digitalocean.com/blog/hacktoberfest-survey-results) of 1,237 participants, 78% were positive about the event after the T-shirt was gone, and 59% of the maintainers said it had benefited their project.
+
+It gave projects a reason to do the work that makes any contribution easier: write the issue properly, label it, answer within the day. The freeCodeCamp quiz site went from 694 to 1,171 questions in one October, and from 42 to 109 stars; the templates and the labels outlived the month. Meilisearch found a team lead. A deadline and a shared occasion do move people: in the same survey, the reasons given for not finishing were time and motivation, not spam.
+
+And for a newcomer, the event solved the question that stops most first contributions: where do I start? A topic, a label, a month and a thousand projects that had agreed to be patient.
+
+## The bad
+
+The deal rewarded the count, and the count is easy to fake.
+
+<Chat type="start" author="Contributor">
+	Added "awesome" to the README, please merge for Hacktoberfest 🙏
+</Chat>
+
+<Chat type="end" author="Maintainer">
+	Closing. This isn't a contribution, and the repository didn't opt in. Labeling it spam.
+</Chat>
+
+<Chat type="start" author="Contributor">
+	Why so rude?? I just need 4 PRs
+</Chat>
+
+Invalid pull requests went from 1,861 in 2017 to 11,083 in 2018, 2.7% of the total. In 2020 the wave broke. On September 30, Domenic Denicola, who maintains the WHATWG HTML standard, counted [11 spam pull requests](https://domenic.me/hacktoberfest/) closed before the event had started, arriving at about four an hour, and called the event "a corporate-sponsored distributed denial of service attack against the open source maintainer community". Drew DeVault's [Spamtoberfest](https://drewdevault.com/2020/10/01/Spamtoberfest.html) came out on October 1, and the story ran in The Register and InfoQ. On October 3, DigitalOcean made the event opt-in, three days in. Its [recap](https://www.digitalocean.com/blog/hacktoberfest-recap2020) counted 621,104 pull requests that month, 9,598 flagged as spam or invalid, and 172,599 sent to repositories that had never opted in.
+
+The second problem was quieter: repositories built to be contributed to. "Add your name to the list" projects collected hundreds of one-line pull requests and gave their authors four accepted ones in an afternoon. In 2021 DigitalOcean started excluding repositories that encouraged low-effort contributions; in 2023 the organizers still counted [39,859 pull requests](https://github.com/MattIPv4/hacktoberfest-data) sent to excluded repositories, 14.91% of everything they tracked. The same pattern runs outside October: in February 2024, a Git tutorial with 1.4 million views used the Express.js repository as its live example, and [hundreds of practice pull requests](https://socket.dev/blog/express-js-spam-prs-commoditization-of-open-source) landed on its maintainers, each one a notification to the repository's 485 watchers.
+
+The third problem is the one that ended the counter. From 2023, a pull request could be written by a tool in seconds, with a convincing title and a description that read well. The organizers' own [mission page](https://hacktoberfest.com/mission/) says it: AI tools make low-effort pull requests easier than ever to generate, and maintainers face unprecedented volume and noise. The guide's chapter on [contributing with AI tools](/guide/ai/contributing-with-ai-tools/) lists the limits projects adopted in response, from Ghostty's voucher to LLVM's labels.
+
+The participation numbers tell the rest. 169,886 registered in 2020, 146,891 in 2022, 98,855 in 2023, and 56,768 in 2025; DigitalOcean published no recap for 2024. Part of that is the opt-in and the T-shirt, which removed the reasons the spammers came for. Part of it is that fewer people are chasing a portfolio line for a junior job that isn't there, as a [December 2025 post](https://tvc-16.science/rip-hacktoberfest.html) argued. Either way, the event that remains is the one its critics asked for in 2020, and it is a smaller one.
+
+## So, should you?
+
+If it's your first October, yes, and not for the stickers. Go to a Fest if there's one near you: a room where people make their first pull request together is rarer than a T-shirt. Then make one, to a project you use, with the project's rules read first. The guide's [Contributing](/guide/contributing/) module is the long version, and if you'd rather practice before you send anything to a real project, [My First Contribution](https://github.com/Open-reSource/my-first-contribution) is a repository made for exactly that.
+
+If you maintain a project, October is a good month to decide what you want from strangers, write it down, and set the limits that let you say yes to the rest. If you have done this ten times already, host the room.
