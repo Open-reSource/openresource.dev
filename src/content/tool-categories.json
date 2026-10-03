@@ -1,0 +1,46 @@
+[
+  {
+    "id": "finding-work",
+    "title": "Finding work"
+  },
+  {
+    "id": "health",
+    "title": "Repository health and stats"
+  },
+  {
+    "id": "licensing",
+    "title": "Licensing"
+  },
+  {
+    "id": "security",
+    "title": "Security"
+  },
+  {
+    "id": "releases",
+    "title": "Releases"
+  },
+  {
+    "id": "community",
+    "title": "Community"
+  },
+  {
+    "id": "funding",
+    "title": "Funding"
+  },
+  {
+    "id": "docs",
+    "title": "Docs and sites"
+  },
+  {
+    "id": "automation",
+    "title": "Automation"
+  },
+  {
+    "id": "social",
+    "title": "Social"
+  },
+  {
+    "id": "local-ai",
+    "title": "Local AI"
+  }
+]
