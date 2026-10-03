@@ -1,65 +1,142 @@
 ---
-title: Introduction to Open-Source Project Maintenance
-description: Discover the essence of open-source project maintenance. From nurturing collaboration to proactive management, learn the key principles of keeping your open-source project thriving. Dive into the world of OSS with this comprehensive guide.
+title: What a Maintainer Actually Does
+description: Twelve weeks of Bootstrap in numbers, what the job is made of, the three ways to run a project, and what you're allowed to say no to.
 date: 2023-10-06
-lastUpdated: 2023-10-06
+lastUpdated: 2026-10-03
 ---
 
-{/* prettier-ignore */}
-<p class="lead">Maintaining an open-source project is like tending to a digital garden, where collaboration blooms and innovation flourishes. As an open source enthusiast and developer, you've ventured into the exciting world of creating and contributing to projects that are free, accessible, and community-driven. In this chapter, we'll explore the fundamental principles and practices of effective open-source project maintenance.</p>
-
-## Overview of Open-Source Projects
-
-Before we delve deeper into the art of project maintenance, let's gain a broad understanding of open-source projects. **Open-source projects are collaborative efforts**, where individuals from diverse backgrounds come together to build and share software openly. These projects are characterized by:
-
-- **Transparency**: All aspects of the project, from code to decision-making, are open for scrutiny and participation.
-- **Community-Driven**: The strength of open source lies in its community. Contributors, users, and maintainers work together, creating a thriving ecosystem.
-- **Licensing**: Open-source projects use licenses that grant users the freedom to use, modify, and distribute the software.
-- **Accessibility**: Open-source projects are freely accessible to anyone, breaking down barriers to entry and fostering innovation.
-
-## The Importance of Proactive Management
-
-**Open-source projects don't maintain themselves**; they require proactive management to succeed. Let's highlight why proactive management is vital:
-
-- **Guiding Vision**: Proactive maintainers set a clear vision for the project. They define its purpose, goals, and roadmap, ensuring everyone is aligned.
-- **Quality Control**: Proactive management involves regular code reviews, testing, and bug fixes. This commitment to quality keeps the project stable and secure.
-- **Community Engagement**: Maintainers actively engage with the community, answering questions, providing support, and appreciating contributors' efforts.
-- **Innovation**: Proactive management encourages innovation by exploring new features and improvements while maintaining stability.
-- **Sustainability**: Projects with proactive management are better equipped to secure funding, ensuring their long-term sustainability.
-- **Conflict Resolution**: Conflicts and disagreements are inevitable in any community. Proactive management involves resolving disputes constructively to maintain a healthy atmosphere.
-
-## The Role of a Maintainer
-
-**Maintainers are the stewards of open-source projects**. They ensure that the project's vision is clear and that contributions align with its goals. Being a maintainer means striking a balance between guiding the project's direction and fostering a collaborative environment where contributors feel valued.
-
-## Nurturing Collaboration
-
-Successful open-source projects thrive on collaboration. **Effective communication and transparency are key**. Maintainers must create an inclusive space where diverse voices are heard, and contributions are welcome from all corners of the globe.
-
-## Maintenance
-
-**Maintainers need to diligently review, test, and improve contributions**. They must keep the project's content, codebase, documentation, or other assets healthy and up-to-date, ensuring it remains functional and secure.
-
-## Documentation and Onboarding
-
-**Clear and comprehensive documentation** is essential for newcomers and seasoned contributors alike. Maintainers must provide resources that make it easy for others to understand the project's goals, structure, and how to get involved.
-
-## Issue Management
-
-**Issues serve as the roadmap of your project**. Maintainers should triage and prioritize issues, provide guidance to contributors, and ensure that valuable feedback and bug reports don't get lost in the shuffle.
-
-## Release Management
-
-Releasing new versions of your project is a critical aspect of maintenance. **Maintainers need to plan, coordinate, and execute releases**, ensuring that new features are introduced smoothly and that users are aware of updates.
-
-## Long-Term Sustainability
-
-Open-source projects can live for years or even decades. **Maintainers must think about the long-term health of the project**, including sustainability, funding, and succession planning.
-
----
+import Checklist from '../../../../components/Checklist.astro';
+import Funnel from '../../../../components/Funnel.astro';
+import InShort from '../../../../components/InShort.astro';
 
 {/* prettier-ignore */}
-<p class="lead">In this chapter, we've scratched the surface of open-source project maintenance. You've learned that it's not just about content; it's about fostering a vibrant community, keeping the project well-documented, and ensuring its long-term sustainability. As you embark on your journey in maintaining open-source projects, remember that the heart of open source is collaboration, and as a maintainer, you have the power to nurture that spirit.</p>
+<p class="lead">Nobody applies for the job of maintainer. You ship something, someone opens an issue, and three years later you're spending Sunday mornings reviewing pull requests from strangers. Here's what the job actually is, measured on a real project.</p>
 
-{/* prettier-ignore */}
-<p class="lead">In the upcoming chapters, we'll dive deeper into specific aspects of project maintenance, including managing contributions, engaging with the community, handling dependencies, fostering inclusivity, and ensuring sustainability. Get ready to become a master of open-source project maintenance, shaping the future one contribution at a time.</p>
+<InShort>
+
+- On Bootstrap, from July 6 to September 27, 2026, a median week brought 16 pull requests, 2 issues and no release.
+- Two core team members opened 58% of those pull requests. On a project building its next major version, the maintainers still open most of the pull requests.
+- What grows with the audience is the reading. On October 3, 2026, 26 of the 56 pull requests from outside the team had no response yet.
+- Maintainers surveyed by Tidelift in 2024 put half their time into upkeep (reviews, issues, docs, dependencies), 35% into new features and 11% into security.
+- You're allowed to say no, close an issue, refuse pull requests altogether, take a month off, or stop. The license says so first.
+
+</InShort>
+
+## Bootstrap's median week: 16 pull requests, 2 issues, no release
+
+[Bootstrap](https://github.com/twbs/bootstrap) is a CSS framework run by a small core team, and Julien, who writes this guide, is on it. Its public activity over twelve weeks, from Monday, July 6 to Sunday, September 27, 2026:
+
+| Per week                             | Median | Busiest week | 12 weeks |
+| ------------------------------------ | -----: | -----------: | -------: |
+| Pull requests opened                 |     16 |           35 |      231 |
+| Pull requests merged                 |   12.5 |           25 |      157 |
+| Pull requests closed without merging |      3 |           10 |       42 |
+| Dependabot pull requests             |    2.5 |           10 |       42 |
+| Issues opened                        |      2 |           20 |       47 |
+| Issues closed                        |      3 |           48 |      104 |
+| Discussions opened                   |        |              |       19 |
+| Releases                             |      0 |            0 |        0 |
+| Hours spent                          |        |              |        ? |
+
+Counted on October 3, 2026 with GitHub's search, one query per row and per week, such as `repo:twbs/bootstrap is:pr created:2026-07-06..2026-07-12` or `repo:twbs/bootstrap is:pr merged:2026-07-06..2026-07-12`.
+
+The median hides the shape. 16 of the 20 issues in the busiest week were Julien's own to-do list for the next major version. The 48 issues closed in the week of August 10 were one sweep by Mark Otto, Bootstrap's co-creator: 40 of them had been open since 2025 or earlier, and 27 were closed as not planned. The release row is empty because the team was building v6: the last release was v5.3.8, on August 26, 2025, and 141 of the 231 pull requests target the `v6-dev` branch.
+
+The last row stays empty. GitHub records what you opened and merged, not how long you spent reading, testing or answering.
+
+## The work that grows is other people's
+
+Sort the 231 pull requests by who opened them:
+
+| Opened by                         | Pull requests | Share |
+| --------------------------------- | ------------: | ----: |
+| Two core team members             |           133 |   58% |
+| Dependabot                        |            42 |   18% |
+| 38 other people, outside the team |            56 |   24% |
+
+On a project in the middle of a major version, the maintainers open most of the pull requests: writing code is still a big part of the job. It's the rest that scales with the project's audience: Dependabot's updates to review and merge, the issues to triage, the 19 discussions to answer (7 of them had no reply at all on October 3, 2026), and the pull requests from people the team has never met.
+
+That last group is where the time goes, and where it runs out. Of the 56 outside pull requests, 8 were closed within the hour, with titles like "Feature1" and "modified readme for practice". Of the 22 others the team answered, the median first response (a comment, a review, a merge or a close) came after about a day. **The other 26 had no response from the team on October 3, 2026, one to eleven weeks after they were opened.** Reading a stranger's change takes longer than writing your own, and every pull request opened in those twelve weeks that got merged was merged by the same two people.
+
+Bootstrap is one project. For the average, ask maintainers. Tidelift surveyed 437 of them in July and August 2024, and asked how they split their time:
+
+| Work, as maintainers described it in 2024                   | Share of their time |
+| ----------------------------------------------------------- | ------------------: |
+| Day-to-day maintenance: docs, reviews, dependencies, issues |                 50% |
+| New features: writing and testing new code                  |                 35% |
+| Security: fixes, patches, scanning, reports                 |                 11% |
+| Looking for money, and everything else                      |                  4% |
+
+Half the job is upkeep, a third is code. Your own split depends on which of the three projects below you run.
+
+## Solo, core team or community: three different jobs
+
+[Every project has a governance model](/guide/maintaining/governance/), written or not. Which one you're in decides which chapter of this module you need first.
+
+- **Solo: you and your users.** Every review, release and reply is yours. esbuild is fast and widely used, and Evan Wallace wrote 96% of its commits (as of September 2026). Start with [Saying No](/guide/maintaining/saying-no/) and [Burnout, Succession and the End](/guide/maintaining/burnout-succession-and-the-end/): your time is the project's only resource.
+- **Core team: two to five people, decisions in chat or in pull requests.** Bootstrap lists twelve people on its team, and two of them merged its 531 pull requests from September 2025 to September 2026. Start with [Reviewing Pull Requests](/guide/maintaining/reviewing-pull-requests/), then [Community](/guide/maintaining/community/).
+- **Community project: written roles, maybe a foundation.** Kubernetes has a contributor ladder from member to subproject owner, and a file that says who approves what. Start with [Governance](/guide/maintaining/governance/).
+
+## You're allowed to say no, and to stop
+
+There is no official maintainer's bill of rights. The idea fits in the license: Bootstrap's MIT license, like most, provides the software "as is", "without warranty of any kind". You give people the code and the right to fork it, not a claim on your time. Mike McQuaid, Homebrew's project leader, made the case in [Open Source Maintainers Owe You Nothing](https://mikemcquaid.com/open-source-maintainers-owe-you-nothing/), in March 2018.
+
+In practice, you're allowed to:
+
+- **Say no** to a feature, and close the issue. [Saying No](/guide/maintaining/saying-no/) has the replies.
+- **Refuse outside pull requests altogether.** SQLite calls itself "open-source, not open-contribution" on its [copyright page](https://www.sqlite.org/copyright.html): it doesn't accept patches unless their author has signed an affidavit putting them in the public domain, and the team may rewrite yours from scratch.
+- **Take a month off, hand the project over, or archive it.** [Burnout, Succession and the End](/guide/maintaining/burnout-succession-and-the-end/) covers how to do each without leaving users stranded.
+
+## The funnel narrows as the project grows
+
+The folk number says that for every 1,000 people who use a project, 100 report issues, 10 contribute and 1 maintains. Nobody measured it. It's a cousin of the 90-9-1 rule, which Jakob Nielsen wrote about online communities in [October 2006](https://www.nngroup.com/articles/participation-inequality/), not about code.
+
+In 2020, Mattia Gasparini, Robert Clarisó, Marco Brambilla and Jordi Cabot [measured it on GitHub](https://dl.acm.org/doi/10.1145/3412569.3412582), with 2018 activity. In the 500 most-starred repositories, it holds:
+
+<Funnel
+	label="Participation in the 500 most-starred GitHub repositories, 2018"
+	caption="736,650 people active in the 500 most-starred GitHub repositories, by the most active thing they did in 2018."
+	stages={[
+		{ label: 'starred, forked or watched', share: 87, value: '87%', detail: 'and did nothing else' },
+		{ label: 'commented, or opened an issue or a pull request', share: 11, value: '11%' },
+		{
+			label: 'pushed commits, branches or tags',
+			share: 2,
+			value: '2%',
+			detail: 'which takes write access to the repository',
+			accent: true,
+		},
+	]}
+/>
+
+In 500 random repositories, it's 70%, 7% and 23%: on a small project, a quarter of the people who show up are the ones writing it. **The funnel narrows as the audience grows**: the bigger the project, the smaller the share of people doing the work.
+
+The study only counts people who left a trace on GitHub. The people who install your project never appear: Bootstrap had 6.97 million npm downloads in the week of September 21, 2026, and 117 people opened an issue in the year before. [Running a Community](/guide/maintaining/community/#most-of-your-community-never-says-a-word) has the rest of that funnel.
+
+## The rest of this module, in the order you'll need it
+
+1. [Reviewing Pull Requests](/guide/maintaining/reviewing-pull-requests/): what to check, what to say, when to close.
+2. [Saying No](/guide/maintaining/saying-no/): five replies for the five kinds of no.
+3. [Managing Project Dependencies](/guide/maintaining/managing-project-dependencies/): lockfiles, updates and the bots that send them.
+4. [Security for Maintainers](/guide/maintaining/security-for-maintainers/): a `SECURITY.md` before the first report, and what to do when it arrives.
+5. [Running a Community](/guide/maintaining/community/): two channels, credit, and a rhythm you can keep.
+6. [Governance](/guide/maintaining/governance/): who decides, and how to write it down.
+7. [Burnout, Succession and the End](/guide/maintaining/burnout-succession-and-the-end/): co-maintainers, handovers and archiving.
+
+## Do this now
+
+<Checklist id="introduction-to-open-source-project-maintenance">
+
+- [ ] Count your last week: run `repo:<owner>/<repo> is:pr created:<Monday>..<Sunday>` in GitHub's search, then the same with `is:issue` and `is:merged`.
+- [ ] Log your hours for one week, by kind: review, triage, dependencies, code, support.
+- [ ] List the pull requests nobody has answered: `repo:<owner>/<repo> is:pr is:open review:none comments:0`.
+- [ ] Name your mode, solo, core team or community, and say it in your README.
+
+</Checklist>
+
+## Go further
+
+- [Working in Public](https://press.stripe.com/working-in-public), by Nadia Eghbal (Stripe Press, 2020): the "stadium" model, a few people on the field and a huge audience in the stands.
+- [Open Source Maintainers Owe You Nothing](https://mikemcquaid.com/open-source-maintainers-owe-you-nothing/), by Mike McQuaid: the case for the rights above, from Homebrew's project leader.
+- [Maintainers are spending 3x more time on security than they did a few years ago](https://dev.to/tidelift/maintainers-are-spending-3x-more-time-on-security-than-they-did-a-few-years-ago-3g89), by Tidelift: the 2024 survey's time split, compared with 2021.
+- [Participation Inequality and the 90-9-1 Principle in Open Source](https://dl.acm.org/doi/10.1145/3412569.3412582), by Gasparini, Clarisó, Brambilla and Cabot: the study behind the funnel.
