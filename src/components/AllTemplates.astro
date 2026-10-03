@@ -18,6 +18,6 @@ const docs = new Map((await getCollection('docs')).map((doc) => [doc.id, doc]));
 	))}
 </ul>
 
-{templates.map(({ chapter, ...template }) => (
-	<Template {...template} chapter={{ href: `/${chapter}/`, title: docs.get(chapter)!.data.title }} />
+{templates.map(({ file, chapter }) => (
+	<Template name={file} chapter={{ href: `/${chapter}/`, title: docs.get(chapter)!.data.title }} />
 ))}

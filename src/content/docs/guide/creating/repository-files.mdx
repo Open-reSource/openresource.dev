@@ -2,12 +2,13 @@
 title: 'The Files That Turn a Repository Into a Project'
 description: README, LICENSE, CONTRIBUTING, code of conduct, SECURITY, FUNDING.yml, CHANGELOG, templates and CODEOWNERS, each with the smallest version that works.
 date: 2024-03-30
-lastUpdated: 2026-09-28
+lastUpdated: 2026-10-03
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
+import Template from '../../../../components/Template.astro';
 
 {/* prettier-ignore */}
 <p class="lead">A repository is a folder with a contract, and the contract is a handful of files most people copy from somewhere without reading. Each one answers a question a stranger would otherwise ask you in an issue. Here's what each file is for, the smallest version that works, and where GitHub shows it.</p>
@@ -70,31 +71,9 @@ The order that works for most projects:
 
 Two or three badges are enough. HTTPX's say whether the tests pass and which version is out; downloads, stars and "PRs welcome" add nothing a reader needs to decide.
 
-The smallest README that passes the one-screen test:
+A README that passes the one-screen test:
 
-````md
-# pageweigh
-
-Print the size of every page of a website, largest first.
-
-![pageweigh listing six pages with their sizes in KB](docs/demo.png)
-
-## Install
-
-```sh
-npm install --global pageweigh
-```
-
-## Usage
-
-```sh
-pageweigh https://example.com
-```
-
-## Contributing and license
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). MIT licensed.
-````
+<Template name="README.md" />
 
 **The common mistake: a README that starts with the history of the project.** Why you built it can go in a section further down, or in a blog post. A "Non-goals" section, on the other hand, saves you replies: [Saying No](/guide/maintaining/saying-no/#write-your-non-goals-down) explains why. The reader's side of all this is in [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/#the-readme-answers-three-questions-on-the-first-screen).
 
@@ -116,91 +95,29 @@ Use an address more than one person reads, and turn on **Settings** › **Modera
 
 Chalk's `contributing.md` is one sentence pointing to the code of conduct. That's a start. What saves you the most replies:
 
-```md
-# Contributing
-
-## Before you start
-
-Open an issue before any change bigger than a typo or a one-line fix, so we can agree on the approach before you write it. Issues labeled `good first issue` are ready to take: say so in a comment, no need to wait for an answer.
-
-## Setup
-
-git clone https://github.com/(owner)/(repo).git
-cd (repo)
-npm install
-npm test
-
-## Pull requests
-
-- One change per pull request, with a test when it fixes a bug.
-- Commit messages follow Conventional Commits: `fix: …`, `feat: …`, `docs: …`.
-- We review within a week. If you've heard nothing after two, ping us in the pull request.
-
-## AI tools
-
-(Your policy, or a link to it.)
-```
+<Template name="CONTRIBUTING.md" />
 
 **The common mistake: setup steps nobody has run since they were written.** Clone the repository into a new folder once a year and follow your own guide to the letter. Two more lines belong here when they apply: how you handle AI-assisted contributions ([a policy you can copy](/guide/ai/contribution-policy/)), and what contributors agree to when they send code ([CLA or DCO](/guide/licensing/cla-vs-dco/)).
 
 ## SECURITY.md is one link and a promise you can keep
 
-**A `SECURITY.md` sends vulnerability reports to a private channel instead of a public issue.** Chalk's is two lines: a link to the private reporting form, and "No AI slop will be accepted". Yours needs the versions you fix, where to report and how fast you'll answer. [Security for Maintainers](/guide/maintaining/security-for-maintainers/#before-the-first-report-one-file-and-four-settings) has a template and the settings that go with it.
+**A `SECURITY.md` sends vulnerability reports to a private channel instead of a public issue.** Chalk's is two lines: a link to the private reporting form, and "No AI slop will be accepted". Yours needs the versions you fix, where to report and how fast you'll answer. [Security for Maintainers](/guide/maintaining/security-for-maintainers/#before-the-first-report-one-file-and-four-settings) has the settings that go with it.
+
+<Template name="SECURITY.md" />
 
 ## Issue forms ask the questions before you have to
 
-**An issue form asks for what your first reply would have asked: the version, the steps, what happened.** It's a YAML file in `.github/ISSUE_TEMPLATE/`, and GitHub turns it into a form with required fields. The smallest useful bug form:
+**An issue form asks for what your first reply would have asked: the version, the steps, what happened.** It's a YAML file in `.github/ISSUE_TEMPLATE/`, and GitHub turns it into a form with required fields. A bug form that works:
 
-```yaml
-# .github/ISSUE_TEMPLATE/bug.yml
-name: Bug report
-description: Something doesn't work as documented.
-labels: ['bug']
-body:
-  - type: input
-    id: version
-    attributes:
-      label: Version
-      description: The output of `pageweigh --version`.
-    validations:
-      required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to reproduce
-      description: The smallest input that shows the bug. A link to a repository or a gist is best.
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: What you expected, and what happened instead
-    validations:
-      required: true
-```
+<Template name="bug.yml" />
 
 A `config.yml` next to it turns off blank issues and sends questions and vulnerabilities where they belong:
 
-```yaml
-# .github/ISSUE_TEMPLATE/config.yml
-blank_issues_enabled: false
-contact_links:
-  - name: Question
-    url: https://github.com/(owner)/(repo)/discussions
-    about: Ask in Discussions, not in an issue.
-  - name: Security vulnerability
-    url: https://github.com/(owner)/(repo)/security/advisories/new
-    about: Report it privately.
-```
+<Template name="config.yml" />
 
 A pull request template is a Markdown file, `.github/pull_request_template.md`, pasted into every new pull request:
 
-```md
-Fixes #
-
-- [ ] Tests pass locally
-- [ ] Docs updated, if behavior changed
-```
+<Template name="pull_request_template.md" />
 
 **The common mistake: fifteen required fields.** People fill them with "N/A" or leave for a project that asks less. Three questions get a better report than fifteen. The contributor's side is [How to Write a Bug Report That Gets Fixed](/guide/contributing/writing-a-bug-report/).
 
@@ -230,21 +147,7 @@ GitHub Sponsors takes up to four people or one organization; Open Collective, Li
 
 **A changelog says what changed for the people who use the project, not for the people who wrote it.** A dump of the git log fails that test: "Merge branch 'main'" tells nobody whether their code breaks. [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) is the format most hand-written ones follow, newest version first, with an `Unreleased` section on top:
 
-```md
-# Changelog
-
-## [Unreleased]
-
-## [1.2.0] - 2026-09-28
-
-### Added
-
-- `--json` prints the result as JSON.
-
-### Fixed
-
-- Pages with a redirect were counted twice.
-```
+<Template name="CHANGELOG.md" />
 
 If you publish GitHub Releases with generated notes instead, keep a `CHANGELOG.md` anyway, one line long, pointing to the releases page: it's the first place people look.
 
@@ -254,10 +157,7 @@ If you publish GitHub Releases with generated notes instead, keep a `CHANGELOG.m
 
 - **`CODEOWNERS`**, in `.github/`, the root or `docs/`, requests reviews from the right people automatically. The last matching line wins, so the catch-all goes first:
 
-  ```txt
-  *        @alice
-  /docs/   @bob
-  ```
+  <Template name="CODEOWNERS" />
 
   Turn on **Require review from Code Owners** in a branch rule to make one of their approvals mandatory.
 

@@ -1,33 +1,43 @@
 ---
-// One template of the gallery: its text in a scrollable preview, with a "Copy" button. Without JS, the text is still
-// there to select. The sources are the files in src/templates/, listed in src/templates.mjs.
+// One template: its text in a scrollable preview, with a "Copy" button. Without JS, the text is still there to select.
+// The sources are the files in src/templates/, listed in src/templates.mjs. `<Template name="README.md" />` embeds one in
+// the chapter that explains it; the gallery passes `chapter` to get a heading and a link back to that chapter instead.
 import { Button } from '@deramond.dev/astro';
-import { templateId } from '../templates.mjs';
+import { templateId, templates } from '../templates.mjs';
 
 interface Props {
-	file: string;
-	path: string;
-	description: string;
-	chapter: { href: string; title: string };
+	name: string;
+	chapter?: { href: string; title: string };
 }
 
 const sources = import.meta.glob('../templates/*', { query: '?raw', import: 'default', eager: true }) as Record<
 	string,
 	string
 >;
-const { file, path, description, chapter } = Astro.props;
+const { name: file, chapter } = Astro.props;
+const entry = templates.find((template) => template.file === file);
+if (!entry) throw new Error(`Unknown template: ${file}`);
+const { path, description } = entry;
 const text = sources[`../templates/${file}`].trimEnd();
 const id = templateId(file);
 ---
 
 <open-template class="template" data-text={text}>
-	<h2 id={id}>
-		<code>{file}</code>
-	</h2>
-	<p>{description}</p>
-	<p class="template__meta">
-		Goes in <code>{path}</code>. Used in <a href={chapter.href}>{chapter.title}</a>.
-	</p>
+	{chapter ? (
+		<>
+			<h2 id={id}>
+				<code>{file}</code>
+			</h2>
+			<p>{description}</p>
+			<p class="template__meta">
+				Goes in <code>{path}</code>. Used in <a href={chapter.href}>{chapter.title}</a>.
+			</p>
+		</>
+	) : (
+		<p class="template__meta">
+			Template for <code>{path}</code>. <a href={`/guide/templates/#${id}`}>All templates</a>
+		</p>
+	)}
 	<pre tabindex="0"><code>{text}</code></pre>
 	<div class="template__actions" hidden>
 		<Button variant="quiet" size="sm" type="button" data-copy aria-label={`Copy ${file}`}>

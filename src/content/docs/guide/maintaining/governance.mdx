@@ -2,12 +2,13 @@
 title: 'Governance: Who Decides, and How to Write It Down'
 description: The governance models open-source projects use, with their real documents, a GOVERNANCE.md template, contributor ladders, RFCs, votes and vetoes, foundations, and what happens when the founder leaves.
 date: 2026-09-27
-lastUpdated: 2026-09-30
+lastUpdated: 2026-10-03
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
+import Template from '../../../../components/Template.astro';
 
 {/* prettier-ignore */}
 <p class="lead">Governance is the answer to "who can merge this?" and "what happens when two of us disagree?". For a solo project the answer is you, and writing it down still helps. For anything bigger, the projects that last are the ones that answered before the fight.</p>
@@ -41,30 +42,7 @@ Projects move between models. Python went from one person to a council in 2018. 
 
 Who are the roles, how do you get one, how are decisions made, how do conflicts end, and how do people leave. Node.js's and Astro's documents answer all five; they're worth reading before you write yours. For a small project, a template:
 
-```md
-# Governance
-
-## Roles
-
-- **Maintainers**, listed in MAINTAINERS.md, can merge pull requests and publish releases.
-- **Contributors** are everyone who opens an issue or a pull request.
-
-## Becoming a maintainer
-
-A maintainer can nominate a contributor who has reviewed or contributed regularly for (three) months. The other maintainers have one week to object.
-
-## Decisions
-
-Most decisions happen in pull requests, by lazy consensus: if no maintainer objects within 72 hours, it goes ahead. Breaking changes need an issue labeled `rfc` and the approval of (a majority of) maintainers.
-
-## Conflicts
-
-When maintainers disagree and can't converge, (the lead maintainer / a majority vote of maintainers) decides.
-
-## Leaving
-
-A maintainer who steps down, or is inactive for (six) months, becomes emeritus: listed and thanked, without merge or publish rights.
-```
+<Template name="GOVERNANCE.md" />
 
 For a project you maintain alone, one paragraph is enough, and better than nothing:
 

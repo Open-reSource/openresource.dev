@@ -2,12 +2,13 @@
 title: 'Burnout, Succession and the End of a Project'
 description: Read your bus factor, recognize burnout, find a co-maintainer, hand a project over without an event-stream moment, and archive it cleanly when it's time.
 date: 2026-09-27
-lastUpdated: 2026-09-30
+lastUpdated: 2026-10-03
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
+import Template from '../../../../components/Template.astro';
 
 {/* prettier-ignore */}
 <p class="lead">Every project ends. The good endings are planned: a co-maintainer, a handover, an archive notice, a fork you point people to. The bad ones are a maintainer who stops answering, and thousands of installs that never find out. This chapter covers the years before that, and the week after.</p>
@@ -107,10 +108,7 @@ Smaller projects do the same in fewer steps. request's author announced [mainten
 
 1. **Put a notice at the top of the README**, with the date and where to go instead:
 
-   ```md
-   > [!WARNING]
-   > This project is no longer maintained, as of (month year). It still works, but it won't get fixes, including security fixes. For new projects, use (alternative, link).
-   ```
+   <Template name="ARCHIVED.md" />
 
 2. **Publish a final release**, so the notice reaches the package page too.
 3. **Deprecate the package** on its registry, with the same pointer. On npm, `npm deprecate my-package "No longer maintained, use (alternative)"` ([npm's docs](https://docs.npmjs.com/cli/v11/commands/npm-deprecate)) makes every install print it. On PyPI, [archiving the project](https://blog.pypi.org/posts/2025-01-30-archival/) puts a notice on its page.
