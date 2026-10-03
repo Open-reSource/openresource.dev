@@ -3,11 +3,6 @@
 // shows and the filter buttons stay hidden.
 import { getCollection } from 'astro:content';
 
-const projects = {
-	'open-resource': { name: 'Open {re}Source', url: 'https://github.com/Open-reSource' },
-	bootstrap: { name: 'Bootstrap', url: 'https://github.com/twbs/bootstrap' },
-};
-
 const categories = (await getCollection('tool-categories')).map(({ id, data }) => ({ id, title: data.title }));
 const tools = (await getCollection('tools')).map(({ data }) => data);
 
@@ -33,7 +28,7 @@ const sections = categories.map((category) => ({
 		<section class="tools__category" data-category={id}>
 			<h2 id={id}>{title}</h2>
 			<ul>
-				{tools.map(({ name, url, description, by, usedBy, article }) => (
+				{tools.map(({ name, url, description, by, article }) => (
 					<li>
 						<a href={url}>{name.startsWith('`') ? <code>{name.slice(1, -1)}</code> : name}</a>
 						{by && (
@@ -47,19 +42,6 @@ const sections = categories.map((category) => ({
 							<>
 								{' '}
 								<a href={`/articles/${article}/`}>Read our article</a>.
-							</>
-						)}
-						{usedBy.length > 0 && (
-							<>
-								{' '}
-								We use it in{' '}
-								{usedBy.map((id, index) => (
-									<>
-										{index > 0 && ' and '}
-										<a href={projects[id].url} set:html={projects[id].name} />
-									</>
-								))}
-								.
 							</>
 						)}
 					</li>

@@ -39,8 +39,7 @@
     "name": "OpenSSF Scorecard",
     "url": "https://scorecard.dev",
     "category": "health",
-    "description": "Automated checks on the security practices of a repository, scored from 0 to 10.",
-    "usedBy": ["bootstrap"]
+    "description": "Automated checks on the security practices of a repository, scored from 0 to 10."
   },
   {
     "id": "repobeats",
@@ -140,8 +139,7 @@
     "name": "Dependabot",
     "url": "https://docs.github.com/en/code-security/dependabot",
     "category": "security",
-    "description": "GitHub’s alerts and automatic update PRs for vulnerable or outdated dependencies.",
-    "usedBy": ["open-resource", "bootstrap"]
+    "description": "GitHub’s alerts and automatic update PRs for vulnerable or outdated dependencies."
   },
   {
     "id": "renovate",
@@ -155,8 +153,7 @@
     "name": "CodeQL",
     "url": "https://github.com/github/codeql-action",
     "category": "security",
-    "description": "GitHub’s code scanning: finds vulnerabilities by querying your code as data.",
-    "usedBy": ["bootstrap"]
+    "description": "GitHub’s code scanning: finds vulnerabilities by querying your code as data."
   },
   {
     "id": "socket",
@@ -233,8 +230,7 @@
     "name": "GitHub generated release notes",
     "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes",
     "category": "releases",
-    "description": "Release notes built from merged PRs, grouped by label with a `.github/release.yml` file.",
-    "usedBy": ["bootstrap"]
+    "description": "Release notes built from merged PRs, grouped by label with a `.github/release.yml` file."
   },
   {
     "id": "all-contributors",
@@ -248,8 +244,7 @@
     "name": "Contributor Covenant",
     "url": "https://www.contributor-covenant.org",
     "category": "community",
-    "description": "The most adopted code of conduct, with translations.",
-    "usedBy": ["open-resource", "bootstrap"]
+    "description": "The most adopted code of conduct, with translations."
   },
   {
     "id": "discourse",
@@ -288,16 +283,14 @@
     "name": "GitHub Sponsors",
     "url": "https://github.com/sponsors",
     "category": "funding",
-    "description": "Recurring and one-time sponsorships.",
-    "usedBy": ["open-resource"]
+    "description": "Recurring and one-time sponsorships."
   },
   {
     "id": "open-collective",
     "name": "Open Collective",
     "url": "https://opencollective.com",
     "category": "funding",
-    "description": "Transparent funding for a project or a group, with a public ledger and a fiscal host.",
-    "usedBy": ["bootstrap"]
+    "description": "Transparent funding for a project or a group, with a public ledger and a fiscal host."
   },
   {
     "id": "polar",
@@ -326,8 +319,7 @@
     "name": "`FUNDING.yml`",
     "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository",
     "category": "funding",
-    "description": "The file that adds a Sponsor button to your repository and points to your funding pages.",
-    "usedBy": ["open-resource"]
+    "description": "The file that adds a Sponsor button to your repository and points to your funding pages."
   },
   {
     "id": "starlight",
@@ -362,8 +354,7 @@
     "name": "Pagefind",
     "url": "https://pagefind.app",
     "category": "docs",
-    "description": "Static search that runs on the built site, with no server.",
-    "usedBy": ["open-resource", "bootstrap"]
+    "description": "Static search that runs on the built site, with no server."
   },
   {
     "id": "docsearch",
@@ -377,24 +368,21 @@
     "name": "lychee",
     "url": "https://lychee.cli.rs",
     "category": "docs",
-    "description": "Fast link checker for Markdown and HTML, with a GitHub Action.",
-    "usedBy": ["open-resource"]
+    "description": "Fast link checker for Markdown and HTML, with a GitHub Action."
   },
   {
     "id": "cspell",
     "name": "cspell",
     "url": "https://cspell.org",
     "category": "docs",
-    "description": "Spell checker for code and docs, with a project dictionary for names and terms.",
-    "usedBy": ["open-resource", "bootstrap"]
+    "description": "Spell checker for code and docs, with a project dictionary for names and terms."
   },
   {
     "id": "actions-stale",
     "name": "actions/stale",
     "url": "https://github.com/actions/stale",
     "category": "automation",
-    "description": "Marks inactive issues and PRs as stale, then closes them.",
-    "usedBy": ["bootstrap"]
+    "description": "Marks inactive issues and PRs as stale, then closes them."
   },
   {
     "id": "actions-labeler",
@@ -441,8 +429,7 @@
     "url": "https://sli.dev",
     "category": "social",
     "description": "Slides from Markdown, for developers. Exports to PDF, which is how we make LinkedIn carousels.",
-    "article": "coding-linkedin-carousels",
-    "usedBy": ["open-resource"]
+    "article": "coding-linkedin-carousels"
   },
   {
     "id": "bluesky-starter-packs",
@@ -464,8 +451,7 @@
     "name": "Shields.io",
     "url": "https://shields.io",
     "category": "social",
-    "description": "Badges for READMEs: build status, version, downloads, sponsors.",
-    "usedBy": ["open-resource", "bootstrap"]
+    "description": "Badges for READMEs: build status, version, downloads, sponsors."
   },
   {
     "id": "ollama",

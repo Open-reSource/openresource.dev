@@ -48,7 +48,7 @@ const showcaseCollection = defineCollection({
 	schema: showcaseSchema,
 });
 
-// The directory of /resources/tools/: `usedBy` lists the projects of ours that run the tool (shown as "We use it in …").
+// The directory of /resources/tools/.
 const toolCategoriesCollection = defineCollection({
 	loader: file('src/content/tool-categories.json'),
 	schema: z.object({ title: z.string() }),
@@ -63,7 +63,6 @@ const toolsCollection = defineCollection({
 		description: z.string(),
 		by: z.object({ name: z.string(), url: z.url() }).optional(),
 		article: z.string().optional(),
-		usedBy: z.array(z.enum(['open-resource', 'bootstrap'])).default([]),
 	}),
 });
 
