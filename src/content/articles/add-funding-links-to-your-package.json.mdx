@@ -2,7 +2,10 @@
 title: "Add Funding Links to Your 'package.json'"
 description: "Learn how to add funding links to your 'package.json' file to make it easier to support your open-source project."
 date: 2024-09-22
-lastUpdated: 2024-09-22
+lastUpdated: 2026-10-03
+related:
+  - guide/financing/understanding-funding-models
+  - guide/financing/effective-fundraising-strategies
 excerpt: "**Learn how to enhance your open-source project by adding funding links to your 'package.json'.** This guide highlights the importance of supporting maintainers and explores various ways contributors can provide financial assistance, including platforms like GitHub Sponsors and Open Collective. **By making your funding information visible, you can encourage users to support your project directly.**
 <br><br>
 We'll walk you through the process of implementing the funding field in your 'package.json', ensuring that your project is equipped to receive contributions. Whether it's a simple donation link or a Patreon page, letting the community know you're seeking support can make a difference. With just a few adjustments, you might find that your project receives the backing it deserves!"
@@ -20,6 +23,10 @@ head:
 ---
 
 import ContentImage from '../../components/ContentImage.astro';
+import Related from '../../components/Related.astro';
+import RelatedChapter from '../../components/RelatedChapter.astro';
+
+<RelatedChapter />
 
 {/* prettier-ignore */}
 <p class="lead">Fund your open-source project by adding funding links to your <code>package.json</code> file. Who knows, you might get a coffee or two out of it!</p>
@@ -177,3 +184,5 @@ On top of that, if your package is listed on the npm registry, the funding infor
 ---
 
 **Funding your open-source project might be complicated**, but referencing your funding links a the right places can make it easier for people to support you. And adding funding links to your `package.json` file is a good start! It's not going to make hundreds of people support you, for sure, but it's a good way to let the world know that you are looking for funding; **and little by little, you might get a coffee or two out of it!**
+
+<Related />

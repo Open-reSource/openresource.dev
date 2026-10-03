@@ -2,7 +2,9 @@
 title: 'Running a Local AI Inside Obsidian with Ollama'
 description: 'Learn to set up Ollama with Obsidian for a completely local AI writing assistant. Step-by-step guide to private, offline AI that works with your notes without sending data to the cloud.'
 date: 2026-02-01
-lastUpdated: 2026-09-26
+lastUpdated: 2026-10-03
+related:
+  - guide/ai/index
 excerpt: "**What if your Obsidian notes could think with you, without sending a single word to the cloud?** This article shows you how to build a fully local AI setup inside Obsidian using Ollama and the open Gemma 4 model. You'll learn why local AI makes sense for knowledge work, how to install and test Ollama from the command line, and how to connect it to Obsidian using community plugins for a seamless writing experience.<br><br>By the end of this tutorial, you'll have a private AI assistant that can rewrite text, summarize notes, brainstorm ideas, and help draft content all while keeping full control over your data. This setup combines Obsidian's local-first philosophy with Ollama's open source AI capabilities to create a knowledge workspace that's private, hackable, and built to last, proving that powerful tools don't have to come at the cost of control."
 authors: julien
 cover: /covers/running-a-local-ai-inside-obsidian-with-ollama.svg
@@ -21,6 +23,10 @@ import { Image } from 'astro:assets';
 import { Steps } from '@deramond.dev/astro';
 import ContentImage from '../../components/ContentImage.astro';
 import ShowcaseGitHubRepo from '../../components/ShowcaseGitHubRepo.astro';
+import Related from '../../components/Related.astro';
+import RelatedChapter from '../../components/RelatedChapter.astro';
+
+<RelatedChapter />
 
 {/* prettier-ignore */}
 <p class="lead">**What if your notes could think with you, without sending a single word to the cloud?** In this article, we'll build a fully local AI setup inside Obsidian using Ollama and the open Gemma 4 model. You'll learn why local AI makes sense for knowledge work, how to install and test Ollama from the command line, how to connect it to Obsidian using community plugins, and how to use it for practical, everyday note-taking workflows, all while keeping full control over your data.</p>
@@ -341,3 +347,5 @@ For personal knowledge management and everyday writing, that trade-off is often 
 If you try out this setup, let me know how it goes! Share your experiences, tips, or custom workflows in our social platforms.
 
 Happy note-taking!
+
+<Related />

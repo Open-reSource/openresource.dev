@@ -2,7 +2,10 @@
 title: "Get Real-Time GitHub Stars Notifications in Discord"
 description: "Want instant updates when your GitHub repository gets new stars? Set up an easy GitHub Actions workflow to send notifications directly to Discord!"
 date: 2024-09-17
-lastUpdated: 2026-09-30
+lastUpdated: 2026-10-03
+related:
+  - guide/creating/building-and-engaging-your-community
+  - guide/maintaining/community
 excerpt: "After refactoring our website, we noticed a rise in statistics and new stars on our GitHub repository. While GitHub doesn't offer native notifications for new stars, we decided to create our own solution.
 <br><br>
 **This guide walks you through setting up a GitHub Actions workflow to send real-time notifications to a private Discord channel whenever your repository gains new stars**. It's a fun way to track your project's popularity and engage with your community. Follow along as we share our journey of building and tweaking this automation, complete with a screenshot of the notification we received on our phone."
@@ -24,6 +27,10 @@ head:
 ---
 
 import ContentImage from '../../components/ContentImage.astro';
+import Related from '../../components/Related.astro';
+import RelatedChapter from '../../components/RelatedChapter.astro';
+
+<RelatedChapter />
 
 {/* prettier-ignore */}
 <p class="lead">After the refactoring of this website, folks (maybe you) started to spread the word about it. The statistics started to rise a little bit, and we discovered along the way that the repository holding this website also started to receive some new stars. To our knowledge, there's no native way to get notified by GitHub when you receive stars on your repositories. So, we decided to do something about it!</p>
@@ -259,3 +266,5 @@ A few words before we finish:
 - We haven't created a reusable workflow, shared it in the Marketplace, nor created a GitHub Gist. We thought it was easier just to share a little bit of code in this article that you could start from and adapt. If you want it to be stored somewhere with a more formal MIT license, please let us know! But please feel free to use it as you wish.
 
 **Happy coding! 🎉**
+
+<Related />

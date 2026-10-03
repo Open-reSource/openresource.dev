@@ -2,7 +2,10 @@
 title: "Repobeats: GitHub README analytics"
 description: "Repobeats is a tool that provides analytics for your GitHub README files."
 date: 2024-04-02
-lastUpdated: 2026-09-30
+lastUpdated: 2026-10-03
+related:
+  - guide/creating/building-and-engaging-your-community
+  - guide/promoting/building-a-strong-project-identity
 excerpt: "**Repobeats is a tool that provides analytics for GitHub repositories, allowing users to embed detailed visual representations of repository activity into any Markdown file, including README files.** Maintained by axiom.com, Repobeats is free to use but not open source. It offers insights like the number of contributions in the last 30 days, the ratio of opened to closed issues, the number of PRs opened and commits, and a heatmap showcasing top contributors' activity. This visual representation highlights repository activity, encourages contributions, and celebrates top contributors.
 <br><br>
 To install Repobeats, users need a GitHub account. Simply log into Repobeats with GitHub credentials, select the repository to analyze, and obtain a URL for embedding the analytics image into Markdown files. This URL provides a comprehensive snapshot of repository activity, demonstrated with examples from repositories like openresource.dev and freeCodeCamp. **Repobeats' ability to display real-time data makes it a valuable resource for promoting and managing open-source projects on GitHub.**"
@@ -16,6 +19,10 @@ tags:
 ---
 
 import ShowcaseGitHubRepo from '../../components/ShowcaseGitHubRepo.astro';
+import Related from '../../components/Related.astro';
+import RelatedChapter from '../../components/RelatedChapter.astro';
+
+<RelatedChapter />
 
 {/* prettier-ignore */}
 <p class="lead">[Repobeats](https://repobeats.axiom.co/) is a tool that provides analytics of a GitHub repository that can be embedded in any Markdown file; including its README file.</p>
@@ -74,3 +81,5 @@ And here is the same kind of data, but on a more active repository like freeCode
 freeCodeCamp is using it in the ["Contributing" section of their README file](https://github.com/freeCodeCamp/freeCodeCamp?tab=readme-ov-file#contributing) and it looks great!
 
 We can see right away that this repository is very active with a lot of contributions, issues, PRs, and commits.
+
+<Related />
