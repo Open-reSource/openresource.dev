@@ -45,32 +45,42 @@ const items = pages
 )}
 
 <style>
+	.related {
+		margin-top: var(--space-6);
+	}
+
+	.related h2 {
+		margin: 0 0 var(--space-2);
+		font: var(--type-eyebrow);
+		letter-spacing: var(--type-eyebrow-letter-spacing);
+		text-transform: uppercase;
+		color: var(--color-muted);
+	}
+
 	.related ul {
 		list-style: none;
-		margin: var(--space-4) 0;
+		margin: 0;
 		padding: 0;
-		border-top: var(--stroke-hairline) solid var(--color-line);
 	}
 
 	.related li {
 		margin: 0;
-		padding: var(--space-3) 0;
-		border-bottom: var(--stroke-hairline) solid var(--color-line);
-	}
-
-	.related a {
-		font-weight: var(--font-weight-medium);
+		padding: var(--space-1) 0;
+		font: var(--type-small);
 	}
 
 	.related__meta {
 		margin-left: var(--space-2);
-		font: var(--type-mono);
 		color: var(--color-muted);
 	}
 
 	.related p {
-		margin: var(--space-1) 0 0;
+		display: inline;
+		margin: 0;
 		color: var(--color-muted);
-		font: var(--type-small);
+	}
+
+	.related p::before {
+		content: '— ';
 	}
 </style>
