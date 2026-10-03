@@ -84,6 +84,7 @@ export default defineConfig({
 							{ label: 'Showcase', href: '/showcase/' },
 							{ label: 'Become a sponsor', href: 'https://github.com/sponsors/Open-reSource' },
 							{ label: 'About the author', href: '/about-author/' },
+							{ label: 'How this site is made', href: '/about/' },
 							{ label: 'Cookie policy', href: '/cookie-policy/' },
 						],
 					},

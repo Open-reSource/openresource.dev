@@ -1,0 +1,45 @@
+---
+layout: ../layouts/Page.astro
+title: How this site is made
+description: Who writes Open {re}Source, what it runs on, how it is licensed and how AI is used to produce it.
+---
+
+export const prerender = true;
+
+{/* prettier-ignore */}
+<p class="lead">Julien Déramond writes Open \{re}Source with a few contributors, on Astro, hosted on Vercel. Drafts are produced with Claude models, and a human reads, edits and verifies every published word.</p>
+
+## Julien writes it, contributors fix it
+
+Open \{re}Source is maintained by [Julien Déramond](/about-author/) since 2023. Other people improve it through pull requests: the [contributors graph](https://github.com/Open-reSource/openresource.dev/graphs/contributors) on GitHub is the up-to-date list, so this page does not keep a copy that could go stale.
+
+[![Contributors to Open {re}Source](https://contrib.rocks/image?repo=Open-reSource/openresource.dev)](https://github.com/Open-reSource/openresource.dev/graphs/contributors)
+
+## The site is a static Astro build with a shared theme
+
+- [Astro](https://astro.build) with MDX for the pages, the guide, the articles and the resources.
+- The theme and layout come from [`@deramond.dev/astro`](https://www.npmjs.com/package/@deramond.dev/astro).
+- Hosted on [Vercel](https://vercel.com), with Vercel Web Analytics, which works without cookies (see the [cookie policy](/cookie-policy/)).
+- Internal links are checked with [lychee](https://github.com/lycheeverse/lychee) and spelling with [cspell](https://cspell.org), on every pull request.
+
+The source is on [GitHub](https://github.com/Open-reSource/openresource.dev).
+
+## Code is MIT, content is CC BY-NC-SA 4.0
+
+| What                                            | License                                                                                        |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Code                                            | [MIT](https://github.com/Open-reSource/openresource.dev/blob/main/LICENSE)                     |
+| Content, images included                        | [CC BY-NC-SA 4.0](https://github.com/Open-reSource/openresource.dev/blob/main/LICENSE-CONTENT) |
+| The Open \{re}Source mark, favicons and artwork | All rights reserved                                                                            |
+
+## AI drafts, a human decides
+
+Most pages start as a draft written with Claude models, which follow a written style guide for voice, structure and sources. A human then reads every published word, edits it and rewrites what does not sound right. Pull requests are reviewed by Julien before they are merged.
+
+AI does not produce the evidence. Screenshots are taken for real in the product they show. Numbers are checked against their source and dated. A claim we cannot verify does not make it into the page.
+
+Behind this, a private planning backlog turns ideas into issues, and issues into pull requests.
+
+## Report a problem or contribute
+
+Found a mistake or an outdated page? [Report a content problem](https://github.com/Open-reSource/openresource.dev/issues/new?template=content_problem.yml). To fix it yourself, start with [CONTRIBUTING](https://github.com/Open-reSource/openresource.dev/blob/main/CONTRIBUTING.md).
