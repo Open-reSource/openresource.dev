@@ -66,6 +66,21 @@ const toolsCollection = defineCollection({
 	}),
 });
 
+const eventSchema = z.object({
+	name: z.string(),
+	kind: z.enum(['event', 'program']).default('event'),
+	place: z.string(),
+	// The usual month, for the editions whose dates are not announced yet.
+	month: z.string(),
+	// Dates of the next edition, or of the last one when the next is not announced. No dates: listed last.
+	start: z.coerce.date().optional(),
+	end: z.coerce.date().optional(),
+	cfp: z.url().optional(),
+	free: z.boolean().optional(),
+	focus: z.string(),
+	url: z.url(),
+});
+
 export const collections = {
 	docs: defineCollection({
 		loader: docsLoader(),
@@ -96,6 +111,7 @@ export const collections = {
 	showcase: showcaseCollection,
 	tools: toolsCollection,
 	'tool-categories': toolCategoriesCollection,
+	events: defineCollection({ loader: file('src/data/events.yml'), schema: eventSchema }),
 };
 
 export type Showcase = z.infer<typeof showcaseSchema>;
