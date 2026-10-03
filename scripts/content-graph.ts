@@ -1,7 +1,9 @@
-// Warns about the links between chapters and articles: a `related` target that doesn't exist, and a chapter that no
-// article is related to, either way. Exits 1 only on a missing target (tests/related.test.ts runs the same check).
+// Warns about the links between chapters and articles: a `related` target that doesn't exist, a chapter that no
+// article is related to, either way, and an article whose tags point at a module it has no related chapter in.
+// Exits 1 only on a missing target (tests/related.test.ts runs the same check).
 //
 //   npm run graph
+import { modulesOf } from '../src/article-modules.mjs';
 import { modules } from '../src/guide-modules.mjs';
 import { fileOf, pages } from '../src/related.mjs';
 
@@ -19,7 +21,20 @@ const alone = all.filter(
 		!all.some((page) => page.kind === 'article' && page.related.includes(id))
 );
 
+// An article tagged `Community` should point at a `maintaining` chapter, one tagged `Funding` at a `financing` one.
+const off = all
+	.filter(({ kind }) => kind === 'article')
+	.flatMap(({ id, tags, related }) =>
+		modulesOf(tags)
+			.filter((dir) => !related.some((target) => target.startsWith(`guide/${dir}/`)))
+			.map((dir) => ({ id, dir }))
+	);
+
 for (const { id, target } of missing) console.warn(`${id}: related "${target}" does not exist`);
 for (const { id } of alone) console.warn(`${id}: no related article, and no article points here`);
-console.log(`${all.length} pages, ${missing.length} missing targets, ${alone.length} chapters without an article.`);
+for (const { id, dir } of off) console.warn(`${id}: tags point to the ${dir} module, but no related chapter is in it`);
+console.log(
+	`${all.length} pages, ${missing.length} missing targets, ${alone.length} chapters without an article, ` +
+		`${off.length} articles without a chapter in their tags' module.`
+);
 process.exit(missing.length > 0 ? 1 : 0);
