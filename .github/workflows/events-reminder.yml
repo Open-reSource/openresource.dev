@@ -1,0 +1,26 @@
+name: Events reminder
+
+on:
+  schedule:
+    - cron: '0 9 1 9 *'
+  workflow_dispatch:
+
+jobs:
+  reminder:
+    name: Remind to refresh the events calendar
+    if: github.repository_owner == 'Open-reSource'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Open the reminder issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: Refresh the events calendar
+        run: |
+          number=$(gh api "repos/$GITHUB_REPOSITORY/issues?state=open&labels=chore&per_page=100" \
+            --jq "map(select(.title == env.TITLE and .pull_request == null)) | .[0].number // empty")
+          if [ -z "$number" ]; then
+            gh api -X POST "repos/$GITHUB_REPOSITORY/issues" -f title="$TITLE" -f 'labels[]=chore' \
+              -f body="Check every date in \`src/data/events.yml\` against the event's own site, add the next editions, and update \`lastUpdated\` on the Events page." > /dev/null
+          fi
