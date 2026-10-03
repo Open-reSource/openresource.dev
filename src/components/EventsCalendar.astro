@@ -1,0 +1,89 @@
+---
+// The open source calendar: a table sorted by next date, with the editions that already happened greyed. Events
+// without announced dates come last. The data lives in src/data/events.yml.
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('events')).map(({ data }) => data);
+const today = new Date();
+today.setUTCHours(0, 0, 0, 0);
+
+const endOf = (event: (typeof entries)[number]) => event.end ?? event.start;
+const isPast = (event: (typeof entries)[number]) => {
+	const end = endOf(event);
+	return end !== undefined && end < today;
+};
+
+// Upcoming first (soonest), then the ones without dates, then the past ones (latest first).
+const rank = (event: (typeof entries)[number]) => (isPast(event) ? 2 : event.start ? 0 : 1);
+const events = [...entries].sort(
+	(a, b) =>
+		rank(a) - rank(b) ||
+		(rank(a) === 2
+			? (b.start?.getTime() ?? 0) - (a.start?.getTime() ?? 0)
+			: (a.start?.getTime() ?? 0) - (b.start?.getTime() ?? 0)) ||
+		a.name.localeCompare(b.name)
+);
+
+const day = new Intl.DateTimeFormat('en-GB', { day: 'numeric', timeZone: 'UTC' });
+const dayMonth = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', timeZone: 'UTC' });
+const full = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+function when(event: (typeof entries)[number]) {
+	const { start, end } = event;
+	if (!start) return `${event.month}, dates to be announced`;
+	if (!end || end.getTime() === start.getTime()) return full.format(start);
+	if (start.getUTCFullYear() !== end.getUTCFullYear()) return `${full.format(start)} – ${full.format(end)}`;
+	if (start.getUTCMonth() === end.getUTCMonth())
+		return `${day.format(start)}–${day.format(end)} ${new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(end)}`;
+	return `${dayMonth.format(start)} – ${full.format(end)}`;
+}
+
+const hasCfp = events.some((event) => event.cfp);
+---
+
+<div class="events">
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">Event</th>
+				<th scope="col">When</th>
+				<th scope="col">Where</th>
+				<th scope="col">Free?</th>
+				{hasCfp && <th scope="col">Call for papers</th>}
+				<th scope="col">Focus</th>
+			</tr>
+		</thead>
+		<tbody>
+			{events.map((event) => (
+				<tr class:list={{ events__past: isPast(event) }}>
+					<th scope="row">
+						<a href={event.url}>{event.name}</a>
+						{event.kind === 'program' && <span class="events__kind"> (program)</span>}
+						{isPast(event) && <span class="events__kind"> (past)</span>}
+					</th>
+					<td>{when(event)}</td>
+					<td>{event.place}</td>
+					<td>{event.free ? 'Yes' : 'See the site'}</td>
+					{hasCfp && <td>{event.cfp ? <a href={event.cfp}>Submit</a> : ''}</td>}
+					<td>{event.focus}</td>
+				</tr>
+			))}
+		</tbody>
+	</table>
+</div>
+
+<style>
+	.events {
+		overflow-x: auto;
+		margin: 0 0 1.25em;
+	}
+
+	.events__past {
+		opacity: 0.55;
+	}
+
+	.events__kind {
+		font-weight: normal;
+		color: var(--color-text-muted, inherit);
+	}
+</style>
