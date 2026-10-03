@@ -11,6 +11,7 @@ related:
 import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
+import AiContributionPolicy from '../../../partials/ai-contribution-policy.mdx';
 import AiDisclosure from '../../../partials/ai-disclosure.mdx';
 import Related from '../../../../components/Related.astro';
 
@@ -77,23 +78,7 @@ Which one fits your project depends on what you can afford to review, not on wha
 
 Our policy below takes the disclosure posture and the rules most projects share. Copy it into your `CONTRIBUTING.md` and change what doesn't fit: the text in the block is in the public domain ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)), no attribution needed.
 
-```md
-## AI tools
-
-You may use AI tools to contribute. You're responsible for what you send, as if you had written every line yourself.
-
-- **Say so.** If a tool wrote a significant part of your change, name it in the pull request description. Line completion doesn't count.
-- **Understand it.** You must be able to explain every line in your own words. If a maintainer asks and you can't, we close the pull request.
-- **Run it.** Build and test the change yourself before you open the pull request. "The tool says it works" isn't a test.
-- **Keep it small.** No changes unrelated to the issue, however tidy.
-- **Reproduce first.** Don't open an issue or a security report from AI output you haven't reproduced yourself. Put the steps in the report. Unverified reports are closed without reply, and repeat senders are blocked.
-- **Write to us yourself.** Descriptions, comments and replies to reviews are yours. Translation tools are fine.
-- **No unattended agents.** Don't let a tool open pull requests, issues or comments here without you reviewing each one first.
-- **Leave good first issues to people learning the project.** Don't solve them with AI tools.
-- **Sign off yourself.** If this project asks for a `Signed-off-by:` line, only a human adds it.
-
-Maintainers may close contributions that break these rules without a detailed review.
-```
+<AiContributionPolicy />
 
 Each line comes from projects that needed it:
 
