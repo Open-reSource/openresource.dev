@@ -1,7 +1,10 @@
 import fs from 'node:fs';
 import { describe, expect, test } from 'vitest';
 
-import { categories, tools } from '../src/tools.mjs';
+const read = (name: string) =>
+	JSON.parse(fs.readFileSync(new URL(`../src/content/${name}.json`, import.meta.url), 'utf8'));
+const categories: { id: string }[] = read('tool-categories');
+const tools: { name: string; url: string; category: string; description: string; article?: string }[] = read('tools');
 
 const articles = new URL('../src/content/articles/', import.meta.url);
 

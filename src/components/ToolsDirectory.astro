@@ -1,8 +1,15 @@
 ---
-// The tools directory: one section per category of src/tools.mjs, with a category filter. Without JS, every section
+// The tools directory: one section per category of the tools and tool-categories collections, with a category filter. Without JS, every section
 // shows and the filter buttons stay hidden.
-import { Badge } from '@deramond.dev/astro';
-import { categories, tools } from '../tools.mjs';
+import { getCollection } from 'astro:content';
+
+const projects = {
+	'open-resource': { name: 'Open {re}Source', url: 'https://github.com/Open-reSource' },
+	bootstrap: { name: 'Bootstrap', url: 'https://github.com/twbs/bootstrap' },
+};
+
+const categories = (await getCollection('tool-categories')).map(({ id, data }) => ({ id, title: data.title }));
+const tools = (await getCollection('tools')).map(({ data }) => data);
 
 const sections = categories.map((category) => ({
 	...category,
@@ -42,10 +49,17 @@ const sections = categories.map((category) => ({
 								<a href={`/articles/${article}/`}>Read our article</a>.
 							</>
 						)}
-						{usedBy && (
+						{usedBy.length > 0 && (
 							<>
 								{' '}
-								<Badge kind="success">We use it</Badge> in {usedBy.join(' and ')}.
+								We use it in{' '}
+								{usedBy.map((id, index) => (
+									<>
+										{index > 0 && ' and '}
+										<a href={projects[id].url} set:html={projects[id].name} />
+									</>
+								))}
+								.
 							</>
 						)}
 					</li>

@@ -1,4 +1,5 @@
 import { defineCollection } from 'astro:content';
+import { file } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { docsLoader, docsSchema } from '@deramond.dev/astro/docs';
 import { blogLoader, blogSchema } from '@deramond.dev/astro/blog';
@@ -47,6 +48,25 @@ const showcaseCollection = defineCollection({
 	schema: showcaseSchema,
 });
 
+// The directory of /resources/tools/: `usedBy` lists the projects of ours that run the tool (shown as "We use it in …").
+const toolCategoriesCollection = defineCollection({
+	loader: file('src/content/tool-categories.json'),
+	schema: z.object({ title: z.string() }),
+});
+
+const toolsCollection = defineCollection({
+	loader: file('src/content/tools.json'),
+	schema: z.object({
+		name: z.string(),
+		url: z.url(),
+		category: z.string(),
+		description: z.string(),
+		by: z.object({ name: z.string(), url: z.url() }).optional(),
+		article: z.string().optional(),
+		usedBy: z.array(z.enum(['open-resource', 'bootstrap'])).default([]),
+	}),
+});
+
 export const collections = {
 	docs: defineCollection({
 		loader: docsLoader(),
@@ -75,6 +95,8 @@ export const collections = {
 			}),
 	}),
 	showcase: showcaseCollection,
+	tools: toolsCollection,
+	'tool-categories': toolCategoriesCollection,
 };
 
 export type Showcase = z.infer<typeof showcaseSchema>;

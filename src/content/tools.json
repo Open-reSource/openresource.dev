@@ -1,0 +1,486 @@
+[
+  {
+    "id": "goodfirstissue-dev",
+    "name": "goodfirstissue.dev",
+    "url": "https://goodfirstissue.dev",
+    "category": "finding-work",
+    "description": "Good first issues from popular repositories, filtered by language and topic."
+  },
+  {
+    "id": "up-for-grabs",
+    "name": "Up For Grabs",
+    "url": "https://up-for-grabs.net",
+    "category": "finding-work",
+    "description": "Projects that tag issues for newcomers, each with the label to search for."
+  },
+  {
+    "id": "codetriage",
+    "name": "CodeTriage",
+    "url": "https://www.codetriage.com",
+    "category": "finding-work",
+    "description": "Subscribe to a repository and get open issues by email to triage or fix."
+  },
+  {
+    "id": "oss-insight",
+    "name": "OSS Insight",
+    "url": "https://ossinsight.io",
+    "category": "finding-work",
+    "description": "Trends, rankings and contributor analytics for GitHub repositories, built on GH Archive."
+  },
+  {
+    "id": "ecosyste-ms",
+    "name": "ecosyste.ms",
+    "url": "https://ecosyste.ms",
+    "category": "finding-work",
+    "description": "Open datasets and tools on packages, repositories and funding, to find critical projects that need help."
+  },
+  {
+    "id": "openssf-scorecard",
+    "name": "OpenSSF Scorecard",
+    "url": "https://scorecard.dev",
+    "category": "health",
+    "description": "Automated checks on the security practices of a repository, scored from 0 to 10.",
+    "usedBy": ["bootstrap"]
+  },
+  {
+    "id": "repobeats",
+    "name": "Repobeats",
+    "url": "https://repobeats.axiom.co",
+    "category": "health",
+    "description": "An image of a repository’s recent activity to embed in its README.",
+    "article": "repobeats"
+  },
+  {
+    "id": "contrib-rocks",
+    "name": "contrib.rocks",
+    "url": "https://contrib.rocks",
+    "category": "health",
+    "description": "An image of a repository’s top contributors to embed in its README.",
+    "article": "contrib-rocks"
+  },
+  {
+    "id": "star-history",
+    "name": "Star History",
+    "url": "https://www.star-history.com",
+    "category": "health",
+    "description": "Star growth charts for one or several repositories, as an image or an embed."
+  },
+  {
+    "id": "deps-dev",
+    "name": "deps.dev",
+    "url": "https://deps.dev",
+    "category": "health",
+    "description": "Google’s view of a package: versions, dependency graph, advisories, licenses and Scorecard results."
+  },
+  {
+    "id": "libraries-io",
+    "name": "Libraries.io",
+    "url": "https://libraries.io",
+    "category": "health",
+    "description": "Search packages across ecosystems and see who depends on them."
+  },
+  {
+    "id": "choose-a-license",
+    "name": "Choose a License",
+    "url": "https://choosealicense.com",
+    "category": "licensing",
+    "description": "GitHub’s plain-language guide to picking a license, with a summary of each common one."
+  },
+  {
+    "id": "spdx-license-list",
+    "name": "SPDX License List",
+    "url": "https://spdx.org/licenses/",
+    "category": "licensing",
+    "description": "The standard identifiers to use in `LICENSE` metadata, with the full text of each license."
+  },
+  {
+    "id": "reuse",
+    "name": "REUSE",
+    "url": "https://reuse.software",
+    "category": "licensing",
+    "description": "A specification and a lint tool (`reuse lint`) to declare the license and copyright of every file."
+  },
+  {
+    "id": "licensee",
+    "name": "licensee",
+    "url": "https://github.com/licensee/licensee",
+    "category": "licensing",
+    "description": "The Ruby library GitHub uses to detect which license a repository has."
+  },
+  {
+    "id": "license-checker-rseidelsohn",
+    "name": "license-checker-rseidelsohn",
+    "url": "https://github.com/RSeidelsohn/license-checker-rseidelsohn",
+    "category": "licensing",
+    "description": "Lists the licenses of every npm dependency. The maintained fork of `license-checker`, whose last commit dates from January 2024."
+  },
+  {
+    "id": "fossa",
+    "name": "FOSSA",
+    "url": "https://fossa.com",
+    "category": "licensing",
+    "description": "Commercial license compliance and dependency scanning."
+  },
+  {
+    "id": "scancode-toolkit",
+    "name": "ScanCode Toolkit",
+    "url": "https://github.com/aboutcode-org/scancode-toolkit",
+    "category": "licensing",
+    "description": "Scans source code for licenses, copyrights and dependencies, offline."
+  },
+  {
+    "id": "oss-review-toolkit",
+    "name": "OSS Review Toolkit",
+    "url": "https://github.com/oss-review-toolkit/ort",
+    "category": "licensing",
+    "description": "Analyzes dependencies, scans them and produces a compliance report and an SBOM."
+  },
+  {
+    "id": "dependabot",
+    "name": "Dependabot",
+    "url": "https://docs.github.com/en/code-security/dependabot",
+    "category": "security",
+    "description": "GitHub’s alerts and automatic update PRs for vulnerable or outdated dependencies.",
+    "usedBy": ["open-resource", "bootstrap"]
+  },
+  {
+    "id": "renovate",
+    "name": "Renovate",
+    "url": "https://docs.renovatebot.com",
+    "category": "security",
+    "description": "Dependency update PRs with grouping, schedules and presets, on GitHub, GitLab and others."
+  },
+  {
+    "id": "codeql",
+    "name": "CodeQL",
+    "url": "https://github.com/github/codeql-action",
+    "category": "security",
+    "description": "GitHub’s code scanning: finds vulnerabilities by querying your code as data.",
+    "usedBy": ["bootstrap"]
+  },
+  {
+    "id": "socket",
+    "name": "Socket",
+    "url": "https://socket.dev",
+    "category": "security",
+    "description": "Flags risky behavior in the packages you add (install scripts, network access, typosquats) before you merge."
+  },
+  {
+    "id": "osv-scanner",
+    "name": "OSV-Scanner",
+    "url": "https://github.com/google/osv-scanner",
+    "category": "security",
+    "description": "Matches your lockfiles against the OSV vulnerability database."
+  },
+  {
+    "id": "syft",
+    "name": "Syft",
+    "url": "https://github.com/anchore/syft",
+    "category": "security",
+    "description": "Generates an SBOM from a directory, a container image or an archive."
+  },
+  {
+    "id": "grype",
+    "name": "Grype",
+    "url": "https://github.com/anchore/grype",
+    "category": "security",
+    "description": "Scans an image, a directory or an SBOM for known vulnerabilities. Pairs with Syft."
+  },
+  {
+    "id": "stepsecurity-harden-runner",
+    "name": "StepSecurity Harden-Runner",
+    "url": "https://github.com/step-security/harden-runner",
+    "category": "security",
+    "description": "Restricts and audits the network calls of a GitHub Actions runner."
+  },
+  {
+    "id": "gitleaks",
+    "name": "Gitleaks",
+    "url": "https://github.com/gitleaks/gitleaks",
+    "category": "security",
+    "description": "Finds secrets in a repository and its history, as a CLI or a pre-commit hook."
+  },
+  {
+    "id": "release-please",
+    "name": "release-please",
+    "url": "https://github.com/googleapis/release-please",
+    "category": "releases",
+    "description": "Opens a release PR from your Conventional Commits, then tags and publishes on merge."
+  },
+  {
+    "id": "changesets",
+    "name": "Changesets",
+    "url": "https://github.com/changesets/changesets",
+    "category": "releases",
+    "description": "Contributors add a small file per change; the release bumps versions and writes the changelog. Built for monorepos."
+  },
+  {
+    "id": "semantic-release",
+    "name": "semantic-release",
+    "url": "https://github.com/semantic-release/semantic-release",
+    "category": "releases",
+    "description": "Fully automated versioning and publishing, driven by commit messages."
+  },
+  {
+    "id": "keep-a-changelog",
+    "name": "Keep a Changelog",
+    "url": "https://keepachangelog.com",
+    "category": "releases",
+    "description": "A format for human-written changelogs: one section per version, grouped by kind of change."
+  },
+  {
+    "id": "github-generated-release-notes",
+    "name": "GitHub generated release notes",
+    "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes",
+    "category": "releases",
+    "description": "Release notes built from merged PRs, grouped by label with a `.github/release.yml` file.",
+    "usedBy": ["bootstrap"]
+  },
+  {
+    "id": "all-contributors",
+    "name": "All Contributors",
+    "url": "https://allcontributors.org",
+    "category": "community",
+    "description": "A bot and a spec to credit every kind of contribution in your README, not only code."
+  },
+  {
+    "id": "contributor-covenant",
+    "name": "Contributor Covenant",
+    "url": "https://www.contributor-covenant.org",
+    "category": "community",
+    "description": "The most adopted code of conduct, with translations.",
+    "usedBy": ["open-resource", "bootstrap"]
+  },
+  {
+    "id": "discourse",
+    "name": "Discourse",
+    "url": "https://www.discourse.org",
+    "category": "community",
+    "description": "Forum software, open source and self-hostable, for long conversations and support."
+  },
+  {
+    "id": "zulip",
+    "name": "Zulip",
+    "url": "https://zulip.com",
+    "category": "community",
+    "description": "Open source chat organized in topics, so threads stay readable."
+  },
+  {
+    "id": "giscus",
+    "name": "giscus",
+    "url": "https://giscus.app",
+    "category": "community",
+    "description": "Comments for your site, stored in GitHub Discussions."
+  },
+  {
+    "id": "better-github-co-authors",
+    "name": "Better GitHub Co-Authors",
+    "url": "https://github.com/delucis/better-github-coauthors",
+    "category": "community",
+    "description": "Browser extension that adds an \"Add co-authors\" button to the PR merge UI, collecting every participant as a \"Co-authored-by\" trailer. It credits reviewers and commenters, not only code contributors.",
+    "by": {
+      "name": "Chris Swithinbank",
+      "url": "https://github.com/delucis/"
+    }
+  },
+  {
+    "id": "github-sponsors",
+    "name": "GitHub Sponsors",
+    "url": "https://github.com/sponsors",
+    "category": "funding",
+    "description": "Recurring and one-time sponsorships.",
+    "usedBy": ["open-resource"]
+  },
+  {
+    "id": "open-collective",
+    "name": "Open Collective",
+    "url": "https://opencollective.com",
+    "category": "funding",
+    "description": "Transparent funding for a project or a group, with a public ledger and a fiscal host.",
+    "usedBy": ["bootstrap"]
+  },
+  {
+    "id": "polar",
+    "name": "Polar",
+    "url": "https://polar.sh",
+    "category": "funding",
+    "description": "Sponsorships, funded issues and paid benefits for maintainers."
+  },
+  {
+    "id": "thanks-dev",
+    "name": "thanks.dev",
+    "url": "https://thanks.dev",
+    "category": "funding",
+    "description": "Splits a monthly amount across the open source dependencies your projects use."
+  },
+  {
+    "id": "sponsorkit",
+    "name": "SponsorKit",
+    "url": "https://github.com/antfu-collective/sponsorkit",
+    "category": "funding",
+    "description": "Generates an image of your sponsors from several platforms, for a README.",
+    "article": "display-your-sponsors-in-your-github-readmes"
+  },
+  {
+    "id": "funding-yml",
+    "name": "`FUNDING.yml`",
+    "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository",
+    "category": "funding",
+    "description": "The file that adds a Sponsor button to your repository and points to your funding pages.",
+    "usedBy": ["open-resource"]
+  },
+  {
+    "id": "starlight",
+    "name": "Starlight",
+    "url": "https://starlight.astro.build",
+    "category": "docs",
+    "description": "Documentation theme for Astro, with navigation, search and i18n built in."
+  },
+  {
+    "id": "docusaurus",
+    "name": "Docusaurus",
+    "url": "https://docusaurus.io",
+    "category": "docs",
+    "description": "Meta’s React-based docs framework, with versioning and a blog."
+  },
+  {
+    "id": "vitepress",
+    "name": "VitePress",
+    "url": "https://vitepress.dev",
+    "category": "docs",
+    "description": "Vue-powered static site generator for docs, from Markdown."
+  },
+  {
+    "id": "mkdocs",
+    "name": "MkDocs",
+    "url": "https://www.mkdocs.org",
+    "category": "docs",
+    "description": "Python static site generator for docs. The core project’s last commit dates from October 2025; Material for MkDocs is the usual theme."
+  },
+  {
+    "id": "pagefind",
+    "name": "Pagefind",
+    "url": "https://pagefind.app",
+    "category": "docs",
+    "description": "Static search that runs on the built site, with no server.",
+    "usedBy": ["open-resource", "bootstrap"]
+  },
+  {
+    "id": "docsearch",
+    "name": "DocSearch",
+    "url": "https://docsearch.algolia.com",
+    "category": "docs",
+    "description": "Algolia’s free search for open source documentation sites."
+  },
+  {
+    "id": "lychee",
+    "name": "lychee",
+    "url": "https://lychee.cli.rs",
+    "category": "docs",
+    "description": "Fast link checker for Markdown and HTML, with a GitHub Action.",
+    "usedBy": ["open-resource"]
+  },
+  {
+    "id": "cspell",
+    "name": "cspell",
+    "url": "https://cspell.org",
+    "category": "docs",
+    "description": "Spell checker for code and docs, with a project dictionary for names and terms.",
+    "usedBy": ["open-resource", "bootstrap"]
+  },
+  {
+    "id": "actions-stale",
+    "name": "actions/stale",
+    "url": "https://github.com/actions/stale",
+    "category": "automation",
+    "description": "Marks inactive issues and PRs as stale, then closes them.",
+    "usedBy": ["bootstrap"]
+  },
+  {
+    "id": "actions-labeler",
+    "name": "actions/labeler",
+    "url": "https://github.com/actions/labeler",
+    "category": "automation",
+    "description": "Labels PRs from the paths they touch."
+  },
+  {
+    "id": "actions-first-interaction",
+    "name": "actions/first-interaction",
+    "url": "https://github.com/actions/first-interaction",
+    "category": "automation",
+    "description": "Posts a welcome message on a contributor’s first issue or PR."
+  },
+  {
+    "id": "probot",
+    "name": "Probot",
+    "url": "https://probot.github.io",
+    "category": "automation",
+    "description": "Framework for building GitHub Apps in Node.js."
+  },
+  {
+    "id": "github-cli",
+    "name": "GitHub CLI",
+    "url": "https://cli.github.com",
+    "category": "automation",
+    "description": "GitHub from the terminal: PRs, issues, releases and the API (`gh`)."
+  },
+  {
+    "id": "todoctor",
+    "name": "Todoctor",
+    "url": "https://github.com/azat-io/todoctor",
+    "category": "automation",
+    "description": "Tracks `TODO` comments in JavaScript and TypeScript repositories and charts them by type, with a table of every occurrence.",
+    "by": {
+      "name": "Azat S.",
+      "url": "https://github.com/azat-io"
+    }
+  },
+  {
+    "id": "slidev",
+    "name": "Slidev",
+    "url": "https://sli.dev",
+    "category": "social",
+    "description": "Slides from Markdown, for developers. Exports to PDF, which is how we make LinkedIn carousels.",
+    "article": "coding-linkedin-carousels",
+    "usedBy": ["open-resource"]
+  },
+  {
+    "id": "bluesky-starter-packs",
+    "name": "Bluesky starter packs",
+    "url": "https://bsky.social/about/blog/06-26-2024-starter-packs",
+    "category": "social",
+    "description": "Lists of accounts that a newcomer follows in one click, a way to gather a community.",
+    "article": "bluesky-starter-pack"
+  },
+  {
+    "id": "opengraph-xyz",
+    "name": "OpenGraph.xyz",
+    "url": "https://www.opengraph.xyz",
+    "category": "social",
+    "description": "Previews how a link looks when shared on social networks, and checks its meta tags."
+  },
+  {
+    "id": "shields-io",
+    "name": "Shields.io",
+    "url": "https://shields.io",
+    "category": "social",
+    "description": "Badges for READMEs: build status, version, downloads, sponsors.",
+    "usedBy": ["open-resource", "bootstrap"]
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "url": "https://ollama.com",
+    "category": "local-ai",
+    "description": "Runs open models on your machine with one command.",
+    "article": "running-a-local-ai-inside-obsidian-with-ollama"
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "url": "https://obsidian.md",
+    "category": "local-ai",
+    "description": "Local Markdown notes with plugins, one of which talks to Ollama.",
+    "article": "running-a-local-ai-inside-obsidian-with-ollama"
+  }
+]
