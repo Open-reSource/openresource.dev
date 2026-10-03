@@ -1,13 +1,13 @@
 ---
 layout: ../layouts/Page.astro
 title: How this site is made
-description: Who writes Open {re}Source, what it runs on, how it is licensed and how AI is used to produce it.
+description: Who writes Open {re}Source, what it runs on, how it is licensed and how its content is checked.
 ---
 
 export const prerender = true;
 
 {/* prettier-ignore */}
-<p class="lead">Julien Déramond writes Open \{re}Source with a few contributors, on Astro, hosted on Vercel. Drafts are produced with Claude models, and a human reads, edits and verifies every published word.</p>
+<p class="lead">Julien Déramond writes Open \{re}Source with a few contributors, on Astro, hosted on Vercel. A human reads, edits and verifies every published word.</p>
 
 ## Julien writes it, contributors fix it
 
@@ -32,13 +32,11 @@ The source is on [GitHub](https://github.com/Open-reSource/openresource.dev).
 | Content, images included                        | [CC BY-NC-SA 4.0](https://github.com/Open-reSource/openresource.dev/blob/main/LICENSE-CONTENT) |
 | The Open \{re}Source mark, favicons and artwork | All rights reserved                                                                            |
 
-## AI drafts, a human decides
+## Accuracy and AI
 
-Most pages start as a draft written with Claude models, which follow a written style guide for voice, structure and sources. A human then reads every published word, edits it and rewrites what does not sound right. Pull requests are reviewed by Julien before they are merged.
+AI tools may be part of the workflow, but a human reads, edits and takes responsibility for every published word. Pull requests are reviewed by Julien before they are merged.
 
 AI does not produce the evidence. Screenshots are taken for real in the product they show. Numbers are checked against their source and dated. A claim we cannot verify does not make it into the page.
-
-Behind this, a private planning backlog turns ideas into issues, and issues into pull requests.
 
 ## Report a problem or contribute
 
