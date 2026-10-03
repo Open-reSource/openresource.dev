@@ -54,6 +54,8 @@ export const collections = {
 			// Pages open with their own lead paragraph: the description stays for meta tags and cards.
 			extend: z.object({
 				hideDescription: z.boolean().default(true),
+				// Ids of related pages: `guide/<module>/<chapter>` or `articles/<slug>` (src/related.mjs).
+				related: z.array(z.string()).default([]),
 				date: z.coerce.date().optional(),
 				// Read by the sidebar and the status box too (src/chapter-status.mjs), which keep the same list.
 				status: z.enum(STATUSES).default('complete'),
@@ -65,7 +67,11 @@ export const collections = {
 		// Covers are files in public/covers/ (a URL), so the OG cards can read them too.
 		schema: () =>
 			blogSchema({
-				extend: z.object({ hideDescription: z.boolean().default(true), excerpt: z.string().optional() }),
+				extend: z.object({
+					hideDescription: z.boolean().default(true),
+					excerpt: z.string().optional(),
+					related: z.array(z.string()).default([]),
+				}),
 			}),
 	}),
 	showcase: showcaseCollection,

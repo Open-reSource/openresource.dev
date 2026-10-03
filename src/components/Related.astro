@@ -1,0 +1,88 @@
+---
+// Pages related to the current one, at the end of a chapter or an article: the ones it lists in `related`, and the
+// ones that list it, so one side of a link is enough. Each with its description and reading time.
+import { getCollection } from 'astro:content';
+import { readingTime } from '@deramond.dev/astro/blog';
+
+const id = Astro.url.pathname.replace(/^\/|\/$/g, '');
+
+// Same ids as src/related.mjs: `articles/<slug>` for articles, the docs id for the rest.
+const pages = [
+	...(await getCollection('docs')).map((entry) => ({ ...entry, id: entry.id, kind: 'Chapter' })),
+	...(await getCollection('articles')).map((entry) => ({ ...entry, id: `articles/${entry.id}`, kind: 'Article' })),
+];
+const current = pages.find((page) => page.id === id);
+const ids = new Set([
+	...(current?.data.related ?? []),
+	...pages.filter((page) => page.data.related.includes(id)).map((page) => page.id),
+]);
+const items = pages
+	.filter((page) => ids.has(page.id) && !('status' in page.data && page.data.status === 'stub'))
+	.map((page) => ({
+		href: `/${page.id}/`,
+		title: page.data.title,
+		description: page.data.description,
+		minutes: readingTime(page.body ?? ''),
+		kind: page.kind,
+	}));
+---
+
+{items.length > 0 && (
+	<aside class="related" aria-labelledby="related-title">
+		<h2 id="related-title">Related</h2>
+		<ul>
+			{items.map(({ href, title, description, minutes, kind }) => (
+				<li>
+					<a href={href}>{title}</a>
+					<span class="related__meta">
+						{kind} · {minutes} min
+					</span>
+					<p>{description}</p>
+				</li>
+			))}
+		</ul>
+	</aside>
+)}
+
+<style>
+	.related {
+		margin-top: var(--space-6);
+		padding-top: var(--space-3);
+		border-top: 1px solid var(--color-line);
+	}
+
+	.related h2 {
+		margin: 0 0 var(--space-2);
+		font: var(--type-eyebrow);
+		letter-spacing: var(--type-eyebrow-letter-spacing);
+		text-transform: uppercase;
+		color: var(--color-muted);
+	}
+
+	.related ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.related li {
+		margin: 0;
+		padding: var(--space-1) 0;
+		font: var(--type-small);
+	}
+
+	.related__meta {
+		margin-left: var(--space-2);
+		color: var(--color-muted);
+	}
+
+	.related p {
+		display: inline;
+		margin: 0;
+		color: var(--color-muted);
+	}
+
+	.related p::before {
+		content: '— ';
+	}
+</style>
