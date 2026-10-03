@@ -1,10 +1,10 @@
 # The last matching pattern wins. Owners are asked to review pull requests that touch these paths.
 
 # Default owners for everything
-*             @OWNER/maintainers
+*             @YOUR_ORG/maintainers
 
 # Documentation
-/docs/        @docs-person
+/docs/        @YOUR_DOCS_OWNER
 
 # CI and release automation
-/.github/     @OWNER/maintainers
+/.github/     @YOUR_ORG/maintainers

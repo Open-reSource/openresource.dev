@@ -11,8 +11,8 @@ Thanks for taking the time. This page is the short version of how to send a chan
 ## Set up
 
 ```sh
-git clone https://github.com/OWNER/REPO.git
-cd REPO
+git clone https://github.com/YOUR_ORG/YOUR_REPO.git
+cd YOUR_REPO
 # install the dependencies
 # run the tests
 ```

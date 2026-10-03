@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Question or idea
-    url: https://github.com/OWNER/REPO/discussions
+    url: https://github.com/YOUR_ORG/YOUR_REPO/discussions
     about: Ask questions and share ideas in Discussions, not in issues.
   - name: Security vulnerability
-    url: https://github.com/OWNER/REPO/security/advisories/new
+    url: https://github.com/YOUR_ORG/YOUR_REPO/security/advisories/new
     about: Report vulnerabilities privately. Don't open a public issue.

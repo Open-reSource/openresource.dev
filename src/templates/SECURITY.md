@@ -12,7 +12,7 @@
 
 Please don't open a public issue.
 
-Use [private vulnerability reporting](https://github.com/OWNER/REPO/security/advisories/new), or write to security@example.org.
+Use [private vulnerability reporting](https://github.com/YOUR_ORG/YOUR_REPO/security/advisories/new), or write to security@example.org.
 
 Include the affected version, the steps to reproduce, and what an attacker gains.
 
