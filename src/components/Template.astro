@@ -1,0 +1,89 @@
+---
+// One template of the gallery: its text in a scrollable preview, with a "Copy" button. Without JS, the text is still
+// there to select. The sources are the files in src/templates/, listed in src/templates.mjs.
+import { Button } from '@deramond.dev/astro';
+
+interface Props {
+	file: string;
+	path: string;
+	description: string;
+	chapter: { href: string; title: string };
+}
+
+const sources = import.meta.glob('../templates/*', { query: '?raw', import: 'default', eager: true }) as Record<
+	string,
+	string
+>;
+const { file, path, description, chapter } = Astro.props;
+const text = sources[`../templates/${file}`].trimEnd();
+const id = file.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+---
+
+<open-template class="template" data-text={text}>
+	<h2 id={id}>
+		<code>{file}</code>
+	</h2>
+	<p>{description}</p>
+	<p class="template__meta">
+		Goes in <code>{path}</code>. Used in <a href={chapter.href}>{chapter.title}</a>.
+	</p>
+	<pre tabindex="0"><code>{text}</code></pre>
+	<div class="template__actions" hidden>
+		<Button variant="quiet" size="sm" type="button" data-copy aria-label={`Copy ${file}`}>
+			Copy
+		</Button>
+		<span class="template__status" role="status"></span>
+	</div>
+</open-template>
+
+<style>
+	.template {
+		display: block;
+		margin: var(--space-5) 0;
+	}
+
+	.template__meta {
+		color: var(--color-muted);
+	}
+
+	.template pre {
+		max-height: 24rem;
+		overflow: auto;
+	}
+
+	.template__actions {
+		display: flex;
+		gap: var(--space-3);
+		align-items: center;
+	}
+
+	.template__actions[hidden] {
+		display: none;
+	}
+
+	.template__status {
+		font: var(--type-mono);
+		color: var(--color-muted);
+	}
+</style>
+
+<script>
+	class OpenTemplate extends HTMLElement {
+		connectedCallback() {
+			const actions = this.querySelector<HTMLElement>('.template__actions')!;
+			const status = this.querySelector<HTMLElement>('.template__status')!;
+			actions.hidden = !navigator.clipboard;
+			this.querySelector('[data-copy]')!.addEventListener('click', async () => {
+				try {
+					await navigator.clipboard.writeText(this.dataset.text!);
+					status.textContent = 'Copied';
+				} catch {
+					status.textContent = 'Copy failed';
+				}
+				setTimeout(() => (status.textContent = ''), 2000);
+			});
+		}
+	}
+
+	customElements.define('open-template', OpenTemplate);
+</script>

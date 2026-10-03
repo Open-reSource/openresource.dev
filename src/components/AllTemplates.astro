@@ -1,0 +1,12 @@
+---
+// The templates gallery: one <Template> per entry of src/templates.mjs, with the title of the chapter that uses it.
+import { getCollection } from 'astro:content';
+import { templates } from '../templates.mjs';
+import Template from './Template.astro';
+
+const docs = new Map((await getCollection('docs')).map((doc) => [doc.id, doc]));
+---
+
+{templates.map(({ chapter, ...template }) => (
+	<Template {...template} chapter={{ href: `/${chapter}/`, title: docs.get(chapter)!.data.title }} />
+))}
