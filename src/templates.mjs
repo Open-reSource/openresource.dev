@@ -1,7 +1,7 @@
 // The anchor of a template's card on the page.
 export const templateId = (file) => file.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
-// The templates gallery: one entry per file in src/templates/. `path` is where the file goes in a repository, `chapter`
+// The templates gallery: one entry per file in src/templates/. `path` is where the file goes in a repository (`zipPath` is its name in the zip when `path` is not a file path), `chapter`
 // the guide page that explains it (a doc id). tests/templates.test.ts fails on a missing file or chapter.
 export const templates = [
 	{
@@ -61,6 +61,7 @@ export const templates = [
 	{
 		file: 'ARCHIVED.md',
 		path: 'top of README.md',
+		zipPath: 'ARCHIVED.md',
 		description: 'The notice to put above the README when the project is archived: status, alternative, migration.',
 		chapter: 'guide/maintaining/burnout-succession-and-the-end',
 	},
