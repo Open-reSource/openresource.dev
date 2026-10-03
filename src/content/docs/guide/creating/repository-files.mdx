@@ -3,12 +3,15 @@ title: 'The Files That Turn a Repository Into a Project'
 description: README, LICENSE, CONTRIBUTING, code of conduct, SECURITY, FUNDING.yml, CHANGELOG, templates and CODEOWNERS, each with the smallest version that works.
 date: 2024-03-30
 lastUpdated: 2026-10-03
+related:
+  - guide/licensing/choosing-a-license
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
 import Template from '../../../../components/Template.astro';
+import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
 <p class="lead">A repository is a folder with a contract, and the contract is a handful of files most people copy from somewhere without reading. Each one answers a question a stranger would otherwise ask you in an issue. Here's what each file is for, the smallest version that works, and where GitHub shows it.</p>
@@ -217,3 +220,5 @@ A library with a narrow scope and two maintainers can live without issue templat
 - [Forge-specific repository folders](https://nesbitt.io/2026/02/22/forge-specific-repository-folders.html), by Andrew Nesbitt: which folder GitHub, GitLab, Gitea, Forgejo and Bitbucket read, and the traps when a project lives on several.
 - [Keep a Changelog](https://keepachangelog.com/en/1.1.0/): the format, and the reasons behind each rule, on one page.
 - [Contributor Covenant 3.0](https://www.contributor-covenant.org/version/3/0/): the code of conduct most projects start from.
+
+<Related />

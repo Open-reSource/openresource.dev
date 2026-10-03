@@ -2,7 +2,10 @@
 title: 'Reviewing Pull Requests: What to Check, What to Say, When to Close'
 description: A ten-second triage before the diff, a review checklist, labels that say what's blocking, words that keep people contributing, closing kindly, and merging so the history tells the story.
 date: 2026-09-27
-lastUpdated: 2026-09-30
+lastUpdated: 2026-10-03
+related:
+  - guide/maintaining/saying-no
+  - guide/contributing/contributing-to-open-source
 ---
 
 import Chat from '../../../../components/Chat.astro';
@@ -10,6 +13,7 @@ import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
 import ReviewCommentLabels from '../../../partials/review-comment-labels.mdx';
+import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
 <p class="lead">A review has two readers: the person who wrote the code, and whoever reads the thread in three years to understand why. Write for both. Here's what to check, how to label each comment so the author knows what's blocking, and when to close instead of asking for another round.</p>
@@ -186,3 +190,5 @@ A pull request written with an AI tool gets the same review, and the same bar. c
 - [About pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews): every button a reviewer can press, from GitHub's docs.
 - [Saying No](/guide/maintaining/saying-no/): the replies for pull requests that shouldn't be merged at all.
 - [Your First Contribution, Step by Step](/guide/contributing/contributing-to-open-source/): the same review, from the contributor's side.
+
+<Related />

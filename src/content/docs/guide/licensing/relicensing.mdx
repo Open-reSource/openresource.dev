@@ -2,11 +2,15 @@
 title: 'Relicensing: The Source-Available Wave, and the Forks That Answered'
 description: MongoDB, Elastic, HashiCorp, Redis and others left open source between 2018 and 2025. The timeline, the licenses they moved to, the forks, and what it means for you.
 date: 2026-09-27
-lastUpdated: 2026-09-27
+lastUpdated: 2026-10-03
+related:
+  - guide/licensing/cla-vs-dco
+  - guide/licensing/license-compatibility
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
 import InShort from '../../../../components/InShort.astro';
+import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
 <p class="lead">A license change is the moment a project says out loud who it was for. Between 2018 and 2025, MongoDB, Elastic, HashiCorp, Redis and others answered "not for the cloud providers" and moved to licenses that aren't open source; the community answered with forks, and Elastic and Redis later added an open-source license back. Here's the timeline, the licenses, and what it changes when you pick a dependency, sign a CLA or choose a license.</p>
@@ -150,3 +154,5 @@ A license doesn't keep a project open by itself, though. MinIO, still under AGPL
 - [HashiCorp adopts the Business Source License](https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license) and [the OpenTofu announcement](https://www.linuxfoundation.org/press/announcing-opentofu): both sides of one change, from the people who made them.
 - [Introducing the Functional Source License](https://blog.sentry.io/introducing-the-functional-source-license-freedom-without-free-riding/), by Sentry: the case for delayed open source, from a company that uses it.
 - [License Compatibility](/guide/licensing/license-compatibility/): what you can combine, and the tools that read your dependencies' licenses.
+
+<Related />

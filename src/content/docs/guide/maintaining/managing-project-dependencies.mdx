@@ -2,8 +2,13 @@
 title: Managing Project Dependencies
 description: 'Learn how to manage project dependencies effectively. Discover best practices for dependency management, versioning, and security to ensure your open-source project remains stable and secure.'
 date: 2024-11-02
-lastUpdated: 2026-09-26
+lastUpdated: 2026-10-03
+related:
+  - guide/maintaining/security-for-maintainers
+  - guide/licensing/license-compatibility
 ---
+
+import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
 <p class="lead">**Every dependency is code you ship without having written it.** Choose them carefully, lock their versions, update them in small steps, and audit them regularly. That keeps the project stable and secure as it grows.</p>
@@ -82,3 +87,5 @@ Dependencies can introduce security risks, so secure them:
 1. **Regularly Audit Dependencies**: Use tools like `npm audit`, `pip-audit`, `pipenv check`, or other command-line tools to scan your dependencies for known vulnerabilities. Make regular audits a habit to catch security risks early.
 2. **Stay Informed**: Monitor announcements from major dependencies for updates on vulnerabilities. Subscribe to mailing lists or security notifications if available. Awareness of risks and updates helps you stay proactive.
 3. **Remove Unused Dependencies**: Regularly review your project for unused dependencies and remove them. Each dependency is a potential security risk or contributes to project bloat, so keep your project lean and clean.
+
+<Related />
