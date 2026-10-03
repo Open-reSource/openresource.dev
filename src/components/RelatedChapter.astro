@@ -1,0 +1,48 @@
+---
+// "Related chapter" chip at the top of an article: the guide chapters it lists in `related`, so a reader who
+// landed on the article from search can reach the chapter that covers the topic in depth.
+import { getCollection } from 'astro:content';
+
+const id = Astro.url.pathname.replace(/^\/|\/$/g, '');
+
+const article = (await getCollection('articles')).find((entry) => `articles/${entry.id}` === id);
+const wanted = new Set(article?.data.related ?? []);
+const chapters = (await getCollection('docs'))
+	.filter((entry) => wanted.has(entry.id) && entry.id.startsWith('guide/'))
+	.filter((entry) => !('status' in entry.data && entry.data.status === 'stub'));
+---
+
+{chapters.length > 0 && (
+	<p class="related-chapter">
+		<span class="related-chapter__label">Related chapter</span>
+		{chapters.map((chapter) => (
+			<a href={`/${chapter.id}/`}>{chapter.data.title}</a>
+		))}
+	</p>
+)}
+
+<style>
+	.related-chapter {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-1) var(--space-2);
+		align-items: baseline;
+		margin: 0 0 var(--space-5);
+		padding-bottom: var(--space-4);
+		border-bottom: 1px solid var(--color-line);
+		font: var(--type-small);
+	}
+
+	.related-chapter__label {
+		font: var(--type-eyebrow);
+		letter-spacing: var(--type-eyebrow-letter-spacing);
+		text-transform: uppercase;
+		color: var(--color-muted);
+	}
+
+	.related-chapter a {
+		padding: 0 var(--space-2);
+		border: 1px solid var(--color-line);
+		border-radius: 999px;
+	}
+</style>
