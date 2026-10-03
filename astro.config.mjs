@@ -105,7 +105,7 @@ export default defineConfig({
 				report: { repo: 'Open-reSource/openresource.dev', template: 'content_problem.yml' },
 				sidebar: [
 					// No number: the modules count from 01, as on the homepage.
-					{ label: 'Guide', num: false, items: ['guide', 'guide/checklists'] },
+					{ label: 'Guide', num: false, items: ['guide', 'guide/checklists', 'guide/templates'] },
 					...modules.map(guide),
 					{
 						label: 'Resources',

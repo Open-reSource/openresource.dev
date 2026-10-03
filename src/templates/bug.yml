@@ -1,0 +1,45 @@
+name: Bug report
+description: Something doesn't work as documented.
+labels: ['bug', 'needs triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Search the [open issues](../issues) first: yours may already be there.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `project --version`.
+      placeholder: 2.4.1
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+      description: Paste the error message or the output.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps, or a link to a repository that reproduces it.
+      placeholder: |
+        1. Run `…`
+        2. …
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, runtime version, anything that might matter.
