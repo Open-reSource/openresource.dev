@@ -2,6 +2,7 @@
 // One template of the gallery: its text in a scrollable preview, with a "Copy" button. Without JS, the text is still
 // there to select. The sources are the files in src/templates/, listed in src/templates.mjs.
 import { Button } from '@deramond.dev/astro';
+import { templateId } from '../templates.mjs';
 
 interface Props {
 	file: string;
@@ -16,7 +17,7 @@ const sources = import.meta.glob('../templates/*', { query: '?raw', import: 'def
 >;
 const { file, path, description, chapter } = Astro.props;
 const text = sources[`../templates/${file}`].trimEnd();
-const id = file.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+const id = templateId(file);
 ---
 
 <open-template class="template" data-text={text}>

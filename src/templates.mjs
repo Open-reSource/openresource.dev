@@ -1,3 +1,6 @@
+// The anchor of a template's card on the page.
+export const templateId = (file) => file.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
 // The templates gallery: one entry per file in src/templates/. `path` is where the file goes in a repository, `chapter`
 // the guide page that explains it (a doc id). tests/templates.test.ts fails on a missing file or chapter.
 export const templates = [
@@ -17,12 +20,6 @@ export const templates = [
 		file: 'SECURITY.md',
 		path: 'SECURITY.md',
 		description: 'Supported versions, a private way to report, and a promise about timing.',
-		chapter: 'guide/creating/repository-files',
-	},
-	{
-		file: 'CODE_OF_CONDUCT.md',
-		path: 'CODE_OF_CONDUCT.md',
-		description: 'A short standard, who enforces it, and who to write to.',
 		chapter: 'guide/creating/repository-files',
 	},
 	{
