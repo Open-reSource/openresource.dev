@@ -1,0 +1,107 @@
+---
+// The tools directory: one section per category of src/tools.mjs, with a category filter. Without JS, every section
+// shows and the filter buttons stay hidden.
+import { Badge } from '@deramond.dev/astro';
+import { categories, tools } from '../tools.mjs';
+
+const sections = categories.map((category) => ({
+	...category,
+	tools: tools.filter((tool) => tool.category === category.id),
+}));
+---
+
+<open-tools>
+	<div class="tools__filter" role="group" aria-label="Filter by category" hidden>
+		<button type="button" data-category="" aria-pressed="true">
+			All ({tools.length})
+		</button>
+		{sections.map(({ id, title, tools }) => (
+			<button type="button" data-category={id} aria-pressed="false">
+				{title} ({tools.length})
+			</button>
+		))}
+	</div>
+
+	{sections.map(({ id, title, tools }) => (
+		<section class="tools__category" data-category={id}>
+			<h2 id={id}>{title}</h2>
+			<ul>
+				{tools.map(({ name, url, description, by, usedBy, article }) => (
+					<li>
+						<a href={url}>{name.startsWith('`') ? <code>{name.slice(1, -1)}</code> : name}</a>
+						{by && (
+							<>
+								{' '}
+								by <a href={by.url}>{by.name}</a>
+							</>
+						)}{' '}
+						– {description}
+						{article && (
+							<>
+								{' '}
+								<a href={`/articles/${article}/`}>Read our article</a>.
+							</>
+						)}
+						{usedBy && (
+							<>
+								{' '}
+								<Badge kind="success">We use it</Badge> in {usedBy.join(' and ')}.
+							</>
+						)}
+					</li>
+				))}
+			</ul>
+		</section>
+	))}
+</open-tools>
+
+<style>
+	.tools__filter {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+		margin: var(--space-5) 0;
+	}
+
+	.tools__filter[hidden] {
+		display: none;
+	}
+
+	.tools__filter button {
+		padding: var(--space-1) var(--space-3);
+		border: var(--stroke-hairline) solid var(--color-line);
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		cursor: pointer;
+	}
+
+	.tools__filter button[aria-pressed='true'] {
+		border-color: var(--color-primary);
+		background: var(--color-panel);
+	}
+
+	.tools__category[hidden] {
+		display: none;
+	}
+</style>
+
+<script>
+	class OpenTools extends HTMLElement {
+		connectedCallback() {
+			const filter = this.querySelector<HTMLElement>('.tools__filter')!;
+			const buttons = [...filter.querySelectorAll<HTMLButtonElement>('button')];
+			const sections = [...this.querySelectorAll<HTMLElement>('.tools__category')];
+			const show = (category: string) => {
+				buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.category === category)));
+				sections.forEach((section) => (section.hidden = category !== '' && section.dataset.category !== category));
+			};
+			filter.hidden = false;
+			buttons.forEach((button) => button.addEventListener('click', () => show(button.dataset.category!)));
+			const fromHash = location.hash.slice(1);
+			if (sections.some((section) => section.dataset.category === fromHash)) show(fromHash);
+		}
+	}
+
+	customElements.define('open-tools', OpenTools);
+</script>
