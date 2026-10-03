@@ -14,5 +14,5 @@ All notable changes to this project are documented here. The format follows [Kee
 
 - First public release.
 
-[Unreleased]: https://github.com/OWNER/REPO/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/OWNER/REPO/releases/tag/v1.0.0
+[Unreleased]: https://github.com/YOUR_ORG/YOUR_REPO/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/YOUR_ORG/YOUR_REPO/releases/tag/v1.0.0

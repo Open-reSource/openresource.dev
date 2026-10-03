@@ -2,8 +2,8 @@
 
 One sentence: what it does and for whom.
 
-[![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/OWNER/REPO)](LICENSE)
+[![CI](https://github.com/YOUR_ORG/YOUR_REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_ORG/YOUR_REPO/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/YOUR_ORG/YOUR_REPO)](LICENSE)
 
 ![A screenshot or a short GIF of the project at work](docs/screenshot.png)
 

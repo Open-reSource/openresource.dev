@@ -1,5 +1,5 @@
-// A zip of every template, each at the path it goes to in a repository, so unzipping at the root of a project puts
-// the files in place. Written by hand (stored entries, no compression): the files are small text and this avoids a
+// A zip of every template, each at the path it goes to in a repository, so the files can be copied into a project
+// as they are. Written by hand (stored entries, no compression): the files are small text and this avoids a
 // dependency.
 const encoder = new TextEncoder();
 
