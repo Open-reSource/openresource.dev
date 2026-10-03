@@ -20,6 +20,11 @@
 - Refactoring (non-breaking change)
 - Breaking change (fix or feature that would change existing functionality)
 
+### AI tools
+
+- [ ] I didn't use AI tools for this change, or only for line completion.
+- [ ] I used: <!-- tool and what for -->. I reviewed, ran and can explain every line.
+
 ### Checklist
 
 <!-- Go over all the following points, and put an `x` in all the boxes that apply. -->

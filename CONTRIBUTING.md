@@ -119,6 +119,22 @@ Adhering to the following process is the best way to get your work included in t
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project owners to license your work under the terms of the [MIT License](LICENSE) (if it includes code changes) and under the terms of the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (if it includes content changes).
 
+## AI tools
+
+You may use AI tools to contribute. You're responsible for what you send, as if you had written every line yourself.
+
+- **Say so.** If a tool wrote a significant part of your change, name it in the pull request description. Line completion doesn't count.
+- **Understand it.** You must be able to explain every line in your own words. If a maintainer asks and you can't, we close the pull request.
+- **Run it.** Build and test the change yourself before you open the pull request. "The tool says it works" isn't a test.
+- **Keep it small.** No changes unrelated to the issue, however tidy.
+- **Reproduce first.** Don't open an issue or a security report from AI output you haven't reproduced yourself. Put the steps in the report. Unverified reports are closed without reply, and repeat senders are blocked.
+- **Write to us yourself.** Descriptions, comments and replies to reviews are yours. Translation tools are fine.
+- **No unattended agents.** Don't let a tool open pull requests, issues or comments here without you reviewing each one first.
+- **Leave good first issues to people learning the project.** Don't solve them with AI tools.
+- **Sign off yourself.** If this project asks for a `Signed-off-by:` line, only a human adds it.
+
+Maintainers may close contributions that break these rules without a detailed review.
+
 ## License
 
 By contributing your code, you agree to license your contribution under the [MIT License](LICENSE).
