@@ -7,6 +7,7 @@ export const TAG_MODULES = {
 	Community: 'maintaining',
 	Contribution: 'contributing',
 	Funding: 'financing',
+	Security: 'maintaining',
 	Sponsors: 'financing',
 };
 

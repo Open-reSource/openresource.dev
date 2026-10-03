@@ -1,0 +1,222 @@
+---
+title: 'The EU Cyber Resilience Act for Open-Source Maintainers, in Plain Words'
+description: "Whether the CRA applies to you, what stewards and manufacturers owe, the dates, and what lands on a maintainer's desk, each claim linked to its source."
+date: 2026-10-03
+lastUpdated: 2026-10-03
+related:
+  - guide/maintaining/security-for-maintainers
+  - guide/creating/repository-files
+  - guide/maintaining/saying-no
+excerpt: "**The Cyber Resilience Act is the EU law that makes companies responsible for the security of the software they sell, open-source parts included.** If you maintain a project for free, it almost certainly does not apply to you. If a company ships your project in a product, it applies to them, and they will start asking you questions.
+<br><br>
+**This article walks through the law in the order those questions arrive:** whether it applies to you, the dates, what a foundation or a company that publishes open source owes as a steward, what manufacturers owe, and what that means for your inbox. Every date and obligation links to the article of the regulation or the paragraph of the Commission's guidance it comes from."
+authors: julien
+cover: /covers/cyber-resilience-act-for-maintainers.svg
+tags:
+  - Security
+  - Regulation
+---
+
+import CategoryMap from '../../components/CategoryMap.astro';
+import Timeline from '../../components/Timeline.astro';
+import Related from '../../components/Related.astro';
+import RelatedChapter from '../../components/RelatedChapter.astro';
+
+<RelatedChapter />
+
+{/* prettier-ignore */}
+<p class="lead">The Cyber Resilience Act (CRA) is the EU law that makes companies responsible for the security of the software they sell, including the open-source parts. If you maintain a project for free, it almost certainly does not apply to you. If a company ships your project in a product, it applies to them, and they will start asking you questions. Here's what the law says, in the order you'll be asked.</p>
+
+Two texts answer almost everything: [the regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) itself, Regulation (EU) 2024/2847, and the [Commission's guidance](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation) of July 27, 2026, whose third chapter is about open source, with 22 worked examples. The guidance is an 84-page PDF; the links below point to the [copy kept by the Eclipse Foundation's ORC working group](https://cra.orcwg.org/official-guidance/), which has an anchor on every paragraph and example. The guide's chapter on [security for maintainers](/guide/maintaining/security-for-maintainers/#the-eu-cyber-resilience-act-briefly) has the three-bullet version.
+
+## Three questions decide whether it applies to you
+
+The CRA covers products "made available on the market", which means supplied "in the course of a commercial activity" ([recital 15](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#rct_15)). For open source, the guidance turns that into three questions.
+
+1. **Is the project under your responsibility?** It is if you publish it and control its releases, roadmap and governance: the guidance calls you a maintainer. If you send a pull request that gets merged, you're a contributor, and the CRA doesn't apply to you. Commit access alone doesn't change that ([para 49](https://cra.orcwg.org/official-guidance/#pnt_49), [Example 13](https://cra.orcwg.org/official-guidance/#exm_13), [recital 18](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#rct_18)).
+2. **Do you monetize it?** Software "not monetised by their manufacturers" is out, in the regulation's words ([recital 18](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#rct_18)). If you do, you're its manufacturer, with the full set of obligations. The next section draws that line.
+3. **If you don't, who are you?** An individual has no obligations, even when three companies ship the project and donate to it ([Example 27](https://cra.orcwg.org/official-guidance/#exm_27)). A legal person, like a foundation or a company, that supports the project on a sustained basis for commercial use is its open-source software steward, with a light set of obligations ([Article 3(14)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_3), [section 3.3](https://cra.orcwg.org/official-guidance/#sct_3.sct_3)).
+
+The guidance's examples, sorted by the role they end in:
+
+<CategoryMap
+	label="Who is what under the CRA: no obligations, open-source software steward, or manufacturer. Each box links to the example in the Commission guidance."
+	groups={[
+		{
+			label: 'No obligations',
+			categories: [
+				{
+					label: 'Contributor',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_13',
+					examples: 'A merged pull request, even with commit access',
+				},
+				{
+					label: 'Individual maintainer',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_27',
+					examples: 'Free, with donations, even from the companies that ship it',
+				},
+				{
+					label: 'Paid for a feature',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_23',
+					examples: 'A company funds it, the result is free for everyone',
+				},
+				{
+					label: 'Registry or forge',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_34',
+					examples: 'Hosting the package is not supplying it',
+				},
+			],
+		},
+		{
+			label: 'Steward (Article 24)',
+			categories: [
+				{
+					label: 'Foundation',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_28',
+					examples: 'Hosts and supports a project companies ship',
+				},
+				{
+					label: 'Company library',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_29',
+					examples: 'Published for free, also used in its own products',
+				},
+				{
+					label: 'Not-for-profit with revenue',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_24',
+					examples: 'A browser funded by search deals',
+				},
+			],
+		},
+		{
+			label: 'Manufacturer (Article 13)',
+			categories: [
+				{
+					label: 'Paid edition',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_17',
+					examples: 'Support or tuning only in the version you pay for',
+				},
+				{
+					label: 'Releases for donors',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_21',
+					examples: 'Binaries, updates or fixes only for those who pay',
+				},
+				{
+					label: 'Free app that sells',
+					href: 'https://cra.orcwg.org/official-guidance/#exm_14',
+					examples: 'A marketplace, a VPN with paid servers, data for ads',
+				},
+				{
+					label: 'Whoever ships your code',
+					href: 'https://cra.orcwg.org/official-guidance/#pnt_88',
+					examples: 'In a product sold in the EU',
+				},
+			],
+		},
+	]}
+/>
+
+If you maintain a project as part of your job and your employer publishes it without selling it, your employer is probably its steward ([Examples 25 and 29](https://cra.orcwg.org/official-guidance/#exm_25)). The obligations are the company's, not yours personally: the cybersecurity policy is a question for your manager.
+
+## Getting paid is fine, charging for access is not
+
+**What makes you a manufacturer is putting the software, or its fixes, behind a payment.** How the work was funded doesn't count ([recital 18](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#rct_18)).
+
+| Not monetized: no obligations                                                                                                      | Monetized: manufacturer                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Donations, even above your costs, reasonable living expenses included ([para 61](https://cra.orcwg.org/official-guidance/#pnt_61)) | Releases or security updates only for donors ([Examples 21 and 22](https://cra.orcwg.org/official-guidance/#exm_21))     |
+| A company paying you to build a feature that everyone gets ([Example 23](https://cra.orcwg.org/official-guidance/#exm_23))         | A price for the software or its binaries ([para 51](https://cra.orcwg.org/official-guidance/#pnt_51))                    |
+| Consulting, training or support sold next to free downloads ([Example 18](https://cra.orcwg.org/official-guidance/#exm_18))        | A paid edition with support bundled in ([Example 17](https://cra.orcwg.org/official-guidance/#exm_17))                   |
+| Sponsorships, grants, bug bounties ([para 63](https://cra.orcwg.org/official-guidance/#pnt_63))                                    | Use conditioned on personal data for ads or analytics ([Example 16](https://cra.orcwg.org/official-guidance/#exm_16))    |
+| Regular releases ([recital 18](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#rct_18))                                         | A free app through which you sell other services ([Examples 14 and 15](https://cra.orcwg.org/official-guidance/#exm_14)) |
+
+Open core splits in two: the paid version is placed on the market, the free community version is not ([para 52](https://cra.orcwg.org/official-guidance/#pnt_52)). A company that publishes both is the manufacturer of one and the steward of the other ([para 53](https://cra.orcwg.org/official-guidance/#pnt_53)).
+
+## Reporting started in September 2026, the rest comes in December 2027
+
+<Timeline
+	label="The Cyber Resilience Act's dates, 2024 to 2027"
+	entries={[
+		{
+			year: '2024',
+			title: 'The CRA enters into force',
+			detail: 'Published in the Official Journal on November 20, in force on December 10 (Article 71)',
+		},
+		{
+			year: '2026',
+			title: 'The Commission publishes its guidance, with a chapter on open source',
+			detail: 'July 27, 2026',
+		},
+		{
+			year: '2026',
+			title: 'Manufacturers must report actively exploited vulnerabilities and severe incidents',
+			detail:
+				"From September 11, 2026, through ENISA's Single Reporting Platform, for products already on the market too (Articles 14 and 69(3))",
+		},
+		{
+			year: '2027',
+			title:
+				"Everything else applies: the security requirements, SBOMs, support periods, reporting to upstream projects, and the stewards' obligations",
+			detail: 'December 11, 2027 (Article 71(2))',
+			accent: true,
+		},
+	]}
+/>
+
+The reporting deadlines are short: an early warning within 24 hours of becoming aware of an actively exploited vulnerability, a notification within 72 hours, and a final report within 14 days of a fix being available ([Article 14](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_14)). Stewards report only from December 11, 2027 (the Commission's [reporting page](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting)), and so does the rule that matters most to you as a maintainer, the duty to report upstream, which is part of [Article 13](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_13).
+
+## Stewards owe a policy, not a CE mark
+
+A steward's obligations fit in [Article 24](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_24): a documented cybersecurity policy that fosters secure development and vulnerability handling, cooperation with market surveillance authorities when they ask, and reporting only as far as the steward is involved. A foundation that only handles branding and donations isn't required to report anything; one that runs the forge or the signing keys reports incidents on that infrastructure; one that employs the developers reports actively exploited vulnerabilities too ([paras 79 to 82](https://cra.orcwg.org/official-guidance/#pnt_79)).
+
+Stewards can't put a CE marking on the software ([recital 19](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#rct_19)), and **they can't be fined under the CRA** ([Article 64(10)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_64)). Being a steward is per project: a foundation can be the steward of some of the projects it hosts and nothing for others ([para 78](https://cra.orcwg.org/official-guidance/#pnt_78)). If your project is joining one, the guide's chapter on governance covers [when a foundation makes sense](/guide/maintaining/governance/#join-a-foundation-when-others-depend-on-you); ask the foundation how it handles the CRA before you join.
+
+## Manufacturers owe the work, including some of it to you
+
+A manufacturer meets the security requirements of [Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#anx_I), and from December 11, 2027 that includes:
+
+- **An SBOM** "covering at the very least the top-level dependencies" (Annex I, Part II, point 1).
+- **A support period** of at least five years, unless the product is expected to be used for less ([Article 13(8)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_13)).
+- **Security updates kept available** for 10 years after they're issued, or the rest of the support period if that's longer (Article 13(9)).
+- **Due diligence on every component** they integrate, open source included (Article 13(5)): checking that it receives security updates and that it has no known vulnerabilities in public databases, among other measures ([recital 34](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#rct_34)).
+- **Reporting upstream** (Article 13(6)): a manufacturer that finds a vulnerability in your component must report it to you, unless it can confirm you already know, and if it writes a fix, share it with you.
+
+Fines for manufacturers go up to €15 million or 2.5% of worldwide annual turnover (Article 64(2)). That number explains the tone of some of the emails you'll get.
+
+## What lands on your desk
+
+**None of this obliges you to do anything.** A maintainer whose project isn't placed on the market bears no obligations toward the companies that integrate it ([para 87](https://cra.orcwg.org/official-guidance/#pnt_87)). What changes is your inbox.
+
+**Vulnerability reports.** The guidance asks manufacturers to report through your security policy or reporting channel when you have one, to skip reports when they can confirm you already know, and to check public databases and your advisories first ([para 223](https://cra.orcwg.org/official-guidance/#pnt_223)). A `SECURITY.md` with a private channel decides where those reports land and how they're written. The security chapter has [a template and the four settings](/guide/maintaining/security-for-maintainers/#before-the-first-report-one-file-and-four-settings) that go with it.
+
+**Patches.** A shared fix should come under a license compatible with yours, and follow your guidelines for sharing fixes if you have some ([para 227](https://cra.orcwg.org/official-guidance/#pnt_227)). The manufacturer doesn't have to get it merged ([para 228](https://cra.orcwg.org/official-guidance/#pnt_228)), and you don't have to merge it.
+
+**Questionnaires and "please sign this".** The OpenSSF [CRA guidelines for maintainers](https://policy.openssf.org/CRA/maintainers.html) list what to expect: security questionnaires, supplier onboarding, compliance declarations. Their advice, as of October 2026, is not to sign anything that takes on CRA compliance, certifies a downstream product or guarantees the absence of vulnerabilities. That's the OpenSSF reading, not the law's text, but it matches the regulation: the obligations stay with whoever places the product on the market.
+
+**Due diligence questions you can answer in advance.** Two of the checks the regulation suggests are public: whether you ship security updates, and whether your releases have known vulnerabilities. A supported-versions table in `SECURITY.md`, [published advisories](/guide/maintaining/security-for-maintainers/#one-advisory-gets-you-a-cve-and-alerts-every-user) and a [changelog](/guide/creating/repository-files/#a-changelog-is-written-for-the-people-upgrading) answer both without a questionnaire.
+
+When a request goes beyond that, the answer can be "no", or "yes, under a support contract". [Saying No](/guide/maintaining/saying-no/#five-kinds-of-no-with-the-reply-to-save) has the replies. A support contract next to free downloads doesn't make you a manufacturer ([Example 18](https://cra.orcwg.org/official-guidance/#exm_18)).
+
+## Where the money is
+
+As of October 2026:
+
+- **Sovereign Tech Resilience**, the German Sovereign Tech Agency's program, [relaunched on September 28, 2026](https://www.sovereign.tech/news/resilience-relaunch) with a CRA compliance service for critical open-source projects: an assessment against the regulation and help closing the gaps, delivered by EY Consulting at no cost to the project. Applications are reviewed on a rolling basis.
+- **The security funds** the guide already lists, from Alpha-Omega to the GitHub Secure Open Source Fund: see [You don't have to do it alone](/guide/maintaining/security-for-maintainers/#you-dont-have-to-do-it-alone).
+- **The manufacturers themselves.** They now have a legal reason to care about your release process, and a support contract is a way for them to pay for it.
+
+The regulation also lets the Commission set up voluntary security attestation programs for open source, which anyone could fund, including the companies that depend on a project ([Article 25](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_25)). If one appears, it would answer due diligence once instead of questionnaire by questionnaire.
+
+## This is not legal advice: who to ask
+
+This article explains the text; it doesn't replace someone who can read your situation. If you sell anything around your project, a paid edition, binaries, support bundled with access, ask a lawyer before December 2027. If your project belongs to a foundation, ask the foundation: it's the steward, and the CRA is its question first. For everything else, the [OpenSSF brief guide](https://best.openssf.org/CRA-Brief-Guide-for-OSS-Developers.html) and the [ORC working group's CRA FAQ](https://cra.orcwg.org/) answer the common cases and link the official texts.
+
+The dates above were checked on October 3, 2026 against the regulation and the Commission's [CRA page](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act).
+
+## Go further
+
+- [The Commission's page on the CRA and open source](https://digital-strategy.ec.europa.eu/en/policies/cra-open-source): the official summary of the open-source rules, in a few paragraphs.
+- [Chapter 3 of the guidance](https://cra.orcwg.org/official-guidance/#sct_3): all 22 open-source examples, and the flowchart that sums them up.
+- [The OpenSSF CRA guidelines for maintainers](https://policy.openssf.org/CRA/maintainers.html): what to publish, and what not to sign.
+- [Security for Maintainers](/guide/maintaining/security-for-maintainers/): the `SECURITY.md`, the private reports and the advisories that answer most of the questions above.
+
+<Related />
