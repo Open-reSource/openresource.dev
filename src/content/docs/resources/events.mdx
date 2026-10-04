@@ -1,5 +1,6 @@
 ---
 title: Events
+lastUpdated: 2026-10-03
 description: Find upcoming events related to open source.
 head:
   - tag: meta
@@ -10,10 +11,16 @@ head:
 
 import { Image } from 'astro:assets';
 import banner from '../../../assets/resources/events.svg';
+import EventsCalendar from '../../../components/EventsCalendar.astro';
 
 <Image src={banner} alt="" width="720" height="200" />
 
-Find upcoming events related to open source.
+Find upcoming events related to open source. Sorted by next date, with the editions that already happened greyed. Dates checked on each event's site in October 2026; confirm them before you book anything.
 
-- [Hacktoberfest](https://hacktoberfest.com/) – Every October: 300+ one-day, in-person Fests and an online program about open source. [What it is and how to take part](/articles/hacktoberfest/).
+<EventsCalendar />
+
+## Everything else
+
+Not listed above? [foss.events](https://foss.events/) has the rest. For Hacktoberfest, read [what it is and how to take part](/articles/hacktoberfest/).
+
 - [foss.events](https://foss.events/) – Connecting people via the most comprehensive collection of <abbr title="Free and Open-Source Software">FOSS</abbr> events happening in Europe and online. Unity in diversity!

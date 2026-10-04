@@ -1,0 +1,128 @@
+# Open source events, sorted by the page: next date first, undated last, past ones greyed.
+# `start`/`end` are ISO dates of the next edition (or of the last one when the next is not announced).
+# Leave them out when the next edition has no dates yet and write the usual month in `month`.
+# Every date here was checked on the event's own site in October 2026: re-check them each year.
+- id: hacktoberfest
+  name: Hacktoberfest
+  kind: event
+  place: Online and 400+ local Fests
+  month: October
+  start: 2026-10-01
+  end: 2026-10-31
+  free: true
+  focus: Beginner-friendly open source participation. In 2026, pull requests no longer count toward the rewards.
+  url: https://hacktoberfest.com/
+- id: open-source-summit-europe
+  name: Open Source Summit Europe
+  kind: event
+  place: Prague, Czechia
+  month: September or October
+  start: 2026-10-07
+  end: 2026-10-09
+  focus: Vendor-neutral conference for open source developers, run by the Linux Foundation.
+  url: https://events.linuxfoundation.org/open-source-summit-europe/
+- id: all-things-open
+  name: All Things Open
+  kind: event
+  place: Raleigh, North Carolina, USA
+  month: October
+  start: 2026-10-19
+  end: 2026-10-20
+  focus: Open source, open tech and the community around it.
+  url: https://allthingsopen.org/
+- id: github-universe
+  name: GitHub Universe
+  kind: event
+  place: San Francisco, USA, and online
+  month: October or November
+  start: 2026-10-28
+  end: 2026-10-29
+  focus: "GitHub's own conference. Virtual attendance is free."
+  url: https://githubuniverse.com/
+- id: 24-pull-requests
+  name: 24 Pull Requests
+  kind: program
+  place: Online
+  month: December
+  start: 2026-12-01
+  end: 2026-12-24
+  free: true
+  focus: One contribution a day, or fewer, during the 24 days before Christmas.
+  url: https://24pullrequests.com/
+- id: open-source-summit-japan
+  name: Open Source Summit Japan
+  kind: event
+  place: Tokyo, Japan
+  month: December
+  start: 2026-12-07
+  end: 2026-12-09
+  focus: Linux Foundation conference for the Japanese open source community.
+  url: https://events.linuxfoundation.org/open-source-summit-japan/
+- id: open-source-experience
+  name: Open Source Experience
+  kind: event
+  place: Paris, France
+  month: December
+  start: 2026-12-09
+  end: 2026-12-10
+  free: true
+  focus: European trade show on sovereignty, resilience and open source in business. Visitor badges are free.
+  url: https://www.opensource-experience.com/en/
+- id: outreachy
+  name: Outreachy
+  kind: program
+  place: Remote
+  month: Applications in February and August
+  focus: "Paid three-month remote internships in open source. The December 2026 round's final application deadline is 2 November 2026."
+  url: https://www.outreachy.org/
+- id: fosdem
+  name: FOSDEM
+  kind: event
+  place: Brussels, Belgium
+  month: Late January or early February
+  start: 2027-01-30
+  end: 2027-01-31
+  free: true
+  focus: "Free and Open Source Software Developers' European Meeting. The calls for devrooms and stands for 2027 are closed."
+  url: https://fosdem.org/2027/
+- id: state-of-open-con
+  name: State of Open Con
+  kind: event
+  place: London, UK
+  month: February
+  start: 2027-02-09
+  end: 2027-02-10
+  focus: UK open source conference. The 2026 edition was split across several cities.
+  url: https://stateofopencon.com/
+- id: foss-backstage
+  name: FOSS Backstage
+  kind: event
+  place: Berlin, Germany
+  month: March
+  focus: 'Open source management: governance, community, compliance and funding. The 2027 dates are not announced.'
+  url: https://foss-backstage.de/
+- id: google-summer-of-code
+  name: Google Summer of Code
+  kind: program
+  place: Remote
+  month: Organizations in January, contributor proposals in March
+  focus: Paid mentored projects with open source organizations. The 2027 timeline is not published.
+  url: https://summerofcode.withgoogle.com/
+- id: open-source-summit-north-america
+  name: Open Source Summit North America
+  kind: event
+  place: Vancouver, Canada
+  month: May or June
+  start: 2027-05-17
+  end: 2027-05-19
+  focus: Vendor-neutral conference for open source developers, run by the Linux Foundation.
+  url: https://events.linuxfoundation.org/open-source-summit-north-america/
+- id: open-source-summit-europe-2027
+  name: Open Source Summit Europe 2027
+  kind: event
+  place: Glasgow, Scotland
+  month: September
+  start: 2027-09-20
+  end: 2027-09-22
+  focus: "The 2027 edition of the Linux Foundation's European summit."
+  url: https://events.linuxfoundation.org/open-source-summit-europe-2027/
