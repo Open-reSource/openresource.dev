@@ -63,7 +63,7 @@ const hasCfp = events.some((event) => event.cfp);
 					</th>
 					<td>{when(event)}</td>
 					<td>{event.place}</td>
-					<td>{event.free ? 'Yes' : 'See the site'}</td>
+					<td class="events__free">{event.free ? 'Yes' : 'See the site'}</td>
 					{hasCfp && <td>{event.cfp ? <a href={event.cfp}>Submit</a> : ''}</td>}
 					<td>{event.focus}</td>
 				</tr>
@@ -76,6 +76,15 @@ const hasCfp = events.some((event) => event.cfp);
 	.events {
 		overflow-x: auto;
 		margin: 0 0 1.25em;
+	}
+
+	.events th,
+	.events td {
+		vertical-align: top;
+	}
+
+	.events__free {
+		white-space: nowrap;
 	}
 
 	.events__past {
