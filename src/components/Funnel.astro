@@ -1,0 +1,103 @@
+---
+// Who does what, as a funnel: one bar per stage, as wide as its share and aligned left, so the bars read from a common edge and the shape
+// narrows as it goes down. Real text in a list, so it reads at every width and in a screen reader. At most one gold bar (`accent`): the
+// stage the reader is here for.
+export interface Stage {
+	label: string;
+	/** Share of the whole, 0 to 100: the bar's width. */
+	share: number;
+	/** The number as the text shows it, with its unit: "87%", "1 in 50". */
+	value: string;
+	detail?: string;
+	accent?: boolean;
+}
+
+export interface Props {
+	stages: Stage[];
+	label: string;
+	caption?: string;
+}
+
+const { stages, label, caption } = Astro.props;
+---
+
+<figure class="funnel" aria-label={label}>
+	<ol class="funnel__stages">
+		{stages.map(({ label, share, value, detail, accent }) => (
+			<li class:list={['funnel__stage', { 'funnel__stage--accent': accent }]}>
+				<span class="funnel__track" aria-hidden="true">
+					<span class="funnel__bar" style={`--share: ${share}%`} />
+				</span>
+				<span class="funnel__text">
+					<span class="funnel__value">{value}</span> <span class="funnel__label">{label}</span>
+					{detail && <span class="funnel__detail">{detail}</span>}
+				</span>
+			</li>
+		))}
+	</ol>
+	{caption && <figcaption class="funnel__caption">{caption}</figcaption>}
+</figure>
+
+<style>
+	/* Same vertical space as the other framed blocks (InShort): room above and below, whatever the neighbours. */
+	.funnel {
+		max-width: calc(var(--layout-measure) * 1em);
+		margin: var(--space-5) 0;
+	}
+
+	.funnel__stages {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.funnel__stage {
+		margin: 0 0 var(--space-4);
+		padding: 0;
+	}
+
+	.funnel__track {
+		display: flex;
+		margin-bottom: var(--space-2);
+	}
+
+	/* A bar never shrinks below a few pixels: a 2% stage must still be seen. */
+	.funnel__bar {
+		display: block;
+		width: max(var(--share), 6px);
+		height: 1.5rem;
+		border-radius: var(--radius-sm);
+		background: var(--color-primary);
+	}
+
+	/* One gold per figure: the stage the reader is here for. */
+	.funnel__stage--accent .funnel__bar {
+		background: var(--color-accent);
+	}
+
+	.funnel__value {
+		color: var(--color-primary);
+		font-family: var(--font-family-mono);
+		font-variant-numeric: tabular-nums;
+	}
+
+	.funnel__stage--accent .funnel__value {
+		color: var(--color-accent);
+	}
+
+	.funnel__label {
+		color: var(--color-fg);
+		font-weight: 600;
+	}
+
+	.funnel__detail {
+		display: block;
+		color: var(--color-muted);
+		font-size: var(--font-size-sm);
+	}
+
+	.funnel__caption {
+		color: var(--color-muted);
+		font-size: var(--font-size-sm);
+	}
+</style>
