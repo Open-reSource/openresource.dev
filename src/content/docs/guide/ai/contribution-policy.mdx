@@ -2,13 +2,17 @@
 title: 'AI-Assisted Contributions: A Policy You Can Copy'
 description: What curl, Gentoo, QEMU, Ghostty, LLVM and the Linux kernel decided about AI-generated contributions, the three postures, and a policy to paste.
 date: 2026-09-28
-lastUpdated: 2026-09-28
+lastUpdated: 2026-10-03
+related:
+  - guide/ai/contributing-with-ai-tools
+  - guide/maintaining/reviewing-pull-requests
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
 import AiDisclosure from '../../../partials/ai-disclosure.mdx';
+import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
 <p class="lead">Since 2024, projects from curl to the Linux kernel have written down what they accept from AI tools. Their answers range from "disclose it" to "don't even use it to find bugs", and almost all of them share one rule: the person who submits is responsible for every line. Here's what they decided, which posture fits which project, and a policy you can paste into your contributing guide.</p>
@@ -165,3 +169,5 @@ What that means for a contribution under your license, and for code a model repr
 - [LLVM's AI Tool Use Policy](https://github.com/llvm/llvm-project/blob/main/llvm/docs/AIToolPolicy.md): the most detailed "disclose" policy, with rules for agents.
 - [Ghostty's AI Usage Policy](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md): the strictest policy that still allows AI, with the vouch system behind it.
 - [Contributing with AI Tools Without Annoying Maintainers](/guide/ai/contributing-with-ai-tools/): the same rules, from the contributor's side.
+
+<Related />

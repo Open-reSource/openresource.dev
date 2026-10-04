@@ -2,12 +2,16 @@
 title: 'Source Code Hosting Platforms: GitHub and the Alternatives'
 description: GitHub, GitLab, Codeberg, sourcehut and the older ones. Who uses each, what changes when you contribute there, and which one to pick for your own project.
 date: 2023-06-04
-lastUpdated: 2026-09-30
+lastUpdated: 2026-10-03
+related:
+  - guide/getting-started/git-and-github-basics
+  - guide/getting-started/reading-a-repository
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
 import ContentImage from '../../../../components/ContentImage.astro';
 import InShort from '../../../../components/InShort.astro';
+import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
 <p class="lead">You will end up on GitHub: most projects you'll use or contribute to live there, and every tutorial assumes it. A few communities chose otherwise, for reasons of control, workflow or principle: GNOME runs its own GitLab, Zig moved to Codeberg, and the Linux kernel still takes patches by email. Here's where each one lives, and what changes when you contribute there.</p>
@@ -142,3 +146,5 @@ Once a remote has a push URL, Git stops pushing to its fetch URL: add both. Ever
 - [Reading a Repository in Five Minutes](/guide/getting-started/reading-a-repository/): the same health signals, on any of these platforms.
 - [Migrating from GitHub to Codeberg](https://ziglang.org/news/migrating-from-github-to-codeberg/): Zig's reasons, and what the move involved.
 - [git-send-email.io](https://git-send-email.io/): the email workflow, set up step by step.
+
+<Related />
