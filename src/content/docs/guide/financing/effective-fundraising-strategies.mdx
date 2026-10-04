@@ -1,24 +1,36 @@
 ---
 title: Effective Fundraising Strategies
-description: 'Explore fundraising strategies for open-source projects: donations, crowdfunding, sponsorships, grants, memberships, and more.'
+description: 'Donations, tiers with prices, crowdfunding, yearly deals with companies, paid extras and grants: how to ask for each, with real pages, prices and dates.'
 date: 2024-06-28
-lastUpdated: 2026-10-03
-status: draft
+lastUpdated: 2026-10-05
 related:
+  - guide/financing/understanding-funding-models
   - guide/maintaining/burnout-succession-and-the-end
 ---
 
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
 import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
-<p class="lead">Most projects start as volunteer work. Money pays for what volunteers can't sustain: maintenance time, infrastructure, security work. Each funding model needs its own fundraising work, from a donation page to a sponsorship proposal or a crowdfunding campaign.</p>
+<p class="lead">Most projects start as volunteer work. Money pays for what volunteers can't sustain: maintenance time, infrastructure, security work. Each funding model needs its own fundraising work: a donate link, a tier page, a campaign, a yearly deal with a company, a paid extra, or a grant application.</p>
 
-## Donations
+<InShort>
 
-Many open-source projects rely on direct donations from their user base. They can come from individuals, companies, or other organizations that want to support your work.
+- Put the donate link where people already are: the README, the docs, the package metadata. Blender's fund brought in about €282,000 a month in September 2026.
+- Publish sponsorship tiers with prices, so a company can pay without a call. Vite's go from $5 to $2,000 a month on GitHub Sponsors.
+- Companies that depend on you buy yearly deals on an invoice, not monthly tips: find them in your dependents, offer a response time and a say, ask for one of three yearly amounts.
+- Charge for the extra (early access, support, a hosted version), never for the core.
+- Six funders take grant applications from individuals and small teams, as of October 2026. A rejection costs a day; a grant funds a year.
 
-Donations can be one-time or recurring, and they can be facilitated through platforms like:
+</InShort>
 
+## Put the donate link where people already are
+
+**Nobody goes looking for a way to pay you, so the donate link has to be where people already are: the README, the docs, the package metadata, the software itself.** Donations come from individuals, companies, or other organizations that want to support your work. They can be one-time or recurring, and they can be facilitated through platforms like:
+
+- [GitHub Sponsors](https://github.com/sponsors)
 - [Open Collective](https://opencollective.com/)
 - [PayPal](https://paypal.com)
 - [Stripe](https://stripe.com)
@@ -38,20 +50,29 @@ When setting up a donation system for your project, consider the following best 
 
 In September 2026, the fund received about €282,000 a month from around 7,700 individual supporters and 44 corporate members, up from €165,000 a month in June 2024. You can find live information about their donations on their [donation page](https://fund.blender.org/).
 
-## Sponsorships
+## Publish tiers with prices, so nobody needs a call
 
-Sponsorships are another effective way to secure funding for open-source projects. Companies or organizations can sponsor your project by providing financial support, resources, or services. In return, they can receive various benefits, such as exposure, recognition, or access to your project's community.
+**A tier page with prices lets a company pay you without a meeting.** Vite's page on GitHub Sponsors goes from $5 to $2,000 a month, and from $500 a month (1) the sponsor's logo is on the Vite docs, as of October 2026:
 
-The first step in securing sponsorships is to **identify potential sponsors** that have a vested interest in your project. This could be tech companies, non-profits, educational institutions, or government agencies.
+<ContentImage
+	src="/images/financing-effective-fundraising-strategies-1.png"
+	width="716"
+	height="1766"
+	alt="Vite's tiers on GitHub Sponsors, $5 to $2,000 a month: the $500 Gold tier adds the company logo to the Vite docs."
+/>
 
-Then, you can craft a **sponsorship proposal**:
+Astro's collective on [Open Collective](https://opencollective.com/astrodotbuild) does the same from $10 to $10,000 a month: a logo in the README at $100, on the homepage at $250 (as of October 2026). A company that wants more than a logo gets a yearly deal, [below](#sell-companies-a-yearly-deal-not-a-monthly-tip).
+
+The first step in securing sponsorships is to identify potential sponsors that have a vested interest in your project. This could be tech companies, non-profits, educational institutions, or government agencies.
+
+Then, you can craft a sponsorship proposal:
 
 1. **Introduction**: Briefly introduce your project and its objectives.
 2. **Value Proposition**: Explain the benefits of sponsoring your project. Highlight how it aligns with the sponsor's goals or interests.
 3. **Sponsorship Tiers**: Offer different levels of sponsorship with corresponding benefits. For example, mention levels like bronze, silver, and gold, each providing increasing levels of exposure and involvement.
 4. **Metrics and Impact**: Provide data or projections on the reach and impact of your project.
 
-**Maintain the relationship**, or the sponsorship won't be renewed:
+Maintain the relationship, or the sponsorship won't be renewed:
 
 - **Regular Communication**: Keep sponsors informed about the project's progress.
 - **Recognition**: Publicly acknowledge sponsors on your project's website, documentation, and promotional materials.
@@ -65,9 +86,9 @@ We talked about levels of sponsorship earlier, and the Apache Software Foundatio
 
 If you are interested in detailed information about numbers, statistics, and actions taken by the Apache Software Foundation, you can check their [annual reports](https://apache.org/foundation/reports.html) that are publicly available.
 
-## Crowdfunding Campaigns
+## Crowdfund a goal, not a salary
 
-As mentioned in the previous chapter, crowdfunding has become a popular method for raising funds for several types of projects, including open-source initiatives. Platforms allow project creators to present their ideas to a wide audience and raise small, or large, amounts of money from a large number of people.
+**A campaign funds something with an end: a version, a port, a feature, as Krita's did. A salary needs recurring money, which Godot raised on Patreon and then on its own fund.** As mentioned in the previous chapter, crowdfunding has become a popular method for raising funds for several types of projects, including open-source initiatives. Platforms allow project creators to present their ideas to a wide audience and raise small, or large, amounts of money from a large number of people.
 
 Platforms to run the campaign on:
 
@@ -97,19 +118,94 @@ Two open-source projects that raised money this way:
 
   What's also interesting is that Godot Engine switched from Patreon to their own platform: [Godot Development Fund](https://fund.godotengine.org/). You can find more information about the reasons behind this move in [this blog post](https://godotengine.org/article/godot-developer-fund/).
 
-## Corporate Partnerships
+## Sell companies a yearly deal, not a monthly tip
 
-> [!WARNING]
-> This section isn't written yet! More content soon!
+**A company that depends on your project can pay once a year, on an invoice, for what a tier page can't sell: a response time, a say in the roadmap, a call with the maintainers.** The tiers above are the self-serve version; this is the negotiated one, and it starts with a list of who depends on you.
 
-## Subscriptions Models
+### Find them in your dependents
 
-> [!WARNING]
-> This section isn't written yet! More content soon!
+- On GitHub, **Insights** › **Dependency graph** › **Dependents** lists the public repositories that depend on yours ([GitHub's docs](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exploring-the-dependencies-of-a-repository)). Private ones don't show.
+- [ecosyste.ms](https://ecosyste.ms/) counts across registries. `https://packages.ecosyste.ms/api/v1/registries/npmjs.org/packages/astro` returned 915 dependent packages and 18,705 dependent repositories as of October 2026; swap the registry (`pypi.org`, `crates.io`) and the package name for yours.
+- The companies whose engineers open your issues and send pull requests. Their profiles and email domains name them.
+- The companies that already decided to pay maintainers: the [Open Source Pledge](https://opensourcepledge.com/members/) members, 45 companies as of October 2026, each paying at least $2,000 per employed developer per year, $7,421,535 paid since the pledge launched. Check which of them depend on you.
 
-## Grants and Foundations
+### Offer what a tier can't
 
-> [!WARNING]
-> This section isn't written yet! More content soon!
+A logo they can buy from the tier page. A partnership sells access: a response time on their issues, roadmap input without a veto, a call every quarter, a seat on an advisory board. Tailwind's [partners page](https://tailwindcss.com/sponsor) names three levels as of October 2026, Partner, Ambassador and Supporter, shows no prices, promises "direct access to the Tailwind CSS team" (a Slack channel, calls, prioritized bug fixes) and ends on an email address. The amount comes out of a conversation, not a card form.
+
+### Ask for a yearly amount, on an invoice
+
+Procurement buys yearly, on an invoice; a monthly card payment is an expense someone forgets to renew. Write three tiers with a yearly price each, and let the company pick. Reference points:
+
+| Who                        | Yearly tiers (as of October 2026)                                               | Source                                                                                                                         |
+| :------------------------- | :------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| Django Software Foundation | Bronze $2,200, Silver $5,500, Gold $13,750, Platinum $30,000, Diamond $100,000  | [Corporate membership](https://www.djangoproject.com/foundation/corporate-membership/)                                         |
+| Apache Software Foundation | Platinum $125,000                                                               | [Sponsorship](https://www.apache.org/foundation/sponsorship)                                                                   |
+| Open Source Pledge members | At least $2,000 per employed developer per year, spread over their dependencies | [Open Source Pledge](https://opensourcepledge.com/)                                                                            |
+| GitHub Sponsors by invoice | $5,000 minimum per invoice, 30 days to pay, 3% service fee, no card fee         | [GitHub's docs](https://docs.github.com/en/sponsors/sponsoring-open-source-contributors/paying-for-github-sponsors-by-invoice) |
+
+The last row is the easy path for a company already on GitHub: it can pay a yearly sponsorship on an invoice instead of a card, and [download the maintainers of its dependencies as a CSV](https://docs.github.com/en/sponsors/sponsoring-open-source-contributors/sponsoring-an-open-source-contributor-through-github) from the Sponsors explore page to pay them in bulk. Point the person you write to at both.
+
+The email is short, because the person reading it didn't ask for it:
+
+```text
+Subject: <project> at <company>: a yearly partnership
+
+Hi <name>,
+
+<company> ships <project>: <n> of your public repositories depend on it, and three of your engineers opened issues on it in 2026. Thanks for those.
+
+We're setting up yearly partnerships. The <tier> tier is $<amount> a year, on an invoice, and gives you a two-business-day response on your issues, a quarterly roadmap call, and your logo on the docs.
+
+Who handles this on your side? I'll follow up on <date, two weeks from now> if I don't hear back.
+
+<name>, maintainer of <project>
+```
+
+One reminder after two weeks, then stop: silence is an answer, and the next company on the list is a better use of the evening. A yes takes weeks to become an invoice; that is procurement, not doubt.
+
+What it looks like when the dependents pay: on January 7, 2026, Adam Wathan wrote on a Tailwind docs pull request that 75% of Tailwind's engineering team had lost their jobs the day before, that traffic to the docs was down about 40% from early 2023 while "Tailwind is growing faster than it ever has", and that revenue was down close to 80% ([tailwindlabs/tailwindcss.com#2388](https://github.com/tailwindlabs/tailwindcss.com/pull/2388#issuecomment-3717222957)). On January 8, Vercel's CEO Guillermo Rauch [announced on X](https://x.com/rauchg/status/2009336725043335338) that Vercel would sponsor Tailwind, and Logan Kilpatrick, for the Google AI Studio team, [did the same](https://x.com/OfficialLoganK/status/2009339263251566902) ten minutes later. The ask had been a comment on a pull request he was closing.
+
+## Charge for the extra, keep the core free
+
+**Sell something the free version doesn't need in order to be good: early access, a course, a support contract, a hosted version. The day the core feels held back to sell the extra, the people who recommend you stop.** Four shapes, each with a real case:
+
+- **Sponsorware.** In February 2020, Caleb Porzio built a package and released it to his GitHub sponsors only, with a promise: open source for everyone once he had 75 sponsors. He went from 23 sponsors ($573 a month) to 101 ($2,633 a month) by the time he [wrote it up](https://calebporzio.com/sponsorware). Old numbers, but the mechanism holds: the end state is open source, so sponsors buy earliness, not exclusivity.
+- **Paid extras.** A pro set of docs or videos, a priority support contract, a hosted version of a tool people otherwise run themselves. Each is a product with its own support load; [Understanding Funding Models](/guide/financing/understanding-funding-models/#subscription-models) lists the trade-offs. Keep the free docs complete and the paid thing visibly separate: an extra, not the missing half.
+- **Someone else's subscription.** Tidelift pays maintainers ("lifters") for maintenance tasks on the packages its customers use: license annotations, a security policy, dependency tracking, two-factor authentication. Sonar [agreed to acquire Tidelift](https://www.sonarsource.com/company/press-releases/sonar-to-acquire-tidelift/) on December 17, 2024, and as of October 2026 the [maintainer program](https://www.sonarsource.com/open-source-maintainers/) continues under Sonar, paid "based on a number of factors, including customer usage and strategic importance", with no public amounts. You don't sell this one: you sign up, and the package's usage decides.
+- **The cautionary one.** Tailwind sold its paid products through its docs; when AI tools cut the docs traffic by about 40%, revenue fell close to 80% (Wathan, January 2026, [above](#sell-companies-a-yearly-deal-not-a-monthly-tip)). The extra's sales depended on a channel the project didn't control.
+
+## Apply: a rejection costs a day, a grant funds a year
+
+**Six funders take applications from individuals and small teams, and the forms are shorter than they look.** Who funds what, as of October 2026, each checked on the funder's own page:
+
+- [Sovereign Tech Agency](https://www.sovereign.tech/programs/fund) (Germany): foundational open digital infrastructure, maintainers anywhere; the work must cost more than €50,000; €41.1 million invested in 118 technologies since October 2022.
+- [NLnet Foundation](https://nlnet.nl/propose/) (Netherlands, with EU money): the open internet stack; €5,000 to €50,000 for a first grant, individuals welcome, a deadline every two months (the next on November 3, 2026). It doesn't accept AI-generated proposals.
+- [GitHub Secure Open Source Fund](https://github.com/open-source/github-secure-open-source-fund): security work on a project with adoption; $10,000 per project ($6,000 during a three-week program, $2,000 at six months, $2,000 at twelve), rolling applications.
+- [Alpha-Omega](https://alpha-omega.dev/grants/how-to-apply/) (OpenSSF): security of critical projects; $50,000 to $100,000 typical; applications in January, April, July and October; public monthly reports in return.
+- [Prototype Fund](https://www.prototypefund.de/en/application) (Germany): individuals and teams of up to four, based in Germany; up to €79,000 for an individual and €158,000 for a team over ten months; one round a year, October 1 to November 30 in 2026; the formal application is in German.
+- [FLOSS/fund](https://floss.fund/faq/) (Zerodha, India): existing, widely used projects anywhere; $10,000 to $100,000 a year; the application is a `funding.json` file on your site, submitted to the directory and reviewed at the end of every quarter.
+
+Every form asks the same three questions: what is critical about your project (who depends on it, what breaks without it), what you will do with the money (a list of tasks with days against each), and how they will know (what will be public when you're done). Write the three answers in a text file before opening any form, add a budget line per task and a timeline, and the form becomes a copy-and-paste. A rejected application costs a day; an accepted one funds a year.
+
+Two programs you'll still see cited have ended: Google's Open Source Peer Bonus [gave its last awards for 2024](https://opensource.googleblog.com/2025/10/2024-open-source-contributions-a-year-in-review.html) (130 contributors in 35 countries), and the GitHub Sponsors Matching Fund [stopped taking applications](https://docs.github.com/en/site-policy/github-terms/github-sponsors-additional-terms) on January 1, 2020.
+
+## Do this now
+
+<Checklist id="effective-fundraising-strategies">
+
+- [ ] List your top 20 dependents: GitHub's Dependents tab, the ecosyste.ms API, and the companies behind your last 50 issues.
+- [ ] Publish tiers with prices on GitHub Sponsors or Open Collective, and link them from the README, the docs footer and the package metadata.
+- [ ] Write three yearly tiers with an invoice option, and send the email above to the three companies at the top of your list.
+- [ ] Pick one grant whose next deadline is within three months, and write the three answers before opening the form.
+
+</Checklist>
+
+## Go further
+
+- [Understanding Funding Models](/guide/financing/understanding-funding-models/): the six models and their strings, before choosing which to raise.
+- [Display Your Sponsors in Your GitHub READMEs](/articles/display-your-sponsors-in-your-github-readmes/): the logo wall your tiers promise, generated by SponsorKit.
+- [Add Funding Links to Your 'package.json'](/articles/add-funding-links-to-your-packagejson/): the `funding` field, so `npm fund` lists you.
+- [Open Source Pledge](https://opensourcepledge.com/): the companies that already pay $2,000 per developer per year, and how to join them.
 
 <Related />
