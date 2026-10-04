@@ -39,15 +39,6 @@
   end: 2026-10-29
   focus: "GitHub's own conference. Virtual attendance is free."
   url: https://githubuniverse.com/
-- id: kubecon-north-america
-  name: KubeCon + CloudNativeCon North America
-  kind: event
-  place: Salt Lake City, USA
-  month: October or November
-  start: 2026-11-09
-  end: 2026-11-12
-  focus: Cloud native computing and the CNCF projects.
-  url: https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/
 - id: 24-pull-requests
   name: 24 Pull Requests
   kind: program
@@ -103,15 +94,6 @@
   end: 2027-02-10
   focus: UK open source conference. The 2026 edition was split across several cities.
   url: https://stateofopencon.com/
-- id: kubecon-europe
-  name: KubeCon + CloudNativeCon Europe
-  kind: event
-  place: Barcelona, Spain
-  month: March or April
-  start: 2027-03-15
-  end: 2027-03-18
-  focus: Cloud native computing and the CNCF projects.
-  url: https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/
 - id: foss-backstage
   name: FOSS Backstage
   kind: event
@@ -135,22 +117,6 @@
   end: 2027-05-19
   focus: Vendor-neutral conference for open source developers, run by the Linux Foundation.
   url: https://events.linuxfoundation.org/open-source-summit-north-america/
-- id: pycon-us
-  name: PyCon US
-  kind: event
-  place: Long Beach, USA
-  month: May
-  focus: "The Python community's main US conference, with tutorials and sprints. The 2027 dates are not announced."
-  url: https://us.pycon.org/
-- id: europython
-  name: EuroPython
-  kind: event
-  place: Kraków, Poland (2026)
-  month: July
-  start: 2026-07-13
-  end: 2026-07-19
-  focus: The largest Python conference in Europe. The 2027 edition is not announced; these are the 2026 dates.
-  url: https://europython.eu/
 - id: open-source-summit-europe-2027
   name: Open Source Summit Europe 2027
   kind: event
@@ -160,12 +126,3 @@
   end: 2027-09-22
   focus: "The 2027 edition of the Linux Foundation's European summit."
   url: https://events.linuxfoundation.org/open-source-summit-europe-2027/
-- id: rustconf
-  name: RustConf
-  kind: event
-  place: Vancouver, Canada, and online
-  month: September
-  start: 2027-09-07
-  end: 2027-09-10
-  focus: "The Rust community's yearly conference."
-  url: https://rustconf.com/

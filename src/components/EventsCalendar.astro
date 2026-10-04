@@ -61,11 +61,13 @@ const hasCfp = events.some((event) => event.cfp);
 						{event.kind === 'program' && <span class="events__kind"> (program)</span>}
 						{isPast(event) && <span class="events__kind"> (past)</span>}
 					</th>
-					<td>{when(event)}</td>
-					<td>{event.place}</td>
-					<td class="events__free">{event.free ? 'Yes' : 'See the site'}</td>
-					{hasCfp && <td>{event.cfp ? <a href={event.cfp}>Submit</a> : ''}</td>}
-					<td>{event.focus}</td>
+					<td data-label="When">{when(event)}</td>
+					<td data-label="Where">{event.place}</td>
+					<td class="events__free" data-label="Free?">
+						{event.free ? 'Yes' : 'See the site'}
+					</td>
+					{hasCfp && <td data-label="Call for papers">{event.cfp ? <a href={event.cfp}>Submit</a> : ''}</td>}
+					<td data-label="Focus">{event.focus}</td>
 				</tr>
 			))}
 		</tbody>
@@ -74,8 +76,48 @@ const hasCfp = events.some((event) => event.cfp);
 
 <style>
 	.events {
+		container-type: inline-size;
 		overflow-x: auto;
 		margin: 0 0 1.25em;
+	}
+
+	/* When the table no longer fits, each event becomes a block with labelled lines instead of scrolling sideways. */
+	@container (max-width: 38rem) {
+		.events table,
+		.events tbody,
+		.events tr,
+		.events th,
+		.events td {
+			display: block;
+		}
+
+		.events thead {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+		}
+
+		.events tr {
+			padding: 0.75em 0;
+			border-bottom: 1px solid var(--color-border, currentColor);
+		}
+
+		.events th,
+		.events td {
+			padding: 0.1em 0;
+			border: 0;
+		}
+
+		.events td::before {
+			content: attr(data-label) ': ';
+			font-weight: bold;
+		}
+
+		.events td:empty {
+			display: none;
+		}
 	}
 
 	.events th,
