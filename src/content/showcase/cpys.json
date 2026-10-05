@@ -6,7 +6,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/17068138?u=57375275813b092c6f28534ef46583d5d2dddefb&v=4&s=50",
       "contributors": 1,
       "description": "Privacy-friendly Codex Desktop quota overlay for Windows and macOS — quota, reset time, and reset credits beside the conversation title.",
-      "discussions": 2,
+      "discussions": 3,
       "forks": 0,
       "issues": 1,
       "languages": [
@@ -20,7 +20,7 @@
       ],
       "name": "codex-quota-overlay",
       "owner": "cpys",
-      "prs": 12,
+      "prs": 13,
       "stars": 2,
       "url": "https://github.com/cpys/codex-quota-overlay"
     }

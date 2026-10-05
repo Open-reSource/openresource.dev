@@ -7,8 +7,8 @@
       "contributors": 60,
       "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
       "discussions": 29,
-      "forks": 904,
-      "issues": 34,
+      "forks": 889,
+      "issues": 36,
       "languages": [
         "Java",
         "Python",
@@ -23,8 +23,8 @@
       ],
       "name": "astron-agent",
       "owner": "iflytek",
-      "prs": 14,
-      "stars": 9085,
+      "prs": 17,
+      "stars": 8873,
       "url": "https://github.com/iflytek/astron-agent"
     },
     {
@@ -33,7 +33,7 @@
       "contributors": 26,
       "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
       "discussions": 5,
-      "forks": 583,
+      "forks": 473,
       "issues": 40,
       "languages": [
         "Python",
@@ -49,8 +49,8 @@
       ],
       "name": "astron-rpa",
       "owner": "iflytek",
-      "prs": 16,
-      "stars": 5553,
+      "prs": 17,
+      "stars": 5252,
       "url": "https://github.com/iflytek/astron-rpa"
     },
     {
@@ -59,8 +59,8 @@
       "contributors": 45,
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
       "discussions": 4,
-      "forks": 849,
-      "issues": 19,
+      "forks": 835,
+      "issues": 25,
       "languages": [
         "Java",
         "TypeScript",
@@ -75,8 +75,8 @@
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 6,
-      "stars": 5179,
+      "prs": 15,
+      "stars": 5145,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
@@ -85,15 +85,15 @@
       "contributors": 7,
       "description": "从零到工作流，掌握 AstronClaw（云端）与 Loomy（桌面）的 AI 助手实战教程 | A complete tutorial to master AstronClaw (cloud AI) & Loomy (desktop AI)",
       "discussions": 0,
-      "forks": 47,
-      "issues": 10,
+      "forks": 44,
+      "issues": 6,
       "languages": [
         "JavaScript"
       ],
       "name": "astronclaw-tutorial",
       "owner": "iflytek",
       "prs": 4,
-      "stars": 398,
+      "stars": 354,
       "url": "https://github.com/iflytek/astronclaw-tutorial"
     },
     {
@@ -102,7 +102,7 @@
       "contributors": 8,
       "description": "Harnessclaw is a powerful, Electron-based desktop application designed to manage, chat with, and operate AI agents and skills seamlessly.",
       "discussions": 0,
-      "forks": 95,
+      "forks": 54,
       "issues": 1,
       "languages": [
         "TypeScript",
@@ -113,7 +113,7 @@
       "name": "harnessclaw",
       "owner": "harnessclaw",
       "prs": 0,
-      "stars": 314,
+      "stars": 263,
       "url": "https://github.com/harnessclaw/harnessclaw"
     },
     {
@@ -122,7 +122,7 @@
       "contributors": 4,
       "description": "An LLM programming assistant engine built with Go, supporting WebSocket, multi-turn dialogues, tool calling, permission control, and skill extension.",
       "discussions": 0,
-      "forks": 76,
+      "forks": 25,
       "issues": 4,
       "languages": [
         "Go",
@@ -133,8 +133,8 @@
       ],
       "name": "harnessclaw-engine",
       "owner": "harnessclaw",
-      "prs": 7,
-      "stars": 255,
+      "prs": 6,
+      "stars": 196,
       "url": "https://github.com/harnessclaw/harnessclaw-engine"
     },
     {
@@ -143,8 +143,8 @@
       "contributors": 7,
       "description": "Official collection of iFLYTEK skills for speech, OCR, translation, proofreading, and multimodal AI capabilities.",
       "discussions": 0,
-      "forks": 27,
-      "issues": 16,
+      "forks": 23,
+      "issues": 17,
       "languages": [
         "Python",
         "JavaScript",
@@ -153,8 +153,8 @@
       ],
       "name": "iFly-Skills",
       "owner": "iflytek",
-      "prs": 10,
-      "stars": 218,
+      "prs": 16,
+      "stars": 208,
       "url": "https://github.com/iflytek/iFly-Skills"
     },
     {
@@ -193,7 +193,7 @@
       ],
       "name": "domux",
       "owner": "iflytek",
-      "prs": 7,
+      "prs": 6,
       "stars": 31,
       "url": "https://github.com/iflytek/domux"
     }

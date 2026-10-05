@@ -5,7 +5,7 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/254313678?u=7aae530d7420980dcb7aa767c5e40bffc3d649e8&v=4&s=50",
       "contributors": 4,
-      "description": "Open-source desktop Minecraft launcher for Windows and Linux with isolated instances, Modrinth modpacks, automatic Java, crash diagnostics, and safe backups.",
+      "description": "Open-source desktop Minecraft launcher with isolated instances, Modrinth/CurseForge catalogs, Discord Party RPC, and intelligent crash bisect.",
       "discussions": 2,
       "forks": 7,
       "issues": 6,
@@ -14,13 +14,14 @@
         "JavaScript",
         "CSS",
         "Java",
+        "Shell",
         "HTML"
       ],
-      "name": "onyx-launcher",
+      "name": "scope-launcher",
       "owner": "lonestill",
-      "prs": 1,
+      "prs": 2,
       "stars": 12,
-      "url": "https://github.com/lonestill/onyx-launcher"
+      "url": "https://github.com/lonestill/scope-launcher"
     }
   ]
 }

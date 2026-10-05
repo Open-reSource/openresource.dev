@@ -26,7 +26,7 @@
       "contributors": 37,
       "description": "🦸 ⚡ django's default admin interface with superpowers - customizable themes, popup windows replaced by modals and many other features.",
       "discussions": 15,
-      "forks": 203,
+      "forks": 204,
       "issues": 12,
       "languages": [
         "Python",
@@ -36,18 +36,18 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 2047,
+      "prs": 7,
+      "stars": 2048,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 11,
+      "contributors": 12,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 3,
-      "forks": 58,
-      "issues": 6,
+      "forks": 60,
+      "issues": 5,
       "languages": [
         "Python",
         "HTML",
@@ -56,7 +56,7 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 10,
+      "prs": 3,
       "stars": 1607,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
@@ -93,8 +93,8 @@
       ],
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
-      "prs": 3,
-      "stars": 658,
+      "prs": 5,
+      "stars": 659,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -112,8 +112,8 @@
       ],
       "name": "django-treenode",
       "owner": "fabiocaccamo",
-      "prs": 5,
-      "stars": 803,
+      "prs": 7,
+      "stars": 804,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -130,7 +130,7 @@
       ],
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 2,
       "stars": 528,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
@@ -149,7 +149,7 @@
       ],
       "name": "django-extra-settings",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 6,
       "stars": 623,
       "url": "https://github.com/fabiocaccamo/django-extra-settings"
     },
@@ -174,10 +174,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 2,
+      "contributors": 3,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
-      "forks": 18,
+      "forks": 19,
       "issues": 2,
       "languages": [
         "Python"
@@ -185,7 +185,7 @@
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
       "prs": 4,
-      "stars": 269,
+      "stars": 268,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
     {
@@ -221,8 +221,8 @@
       ],
       "name": "django-freeze",
       "owner": "fabiocaccamo",
-      "prs": 0,
-      "stars": 130,
+      "prs": 2,
+      "stars": 129,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -238,7 +238,7 @@
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 2,
+      "prs": 3,
       "stars": 91,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -255,7 +255,7 @@
       ],
       "name": "django-redirects",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 2,
       "stars": 79,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
@@ -272,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 2,
       "stars": 75,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
@@ -289,7 +289,7 @@
       ],
       "name": "utils.js",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 2,
       "stars": 24,
       "url": "https://github.com/fabiocaccamo/utils.js"
     },
@@ -306,7 +306,7 @@
       ],
       "name": "create-matrix-action",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 1,
       "stars": 12,
       "url": "https://github.com/fabiocaccamo/create-matrix-action"
     }

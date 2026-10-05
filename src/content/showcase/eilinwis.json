@@ -7,7 +7,7 @@
       "contributors": 3,
       "description": "Chat web application for learning e2e automation with Playwright",
       "discussions": 2,
-      "forks": 5,
+      "forks": 6,
       "issues": 4,
       "languages": [
         "TypeScript",
@@ -18,7 +18,7 @@
       "name": "playwright-chat-lab",
       "owner": "eilinwis",
       "prs": 2,
-      "stars": 30,
+      "stars": 37,
       "url": "https://github.com/eilinwis/playwright-chat-lab"
     }
   ]

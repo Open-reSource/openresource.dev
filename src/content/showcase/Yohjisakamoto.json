@@ -7,8 +7,8 @@
       "contributors": 7,
       "description": "Build agent that uses 80% less token and delivers better results.",
       "discussions": 12,
-      "forks": 35,
-      "issues": 3,
+      "forks": 36,
+      "issues": 2,
       "languages": [
         "Rust",
         "TypeScript",
@@ -22,8 +22,8 @@
       ],
       "name": "tura",
       "owner": "Tura-AI",
-      "prs": 2,
-      "stars": 646,
+      "prs": 3,
+      "stars": 651,
       "url": "https://github.com/Tura-AI/tura"
     }
   ]
