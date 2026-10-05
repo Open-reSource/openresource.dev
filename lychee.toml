@@ -38,6 +38,9 @@ exclude = [
   '^https://sourceforge\.net/',
   '^https://(www\.)?courtlistener\.com/',
   '^https://(www\.)?euipo\.europa\.eu/',
+  # Cloudflare challenge on scripted requests (403 with cf-mitigated: challenge), alive in a browser (checked 2026-10-05).
+  '^https://(www\.)?stackoverflow\.com/',
+  '^https://dl\.acm\.org/',
   # Answers scripted requests with a 403; the Wayback Machine captured its pages alive in September 2026.
   '^https://(www\.)?gnu\.org/',
   # Alive (curl reaches it), but its TLS setup fails lychee's handshake.
