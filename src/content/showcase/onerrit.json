@@ -5,9 +5,9 @@
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/171573688?v=4&s=50",
       "contributors": 8,
-      "description": "tirreno is a security framework. Detect cyberfraud, account takeovers, and business logic abuse inside your product.",
+      "description": "tirreno is an open-source framework for building sovereign security, compliance and fraud prevention applications. Detect account takeovers, cyberfraud and business logic abuse inside your product.",
       "discussions": 0,
-      "forks": 180,
+      "forks": 181,
       "issues": 9,
       "languages": [
         "PHP",
@@ -19,7 +19,7 @@
       "name": "tirreno",
       "owner": "tirrenotechnologies",
       "prs": 0,
-      "stars": 1529,
+      "stars": 1536,
       "url": "https://github.com/tirrenotechnologies/tirreno"
     }
   ]
