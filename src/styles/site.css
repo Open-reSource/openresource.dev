@@ -47,3 +47,17 @@ pre[data-language='md'] {
 .d-prose li > :is(ul, ol) {
 	padding-left: 1.25em;
 }
+
+/* A link to a glossary entry: a term, not a chapter. Dotted underline, so it reads apart from a link that takes you to a
+   page, and the same colour as the other links. The underline stays when it sits in a list item or a heading. */
+a[href^='/guide/glossary/#'] {
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	text-decoration-color: var(--color-primary-dim);
+}
+
+a[href^='/guide/glossary/#']:hover {
+	text-decoration-color: currentColor;
+}
