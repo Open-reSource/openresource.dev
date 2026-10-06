@@ -27,10 +27,10 @@ import Related from '../../../../components/Related.astro';
 
 ## Inbound, outbound, and the rule between them
 
-**Inbound** licenses are the ones you receive code under: your dependencies, the snippet you copied, the contributions you merge. **Outbound** is the license you publish your project under. The rule: what you distribute has to satisfy every inbound license at the same time.
+**[Inbound](/guide/glossary/#inbound-outbound)** licenses are the ones you receive code under: your dependencies, the snippet you copied, the contributions you merge. **Outbound** is the license you publish your project under. The rule: what you distribute has to satisfy every inbound license at the same time.
 
 - Permissive inbound code (MIT, BSD, Apache-2.0) asks for little: keep its notices, and for Apache-2.0, state your changes. It fits under almost any outbound license.
-- Copyleft inbound code (GPL, AGPL) asks that the combined work be distributed under the same license. If your outbound license is permissive, you can't ship it inside.
+- Copyleft inbound code (GPL, [AGPL](/guide/glossary/#agpl)) asks that the combined work be distributed under the same license. If your outbound license is permissive, you can't ship it inside.
 - Weak copyleft (MPL-2.0, LGPL-3.0) draws a smaller boundary: its files, or its library, stay under their license, and the rest of your project doesn't have to.
 
 ## Depending, copying and modifying are three cases
@@ -54,7 +54,7 @@ Can code under the license in the column go into a project released under the li
 
 ✓: yes. ◐: as a separate part, whose files (MPL) or library (LGPL) keep their license. ✗: no.
 
-- **Apache-2.0 into GPL-2.0-only is the classic trap.** The FSF has never considered them compatible, because of Apache-2.0's patent termination and indemnification clauses ([Apache's explanation](https://www.apache.org/licenses/GPL-compatibility.html)). GPL-3.0 accepts Apache-2.0 code; the reverse doesn't work.
+- **Apache-2.0 into GPL-2.0-only is the classic trap.** The FSF has never considered them [compatible](/guide/glossary/#license-compatibility), because of Apache-2.0's patent termination and indemnification clauses ([Apache's explanation](https://www.apache.org/licenses/GPL-compatibility.html)). GPL-3.0 accepts Apache-2.0 code; the reverse doesn't work.
 - **GPL-2.0-only and GPL-3.0 don't mix**, but most GPL-2.0 code is "or later", and then it can be used under GPL-3.0.
 - **MPL-2.0 goes into GPL projects** through its section 3.3, unless the author marked it "Incompatible With Secondary Licenses".
 - **GPL-3.0 and AGPL-3.0 can be combined**: each part keeps its own license, and the AGPL's network clause applies to the combination.
@@ -73,7 +73,7 @@ Fonts, images and docs have their own licenses, and they mix differently:
 
 - **Fonts** usually come under the [SIL Open Font License](https://openfontlicense.org/) (`OFL-1.1`). You can bundle them with software, commercial or not, but not sell them on their own.
 - **Images and documentation**: CC-BY-4.0 asks for credit. CC-BY-SA-4.0 adds share-alike, a copyleft for content, and since [October 8, 2015](https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/), CC-BY-SA-4.0 material can go into GPL-3.0 works, one way.
-- **Non-commercial licenses aren't open source.** "NC" discriminates against a field of use, which the Open Source Definition forbids. This guide is an example: its code is MIT, its content is CC-BY-NC-SA-4.0. You can read it, share it and adapt it, but not use it commercially, and that makes the content not open source.
+- **Non-commercial licenses aren't open source.** "NC" discriminates against a field of use, which the [Open Source Definition](/guide/glossary/#osd) forbids. This guide is an example: its code is MIT, its content is CC-BY-NC-SA-4.0. You can read it, share it and adapt it, but not use it commercially, and that makes the content not open source.
 
 [Licenses for Things That Aren't Code](/guide/licensing/non-code-licenses/) covers each kind, hardware, data and models included.
 

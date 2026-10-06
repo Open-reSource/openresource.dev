@@ -22,7 +22,7 @@ import Related from '../../../../components/Related.astro';
 - When one arrives: acknowledge it, reproduce it, fix it in private, agree on a date with the reporter, then publish the fix and the advisory together.
 - GitHub is a CVE Numbering Authority: one advisory form gets you a CVE, and Dependabot alerts everyone who depends on you.
 - Your CI is part of your release: pin actions to a commit, restrict token permissions, publish from CI with provenance.
-- The EU Cyber Resilience Act mostly concerns companies that ship your code. Expect their questions.
+- The EU [Cyber Resilience Act](/guide/glossary/#cra) mostly concerns companies that ship your code. Expect their questions.
 
 </InShort>
 
@@ -37,7 +37,7 @@ import Related from '../../../../components/Related.astro';
 	alt="Bootstrap's Security tab: a Report a vulnerability button, and a SECURITY.md: reports acknowledged within 3 business days."
 />
 
-It needs four things: which versions get fixes, how to report, how fast you'll answer, and whether you pay bounties (usually not). A template:
+It needs four things: which versions get fixes, how to report, how fast you'll answer, and whether you pay [bounties](/guide/glossary/#bounty) (usually not). A template:
 
 ```md
 # Security policy
@@ -72,7 +72,7 @@ Then four settings:
 
 ## One advisory gets you a CVE and alerts every user
 
-A **repository security advisory** is a form on GitHub: affected versions, patched versions, severity, a description, a workaround if there is one, and credits. GitHub is a CVE Numbering Authority, so the same form can request a CVE identifier ([GitHub's docs](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories)). Once published and reviewed, the advisory enters the GitHub Advisory Database, and Dependabot alerts every repository that depends on an affected version.
+A **[repository security advisory](/guide/glossary/#ghsa)** is a form on GitHub: affected versions, patched versions, severity, a description, a workaround if there is one, and credits. GitHub is a [CVE](/guide/glossary/#cve) Numbering Authority, so the same form can request a CVE identifier ([GitHub's docs](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories)). Once published and reviewed, the advisory enters the GitHub Advisory Database, and Dependabot alerts every repository that depends on an affected version.
 
 The advisory for the tj-actions compromise shows what a good one contains: what happened, in plain words (1), and the version that fixes it (2):
 
@@ -87,7 +87,7 @@ The advisory for the tj-actions compromise shows what a good one contains: what 
 
 Two attacks, a year apart, went through the build rather than the code.
 
-**tj-actions/changed-files, March 2025.** Attackers rewrote the version tags of a GitHub Action used by more than 23,000 repositories so that they pointed to a malicious commit. Every workflow that referenced a tag, like `@v45`, ran it and printed its secrets into the build logs, public on public repositories ([CISA's alert](https://www.cisa.gov/news-events/alerts/2025/03/18/supply-chain-compromise-third-party-tj-actionschanged-files-cve-2025-30066-and-reviewdogaction)). Workflows that pinned the action to a full commit SHA kept running the old code.
+**tj-actions/changed-files, March 2025.** Attackers rewrote the version tags of a GitHub Action used by more than 23,000 repositories so that they pointed to a malicious commit. Every workflow that referenced a [tag](/guide/glossary/#tag), like `@v45`, ran it and printed its secrets into the build logs, public on public repositories ([CISA's alert](https://www.cisa.gov/news-events/alerts/2025/03/18/supply-chain-compromise-third-party-tj-actionschanged-files-cve-2025-30066-and-reviewdogaction)). Workflows that pinned the action to a full commit SHA kept running the old code.
 
 **xz, March 2024.** Part of the backdoor was "solely in the distributed tarballs", as Andres Freund [wrote](https://www.openwall.com/lists/oss-security/2024/03/29/4): not in the Git repository anyone could review. A release built in public CI from the tagged source, with a provenance attestation, leaves no room for a file that exists only in the tarball.
 
