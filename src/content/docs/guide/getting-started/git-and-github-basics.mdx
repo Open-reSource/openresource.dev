@@ -36,7 +36,7 @@ A contribution moves through three copies of the same repository:
 | Your fork   | `github.com/<you>/…` | `origin`    | You                    |
 | Your clone  | Your machine         | (none)      | You, with `git commit` |
 
-You fetch from `upstream`, push to `origin`, and open a pull request from `origin` to `upstream`. The maintainers merge it into their copy. Nothing ever flows back to your fork on its own:
+You fetch from `upstream`, push to `origin`, and open a pull request from `origin` to `upstream`. The maintainers merge it into their copy. Nothing ever flows back to your [fork](/guide/glossary/#fork) on its own:
 
 <ContentImage
 	src="/images/getting-started-git-and-github-basics-1.png"
@@ -146,7 +146,7 @@ git commit -m "Docs: say on mobile devices, not in mobile devices"
 
 ## A conflict is two edits to the same line, and you write the result
 
-While you work, the project moves on. Bring its new commits under yours with a rebase:
+While you work, the project moves on. Bring its new commits under yours with a [rebase](/guide/glossary/#rebase):
 
 ```bash
 git fetch upstream

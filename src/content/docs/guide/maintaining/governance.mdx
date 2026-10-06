@@ -29,7 +29,7 @@ import Related from '../../../../components/Related.astro';
 
 ## Every project has a model, written or not
 
-A project without a governance document still has one: the person with the merge button decides. That works until they're gone or two people with merge rights disagree. The models that open-source projects use, each with the document that describes it (as of September 2026):
+A project without a [governance](/guide/glossary/#governance) document still has one: the person with the merge button decides. That works until they're gone or two people with merge rights disagree. The models that open-source projects use, each with the document that describes it (as of September 2026):
 
 | Model                                   | Example                                                                                                                                                                                                                | The catch                                                          |
 | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -40,7 +40,7 @@ A project without a governance document still has one: the person with the merge
 | Levels and a steering committee         | Astro: four contributor levels, voting rules for each promotion, and a TSC ([GOVERNANCE.md](https://github.com/withastro/.github/blob/main/GOVERNANCE.md)).                                                            | Someone has to run the process.                                    |
 | A company's team decides                | Go: members of the Go team at Google meet every week to accept or decline proposals, discussed in public issues ([proposal process](https://github.com/golang/proposal)).                                              | The company's priorities are the project's priorities.             |
 
-Projects move between models. Python went from one person to a council in 2018. React, run by Meta since it was open-sourced, [announced](https://react.dev/blog/2025/10/07/introducing-the-react-foundation) in October 2025 that it would move to a React Foundation with independent technical governance. **None of these is the right one. The wrong one is the one nobody wrote down.**
+Projects move between models. Python went from one person to a council in 2018. React, run by Meta since it was open-sourced, [announced](https://react.dev/blog/2025/10/07/introducing-the-react-foundation) in October 2025 that it would move to a React [Foundation](/guide/glossary/#foundation) with independent technical governance. **None of these is the right one. The wrong one is the one nobody wrote down.**
 
 ## A GOVERNANCE.md answers five questions
 
@@ -71,7 +71,7 @@ Each role is defined somewhere a machine can read, like an `OWNERS` file, so too
 
 A pull request is enough for a bug fix. It's not enough for a new language feature, a breaking change or a new release policy: the discussion needs to happen before the code, where everyone affected can see it. Projects use two kinds of document for that:
 
-- **RFCs** (requests for comments), for proposals that change the project for everyone: [Rust](https://github.com/rust-lang/rfcs), [React](https://github.com/reactjs/rfcs) and [Ember](https://github.com/emberjs/rfcs) keep them in a repository, one pull request per proposal.
+- **[RFCs](/guide/glossary/#rfc)** (requests for comments), for proposals that change the project for everyone: [Rust](https://github.com/rust-lang/rfcs), [React](https://github.com/reactjs/rfcs) and [Ember](https://github.com/emberjs/rfcs) keep them in a repository, one pull request per proposal.
 - **ADRs** ([architecture decision records](https://adr.github.io/)), a page per technical decision, with its context and consequences, so that the next maintainer knows why.
 
 Rust's process shows the parts that matter. On [rust-lang/rfcs#3958](https://github.com/rust-lang/rfcs/pull/3958), a proposal to support LaTeX math in Rustdoc, a bot tracked each team member's review, and the concerns they raised until each was resolved (1). A majority of approvals opened a final comment period (2):
@@ -89,7 +89,7 @@ The final comment period opened on August 26, 2026, closed ten days later with a
 
 Most decisions don't need a vote, and a project that votes on everything stops moving. Apache's [voting rules](https://www.apache.org/foundation/voting.html) give the vocabulary most projects borrow:
 
-- **Lazy consensus**: announce what you'll do, and do it if nobody objects in time. Silence is consent.
+- **[Lazy consensus](/guide/glossary/#lazy-consensus)**: announce what you'll do, and do it if nobody objects in time. Silence is consent.
 - **+1, 0, -1**: yes, no opinion, no. A vote on a release needs three binding +1 and runs for at least 72 hours, "regardless of their geographic location".
 - **The veto**: on code changes, a -1 is a veto that can't be overridden, and it must come with a technical justification. A veto without one isn't valid.
 
@@ -99,19 +99,19 @@ Write down which decisions need a vote, and which rely on lazy consensus. Everyt
 
 A foundation holds what a project shouldn't leave with one person or one company: the trademark, the domain, the money, and sometimes the legal risk. In exchange, the project gives up some control, and follows the foundation's rules.
 
-| Foundation                                                 | For                                                                           |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [Apache Incubator](https://incubator.apache.org/)          | Projects ready to adopt the Apache way of working, votes included.            |
-| [CNCF Sandbox](https://www.cncf.io/sandbox-projects/)      | Cloud-native projects, as a first step toward CNCF incubation.                |
-| [OpenJS Foundation](https://openjsf.org/)                  | JavaScript projects: Node.js, webpack, ESLint and others.                     |
-| [Software Freedom Conservancy](https://sfconservancy.org/) | Fiscal and legal hosting for free software projects, without a technical say. |
-| [Commons Conservancy](https://commonsconservancy.org/)     | A lighter legal home for projects that want to stay independent.              |
+| Foundation                                                 | For                                                                                                           |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Apache Incubator](https://incubator.apache.org/)          | Projects ready to adopt the Apache way of working, votes included.                                            |
+| [CNCF Sandbox](https://www.cncf.io/sandbox-projects/)      | Cloud-native projects, as a first step toward CNCF incubation.                                                |
+| [OpenJS Foundation](https://openjsf.org/)                  | JavaScript projects: Node.js, webpack, ESLint and others.                                                     |
+| [Software Freedom Conservancy](https://sfconservancy.org/) | [Fiscal and legal hosting](/guide/glossary/#fiscal-host) for free software projects, without a technical say. |
+| [Commons Conservancy](https://commonsconservancy.org/)     | A lighter legal home for projects that want to stay independent.                                              |
 
 It's worth it when several organizations depend on the project and none of them should own it: that's when neutrality has a value. Before that, it's paperwork for a project that still needs contributors.
 
 ## When the founder leaves, governance is the plan
 
-On July 12, 2018, Guido van Rossum, who had decided everything in Python for nearly three decades, posted "[Transfer of power](https://mail.python.org/pipermail/python-committers/2018-July/005664.html)" to the core developers: he was stepping down, and wouldn't appoint a successor. The core developers wrote proposals, voted in December 2018 for a steering council ([PEP 8016](https://peps.python.org/pep-8016/)), and elected the first one in early 2019. Python didn't stop, because the people and the process to decide were already there.
+On July 12, 2018, Guido van Rossum, who had decided everything in Python for nearly three decades, posted "[Transfer of power](https://mail.python.org/pipermail/python-committers/2018-July/005664.html)" to the core developers: he was stepping down, and wouldn't appoint a successor. The core developers wrote proposals, voted in December 2018 for a [steering council](/guide/glossary/#steering-committee) ([PEP 8016](https://peps.python.org/pep-8016/)), and elected the first one in early 2019. Python didn't stop, because the people and the process to decide were already there.
 
 Most projects are smaller, and their founder's exit is quieter. The question is the same: who decides the day you stop? [Burnout, Succession and the End of a Project](/guide/maintaining/burnout-succession-and-the-end/) covers the handover itself.
 
@@ -129,7 +129,7 @@ Most projects are smaller, and their founder's exit is quieter. The question is 
 ## Go further
 
 - [Node.js' GOVERNANCE.md](https://github.com/nodejs/node/blob/main/GOVERNANCE.md): a complete governance document for a large project, readable in fifteen minutes.
-- [Kubernetes community membership](https://github.com/kubernetes/community/blob/master/community-membership.md): the contributor ladder most projects copy.
+- [Kubernetes community membership](https://github.com/kubernetes/community/blob/master/community-membership.md): the [contributor ladder](/guide/glossary/#contributor-ladder) most projects copy.
 - [Apache voting process](https://www.apache.org/foundation/voting.html): lazy consensus, +1s and vetoes, precisely defined.
 - [PEP 13](https://peps.python.org/pep-0013/): how Python decides, since its founder stepped down.
 

@@ -15,7 +15,7 @@ import Related from '../../../../components/Related.astro';
 
 ## Understanding Project Dependencies
 
-Dependencies make development faster and more efficient, but they can also bring risks, such as introducing bugs, security vulnerabilities, or even conflicts with other dependencies.
+[Dependencies](/guide/glossary/#dependency) make development faster and more efficient, but they can also bring risks, such as introducing bugs, security vulnerabilities, or even conflicts with other dependencies.
 
 Managing dependencies requires understanding which dependencies your project truly needs and ensuring they are compatible with each other and with your project's specific requirements.
 
@@ -46,7 +46,7 @@ Most of them have features for locking versions, auditing security, and simplify
 
 ## Dependencies Versioning
 
-**Dependencies are versioned** so that developers can specify which version of a dependency their project requires. Versioning helps ensure that your project remains stable and that updates don't introduce breaking changes.
+**Dependencies are versioned** so that developers can specify which version of a dependency their project requires. Versioning helps ensure that your project remains stable and that updates don't introduce [breaking changes](/guide/glossary/#breaking-change).
 
 **The most common versioning scheme is [Semantic Versioning (SemVer)](https://semver.org/)**, which uses three numbers (e.g., 1.2.3) to indicate the significance of changes. Major versions indicate breaking changes, minor versions add new features, and patch versions include bug fixes.
 
@@ -70,7 +70,7 @@ Updating dependencies is a delicate balance: you want to benefit from new featur
 2. **Test Before Upgrading**: Even minor updates can introduce unexpected changes. Before deploying updated dependencies, ensure your testing suite covers the main features. If you don't have tests, consider creating them for critical areas before updating.
 3. **Read Release Notes**: Review the release notes for each dependency update to understand what has changed. Look for breaking changes, new features, and security fixes to assess the impact on your project.
 4. **Batch Updates Carefully**: When updating multiple dependencies, it's safer to do so incrementally. Updating everything at once increases the risk of introducing multiple issues simultaneously, making debugging harder.
-5. **Monitor for Security Alerts**: Use tools like [GitHub Advisory Database](https://github.com/advisories), or Dependabot to receive notifications about security vulnerabilities in your dependencies. Address these alerts promptly to keep your project secure.
+5. **Monitor for Security Alerts**: Use tools like [GitHub Advisory Database](https://github.com/advisories), or [Dependabot](/guide/glossary/#dependabot) to receive notifications about security vulnerabilities in your dependencies. Address these alerts promptly to keep your project secure.
 
 ## Handling Dependency Conflicts
 

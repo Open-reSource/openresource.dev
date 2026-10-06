@@ -108,6 +108,8 @@ export default defineConfig({
 					// No number: the modules count from 01, as on the homepage.
 					{ label: 'Guide', num: false, items: ['guide', 'guide/checklists', 'guide/templates'] },
 					...modules.map(guide),
+					// Cross-cutting like Checklists, but a reference you look things up in: after the modules.
+					{ label: 'Glossary', num: false, items: ['guide/glossary'] },
 					{
 						label: 'Resources',
 						items: [

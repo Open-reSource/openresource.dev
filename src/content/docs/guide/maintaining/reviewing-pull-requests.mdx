@@ -39,7 +39,7 @@ Reading a diff takes minutes; deciding whether to read it takes seconds. Before 
 
 ## What to check in the diff
 
-A review checklist keeps you from checking the style and missing the bug. Copy this one into your review when it helps:
+A review checklist keeps you from checking the style and missing the bug. Copy this one into your [review](/guide/glossary/#review) when it helps:
 
 <Checklist id="pull-request-review">
 
@@ -77,7 +77,7 @@ Label the good parts too. One `praise:` on the part that was done well costs a l
 Every comment you post on its own sends a notification. Click **Start a review** instead of **Add single comment**, write all your comments, then submit them together with a verdict: **Comment**, **Approve** or **Request changes**.
 
 - **Use suggestion blocks** for small changes: the **Add a suggestion** button in the comment toolbar turns your fix into one the author applies with a click. [Your First Contribution](/guide/contributing/contributing-to-open-source/#reply-to-every-review-comment-then-let-the-maintainer-resolve-it) shows one from the author's side.
-- **Approve with nits** when only nits are left: "Approved. Two nitpicks below, take them or leave them." Another round for a missing period costs the contributor a day.
+- **Approve with [nits](/guide/glossary/#nit)** when only nits are left: "Approved. Two nitpicks below, take them or leave them." Another round for a missing period costs the contributor a day.
 - **Fix the last details yourself** when "Allow edits by maintainers" is ticked, and say what you changed.
 
 ## Write the comment you'd want to receive
@@ -139,7 +139,7 @@ The author answered "Makes total sense, thanks for taking a look!" and offered t
 
 ## Merge so that the history tells the story
 
-**Squash, and rewrite the commit message.** The branch's "fix typo" and "address review" commits help nobody later. The squashed commit's first line is what `git log` and the changelog show: say what changed, in the project's format. When Julien merged stefan-korn's first contribution, he replaced the issue's title with "Docs: Add `.table` class to color tables example".
+**[Squash](/guide/glossary/#squash), and rewrite the commit message.** The branch's "fix typo" and "address review" commits help nobody later. The squashed commit's first line is what `git log` and the changelog show: say what changed, in the project's format. When Julien merged stefan-korn's first contribution, he replaced the issue's title with "Docs: Add `.table` class to color tables example".
 
 **Keep every author.** Check the end of the message before you confirm: everyone who wrote code on the branch needs a `Co-authored-by:` line to be credited on GitHub. That squashed commit, [a715174](https://github.com/twbs/bootstrap/commit/a715174c5), shows both stefan-korn and Julien as authors. To credit reviewers and people who helped in the thread too, [Better GitHub Co-Authors](https://github.com/delucis/better-github-coauthors) adds a button to the merge box that collects them.
 

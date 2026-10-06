@@ -38,16 +38,16 @@ It also says what overrides it: a separate agreement, "such as a contributor lic
 | A DCO sign-off in each commit | The same, plus a statement that you may contribute it | Linux, Git, GCC, Node.js, OpenTofu, Valkey                       |
 | A signed CLA                  | A license to the project's owner, often a wider one   | Google, Microsoft, Meta, Kubernetes, CPython, HashiCorp, Elastic |
 
-Django asked whether it still needed its CLA, and [made it optional](https://github.com/django/django/commit/0dac3dd4a1573b3c9cef3aea6a98440decfc5460) on February 9, 2026: "It's not clear that CLAs are needed", given inbound=outbound. Contributors whose employer requires one can still sign it.
+Django asked whether it still needed its [CLA](/guide/glossary/#cla), and [made it optional](https://github.com/django/django/commit/0dac3dd4a1573b3c9cef3aea6a98440decfc5460) on February 9, 2026: "It's not clear that CLAs are needed", given inbound=outbound. Contributors whose employer requires one can still sign it.
 
 ## A DCO is one line: you may contribute this code
 
-The Developer Certificate of Origin started in the Linux kernel. Linus Torvalds [proposed it in May 2004](https://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html) "to document that chain of trust", after SCO's lawsuits had questioned where Linux code came from, and version 1.1, the current one, [went in on June 14, 2005](https://github.com/torvalds/linux/commit/cbd83da82b15). The [full text](https://developercertificate.org/) is four short clauses. By signing off, you certify that:
+The [Developer Certificate of Origin](/guide/glossary/#dco) started in the Linux kernel. Linus Torvalds [proposed it in May 2004](https://lkml.iu.edu/hypermail/linux/kernel/0405.2/1301.html) "to document that chain of trust", after SCO's lawsuits had questioned where Linux code came from, and version 1.1, the current one, [went in on June 14, 2005](https://github.com/torvalds/linux/commit/cbd83da82b15). The [full text](https://developercertificate.org/) is four short clauses. By signing off, you certify that:
 
 1. you wrote the code and may submit it under the project's license, or
 2. it's based on earlier work under a compatible open-source license, or
 3. someone who certified one of the above gave it to you, unchanged;
-4. and you understand that the contribution and your sign-off are public, and kept.
+4. and you understand that the contribution and your [sign-off](/guide/glossary/#sign-off) are public, and kept.
 
 **The sign-off is a line in the commit message**, with your name and email:
 
@@ -76,7 +76,7 @@ Several projects dropped their CLA for a DCO: Chef ([October 3, 2016](https://ww
 
 A contributor license agreement is a contract between you and the project's owner: a company, or a foundation. The reference text is the Apache Software Foundation's [individual CLA](https://www.apache.org/licenses/contributor-agreements.html), which most others adapt. It grants the foundation:
 
-- a copyright license on your contribution: "perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable", **with the right to sublicense**;
+- a copyright license on your contribution: "perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable", **with the right to [sublicense](/guide/glossary/#sublicense)**;
 - a patent license on your patents that the contribution uses;
 - and nothing else: "You reserve all right, title, and interest" in your contribution. You keep your copyright.
 
@@ -119,7 +119,7 @@ For a DCO, check your commit email: the sign-off is public and kept forever, per
 
 - **Nothing at all** works for most projects: inbound=outbound already gives you a license to every contribution.
 - **The DCO** adds a record, per commit, that the contributor says they may contribute the code. It costs one app, one line in your `CONTRIBUTING.md`, and a rebase for first-time contributors who forget.
-- **A CLA** makes sense when a company or a foundation needs a patent grant from contributors, or plans to sell the same code under a commercial license (dual licensing). It needs a lawyer to write it, a bot to check it, and contributors willing to sign it. Say in your contributing guide why you ask for it: contributors will read it anyway.
+- **A CLA** makes sense when a company or a foundation needs a patent grant from contributors, or plans to sell the same code under a commercial license ([dual licensing](/guide/glossary/#dual-licensing)). It needs a lawyer to write it, a bot to check it, and contributors willing to sign it. Say in your contributing guide why you ask for it: contributors will read it anyway.
 
 **Decide before the first outside pull request.** A CLA added later only covers contributions made after it. The ones before stay under inbound=outbound, and changing their license needs those contributors, one by one.
 

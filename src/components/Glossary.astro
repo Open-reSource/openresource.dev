@@ -1,0 +1,85 @@
+---
+// The glossary page: every entry of src/glossary.mjs under its letter, each a `<dt id>` so `/guide/glossary/#copyleft`
+// works, with the definition and a link to the chapter that explains the term. A short A–Z list at the top jumps to
+// the letters that have terms. Definitions may hold `inline code` in backticks: nothing else is markup.
+import { glossary, letters } from '../glossary.mjs';
+
+const groups = letters.map((letter) => ({
+	letter,
+	entries: glossary.filter(({ term }) => term[0].toUpperCase() === letter),
+}));
+// A definition's `code` spans, as alternating text and code parts.
+const parts = (definition: string) => definition.split('`').map((text, i) => ({ text, code: i % 2 === 1 }));
+---
+
+<nav aria-label="Glossary letters">
+	<ul class="letters">
+		{letters.map((letter) => (
+			<li>
+				<a href={`#letter-${letter.toLowerCase()}`}>{letter}</a>
+			</li>
+		))}
+	</ul>
+</nav>
+
+{groups.map(({ letter, entries }) => (
+	<section>
+		<h2 id={`letter-${letter.toLowerCase()}`}>{letter}</h2>
+		<dl>
+			{entries.map(({ id, term, definition, href }) => (
+				<>
+					<dt id={id}>
+						<a href={`#${id}`}>{term}</a>
+					</dt>
+					<dd>
+						{parts(definition).map(({ text, code }) => (code ? <code>{text}</code> : text))}{' '}
+						<a href={href} aria-label={`Read more about ${term}`}>
+							Read more
+						</a>
+					</dd>
+				</>
+			))}
+		</dl>
+	</section>
+))}
+
+<style>
+	.letters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2) var(--space-3);
+		margin: var(--space-4) 0;
+		padding: 0;
+		list-style: none;
+		font: var(--type-mono);
+	}
+
+	.letters li {
+		margin: 0;
+	}
+
+	dt {
+		margin-top: var(--space-4);
+		font-weight: 600;
+		/* Leave room for the sticky header when a term is the target of a link. */
+		scroll-margin-top: 5rem;
+	}
+
+	dt a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	dt a:hover,
+	dt a:focus-visible {
+		text-decoration: underline;
+	}
+
+	dt:target {
+		color: var(--color-primary);
+	}
+
+	dd {
+		margin: var(--space-1) 0 0;
+	}
+</style>

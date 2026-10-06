@@ -34,10 +34,10 @@ An open-source license grants that permission under conditions. The [Open Source
 ## Four questions pick the license
 
 1. **Is it code?** For documentation, images or other content, use a Creative Commons license: CC-BY-4.0 to require credit, CC0-1.0 to waive everything. Creative Commons itself [recommends against](https://creativecommons.org/faq/) its licenses for software. [Licenses for Things That Aren't Code](/guide/licensing/non-code-licenses/) covers the rest: fonts, hardware, data. For code, go on.
-2. **Must modified versions stay open?** If you don't mind someone shipping a closed product built on your code, you want a **permissive** license: question 3. If you want their changes to come back as open source, a **copyleft** one: question 4.
+2. **Must modified versions stay open?** If you don't mind someone shipping a closed product built on your code, you want a **[permissive](/guide/glossary/#permissive)** license: question 3. If you want their changes to come back as open source, a **[copyleft](/guide/glossary/#copyleft)** one: question 4.
 3. **Do patents matter?** Apache-2.0 grants a patent license from every contributor, and withdraws it from anyone who sues over patents in the project. Companies often prefer it for that. If patents don't matter to you, MIT says the same in far fewer words.
 4. **Where does the code run?**
-   - On servers that people use over a network: **AGPL-3.0**. Plain GPL only applies when a program is distributed, and a web service isn't.
+   - On servers that people use over a network: **AGPL-3.0**. Plain [GPL](/guide/glossary/#gpl) only applies when a program is distributed, and a web service isn't.
    - As a library inside other people's programs: **MPL-2.0** (changes to your files come back) or **LGPL-3.0** (changes to your library come back). The program that uses it keeps its own license.
    - Anywhere else: **GPL-3.0**.
 
@@ -91,7 +91,7 @@ license-files = ["LICENSE"]
 license = "MIT OR Apache-2.0"
 ```
 
-**3. An SPDX header in each file**, optional but precise when a repository mixes licenses. The [REUSE](https://reuse.software/) specification and its `reuse lint` tool check that every file has one:
+**3. An [SPDX](/guide/glossary/#spdx) header in each file**, optional but precise when a repository mixes licenses. The [REUSE](https://reuse.software/) specification and its `reuse lint` tool check that every file has one:
 
 ```js
 // SPDX-FileCopyrightText: 2026 Your Name

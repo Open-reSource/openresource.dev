@@ -30,7 +30,7 @@ import Related from '../../../../components/Related.astro';
 
 </InShort>
 
-The spine of this chapter is [twbs/bootstrap#41691](https://github.com/twbs/bootstrap/pull/41691), stefan-korn's first pull request to Bootstrap. It had no review back-and-forth, so the review steps come from [twbs/bootstrap#41143](https://github.com/twbs/bootstrap/pull/41143), Kelketek's first one. Both were merged by Julien, who maintains Bootstrap and this guide.
+The spine of this chapter is [twbs/bootstrap#41691](https://github.com/twbs/bootstrap/pull/41691), stefan-korn's first [pull request](/guide/glossary/#pull-request) to Bootstrap. It had no review back-and-forth, so the review steps come from [twbs/bootstrap#41143](https://github.com/twbs/bootstrap/pull/41143), Kelketek's first one. Both were merged by Julien, who maintains Bootstrap and this guide.
 
 | Step                | #41691 (stefan-korn)   | #41143 (Kelketek)                |
 | ------------------- | ---------------------- | -------------------------------- |
@@ -116,7 +116,7 @@ npm warn install-scripts   sharp@0.33.5 (install: node install/check)
 
 None of this stopped the docs from starting on `http://localhost:9001`. Warnings aren't errors. What matters is whether the command the README gives you works.
 
-- `EBADENGINE` means your Node.js version isn't one the project supports. Node 23 is an odd-numbered release; use the version the project's CI uses. Bootstrap's docs workflow ran on Node 22 at the time; today it reads the version from `.nvmrc` (24.18.0, as of September 2026), and so can you with `nvm use`.
+- `EBADENGINE` means your Node.js version isn't one the project supports. Node 23 is an odd-numbered release; use the version the project's [CI](/guide/glossary/#ci) uses. Bootstrap's docs workflow ran on Node 22 at the time; today it reads the version from `.nvmrc` (24.18.0, as of September 2026), and so can you with `nvm use`.
 - The `install-scripts` warning comes from recent npm versions, which don't run a package's install scripts until you approve them. If the project breaks because of it, `npm install-scripts approve <package>` lets the script run.
 - When the command itself fails, search the project's issues for the error message before you open a new one. Someone has usually hit it before.
 

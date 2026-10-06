@@ -38,7 +38,7 @@ More than 180 million developers have an account on GitHub, and 36 million joine
 />
 
 - **Issues and pull requests**: the contribution flow every other platform copies. [Git and GitHub Basics](/guide/getting-started/git-and-github-basics/) covers it.
-- **Actions**: CI, free on public repositories with GitHub's standard runners.
+- **[Actions](/guide/glossary/#github-actions)**: CI, free on public repositories with GitHub's standard runners.
 - **Discussions, Sponsors, Codespaces and Copilot**: questions, money, a cloud editor, AI, in the same account.
 
 Microsoft has owned GitHub since 2018. Some projects left over it, or over the AI features spreading across the site: [Zig's announcement](https://ziglang.org/news/migrating-from-github-to-codeberg/) gives one project's reasons. For a contributor, that changes nothing: the projects are where they are.
@@ -73,7 +73,7 @@ Others, like [Inkscape](https://gitlab.com/inkscape/inkscape) and [F-Droid](http
 
 ## Codeberg is a non-profit, with Forgejo underneath
 
-[Codeberg](https://codeberg.org/) is run by Codeberg e.V., a non-profit association in Berlin, and hosts free and open-source projects only. It runs [Forgejo](https://forgejo.org/), a forge that started as a soft fork of Gitea in late 2022 and [became a hard fork](https://forgejo.org/2024-02-forking-forward/) in February 2024. If you know GitHub, you know Forgejo: code, issues, pull requests (boxed), actions.
+[Codeberg](https://codeberg.org/) is run by Codeberg e.V., a non-profit association in Berlin, and hosts free and open-source projects only. It runs [Forgejo](https://forgejo.org/), a forge that started as a soft fork of Gitea in late 2022 and [became a hard fork](https://forgejo.org/2024-02-forking-forward/) in February 2024. If you know GitHub, you know [Forgejo](/guide/glossary/#forgejo): code, issues, pull requests (boxed), actions.
 
 <ContentImage
 	src="/images/getting-started-source-code-hosting-platforms-3.png"
@@ -82,7 +82,7 @@ Others, like [Inkscape](https://gitlab.com/inkscape/inkscape) and [F-Droid](http
 	alt="Zig's repository on Codeberg: tabs Code, Issues 833, Pull requests 324, Activity and Actions, like a GitHub repository."
 />
 
-Zig moved there on November 26, 2025, after ten years on GitHub. Forgejo itself is developed on Codeberg. CI runs on Codeberg's Woodpecker instance, which you ask access to, or on Forgejo Actions with runners you provide ([Codeberg's docs](https://docs.codeberg.org/ci/)). Forgejo is also a single binary you can host yourself.
+Zig moved there on November 26, 2025, after ten years on GitHub. Forgejo itself is developed on [Codeberg](/guide/glossary/#codeberg). CI runs on Codeberg's Woodpecker instance, which you ask access to, or on Forgejo Actions with runners you provide ([Codeberg's docs](https://docs.codeberg.org/ci/)). Forgejo is also a single binary you can host yourself.
 
 ## On sourcehut and the kernel, you send patches by email
 
@@ -107,14 +107,14 @@ git send-email --annotate -1
 
 ## Side by side
 
-| As of September 2026 | GitHub                      | GitLab.com              | Codeberg                    | sourcehut               |
-| -------------------- | --------------------------- | ----------------------- | --------------------------- | ----------------------- |
-| Run by               | Microsoft                   | GitLab Inc.             | Codeberg e.V., non-profit   | SourceHut               |
-| How you contribute   | Pull request                | Merge request           | Pull request                | Patch by email          |
-| Cost for a project   | Free                        | Free, 5 users per group | Free, open source only      | From $4 a month to host |
-| Hosted CI            | Free on public repositories | 400 minutes a month     | On request, or your runners | Included                |
-| Host it yourself     | Paid (Enterprise Server)    | Yes, open core          | Yes, Forgejo                | Yes, open source        |
-| Known projects       | Bootstrap, VS Code          | GNOME, Debian, Inkscape | Zig, Forgejo                | aerc                    |
+| As of September 2026 | GitHub                      | GitLab.com                                   | Codeberg                    | sourcehut               |
+| -------------------- | --------------------------- | -------------------------------------------- | --------------------------- | ----------------------- |
+| Run by               | Microsoft                   | GitLab Inc.                                  | Codeberg e.V., non-profit   | SourceHut               |
+| How you contribute   | Pull request                | Merge request                                | Pull request                | Patch by email          |
+| Cost for a project   | Free                        | Free, 5 users per group                      | Free, open source only      | From $4 a month to host |
+| Hosted CI            | Free on public repositories | 400 minutes a month                          | On request, or your runners | Included                |
+| Host it yourself     | Paid (Enterprise Server)    | Yes, [open core](/guide/glossary/#open-core) | Yes, Forgejo                | Yes, open source        |
+| Known projects       | Bootstrap, VS Code          | GNOME, Debian, Inkscape                      | Zig, Forgejo                | aerc                    |
 
 ## Which one for you
 

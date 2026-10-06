@@ -21,7 +21,7 @@ import Related from '../../../../components/Related.astro';
 - The README sells the project on one screen: what it does, what it looks like, how to install it, how to use it.
 - `LICENSE`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` and `SECURITY.md` can start at a few lines. Chalk's contributing guide is one sentence.
 - GitHub finds these files at the root, in `docs/` or in `.github/`, links them in the About box, and scores them on a Community Standards page.
-- Issue forms, `FUNDING.yml`, a changelog and `CODEOWNERS` can wait for the first issues, sponsors, releases and co-maintainers.
+- Issue forms, `FUNDING.yml`, a changelog and [`CODEOWNERS`](/guide/glossary/#codeowners) can wait for the first issues, sponsors, releases and co-maintainers.
 - A public `.github` repository gives every repository of an account the same defaults, except the license.
 
 </InShort>
@@ -74,7 +74,7 @@ The order that works for most projects:
 
 Two or three badges are enough. HTTPX's say whether the tests pass and which version is out; downloads, stars and "PRs welcome" add nothing a reader needs to decide.
 
-A README that passes the one-screen test:
+A [README](/guide/glossary/#readme) that passes the one-screen test:
 
 <Template name="README.md" />
 
@@ -88,7 +88,7 @@ It's the one file the `.github` repository trick, [further down](#one-github-rep
 
 ## A code of conduct names who to write to
 
-**A code of conduct is only as good as its contact line.** Most projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/), version 3.0 since 2025, and the template leaves a placeholder where the reporting address goes. A GitHub code search for `[INSERT CONTACT METHOD]`, the placeholder of version 2, finds 4,608 files named `CODE_OF_CONDUCT.md`, as of September 28, 2026: rules nobody can enforce, because nobody can report a breach.
+**A [code of conduct](/guide/glossary/#code-of-conduct) is only as good as its contact line.** Most projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/), version 3.0 since 2025, and the template leaves a placeholder where the reporting address goes. A GitHub code search for `[INSERT CONTACT METHOD]`, the placeholder of version 2, finds 4,608 files named `CODE_OF_CONDUCT.md`, as of September 28, 2026: rules nobody can enforce, because nobody can report a breach.
 
 Use an address more than one person reads, and turn on **Settings** › **Moderation options** › **Reported content**, so contributors can flag a comment to you without leaving GitHub. [How to Create a Code of Conduct](/articles/how-to-create-a-code-of-conduct-for-an-open-source-project) compares the templates.
 
@@ -144,11 +144,11 @@ GitHub renders it in the sidebar, one line per key:
 	alt="Chalk's Sponsor this project box: two GitHub Sponsors profiles, then Open Collective, Tidelift and a custom donation link."
 />
 
-GitHub Sponsors takes up to four people or one organization; Open Collective, Liberapay, Ko-fi, Polar, thanks.dev and a few others take one account each, and `custom` takes up to four links ([GitHub's docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository)). Package managers have their own field for the same links: [Add Funding Links to Your package.json](/articles/add-funding-links-to-your-packagejson/).
+GitHub Sponsors takes up to four people or one organization; [Open Collective](/guide/glossary/#open-collective), Liberapay, Ko-fi, Polar, thanks.dev and a few others take one account each, and `custom` takes up to four links ([GitHub's docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository)). Package managers have their own field for the same links: [Add Funding Links to Your package.json](/articles/add-funding-links-to-your-packagejson/).
 
 ## A changelog is written for the people upgrading
 
-**A changelog says what changed for the people who use the project, not for the people who wrote it.** A dump of the git log fails that test: "Merge branch 'main'" tells nobody whether their code breaks. [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) is the format most hand-written ones follow, newest version first, with an `Unreleased` section on top:
+**A [changelog](/guide/glossary/#changelog) says what changed for the people who use the project, not for the people who wrote it.** A dump of the git log fails that test: "Merge branch 'main'" tells nobody whether their code breaks. [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) is the format most hand-written ones follow, newest version first, with an `Unreleased` section on top:
 
 <Template name="CHANGELOG.md" />
 
