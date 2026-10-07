@@ -62,6 +62,8 @@ export default defineConfig({
 					{ label: 'Threads', href: 'https://www.threads.net/@openresource' },
 				],
 				twitter: '@JulienDeramond',
+				// An organisation, not a person: name and url default to the site's.
+				identity: { type: 'Organization' },
 			},
 			nav: [
 				{ label: 'Guide', href: '/guide/' },
@@ -130,6 +132,7 @@ export default defineConfig({
 				title: 'Articles',
 				description: 'Articles about open source: tools, contribution, maintenance, community and funding.',
 				license: 'CC BY-NC-SA 4.0',
+				covers: 'featured',
 				authors: {
 					julien: {
 						name: 'Julien Déramond',
