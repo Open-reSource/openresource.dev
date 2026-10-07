@@ -1,23 +1,32 @@
 ---
 import { getCollection } from 'astro:content';
 import { readingTime } from '@deramond.dev/astro/blog';
+import { formatMinutes } from '../reading-time.mjs';
 
-// Reading time of the guide, or of one module: every page under the current path.
-const slug = Astro.url.pathname.replace(/^\/|\/$/g, '');
+// Reading time of the guide, or of one module: every page under the current path, or under `of` (`guide`,
+// `guide/licensing`). `inline` prints the duration alone, for a sentence that quotes it.
+interface Props {
+	of?: string;
+	inline?: boolean;
+}
+
+const { of, inline = false } = Astro.props;
+const slug = of ?? Astro.url.pathname.replace(/^\/|\/$/g, '');
 
 const docs = await getCollection('docs');
 const guideReadingTime = docs
 	.filter((doc) => doc.id !== slug && doc.id.startsWith(`${slug}/`))
 	.reduce((total, doc) => total + readingTime(doc.body), 0);
-const duration =
-	guideReadingTime >= 60
-		? `${Math.floor(guideReadingTime / 60)} h ${Math.ceil(guideReadingTime % 60)} min`
-		: `${guideReadingTime} min`;
+const duration = formatMinutes(guideReadingTime);
 ---
 
-<p class="reading-time">
-	This {slug === 'guide' ? 'guide' : 'module'} will take you approximately <b>{duration}</b> to read.
-</p>
+{inline ? (
+	duration
+) : (
+	<p class="reading-time">
+		This {slug === 'guide' ? 'guide' : 'module'} will take you approximately <b>{duration}</b> to read.
+	</p>
+)}
 
 <style>
 	.reading-time {

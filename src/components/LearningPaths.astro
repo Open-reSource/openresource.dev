@@ -1,0 +1,78 @@
+---
+// The learning paths of /guide/start/, from src/learning-paths.mjs: one panel per reader, with who it's for, what it
+// gets them, its chapter count and reading time (computed from the chapters, never typed), and its chapters in order.
+// Each panel's heading has the path's id, so `/guide/start/#maintainer` lands on it.
+import { getCollection } from 'astro:content';
+import { readingTime } from '@deramond.dev/astro/blog';
+import { paths } from '../learning-paths.mjs';
+import { formatMinutes } from '../reading-time.mjs';
+import ModuleChapters from './ModuleChapters.astro';
+
+const docs = new Map((await getCollection('docs')).map((doc) => [doc.id, doc]));
+const cards = paths.map((path) => {
+	const chapters = path.chapters
+		.map((chapter) => docs.get(`guide/${chapter}`))
+		.filter((doc) => doc && doc.data.status !== 'stub');
+	const minutes = chapters.reduce((total, doc) => total + readingTime(doc!.body ?? ''), 0);
+	return { ...path, count: chapters.length, duration: formatMinutes(minutes) };
+});
+---
+
+<div class="paths">
+	{cards.map(({ id, persona, who, promise, chapters, count, duration }) => (
+		<section class="path" aria-labelledby={id}>
+			<h2 id={id}>{persona}</h2>
+			<p class="path__who">{who}</p>
+			<p class="path__promise">{promise}</p>
+			<p class="path__meta">
+				{count} chapters · {duration}
+			</p>
+			<ModuleChapters chapters={chapters} />
+		</section>
+	))}
+</div>
+
+<style>
+	.paths {
+		display: grid;
+		gap: var(--space-5);
+		margin-block: var(--space-6);
+	}
+
+	.path {
+		padding: var(--space-5);
+		background: var(--color-panel);
+		border: var(--stroke-hairline) solid var(--color-line);
+	}
+
+	.path h2 {
+		margin: 0;
+	}
+
+	.path p {
+		margin: var(--space-2) 0 0;
+	}
+
+	.path__who {
+		color: var(--color-muted);
+	}
+
+	.path__promise {
+		color: var(--color-fg);
+		font-weight: var(--font-weight-medium);
+	}
+
+	.path__meta {
+		font: var(--type-mono);
+		color: var(--color-muted);
+	}
+
+	.path :global(.chapters) {
+		margin-bottom: 0;
+	}
+
+	.path :global(.chapters__item:last-child) {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+</style>

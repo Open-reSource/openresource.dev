@@ -106,7 +106,7 @@ export default defineConfig({
 				report: { repo: 'Open-reSource/openresource.dev', template: 'content_problem.yml' },
 				sidebar: [
 					// No number: the modules count from 01, as on the homepage.
-					{ label: 'Guide', num: false, items: ['guide', 'guide/checklists', 'guide/templates'] },
+					{ label: 'Guide', num: false, items: ['guide', 'guide/start', 'guide/checklists', 'guide/templates'] },
 					...modules.map(guide),
 					// Cross-cutting like Checklists, but a reference you look things up in: after the modules.
 					{ label: 'Glossary', num: false, items: ['guide/glossary'] },
