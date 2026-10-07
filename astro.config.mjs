@@ -7,6 +7,7 @@ import deramond from '@deramond.dev/astro/integration';
 import { modules, guide, moved } from './src/guide-modules.mjs';
 import { satteri } from '@astrojs/markdown-satteri';
 import { chapterStatus } from './src/chapter-status.mjs';
+import { learningPaths } from './src/learning-paths-integration.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -42,6 +43,7 @@ export default defineConfig({
 	integrations: [
 		mdx(),
 		sitemap(),
+		learningPaths(),
 		deramond({
 			site: {
 				name: 'Open {re}Source',

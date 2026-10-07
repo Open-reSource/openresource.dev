@@ -62,3 +62,87 @@ pre[data-language='md'] {
 :root a[href^='/guide/glossary/#']:hover {
 	text-decoration-color: currentColor;
 }
+
+/* The learning path a reader follows (src/learning-paths-client.ts adds these on a chapter in their path). The chip under
+   the title has the look of the "Related chapter" chip; "Next in path" has the look of the theme's previous/next links,
+   with a cyan border for the path. Both are added by script, outside the theme's scoped styles: the theme's 760px
+   column width is repeated here. */
+.path-chip {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-1) var(--space-2);
+	align-items: baseline;
+	max-width: 760px;
+	margin: 0 0 var(--space-4);
+	font: var(--type-small);
+}
+
+.path-chip__label,
+.path-next__label {
+	font: var(--type-eyebrow);
+	letter-spacing: var(--type-eyebrow-letter-spacing);
+	text-transform: uppercase;
+	color: var(--color-muted);
+}
+
+.path-chip__name {
+	padding: 0 var(--space-2);
+	border: var(--stroke-hairline) solid var(--color-line);
+	border-radius: var(--radius-pill);
+}
+
+.path-chip__step {
+	font-family: var(--font-family-mono);
+	color: var(--color-muted);
+}
+
+/* A button, since it clears the path rather than going anywhere, drawn as a quiet link. 24px tall at least (WCAG 2.2,
+   target size). */
+.path-chip__leave {
+	min-height: var(--space-6);
+	margin-left: auto;
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	color: var(--color-muted);
+	cursor: pointer;
+}
+
+.path-chip__leave:hover {
+	color: var(--color-fg);
+	text-decoration: underline;
+}
+
+.path-next {
+	max-width: 760px;
+	margin-top: var(--space-12);
+}
+
+.path-next__link {
+	display: block;
+	padding: var(--space-3) var(--space-4);
+	border: var(--stroke-hairline) solid var(--color-primary-dim);
+	color: var(--color-fg);
+}
+
+:root .path-next__link:hover {
+	border-color: var(--color-primary);
+	color: var(--color-fg);
+}
+
+.path-next__label {
+	display: block;
+	margin-bottom: var(--space-1);
+}
+
+.path-next__link b {
+	font-family: var(--font-family-display);
+	text-transform: uppercase;
+	font-size: var(--font-size-md);
+}
+
+/* The theme's previous/next links follow, closer: the path link is the one step above them. */
+main .path-next + .pn {
+	margin-top: var(--space-4);
+}
