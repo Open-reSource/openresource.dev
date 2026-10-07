@@ -623,6 +623,34 @@ const entries = [
 			'The Server Side Public License, written by MongoDB in 2018: the GPL plus a rule that whoever offers the program as a service must release the source of the whole service. The OSI does not consider it open source.',
 		href: '/guide/licensing/relicensing#five-licenses-none-of-them-open-source',
 	},
+	{
+		id: 'cvss',
+		term: 'CVSS',
+		definition:
+			'The Common Vulnerability Scoring System, maintained by FIRST: a severity score from 0 to 10 on most advisories. It says how bad a vulnerability would be if exploited, not how likely that is.',
+		href: '/guide/at-work/vulnerabilities-and-the-cra#most-alerts-dont-matter-sort-them-by-kev-and-epss-not-cvss',
+	},
+	{
+		id: 'epss',
+		term: 'EPSS',
+		definition:
+			'The Exploit Prediction Scoring System, published daily by FIRST: the probability that a CVE will be exploited in the wild in the next 30 days. It only scores vulnerabilities that have a CVE.',
+		href: '/guide/at-work/vulnerabilities-and-the-cra#most-alerts-dont-matter-sort-them-by-kev-and-epss-not-cvss',
+	},
+	{
+		id: 'kev',
+		term: 'KEV',
+		definition:
+			'CISA’s Known Exploited Vulnerabilities catalog: the vulnerabilities with reliable evidence of exploitation in the wild, about 1,700 as of October 2026. An alert on the list goes to the top.',
+		href: '/guide/at-work/vulnerabilities-and-the-cra#most-alerts-dont-matter-sort-them-by-kev-and-epss-not-cvss',
+	},
+	{
+		id: 'vex',
+		term: 'VEX',
+		definition:
+			'Vulnerability Exploitability eXchange: a machine-readable statement that a product is, or is not, affected by a given vulnerability, and why. CycloneDX, OpenVEX and CSAF each have a format for it.',
+		href: '/guide/at-work/vulnerabilities-and-the-cra#most-alerts-dont-matter-sort-them-by-kev-and-epss-not-cvss',
+	},
 ];
 
 /** The glossary, sorted by term, case and accents ignored. */

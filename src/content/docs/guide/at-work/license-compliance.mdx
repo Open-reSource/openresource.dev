@@ -7,6 +7,7 @@ related:
   - guide/licensing/license-compatibility
   - guide/licensing/choosing-a-license
   - articles/cyber-resilience-act-for-maintainers
+  - guide/at-work/vulnerabilities-and-the-cra
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
@@ -193,7 +194,7 @@ curl https://api.github.com/repos/Open-reSource/openresource.dev/dependency-grap
 
 ## Who asks: an EU authority from 2027, a US agency when its contract says so
 
-**In the EU, the [Cyber Resilience Act](/guide/glossary/#cra) makes the SBOM mandatory, but not public.** From December 11, 2027, a manufacturer of a product with digital elements has to draw one up "in a commonly used and machine-readable format covering at the very least the top-level dependencies" ([Annex I, Part II, point 1](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#anx_I)). It goes in the technical documentation, which the manufacturer keeps for at least ten years and hands to a market surveillance authority on a reasoned request (Article 13 and Annex VII, point 8). Giving it to users is the manufacturer's choice; if it does, the instructions say where to find it (Annex II, point 9). Your customers will ask anyway when their own product falls under the CRA, because they have to check the components they integrate. [The Cyber Resilience Act for maintainers](/articles/cyber-resilience-act-for-maintainers/#manufacturers-owe-the-work-including-some-of-it-to-you) covers the rest of the regulation.
+**In the EU, the [Cyber Resilience Act](/guide/glossary/#cra) makes the SBOM mandatory, but not public.** From December 11, 2027, a manufacturer of a product with digital elements has to draw one up "in a commonly used and machine-readable format covering at the very least the top-level dependencies" ([Annex I, Part II, point 1](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#anx_I)). It goes in the technical documentation, which the manufacturer keeps for at least ten years and hands to a market surveillance authority on a reasoned request (Article 13 and Annex VII, point 8). Giving it to users is the manufacturer's choice; if it does, the instructions say where to find it (Annex II, point 9). Your customers will ask anyway when their own product falls under the CRA, because they have to check the components they integrate. [Vulnerabilities in What You Ship](/guide/at-work/vulnerabilities-and-the-cra/#from-december-2027-the-rest-of-the-vulnerability-handling) covers what else it asks of the company that ships, and [the Cyber Resilience Act for maintainers](/articles/cyber-resilience-act-for-maintainers/#manufacturers-owe-the-work-including-some-of-it-to-you) the side of the projects you depend on.
 
 In the US, the requirement came and went. Executive Order 14028 (May 12, 2021) asked for SBOMs in federal software purchases; OMB memo M-22-18 (September 14, 2022) turned that into attestations from vendors, with an SBOM when an agency asked. [OMB memo M-26-05](https://www.whitehouse.gov/wp-content/uploads/2026/01/M-26-05-Adopting-a-Risk-based-Approach-to-Software-and-Hardware-Security.pdf) (January 23, 2026) rescinded M-22-18 and its companion M-23-16. Agencies still have to keep an inventory of their software and hardware, and each one "may also choose to adopt contractual terms" that require an SBOM on request. So, since January 2026: read the contract.
 
