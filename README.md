@@ -1,19 +1,28 @@
-<p align="center"><a href="https://openresource.dev"><picture><source srcset=".github/header.svg" type="image/svg+xml"><img src=".github/header.png" width="830" alt="Open {re}Source. Open source, {re}explained: how it works, how to contribute, how to run your own project."></picture></a></p>
-
 <h1 align="center">openresource.dev</h1>
 
+<hr>
+
+<p align="center">A free guide, articles and a showcase on how open source works, how to contribute and how to run your own project.</p>
+
+<p align="center"><a href="https://openresource.dev"><strong>Open the guide »</strong></a></p>
+
 <p align="center">
-  <b>Open source, {re}explained.</b>
-  <br>
-  How it works, how to contribute, how to run your own project.
-  <br>
-  A free guide, articles and a showcase by the Open {re}Source community.
+  <a href="https://openresource.dev/guide/">Guide</a>
+  ·
+  <a href="https://openresource.dev/articles/">Articles</a>
+  ·
+  <a href="https://discord.gg/fpUDwEMGwE">Discord</a>
+  ·
+  <a href="https://github.com/Open-reSource/openresource.dev/issues/new/choose">Report a bug</a>
 </p>
 
 <p align="center">
-  <a href="https://openresource.dev">Open {re}Source website</a>
-  ·
-  <a href="https://discord.gg/fpUDwEMGwE">Discord</a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Open-reSource/openresource.dev?style=flat&labelColor=16181E&color=2D7579" alt="Code licence: MIT"></a>
+  <a href="LICENSE-CONTENT"><img src="https://img.shields.io/badge/content-CC%20BY--NC--SA%204.0-2D7579?style=flat&labelColor=16181E" alt="Content licence: CC BY-NC-SA 4.0"></a>
+</p>
+
+<p align="center">
+  <a href="https://openresource.dev"><img src="public/images/readme-home-1.png" alt="The openresource.dev home page, dark: the headline Open source, {re}explained, with links to the guide, the articles and GitHub." width="100%"></a>
 </p>
 
 ## What's in This Repository
