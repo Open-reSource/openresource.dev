@@ -1,26 +1,33 @@
 ---
 // The chapters of the current module, in sidebar order, each with its reading time. On the guide root page, the
 // modules instead, each with its description. Given `chapters` (`<dir>/<page>`, as in src/guide-modules.mjs), those
-// chapters in that order, wherever the page is. Stubs (planned, not written) stay out, as in the sidebar.
+// chapters in that order, wherever the page is. Stubs (planned, not written) stay out, as in the sidebar. Given `path`
+// (a learning path's id), each link carries `?path=<id>`, so the chapter shows where it sits in that path.
 import { getCollection } from 'astro:content';
 import { readingTime } from '@deramond.dev/astro/blog';
 import { modules } from '../guide-modules.mjs';
 
 interface Props {
 	chapters?: string[];
+	path?: string;
 }
 
 const slug = Astro.url.pathname.replace(/^\/|\/$/g, '');
 const docs = new Map((await getCollection('docs')).map((doc) => [doc.id, doc]));
 const current = modules.find(({ dir }) => `guide/${dir}` === slug);
 const chapters = Astro.props.chapters ?? current?.pages.map((page) => `${current.dir}/${page}`);
+const query = Astro.props.path ? `?path=${Astro.props.path}` : '';
 
 type Item = { href: string; label: string; meta?: string; description?: string };
 const items: Item[] = chapters
 	? chapters
 			.map((chapter) => docs.get(`guide/${chapter}`))
 			.filter((doc) => doc && doc.data.status !== 'stub')
-			.map((doc) => ({ href: `/${doc!.id}/`, label: doc!.data.title, meta: `${readingTime(doc!.body ?? '')} min` }))
+			.map((doc) => ({
+				href: `/${doc!.id}/${query}`,
+				label: doc!.data.title,
+				meta: `${readingTime(doc!.body ?? '')} min`,
+			}))
 	: modules.map(({ dir, label }) => ({
 			href: `/guide/${dir}/`,
 			label,
