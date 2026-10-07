@@ -1,6 +1,4 @@
-<h1 align="center">openresource.dev</h1>
-
-<hr>
+<h1 align="center"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/logo-title-dark.svg"><source media="(prefers-color-scheme: light)" srcset=".github/logo-title-light.svg"><img src=".github/logo-title-light.png" width="486" alt="Open {re}Source"></picture></h1>
 
 <p align="center">A free guide, articles and a showcase on how open source works, how to contribute and how to run your own project.</p>
 
@@ -131,7 +129,7 @@ Content (including images) released under [CC BY-NC-SA 4.0](https://creativecomm
 - `src/assets` directory
 - `src/content` directory
 
-The Open {re}Source mark, favicons and artwork (`src/brand`, `src/assets/resources` and `public/covers` directories, `.github/header.*`) are not covered by these licenses: all rights reserved.
+The Open {re}Source mark, favicons and artwork (`src/brand`, `src/assets/resources` and `public/covers` directories, `.github/logo-title-*`) are not covered by these licenses: all rights reserved.
 
 ## Thanks
 
