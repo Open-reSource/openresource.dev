@@ -17,7 +17,8 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Open-reSource/openresource.dev?style=flat&labelColor=16181E&color=2D7579" alt="Licence: MIT"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Open-reSource/openresource.dev?style=flat&labelColor=16181E&color=2D7579" alt="Code licence: MIT"></a>
+  <a href="LICENSE-CONTENT"><img src="https://img.shields.io/badge/content-CC%20BY--NC--SA%204.0-2D7579?style=flat&labelColor=16181E" alt="Content licence: CC BY-NC-SA 4.0"></a>
 </p>
 
 <p align="center">
