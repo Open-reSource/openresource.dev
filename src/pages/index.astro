@@ -78,7 +78,6 @@ const articles = sortPosts(await getCollection('articles'), { production: import
 					date={isoDate(post.data.date)}
 					minutes={readingTime(post.body)}
 					tags={post.data.tags}
-					cover={post.data.cover}
 				/>
 			))}
 		</div>
