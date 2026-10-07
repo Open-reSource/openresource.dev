@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/Open-reSource/openresource.dev?style=flat&labelColor=16181E&color=2D7579" alt="Code licence: MIT"></a>
-  <a href="LICENSE-CONTENT"><img src="https://img.shields.io/badge/content-CC%20BY--NC--SA%204.0-2D7579?style=flat&labelColor=16181E" alt="Content licence: CC BY-NC-SA 4.0"></a>
+  <a href="LICENSE-CONTENT"><img src="https://img.shields.io/badge/content-CC%20BY--SA%204.0-2D7579?style=flat&labelColor=16181E" alt="Content licence: CC BY-SA 4.0"></a>
 </p>
 
 <p align="center">
@@ -123,11 +123,13 @@ Get an update on Open {re}Source's development and chat with the project maintai
 
 Code released under the [MIT License](LICENSE).
 
-Content (including images) released under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) ([full text](LICENSE-CONTENT)):
+Content (including images) released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) ([full text](LICENSE-CONTENT)):
 
 - `public` directory
 - `src/assets` directory
 - `src/content` directory
+
+Screenshots of other people's interfaces and content (GitHub, Codeberg, pull requests by other authors, in `public/images`) are not covered: they keep their owners' rights.
 
 The Open {re}Source mark, favicons and artwork (`src/brand`, `src/assets/resources` and `public/covers` directories, `.github/logo-title-*`) are not covered by these licenses: all rights reserved.
 
