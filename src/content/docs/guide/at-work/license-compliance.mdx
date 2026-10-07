@@ -23,7 +23,7 @@ import Related from '../../../../components/Related.astro';
 - Sort licenses into three tiers: allowed, review, forbidden. Put a name, not "legal", on the review tier.
 - What you distribute decides what you owe: an app, firmware or container image carries the notices; a service carries nothing, unless it runs AGPL code.
 - Ship one notices file per product, with each component's name, version and full license text.
-- A scanner builds the inventory; an SBOM is that inventory in SPDX or CycloneDX, and `npm sbom` writes one in a second.
+- A scanner builds the inventory; an SBOM is that inventory in SPDX or CycloneDX, and `npm sbom` writes one in a second, though it can leave production packages out.
 - From December 11, 2027, EU market surveillance authorities can ask a manufacturer for it. US agencies only ask when their contract says so, since January 2026.
 
 </InShort>
@@ -121,9 +121,10 @@ Two formats share the field, as of October 2026:
 
 **Generators often write an older version than the latest spec, and that's fine.** npm 11.19.1 writes CycloneDX 1.5 and SPDX 2.3, with no option for a newer one; GitHub's export is SPDX 2.3. cdxgen already writes CycloneDX 1.7. What buyers and the law ask for is a commonly used, machine-readable format, and those are.
 
-Four ways to generate one:
+Five ways to generate one:
 
-- [`npm sbom`](https://docs.npmjs.com/cli/v11/commands/npm-sbom), built into npm since 10.2.0 (October 2023) and 9.9.0. With `--package-lock-only`, it reads the lock file alone, no `node_modules` needed.
+- [`npm sbom`](https://docs.npmjs.com/cli/v11/commands/npm-sbom), built into npm since 10.2.0 (October 2023) and 9.9.0. With `--package-lock-only`, it reads the lock file alone, no `node_modules` needed. Check its component count before you trust it, as below.
+- [`@cyclonedx/cyclonedx-npm`](https://github.com/CycloneDX/cyclonedx-node-npm), the CycloneDX project's own generator for npm projects, run with `npx`.
 - [Syft](https://github.com/anchore/syft), for container images, directories and archives.
 - [cdxgen](https://github.com/CycloneDX/cdxgen), from the CycloneDX project, for source trees in many languages and for images.
 - GitHub's dependency graph: **Insights** › **Dependency graph** › **Export SBOM**.
@@ -157,25 +158,39 @@ npm sbom --package-lock-only --omit dev --sbom-format cyclonedx
 
 The real file has 296 components; this is one of them, hash shortened. npm fills most of CISA's fields on its own: name, version, identifier (the `purl`), hash, license, dependencies, timestamp, tool, and the generation context (`pre-build`, because it read a lock file). It leaves out who produced each component and who authored the SBOM, and signs nothing. Those are your job.
 
-The licenses, counted with `jq`:
+**An SBOM that looks complete can leave out more than a third of the production tree.** With `--omit dev`, `npm sbom` drops a production package that a development dependency also uses, together with everything under it ([npm/cli#7909](https://github.com/npm/cli/issues/7909), open since November 2024). On this site, `shiki`, `smol-toml` and `source-map-js` are among the missing ones, and two of them had an open security advisory on October 7, 2026. Count what the lock file says is in the production tree, with `npm ls`, and compare:
 
 ```bash
-npm sbom --package-lock-only --omit dev --sbom-format cyclonedx | jq -r '.components[].licenses[]?.license.id' | sort | uniq -c | sort -rn
+npm ls --package-lock-only --all --omit=dev --json | jq -r '.. | objects | to_entries[]? | select(.value | type == "object" and has("version")) | "\(.key)@\(.value.version)"' | sort -u | wc -l
 ```
 
-| License       | Components (as of October 2026) |
-| ------------- | ------------------------------: |
-| MIT           |                             228 |
-| ISC           |                              17 |
-| MPL-2.0       |                              14 |
-| BlueOak-1.0.0 |                              10 |
-| BSD-2-Clause  |                              10 |
-| Apache-2.0    |                               9 |
-| OFL-1.1       |                               3 |
-| BSD-3-Clause  |                               3 |
-| CC0-1.0       |                               2 |
+On October 7, 2026, the three tools gave three counts, each a distinct `name@version` pair:
 
-Nine licenses for 296 components. BlueOak-1.0.0, a permissive license from the Blue Oak Council, covers ten of them (`glob`, `minimatch`, `lru-cache` and seven more by the same author, Isaac Z. Schlueter): a license that isn't in our allowed tier above, and that a review would have to look up.
+| Source                                                        | Production components (as of October 2026) | Missing from `npm ls` |
+| ------------------------------------------------------------- | -----------------------------------------: | --------------------: |
+| `npm ls --package-lock-only --all --omit=dev`                 |                                        505 |                     0 |
+| `npx @cyclonedx/cyclonedx-npm --package-lock-only --omit dev` |                                        444 |                    61 |
+| `npm sbom --package-lock-only --omit dev`                     |                                        296 |                   209 |
+
+139 of the 505 are optional packages: the builds of native tools for every operating system and processor, of which one installs on your machine. Without them, the production tree has 366 packages, and the CycloneDX generator still misses 37 of them. So no generator is complete by default, and the `npm ls` count is the check, not a source of truth either: it reads the same lock file, and it can't tell you what a bundler left in the output. If the count of your SBOM is far from it, find out why before you hand the file to anyone.
+
+The licenses are in the lock file, so the same 366 packages can be counted without a generator, as of October 2026:
+
+| License       | Production packages (as of October 2026) |
+| ------------- | ---------------------------------------: |
+| MIT           |                                      299 |
+| ISC           |                                       22 |
+| Apache-2.0    |                                       11 |
+| BlueOak-1.0.0 |                                       10 |
+| BSD-2-Clause  |                                        9 |
+| BSD-3-Clause  |                                        5 |
+| OFL-1.1       |                                        3 |
+| MPL-2.0       |                                        3 |
+| CC0-1.0       |                                        2 |
+| Python-2.0    |                                        1 |
+| 0BSD          |                                        1 |
+
+Eleven licenses for 366 packages. BlueOak-1.0.0, a permissive license from the Blue Oak Council, covers ten of them (`glob`, `minimatch`, `lru-cache` and seven more by the same author, Isaac Z. Schlueter): a license that isn't in our allowed tier above, and that a review would have to look up. The 139 optional packages add one more license, and a strong one: the 14 native image libraries (`libvips`) behind `sharp` are LGPL-3.0-or-later, alone or combined with another. The first version of this table, built on the 296 components, never showed it. Only the package for your platform is installed, and whether it ships in what you distribute depends on the build: that is a question for the policy above, not for the counter.
 
 GitHub writes one for any repository with the dependency graph on. On a public repository, the **Export SBOM** button shows even when you're signed out:
 
@@ -186,7 +201,7 @@ GitHub writes one for any repository with the dependency graph on. On a public r
 	alt="GitHub's dependency graph for openresource.dev: 665 dependencies in total, and an Export SBOM button above the list."
 />
 
-It counts 665 dependencies, not 296, because it includes the development ones that `--omit dev` left out. The same file comes from the REST API, without a token:
+It counts 665 dependencies, not 505, because it includes the development ones that `--omit dev` left out, and nothing is dropped. The same file comes from the REST API, without a token:
 
 ```bash
 curl https://api.github.com/repos/Open-reSource/openresource.dev/dependency-graph/sbom
@@ -202,7 +217,7 @@ In the US, the requirement came and went. Executive Order 14028 (May 12, 2021) a
 
 <Checklist id="license-compliance">
 
-- [ ] Generate an SBOM for one product you ship, and count its licenses.
+- [ ] Generate an SBOM for one product you ship, compare its component count with `npm ls --all --omit=dev` (or your ecosystem's equivalent), and count its licenses.
 - [ ] Look up every license on that list you'd never heard of.
 - [ ] Find out who answers "can we use this library?" in your company, and write that name in the policy.
 - [ ] Open the product you ship and find its open-source notices: a settings screen, an about page, a file in the image.
