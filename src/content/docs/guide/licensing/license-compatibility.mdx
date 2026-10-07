@@ -2,10 +2,11 @@
 title: 'License Compatibility: What You Can Combine, and the Tools That Check'
 description: Inbound and outbound licenses, depending versus copying, a compatibility matrix checked against the FSF and Apache, AGPL and SSPL, fonts and images, and the tools that read your dependencies.
 date: 2026-09-27
-lastUpdated: 2026-10-03
+lastUpdated: 2026-10-07
 related:
   - guide/licensing/choosing-a-license
   - guide/licensing/relicensing
+  - guide/at-work/license-compliance
 ---
 
 import Checklist from '../../../../components/Checklist.astro';
@@ -118,7 +119,7 @@ The same job, in other ecosystems:
 | [`npm sbom`](https://docs.npmjs.com/cli/v11/commands/npm-sbom)                                                                                                                                  | An SPDX or CycloneDX software bill of materials, for compliance teams |
 | [GitHub's dependency graph](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository) | An SPDX export of any repository's dependencies                       |
 
-For the files in your own repository, [REUSE](https://reuse.software/) checks that each one declares its license. Companies add commercial scanners on top, which also look for copied snippets.
+For the files in your own repository, [REUSE](https://reuse.software/) checks that each one declares its license. Companies add commercial scanners on top, which also look for copied snippets: [License Compliance at Work](/guide/at-work/license-compliance/#let-a-scanner-build-the-inventory) starts there.
 
 ## Do this now
 
@@ -135,7 +136,7 @@ For the files in your own repository, [REUSE](https://reuse.software/) checks th
 
 - [The FSF's license list](https://www.gnu.org/licenses/license-list.html): every license it has reviewed, with its GPL compatibility.
 - [Apache's third-party license policy](https://www.apache.org/legal/resolved.html): a real compatibility policy, in categories, with the reasons.
-- [Choosing a License](/guide/licensing/choosing-a-license/): the outbound side, for your own project.
+- [License Compliance at Work](/guide/at-work/license-compliance/): the company's side, with the policy, the notices file and the SBOM.
 - [REUSE](https://reuse.software/): declaring the license of every file, so tools don't have to guess.
 
 <Related />

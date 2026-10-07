@@ -444,6 +444,14 @@ const entries = [
 		aliases: ['RFCs'],
 	},
 	{
+		id: 'sbom',
+		term: 'SBOM',
+		definition:
+			'A software bill of materials: the list of components a product contains, with their versions, licenses and hashes, in a machine-readable format such as SPDX or CycloneDX. `npm sbom` writes one from a lock file.',
+		href: '/guide/at-work/license-compliance#an-sbom-is-the-inventory-in-a-format-someone-else-can-read',
+		aliases: ['Software bill of materials', 'SBOMs'],
+	},
+	{
 		id: 'scorecard',
 		term: 'Scorecard',
 		definition:

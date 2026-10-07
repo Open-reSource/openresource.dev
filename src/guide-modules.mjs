@@ -118,6 +118,11 @@ export const modules = [
 		],
 	},
 	{
+		label: 'Open Source at Work',
+		dir: 'at-work',
+		pages: ['license-compliance'],
+	},
+	{
 		label: 'Open Source & AI',
 		dir: 'ai',
 		pages: ['contribution-policy', 'contributing-with-ai-tools'],

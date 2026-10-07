@@ -1,0 +1,219 @@
+---
+title: 'License Compliance at Work: The Policy, the Notices and the SBOM'
+description: A license policy in three tiers, what distributing a product obliges you to do, the notices file, the scanners that build the inventory, and the SBOM.
+date: 2026-10-07
+lastUpdated: 2026-10-07
+related:
+  - guide/licensing/license-compatibility
+  - guide/licensing/choosing-a-license
+  - articles/cyber-resilience-act-for-maintainers
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import ContentImage from '../../../../components/ContentImage.astro';
+import InShort from '../../../../components/InShort.astro';
+import Related from '../../../../components/Related.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Every product a company ships carries hundreds of open-source components, each under a license that asks for something. Most companies find out which ones the day a customer or an authority asks for an SBOM. Here's the minimum program: a policy in three tiers, the notices your product has to carry, and the tools that write the paperwork.</p>
+
+<InShort>
+
+- Sort licenses into three tiers: allowed, review, forbidden. Put a name, not "legal", on the review tier.
+- What you distribute decides what you owe: an app, firmware or container image carries the notices; a service carries nothing, unless it runs AGPL code.
+- Ship one notices file per product, with each component's name, version and full license text.
+- A scanner builds the inventory; an SBOM is that inventory in SPDX or CycloneDX, and `npm sbom` writes one in a second.
+- From December 11, 2027, EU market surveillance authorities can ask a manufacturer for it. US agencies only ask when their contract says so, since January 2026.
+
+</InShort>
+
+## Write the policy in three tiers: allowed, review, forbidden
+
+**A license policy answers "can we use this?" before anyone has to ask.** It's the company version of the [matrix in License Compatibility](/guide/licensing/license-compatibility/#the-matrix), sorted into tiers instead of a grid. A starting point, to adapt with whoever signs off on legal risk in your company:
+
+| Tier      | Licenses                                                                               | What happens                                              |
+| --------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| Allowed   | MIT, BSD-2-Clause, BSD-3-Clause, ISC, Apache-2.0, 0BSD, CC0-1.0                        | Use it. The scanner records it, the notices file lists it |
+| Review    | MPL-2.0, LGPL, EPL-2.0, GPL in a product you distribute, any license not in this table | A named person says yes or no, in writing                 |
+| Forbidden | AGPL-3.0 in anything you run as a service, SSPL, non-commercial licenses, no license   | Only with a written exception                             |
+
+You don't have to invent the categories. The Apache Software Foundation sorts licenses into Category A, B and X, [summarized in License Compatibility](/guide/licensing/license-compatibility/#the-matrix). Google's policy says AGPL code "MUST NOT be used at Google", [quoted in Choosing a License](/guide/licensing/choosing-a-license/#copyleft-follows-the-code-not-the-project).
+
+The review tier needs an owner. "Ask legal" is a department, not an answer: write down a name, a backup, and how many days an answer takes.
+
+To check the rest of the program, [OpenChain ISO/IEC 5230:2020](https://openchainproject.org/get-started) is the international standard for what a license compliance program contains: a written policy, named roles, a review process, the documents each product ships, and a public contact for compliance questions. Its [self-certification checklist](https://github.com/OpenChain-Project/Reference-Material/blob/master/OpenChain-Standards-Self-Certification/Checklist/ISO-IEC-5230/en/iso-5230-2020-Self-Certification-Checklist.md) is free: 34 yes-or-no questions in six sections (version of August 18, 2025), and one "no" means you don't conform yet. Its sibling, ISO/IEC 18974:2023, covers known vulnerabilities in the same components.
+
+## What you distribute decides what you owe
+
+Most open-source obligations start when a copy leaves your hands. [Depending, copying and modifying](/guide/licensing/license-compatibility/#depending-copying-and-modifying-are-three-cases) covers the mechanics. For a company, the question is asked per product:
+
+- **Distributed products**: a mobile app, a desktop app, firmware in a device, a container image you publish or hand to a customer, a JavaScript bundle every browser downloads. Each one carries the notices of the components inside it, and copyleft obligations apply: the source of the GPL components, and of your changes to them.
+- **Software as a service**: users talk to your servers and never get a copy, so GPL code asks for nothing. AGPL-3.0 is the exception: run modified AGPL code as a network service, and its users can ask for the source. That's what the forbidden tier is for. [The SaaS gap](/guide/licensing/license-compatibility/#the-saas-gap-agpl-then-sspl) tells the story, up to the SSPL.
+
+**If a copy leaves your servers, its components go in the notices.**
+
+## Ship the notices file with every product you distribute
+
+**Permissive licenses ask for little, but they all ask for this: keep the copyright notice and the license text with every copy.** MIT says the notice "shall be included in all copies or substantial portions of the Software". Apache-2.0 adds the component's own `NOTICE` file, if it has one (section 4(d)). One file per product gathers them all: for each component, its name, version, source and full license text.
+
+VS Code keeps a public one at the root of its repository, [`ThirdPartyNotices.txt`](https://github.com/microsoft/vscode/blob/main/ThirdPartyNotices.txt). An excerpt, as of October 2026:
+
+```text
+NOTICES
+
+This repository incorporates material as listed below or described in the code.
+
+[…]
+
+---------------------------------------------------------
+
+@iktakahiro/markdown-it-katex 4.0.2 - MIT
+https://github.com/mjbvz/markdown-it-katex
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Waylon Flinn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+[…]
+```
+
+Where products put it depends on what they are:
+
+- **Browsers**: `chrome://credits` in Chrome, `about:license` in Firefox. Type either in the address bar.
+- **Android apps**: Google's [`oss-licenses-plugin`](https://developers.google.com/android/guides/opensource) collects the licenses of an app's dependencies at build time and adds the "Open source licenses" screen many apps show in their settings.
+- **Web apps and services**: an "about" or "licenses" page, linked from the footer or the settings.
+- **Container images and firmware**: a file inside the image, plus the source offer below.
+
+GPL adds a duty when you ship binaries: the source. GPL-2.0 (section 3) lets you ship it with the binary, or with a written offer, valid for at least three years, to provide it. Device makers publish it per model and firmware version: TP-Link's [GPL code center](https://www.tp-link.com/us/support/gpl-code/) is one.
+
+Nobody types these files by hand. The scanners below generate them from the inventory.
+
+## Let a scanner build the inventory
+
+License Compatibility stops at single-repository checkers (license-checker-rseidelsohn, pip-licenses, cargo-deny), with one sentence about what comes next: [companies add commercial scanners on top](/guide/licensing/license-compatibility/#let-a-tool-read-your-dependencies). A company needs more than a checker: several products in several ecosystems, code copied without a package manager, binaries from suppliers. Software composition analysis (SCA) tools cover that. As of October 2026:
+
+| Tool                                                                                | Kind                                                   | License detection                        | Snippet matching                       | SBOM output                        |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------- | -------------------------------------- | ---------------------------------- |
+| [ScanCode Toolkit](https://github.com/aboutcode-org/scancode-toolkit)               | Open source, by AboutCode                              | Reads the files: licenses and copyrights | No                                     | SPDX, CycloneDX                    |
+| [ORT](https://github.com/oss-review-toolkit/ort) (OSS Review Toolkit)               | Open source, Linux Foundation's ACT program            | Runs ScanCode and other scanners         | Through its FossID and SCANOSS plugins | SPDX, CycloneDX, and notices files |
+| [FOSSA](https://fossa.com/)                                                         | Commercial                                             | Yes                                      | Yes                                    | SPDX, CycloneDX                    |
+| [Snyk](https://snyk.io/)                                                            | Commercial                                             | Yes, from package metadata               | No, reads manifests and lock files     | SPDX, CycloneDX (Enterprise plan)  |
+| [Black Duck](https://www.blackduck.com/)                                            | Commercial, independent of Synopsys since October 2024 | Yes                                      | Yes                                    | SPDX, CycloneDX                    |
+| [GitHub's dependency graph](https://docs.github.com/en/rest/dependency-graph/sboms) | Free on public repositories                            | From package metadata                    | No                                     | SPDX                               |
+
+Two columns need a word:
+
+- **License detection** either trusts the package metadata (what the `license` field says) or reads the files (what the code actually says). A package can declare MIT and ship a GPL file inside: only a file scanner sees it.
+- **Snippet matching** compares your source code with a database of open-source code, to find functions someone copied in. It catches what no package manager knows about, and FOSSA [sells it](https://fossa.com/products/snippets/) for code an AI assistant reproduced. [Contributing with AI tools](/guide/ai/contributing-with-ai-tools/) is the other side of that problem.
+
+## An SBOM is the inventory in a format someone else can read
+
+An [SBOM](/guide/glossary/#sbom), a software bill of materials, lists what a product contains: each component, its version, its license, a hash to prove which file it is, and who made it. CISA's [2026 Minimum Elements for an SBOM](https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom), published on July 29, 2026 with the NSA, the FBI and 15 agencies from other countries (France's ANSSI and Germany's BSI among them), sets the fields a useful one has. It replaced the 2021 list from NTIA and added the component hash, the license, the tool that generated the SBOM, and when in the build it was generated.
+
+Two formats share the field, as of October 2026:
+
+| Format                                                             | Latest version                                                     | Standard                        | What npm and GitHub write |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------- | ------------------------- |
+| [SPDX](https://spdx.dev/about/overview/) (Linux Foundation)        | 3.0.1 (December 2024); 3.1 in release candidate since January 2026 | ISO/IEC 5962:2021 is SPDX 2.2.1 | 2.3                       |
+| [CycloneDX](https://cyclonedx.org/specification/overview/) (OWASP) | 1.7 (October 2025)                                                 | ECMA-424                        | 1.5                       |
+
+**Generators often write an older version than the latest spec, and that's fine.** npm 11.19.1 writes CycloneDX 1.5 and SPDX 2.3, with no option for a newer one; GitHub's export is SPDX 2.3. cdxgen already writes CycloneDX 1.7. What buyers and the law ask for is a commonly used, machine-readable format, and those are.
+
+Four ways to generate one:
+
+- [`npm sbom`](https://docs.npmjs.com/cli/v11/commands/npm-sbom), built into npm since 10.2.0 (October 2023) and 9.9.0. With `--package-lock-only`, it reads the lock file alone, no `node_modules` needed.
+- [Syft](https://github.com/anchore/syft), for container images, directories and archives.
+- [cdxgen](https://github.com/CycloneDX/cdxgen), from the CycloneDX project, for source trees in many languages and for images.
+- GitHub's dependency graph: **Insights** › **Dependency graph** › **Export SBOM**.
+
+This site's SBOM, generated on October 7, 2026, production dependencies only:
+
+```bash
+npm sbom --package-lock-only --omit dev --sbom-format cyclonedx
+```
+
+```json
+{
+	"bomFormat": "CycloneDX",
+	"specVersion": "1.5",
+	"metadata": {
+		"timestamp": "2026-10-07T12:35:12.064Z",
+		"lifecycles": [{ "phase": "pre-build" }],
+		"tools": [{ "vendor": "npm", "name": "cli", "version": "11.19.1" }]
+	},
+	"components": [
+		{
+			"name": "lru-cache",
+			"version": "11.5.2",
+			"purl": "pkg:npm/lru-cache@11.5.2",
+			"hashes": [{ "alg": "SHA-512", "content": "e297ccd457f4c79d…a489f475d6" }],
+			"licenses": [{ "license": { "id": "BlueOak-1.0.0" } }]
+		}
+	]
+}
+```
+
+The real file has 296 components; this is one of them, hash shortened. npm fills most of CISA's fields on its own: name, version, identifier (the `purl`), hash, license, dependencies, timestamp, tool, and the generation context (`pre-build`, because it read a lock file). It leaves out who produced each component and who authored the SBOM, and signs nothing. Those are your job.
+
+The licenses, counted with `jq`:
+
+```bash
+npm sbom --package-lock-only --omit dev --sbom-format cyclonedx | jq -r '.components[].licenses[]?.license.id' | sort | uniq -c | sort -rn
+```
+
+| License       | Components (as of October 2026) |
+| ------------- | ------------------------------: |
+| MIT           |                             228 |
+| ISC           |                              17 |
+| MPL-2.0       |                              14 |
+| BlueOak-1.0.0 |                              10 |
+| BSD-2-Clause  |                              10 |
+| Apache-2.0    |                               9 |
+| OFL-1.1       |                               3 |
+| BSD-3-Clause  |                               3 |
+| CC0-1.0       |                               2 |
+
+Nine licenses for 296 components. BlueOak-1.0.0, a permissive license from the Blue Oak Council, covers ten of them (`glob`, `minimatch`, `lru-cache` and seven more by the same author, Isaac Z. Schlueter): a license that isn't in our allowed tier above, and that a review would have to look up.
+
+GitHub writes one for any repository with the dependency graph on. On a public repository, the **Export SBOM** button shows even when you're signed out:
+
+<ContentImage
+	src="/images/at-work-license-compliance-1.png"
+	width="720"
+	height="210"
+	alt="GitHub's dependency graph for openresource.dev: 665 dependencies in total, and an Export SBOM button above the list."
+/>
+
+It counts 665 dependencies, not 296, because it includes the development ones that `--omit dev` left out. The same file comes from the REST API, without a token:
+
+```bash
+curl https://api.github.com/repos/Open-reSource/openresource.dev/dependency-graph/sbom
+```
+
+## Who asks: an EU authority from 2027, a US agency when its contract says so
+
+**In the EU, the [Cyber Resilience Act](/guide/glossary/#cra) makes the SBOM mandatory, but not public.** From December 11, 2027, a manufacturer of a product with digital elements has to draw one up "in a commonly used and machine-readable format covering at the very least the top-level dependencies" ([Annex I, Part II, point 1](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#anx_I)). It goes in the technical documentation, which the manufacturer keeps for at least ten years and hands to a market surveillance authority on a reasoned request (Article 13 and Annex VII, point 8). Giving it to users is the manufacturer's choice; if it does, the instructions say where to find it (Annex II, point 9). Your customers will ask anyway when their own product falls under the CRA, because they have to check the components they integrate. [The Cyber Resilience Act for maintainers](/articles/cyber-resilience-act-for-maintainers/#manufacturers-owe-the-work-including-some-of-it-to-you) covers the rest of the regulation.
+
+In the US, the requirement came and went. Executive Order 14028 (May 12, 2021) asked for SBOMs in federal software purchases; OMB memo M-22-18 (September 14, 2022) turned that into attestations from vendors, with an SBOM when an agency asked. [OMB memo M-26-05](https://www.whitehouse.gov/wp-content/uploads/2026/01/M-26-05-Adopting-a-Risk-based-Approach-to-Software-and-Hardware-Security.pdf) (January 23, 2026) rescinded M-22-18 and its companion M-23-16. Agencies still have to keep an inventory of their software and hardware, and each one "may also choose to adopt contractual terms" that require an SBOM on request. So, since January 2026: read the contract.
+
+## Do this now
+
+<Checklist id="license-compliance">
+
+- [ ] Generate an SBOM for one product you ship, and count its licenses.
+- [ ] Look up every license on that list you'd never heard of.
+- [ ] Find out who answers "can we use this library?" in your company, and write that name in the policy.
+- [ ] Open the product you ship and find its open-source notices: a settings screen, an about page, a file in the image.
+- [ ] Answer the 34 questions of the OpenChain self-certification checklist, and count the noes.
+
+</Checklist>
+
+## Go further
+
+- [OpenChain's ISO/IEC 5230 self-certification checklist](https://github.com/OpenChain-Project/Reference-Material/blob/master/OpenChain-Standards-Self-Certification/Checklist/ISO-IEC-5230/en/iso-5230-2020-Self-Certification-Checklist.md): the whole compliance program as yes-or-no questions, free.
+- [CISA's 2026 Minimum Elements for an SBOM](https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom): every field a useful SBOM has, with its definition.
+- [ORT](https://github.com/oss-review-toolkit/ort): the open-source pipeline from inventory to policy check to notices file and SBOM, if you'd rather not buy one.
+- [License Compatibility](/guide/licensing/license-compatibility/): the matrix this policy starts from, and the checkers for a single repository.
+
+<Related />
