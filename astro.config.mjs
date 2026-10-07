@@ -94,7 +94,7 @@ export default defineConfig({
 					},
 				],
 				copyright: '2023-present © Open {re}Source',
-				meta: 'Content under CC BY-NC-SA 4.0',
+				meta: 'Content under CC BY-SA 4.0',
 			},
 			docs: {
 				route: '',
@@ -131,7 +131,7 @@ export default defineConfig({
 				route: 'articles',
 				title: 'Articles',
 				description: 'Articles about open source: tools, contribution, maintenance, community and funding.',
-				license: 'CC BY-NC-SA 4.0',
+				license: 'CC BY-SA 4.0',
 				covers: 'featured',
 				authors: {
 					julien: {
