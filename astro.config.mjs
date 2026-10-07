@@ -7,6 +7,7 @@ import deramond from '@deramond.dev/astro/integration';
 import { modules, guide, moved } from './src/guide-modules.mjs';
 import { satteri } from '@astrojs/markdown-satteri';
 import { chapterStatus } from './src/chapter-status.mjs';
+import { moduleGroups } from './src/article-modules.mjs';
 import { learningPaths } from './src/learning-paths-integration.mjs';
 
 // https://astro.build/config
@@ -133,6 +134,7 @@ export default defineConfig({
 				description: 'Articles about open source: tools, contribution, maintenance, community and funding.',
 				license: 'CC BY-SA 4.0',
 				covers: 'featured',
+				groups: { label: 'Modules', items: moduleGroups() },
 				authors: {
 					julien: {
 						name: 'Julien Déramond',

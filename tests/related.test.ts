@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import { TAG_MODULES, modulesOf } from '../src/article-modules.mjs';
+import { TAG_MODULES, modulesOf, moduleGroups } from '../src/article-modules.mjs';
 import { modules } from '../src/guide-modules.mjs';
 import { fileOf, pages } from '../src/related.mjs';
 
@@ -30,6 +30,14 @@ describe('article tags and modules', () => {
 	test('every mapped tag is used by an article', () => {
 		const used = new Set(pages().flatMap(({ tags }) => tags));
 		expect(Object.keys(TAG_MODULES).filter((tag) => !used.has(tag))).toEqual([]);
+	});
+
+	test('module groups cover every mapped tag exactly once, under a real module', () => {
+		const groups = moduleGroups();
+		const dirs = modules.map(({ dir }) => dir);
+		expect(groups.filter(({ slug }) => !dirs.includes(slug))).toEqual([]);
+		expect(groups.flatMap(({ tags }) => tags.filter((tag) => !(tag in TAG_MODULES)))).toEqual([]);
+		expect(groups.flatMap(({ tags }) => tags).sort()).toEqual(Object.keys(TAG_MODULES).sort());
 	});
 
 	test('modulesOf maps tags to modules once', () => {
