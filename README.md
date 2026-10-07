@@ -6,8 +6,6 @@
 
 <p align="center"><a href="https://openresource.dev"><strong>Open the guide »</strong></a></p>
 
-<p align="center"><picture><source srcset=".github/header.svg" type="image/svg+xml"><img src=".github/header.png" width="830" alt="Open {re}Source. Open source, {re}explained: how it works, how to contribute, how to run your own project."></picture></p>
-
 <p align="center">
   <a href="https://openresource.dev/guide/">Guide</a>
   ·
