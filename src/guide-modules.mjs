@@ -120,7 +120,7 @@ export const modules = [
 	{
 		label: 'Open Source at Work',
 		dir: 'at-work',
-		pages: ['license-compliance'],
+		pages: ['license-compliance', 'vulnerabilities-and-the-cra'],
 	},
 	{
 		label: 'Open Source & AI',

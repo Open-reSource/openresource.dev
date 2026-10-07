@@ -1,0 +1,170 @@
+---
+title: 'Vulnerabilities in What You Ship: Triage, Upstream Fixes and the CRA'
+description: Why most dependency alerts don't matter, how KEV, EPSS and VEX sort them, why fixes go upstream, and what the EU Cyber Resilience Act asks of companies.
+date: 2026-10-07
+lastUpdated: 2026-10-07
+related:
+  - guide/at-work/license-compliance
+  - guide/maintaining/security-for-maintainers
+  - guide/maintaining/managing-project-dependencies
+  - articles/cyber-resilience-act-for-maintainers
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import InShort from '../../../../components/InShort.astro';
+import Related from '../../../../components/Related.astro';
+import Timeline from '../../../../components/Timeline.astro';
+
+{/* prettier-ignore */}
+<p class="lead">A product built on open source ships hundreds of packages, and on any given day a few of them have a published vulnerability. Most of those alerts can't hurt you, and two public sources, CISA's list of exploited vulnerabilities and FIRST's exploit predictions, tell you which ones can. If you sell in the EU, the Cyber Resilience Act adds a clock: since September 11, 2026, a vulnerability actively exploited in your product has to be reported within 24 hours, and from December 11, 2027 the rest of your vulnerability handling is law too.</p>
+
+<InShort>
+
+- Count what you depend on, not what you chose: this site picked 7 dependencies, and its production install has 370 packages.
+- CVSS says how bad a vulnerability would be. KEV says it's being exploited, EPSS how likely that is in the next 30 days. Sort by the last two.
+- When an alert can't reach your users, say so once, in a VEX statement, instead of to every customer who runs a scanner.
+- Fix in the upstream project, not in a private fork. From December 2027, the CRA requires you to report the vulnerability there and share your fix.
+- The CRA's 24-hour clock is for vulnerabilities exploited in your product, not for every KEV entry in your dependency tree.
+
+</InShort>
+
+## You depend on more packages than you chose
+
+**The dependencies in your manifest are the short list; your product is built from the whole tree.** This site's `package.json` names 7 production dependencies: Astro, three of its integrations, a theme, an analytics script and a type checker. `npm audit --omit=dev` checks what those 7 pull in:
+
+```bash
+npm audit --omit=dev --json | jq .metadata.dependencies.prod
+```
+
+As of October 7, 2026, the answer is 370 packages. Every one of them can get an advisory, and none of them asked you first. The same goes for a Python service from PyPI, a Java product from Maven Central or a Rust binary from crates.io: the scanner reads the resolved tree, not the manifest, and the tree is long.
+
+The inventory itself, and the SBOM that writes it down, are in [License Compliance at Work](/guide/at-work/license-compliance/#an-sbom-is-the-inventory-in-a-format-someone-else-can-read). This chapter is about what to do when a scanner finds something in it.
+
+## Most alerts don't matter: sort them by KEV and EPSS, not CVSS
+
+**A severity score says how bad a vulnerability would be if someone used it, not whether anyone will.** Three public sources answer three different questions:
+
+| Source                                                                                                                                      | Question it answers                                              | As of October 2026                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [CVSS](/guide/glossary/#cvss) (FIRST)                                                                                                       | How bad would it be, from 0 to 10?                               | On almost every advisory                                              |
+| [KEV](/guide/glossary/#kev), CISA's [Known Exploited Vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) catalog | Has anyone exploited it in the wild?                             | 1,734 entries (catalog version 2026.10.04), first ones November 2021  |
+| [EPSS](/guide/glossary/#epss), FIRST's [Exploit Prediction Scoring System](https://www.first.org/epss/)                                     | How likely is exploitation in the next 30 days, from 0% to 100%? | 384,189 CVEs scored on October 7, 2026, model version 5 since June 15 |
+
+As of October 2026, those two counts put KEV at about 0.45% of the CVEs EPSS scores. That's the first filter: an alert on the KEV list goes to the top, whatever its CVSS.
+
+Here is what the three scores say about this site's alerts, next to two famous ones:
+
+| Vulnerability                                                                             | Where                                                        | CVSS | EPSS (October 7, 2026) | In KEV                       |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ---: | ---------------------: | ---------------------------- |
+| [GHSA-ch52-4w7c-c8xp](https://github.com/advisories/GHSA-ch52-4w7c-c8xp) (CVE-2026-93748) | `http-cache-semantics` 4.2.0, via Astro's remote-image cache |  7.5 |                  0.53% | No                           |
+| [GHSA-68fv-2mgg-jv7q](https://github.com/advisories/GHSA-68fv-2mgg-jv7q) (CVE-2026-93749) | `source-map-js` 1.2.1, via PostCSS, Vite and SVGO            |  7.5 |                  0.63% | No                           |
+| [GHSA-r4xh-jqrq-34v2](https://github.com/advisories/GHSA-r4xh-jqrq-34v2) (no CVE)         | `smol-toml` 1.8.0, via Astro's config and file loaders       |  5.3 |             Not scored | No                           |
+| [CVE-2021-44228](https://github.com/advisories/GHSA-jfh8-c2jp-5v3q), Log4Shell            | Log4j 2                                                      | 10.0 |                99.999% | Yes, since December 10, 2021 |
+| [CVE-2024-3094](https://github.com/advisories/GHSA-rxwq-x6h5-x525), the xz backdoor       | xz 5.6.0 and 5.6.1                                           | 10.0 |                    86% | No                           |
+
+The site's three alerts all come from build tools, and EPSS gives the two it scores less than a 1% chance of exploitation. EPSS only scores CVEs, so the advisory without one gets no score: an absence, not a zero. The last row is the reason to read both lists: the xz backdoor scores 10 and 86%, and isn't in KEV. It was caught in March 2024, before the stable releases of the major Linux distributions shipped it, and KEV only lists vulnerabilities with evidence of exploitation.
+
+The second filter is reachability: does your product run the vulnerable code? None of the three packages above is in the server code Vercel runs for this site's visitors; they run on the build machine, once per deploy. We checked by building the site and searching the output for them.
+
+Once you know an alert can't reach your users, write it down once. A [VEX](/guide/glossary/#vex) statement (Vulnerability Exploitability eXchange) says, per product and per vulnerability, "not affected" and why, in a format scanners read: [CycloneDX VEX](https://cyclonedx.org/capabilities/vex/), [OpenVEX](https://github.com/openvex/spec) or the VEX profile of [CSAF 2.0](https://docs.oasis-open.org/csaf/csaf/v2.0/csaf-v2.0.html). Without it, every customer who scans your product asks you the same question. GitHub's Dependabot alerts have the one-repository version: dismiss the alert with the reason "Vulnerable code is not actually used".
+
+The data under all of this is open. [OSV](https://osv.dev/) gathers advisories from GitHub, PyPI, crates.io, Go and Linux distributions in one schema, and [osv-scanner](https://github.com/google/osv-scanner) (v2.6.0, September 14, 2026) checks lock files and images against it. ENISA's [EU Vulnerability Database](https://euvd.enisa.europa.eu/), live since [May 13, 2025](https://digital-strategy.ec.europa.eu/en/news/eu-launches-european-vulnerability-database-boost-its-digital-security), flags the exploited ones too, and it's the database the CRA's guidance names.
+
+The CRA says the same thing in its own words. Products must be placed on the market "without known exploitable vulnerabilities" ([Annex I, Part I, point 2(a)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#anx_I)). The Commission's guidance reads both words the way this section does: "exploitable" means usable "under practical operational conditions", so not every CVE ([para 231](https://cra.orcwg.org/official-guidance/#pnt_231)); "known" means listed in a public database such as the EUVD ([para 233](https://cra.orcwg.org/official-guidance/#pnt_233)); a reported vulnerability still has to be checked against your product ([para 235](https://cra.orcwg.org/official-guidance/#pnt_235)); and the call weighs severity, exploitability and impact ([para 237](https://cra.orcwg.org/official-guidance/#pnt_237)). That's CVSS, KEV, EPSS and reachability, in a regulation.
+
+## Updates at scale are a policy, not a bot
+
+**A bot that opens one pull request per update is a backlog, not a process.** The policy decides which updates merge on their own (patch releases with green tests), which are grouped (one weekly pull request per ecosystem), and who reviews a major version. Dependabot does it with [groups](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#groups) and a schedule, Renovate with [automerge](https://docs.renovatebot.com/key-concepts/automerge/). The settings themselves are in [Managing Project Dependencies](/guide/maintaining/managing-project-dependencies/#updating-dependencies-safely).
+
+A fix nobody merges doesn't ship. By October 4, 2026, all three of this site's packages had a release outside the affected range: `smol-toml` 1.9.0 on September 22, before its advisory was even published, `source-map-js` 1.2.2 on September 30 and `http-cache-semantics` 4.3.0 on October 4. The lock file still had the old versions on October 7.
+
+## Fix it upstream, not in a fork
+
+**A private patch costs you on every release of the component; an upstream fix costs you once.** Patch a dependency in place (with `patch-package`, a vendored copy or a fork), and every new version means re-applying it, re-testing it and hoping it still fits. Send the fix to the project, and the next release carries it, for you and for everyone else who ships the same component.
+
+From December 11, 2027, the CRA turns that into an obligation. A manufacturer that finds a vulnerability in a component it integrates, open source included, must report it to whoever maintains the component, and if it writes a fix, share it with them ([Article 13(6)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_13)). The guidance makes it a process ([section 9.2.1](https://cra.orcwg.org/official-guidance/#sct_9.sct_2.sct_1)):
+
+- Report only for the version you integrate, through the project's security policy or reporting channel when it has one, and not when you can confirm the maintainer already knows ([para 223](https://cra.orcwg.org/official-guidance/#pnt_223)).
+- Report what's in the component, not what comes from the way you integrated it ([para 224](https://cra.orcwg.org/official-guidance/#pnt_224)).
+- Skip the report when the component has no maintainer, or when you no longer rely on its maintainer for new versions or fixes ([para 225](https://cra.orcwg.org/official-guidance/#pnt_225)).
+- Share the fix under a license compatible with the component's, following its guidelines for fixes if it has some ([para 227](https://cra.orcwg.org/official-guidance/#pnt_227)). Nobody has to merge it, and you don't have to take theirs ([para 228](https://cra.orcwg.org/official-guidance/#pnt_228)).
+
+These are the same paragraphs [The Cyber Resilience Act for maintainers](/articles/cyber-resilience-act-for-maintainers/#what-lands-on-your-desk) explains from the other side of the inbox. The private reporting channel they rely on is [one file and four settings](/guide/maintaining/security-for-maintainers/#before-the-first-report-one-file-and-four-settings) on the project's side.
+
+## Since September 2026: report what's exploited in your product within 24 hours
+
+> [!WARNING]
+> **This is the text of the regulation and the Commission's guidance, not legal advice.** Whether your product is in scope, and what exactly it owes, is a question for your legal team or a lawyer who knows the CRA. The [Commission's CRA page](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act) and its [reporting page](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting) are the official starting points.
+
+<Timeline
+	label="What the Cyber Resilience Act asks of manufacturers, 2024 to 2027"
+	entries={[
+		{
+			year: '2024',
+			title: 'The CRA enters into force',
+			detail: 'Published in the Official Journal on November 20, in force on December 10 (Article 71)',
+		},
+		{
+			year: '2026',
+			title: 'Manufacturers must report actively exploited vulnerabilities and severe incidents',
+			detail:
+				"From September 11, 2026, through ENISA's Single Reporting Platform, for products already on the market too (Articles 14 and 69(3))",
+			accent: true,
+		},
+		{
+			year: '2027',
+			title: 'Everything else applies: the security requirements, the SBOM, the support period, reporting upstream',
+			detail: 'December 11, 2027 (Article 71(2))',
+		},
+	]}
+/>
+
+**The clock starts when you're reasonably sure a vulnerability is being exploited in your product, not when it appears in KEV.** The deadlines are an early warning within 24 hours, a notification within 72 hours, and a final report within 14 days of a fix being available ([Article 14(2)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_14)). "Becoming aware" means a reasonable degree of certainty after a prompt initial assessment ([paras 211 to 214](https://cra.orcwg.org/official-guidance/#pnt_211)).
+
+A vulnerability in a component that can't be exploited in your product, "because the vulnerable code is not reachable" for example, or that hasn't been exploited in it, isn't an actively exploited vulnerability contained in your product: no mandatory report ([para 218](https://cra.orcwg.org/official-guidance/#pnt_218)). You can still report it voluntarily (Article 15), and you still owe the vulnerability handling and the report upstream. So a KEV entry in your dependency tree is the first thing to look at, not a report to file.
+
+Three more points the guidance settles:
+
+- **Products already on the market report too.** Article 14 applies to every product in scope, including those placed on the market before December 11, 2027, and keeps applying after their support period ends ([para 210](https://cra.orcwg.org/official-guidance/#pnt_210)).
+- **No retroactive reports.** Exploitation you knew about before September 11, 2026 doesn't have to be reported ([para 217](https://cra.orcwg.org/official-guidance/#pnt_217)).
+- **Small companies get some slack.** Micro and small enterprises can't be fined for missing a 24-hour early warning ([Article 64(10)(a)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_64)).
+
+## From December 2027: the rest of the vulnerability handling
+
+**Products placed on the market from December 11, 2027 have to meet the security requirements of [Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#anx_I) and the manufacturer's obligations of [Article 13](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_13).** For the open source inside them, that means:
+
+- **An SBOM** "covering at the very least the top-level dependencies" (Annex I, Part II, point 1), kept in the technical documentation for authorities; publishing it is optional. [License Compliance at Work](/guide/at-work/license-compliance/#who-asks-an-eu-authority-from-2027-a-us-agency-when-its-contract-says-so) has who can ask for it.
+- **A support period** of at least five years, unless the product is expected to be used for less (Article 13(8)), with each security update kept available for 10 years or the rest of the support period, whichever is longer (Article 13(9)).
+- **Due diligence on every component**, open source included (Article 13(5)): decide what the product needs from the component, then check it does, in proportion to the risk ([para 170](https://cra.orcwg.org/official-guidance/#pnt_170)).
+- **A vulnerability disclosure policy and a contact address** for reports (Annex I, Part II, points 5 and 6), the company version of a project's `SECURITY.md`.
+
+A product already on the market before that date only gets those requirements if it's substantially modified after it (Article 69(2)). A security update generally isn't a substantial modification ([para 108](https://cra.orcwg.org/official-guidance/#pnt_108), [Examples 46 to 48](https://cra.orcwg.org/official-guidance/#exm_46)): bumping a dependency to fix a vulnerability doesn't pull an old product into the full regulation.
+
+Fines for missing the security requirements or the obligations of Articles 13 and 14 go up to €15 million or 2.5% of worldwide annual turnover, whichever is higher ([Article 64(2)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_64)).
+
+## The open-source rules cut both ways
+
+**The libraries your company publishes for free make it a steward, not a manufacturer.** A company that publishes an open-source library and also ships it in its own products, without selling the library itself, is its open-source software steward ([Examples 25](https://cra.orcwg.org/official-guidance/#exm_25), [29](https://cra.orcwg.org/official-guidance/#exm_29) and [31](https://cra.orcwg.org/official-guidance/#exm_31)). A steward owes a documented cybersecurity policy and cooperation with authorities ([Article 24](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_24)), and can't be fined under the CRA (Article 64(10)(b)). The products that ship the library are another matter: for those, the company is the manufacturer.
+
+The maintainers you depend on owe you nothing. Maintainers of components that aren't placed on the market "do not bear obligations in relation to other entities that may integrate such components" ([para 87](https://cra.orcwg.org/official-guidance/#pnt_87)); the guidance's [Example 27](https://cra.orcwg.org/official-guidance/#exm_27) leaves the due diligence with the companies, and [Example 34](https://cra.orcwg.org/official-guidance/#exm_34) gives the registry that hosts the package no obligations either. A security questionnaire is a fair question. A declaration that moves your compliance onto them isn't: the OpenSSF [advises maintainers](https://policy.openssf.org/CRA/maintainers.html) to watch for language that shifts regulatory responsibility upstream, and the regulation keeps that responsibility with whoever places the product on the market.
+
+## Do this now
+
+<Checklist id="vulnerabilities-and-the-cra">
+
+- [ ] Run `npm audit`, `pip-audit`, `cargo audit` or `osv-scanner` on one product you ship, and look up each advisory in KEV and EPSS.
+- [ ] For each KEV entry in that list, find out whether your product runs the vulnerable code.
+- [ ] Name who sends the 24-hour early warning, and who covers when they're away.
+- [ ] Send a test report to your security contact address, and time how long the answer takes.
+- [ ] List the private patches you carry on open-source components, and send one of them upstream.
+
+</Checklist>
+
+## Go further
+
+- [Chapter 9 of the Commission's guidance](https://cra.orcwg.org/official-guidance/#sct_9): reporting and vulnerability handling, paragraph by paragraph, with an anchor on each.
+- [CISA's KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog): searchable, and downloadable as JSON or CSV to match against your SBOM.
+- [EPSS data and API](https://www.first.org/epss/api): the latest daily score for any CVE, in one `curl`.
+- [The Cyber Resilience Act for maintainers](/articles/cyber-resilience-act-for-maintainers/): the same law from the side of the projects you depend on, and what your reports look like when they land.
+
+<Related />
