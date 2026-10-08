@@ -2,7 +2,7 @@
 title: 'Choosing a License: Four Questions and a Table'
 description: MIT, Apache-2.0, GPL-3.0 or AGPL-3.0? Four questions pick the license, a table compares ten of them, and three places apply it. Plus what "or later" means, and changing it later.
 date: 2024-02-06
-lastUpdated: 2026-10-03
+lastUpdated: 2026-10-08
 related:
   - guide/licensing/license-compatibility
   - guide/creating/repository-files
@@ -10,6 +10,7 @@ related:
 
 import Checklist from '../../../../components/Checklist.astro';
 import InShort from '../../../../components/InShort.astro';
+import LicensesTable from '../../../../components/LicensesTable.astro';
 import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
@@ -45,18 +46,7 @@ An open-source license grants that permission under conditions. The [Open Source
 
 What each license asks of the people who use your code, from [choosealicense.com's](https://choosealicense.com/appendix/) summary of each text, with a project that uses each one (as of September 2026):
 
-| License, used by                                 | The user must                                                       | Patent grant                | Copyleft covers                      |
-| ------------------------------------------------ | ------------------------------------------------------------------- | --------------------------- | ------------------------------------ |
-| `MIT`<br />React                                 | Keep the copyright and license notice                               | Not explicit                | Nothing                              |
-| `BSD-2-Clause`<br />Homebrew                     | Keep the copyright and license notice                               | Not explicit                | Nothing                              |
-| `BSD-3-Clause`<br />Go                           | Same, and not use the authors' names to promote their product       | Not explicit                | Nothing                              |
-| `Apache-2.0`<br />Kubernetes                     | Keep the notices, and state their changes                           | Yes, ends for a patent suit | Nothing                              |
-| `MPL-2.0`<br />OpenTofu                          | Keep the notices, and share the source of the files they changed    | Yes                         | The modified files                   |
-| `LGPL-3.0-or-later`<br />go-ethereum's libraries | Keep the notices, state changes, share the source of the library    | Yes                         | The library                          |
-| `GPL-3.0-or-later`<br />Ansible                  | Keep the notices, state changes, share the source of the whole work | Yes                         | The whole work, when distributed     |
-| `AGPL-3.0-or-later`<br />Mastodon                | Same as GPL, and offer the source to users over a network           | Yes                         | The whole work, network use included |
-| `Unlicense`<br />yt-dlp                          | Nothing                                                             | Not explicit                | Nothing                              |
-| `CC0-1.0`<br />GitHub's gitignore templates      | Nothing                                                             | Explicitly not granted      | Nothing                              |
+<LicensesTable />
 
 Every one of them also disclaims warranty and liability: the code comes as is.
 
@@ -108,6 +98,7 @@ Old versions keep their license, whatever happens next. That's how OpenTofu and 
 
 ## Tools
 
+- [Licenses quick reference](/resources/licenses/): the same ten licenses with their SPDX identifiers, OSI status and links to the texts.
 - [choosealicense.com](https://choosealicense.com/), by GitHub: the licenses compared, and "no license" explained.
 - [SPDX License List](https://spdx.org/licenses/): every identifier, with the full texts.
 - [licensee](https://github.com/licensee/licensee): the tool GitHub uses to detect a repository's license. Run it to see what GitHub will see.

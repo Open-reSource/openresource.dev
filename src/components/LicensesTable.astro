@@ -1,0 +1,164 @@
+---
+// The licenses table, fed by src/data/licenses.yml. In "Choosing a License" it is the side-by-side comparison; on
+// /resources/licenses/ (`full`) it adds the OSI column and the links to the texts, and a text filter. Without JS, the
+// filter stays hidden and every row shows.
+import { getCollection } from 'astro:content';
+
+interface Props {
+	full?: boolean;
+}
+
+const { full = false } = Astro.props;
+const licenses = (await getCollection('licenses')).map(({ data }) => data);
+---
+
+<open-licenses class="licenses">
+	{full && (
+		<p class="licenses__filter" hidden>
+			<label>
+				Filter the licenses
+				<input type="search" placeholder="MIT, patent, network…" autocomplete="off" />
+			</label>
+			<span class="licenses__count" role="status" />
+		</p>
+	)}
+	<div class="licenses__scroll">
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">{full ? 'License' : 'License, used by'}</th>
+					{full && <th scope="col">Used by</th>}
+					<th scope="col">The user must</th>
+					<th scope="col">Patent grant</th>
+					<th scope="col">Copyleft covers</th>
+					{full && <th scope="col">OSI-approved</th>}
+					{full && <th scope="col">Texts</th>}
+				</tr>
+			</thead>
+			<tbody>
+				{licenses.map((license) => (
+					<tr>
+						<th scope="row">
+							<code>{license.id}</code>
+							{!full && (
+								<>
+									<br />
+									{license.usedBy}
+								</>
+							)}
+						</th>
+						{full && <td data-label="Used by">{license.usedBy}</td>}
+						<td data-label="The user must">{license.must}</td>
+						<td data-label="Patent grant">{license.patent}</td>
+						<td data-label="Copyleft covers">{license.copyleft}</td>
+						{full && <td data-label="OSI-approved">{license.osiUrl ? <a href={license.osiUrl}>Yes</a> : 'No'}</td>}
+						{full && (
+							<td data-label="Texts">
+								<a href={`https://spdx.org/licenses/${license.id}.html`}>SPDX</a>,{' '}
+								<a href={license.textUrl}>choosealicense.com</a>
+							</td>
+						)}
+					</tr>
+				))}
+			</tbody>
+		</table>
+	</div>
+</open-licenses>
+
+<style>
+	.licenses__scroll {
+		container-type: inline-size;
+		overflow-x: auto;
+		margin: 0 0 1.25em;
+	}
+
+	.licenses__filter {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--space-3);
+		margin: var(--space-5) 0;
+	}
+
+	.licenses__filter[hidden] {
+		display: none;
+	}
+
+	.licenses__filter input {
+		margin-inline-start: var(--space-2);
+		padding: var(--space-1) var(--space-3);
+		border: var(--stroke-hairline) solid var(--color-line);
+		background: transparent;
+		color: inherit;
+		font: inherit;
+	}
+
+	/* When the table no longer fits, each license becomes a block with labelled lines instead of scrolling sideways. */
+	@container (max-width: 38rem) {
+		.licenses__scroll table,
+		.licenses__scroll tbody,
+		.licenses__scroll tr,
+		.licenses__scroll th,
+		.licenses__scroll td {
+			display: block;
+		}
+
+		.licenses__scroll thead {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+		}
+
+		.licenses__scroll tr {
+			padding: 0.75em 0;
+			border-bottom: 1px solid var(--color-border, currentColor);
+		}
+
+		.licenses__scroll th,
+		.licenses__scroll td {
+			padding: 0.1em 0;
+			border: 0;
+		}
+
+		.licenses__scroll td::before {
+			content: attr(data-label) ': ';
+			font-weight: bold;
+		}
+
+		.licenses__scroll tr[hidden] {
+			display: none;
+		}
+	}
+
+	.licenses__scroll th,
+	.licenses__scroll td {
+		vertical-align: top;
+	}
+</style>
+
+<script>
+	class OpenLicenses extends HTMLElement {
+		connectedCallback() {
+			const filter = this.querySelector<HTMLElement>('.licenses__filter');
+			const input = filter?.querySelector<HTMLInputElement>('input');
+			if (!filter || !input) return;
+			const rows = [...this.querySelectorAll<HTMLTableRowElement>('tbody tr')];
+			const count = filter.querySelector<HTMLElement>('.licenses__count')!;
+			const apply = () => {
+				const query = input.value.trim().toLowerCase();
+				let shown = 0;
+				for (const row of rows) {
+					row.hidden = query !== '' && !(row.textContent ?? '').toLowerCase().includes(query);
+					if (!row.hidden) shown++;
+				}
+				count.textContent = query === '' ? '' : `${shown} of ${rows.length} licenses`;
+			};
+			filter.hidden = false;
+			input.addEventListener('input', apply);
+		}
+	}
+
+	customElements.define('open-licenses', OpenLicenses);
+</script>

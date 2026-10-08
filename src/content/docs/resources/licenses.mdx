@@ -1,0 +1,34 @@
+---
+title: Licenses quick reference
+lastUpdated: 2026-10-08
+description: Ten common open source licenses side by side, with their SPDX identifiers, what each asks of users, OSI status and links to the texts.
+head:
+  - tag: meta
+    attrs:
+      property: 'og:type'
+      content: 'website'
+---
+
+import LicensesTable from '../../../components/LicensesTable.astro';
+
+Ten licenses that cover most of the open source you will meet, with the identifier to put in your `license` field. Summaries follow [choosealicense.com](https://choosealicense.com/appendix/) and were checked in October 2026. This is a reference, not legal advice.
+
+<LicensesTable full />
+
+## What the columns mean
+
+- **License** is the [SPDX](https://spdx.org/licenses/) identifier: the string package managers and compliance tools read. Copy it as written.
+- **The user must** is what the license asks of anyone who uses, changes or shares your code.
+- **Patent grant** says whether contributors license the patents their contribution needs. Apache-2.0 ends that grant for anyone who sues over patents in the project.
+- **Copyleft covers** is how far "changes must come back" reaches: nothing, the modified files, the library or the whole work.
+- **OSI-approved** links to the [Open Source Initiative's](https://opensource.org/licenses) page for the license. CC0-1.0 is not approved by the OSI, and says so itself: it waives rights, it does not license the code.
+
+Every one of them disclaims warranty and liability: the code comes as is.
+
+## Which one, and what about mixing them
+
+- [Choosing a License: Four Questions and a Table](/guide/licensing/choosing-a-license/) picks one for your project, and shows where to apply it.
+- [License Compatibility](/guide/licensing/license-compatibility/) covers the other direction: which of these licenses can mix in one program.
+- [Licenses for Things That Aren't Code](/guide/licensing/non-code-licenses/) covers documentation, fonts, hardware and data.
+
+Know a license that belongs here? [Suggest it in the Open &#123;re&#125;Source discussions](https://github.com/orgs/Open-reSource/discussions).
