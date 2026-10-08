@@ -29,7 +29,13 @@ function shuffleLinks(links: ShowcaseLink[]): ShowcaseLink[] {
 	{allShowcaseLinks.map((link: ShowcaseLink) => {
 		if (link.type === 'github_repo') {
 			return (
-				<ShowcaseGitHubRepo env={link.owner} repo={link.name} description={link.description} img={link.avatarUrl} />
+				<ShowcaseGitHubRepo
+					env={link.owner}
+					repo={link.name}
+					description={link.description}
+					img={link.avatarUrl}
+					live={false}
+				/>
 			);
 		}
 		const host = link.type === 'github' ? 'GitHub' : 'GitLab';

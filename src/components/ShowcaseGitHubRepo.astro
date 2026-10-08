@@ -1,23 +1,43 @@
 ---
+// A GitHub repository card. At build time it asks the GitHub API for the repository's current
+// description and avatar (memoised per build, `GITHUB_TOKEN` used when set to lift the rate limit).
+// `img` (avatar id or URL) and `description` are the fallback when the request fails or the build is
+// offline, so the build never fails on the network. `live={false}` skips the request (the showcase
+// page, whose data `npm run update:showcase` already keeps current).
 import ShowcaseEntry from './ShowcaseEntry.astro';
+import { fetchGitHubRepo } from '../github-repo';
 
 export interface Props {
-	description: string;
+	description?: string;
 	env: string;
-	img: string;
+	img?: string;
+	live?: boolean;
 	repo: string;
 }
 
-const { description, env, img, repo } = Astro.props;
+const { description, env, img, live = true, repo } = Astro.props;
 
-const picture = img.includes('https://') ? img : `https://avatars.githubusercontent.com/u/${img}?s=96`;
+const fetched = live ? await fetchGitHubRepo(env, repo) : undefined;
+
+const avatar = fetched?.avatarUrl ?? img;
+const picture = avatar
+	? avatar.includes('https://')
+		? avatar
+		: `https://avatars.githubusercontent.com/u/${avatar}?s=96`
+	: undefined;
+// `ShowcaseEntry` renders the description as HTML: a fetched one is plain text, so escape it.
+const text = fetched?.description ? escapeHtml(fetched.description) : (description ?? '');
+
+function escapeHtml(value: string) {
+	return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
 ---
 
 <ShowcaseEntry
 	name={`<span class="owner">${env}/</span><br/>${repo}`}
 	picture={picture}
 	href={`https://github.com/${env}/${repo}`}
-	description={description}
+	description={text}
 />
 
 <style>
