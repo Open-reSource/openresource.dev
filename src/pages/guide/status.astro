@@ -1,0 +1,43 @@
+---
+export const prerender = true;
+
+import { Section, SectionHeader, SiteLayout } from '@deramond.dev/astro';
+
+import { rows } from '../../chapter-rows.ts';
+import { STATUSES } from '../../chapter-status.mjs';
+
+const description = 'Which chapters of the guide are complete, which are drafts and which are still only planned.';
+const count = (status: string) => rows.filter((r) => r.status === status).length;
+const summary = `${rows.length} chapters: ${STATUSES.map((s) => `${count(s)} ${s}`).join(', ')}.`;
+---
+
+<SiteLayout title="Guide status" description={description} noindex>
+	<Section>
+		<SectionHeader as="h1" label="Guide status" title="Guide status" lead={description} />
+		<p>{summary}</p>
+		<div class="d-table">
+			<table>
+				<thead>
+					<tr>
+						<th>Module</th>
+						<th>Chapter</th>
+						<th>Status</th>
+						<th>Updated</th>
+					</tr>
+				</thead>
+				<tbody>
+					{rows.map((r) => (
+						<tr>
+							<td>{r.module}</td>
+							<td>
+								<a href={r.path}>{r.title}</a>
+							</td>
+							<td>{r.status}</td>
+							<td>{r.updated ? <time datetime={r.updated}>{r.updated}</time> : '–'}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
+	</Section>
+</SiteLayout>

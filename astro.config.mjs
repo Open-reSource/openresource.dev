@@ -43,7 +43,7 @@ export default defineConfig({
 	},
 	integrations: [
 		mdx(),
-		sitemap(),
+		sitemap({ filter: (page) => !page.endsWith('/guide/status/') }),
 		learningPaths(),
 		deramond({
 			site: {
