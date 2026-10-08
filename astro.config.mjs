@@ -81,7 +81,14 @@ export default defineConfig({
 							{ label: 'Guide', href: '/guide/' },
 							{ label: 'Resources', href: '/resources/books/' },
 							{ label: 'Articles', href: '/articles/' },
-							{ label: 'RSS', href: '/articles/rss.xml' },
+						],
+					},
+					{
+						title: 'Subscribe',
+						links: [
+							{ label: 'Articles (RSS)', href: '/articles/rss.xml' },
+							{ label: 'Articles (JSON Feed)', href: '/feed.json' },
+							{ label: 'Guide changes (RSS)', href: '/guide/changes.xml' },
 						],
 					},
 					{
@@ -155,6 +162,33 @@ export default defineConfig({
 			},
 			css: ['./src/styles/site.css'],
 			head: [
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'alternate',
+						type: 'application/rss+xml',
+						title: 'Open {re}Source articles',
+						href: '/articles/rss.xml',
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'alternate',
+						type: 'application/feed+json',
+						title: 'Open {re}Source articles (JSON Feed)',
+						href: '/feed.json',
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'alternate',
+						type: 'application/rss+xml',
+						title: 'Open {re}Source guide changes',
+						href: '/guide/changes.xml',
+					},
+				},
 				{ tag: 'meta', attrs: { name: 'twitter:site', content: '@open_resource' } },
 				{ tag: 'meta', attrs: { name: 'fediverse:creator', content: '@openresource@fosstodon.org' } },
 			],
