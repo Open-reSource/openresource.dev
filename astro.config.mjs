@@ -31,6 +31,7 @@ export default defineConfig({
 	redirects: {
 		'/books': '/resources/books',
 		'/events': '/resources/events',
+		'/licenses': '/resources/licenses',
 		'/open-sourcerers': '/resources/open-sourcerers',
 		'/podcasts': '/resources/podcasts',
 		'/resources': '/resources/books',
@@ -120,6 +121,7 @@ export default defineConfig({
 						items: [
 							'resources/books',
 							'resources/events',
+							'resources/licenses',
 							'resources/open-sourcerers',
 							'resources/podcasts',
 							'resources/tools',

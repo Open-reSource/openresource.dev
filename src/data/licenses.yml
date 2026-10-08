@@ -1,0 +1,82 @@
+# The ten licenses of /resources/licenses/ and of the table in "Choosing a License". One source for both.
+# `must`, `patent` and `copyleft` follow choosealicense.com's summary of each text, checked in October 2026.
+# `usedBy` is a project that uses it, checked in September 2026. `osi` is whether the Open Source Initiative approves it.
+- id: MIT
+  usedBy: React
+  must: Keep the copyright and license notice
+  patent: Not explicit
+  copyleft: Nothing
+  osi: true
+  osiUrl: https://opensource.org/license/mit
+  textUrl: https://choosealicense.com/licenses/mit/
+- id: BSD-2-Clause
+  usedBy: Homebrew
+  must: Keep the copyright and license notice
+  patent: Not explicit
+  copyleft: Nothing
+  osi: true
+  osiUrl: https://opensource.org/license/bsd-2-clause
+  textUrl: https://choosealicense.com/licenses/bsd-2-clause/
+- id: BSD-3-Clause
+  usedBy: Go
+  must: Same, and not use the authors' names to promote their product
+  patent: Not explicit
+  copyleft: Nothing
+  osi: true
+  osiUrl: https://opensource.org/license/bsd-3-clause
+  textUrl: https://choosealicense.com/licenses/bsd-3-clause/
+- id: Apache-2.0
+  usedBy: Kubernetes
+  must: Keep the notices, and state their changes
+  patent: Yes, ends for a patent suit
+  copyleft: Nothing
+  osi: true
+  osiUrl: https://opensource.org/license/apache-2-0
+  textUrl: https://choosealicense.com/licenses/apache-2.0/
+- id: MPL-2.0
+  usedBy: OpenTofu
+  must: Keep the notices, and share the source of the files they changed
+  patent: 'Yes'
+  copyleft: The modified files
+  osi: true
+  osiUrl: https://opensource.org/license/mpl-2-0
+  textUrl: https://choosealicense.com/licenses/mpl-2.0/
+- id: LGPL-3.0-or-later
+  usedBy: go-ethereum's libraries
+  must: Keep the notices, state changes, share the source of the library
+  patent: 'Yes'
+  copyleft: The library
+  osi: true
+  osiUrl: https://opensource.org/license/lgpl-3-0
+  textUrl: https://choosealicense.com/licenses/lgpl-3.0/
+- id: GPL-3.0-or-later
+  usedBy: Ansible
+  must: Keep the notices, state changes, share the source of the whole work
+  patent: 'Yes'
+  copyleft: The whole work, when distributed
+  osi: true
+  osiUrl: https://opensource.org/license/gpl-3-0
+  textUrl: https://choosealicense.com/licenses/gpl-3.0/
+- id: AGPL-3.0-or-later
+  usedBy: Mastodon
+  must: Same as GPL, and offer the source to users over a network
+  patent: 'Yes'
+  copyleft: The whole work, network use included
+  osi: true
+  osiUrl: https://opensource.org/license/agpl-v3
+  textUrl: https://choosealicense.com/licenses/agpl-3.0/
+- id: Unlicense
+  usedBy: yt-dlp
+  must: Nothing
+  patent: Not explicit
+  copyleft: Nothing
+  osi: true
+  osiUrl: https://opensource.org/license/unlicense
+  textUrl: https://choosealicense.com/licenses/unlicense/
+- id: CC0-1.0
+  usedBy: GitHub's gitignore templates
+  must: Nothing
+  patent: Explicitly not granted
+  copyleft: Nothing
+  osi: false
+  textUrl: https://choosealicense.com/licenses/cc0-1.0/

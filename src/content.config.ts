@@ -81,6 +81,19 @@ const eventSchema = z.object({
 	url: z.url(),
 });
 
+const licenseSchema = z.object({
+	// The SPDX identifier.
+	id: z.string(),
+	usedBy: z.string(),
+	must: z.string(),
+	patent: z.string(),
+	copyleft: z.string(),
+	// Approved by the Open Source Initiative, with the page that says so.
+	osi: z.boolean(),
+	osiUrl: z.url().optional(),
+	textUrl: z.url(),
+});
+
 export const collections = {
 	docs: defineCollection({
 		loader: docsLoader(),
@@ -112,6 +125,7 @@ export const collections = {
 	tools: toolsCollection,
 	'tool-categories': toolCategoriesCollection,
 	events: defineCollection({ loader: file('src/data/events.yml'), schema: eventSchema }),
+	licenses: defineCollection({ loader: file('src/data/licenses.yml'), schema: licenseSchema }),
 };
 
 export type Showcase = z.infer<typeof showcaseSchema>;
