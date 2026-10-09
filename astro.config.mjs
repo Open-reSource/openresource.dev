@@ -8,6 +8,7 @@ import { modules, guide, moved } from './src/guide-modules.mjs';
 import { satteri } from '@astrojs/markdown-satteri';
 import { chapterStatus } from './src/chapter-status.mjs';
 import { moduleGroups } from './src/article-modules.mjs';
+import { withLastmod } from './src/sitemap-lastmod.mjs';
 import { learningPaths } from './src/learning-paths-integration.mjs';
 
 // https://astro.build/config
@@ -44,7 +45,7 @@ export default defineConfig({
 	},
 	integrations: [
 		mdx(),
-		sitemap({ filter: (page) => !page.endsWith('/guide/status/') }),
+		sitemap({ filter: (page) => !page.endsWith('/guide/status/'), serialize: withLastmod() }),
 		learningPaths(),
 		deramond({
 			site: {
