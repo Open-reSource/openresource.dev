@@ -2,7 +2,7 @@
 // One template: its text in a scrollable preview, with a "Copy" button. Without JS, the text is still there to select.
 // The sources are the files in src/templates/, listed in src/templates.mjs. `<Template name="README.md" />` embeds one in
 // the chapter that explains it; the gallery passes `chapter` to get a heading and a link back to that chapter instead.
-import { Button } from '@deramond.dev/astro';
+import Button from '@deramond.dev/astro/components/Button.astro';
 import { templateId, templates } from '../templates.mjs';
 
 interface Props {

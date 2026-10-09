@@ -2,16 +2,14 @@
 export const prerender = true;
 
 import { getCollection } from 'astro:content';
-import {
-	Button,
-	Hero,
-	PostCard,
-	ProjectCard,
-	ProjectGrid,
-	Section,
-	SectionHeader,
-	SiteLayout,
-} from '@deramond.dev/astro';
+import Button from '@deramond.dev/astro/components/Button.astro';
+import Hero from '@deramond.dev/astro/components/Hero.astro';
+import PostCard from '@deramond.dev/astro/components/PostCard.astro';
+import ProjectCard from '@deramond.dev/astro/components/ProjectCard.astro';
+import ProjectGrid from '@deramond.dev/astro/components/ProjectGrid.astro';
+import Section from '@deramond.dev/astro/components/Section.astro';
+import SectionHeader from '@deramond.dev/astro/components/SectionHeader.astro';
+import SiteLayout from '@deramond.dev/astro/layouts/SiteLayout.astro';
 import { isoDate, postHref, readingTime, sortPosts } from '@deramond.dev/astro/blog';
 import ShowcaseBanner from '../components/ShowcaseBanner.astro';
 import { modules as guideModules } from '../guide-modules.mjs';
