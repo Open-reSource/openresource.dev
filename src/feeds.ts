@@ -109,10 +109,20 @@ export function guideItems(entries: Entry[]): FeedItem[] {
 		.sort(newestFirst);
 }
 
+/** `html` without its `<script>` elements, in any case, repeated until none is left. */
+function withoutScripts(html: string): string {
+	let out = html;
+	let before: string;
+	do {
+		before = out;
+		out = out.replace(/<script\b[^>]*>[\s\S]*?<\/script[^>]*>/gi, '');
+	} while (out !== before);
+	return out;
+}
+
 /** HTML for a feed reader: no scripts, and site-relative links and images made absolute. */
 export function feedHtml(html: string): string {
-	return html
-		.replace(/<script\b[\s\S]*?<\/script>/g, '')
+	return withoutScripts(html)
 		.replace(/\b(href|src)="(\/(?!\/)[^"]*)"/g, (_, attr, path) => `${attr}="${absolute(path)}"`)
 		.replace(
 			/\bsrcset="([^"]*)"/g,
