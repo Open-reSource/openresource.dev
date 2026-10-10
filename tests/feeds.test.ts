@@ -61,4 +61,9 @@ describe('feeds', () => {
 			'<a href="https://openresource.dev/guide/">g</a><img src="https://openresource.dev/i.png" srcset="https://openresource.dev/a.png 1x, https://openresource.dev/b.png 2x"><a href="//x.y">z</a>'
 		);
 	});
+
+	test('feedHtml removes scripts in any case, with attributes, and nested ones', () => {
+		expect(feedHtml('<p>a</p><SCRIPT type="module">x()</SCRIPT ><p>b</p>')).toBe('<p>a</p><p>b</p>');
+		expect(feedHtml('<scr<script>x()</script>ipt>y()</script><p>c</p>')).toBe('<p>c</p>');
+	});
 });
