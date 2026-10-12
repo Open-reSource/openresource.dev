@@ -26,7 +26,7 @@
       "contributors": 2,
       "description": "Official Astro theme portfolio template built with React, TypeScript & Tailwind CSS. Handcrafted with Figma.",
       "discussions": 0,
-      "forks": 145,
+      "forks": 150,
       "issues": 1,
       "languages": [
         "Astro",
@@ -36,7 +36,7 @@
       "name": "dark-minimal",
       "owner": "Gothsec",
       "prs": 2,
-      "stars": 268,
+      "stars": 273,
       "url": "https://github.com/Gothsec/dark-minimal"
     }
   ]

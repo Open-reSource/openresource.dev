@@ -4,7 +4,7 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/254837949?v=4&s=50",
-      "contributors": 2,
+      "contributors": 3,
       "description": "DataFlow Operator is a Kubernetes operator for streaming data between different data sources with support for message transformations.",
       "discussions": 0,
       "forks": 0,
