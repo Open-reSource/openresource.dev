@@ -7,8 +7,8 @@
       "contributors": 71,
       "description": "Mockoon is the easiest and quickest way to run mock APIs locally. No remote deployment, no account required, open source.",
       "discussions": 335,
-      "forks": 480,
-      "issues": 29,
+      "forks": 481,
+      "issues": 27,
       "languages": [
         "TypeScript",
         "HTML",
@@ -20,7 +20,7 @@
       "name": "mockoon",
       "owner": "mockoon",
       "prs": 5,
-      "stars": 8435,
+      "stars": 8439,
       "url": "https://github.com/mockoon/mockoon"
     }
   ]

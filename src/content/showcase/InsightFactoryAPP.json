@@ -7,7 +7,7 @@
       "contributors": 3,
       "description": "YYLO (why-lo): AI coding-agent orchestration CLI with equivalent yylo and yy launchers.",
       "discussions": 0,
-      "forks": 9,
+      "forks": 10,
       "issues": 0,
       "languages": [
         "Python",
@@ -17,7 +17,7 @@
       ],
       "name": "yylo",
       "owner": "yylo-dev",
-      "prs": 10,
+      "prs": 11,
       "stars": 63,
       "url": "https://github.com/yylo-dev/yylo"
     }

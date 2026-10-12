@@ -7,7 +7,7 @@
       "contributors": 11,
       "description": "Backend web framework for building applications where a single handler can be exposed as http endpoint, MCP tool or CLI action.",
       "discussions": 5,
-      "forks": 21,
+      "forks": 20,
       "issues": 4,
       "languages": [
         "Python",
