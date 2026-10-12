@@ -30,17 +30,17 @@ import RelatedChapter from '../../components/RelatedChapter.astro';
 {/* prettier-ignore */}
 <p class="lead">Coding LinkedIn carousels... yes, not using design tools but using developer tools! It's now possible!</p>
 
-A few days ago, we shared [a new article on LinkedIn](https://www.linkedin.com/posts/open-re-source_generate-github-repositories-top-contributors-activity-7245171076966559745-sBAM/) and tried to make it more engaging by using a carousel. And creating a carousel on LinkedIn can take a bit of time, especially if you're not that familiar with design tools such as [Canva](https://www.canva.com), [Figma](https://www.figma.com), or even [Penpot](https://penpot.app/), our open-source design tool friend. Even with the tons of templates available out there, customizing them is a lot of work.
+A few days ago, we shared [a new article on LinkedIn](https://www.linkedin.com/posts/open-re-source_generate-github-repositories-top-contributors-activity-7245171076966559745-sBAM/) and tried to make it more engaging by using a carousel. Creating a carousel on LinkedIn takes time, especially if you're not familiar with design tools such as [Canva](https://www.canva.com), [Figma](https://www.figma.com), or even [Penpot](https://penpot.app/), our open-source design tool friend. Even with the tons of templates available out there, customizing them is a lot of work.
 
-In the open-source software world, we are mostly developers, we're not going to lie. So, we thought: **"Why not code the LinkedIn carousel?" And that's what we did!**
+In the open-source world, we're mostly developers. So we thought: **"Why not code the LinkedIn carousel?" And that's what we did!**
 
 ## How LinkedIn carousels work
 
-Just for those who are not familiar with LinkedIn carousels, they are a series of images or slides that you can swipe through. They are a great way to share information in a visually appealing format. You can use them to showcase your open-source project, share tips, or even tell a story.
+A LinkedIn carousel is a series of images or slides that you swipe through. It's a great way to share information in a visually appealing format. You can use one to present your open-source project, share tips, or even tell a story.
 
 There's no real creator tool for LinkedIn carousels, so you have to create them yourself.
 
-**Basically, a LinkedIn carousel is in fact a PDF file.** You can create a PDF file with multiple pages, and each page will be a slide in your carousel. You can then upload this PDF file to LinkedIn, and it will automatically convert it into a carousel.
+**A LinkedIn carousel is a PDF file.** Create a PDF with multiple pages, and each page becomes a slide. Upload the PDF to LinkedIn, and it converts it into a carousel.
 
 1. On LinkedIn, click on the "+ Create" button.
 2. Select "Start a post".
@@ -63,29 +63,27 @@ There's no real creator tool for LinkedIn carousels, so you have to create them 
 
 ## The Idea
 
-**So, if it just a PDF file, why not code it?** We can create a simple HTML file with multiple slides, and then convert it into a PDF file. And that's what we did!
+**If it's just a PDF file, why not code it?** We can create a simple HTML file with multiple slides, then convert it into a PDF file. And that's what we did!
 
-We already use this great tool for presentations, it's called [Slidev](https://sli.dev/).
+We already use a great tool for presentations: [Slidev](https://sli.dev/).
 
-Slidev is a presentation tool based on Vue.js. It allows you to create beautiful slides with Markdown and code. And it has a feature to export your slides as a PDF file. It is an open-source project, under the MIT license.
+Slidev is a presentation tool based on Vue.js. It lets you create beautiful slides with Markdown and code, and it can export them as a PDF file. It's an open-source project under the MIT license.
 
 <ShowcaseGitHubRepo env="slidevjs" repo="slidev" img="83095831" description="Presentation Slides for Developers" />
 
 ## How to Code LinkedIn Carousels
 
-It's really simple in fact.
-
-The first step is to create a new Slidev project. You can do this by running the following command:
+It's simple. First, create a new Slidev project with this command:
 
 ```sh
 npm init slidev@latest
 ```
 
-This will create a new Slidev project in the current directory. You can then open the project in your code editor and start customizing the slides.
+This creates a new Slidev project in the current directory. Then open the project in your code editor and start customizing the slides.
 
-Obviously, you'll notice that the default Slidev theme is not really suitable for LinkedIn carousels as the slides are generally wide, in a 16:9 ratio. So, you'll need to customize the theme to make it more suitable for LinkedIn carousels.
+You'll notice that the default Slidev theme doesn't suit LinkedIn carousels, because its slides are wide, in a 16:9 ratio. You'll need to customize the theme.
 
-In the `slides.md` you just have to add the following properties in the frontmatter:
+In the `slides.md`, add these properties to the frontmatter:
 
 ```json
 ---
@@ -93,20 +91,20 @@ aspectRatio: "3/4"
 canvasWidth: 800
 ```
 
-Just install `playwright-chromium` as a dev dependency, and export your slides as a PDF file:
+Install `playwright-chromium` as a dev dependency, and export your slides as a PDF file:
 
 ```sh
 npm install -D playwright-chromium
 npm run export
 ```
 
-And voilà, you got a nice `slides-export.pdf` that could be used as a LinkedIn carousel!
+And voilà, you get a nice `slides-export.pdf` that you can use as a LinkedIn carousel!
 
 ## We Created a Theme for LinkedIn Carousels
 
-However, you'll notice that you still have some design work to do in order to render your carousel more visually appealing.
+You'll still have some design work to do to make your carousel more visually appealing.
 
-**So, we created a theme for LinkedIn carousels called `slidev-theme-linkedin-carousel`**, that is an open-source project under the MIT license.
+**So we created a theme for LinkedIn carousels called `slidev-theme-linkedin-carousel`**, an open-source project under the MIT license.
 
 <ShowcaseGitHubRepo
 	env="Open-reSource"
@@ -164,13 +162,13 @@ Here's what it looks like: https://slidev-theme-lk-carousel.netlify.app.
 
 ### How to Use the Theme
 
-To use the theme, you just have to install it as a dev dependency:
+To use the theme, install it as a dev dependency:
 
 ```sh
 npm i -D slidev-theme-linkedin-carousel
 ```
 
-and then add the following frontmatter to your slides:
+Then add this frontmatter to your slides:
 
 ```md
 ---
@@ -180,12 +178,12 @@ theme: linkedin-carousel
 
 For more information on how to use the theme, check out the [README](https://github.com/Open-reSource/slidev-theme-linkedin-carousel).
 
-The `example.md` file in the repository is a good starting point to create your own LinkedIn carousels. And from there, you can customize the slides to your liking, and even use custom components to make them more impacting.
+The `example.md` file in the repository is a good starting point for your own LinkedIn carousels. From there, customize the slides to your liking, and even use custom components to make them more impactful.
 
 ---
 
-Don't hesitate to share your LinkedIn carousels with us, we'd love to see them! See ya [on LinkedIn](https://www.linkedin.com/company/open-re-source/)!
+Share your LinkedIn carousels with us, we'd love to see them! See ya [on LinkedIn](https://www.linkedin.com/company/open-re-source/)!
 
-If you liked this theme, use it, please consider [giving it a star on GitHub](https://github.com/Open-reSource/slidev-theme-linkedin-carousel), or even [sponsoring us](https://github.com/sponsors/Open-reSource/). It helps us a lot!
+If you like this theme, please consider [giving it a star on GitHub](https://github.com/Open-reSource/slidev-theme-linkedin-carousel), or even [sponsoring us](https://github.com/sponsors/Open-reSource/). It helps a lot!
 
 <Related />
