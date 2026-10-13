@@ -35,13 +35,13 @@ import RelatedChapter from '../../components/RelatedChapter.astro';
 {/* prettier-ignore */}
 <p class="lead">After the refactoring of this website, folks (maybe you) started to spread the word about it. The statistics started to rise a little bit, and we discovered along the way that the repository holding this website also started to receive some new stars. To our knowledge, there's no native way to get notified by GitHub when you receive stars on your repositories. So, we decided to do something about it!</p>
 
-We know, we know, tracking stars is a little bit linked to the gamification of the open source world, but to be honest, it's still a fun way to keep track of your project's popularity and engage with your community.
+We know, we know, tracking stars is a bit of gamification in the open source world. Still, it's a fun way to keep track of your project's popularity and engage with your community.
 
 So, we decided to build a simple automation that would send a notification to a private Discord channel whenever our GitHub repository receives new stars. There are probably better ways to do this, existing solutions, but where is the fun in that?
 
 After a few times of tweaking and testing, we finally got it working! 🎉
 
-Here is the notification we received on our phone this afternoon:
+Here's the notification we received on our phone this afternoon:
 
 <ContentImage
 	src="/images/get-real-time-github-stars-notifications-in-discord-1.png"
@@ -50,7 +50,7 @@ Here is the notification we received on our phone this afternoon:
 	height="133"
 />
 
-And when you click on the notification, here is how the notification appears on Discord, showing the new star count and the repository name:
+And when you click on the notification, here's how it appears on Discord, showing the new star count and the repository name:
 
 <ContentImage
 	src="/images/get-real-time-github-stars-notifications-in-discord-2.png"
@@ -63,14 +63,14 @@ And when you click on the notification, here is how the notification appears on 
 
 ## Step 1: Create a Discord Webhook
 
-To send notifications to Discord, you will need to set up a webhook in your Discord server. Here's how to do it:
+To send notifications to Discord, you'll need to set up a webhook in your Discord server. Here's how to do it:
 
 1. Open your Discord server and navigate to the channel where you want to receive notifications. You can create a dedicated private channel for this purpose.
 2. Click on the gear icon next to the channel name to access the channel settings.
 3. Select the "Integrations" tab.
 4. Click on "Webhooks" and then "Create Webhook."
 5. Give your webhook a name (e.g. "GitHub Stars Bot"), and select a nice image.
-6. **Copy the webhook URL, as you will need it later.**
+6. **Copy the webhook URL, as you'll need it later.**
 
 Here's also a link to the [Discord documentation - Intro to Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for more information.
 
@@ -80,7 +80,7 @@ Now, let's create a private GitHub repository to store our future GitHub Actions
 
 ## Step 3: Create a Secret Variable in GitHub
 
-To securely store your Discord Webhook URL to ensure that sensitive data isn't exposed in your repository code, you will need to create a secret variable in your GitHub repository:
+To keep your Discord Webhook URL out of your repository code, create a secret variable in your GitHub repository:
 
 1. Go to your GitHub repository and click on the "Settings" tab.
 2. In the left sidebar, click on "Secrets and variables" and then "Actions."
@@ -110,9 +110,9 @@ The algorithm is rather simple:
 
 ### Using the GitHub API
 
-To get started, you will need to use the [GitHub REST API](https://docs.github.com/en/rest) to fetch the star count for your repository. The GitHub API provides a simple way to access information about your repositories, including the number of stars they have received.
+To get started, use the [GitHub REST API](https://docs.github.com/en/rest) to fetch the star count for your repository. The GitHub API provides a simple way to access information about your repositories, including the number of stars they have received.
 
-There is a public endpoint that you can use to get the star count for a specific repository:
+A public endpoint returns the star count for a specific repository:
 
 ```
 GET https://api.github.com/repos/{owner}/{repo}
@@ -146,7 +146,7 @@ In September 2024, when this article was written, the Open \{re\}Source main rep
 
 ### The Actual Workflow
 
-Now, let's create the actual workflow:
+Let's create the actual workflow:
 
 1. Clone your repository to your local machine or edit it directly on GitHub.
 2. Add the following YAML code to your `gh-stars-to-discord.yml` file:
@@ -251,20 +251,14 @@ The first time you run the workflow, it will probably send a notification saying
 >
 > To check the logs, once your YAML file is pushed to the repository, go to the "Actions" tab, select the workflow, and click on the latest run. All the logs will be displayed there.
 
-To be honest, we are a little bit lazy, so we didn't implement a complex logic to handle this first run, or even when the count of stars decreases. But you can always improve the workflow to suit your needs! This is just a starting point.
+To be honest, we're a little bit lazy, so we didn't implement a complex logic to handle this first run, or even when the count of stars decreases. But you can always improve the workflow to suit your needs! This is just a starting point.
 
 ---
 
-**Automation is really cool!** You could do the same thing for your followers in your GitHub profile, send notifications by email, Slack, etc. But automation is not limited to just notifications. You can also automate tasks like deploying your code, running tests, and much more.
+**Automation is really cool!** You could do the same thing for your followers in your GitHub profile, send notifications by email, Slack, etc. But automation isn't limited to just notifications. You can also automate tasks like deploying your code, running tests, and much more.
 
-**The possibilities are endless!**
-
-A few words before we finish:
-
-- **Want to spam us with stars?** You can add some stars to https://github.com/Open-reSource/openresource.dev. We will be happy to get some notifications on our mobile phones!
+- **Want to spam us with stars?** You can add some stars to https://github.com/Open-reSource/openresource.dev. We'd be happy to get some notifications on our mobile phones!
 - Please let us know if you'd like to see more automation tutorials like this one!
-- We haven't created a reusable workflow, shared it in the Marketplace, nor created a GitHub Gist. We thought it was easier just to share a little bit of code in this article that you could start from and adapt. If you want it to be stored somewhere with a more formal MIT license, please let us know! But please feel free to use it as you wish.
-
-**Happy coding! 🎉**
+- We haven't created a reusable workflow, shared it in the Marketplace, nor created a GitHub Gist. We thought it was easier just to share a little bit of code in this article that you could start from and adapt. If you want it to be stored somewhere with a more formal MIT license, please let us know! Use it as you wish.
 
 <Related />
