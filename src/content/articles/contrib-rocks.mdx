@@ -25,15 +25,15 @@ import RelatedChapter from '../../components/RelatedChapter.astro';
 <RelatedChapter />
 
 {/* prettier-ignore */}
-<p class="lead">[contrib.rocks](https://contrib.rocks/) is a an online tool that generates an image of the top contributors of a GitHub repository that can be embedded in any website or Markdown file; including its README file.</p>
+<p class="lead">[contrib.rocks](https://contrib.rocks/) is an online tool that generates an image of the top contributors of a GitHub repository. You can embed it in any website or Markdown file, including your README file.</p>
 
-It is completely free and maintained by Suguru Inatomi, a.k.a. [lacolaco](https://github.com/lacolaco). The source code is available on GitHub:
+It's completely free and maintained by Suguru Inatomi, a.k.a. [lacolaco](https://github.com/lacolaco). The source code is available on GitHub:
 
 <ShowcaseGitHubRepo env="lacolaco" repo="contributors-img" img="1529180" />
 
-This service allows to give a visual representation of the top contributors of any GitHub repository.
+This service gives a visual representation of the top contributors of any GitHub repository.
 
-Generating such an image of your GitHub repository top contributors can be a great way to show the activity of your GitHub repository and encourage people to contribute, but also to celebrate your top contributors.
+Generating such an image of your GitHub repository top contributors is a great way to show the activity of your GitHub repository, encourage people to contribute and celebrate your top contributors.
 
 ## How to Use
 
@@ -42,7 +42,7 @@ Usage is pretty straightforward:
 1. Go to https://contrib.rocks/
 2. Enter a GitHub repository (e.g., `open-reSource/openresource.dev`)
 
-And that's it! You will get the image representing the top contributors of the GitHub repository you entered.
+And that's it! You'll get the image representing the top contributors of the GitHub repository you entered.
 
 Then, you can click on the "Get Image URL!" button to get the Markdown code to embed the image in your README file for instance.
 
@@ -54,11 +54,11 @@ Then, you can click on the "Get Image URL!" button to get the Markdown code to e
 Made with [contrib.rocks](https://contrib.rocks).
 ```
 
-You will notice that the first part of the generated Markdown code is in reality HTML code. You can use this HTML code to embed the image in any website or Markdown file.
+The first part of the generated Markdown code is actually HTML. You can use it to embed the image in any website or Markdown file.
 
 ## Rendering
 
-Here is what it looks like for our [openresource.dev GitHub repository](https://github.com/Open-reSource/openresource.dev):
+Here's what it looks like for our [openresource.dev GitHub repository](https://github.com/Open-reSource/openresource.dev):
 
 ---
 
@@ -95,7 +95,7 @@ Some parameters can be added to the URL to customize the image:
 - `columns={number}`: Max columns (12 by default)
 - `anon={0|1}`: Include anonymous users (false by default)
 
-So if we add `&max=10&columns=2` to the image URL `https://contrib.rocks/image?repo=godotengine/godot` we get the following image with only the top 10 contributors and 2 columns:
+Add `&max=10&columns=2` to the image URL `https://contrib.rocks/image?repo=godotengine/godot` and you get the following image with only the top 10 contributors and 2 columns:
 
 ```md
 <a href="https://github.com/godotengine/godot/graphs/contributors">
