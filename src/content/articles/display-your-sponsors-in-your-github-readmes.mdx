@@ -23,9 +23,9 @@ import RelatedChapter from '../../components/RelatedChapter.astro';
 <RelatedChapter />
 
 {/* prettier-ignore */}
-<p class="lead">A simple nice way to reward your sponsors could be to showcase them in the projects you create on GitHub. And what a better place to do that than in your READMEs? This article will show you how to do that easily!</p>
+<p class="lead">A nice way to reward your sponsors is to show them in your GitHub projects, and your READMEs are the obvious place. This article shows you how.</p>
 
-There are several ways to display your sponsors in your GitHub READMEs, but this article will focus on a single one by using [SponsorKit](https://github.com/antfu/sponsorkit) created by [Anthony Fu](https://github.com/antfu).
+There are several ways to display your sponsors in your GitHub READMEs. This article uses [SponsorKit](https://github.com/antfu/sponsorkit) created by [Anthony Fu](https://github.com/antfu).
 
 <ShowcaseGitHubRepo
 	env="antfu"
@@ -38,19 +38,19 @@ There are several ways to display your sponsors in your GitHub READMEs, but this
 
 Here's how Anthony uses it himself in [antfu/unplugin-auto-import README](https://github.com/antfu/unplugin-auto-import#sponsors).
 
-Let's do our own sponsors image showcasing our GitHub sponsors!
+Let's build our own sponsors image with our GitHub sponsors!
 
 ## Prerequisites
 
-Before starting, you will need to have a GitHub account and have at least one sponsor.
+Before you start, you'll need a GitHub account and at least one sponsor.
 
-Then, you will need to create a new GitHub personal access token (classic) with the `read:org`, and `read:user` scopes that you can name whatever you want, and keep its value somewhere for the next steps of this tutorial.
+You'll also need a new GitHub personal access token (classic) with the `read:org` and `read:user` scopes. Name it whatever you want, and keep its value somewhere for the next steps.
 
 You can find more information about how to create a GitHub token in the [GitHub documentation](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ## Create Your Repository
 
-In order to facilitate the process, we have created for you a template repository that you can use to create your own repository: https://github.com/Open-reSource/sponsorkit-starter.
+To help you, we've created a template repository you can use to create your own: https://github.com/Open-reSource/sponsorkit-starter.
 
 <ShowcaseGitHubRepo
 	env="Open-reSource"
@@ -63,13 +63,13 @@ In order to facilitate the process, we have created for you a template repositor
 
 You can click on the "Use this template" button to create your own repository.
 
-Then, you will need to fill the form with the name of your repository, a description, and choose if you want to make it public or private. Click on the "Create repository from template" button to create your repository.
+Then fill in the form with the name of your repository, a description, and choose if you want to make it public or private. Click on the "Create repository from template" button to create your repository.
 
-It will launch a GitHub Action that will fail, but don't worry, we will fix that in the next steps.
+It will launch a GitHub Action that will fail, but don't worry, we'll fix that in the next steps.
 
 ### From a New Repository
 
-It is also possible to create your repository from scratch, clone it locally, and then running the following command:
+You can also create your repository from scratch, clone it locally, and then run the following command:
 
 ```sh
 npx degit Open-reSource/sponsorkit-starter
@@ -87,9 +87,9 @@ Your new repository is now created, and should contain the following files:
 
 ### Change Default Permissions of GITHUB_TOKEN
 
-First important thing to do is to change the default permissions of the `GITHUB_TOKEN` that is used by the GitHub Action to commit and push the generated sponsors images.
+First, change the default permissions of the `GITHUB_TOKEN` that is used by the GitHub Action to commit and push the generated sponsors images.
 
-It can be changed by going to your repository settings, then to the "Actions" section, and choose "Read and write permissions" for the "Workflow permissions" option.
+Go to your repository settings, then to the "Actions" section, and choose "Read and write permissions" for the "Workflow permissions" option.
 
 You can find more information about this configuration in the [GitHub documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#configuring-the-default-github_token-permissions).
 
@@ -97,13 +97,13 @@ You can find more information about this configuration in the [GitHub documentat
 
 By looking at `.github/workflows/scheduler.yml`, we can see that it relies on a `${{ secrets.SPONSORS_TOKEN }}` environment variable.
 
-We will need to set it up in the GitHub repository settings with "SPONSORS_TOKEN" as a name, and with the value of the GitHub personal access token that we have created in the prerequisites.
+We'll need to set it up in the GitHub repository settings with "SPONSORS_TOKEN" as a name, and with the value of the GitHub personal access token that we created in the prerequisites.
 
 You can find more information about how to create a new repository secret in the [GitHub documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#creating-secrets-for-a-repository).
 
 ### Configure the GitHub Action
 
-Either after having cloned your repository locally, or directly on GitHub, you will need to edit the `.github/workflows/scheduler.yml` to indicate your GitHub username as a value for "SPONSORKIT_GITHUB_LOGIN".
+Either after having cloned your repository locally, or directly on GitHub, you'll need to edit the `.github/workflows/scheduler.yml` to indicate your GitHub username as a value for "SPONSORKIT_GITHUB_LOGIN".
 
 Commit and push your changes.
 
@@ -118,9 +118,9 @@ For example, you can see the generated sponsors images of the [julien-deramond/s
 <details>
 <summary>More information</summary>
 
-It might be useful to know, even if rarely useful, it is also possible to run it locally.
+You can also run it locally, though you rarely need to.
 
-You will need to install the dependencies by running `npm i` in your terminal.
+You'll need to install the dependencies by running `npm i` in your terminal.
 
 Then, copy `.env.example` to `.env` still at the root level of your repository with the following content:
 
@@ -174,7 +174,7 @@ SponsorKit v0.8.3
 
 All the images are now generated at the root level of your repository. You can check them out in your file explorer.
 
-**Warning**: Once it's done, please don't forget to remove at some point your GitHub token from the `.env` file for security reasons. You won't probably never re-run it from your local machine.
+**Warning**: Once it's done, please don't forget to remove at some point your GitHub token from the `.env` file for security reasons. You probably won't re-run it from your local machine.
 
 </details>
 
