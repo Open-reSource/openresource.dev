@@ -26,12 +26,12 @@ import RelatedChapter from '../../components/RelatedChapter.astro';
 <RelatedChapter />
 
 {/* prettier-ignore */}
-<p class="lead">The Cyber Resilience Act (CRA) is the EU law that makes companies responsible for the security of the software they sell, including the open-source parts. If you maintain a project for free, it almost certainly does not apply to you. If a company ships your project in a product, it applies to them, and they will start asking you questions. Here's what the law says, in the order you'll be asked.</p>
+<p class="lead">The Cyber Resilience Act (CRA) is the EU law that makes companies responsible for the security of the software they sell, including the open-source parts. If you maintain a project for free, it almost certainly doesn't apply to you. If a company ships your project in a product, it applies to them, and they'll start asking you questions.</p>
 
-Two texts answer almost everything: [the regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) itself, Regulation (EU) 2024/2847, and the [Commission's guidance](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation) of July 27, 2026, whose third chapter is about open source, with 22 worked examples. The guidance is an 84-page PDF; the links below point to the [copy kept by the Eclipse Foundation's ORC working group](https://cra.orcwg.org/official-guidance/), which has an anchor on every paragraph and example. The guide's chapter on [security for maintainers](/guide/maintaining/security-for-maintainers/#the-eu-cyber-resilience-act-briefly) has the three-bullet version.
+Two texts answer almost everything: [the regulation](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) itself, Regulation (EU) 2024/2847, and the [Commission's guidance](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation) of July 27, 2026, whose third chapter is about open source, with 22 worked examples. The guidance is an 84-page PDF. The links below point to the [copy kept by the Eclipse Foundation's ORC working group](https://cra.orcwg.org/official-guidance/), which has an anchor on every paragraph and example. The guide's chapter on [security for maintainers](/guide/maintaining/security-for-maintainers/#the-eu-cyber-resilience-act-briefly) has the three-bullet version.
 
 > [!WARNING]
-> **This article explains the text; it doesn't replace someone who can read your situation.** If you sell anything around your project—a paid edition, binaries, support bundled with access—ask a lawyer before December 2027. If your project belongs to a foundation, ask the foundation: it's the steward, and the CRA is its question first. For everything else, the [OpenSSF brief guide](https://best.openssf.org/CRA-Brief-Guide-for-OSS-Developers.html) and the [ORC working group's CRA FAQ](https://cra.orcwg.org/) answer the common cases and link the official texts.
+> **This article explains the text; it doesn't replace someone who can read your situation.** If you sell anything around your project (a paid edition, binaries, support bundled with access), ask a lawyer before December 2027. If your project belongs to a foundation, ask the foundation: it's the steward, and the CRA is its question first. For everything else, the [OpenSSF brief guide](https://best.openssf.org/CRA-Brief-Guide-for-OSS-Developers.html) and the [ORC working group's CRA FAQ](https://cra.orcwg.org/) answer the common cases and link the official texts.
 
 ## Three questions decide whether it applies to you
 
@@ -166,11 +166,15 @@ Open core splits in two: the paid version is placed on the market, the free comm
 	]}
 />
 
-The reporting deadlines are short: an early warning within 24 hours of becoming aware of an actively exploited vulnerability, a notification within 72 hours, and a final report within 14 days of a fix being available ([Article 14](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_14)). Stewards report only from December 11, 2027 (the Commission's [reporting page](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting)), and so does the rule that matters most to you as a maintainer, the duty to report upstream, which is part of [Article 13](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_13).
+The reporting deadlines are short. Manufacturers send an early warning within 24 hours of becoming aware of an actively exploited vulnerability, a notification within 72 hours, and a final report within 14 days of a fix being available ([Article 14](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_14)).
+
+Stewards report only from December 11, 2027 (the Commission's [reporting page](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting)). So does the rule that matters most to you as a maintainer, the duty to report upstream, which is part of [Article 13](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_13).
 
 ## Stewards owe a policy, not a CE mark
 
-A steward's obligations fit in [Article 24](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_24): a documented cybersecurity policy that fosters secure development and vulnerability handling, cooperation with market surveillance authorities when they ask, and reporting only as far as the steward is involved. A foundation that only handles branding and donations isn't required to report anything; one that runs the forge or the signing keys reports incidents on that infrastructure; one that employs the developers reports actively exploited vulnerabilities too ([paras 79 to 82](https://cra.orcwg.org/official-guidance/#pnt_79)).
+A steward's obligations fit in [Article 24](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_24): a documented cybersecurity policy that promotes secure development and vulnerability handling, cooperation with market surveillance authorities when they ask, and reporting only as far as the steward is involved.
+
+A foundation that only handles branding and donations isn't required to report anything. One that runs the forge or the signing keys reports incidents on that infrastructure. One that employs the developers reports actively exploited vulnerabilities too ([paras 79 to 82](https://cra.orcwg.org/official-guidance/#pnt_79)).
 
 Stewards can't put a CE marking on the software ([recital 19](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#rct_19)), and **they can't be fined under the CRA** ([Article 64(10)](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng#art_64)). Being a steward is per project: a foundation can be the steward of some of the projects it hosts and nothing for others ([para 78](https://cra.orcwg.org/official-guidance/#pnt_78)). If your project is joining one, the guide's chapter on governance covers [when a foundation makes sense](/guide/maintaining/governance/#join-a-foundation-when-others-depend-on-you); ask the foundation how it handles the CRA before you join.
 
@@ -192,7 +196,7 @@ The guide's chapter on [vulnerabilities in what you ship](/guide/at-work/vulnera
 
 **None of this obliges you to do anything.** A maintainer whose project isn't placed on the market bears no obligations toward the companies that integrate it ([para 87](https://cra.orcwg.org/official-guidance/#pnt_87)). What changes is your inbox.
 
-**Vulnerability reports.** The guidance asks manufacturers to report through your security policy or reporting channel when you have one, to skip reports when they can confirm you already know, and to check public databases and your advisories first ([para 223](https://cra.orcwg.org/official-guidance/#pnt_223)). A `SECURITY.md` with a private channel decides where those reports land and how they're written. The security chapter has [a template and the four settings](/guide/maintaining/security-for-maintainers/#before-the-first-report-one-file-and-four-settings) that go with it.
+**Vulnerability reports.** The guidance asks manufacturers to report through your security policy or reporting channel when you have one. It also asks them to skip reports when they can confirm you already know, and to check public databases and your advisories first ([para 223](https://cra.orcwg.org/official-guidance/#pnt_223)). A `SECURITY.md` with a private channel decides where those reports land and how they're written. The security chapter has [a template and the four settings](/guide/maintaining/security-for-maintainers/#before-the-first-report-one-file-and-four-settings) that go with it.
 
 **Patches.** A shared fix should come under a license compatible with yours, and follow your guidelines for sharing fixes if you have some ([para 227](https://cra.orcwg.org/official-guidance/#pnt_227)). The manufacturer doesn't have to get it merged ([para 228](https://cra.orcwg.org/official-guidance/#pnt_228)), and you don't have to merge it.
 
@@ -206,7 +210,7 @@ When a request goes beyond that, the answer can be "no", or "yes, under a suppor
 
 As of October 2026:
 
-- **Sovereign Tech Resilience**, the German Sovereign Tech Agency's program, [relaunched on September 28, 2026](https://www.sovereign.tech/news/resilience-relaunch) with a CRA compliance service for critical open-source projects: an assessment against the regulation and help closing the gaps, delivered by EY Consulting at no cost to the project. Applications are reviewed on a rolling basis.
+- **Sovereign Tech Resilience**, the German Sovereign Tech Agency's program, [relaunched on September 28, 2026](https://www.sovereign.tech/news/resilience-relaunch) with a CRA compliance service for critical open-source projects. It offers an assessment against the regulation and help closing the gaps, delivered by EY Consulting at no cost to the project. Applications are reviewed on a rolling basis.
 - **The security funds** the guide already lists, from Alpha-Omega to the GitHub Secure Open Source Fund: see [You don't have to do it alone](/guide/maintaining/security-for-maintainers/#you-dont-have-to-do-it-alone).
 - **The manufacturers themselves.** They now have a legal reason to care about your release process, and a support contract is a way for them to pay for it.
 
