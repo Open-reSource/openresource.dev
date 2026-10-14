@@ -1,11 +1,11 @@
 ---
 title: 'Running a Local AI Inside Obsidian with Ollama'
-description: 'Learn to set up Ollama with Obsidian for a completely local AI writing assistant. Step-by-step guide to private, offline AI that works with your notes without sending data to the cloud.'
+description: 'Set up Ollama with Obsidian for a local AI writing assistant that works with your notes offline, without sending data to the cloud.'
 date: 2026-02-01
 lastUpdated: 2026-10-03
 related:
   - guide/ai/index
-excerpt: "**What if your Obsidian notes could think with you, without sending a single word to the cloud?** This article shows you how to build a fully local AI setup inside Obsidian using Ollama and the open Gemma 4 model. You'll learn why local AI makes sense for knowledge work, how to install and test Ollama from the command line, and how to connect it to Obsidian using community plugins for a seamless writing experience.<br><br>By the end of this tutorial, you'll have a private AI assistant that can rewrite text, summarize notes, brainstorm ideas, and help draft content all while keeping full control over your data. This setup combines Obsidian's local-first philosophy with Ollama's open source AI capabilities to create a knowledge workspace that's private, hackable, and built to last, proving that powerful tools don't have to come at the cost of control."
+excerpt: "**What if your Obsidian notes could think with you, without sending a single word to the cloud?** This article shows you how to build a fully local AI setup inside Obsidian using Ollama and the open Gemma 4 model. You'll see why local AI makes sense for knowledge work, how to install and test Ollama from the command line, and how to connect it to Obsidian with community plugins.<br><br>You'll end up with a private AI assistant that can rewrite text, summarize notes, brainstorm ideas, and help draft content, while you keep full control over your data. The setup combines Obsidian's local-first philosophy with Ollama's open source AI to give you a knowledge workspace that's private, hackable, and built to last."
 authors: julien
 cover: /covers/running-a-local-ai-inside-obsidian-with-ollama.svg
 tags:
@@ -29,24 +29,24 @@ import RelatedChapter from '../../components/RelatedChapter.astro';
 <RelatedChapter />
 
 {/* prettier-ignore */}
-<p class="lead">**What if your notes could think with you, without sending a single word to the cloud?** In this article, we'll build a fully local AI setup inside Obsidian using Ollama and the open Gemma 4 model. You'll learn why local AI makes sense for knowledge work, how to install and test Ollama from the command line, how to connect it to Obsidian using community plugins, and how to use it for practical, everyday note-taking workflows, all while keeping full control over your data.</p>
+<p class="lead">**What if your notes could think with you, without sending a single word to the cloud?** We'll build a fully local AI setup inside Obsidian using Ollama and the open Gemma 4 model. You'll install and test Ollama from the command line, connect it to Obsidian with community plugins, and use it for everyday note-taking, while keeping full control over your data.</p>
 
 ---
 
 ## Why Local AI in a Notes App?
 
-Before jumping into installation, it's worth clarifying what is and isn't open source in this setup, and why it still aligns strongly with open source values.
+First, what is and isn't open source in this setup, and why it still fits open source values.
 
-**[Obsidian](https://obsidian.md/) is an application that allows users to create and manage notes using plain text Markdown files stored locally on their devices.**
+**[Obsidian](https://obsidian.md/) is an application that lets you create and manage notes as plain text Markdown files stored locally on your devices.**
 
-**Obsidian is not open source itself, but supports open source community plugins, and is local-first**:
+**Obsidian isn't open source itself, but it supports open source community plugins, and it's local-first**:
 
 - Notes are plain Markdown files
 - Stored on your own filesystem
 - No mandatory account or cloud dependency
 - Easy to migrate, back up, or process with other tools
 
-This dramatically reduces vendor lock-in. Even without Obsidian, your knowledge remains usable.
+That reduces vendor lock-in. Even without Obsidian, your knowledge remains usable.
 
 **[Ollama](https://ollama.com/) is an open source tool that lets you run AI models locally on your machine:**
 
@@ -55,7 +55,7 @@ This dramatically reduces vendor lock-in. Even without Obsidian, your knowledge 
 - Requires no internet once models are installed
 - Never sends your data elsewhere
 
-Together, Obsidian and Ollama create a powerful combination that aligns with open source values: local notes, local AI for privacy, and knowledge work that you actually control.
+Together, Obsidian and Ollama make a combination that fits open source values: local notes, local AI for privacy, and knowledge work you control.
 
 ---
 
@@ -70,7 +70,7 @@ By the end of this article, you'll have:
 
 Everything described below has been tested using Gemma 4 with Ollama.
 
-Let's consider that Obsidian is already installed on your machine. If you haven't done so yet, you can download it from [obsidian.md](https://obsidian.md/).
+This guide assumes Obsidian is already installed. If it isn't, download it from [obsidian.md](https://obsidian.md/).
 
 ---
 
@@ -229,9 +229,7 @@ To quickly access Local GPT features, set up hot keys in Obsidian.
 
 ## Step 4: Test Local GPT Inside Obsidian
 
-Now that everything is set up, it's time to test Local GPT inside Obsidian.
-
-Two hot keys are set up: one for the action palette and one for the context menu.
+Everything is set up, so let's test Local GPT inside Obsidian. You have two hot keys: one for the action palette and one for the context menu.
 
 ### Using the Context Menu
 
@@ -256,11 +254,11 @@ The context menu is a quick way to apply AI actions to selected text.
    	height="320"
    />
 
-   Please note that you can create your own custom prompts as well.
+   You can create your own custom prompts as well.
 
 </Steps>
 
-Let's say I've written this article in Obsidian first and wanted to summarize it. I would select the text and use the context menu to choose "Summarize".
+Say I wrote this article in Obsidian first and wanted a summary. I'd select the text and choose "Summarize" in the context menu.
 
 <ContentImage
 	src="/images/running-a-local-ai-inside-obsidian-with-ollama-7.png"
@@ -269,7 +267,7 @@ Let's say I've written this article in Obsidian first and wanted to summarize it
 	height="320"
 />
 
-Gemma 4 would then generate a concise summary of the selected content directly at the end of my note (this can be configured).
+Gemma 4 then writes a concise summary of the selection at the end of my note (this can be configured).
 
 <ContentImage
 	src="/images/running-a-local-ai-inside-obsidian-with-ollama-8.png"
@@ -280,7 +278,7 @@ Gemma 4 would then generate a concise summary of the selected content directly a
 
 ### Using the Action Palette
 
-The action palette allows you to type custom prompts and interact with Local GPT more freely.
+The action palette lets you type custom prompts and interact with Local GPT more freely.
 
 <Steps>
 
@@ -289,7 +287,7 @@ The action palette allows you to type custom prompts and interact with Local GPT
 
 </Steps>
 
-Let's say I want to analyze an image to describe its content. I would select the image in my note, open the action palette, and type: "Describe this image!"
+Say I want to describe an image. I'd select it in my note, open the action palette, and type: "Describe this image!"
 
 <ContentImage
 	src="/images/running-a-local-ai-inside-obsidian-with-ollama-9.png"
@@ -298,7 +296,7 @@ Let's say I want to analyze an image to describe its content. I would select the
 	height="320"
 />
 
-The model would then generate a description of the image directly in my note.
+The model then writes a description of the image in my note.
 
 <ContentImage
 	src="/images/running-a-local-ai-inside-obsidian-with-ollama-10.png"
@@ -311,9 +309,9 @@ The model would then generate a description of the image directly in my note.
 
 ## Everyday Use Cases That Actually Feel Useful
 
-**I just scratched the surface of what you can do with this setup, and honestly, it's pretty useful for specific tasks.** Gemma 4 works well for close-to-the-text stuff: cleaning up messy first drafts, turning rambling meeting notes into actual bullet points, or getting a quick summary when I don't want to reread a long note.
+**I've only scratched the surface of this setup, but it's useful for specific tasks.** Gemma 4 works well for close-to-the-text stuff: cleaning up messy first drafts, turning rambling meeting notes into actual bullet points, or getting a quick summary when I don't want to reread a long note.
 
-Response times are decent for most tasks. Not instant, but fast enough to keep you in the flow.
+Response times are decent for most tasks. It isn't instant, but it's fast enough to keep you in the flow.
 
 Where I use it most is rewriting awkward sentences, expanding bullet points when I need more detail, or brainstorming different ways to phrase something. It's also surprisingly good at catching unclear writing that I might miss.
 
@@ -321,7 +319,7 @@ Where I use it most is rewriting awkward sentences, expanding bullet points when
 
 The key thing I've learned is that **it works best as an editing partner for stuff you've already written, rather than generating ideas from scratch.**
 
-Maybe a more powerful setup could mix local and cloud models, using local for sensitive stuff and cloud for heavy lifting when needed. But for now, this local-first approach feels like a solid step toward more private, controllable AI in my writing workflow.
+Maybe a stronger setup could mix local and cloud models, using local for sensitive stuff and cloud for heavy lifting when needed. But for now, this local-first approach feels like a solid step toward more private, controllable AI in my writing workflow.
 
 ---
 
@@ -340,11 +338,11 @@ But in exchange, you get:
 - Full control over models and prompts
 - No vendor dependency or platform lock-in
 
-For personal knowledge management and everyday writing, that trade-off is often not just acceptable, but desirable.
+For personal knowledge management and everyday writing, that trade-off is often desirable.
 
 ---
 
-If you try out this setup, let me know how it goes! Share your experiences, tips, or custom workflows in our social platforms.
+If you try this setup, share your experience, tips, or custom workflows on our social platforms.
 
 Happy note-taking!
 
