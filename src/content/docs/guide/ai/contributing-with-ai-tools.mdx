@@ -42,7 +42,7 @@ Before the first line of code, look for the project's AI rules: a section of the
 
 Then open the pull request template: an "AI tools" section there is the rule too. The policies differ on disclosure, and [the chapter for maintainers](/guide/ai/contribution-policy/#three-postures-one-rule-they-all-share) compares them. If you find nothing, disclose anyway: it costs one line.
 
-**Read the rules yourself.** In February 2026, a Ghostty contributor [explained](https://github.com/ghostty-org/ghostty/pull/10818) that they had asked their tool to make the commit follow the contributing guide. The tool added a `Co-Authored-By:` trailer and stopped there; the policy also asks how much of the work the tool did. A maintainer answered that the guides "are for _you_ to read, not for your AI agent to read."
+**Read the rules yourself.** In February 2026, a Ghostty contributor [explained](https://github.com/ghostty-org/ghostty/pull/10818) that they had asked their tool to make the commit follow the contributing guide. The tool added a `Co-Authored-By:` trailer and stopped there. The policy also asks how much of the work the tool did. A maintainer answered that the guides "are for _you_ to read, not for your AI agent to read."
 
 ## Five checks before you push
 
@@ -88,9 +88,9 @@ The uses that don't annoy anyone are the ones where the tool works for you and y
 
 ## Reproduce every report before you send it
 
-A generated report looks real, which is the problem. On January 2, 2024, curl's Daniel Stenberg [published two](https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/). The first claimed that the fix for a curl vulnerability had leaked before its release; its author said they had used Bard, and the report mixed details from old security issues into one that never happened. The second described a buffer overflow in curl's WebSocket code, in good English, with a proposed fix; there was no overflow. When a report is made to look better, Daniel wrote, "it takes a longer time for us to research and eventually discard it."
+A generated report looks real, which is the problem. On January 2, 2024, curl's Daniel Stenberg [published two](https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/). The first claimed that the fix for a curl vulnerability had leaked before its release. Its author said they had used Bard, and the report mixed details from old security issues into one that never happened. The second described a buffer overflow in curl's WebSocket code, in good English, with a proposed fix. There was no overflow. When a report is made to look better, Daniel wrote, "it takes a longer time for us to research and eventually discard it."
 
-curl's [contributing guide](https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md#on-ai-use-in-curl) now says it plainly: if a tool found the problem, you must say so in the report, and "We ban users immediately who submit made up fake reports to the project." So reproduce it on the latest release, put the steps in the report, and say what you couldn't test. [How to Write a Bug Report That Gets Fixed](/guide/contributing/writing-a-bug-report/) covers the rest.
+curl's [contributing guide](https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md#on-ai-use-in-curl) now says it plainly. If a tool found the problem, you must say so in the report. And "We ban users immediately who submit made up fake reports to the project." So reproduce it on the latest release, put the steps in the report, and say what you couldn't test. [How to Write a Bug Report That Gets Fixed](/guide/contributing/writing-a-bug-report/) covers the rest.
 
 ## Send one pull request, then wait
 
@@ -104,7 +104,9 @@ Open one pull request, answer its review, get it merged or closed, then open the
 
 ## Asked if you used AI, say yes
 
-On January 2, 2026, Mitchell Hashimoto reviewed a Ghostty pull request that selects a whole URL on double-click, and started with "Was this AI? We require AI be disclosed." The author [answered](https://github.com/ghostty-org/ghostty/pull/10132) the same day: "Yes, I used Opus to help with this and reviewed/tested the code myself." Five days later, Mitchell approved it with a commit of his own, and it was merged.
+On January 2, 2026, Mitchell Hashimoto reviewed a Ghostty pull request that selects a whole URL on double-click, and started with "Was this AI? We require AI be disclosed."
+
+The author [answered](https://github.com/ghostty-org/ghostty/pull/10132) the same day: "Yes, I used Opus to help with this and reviewed/tested the code myself." Five days later, Mitchell approved it with a commit of his own, and it was merged.
 
 Another pull request was [closed](https://github.com/ghostty-org/ghostty/pull/10574#issuecomment-3850569285) on February 5, 2026, "First, and most importantly," because the author hadn't disclosed. Node.js's [guidelines](https://github.com/nodejs/node/blob/main/doc/contributing/ai-guidelines.md) go further: contributors who are dishonest about using AI may be blocked. The honest answer gets a review; the other one gets you remembered.
 
