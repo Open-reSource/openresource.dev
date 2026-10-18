@@ -1,0 +1,156 @@
+---
+title: 'AI Slop Is Flooding Open Source. How Six Projects Answered, and How to Choose Your Own'
+description: 'What AI slop did to curl from 2024 to 2026, how five other projects answered the same flood, and what to weigh before you write a policy for yours.'
+date: 2026-10-18
+lastUpdated: 2026-10-18
+related:
+  - guide/ai/contribution-policy
+  - guide/ai/contributing-with-ai-tools
+  - guide/maintaining/reviewing-pull-requests
+  - articles/hacktoberfest
+excerpt: "**On May 6, 2025, curl started banning anyone who sent it an AI-generated security report that wasted the team's time.** By April 2026, almost every report curl received used AI. More of them were real, there were twice as many, and in July the team stopped taking reports for a month. Godot, Ghostty, the Linux kernel, Debian and Jazzband each answered the same flood in a different way.
+<br><br>
+**Each answer fits the project that chose it.** We follow curl's inbox from 2024 to 2026, show what each of the six projects had to protect when it decided, and set out what to weigh, which posture suits which kind of project, and what each one costs."
+authors: julien
+cover: /covers/ai-slop-contribution-policy.svg
+tags:
+  - AI
+  - Community
+  - Contribution
+---
+
+import ContentImage from '../../components/ContentImage.astro';
+import Related from '../../components/Related.astro';
+import RelatedChapter from '../../components/RelatedChapter.astro';
+import Timeline from '../../components/Timeline.astro';
+
+<RelatedChapter />
+
+{/* prettier-ignore */}
+<p class="lead">On May 6, 2025, Daniel Stenberg started banning anyone who sent curl a security report his team judged to be AI slop. By April 2026 almost every report curl received used AI, more of them were real, there were twice as many, and the team still had to close the door for a month. Godot, Ghostty, the Linux kernel, Debian and Jazzband answered the same flood in five other ways, because each had a different problem to solve, and your own policy should start from yours.</p>
+
+## Better reports didn't fix curl's problem
+
+curl is the project to watch because its lead developer publishes what lands in its security inbox, with numbers, as it happens. His posts start with bad reports, and the trouble doesn't end when the reports get good.
+
+<Timeline
+	label="AI and curl's security reports, 2024 to 2026"
+	entries={[
+		{
+			year: 'Jan 2024',
+			title: "Daniel Stenberg's first post on AI-written reports",
+			detail: 'Invented vulnerabilities, written with confidence',
+		},
+		{ year: 'May 2025', title: 'Instant ban for AI slop reporters', detail: 'And a question about AI use on the form' },
+		{
+			year: 'Jul 2025',
+			title: 'About 20% of reports are slop, about 5% valid',
+			detail: 'Three or four of the seven team members on each one',
+		},
+		{ year: 'Jan 2026', title: 'The bug bounty ends', detail: 'Back on HackerOne in March, without money' },
+		{
+			year: 'Apr 2026',
+			title: 'Twice the volume, 15–16% confirmed',
+			detail: 'Almost every report uses AI',
+			accent: true,
+		},
+		{ year: 'Jul 2026', title: 'No security reports for a month', detail: 'The "summer of bliss"' },
+	]}
+/>
+
+On [January 2, 2024](https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/), Daniel Stenberg showed the first reports he believed a language model had written. One claimed a buffer overflow in curl's WebSocket code, on a line that checks the length right before the copy. He asked the reporter to explain, and the replies came back longer, more polite, and addressed to someone from another bug bounty program.
+
+<ContentImage
+	src="/images/ai-slop-contribution-policy-1.png"
+	alt="curl's HackerOne report 2298307: Daniel Stenberg calls it a waste of his time, the reporter replies with a long polite essay."
+	width="720"
+	height="258"
+/>
+
+On [May 6, 2025](https://simonwillison.net/2025/May/6/daniel-stenberg/), curl announced it would ban every reporter whose report it judged to be AI slop. It also added "Did you use an AI to find the problem or generate this submission?" to its HackerOne form. On [July 14, 2025](https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/), about 20% of the year's reports were slop and about 5% were valid. curl ended its bug bounty on [January 31, 2026](https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/), and Daniel wrote that "the idea of getting money for it is a big part of the explanation" for the bad reports. It went [back to HackerOne without a bounty](https://daniel.haxx.se/blog/2026/02/25/curl-security-moves-again/) on March 1.
+
+Then the reports changed. On [April 22, 2026](https://daniel.haxx.se/blog/2026/04/22/high-quality-chaos/), Daniel counted about twice 2025's rate, 15–16% confirmed, and "almost every security report now uses AI to various degrees". The tools had become useful, and the reports with them. On [June 15](https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/), after "a huge pressure for the last four months or so", curl announced it wouldn't handle any vulnerability report from July 1 to August 3, 2026. Its [verdict on August 3](https://daniel.haxx.se/blog/2026/08/03/what-the-bliss-taught-us/): "possibly our best project decision in a long while".
+
+**curl's problem was volume as much as quality, and the volume landed on a security inbox that a few people read by hand.** A tool that writes a good report also writes ten of them in the time a maintainer reads one. curl's pull requests worried it much less, because it doesn't spend "any human time on pull requests" until they pass its 200 CI jobs. Its rules follow from that: AI is allowed in code, as long as the author answers for it, and the strict rules are for reports.
+
+## Each project answered the problem it had
+
+Pull requests followed the same path as curl's reports, and projects answered in public. These six cover every answer we've seen, from closing the door to closing the project, and each one starts from a different constraint.
+
+| Project                                                                                                   | What they decided                                                                                           | When                                                                           | What it had to protect                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [curl](https://github.com/curl/curl/blob/master/docs/CONTRIBUTE.md#on-ai-use-in-curl)                     | Allow, with responsibility; disclose AI use in reports; ban slop reporters; a month without reports         | May 2025; July 2026                                                            | A security inbox read by hand, and a bounty that paid for reports until January 2026                                                     |
+| [Godot](https://godotengine.org/article/contribution-policy-2026/)                                        | Ban: code must be human-authored, no agents, no AI text in discussions, any use disclosed                   | Announced June 30, 2026                                                        | Its reviewers' time, and the newcomers it wants to grow: "the number of qualified reviewers is small"                                    |
+| [Ghostty](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md)                                  | Disclose every use; AI-written pull requests only for accepted issues; a vouch list; maintainers exempt     | August 19, 2025; tightened January 22, 2026                                    | A codebase "written with plenty of AI assistance", against "the number of highly unqualified people using AI"                            |
+| [Linux kernel](https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst) | Disclose with an `Assisted-by:` trailer; only a human signs off                                             | Linux 7.0, April 12, 2026                                                      | The Developer Certificate of Origin on every patch: "Only humans can legally certify" it                                                 |
+| [Debian](https://www.debian.org/vote/2026/vote_002)                                                       | Allow, with responsibility, by a vote of its developers: disclosure encouraged, not required; the bans lost | [August 29, 2026](https://lists.debian.org/debian-devel/2026/08/msg00307.html) | A distribution's standards for everything it ships: "The use of a generative AI tool does not diminish the contributor's responsibility" |
+| [Jazzband](https://jazzband.co/news/2026/03/14/sunsetting-jazzband)                                       | Quit: the organization that gave every member push access is winding down                                   | March 14, 2026                                                                 | Nothing it could keep: "open membership and shared push access", run as "a one-roadie operation"                                         |
+
+Godot's answer is the strictest, and it comes from its reviewers. Its announcement says a large part of the backlog comes from a small number of qualified reviewers who "can't keep up with everything coming in". It also wants new contributors to become future maintainers, and its post notes that language models "can't learn from specific feedback". So it goes beyond AI: someone with three merged pull requests or fewer can't send a new feature or a large refactor without a maintainer's permission. It still allows completion, regex and find-and-replace.
+
+<ContentImage
+	src="/images/ai-slop-contribution-policy-2.webp"
+	alt="Godot's amended policy: no AI agents, human-authored code only, no AI-generated text, a human reviews every pull request."
+	width="720"
+	height="412"
+/>
+
+Ghostty went the other way because its maintainers work with AI. When Mitchell Hashimoto tightened its policy on [January 22, 2026](https://github.com/ghostty-org/ghostty/commit/f00de7ee4b9bbc5a0fb5f4c06755780c773a0f5e), he wrote that "many of our maintainers use AI daily" and that bad contributions had grown "by 10x if not more". The policy asks outside contributors to disclose every use and exempts the maintainers in writing. His summary: "This is not an anti-AI stance. This is an anti-idiot stance."
+
+The Linux kernel already asked for a legal certificate on every patch, the `Signed-off-by:` line. It added disclosure next to it, in the same place, and left the certificate to humans. Debian put the question to a general resolution, and its developers voted for responsibility: both options that would have banned or rejected AI contributions failed their majority. Jazzband had no gate to tighten: anyone who joined could merge, and one person ran the whole organization.
+
+The wider numbers show no single answer either. As of September 2026, a study of 281 AI policies in popular open source projects found that 83.3% permit AI use and 48.8% require disclosure ([Hora, Robbes and Zacchiroli, September 7, 2026](https://arxiv.org/abs/2609.07542)). Our chapter [AI-Assisted Contributions: A Policy You Can Copy](/guide/ai/contribution-policy/) sorts fourteen more projects into the same postures, with the date of each policy.
+
+## Start from your own project, not from someone else's policy
+
+This section and the two after it are our reading of those policies and the threads around them.
+
+**Copying curl's or Godot's policy copies their constraints, and yours are probably different.** Six questions separate the answers above:
+
+| What to weigh                                                          | Why it changes the answer                                                                                | Who it shaped                                                |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Where the flood lands: pull requests, issues or security reports       | CI can check a pull request before a person does; nothing checks a report or an issue but a person       | curl: allow AI in code, strict rules for reports             |
+| How many people review, and how much time they have                    | A big review team can absorb volume; a few reviewers can't, whatever wrote the change                    | Godot, Jazzband                                              |
+| Whether your license or your downstream depends on who wrote each line | A DCO, a copyleft license or a distribution that ships everything raises the stakes of an unknown origin | The Linux kernel; the bans in the chapter, like QEMU's       |
+| Who contributes, and who you want to grow                              | Good first issues and newcomers' features exist to teach; a vouch list fits a known circle               | Godot, Ghostty                                               |
+| How your own maintainers use AI                                        | A rule the maintainers don't follow themselves needs saying out loud, or contributors will find out      | Ghostty                                                      |
+| Whether anything pays for contributions                                | A bounty or a contribution contest rewards volume, and the slop follows the money                        | curl's bug bounty; [Hacktoberfest](/articles/hacktoberfest/) |
+
+A small library with good tests and a few outside pull requests a month doesn't need Godot's rules. A project whose two reviewers get hundreds of pull requests a week can't count on CI alone, the way curl does.
+
+## Every posture costs something
+
+Each posture trades one cost for another. These are the costs we've seen in the projects above and in the chapter's fourteen.
+
+**A ban** fits when a project must know who wrote each line for legal reasons, or when a project would rather spend its review time teaching people than reading tool output, as Godot does. It rests on the contributor's word, since nobody can reliably tell AI output from a human's, and the contributors who lie are the ones it was meant to stop. It also turns away people who use tools well.
+
+**Disclosure** costs a contributor one line and tells reviewers where to look harder. It fits projects that get outside pull requests every week, like Ghostty or the Linux kernel. It's only as good as the honesty of the people who fill it in, and if maintainers are exempt, the policy should say so, as Ghostty's does.
+
+**Allowing AI with responsibility** fits when CI filters most bad changes before a person reads them, as curl's does for pull requests. It also fits a community that decides its quality bar already covers tools, as Debian's developers did. It leaves issues, reports and discussions to the reviewers, because no test suite checks them.
+
+**Gating the door** answers volume rather than tools: a vouch list like Ghostty's, a cap on open pull requests, or closing outside pull requests altogether, as [tldraw](https://github.com/tldraw/tldraw/issues/7695) started doing on January 15, 2026. It works whatever wrote the change, and it makes the project harder to join for everyone, newcomers included.
+
+## Every posture keeps one rule underneath
+
+Whatever the posture, every policy here asks the same thing of the person who sends a contribution. **They answer for it, and they must be able to explain it.** The Linux kernel lists "taking full responsibility for the contribution" among the human's duties. Debian says a tool doesn't diminish that responsibility, Ghostty says "the human-in-the-loop must fully understand all code", and curl puts "the burden" of sending only code it may use on the author, "independent if AI is used or not". It's also the one rule a maintainer can check, by asking.
+
+When you know which posture fits, write it down in your own words. The chapter has [a disclosure policy to adapt](/guide/ai/contribution-policy/#a-policy-you-can-paste), and the projects here and in the chapter publish theirs: Godot's and QEMU's for a ban, Ghostty's and the kernel's for disclosure, curl's and Debian's for responsibility.
+
+## Whatever you choose, enforce it with a question, a limit or a date
+
+A policy is only as kind as the way you apply it. These tools work under any posture, from the lightest:
+
+- **Ask the author to explain the change in their own words.** An author who can gets a normal review. One who can't, or pastes a generated answer, gets closed under the rule, without anyone having to say "AI". The chapter's [Ask for an explanation, not a detector](/guide/ai/contribution-policy/#ask-for-an-explanation-not-a-detector) has the details.
+- **Match the effort.** Seth Larson triages security reports for Python projects, and in [December 2024](https://sethmlarson.dev/slop-security-reports) he advised you to "put the same amount of effort into responding as the reporter put into submitting a sloppy report". A saved reply that asks for a reproduction costs you ten seconds.
+- **Limit the volume.** Since June 17, 2026, GitHub lets you cap how many pull requests each outside contributor has open at once. The chapter lists that setting and the two stricter ones.
+
+When none of that is enough, a closed door with a date on it is a legitimate tool. curl announced its month off two weeks ahead, kept serving its paying customers, and reopened on the day it said it would. Its maintainers used July to review the pull requests that had queued up and to work on code again.
+
+## Go further
+
+- [Godot's contribution policy for 2026](https://godotengine.org/article/contribution-policy-2026/): the strictest answer here, argued from review capacity and mentoring.
+- [Ghostty's AI Usage Policy](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md): disclosure for outsiders, an exemption for maintainers, and why.
+- [What the bliss taught us](https://daniel.haxx.se/blog/2026/08/03/what-the-bliss-taught-us/): what a month without security reports gave curl's team.
+- [AI-Assisted Contributions: A Policy You Can Copy](/guide/ai/contribution-policy/): fourteen policies sorted by posture, GitHub's settings, and a disclosure policy to adapt.
+
+<Related />
