@@ -12,3 +12,8 @@
 - [ ] Tests added or updated
 - [ ] Docs updated
 - [ ] Breaking change (describe the migration above)
+
+## AI tools
+
+- [ ] I didn't use AI tools for this change, or only for line completion.
+- [ ] I used: <!-- tool and what for -->. I reviewed, ran and can explain every line.

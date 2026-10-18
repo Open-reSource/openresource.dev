@@ -30,6 +30,10 @@ We squash-merge, so the pull request title becomes the commit message. Write it 
 
 A maintainer replies within a week. If nothing has happened after that, comment on the pull request once.
 
+## AI tools
+
+You may use AI tools to contribute. Say so in the pull request description when a tool wrote a significant part of your change. You're responsible for what you send: run it, and be ready to explain every line in your own words. The full text this section comes from is in [a policy you can copy](https://openresource.dev/guide/ai/contribution-policy/).
+
 ## Questions
 
 Ask in [Discussions](../../discussions), not in issues.
