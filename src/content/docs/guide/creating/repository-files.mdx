@@ -28,7 +28,7 @@ import Related from '../../../../components/Related.astro';
 
 ## GitHub reads the files and shows them to everyone
 
-**GitHub looks for these files by name, in `.github/`, then at the root, then in `docs/`, and links what it finds.** The About box of [chalk](https://github.com/chalk/chalk), a terminal color library with 42 million dependents on GitHub as of September 2026, lists five of them:
+**GitHub looks for these files by name, in `.github/`, then at the root, then in `docs/`, and links what it finds.** Take [chalk](https://github.com/chalk/chalk), a terminal color library with 42 million dependents on GitHub as of September 2026. Its About box lists five of them:
 
 <ContentImage
 	src="/images/creating-repository-files-1.png"
@@ -55,7 +55,7 @@ The files work on any forge. Where GitLab and Codeberg look for them is [further
 
 ## The README sells the project on one screen
 
-**A visitor decides in one screen whether to keep reading, so that screen says what the project does and how to start.** The first screen of [HTTPX](https://github.com/encode/httpx), an HTTP client for Python, has all of it: a logo, a one-line pitch, two badges, what it supports, the install command and a first request with its output:
+**A visitor decides in one screen whether to keep reading, so that screen says what the project does and how to start.** [HTTPX](https://github.com/encode/httpx), an HTTP client for Python, fits it all on its first screen. There's a logo, a one-line pitch, two badges, what it supports, the install command and a first request with its output:
 
 <ContentImage
 	src="/images/creating-repository-files-2.webp"
@@ -88,13 +88,13 @@ It's the one file the `.github` repository trick, [further down](#one-github-rep
 
 ## A code of conduct names who to write to
 
-**A [code of conduct](/guide/glossary/#code-of-conduct) is only as good as its contact line.** Most projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/), version 3.0 since 2025, and the template leaves a placeholder where the reporting address goes. A GitHub code search for `[INSERT CONTACT METHOD]`, the placeholder of version 2, finds 4,608 files named `CODE_OF_CONDUCT.md`, as of September 28, 2026: rules nobody can enforce, because nobody can report a breach.
+**A [code of conduct](/guide/glossary/#code-of-conduct) is only as good as its contact line.** Most projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/), version 3.0 since 2025, and the template leaves a placeholder where the reporting address goes. A GitHub code search for `[INSERT CONTACT METHOD]`, the placeholder of version 2, finds 4,608 files named `CODE_OF_CONDUCT.md`, as of September 28, 2026. Those rules can't be enforced, because nobody can report a breach.
 
 Use an address more than one person reads, and turn on **Settings** › **Moderation options** › **Reported content**, so contributors can flag a comment to you without leaving GitHub. [How to Create a Code of Conduct](/articles/how-to-create-a-code-of-conduct-for-an-open-source-project) compares the templates.
 
 ## CONTRIBUTING.md is for the reply you'd otherwise retype
 
-**Most people won't read it, and that's fine: it's the link you paste when a pull request skips the rules.** GitHub links it when someone opens an issue or a pull request, and that's as close as it gets to being read first.
+**Most people won't read it, and that's fine. It's the link you paste when a pull request skips the rules.** GitHub links it when someone opens an issue or a pull request, and that's as close as it gets to being read first.
 
 Chalk's `contributing.md` is one sentence pointing to the code of conduct. That's a start. What saves you the most replies:
 
@@ -148,11 +148,11 @@ GitHub Sponsors takes up to four people or one organization; [Open Collective](/
 
 ## A changelog is written for the people upgrading
 
-**A [changelog](/guide/glossary/#changelog) says what changed for the people who use the project, not for the people who wrote it.** A dump of the git log fails that test: "Merge branch 'main'" tells nobody whether their code breaks. [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) is the format most hand-written ones follow, newest version first, with an `Unreleased` section on top:
+**A [changelog](/guide/glossary/#changelog) says what changed for the people who use the project, not for the people who wrote it.** A dump of the git log fails that test: "Merge branch 'main'" tells nobody whether their code breaks. [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) is the format most hand-written ones follow. It puts the newest version first, with an `Unreleased` section on top:
 
 <Template name="CHANGELOG.md" />
 
-If you publish GitHub Releases with generated notes instead, keep a `CHANGELOG.md` anyway, one line long, pointing to the releases page: it's the first place people look.
+If you publish GitHub Releases with generated notes instead, keep a `CHANGELOG.md` anyway, one line long, pointing to the releases page. It's the first place people look.
 
 ## Small config files end the small arguments
 
@@ -170,7 +170,7 @@ If you publish GitHub Releases with generated notes instead, keep a `CHANGELOG.m
 
 ## GitLab and Codeberg read the same files, from their own folders
 
-**README, LICENSE, CONTRIBUTING, SECURITY and CHANGELOG are plain files: they work on every forge as they are.** What changes from one forge to the next is where the templates and `CODEOWNERS` live, and what the forge does with them:
+**README, LICENSE, CONTRIBUTING, SECURITY and CHANGELOG are plain files that work on every forge as they are.** What changes from one forge to the next is where the templates and `CODEOWNERS` live, and what the forge does with them:
 
 | File                  | GitLab                                                         | Codeberg (Forgejo)                                                                                   |
 | :-------------------- | :------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
@@ -183,7 +183,7 @@ Forgejo also reads `.github/`, GitLab doesn't. A project that moves from GitHub 
 
 ## One .github repository sets the defaults for all the others
 
-**A public repository named `.github` in your account or organization provides these files to every repository that has none of its own.** It works for `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `FUNDING.yml`, and issue and pull request templates ([GitHub's docs](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)). Chalk's organization keeps a single file in its `.github` repository, `funding.yml`, so every chalk repository gets a Sponsor button.
+**A public `.github` repository in your account or organization provides these files to every repository that has none of its own.** It works for `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `FUNDING.yml`, and issue and pull request templates ([GitHub's docs](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)). Chalk's organization keeps a single file in its `.github` repository, `funding.yml`, so every chalk repository gets a Sponsor button.
 
 Two limits. A default file isn't part of a clone or a download, so someone reading the code offline doesn't see it. And it can't be a license: that one lives in each repository.
 
