@@ -116,7 +116,6 @@ export const collections = {
 			blogSchema({
 				extend: z.object({
 					hideDescription: z.boolean().default(true),
-					excerpt: z.string().optional(),
 					related: z.array(z.string()).default([]),
 				}),
 			}),

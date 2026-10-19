@@ -4,7 +4,6 @@ import fs from 'node:fs';
 // guide and resources, `articles/<slug>` for articles. The <Related> block and scripts/content-graph.ts read it.
 const content = new URL('./content/', import.meta.url);
 
-// Not a YAML parse: some article excerpts span lines inside quotes, which the `yaml` package rejects and Astro accepts.
 function frontmatterOf(file) {
 	const head = fs.readFileSync(file, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
 	const scalar = (key) => head.match(new RegExp(`^${key}: *(.+)$`, 'm'))?.[1].replace(/^(["'])(.*)\1$/, '$2');
