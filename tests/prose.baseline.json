@@ -1,6 +1,6 @@
 {
   "articles/add-funding-links-to-your-package.json.mdx": {
-    "exclamation: more than one": 3
+    "exclamation: more than one": 2
   },
   "articles/bluesky-starter-pack.mdx": {
     "exclamation: more than one": 4
@@ -9,13 +9,12 @@
     "exclamation: more than one": 6
   },
   "articles/coding-linkedin-carousels.mdx": {
-    "exclamation: more than one": 7
+    "exclamation: more than one": 5
   },
   "articles/contrib-rocks.mdx": {
     "exclamation: more than one": 1
   },
   "articles/get-real-time-github-stars-notifications-in-discord.mdx": {
-    "banned: delve, landscape, journey": 1,
     "exclamation: more than one": 10
   },
   "articles/github-ghost-user.mdx": {
@@ -31,7 +30,7 @@
     "lead: more than one": 1
   },
   "docs/guide/contributing/getting-involved-in-the-open-source-community.mdx": {
-    "banned: Here are some \u2026": 2,
+    "banned: Here are some …": 2,
     "lead: more than one": 1
   },
   "docs/guide/promoting/building-a-strong-project-identity.mdx": {
