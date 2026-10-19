@@ -4,10 +4,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 62,
+      "contributors": 64,
       "description": "Enterprise-grade, commercial-friendly agentic workflow platform for building next-generation SuperAgents.",
       "discussions": 29,
-      "forks": 895,
+      "forks": 903,
       "issues": 36,
       "languages": [
         "Java",
@@ -23,23 +23,23 @@
       ],
       "name": "astron-agent",
       "owner": "iflytek",
-      "prs": 21,
-      "stars": 8893,
+      "prs": 20,
+      "stars": 8915,
       "url": "https://github.com/iflytek/astron-agent"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 26,
+      "contributors": 27,
       "description": "Agent-ready RPA suite with out-of-the-box automation tools. Built for individuals and enterprises.",
       "discussions": 5,
-      "forks": 474,
-      "issues": 45,
+      "forks": 476,
+      "issues": 44,
       "languages": [
         "Python",
         "Java",
-        "Vue",
         "TypeScript",
+        "Vue",
         "HCL",
         "JavaScript",
         "Lua",
@@ -49,34 +49,34 @@
       ],
       "name": "astron-rpa",
       "owner": "iflytek",
-      "prs": 21,
-      "stars": 5265,
+      "prs": 20,
+      "stars": 5276,
       "url": "https://github.com/iflytek/astron-rpa"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/26786495?v=4&s=50",
-      "contributors": 46,
+      "contributors": 53,
       "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
       "discussions": 4,
-      "forks": 841,
-      "issues": 25,
+      "forks": 851,
+      "issues": 26,
       "languages": [
         "Java",
         "TypeScript",
         "HTML",
+        "JavaScript",
         "Shell",
         "Python",
         "CSS",
         "Makefile",
         "Go Template",
-        "PLpgSQL",
-        "YARA"
+        "PLpgSQL"
       ],
       "name": "skillhub",
       "owner": "iflytek",
-      "prs": 18,
-      "stars": 5186,
+      "prs": 8,
+      "stars": 5251,
       "url": "https://github.com/iflytek/skillhub"
     },
     {
@@ -93,7 +93,7 @@
       "name": "astronclaw-tutorial",
       "owner": "iflytek",
       "prs": 5,
-      "stars": 354,
+      "stars": 357,
       "url": "https://github.com/iflytek/astronclaw-tutorial"
     },
     {
@@ -113,7 +113,7 @@
       "name": "harnessclaw",
       "owner": "harnessclaw",
       "prs": 2,
-      "stars": 262,
+      "stars": 264,
       "url": "https://github.com/harnessclaw/harnessclaw"
     },
     {
@@ -144,7 +144,7 @@
       "description": "Official collection of iFLYTEK skills for speech, OCR, translation, proofreading, and multimodal AI capabilities.",
       "discussions": 0,
       "forks": 23,
-      "issues": 17,
+      "issues": 16,
       "languages": [
         "Python",
         "JavaScript",
@@ -154,7 +154,7 @@
       "name": "iFly-Skills",
       "owner": "iflytek",
       "prs": 19,
-      "stars": 209,
+      "stars": 212,
       "url": "https://github.com/iflytek/iFly-Skills"
     },
     {
@@ -175,7 +175,7 @@
       "name": "memflywheel",
       "owner": "iflytek",
       "prs": 6,
-      "stars": 40,
+      "stars": 41,
       "url": "https://github.com/iflytek/memflywheel"
     },
     {
@@ -194,7 +194,7 @@
       "name": "domux",
       "owner": "iflytek",
       "prs": 7,
-      "stars": 31,
+      "stars": 33,
       "url": "https://github.com/iflytek/domux"
     }
   ]

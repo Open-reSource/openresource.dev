@@ -1,0 +1,22 @@
+{
+  "author": "harshitethic",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/66710144?u=ab9c19ae638152109842f82d3005706261e61bca&v=4&s=50",
+      "contributors": 1,
+      "description": "Know what runs before you trust a repo. Offline GitHub Action + CLI auditing npm, VS Code, devcontainers, Cursor, Claude hooks and MCP launch commands.",
+      "discussions": 4,
+      "forks": 0,
+      "issues": 1,
+      "languages": [
+        "Python"
+      ],
+      "name": "clonepeek",
+      "owner": "harshitethic",
+      "prs": 0,
+      "stars": 0,
+      "url": "https://github.com/harshitethic/clonepeek"
+    }
+  ]
+}

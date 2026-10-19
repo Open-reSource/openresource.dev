@@ -1,0 +1,23 @@
+{
+  "author": "Alox1d",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1344348?u=df3e5c62134370ebe9003cb58f603717c0e6a269&v=4&s=50",
+      "contributors": 1,
+      "description": "Offline English and Russian date/time parsing for Kotlin Multiplatform: dates, ranges and recurrence on Android, JVM and iOS.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "Kotlin",
+        "Python"
+      ],
+      "name": "dateparser-kotlin",
+      "owner": "Alox1d",
+      "prs": 0,
+      "stars": 11,
+      "url": "https://github.com/Alox1d/dateparser-kotlin"
+    }
+  ]
+}

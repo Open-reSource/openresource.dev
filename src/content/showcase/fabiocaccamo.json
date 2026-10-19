@@ -37,16 +37,16 @@
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 2049,
+      "stars": 2048,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/1035294?u=adcc2a9bed0eee2a11d59079e5e4136d1ed0b0a3&v=4&s=50",
-      "contributors": 17,
+      "contributors": 18,
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 3,
-      "forks": 65,
+      "forks": 67,
       "issues": 6,
       "languages": [
         "Python",
@@ -56,7 +56,7 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 4,
+      "prs": 5,
       "stars": 1606,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
@@ -84,7 +84,7 @@
       "contributors": 28,
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
-      "forks": 95,
+      "forks": 94,
       "issues": 3,
       "languages": [
         "Python",
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 5,
-      "stars": 659,
+      "stars": 660,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 803,
+      "stars": 804,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -177,14 +177,14 @@
       "contributors": 3,
       "description": "💻 🔧 high-level file-system operations for lazy devs.",
       "discussions": 1,
-      "forks": 19,
-      "issues": 1,
+      "forks": 21,
+      "issues": 2,
       "languages": [
         "Python"
       ],
       "name": "python-fsutil",
       "owner": "fabiocaccamo",
-      "prs": 0,
+      "prs": 2,
       "stars": 268,
       "url": "https://github.com/fabiocaccamo/python-fsutil"
     },
@@ -222,7 +222,7 @@
       "name": "django-freeze",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 129,
+      "stars": 128,
       "url": "https://github.com/fabiocaccamo/django-freeze"
     },
     {
@@ -256,7 +256,7 @@
       "name": "django-redirects",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 79,
+      "stars": 78,
       "url": "https://github.com/fabiocaccamo/django-redirects"
     },
     {
@@ -272,7 +272,7 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
+      "prs": 0,
       "stars": 75,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
