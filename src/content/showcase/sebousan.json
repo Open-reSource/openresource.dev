@@ -16,13 +16,13 @@
       "name": "hugolify-template",
       "owner": "Hugolify",
       "prs": 0,
-      "stars": 41,
+      "stars": 42,
       "url": "https://github.com/Hugolify/hugolify-template"
     },
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/124584477?v=4&s=50",
-      "contributors": 3,
+      "contributors": 4,
       "description": "Hugolify theme is a framework-agnostic core theme for Hugo",
       "discussions": 0,
       "forks": 6,

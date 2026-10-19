@@ -8,23 +8,23 @@
       "description": "A PDF viewer that seamlessly integrates with any JavaScript project",
       "discussions": 45,
       "forks": 322,
-      "issues": 192,
+      "issues": 194,
       "languages": [
         "TypeScript",
         "MDX",
+        "Vue",
+        "Svelte",
+        "CSS",
         "JavaScript",
         "Shell",
-        "CSS",
-        "Dockerfile",
-        "Go Template",
-        "Vue",
         "HTML",
-        "Svelte"
+        "Dockerfile",
+        "Python"
       ],
       "name": "embed-pdf-viewer",
       "owner": "embedpdf",
-      "prs": 56,
-      "stars": 4547,
+      "prs": 54,
+      "stars": 4561,
       "url": "https://github.com/embedpdf/embed-pdf-viewer"
     }
   ]
