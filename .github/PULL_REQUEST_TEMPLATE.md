@@ -26,3 +26,10 @@
 <!-- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
 
 - [ ] I have read the [contributing guidelines](https://github.com/Open-reSource/openresource.dev/blob/main/CONTRIBUTING.md)
+
+### AI tools
+
+<!-- Tick one. Line completion doesn't count as AI use. -->
+
+- [ ] I didn't use AI tools for this change, or only for line completion.
+- [ ] I used: <!-- tool and what for -->. I reviewed, ran and can explain every line.
