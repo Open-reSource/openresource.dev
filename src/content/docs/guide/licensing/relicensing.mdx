@@ -1,6 +1,6 @@
 ---
 title: 'Relicensing: The Source-Available Wave, and the Forks That Answered'
-description: MongoDB, Elastic, HashiCorp, Redis and others left open source between 2018 and 2025. The timeline, the licenses they moved to, the forks, and what it means for you.
+description: MongoDB, Elastic, HashiCorp, Redis and others left open source between 2018 and 2025. The timeline, the new licenses, the forks, and what it means for you.
 date: 2026-09-27
 lastUpdated: 2026-10-03
 related:
@@ -13,7 +13,7 @@ import InShort from '../../../../components/InShort.astro';
 import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
-<p class="lead">A license change is the moment a project says out loud who it was for. Between 2018 and 2025, MongoDB, Elastic, HashiCorp, Redis and others answered "not for the cloud providers" and moved to licenses that aren't open source; the community answered with forks, and Elastic and Redis later added an open-source license back. Here's the timeline, the licenses, and what it changes when you pick a dependency, sign a CLA or choose a license.</p>
+<p class="lead">A license change is the moment a project says out loud who it was for. Between 2018 and 2025, MongoDB, Elastic, HashiCorp, Redis and others answered "not for the cloud providers" and moved to licenses that aren't open source. The community answered with forks, and Elastic and Redis later added an open-source license back. Here's the timeline, the licenses, and what it changes when you pick a dependency, sign a CLA or choose a license.</p>
 
 <InShort>
 
@@ -56,7 +56,9 @@ Every date comes from the company's or the fork's own announcement.
 | May 1, 2025        | Redis                    | Adds AGPL-3.0 as a third option, from Redis 8                                                        | Announced with antirez, Redis's creator, back at the company since December 2024 ([Redis](https://redis.io/blog/agplv3/))                                                                                                               |
 | September 30, 2025 | Liquibase Community      | Apache-2.0 → FSL, from version 5.0                                                                   | Each release becomes Apache-2.0 two years later ([Liquibase](https://www.liquibase.com/blog/liquibase-community-for-the-future-fsl))                                                                                                    |
 
-Two more dates explain the rest of the story. IBM [completed its acquisition of HashiCorp](https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform) on February 27, 2025: Terraform's license now names IBM as the licensor. And in May 2025, Synadia asked to take NATS out of the Cloud Native Computing Foundation (CNCF) and move its server to the BSL; the [settlement of May 1, 2025](https://www.cncf.io/announcements/2025/05/01/cncf-and-synadia-align-on-securing-the-future-of-the-nats-io-project/) kept NATS under Apache-2.0, with its trademarks at the Linux Foundation. **A project whose name and repository belong to a foundation can't be relicensed by one company.**
+Two more dates explain the rest of the story. IBM [completed its acquisition of HashiCorp](https://newsroom.ibm.com/2025-02-27-ibm-completes-acquisition-of-hashicorp,-creates-comprehensive,-end-to-end-hybrid-cloud-platform) on February 27, 2025. Terraform's license now names IBM as the licensor.
+
+In May 2025, Synadia asked to take NATS out of the Cloud Native Computing Foundation (CNCF) and move its server to the BSL. The [settlement of May 1, 2025](https://www.cncf.io/announcements/2025/05/01/cncf-and-synadia-align-on-securing-the-future-of-the-nats-io-project/) kept NATS under Apache-2.0, with its trademarks at the Linux Foundation. **A project whose name and repository belong to a foundation can't be relicensed by one company.**
 
 ## Five licenses, none of them open source
 
@@ -118,12 +120,12 @@ Elastic's CLA states the purpose in one sentence: it doesn't transfer copyright,
 ### When you found a company around your project
 
 - **The reason to relicense is real.** A cloud provider selling your software without contributing takes customers you need to pay the people who write it.
-- **So is the cost.** Four of the changes got a fork that lasted, two of them backed by the cloud providers the change was aimed at, and Elastic and Redis came back to an open-source license within four years.
+- **So is the cost.** Four of the changes got a fork that lasted. Two of those forks were backed by the cloud providers the change was aimed at. Elastic and Redis came back to an open-source license within four years.
 - **Decide before the first contributor.** A project that starts under the FSL or the BSL tells contributors and users what it is on day one. Changing the license of a popular project breaks a promise people built on.
 
 ## The other direction: AGPL-3.0
 
-Some companies facing the same problem chose a license that is open source and still closes the SaaS gap: AGPL-3.0, which asks anyone running a modified version as a service to offer its source ([License Compatibility](/guide/licensing/license-compatibility/#the-saas-gap-agpl-then-sspl) explains the gap).
+Some companies facing the same problem chose a license that is open source and still closes the SaaS gap: AGPL-3.0. It asks anyone running a modified version as a service to offer its source ([License Compatibility](/guide/licensing/license-compatibility/#the-saas-gap-agpl-then-sspl) explains the gap).
 
 | When             | Project                  | Change                                                                                                                                                                                          |
 | ---------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -133,7 +135,7 @@ Some companies facing the same problem chose a license that is open source and s
 | August 29, 2024  | Elasticsearch and Kibana | AGPL-3.0 added next to SSPL and ELv2                                                                                                                                                            |
 | May 1, 2025      | Redis                    | AGPL-3.0 added next to RSALv2 and SSPL                                                                                                                                                          |
 
-AGPL-3.0 is a compromise that holds: an open-source license the OSI approved, that competitors are reluctant to use, since running a modified version as a service means publishing the changes. Google [forbids it internally](https://opensource.google/documentation/reference/using/agpl-policy); that's the point.
+AGPL-3.0 is a compromise that holds. The OSI approved it, and competitors are reluctant to use it, since running a modified version as a service means publishing the changes. Google [forbids it internally](https://opensource.google/documentation/reference/using/agpl-policy); that's the point.
 
 A license doesn't keep a project open by itself, though. MinIO, still under AGPL-3.0, put its repository in maintenance mode on December 3, 2025. Since February 12, 2026, its README opens with "THIS REPOSITORY IS NO LONGER MAINTAINED" and lists editions of AIStor, its commercial product, as the alternatives ([minio/minio](https://github.com/minio/minio)). The license keeps every published version open. Nothing obliges the company to publish the next one.
 
