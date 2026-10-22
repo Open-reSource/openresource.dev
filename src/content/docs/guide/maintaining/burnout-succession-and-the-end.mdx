@@ -42,7 +42,7 @@ esbuild is fast, widely used and actively maintained, and almost all of it is Ev
 
 ## Burnout looks like dread, not tiredness
 
-Tired is fixed by a weekend. [Burnout](/guide/glossary/#burnout) isn't. In maintainers, it tends to look the same: a knot in the stomach at the notification count, resentment of the people who use your work, weekends that are either all open source or none, and issues answered at midnight because otherwise they'll pile up. Nolan Lawson described that inbox in 2017, in [What it feels like to be an open-source maintainer](https://nolanlawson.com/2017/03/05/what-it-feels-like-to-be-an-open-source-maintainer/), and it hasn't changed.
+A weekend fixes tired. It doesn't fix [burnout](/guide/glossary/#burnout). In maintainers, it tends to look the same. You get a knot in the stomach at the notification count and resentment of the people who use your work. Weekends are either all open source or none. Issues get answered at midnight because otherwise they'll pile up. Nolan Lawson described that inbox in 2017, in [What it feels like to be an open-source maintainer](https://nolanlawson.com/2017/03/05/what-it-feels-like-to-be-an-open-source-maintainer/), and it hasn't changed.
 
 What helps, in order of effort:
 
@@ -78,11 +78,11 @@ Then hand over what only you can do, in stages. **Two people should be able to p
 
 ## Hand over in stages, to someone you know
 
-In November 2018, the maintainer of event-stream, a package still downloaded 7 million times a week in September 2026, explained why he had given it away: someone "wanted to maintain the module, so I gave it to him" ([event-stream#116](https://github.com/dominictarr/event-stream/issues/116)). The new maintainer added a dependency, flatmap-stream, that carried encrypted code aimed at Copay, a Bitcoin wallet app ([event-stream#115](https://github.com/dominictarr/event-stream/issues/115)). The original maintainer didn't use the package anymore, and got nothing for maintaining it. That's the usual story.
+In November 2018, the maintainer of event-stream explained why he had given it away: someone "wanted to maintain the module, so I gave it to him" ([event-stream#116](https://github.com/dominictarr/event-stream/issues/116)). It was still downloaded 7 million times a week in September 2026. The new maintainer added a dependency, flatmap-stream, that carried encrypted code aimed at Copay, a Bitcoin wallet app ([event-stream#115](https://github.com/dominictarr/event-stream/issues/115)). The original maintainer didn't use the package anymore, and got nothing for maintaining it. That's the usual story.
 
 In March 2024, Andres Freund [found a backdoor](https://www.openwall.com/lists/oss-security/2024/03/29/4) in xz, a compression library in most Linux systems. The attacker, "Jia Tan", had been a diligent contributor for more than two years before becoming a co-maintainer, helped by accounts pressuring the tired original maintainer to accept help ([Russ Cox's timeline](https://research.swtch.com/xz-timeline)). Two years of good pull requests weren't enough.
 
-Neither story says "never hand over". They say: **trust is built in public, over time, and release rights come last.**
+Neither story says "never hand over". Both say **trust is built in public, over time, and release rights come last.**
 
 1. Announce it in the open, with the issue above.
 2. Let the new maintainer triage and review for months, in public, where others can see their work.
@@ -121,7 +121,7 @@ Smaller projects do the same in fewer steps. request's author announced [mainten
 
 ## The license already lets anyone fork
 
-A fork doesn't need your permission: that's what the license is for. OpenTofu forked Terraform ([September 2023](https://www.linuxfoundation.org/press/announcing-opentofu)) and Valkey forked Redis ([March 2024](https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community)) after license changes, against the wishes of the companies that owned them.
+A fork doesn't need your permission. That's what the license is for. OpenTofu forked Terraform ([September 2023](https://www.linuxfoundation.org/press/announcing-opentofu)) and Valkey forked Redis ([March 2024](https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community)) after license changes, against the wishes of the companies that owned them.
 
 What you can add is your word. Pointing your README and your deprecation message to a fork you trust makes it the successor for everyone who reads them. Transfer the package name to its maintainers only once they've earned it, as with any handover. If you can't vouch for anyone, point to alternatives instead, and let the name retire with the project.
 

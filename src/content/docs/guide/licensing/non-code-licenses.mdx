@@ -36,8 +36,6 @@ import Related from '../../../../components/Related.astro';
 | Data                              | CC BY 4.0, ODbL 1.0, or CC0 1.0                                                        | Yes, all three conform to the Open Definition                                                 |
 | Model weights                     | Apache-2.0 or MIT, with the code and training data information                         | The weights are openly licensed; the model is open source if it meets the OSI's AI definition |
 
-The rest of this chapter is the reasoning behind each row.
-
 ## Six Creative Commons licenses, and two of them are open
 
 [Creative Commons](https://creativecommons.org/about/cclicenses/) combines four conditions into six licenses, all at version 4.0 since [November 25, 2013](https://creativecommons.org/2013/11/25/ccs-next-generation-licenses-welcome-version-4-0/), plus [CC0](/guide/glossary/#cc0) to waive everything:
@@ -54,7 +52,7 @@ The rest of this chapter is the reasoning behind each row.
 
 "Open" here means both lists agree: [Creative Commons](/guide/glossary/#creative-commons) counts only CC BY, CC BY-SA and CC0 as [free cultural works](https://creativecommons.org/public-domain/freeworks/), and the [Open Definition](https://opendefinition.org/licenses/) lists only those among its conformant licenses. It's the same rule as the Open Source Definition for code: no restriction on who may use the work, or for what.
 
-**NonCommercial is where most people trip.** The legal code allows uses "not primarily intended for or directed towards commercial advantage or monetary compensation" ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode.en)), and Creative Commons needed a [whole page](https://wiki.creativecommons.org/wiki/NonCommercial_interpretation) to interpret it. A company's internal wiki, a paid course, a book: each is a question. This guide was one until October 2026: its content was CC BY-NC-SA 4.0, free to read, share and adapt but not for commercial use, and so not open by either definition. It is now CC BY-SA 4.0.
+**NonCommercial is where most people trip.** The legal code allows uses "not primarily intended for or directed towards commercial advantage or monetary compensation" ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode.en)). Creative Commons needed a [whole page](https://wiki.creativecommons.org/wiki/NonCommercial_interpretation) to interpret it. A company's internal wiki, a paid course, a book: each is a question. This guide was one until October 2026: its content was CC BY-NC-SA 4.0, free to read, share and adapt but not for commercial use, and so not open by either definition. It's now CC BY-SA 4.0.
 
 Creative Commons itself [recommends against](https://creativecommons.org/faq/) its licenses for software: they say nothing about distributing source code, or about patents. The one bridge: CC BY-SA 4.0 material can go into a GPL-3.0 work since [October 8, 2015](https://creativecommons.org/compatible-licenses/), one way only.
 
@@ -106,7 +104,7 @@ Facts aren't copyrightable, but collections of them can be protected. In the Eur
 
 ## Models: openly licensed weights aren't the whole model
 
-A trained model has weights, the code that trains and runs it, and the data it learned from. A license on the weights covers the weights. On [October 28, 2024](https://opensource.org/blog/the-open-source-initiative-announces-the-release-of-the-industrys-first-open-source-ai-definition), the OSI published the [Open Source AI Definition](https://opensource.org/ai/open-source-ai-definition) 1.0, which asks for all three: the weights and the code under open-source terms, and "sufficiently detailed information about the data used to train the system", enough for a skilled person to build a substantially equivalent one. The models its [validation](https://opensource.org/ai/faq) found to pass include Pythia, OLMo and T5.
+A trained model has weights, the code that trains and runs it, and the data it learned from. A license on the weights covers the weights. On [October 28, 2024](https://opensource.org/blog/the-open-source-initiative-announces-the-release-of-the-industrys-first-open-source-ai-definition), the OSI published the [Open Source AI Definition](https://opensource.org/ai/open-source-ai-definition) 1.0. It asks for all three: the weights and the code under open-source terms, and "sufficiently detailed information about the data used to train the system", enough for a skilled person to build a substantially equivalent one. The models its [validation](https://opensource.org/ai/faq) found to pass include Pythia, OLMo and T5.
 
 The licenses on popular models, as of September 2026:
 
@@ -122,7 +120,7 @@ The licenses on popular models, as of September 2026:
 
 Use restrictions are what disqualify a license: the Open Source Definition forbids discriminating against a field of use, even a harmful one. The OSI said so of Llama 2 in [July 2023](https://opensource.org/blog/metas-llama-2-license-is-not-open-source), and again in [February 2025](https://opensource.org/blog/metas-llama-license-is-still-not-open-source), after Llama's acceptable-use policy withheld the multimodal models from people and companies in the European Union.
 
-**"[Open weights](/guide/glossary/#open-weights)" is the honest name for a model with an openly licensed download and no training data.** Qwen3 and DeepSeek-R1 are open weights under open-source licenses; OLMo 2 is also open source by the OSI's definition.
+**"[Open weights](/guide/glossary/#open-weights)" is the right name for a model with an openly licensed download and no training data.** Qwen3 and DeepSeek-R1 are open weights under open-source licenses; OLMo 2 is also open source by the OSI's definition.
 
 ## Do this now
 
