@@ -18,6 +18,7 @@
     "status": "tsx scripts/content-status.ts",
     "test": "vitest",
     "update:deps": "ncu -u",
+    "update:contributors": "tsx scripts/update-contributors.ts",
     "update:showcase": "tsx scripts/update-showcase.ts"
   },
   "dependencies": {

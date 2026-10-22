@@ -4,6 +4,9 @@ title: How this site is made
 description: Who writes Open {re}Source, what it runs on, how it is licensed and how its content is checked.
 ---
 
+import GitHubUsers from '@deramond.dev/astro/components/GitHubUsers.astro';
+import contributors from '../data/contributors.json';
+
 export const prerender = true;
 
 {/* prettier-ignore */}
@@ -11,7 +14,9 @@ export const prerender = true;
 
 ## Julien writes it, contributors fix it
 
-Open \{re}Source is maintained by [Julien Déramond](/about-author/) since 2023. Other people improve it through pull requests: the [contributors graph](https://github.com/Open-reSource/openresource.dev/graphs/contributors) on GitHub is the up-to-date list, so this page does not keep a copy that could go stale.
+Open \{re}Source is maintained by [Julien Déramond](/about-author/) since 2023. Other people improve it through pull requests: the [contributors graph](https://github.com/Open-reSource/openresource.dev/graphs/contributors) on GitHub is always the up-to-date list. The people below are the ones who fixed the site most, refreshed by hand from that graph.
+
+<GitHubUsers users={contributors} label="Contributors" />
 
 ## The site is a static Astro build with a shared theme
 
