@@ -30,7 +30,7 @@
     "lead: more than one": 1
   },
   "docs/guide/contributing/getting-involved-in-the-open-source-community.mdx": {
-    "banned: Here are some …": 2,
+    "banned: Here are some \u2026": 2,
     "lead: more than one": 1
   },
   "docs/guide/promoting/building-a-strong-project-identity.mdx": {
@@ -55,11 +55,6 @@
     "exclamation: more than one": 5
   },
   "docs/guide/what-is-open-source/the-significance-of-open-source.mdx": {
-    "banned: empower, leverage": 3,
-    "banned: delve, landscape, journey": 2,
-    "banned: In conclusion": 1,
-    "banned: essential, crucial": 1,
-    "banned: vibrant, thriving": 1,
     "lead: more than one": 1
   }
 }
