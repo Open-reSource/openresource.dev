@@ -15,7 +15,7 @@ import InShort from '../../../../components/InShort.astro';
 import Related from '../../../../components/Related.astro';
 
 {/* prettier-ignore */}
-<p class="lead">You will get a security report. It will arrive as a public issue titled "URGENT", as an email from a company you've never heard of asking for a CVE, or as a patch from a helpful new co-maintainer. This chapter is what to have in place before that day, and what to do on it.</p>
+<p class="lead">You'll get a security report. It will arrive as a public issue titled "URGENT", as an email from a company you've never heard of asking for a CVE, or as a patch from a helpful new co-maintainer. This chapter is what to have in place before that day, and what to do on it.</p>
 
 <InShort>
 
@@ -110,7 +110,7 @@ jobs:
 - **Pin third-party actions to a full commit SHA.** GitHub's [hardening guide](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions) calls it the only way to use an action as an immutable release.
 - **Set `permissions:`** in every workflow, and grant write access only to the job that needs it.
 - **Don't check out a pull request's code in a `pull_request_target` workflow**: it runs with your secrets. GitHub Security Lab calls these ["pwn requests"](https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/).
-- **Publish from CI with provenance**: `npm publish --provenance`, PyPI's [attestations](https://docs.pypi.org/attestations/producing-attestations/) (automatic when you publish with trusted publishing and the official PyPA action), or for anything else GitHub's [artifact attestations](https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds), so users can check where a release was built.
+- **Publish from CI with provenance**: `npm publish --provenance`, PyPI's [attestations](https://docs.pypi.org/attestations/producing-attestations/) (automatic when you publish with trusted publishing and the official PyPA action), or for anything else GitHub's [artifact attestations](https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds). Users can then check where a release was built.
 - **Audit your workflows** with [zizmor](https://docs.zizmor.sh/), which flags these patterns and more.
 
 ## Scorecard: run it, read the top three findings
@@ -124,7 +124,7 @@ jobs:
 	alt="Bootstrap's OpenSSF Scorecard: 7.3 overall; Signed-Releases and Vulnerabilities 0, Code-Review 4, Branch-Protection 8."
 />
 
-7.3 out of 10, and the low scores need reading, not obeying. Signed-Releases at 0 is real: Bootstrap's releases have no signed artifacts. Vulnerabilities at 0 flags known, unfixed vulnerabilities, often in development dependencies that never ship. Fuzzing, also at 0, matters for parsers and hardly for a CSS framework. Fix what applies to your project, and write down why the rest doesn't. The [OpenSSF Best Practices badge](https://www.bestpractices.dev/) is the same idea, as a questionnaire.
+7.3 out of 10, and the low scores need reading, not obeying. Signed-Releases at 0 is real: Bootstrap's releases have no signed artifacts. Vulnerabilities at 0 flags known, unfixed vulnerabilities, often in development dependencies that never ship. Fuzzing, also at 0, pays off for parsers and hardly for a CSS framework. Fix what applies to your project, and write down why the rest doesn't. The [OpenSSF Best Practices badge](https://www.bestpractices.dev/) is the same idea, as a questionnaire.
 
 ## You don't have to do it alone
 
@@ -146,7 +146,7 @@ The [Cyber Resilience Act](https://digital-strategy.ec.europa.eu/en/policies/cyb
 
 [The EU Cyber Resilience Act for Open-Source Maintainers](/articles/cyber-resilience-act-for-maintainers/) goes further: the test that decides who is what, what stewards and manufacturers owe, and what to answer when their questions arrive. [Vulnerabilities in What You Ship](/guide/at-work/vulnerabilities-and-the-cra/) is the same law from the company's side: the 24-hour reporting clock, and the report and the fix a manufacturer owes your project from December 2027.
 
-This is not legal advice. If you sell or support your project commercially, read the regulation, or ask someone whose job it is.
+This isn't legal advice. If you sell or support your project commercially, read the regulation, or ask someone whose job it is.
 
 ## Do this now
 
