@@ -1,0 +1,191 @@
+---
+// A term from the glossary, used inline: `<Term id="copyleft">copyleft</Term>`. The definition comes from
+// src/glossary.mjs, so a chapter only names the `id`, and an unknown `id` fails the build.
+// Without JavaScript it is a plain link to the term's entry on /guide/glossary/. With it, the link becomes a button
+// that opens a popover holding the definition and a "Read more" link to that same entry.
+import { glossary } from '../glossary.mjs';
+
+interface Props {
+	id: string;
+}
+
+const { id } = Astro.props;
+const entry = glossary.find((item) => item.id === id);
+if (!entry) {
+	throw new Error(`<Term id="${id}">: no such entry in src/glossary.mjs. Add it there, or use an existing id.`);
+}
+
+const entryHref = `/guide/glossary/#${id}`;
+// A definition's `code` spans, as alternating text and code parts (the same rule as the glossary page).
+const parts = entry.definition.split('`').map((text, i) => ({ text, code: i % 2 === 1 }));
+// Two uses of one term on a page need two different ids: the page's own count of that term.
+const seen = (Astro.locals as { termCount?: Map<string, number> }).termCount ?? new Map<string, number>();
+(Astro.locals as { termCount?: Map<string, number> }).termCount = seen;
+const count = (seen.get(id) ?? 0) + 1;
+seen.set(id, count);
+const uid = `term-${id}-${count}`;
+---
+
+<span class="term" data-term>
+	<a class="term__trigger" href={entryHref}>
+		<slot />
+	</a>
+	<span class="term__pop" id={uid} hidden>
+		<strong class="term__name">{entry.term}</strong>
+		<span class="term__definition">{parts.map(({ text, code }) => (code ? <code>{text}</code> : text))}</span>
+		<a class="term__more" href={entryHref} aria-label={`Read more about ${entry.term} in the glossary`}>
+			Read more
+		</a>
+	</span>
+</span>
+
+<script>
+	// Turn each term's link into a button with a popover. Escape closes the open one and returns focus to its button.
+	const open = new Set<HTMLElement>();
+
+	const close = (term: HTMLElement, restoreFocus = false) => {
+		const button = term.querySelector<HTMLButtonElement>('.term__trigger');
+		const pop = term.querySelector<HTMLElement>('.term__pop');
+		if (!button || !pop || pop.hidden) return;
+		pop.hidden = true;
+		button.setAttribute('aria-expanded', 'false');
+		open.delete(term);
+		if (restoreFocus) button.focus();
+	};
+
+	// Keep the popover inside the viewport on wide screens (on small ones the CSS makes it a bottom sheet).
+	const place = (term: HTMLElement, pop: HTMLElement) => {
+		pop.style.removeProperty('--term-shift');
+		const { left, right } = pop.getBoundingClientRect();
+		const margin = 8;
+		const over = right - (document.documentElement.clientWidth - margin);
+		const under = margin - left;
+		if (over > 0) pop.style.setProperty('--term-shift', `${-over}px`);
+		else if (under > 0) pop.style.setProperty('--term-shift', `${under}px`);
+	};
+
+	for (const term of document.querySelectorAll<HTMLElement>('[data-term]')) {
+		const link = term.querySelector<HTMLAnchorElement>('.term__trigger');
+		const pop = term.querySelector<HTMLElement>('.term__pop');
+		if (!link || !pop) continue;
+
+		const button = document.createElement('button');
+		button.type = 'button';
+		button.className = 'term__trigger';
+		button.setAttribute('aria-expanded', 'false');
+		button.setAttribute('aria-describedby', pop.id);
+		button.append(...link.childNodes);
+		link.replaceWith(button);
+
+		button.addEventListener('click', () => {
+			if (!pop.hidden) return close(term);
+			for (const other of open) close(other);
+			pop.hidden = false;
+			button.setAttribute('aria-expanded', 'true');
+			open.add(term);
+			place(term, pop);
+		});
+		term.addEventListener('keydown', (event) => {
+			if (event.key === 'Escape' && !pop.hidden) {
+				event.stopPropagation();
+				close(term, true);
+			}
+		});
+		// Tabbing out of the term closes it.
+		term.addEventListener('focusout', (event) => {
+			if (!term.contains(event.relatedTarget as Node | null)) close(term);
+		});
+	}
+
+	document.addEventListener('click', (event) => {
+		for (const term of open) if (!term.contains(event.target as Node)) close(term);
+	});
+</script>
+
+<style>
+	.term {
+		position: relative;
+	}
+
+	/* :global because the script creates the button, so it carries no scope attribute. */
+	.term :global(.term__trigger) {
+		color: inherit;
+		text-decoration: underline dotted;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.2em;
+	}
+
+	/* The button form: look like the text around it. */
+	.term :global(button.term__trigger) {
+		padding: 0;
+		border: 0;
+		background: none;
+		font: inherit;
+		cursor: help;
+	}
+
+	.term :global(.term__trigger:hover),
+	.term :global(.term__trigger:focus-visible),
+	.term :global(.term__trigger[aria-expanded='true']) {
+		color: var(--color-primary);
+	}
+
+	.term__pop {
+		position: absolute;
+		z-index: 20;
+		top: 100%;
+		left: 0;
+		translate: var(--term-shift, 0) 0;
+		display: block;
+		box-sizing: border-box;
+		width: min(22rem, calc(100vw - 2rem));
+		margin-top: var(--space-1);
+		padding: var(--space-3);
+		border: var(--stroke-hairline) solid var(--color-line);
+		border-left: 3px solid var(--color-primary);
+		border-radius: 0 var(--radius-md) var(--radius-md) 0;
+		background: var(--color-panel);
+		color: var(--color-fg);
+		font: var(--type-small);
+		font-style: normal;
+		font-weight: 400;
+		text-align: left;
+		text-decoration: none;
+		white-space: normal;
+	}
+
+	.term__pop[hidden] {
+		display: none;
+	}
+
+	.term__name,
+	.term__definition,
+	.term__more {
+		display: block;
+	}
+
+	.term__name {
+		margin-bottom: var(--space-1);
+	}
+
+	.term__more {
+		margin-top: var(--space-2);
+	}
+
+	/* Small screens: a bottom sheet, so the text never runs off the side. */
+	@media (max-width: 40rem) {
+		.term__pop {
+			position: fixed;
+			top: auto;
+			right: var(--space-2);
+			bottom: var(--space-2);
+			left: var(--space-2);
+			translate: none;
+			width: auto;
+			margin: 0;
+			border-radius: var(--radius-md);
+			border-left-width: var(--stroke-hairline);
+			border-top: 3px solid var(--color-primary);
+		}
+	}
+</style>

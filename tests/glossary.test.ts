@@ -30,6 +30,9 @@ const anchors = (body: string) => {
 	});
 };
 
+// The ids of the `<Term id="…">` uses in a page.
+const termIds = (body: string) => [...body.matchAll(/<Term id="([^"]+)"/g)].map(([, id]) => id);
+
 const sentences = (text: string) => text.replace(/`[^`]*`/g, 'code').match(/[^.!?]+[.!?]+(?=\s|$)/g) ?? [];
 
 describe('glossary', () => {
@@ -73,11 +76,22 @@ describe('glossary', () => {
 		const links = pages.flatMap(({ name, body }) =>
 			name.endsWith('guide/glossary.mdx')
 				? []
-				: [...body.matchAll(/\/guide\/glossary\/#([\w-]+)/g)].map(([, id]) => ({ name, id }))
+				: [...body.matchAll(/\/guide\/glossary\/#([\w-]+)/g)]
+						.map(([, id]) => id)
+						.concat(termIds(body))
+						.map((id) => ({ name, id }))
 		);
 		const ids = new Set(glossary.map(({ id }) => id));
 		expect(links.filter(({ id }) => !ids.has(id)).map(({ name, id }) => `${name}: #${id}`)).toEqual([]);
 		const linked = new Set(links.map(({ id }) => id));
 		expect(glossary.filter(({ id }) => !linked.has(id)).map(({ id }) => id)).toEqual([]);
+	});
+
+	test('every <Term id> points at an existing id, and a page uses a term once', () => {
+		const ids = new Set(glossary.map(({ id }) => id));
+		const uses = pages.flatMap(({ name, body }) => termIds(body).map((id) => ({ name, id })));
+		expect(uses.filter(({ id }) => !ids.has(id)).map(({ name, id }) => `${name}: ${id}`)).toEqual([]);
+		const keys = uses.map(({ name, id }) => `${name}: ${id}`);
+		expect(keys.filter((key, i) => keys.indexOf(key) !== i)).toEqual([]);
 	});
 });
