@@ -55,6 +55,9 @@
     "@astrojs/markdown-satteri": {
       "satteri": "^0.10.5"
     },
+    "@vercel/cli-config": {
+      "zod": "^4.6.6"
+    },
     "@vercel/routing-utils": {
       "path-to-regexp": "6.3.0"
     },
