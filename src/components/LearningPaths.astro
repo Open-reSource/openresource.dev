@@ -21,17 +21,20 @@ const cards = paths.map((path) => {
 
 <div class="paths">
 	{cards.map(({ id, persona, who, promise, chapters, count, duration }) => (
-		<section class="path" aria-labelledby={id}>
+		<section class="path" aria-labelledby={id} data-path={id}>
 			<h2 id={id}>{persona}</h2>
 			<p class="path__who">{who}</p>
 			<p class="path__promise">{promise}</p>
 			<p class="path__meta">
 				{count} chapters · {duration}
 			</p>
+			<p class="path__progress" hidden />
 			<ModuleChapters chapters={chapters} path={id} />
 		</section>
 	))}
 </div>
+
+<div class="progress-reset" data-progress-reset></div>
 
 <style>
 	.paths {
@@ -63,6 +66,7 @@ const cards = paths.map((path) => {
 		font-weight: var(--font-weight-medium);
 	}
 
+	.path__progress,
 	.path__meta {
 		font: var(--type-mono);
 		color: var(--color-muted);

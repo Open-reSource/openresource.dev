@@ -114,6 +114,68 @@ pre[data-language='md'] {
 	text-decoration: underline;
 }
 
+.path-chip__progress {
+	font-family: var(--font-family-mono);
+	color: var(--color-muted);
+}
+
+/* "Mark as read" (src/learning-paths-client.ts), under the title or the path chip. A button with a text state, not a
+   colour or a glyph alone; 24px tall at least (WCAG 2.2, target size). */
+.read-toggle__row {
+	max-width: 760px;
+	margin: 0 0 var(--space-4);
+}
+
+.read-toggle {
+	min-height: var(--space-6);
+	padding: 0 var(--space-3);
+	border: var(--stroke-hairline) solid var(--color-line);
+	border-radius: var(--radius-pill);
+	background: none;
+	font: var(--type-small);
+	color: var(--color-muted);
+	cursor: pointer;
+}
+
+.read-toggle:hover {
+	border-color: var(--color-muted);
+	color: var(--color-fg);
+}
+
+.read-toggle[aria-pressed='true'] {
+	border-color: var(--color-primary-dim);
+	color: var(--color-fg);
+}
+
+/* The check after a chapter's label in the sidebar. It sits inline after the label, so a long label still wraps. */
+.read-mark {
+	margin-left: var(--space-1);
+	color: var(--color-primary);
+}
+
+/* The end of /guide/start/: what is stored, and the reset. */
+.progress-reset {
+	margin-block: var(--space-6);
+	font: var(--type-small);
+	color: var(--color-muted);
+}
+
+.progress-reset__note,
+.progress-reset__row {
+	margin: 0 0 var(--space-2);
+}
+
+.progress-reset__button {
+	min-height: var(--space-6);
+	padding: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	color: var(--color-fg);
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 .path-next {
 	max-width: 760px;
 	margin-top: var(--space-12);
