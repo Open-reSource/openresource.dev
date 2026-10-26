@@ -57,3 +57,25 @@ jobs:
           args: --offline --root-dir ${{ github.workspace }}/.vercel/output/static '.vercel/output/static/**/*.html'
           fail: true
           jobSummary: true
+
+  lighthouse:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          cache: npm
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Run Lighthouse
+        run: npx --yes @lhci/cli@0.15.1 autorun
