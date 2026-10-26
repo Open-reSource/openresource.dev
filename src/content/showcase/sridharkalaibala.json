@@ -7,7 +7,7 @@
       "contributors": 13,
       "description": "Free offline-first open source POS and billing software for retail and restaurants. AGPL-3.0-only source; packages include separately licensed components.",
       "discussions": 4,
-      "forks": 18,
+      "forks": 21,
       "issues": 396,
       "languages": [
         "JavaScript",
@@ -22,8 +22,8 @@
       ],
       "name": "POS",
       "owner": "Posnic",
-      "prs": 1,
-      "stars": 13,
+      "prs": 14,
+      "stars": 14,
       "url": "https://github.com/Posnic/POS"
     }
   ]

@@ -7,7 +7,7 @@
       "contributors": 1,
       "description": "Privacy-friendly Codex Desktop quota overlay for Windows and macOS — quota, reset time, and reset credits beside the conversation title.",
       "discussions": 3,
-      "forks": 0,
+      "forks": 1,
       "issues": 1,
       "languages": [
         "JavaScript",
@@ -20,8 +20,8 @@
       ],
       "name": "codex-quota-overlay",
       "owner": "cpys",
-      "prs": 14,
-      "stars": 3,
+      "prs": 16,
+      "stars": 4,
       "url": "https://github.com/cpys/codex-quota-overlay"
     }
   ]

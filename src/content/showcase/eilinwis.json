@@ -4,10 +4,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/79009636?u=94e8d910ea7032c22a97c6c20f06c7ae52611142&v=4&s=50",
-      "contributors": 3,
+      "contributors": 4,
       "description": "Chat web application for learning e2e automation with Playwright",
-      "discussions": 2,
-      "forks": 11,
+      "discussions": 3,
+      "forks": 13,
       "issues": 4,
       "languages": [
         "TypeScript",
@@ -17,7 +17,7 @@
       ],
       "name": "playwright-chat-lab",
       "owner": "eilinwis",
-      "prs": 2,
+      "prs": 3,
       "stars": 50,
       "url": "https://github.com/eilinwis/playwright-chat-lab"
     }
