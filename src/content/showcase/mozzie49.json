@@ -1,0 +1,25 @@
+{
+  "author": "mozzie49",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/23256393?v=4&s=50",
+      "contributors": 1,
+      "description": "Experimental browser-local DOCX equation repair: review explicit LaTeX, convert selected formulas to native OMML, preserve unsupported source.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "TypeScript",
+        "CSS",
+        "Python",
+        "HTML"
+      ],
+      "name": "equation-rescue",
+      "owner": "mozzie49",
+      "prs": 0,
+      "stars": 0,
+      "url": "https://github.com/mozzie49/equation-rescue"
+    }
+  ]
+}

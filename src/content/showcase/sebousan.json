@@ -10,8 +10,7 @@
       "forks": 7,
       "issues": 0,
       "languages": [
-        "JavaScript",
-        "Sass"
+        "JavaScript"
       ],
       "name": "hugolify-template",
       "owner": "Hugolify",
@@ -26,14 +25,14 @@
       "description": "Hugolify theme is a framework-agnostic core theme for Hugo",
       "discussions": 0,
       "forks": 6,
-      "issues": 3,
+      "issues": 4,
       "languages": [
         "HTML",
         "JavaScript"
       ],
       "name": "hugolify-theme",
       "owner": "Hugolify",
-      "prs": 0,
+      "prs": 3,
       "stars": 26,
       "url": "https://github.com/Hugolify/hugolify-theme"
     },
@@ -52,7 +51,7 @@
       ],
       "name": "hugolify-admin",
       "owner": "Hugolify",
-      "prs": 1,
+      "prs": 2,
       "stars": 15,
       "url": "https://github.com/Hugolify/hugolify-admin"
     }
