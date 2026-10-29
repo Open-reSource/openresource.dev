@@ -63,21 +63,65 @@ pre[data-language='md'] {
 	text-decoration-color: currentColor;
 }
 
-/* The learning path a reader follows (src/learning-paths-client.ts adds these on a chapter in their path). The chip under
-   the title has the look of the "Related chapter" chip; "Next in path" has the look of the theme's previous/next links,
-   with a cyan border for the path. Both are added by script, outside the theme's scoped styles: the theme's 760px
-   column width is repeated here. */
-.path-chip {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--space-1) var(--space-3);
-	align-items: baseline;
+/* The bar under a chapter's title (src/learning-paths-client.ts): the learning path the reader follows, where this
+   chapter sits in it and how far they are, then the "Mark as read" and "Leave path" buttons. Added by script, outside
+   the theme's scoped styles, so the theme's 760px column width is repeated here.
+
+   One unit between two hairlines, like the theme's previous/next links and the "Related chapter" chip, on a fixed grid
+   rather than a wrapping row, so no line depends on where its text happens to break. In a narrow column (a phone) its
+   three parts stack, flush left: the path, the position and progress, the buttons. From 30rem of column, the buttons
+   move up beside the path, on the column's right edge like the theme's "Next" link, and the position and progress get
+   the whole width below. A chapter outside any path has the buttons only. */
+.reading-bar {
+	container: reading-bar / inline-size;
 	max-width: 760px;
-	margin: 0 0 var(--space-4);
+	margin: 0 0 var(--space-6);
+	padding-block: var(--space-3);
+	border-block: var(--stroke-hairline) solid var(--color-line);
+}
+
+.reading-bar__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-areas: 'actions';
+	gap: var(--space-2) var(--space-4);
+}
+
+.reading-bar[data-path] .reading-bar__grid {
+	grid-template-areas: 'path' 'status' 'actions';
+}
+
+.reading-bar[data-path] .reading-bar__actions {
+	margin-top: var(--space-1);
+}
+
+@container reading-bar (min-width: 30rem) {
+	.reading-bar[data-path] .reading-bar__grid {
+		grid-template-columns: minmax(0, 1fr) auto;
+		grid-template-areas: 'path actions' 'status status';
+		align-items: center;
+	}
+
+	.reading-bar[data-path] .reading-bar__actions {
+		margin-top: 0;
+	}
+}
+
+.reading-bar__path,
+.reading-bar__status {
+	margin: 0;
+}
+
+/* "Path" as the eyebrow over a chapter title, then the path's name, both on one baseline. */
+.reading-bar__path {
+	grid-area: path;
+	display: flex;
+	align-items: baseline;
+	gap: var(--space-3);
 	font: var(--type-small);
 }
 
-.path-chip__label,
+.reading-bar__label,
 .path-next__label {
 	font: var(--type-eyebrow);
 	letter-spacing: var(--type-eyebrow-letter-spacing);
@@ -85,75 +129,87 @@ pre[data-language='md'] {
 	color: var(--color-muted);
 }
 
-.path-chip__name {
-	padding: 0 var(--space-2);
-	border: var(--stroke-hairline) solid var(--color-line);
-	border-radius: var(--radius-pill);
+.reading-bar__name {
+	font-weight: var(--font-weight-medium);
 }
 
-.path-chip__step {
-	font-family: var(--font-family-mono);
+/* Numbers are data: the position in the main text colour, the progress muted. In a narrow column they are two lines,
+   so "120 min left" never breaks in the middle; from 30rem, one line on the bar's full width, the progress after a
+   middle dot (decorative, with an empty alternative text so screen readers skip it). */
+.reading-bar__status {
+	grid-area: status;
+	font: var(--type-mono);
 	color: var(--color-fg);
 }
 
-/* The progress is its own group, in the muted colour where the position is in the main text colour, split from it by a
-   middle dot after the position (decorative, with an empty alternative text so screen readers skip it; at the end of
-   the line rather than the start of the next when the row wraps). */
-.path-chip__step::after {
-	content: '·' / '';
-	margin-left: var(--space-2);
+.reading-bar__progress {
+	display: block;
 	color: var(--color-muted);
 }
 
-/* A button, since it clears the path rather than going anywhere, drawn as an outlined pill right after the progress, never pushed to the far edge: when the row is too
-   long it wraps to the next line, left-aligned like the rest. 24px tall at least (WCAG 2.2, target size). */
-.path-chip__leave {
-	min-height: var(--space-6);
+@container reading-bar (min-width: 30rem) {
+	.reading-bar__progress {
+		display: inline;
+	}
+
+	.reading-bar__progress:not(:empty)::before {
+		content: '·' / '';
+		margin-inline: var(--space-2);
+	}
+}
+
+.reading-bar__actions {
+	grid-area: actions;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2);
+}
+
+/* Both buttons have the look of the theme's quiet small button: Chakra Petch, uppercase, a hairline border, the
+   controls' 6px radius, 32px tall (above the 24px of WCAG 2.2's target size). Pressed, "Mark as read" turns to the
+   cyan of an active state, and its text says "Read ✓", so the state is never in the colour alone. */
+.reading-bar__button {
+	display: inline-flex;
+	align-items: center;
+	min-height: var(--space-8);
 	padding: 0 var(--space-3);
 	border: var(--stroke-hairline) solid var(--color-line);
-	border-radius: var(--radius-pill);
-	background: none;
-	font: inherit;
+	border-radius: var(--radius-md);
+	background: transparent;
+	font: var(--type-button);
+	font-size: var(--font-size-xs);
+	line-height: 1;
+	letter-spacing: var(--type-button-letter-spacing);
+	text-transform: uppercase;
+	white-space: nowrap;
 	color: var(--color-fg);
 	cursor: pointer;
+	transition:
+		background-color var(--motion-duration-feedback) var(--motion-easing-precise),
+		color var(--motion-duration-feedback) var(--motion-easing-precise),
+		border-color var(--motion-duration-feedback) var(--motion-easing-precise);
 }
 
-.path-chip__leave:hover {
-	border-color: currentColor;
-	text-decoration: underline;
+/* "Mark as read" keeps its width when it turns to "Read ✓", so "Leave path" next to it doesn't move. */
+.reading-bar__button[aria-pressed] {
+	justify-content: center;
+	min-width: 11em;
 }
 
-.path-chip__progress {
-	font-family: var(--font-family-mono);
-	color: var(--color-muted);
-}
-
-/* "Mark as read" (src/learning-paths-client.ts), under the title or the path chip. A button with a text state, not a
-   colour or a glyph alone; 24px tall at least (WCAG 2.2, target size). */
-.read-toggle__row {
-	max-width: 760px;
-	margin: 0 0 var(--space-4);
-}
-
-.read-toggle {
-	min-height: var(--space-6);
-	padding: 0 var(--space-3);
-	border: var(--stroke-hairline) solid var(--color-line);
-	border-radius: var(--radius-pill);
-	background: none;
-	font: var(--type-small);
-	color: var(--color-muted);
-	cursor: pointer;
-}
-
-.read-toggle:hover {
+.reading-bar__button:hover {
 	border-color: var(--color-muted);
-	color: var(--color-fg);
 }
 
-.read-toggle[aria-pressed='true'] {
-	border-color: var(--color-primary-dim);
-	color: var(--color-fg);
+.reading-bar__button[aria-pressed='true'] {
+	border-color: var(--color-primary);
+	background: var(--color-tint);
+	color: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.reading-bar__button:active {
+		transform: translateY(1px);
+	}
 }
 
 /* The check after a chapter's label in the sidebar. It sits inline after the label, so a long label still wraps. */
@@ -185,6 +241,8 @@ pre[data-language='md'] {
 	cursor: pointer;
 }
 
+/* "Next in path" (src/learning-paths-client.ts) has the look of the theme's previous/next links, with a cyan border for
+   the path. */
 .path-next {
 	max-width: 760px;
 	margin-top: var(--space-12);

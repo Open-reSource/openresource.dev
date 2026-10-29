@@ -1,8 +1,9 @@
-// The learning path a reader follows and what they have read, on the guide: "Path: First-timer, 3 of 8" under the title,
-// "Next in path" above the previous/next links, a "Mark as read" button on every chapter, a check in the sidebar for
-// each chapter read, and on /guide/start/ each path's progress and a reset. Injected on every page by
-// `src/learning-paths-integration.mjs`. A reader enters a path from /guide/start/, whose links carry `?path=<id>`; the
-// id is kept in localStorage so the next chapters know it, and removed from the address so a copied link stays clean.
+// The learning path a reader follows and what they have read, on the guide: a bar under the title with the path, the
+// position in it, the progress and the "Mark as read" and "Leave path" buttons, "Next in path" above the previous/next
+// links, a check in the sidebar for each chapter read, and on /guide/start/ each path's progress and a reset. Injected
+// on every page by `src/learning-paths-integration.mjs`. A reader enters a path from /guide/start/, whose links carry
+// `?path=<id>`; the id is kept in localStorage so the next chapters know it, and removed from the address so a copied
+// link stays clean.
 // Everything is added here, so without JavaScript the pages read as before. When storage is blocked (private mode,
 // cookies off) nothing that needs it is shown: no button that can't save, no counter.
 import {
@@ -109,6 +110,22 @@ export function follow(paths: LearningPath[], readable: string[] = []) {
 		renders.forEach((run) => run());
 	};
 
+	// The bar under the title: the path (its name, the position, the progress) on top, the buttons below or beside it.
+	// One element for both, created by whichever needs it first, so the path and "Mark as read" are laid out together.
+	let bar: { root: HTMLElement; grid: HTMLElement; actions: HTMLElement } | undefined;
+	const readingBar = (main: Element) => {
+		if (bar) return bar;
+		const root = element('div', 'reading-bar');
+		const grid = element('div', 'reading-bar__grid');
+		const actions = element('div', 'reading-bar__actions');
+		grid.append(actions);
+		root.append(grid);
+		const title = main.querySelector('h1');
+		if (title) title.after(root);
+		else main.prepend(root);
+		return (bar = { root, grid, actions });
+	};
+
 	if (found && main) chapter(found, main);
 	if (storage && main && hereKey && known.has(hereKey)) markButton(main, hereKey);
 	if (storage) sidebarMarks();
@@ -121,20 +138,26 @@ export function follow(paths: LearningPath[], readable: string[] = []) {
 		// Storage blocked: the next link carries the path itself.
 		const carry = !storage;
 
-		const chip = element('p', 'path-chip');
-		chip.append(element('span', 'path-chip__label', 'Path'));
-		const name = element('a', 'path-chip__name', path.persona);
+		const { root, grid, actions } = readingBar(main);
+		root.dataset.path = '';
+		const identity = element('p', 'reading-bar__path');
+		const name = element('a', 'reading-bar__name', path.persona);
 		name.href = `/guide/start/#${path.id}`;
-		chip.append(name, element('span', 'path-chip__step', `Chapter ${index + 1} of ${total}`));
+		identity.append(element('span', 'reading-bar__label', 'Path'), ' ', name);
+
+		const status = element('p', 'reading-bar__status');
+		status.append(element('span', 'reading-bar__step', `Chapter ${index + 1} of ${total}`));
 		if (storage) {
-			const counter = element('span', 'path-chip__progress');
+			const counter = element('span', 'reading-bar__progress');
 			counter.setAttribute('aria-live', 'polite');
-			chip.append(counter);
+			status.append(counter);
 			renders.push(() => (counter.textContent = describe(progressOf(path.chapters, state))));
 		}
-		const leave = element('button', 'path-chip__leave', 'Leave path');
+		grid.prepend(identity, status);
+
+		const leave = element('button', 'reading-bar__button', 'Leave path');
 		leave.type = 'button';
-		chip.append(leave);
+		actions.append(leave);
 
 		const nav = element('nav', 'path-next');
 		nav.setAttribute('aria-label', 'Learning path');
@@ -154,9 +177,6 @@ export function follow(paths: LearningPath[], readable: string[] = []) {
 		}
 		nav.append(link);
 
-		const title = main.querySelector('h1');
-		if (title) title.after(chip);
-		else main.prepend(chip);
 		const pager = main.querySelector('nav.pn');
 		if (pager) pager.before(nav);
 		else main.append(nav);
@@ -165,18 +185,27 @@ export function follow(paths: LearningPath[], readable: string[] = []) {
 		leave.addEventListener('click', () => {
 			// The read marks stay: leaving a path forgets which one, not what was read.
 			save({ ...load(), path: undefined });
-			chip.remove();
 			nav.remove();
-			// The button is gone: give focus back to the page where it was, at its title.
-			if (title) {
-				title.tabIndex = -1;
-				title.focus();
+			identity.remove();
+			status.remove();
+			leave.remove();
+			delete root.dataset.path;
+			// The button is gone: focus goes to "Mark as read" next to it, or, when there is none, to the title.
+			const next = actions.querySelector('button');
+			if (next) next.focus();
+			else {
+				root.remove();
+				const title = main.querySelector('h1');
+				if (title) {
+					title.tabIndex = -1;
+					title.focus();
+				}
 			}
 		});
 	}
 
 	function markButton(main: Element, key: string) {
-		const button = element('button', 'read-toggle');
+		const button = element('button', 'reading-bar__button');
 		button.type = 'button';
 		renders.push(() => {
 			const read = state.read.includes(key);
@@ -187,11 +216,8 @@ export function follow(paths: LearningPath[], readable: string[] = []) {
 			save(toggle(load(), key, !load().read.includes(key)));
 			render();
 		});
-		const anchor = main.querySelector('.path-chip') ?? main.querySelector('h1');
-		const wrap = element('p', 'read-toggle__row');
-		wrap.append(button);
-		if (anchor) anchor.after(wrap);
-		else main.prepend(wrap);
+		// First of the buttons: it is about this chapter, "Leave path" about the whole path.
+		readingBar(main).actions.prepend(button);
 		render();
 	}
 
