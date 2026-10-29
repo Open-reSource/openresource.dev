@@ -27,4 +27,36 @@ const { handle } = Astro.props;
 	<bsky-widget data-handle={handle}> </bsky-widget>
 </div>
 
-<script is:inline src="https://unpkg.com/bsky-widget@~0.0/dist/index.js" type="module"></script>
+<script is:inline>
+	// Load the widget, a third-party script, only when the card is about to scroll into view.
+	// The card keeps its reserved height meanwhile, so nothing shifts when it arrives.
+	(function () {
+		var src = 'https://unpkg.com/bsky-widget@0.0.20/dist/index.js';
+		var widget = document.querySelector('bsky-widget');
+		if (!widget || document.querySelector('script[src="' + src + '"]')) return;
+		function load() {
+			var script = document.createElement('script');
+			script.type = 'module';
+			script.src = src;
+			document.head.appendChild(script);
+		}
+		if ('IntersectionObserver' in window) {
+			var observer = new IntersectionObserver(
+				function (entries) {
+					if (
+						entries.some(function (entry) {
+							return entry.isIntersecting;
+						})
+					) {
+						observer.disconnect();
+						load();
+					}
+				},
+				{ rootMargin: '300px' }
+			);
+			observer.observe(widget);
+		} else {
+			load();
+		}
+	})();
+</script>
