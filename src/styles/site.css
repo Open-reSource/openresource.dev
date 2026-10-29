@@ -92,25 +92,36 @@ pre[data-language='md'] {
 }
 
 .path-chip__step {
+	margin-left: var(--space-2);
 	font-family: var(--font-family-mono);
+	color: var(--color-fg);
+}
+
+/* The progress is its own group, in the muted colour where the position is in the main text colour, split from it by a
+   middle dot after the position (decorative, with an empty alternative text so screen readers skip it; at the end of
+   the line rather than the start of the next when the row wraps). */
+.path-chip__step::after {
+	content: '·' / '';
+	margin-left: var(--space-2);
 	color: var(--color-muted);
 }
 
-/* A button, since it clears the path rather than going anywhere, drawn as a quiet link. 24px tall at least (WCAG 2.2,
+/* A button, since it clears the path rather than going anywhere, drawn as an outlined pill at the end of the row. 24px tall at least (WCAG 2.2,
    target size). */
 .path-chip__leave {
 	min-height: var(--space-6);
 	margin-left: auto;
-	padding: 0;
-	border: 0;
+	padding: 0 var(--space-3);
+	border: var(--stroke-hairline) solid var(--color-line);
+	border-radius: var(--radius-pill);
 	background: none;
 	font: inherit;
-	color: var(--color-muted);
+	color: var(--color-fg);
 	cursor: pointer;
 }
 
 .path-chip__leave:hover {
-	color: var(--color-fg);
+	border-color: currentColor;
 	text-decoration: underline;
 }
 
