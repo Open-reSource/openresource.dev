@@ -70,7 +70,7 @@ pre[data-language='md'] {
 .path-chip {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--space-1) var(--space-2);
+	gap: var(--space-1) var(--space-3);
 	align-items: baseline;
 	max-width: 760px;
 	margin: 0 0 var(--space-4);
@@ -92,7 +92,6 @@ pre[data-language='md'] {
 }
 
 .path-chip__step {
-	margin-left: var(--space-2);
 	font-family: var(--font-family-mono);
 	color: var(--color-fg);
 }
@@ -106,11 +105,10 @@ pre[data-language='md'] {
 	color: var(--color-muted);
 }
 
-/* A button, since it clears the path rather than going anywhere, drawn as an outlined pill at the end of the row. 24px tall at least (WCAG 2.2,
-   target size). */
+/* A button, since it clears the path rather than going anywhere, drawn as an outlined pill right after the progress, never pushed to the far edge: when the row is too
+   long it wraps to the next line, left-aligned like the rest. 24px tall at least (WCAG 2.2, target size). */
 .path-chip__leave {
 	min-height: var(--space-6);
-	margin-left: auto;
 	padding: 0 var(--space-3);
 	border: var(--stroke-hairline) solid var(--color-line);
 	border-radius: var(--radius-pill);
