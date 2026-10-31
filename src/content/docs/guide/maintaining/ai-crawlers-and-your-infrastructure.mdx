@@ -1,0 +1,134 @@
+---
+title: "AI Crawlers and Your Project's Infrastructure"
+description: What AI crawlers did to docs sites and forges, and what Read the Docs, SourceHut, GNOME and Fedora did about it, from robots.txt to proof of work.
+date: 2026-10-31
+lastUpdated: 2026-10-31
+related:
+  - guide/maintaining/security-for-maintainers
+  - guide/ai/contribution-policy
+---
+
+import Checklist from '../../../../components/Checklist.astro';
+import InShort from '../../../../components/InShort.astro';
+import Related from '../../../../components/Related.astro';
+import Timeline from '../../../../components/Timeline.astro';
+
+{/* prettier-ignore */}
+<p class="lead">Since 2024, AI crawlers have taken down forges and run up bandwidth bills for open-source projects, and `robots.txt` stopped none of the aggressive ones. What worked was layered: a published opt-out for the polite crawlers, then blocking or challenging at the edge for the rest. Start with the cheap layer and check your bandwidth graph before you buy the next one.</p>
+
+<InShort>
+
+- Read the Docs, SourceHut, GNOME and Fedora all reported crawler traffic that cost them money, uptime or maintainer time between 2024 and 2026.
+- `robots.txt` and the TDM header only stop crawlers that choose to listen.
+- The fix that held up is at the edge: a CDN's bot rules, rate limits, caching, and for a forge a proof-of-work challenge such as Anubis.
+- A static, pre-rendered docs site is the cheap case to serve. Its risk is large downloads, not page views.
+- If you write crawlers or agents yourself, identify them, respect `robots.txt` and slow down.
+
+</InShort>
+
+## Four projects paid for the crawlers in four different ways
+
+Every number below comes from the project's own post, with the date it was published. We re-read each page on October 31, 2026.
+
+<Timeline
+	label="AI crawler incidents reported by open-source infrastructure, 2024 to 2026"
+	entries={[
+		{
+			year: 'Jul 2024',
+			title: 'Read the Docs: 73 TB in one month',
+			detail: 'One crawler, over $5,000 in bandwidth',
+			accent: true,
+		},
+		{ year: 'Mar 2025', title: 'SourceHut: git.sr.ht down for 168 hours', detail: 'Anubis put in front of it' },
+		{ year: 'Apr 2025', title: 'Wikimedia: bots are 65% of the costly traffic', detail: 'But 35% of pageviews' },
+		{ year: 'Dec 2025', title: 'Fedora: more than 100,000 IPs', detail: 'The limit is CPU, not bandwidth' },
+		{ year: 'Mar 2026', title: 'GNOME moves from Anubis to Fastly', detail: 'Bot rules at the edge' },
+	]}
+/>
+
+### Read the Docs: a docs host paid in bandwidth
+
+This is the case closest to a documentation site. In its [July 25, 2024 post](https://about.readthedocs.com/blog/2024/07/ai-crawlers-abuse/), Read the Docs says one AI crawler downloaded 73 TB of zipped HTML in May 2024, about 10 TB of it in a single day, for more than $5,000 in bandwidth charges. The company that ran it answered the email, said a bug caused the repeated downloads and covered the bill.
+
+The second crawler didn't answer. The contact address in its user agent bounced. IP-based rate limiting did little, because the requests came from many addresses. Blocking the traffic Cloudflare identifies as AI crawlers cut bandwidth by about 75%, from roughly 800 GB to 200 GB a day. Read the Docs then planned to cache those files better and to fix an old redirect that bypassed its CDN cache.
+
+### SourceHut: the expensive pages are the target
+
+On March 17, 2025, Drew DeVault wrote that he spent [between 20% and 100% of his week](https://drewdevault.com/blog/Stop-externalizing-your-costs-on-me/) dealing with crawlers. They hit the pages that cost the most to render, such as `git blame`, every log page and every commit. They also ignored `robots.txt`, used random user agents and came from tens of thousands of addresses.
+
+SourceHut's [status page](https://status.sr.ht/issues/2025-03-17-git.sr.ht-llms/) records git.sr.ht as disrupted from March 17 to March 24, 2025, a total of 168 hours 30 minutes. The mitigations were a proof-of-work challenge on git.sr.ht (Anubis), the Nepenthes tarpit on the busiest routes, and blocks on several cloud providers, including GCP and Azure. SourceHut called all of it temporary.
+
+### GNOME: Anubis first, then a CDN
+
+GNOME's GitLab ran Anubis by March 2025, as a [community thread](https://discourse.gnome.org/t/anime-girl-on-gnome-gitlab/27689) from March 14, 2025 shows. On [March 12, 2026](https://discourse.gnome.org/t/gnome-gitlab-bot-management-migration-to-fastly/34358), GNOME announced a move to bot management at Fastly's edge, sponsored by Fastly. The post says Anubis "has provided good results" and that the goal is lower load on GNOME's own servers. By March 17, Anubis was off and Fastly's firewall rules were live, with some visitors getting an HTTP 406 while the rules were tuned. GNOME published no traffic figures, so we quote none.
+
+### Fedora: the bottleneck was the database, not the pipe
+
+In a [December 5, 2025 thread](https://discussion.fedoraproject.org/t/scrapers-and-ideas-for-how-to-deal-with-them/175760), Fedora's Kevin Fenzi wrote that scrapers had loaded Fedora's infrastructure all year, with a second kind coming from more than 100,000 addresses. Anubis stopped the crawlers on known cloud ranges but broke some users' workflows, and the team was fixing those one by one. He also wrote that CPU, not bandwidth, was the limit, because the requests hit database-backed pages, git reads and archive generation.
+
+Wikimedia saw the same shape from the other side. Its [April 1, 2025 report](https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/) found that bots made at least 65% of its most expensive traffic but about 35% of pageviews.
+
+## Level 0: publish the opt-out, and expect only the polite to read it
+
+Put the AI crawlers you want to refuse in `robots.txt`. [ai.robots.txt](https://github.com/ai-robots-txt/ai.robots.txt) maintains the list of user agents and ships it as a `robots.txt` and as ready-made files for Apache, nginx, Caddy, HAProxy and lighttpd, so level 1 can reuse it.
+
+```txt
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+Disallow: /
+```
+
+Those three lines are an example, not the list: copy the current one from ai.robots.txt rather than from this page. `Crawl-delay` is not part of [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309), the `robots.txt` standard, so some crawlers ignore it.
+
+For the EU, the [TDM Reservation Protocol](https://www.w3.org/community/reports/tdmrep/CG-FINAL-tdmrep-20240510/) lets you say in a machine-readable way that you reserve your text-and-data-mining rights. Send the header `tdm-reservation: 1`, or host `/.well-known/tdmrep.json`. It's a Community Group report from May 10, 2024, not a W3C standard. The legal side belongs to the AI chapters of this guide; here it is only the how.
+
+**Everything at this level works only on crawlers that choose to follow it.** DeVault's post and Read the Docs' experience are the reason to keep going.
+
+## Level 1: block and cache at the edge
+
+A CDN or firewall in front of your site can refuse the traffic before it reaches your server, and on Vercel, for one, a denied request doesn't count toward CDN requests or data transfer.
+
+- **Bot rules.** Read the Docs' Cloudflare block is the example above. Cloudflare changed its default on [July 1, 2025](https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/) to block AI crawlers unless they pay, and its [documentation](https://developers.cloudflare.com/bots/additional-configurations/block-ai-bots/) has a **Configure AI bot policies** setting per behavior (search, agent, training). Vercel's firewall has a [challenge action](https://vercel.com/docs/vercel-firewall/firewall-concepts#challenge) that only a browser running JavaScript can pass, and a deny action that returns a 403 before the request is served.
+- **Rate limits.** They help against one address and little against tens of thousands, as Read the Docs found.
+- **Caching.** Cache what's expensive and identical for everyone. SourceHut's targets (blame, logs, commits) and Fedora's (archives, database pages) are exactly those. Read the Docs found a redirect that skipped its cache.
+
+## Level 2: make the client do work
+
+[Anubis](https://github.com/TecharoHQ/anubis) sits in front of your application and makes a browser solve a SHA-256 proof-of-work puzzle before it gets the page. By [default](https://lwn.net/Articles/1028558/) it challenges anything whose user agent contains "Mozilla". Duke University's pilot reported more than 4 million unwanted requests blocked per day, and 12 people with problems in one week, usually because they had cookies disabled (LWN, July 10, 2025).
+
+The trade-offs are written in the project itself. The README calls it "a bit of a nuclear response" that can block well-behaved bots such as the Internet Archive. The challenge runs in JavaScript, so a visitor without it, or without cookies, can be shut out. Fedora's break-in-workflows report is the same cost in practice. And **a challenge is for dynamic applications like forges, wikis and search**, not for pages you can serve from a cache.
+
+Tarpits such as Nepenthes or iocaine feed crawlers endless generated pages. SourceHut used one on its busiest routes, as a temporary measure. Fedora's thread raised the objection that such a maze still uses your bandwidth. Most projects should stop at the previous levels.
+
+## A static docs site is the cheap case
+
+A pre-rendered site costs little to serve per page: no database, no renderer, a CDN in front. Read the Docs' trouble came from bulk downloads of zipped HTML, not from page views. That's our reading, not a rule from any of the sources.
+
+So check what you offer for download: archives, PDFs, source tarballs, an unbounded search endpoint. Put a size limit or a challenge on those and keep the pages open. [llms.txt](https://llmstxt.org/) is the polite door for the crawlers that want your content: a Markdown file, proposed on September 3, 2024, that points them to clean pages. It's a proposal, not a standard, and as of October 2026 we haven't found a major crawler that documents reading it.
+
+## If you build the crawler, be the polite one
+
+SourceHut's status page tells integrators what it wants: webhooks instead of polling, `git fetch` or a shallow clone instead of a fresh clone, and a descriptive user agent with a contact email. Read the Docs' email to a crawler operator was answered by one and bounced for another. Do the same in your tool: name it, give a working contact address, follow `robots.txt`, rate-limit per host and cache what you fetched.
+
+## Do this now
+
+<Checklist id="ai-crawlers-and-your-infrastructure">
+
+- [ ] Open your host's or CDN's bandwidth graph and note the daily average, so a spike has something to be compared with.
+- [ ] Add the AI user agents from ai.robots.txt to your `robots.txt`.
+- [ ] Turn on your CDN's AI bot rules, or add them from the same list at the server.
+- [ ] Find your three most expensive URLs and cache them.
+- [ ] Check what large files you serve, and who can request them.
+- [ ] Decide in advance who may turn on a challenge such as Anubis, and what it breaks for your users.
+
+</Checklist>
+
+## Go further
+
+- [Drew DeVault on externalized costs](https://drewdevault.com/blog/Stop-externalizing-your-costs-on-me/): Drew DeVault's account of what crawlers do to a forge.
+- [Read the Docs on AI crawler abuse](https://about.readthedocs.com/blog/2024/07/ai-crawlers-abuse/): Read the Docs' numbers and what it changed, the closest case to a docs site.
+- [LWN on Anubis](https://lwn.net/Articles/1028558/): LWN's overview of how Anubis works and what it costs your visitors.
+- [ai.robots.txt](https://github.com/ai-robots-txt/ai.robots.txt): the maintained list, in the format of your web server.
+
+<Related />

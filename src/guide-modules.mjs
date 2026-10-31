@@ -86,6 +86,7 @@ export const modules = [
 			'community',
 			'governance',
 			'security-for-maintainers',
+			'ai-crawlers-and-your-infrastructure',
 			'managing-project-dependencies',
 			'burnout-succession-and-the-end',
 		],
