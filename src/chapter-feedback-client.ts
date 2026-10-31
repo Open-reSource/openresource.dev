@@ -1,4 +1,4 @@
-// "Was this chapter useful?" at the end of a written guide chapter: two links, "Yes" and "Not really". Each opens
+// "Was this chapter useful?" in the quiet line at the end of a written guide chapter ("Edited", "Edit on GitHub", "Report a problem"): two links, "Yes" and "Not really". Each opens
 // GitHub's new-discussion form in the site's public Discussions with the chapter and the answer already filled in, so
 // the reader only has to press "Start discussion" (and may add a line). Nothing is sent from this site and nothing is
 // stored on the reader's device: no cookie, no local storage. Injected on every page by
@@ -28,36 +28,39 @@ export function askFeedback(readable: string[]) {
 	if (!main) return;
 	const title = main.querySelector('h1')?.textContent?.trim() || document.title;
 
-	const root = document.createElement('section');
-	root.className = 'chapter-feedback';
-	root.setAttribute('aria-labelledby', 'chapter-feedback-title');
+	// The quiet line under the chapter: "Edited …", "Edit on GitHub", "Report a problem". The question joins it, in the
+	// same style, so it never competes with "Next in path" and the previous/next cards. The line exists twice (under the
+	// article on a phone, under the table of contents on a wide screen): the question goes into each.
+	const lines = [...document.querySelectorAll('a')]
+		.filter((a) => a.textContent?.trim() === 'Report a problem')
+		.map((a) => a.parentElement)
+		.filter((line): line is HTMLElement => !!line);
+	if (lines.length === 0) return;
 
-	const heading = document.createElement('h2');
-	heading.id = 'chapter-feedback-title';
-	heading.className = 'chapter-feedback__title';
-	heading.textContent = 'Was this chapter useful?';
+	lines.forEach((line, index) => {
+		const root = document.createElement('span');
+		root.className = 'chapter-feedback';
+		root.setAttribute('role', 'group');
+		root.setAttribute('aria-labelledby', `chapter-feedback-title-${index}`);
 
-	const actions = document.createElement('div');
-	actions.className = 'chapter-feedback__actions';
-	for (const [answer, label] of [
-		['yes', 'Yes'],
-		['no', 'Not really'],
-	] as const) {
-		const link = document.createElement('a');
-		link.className = 'chapter-feedback__link';
-		link.href = feedbackUrl({ path, title }, answer);
-		link.target = '_blank';
-		link.rel = 'noopener noreferrer';
-		link.textContent = label;
-		actions.append(link);
-	}
+		const question = document.createElement('span');
+		question.id = `chapter-feedback-title-${index}`;
+		question.textContent = 'Was this chapter useful?';
+		root.append(question);
 
-	const note = document.createElement('p');
-	note.className = 'chapter-feedback__note';
-	note.textContent = 'Your answer opens a public discussion on GitHub. This site stores nothing about you.';
-
-	root.append(heading, actions, note);
-	const pager = main.querySelector('nav.pn');
-	if (pager) pager.before(root);
-	else main.append(root);
+		for (const [answer, label, name] of [
+			['yes', 'Yes', 'Yes, this chapter was useful'],
+			['no', 'Not really', 'Not really, this chapter was not useful'],
+		] as const) {
+			const link = document.createElement('a');
+			link.href = feedbackUrl({ path, title }, answer);
+			link.target = '_blank';
+			link.rel = 'noopener noreferrer';
+			link.textContent = label;
+			link.setAttribute('aria-label', `${name} (opens a GitHub discussion)`);
+			link.title = 'Opens a public discussion on GitHub. This site stores nothing about you.';
+			root.append(link);
+		}
+		line.append(root);
+	});
 }

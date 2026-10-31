@@ -276,41 +276,24 @@ main .path-next + .pn {
 	margin-top: var(--space-4);
 }
 
-/* "Was this chapter useful?" (src/chapter-feedback-client.ts): two links to a pre-filled GitHub discussion. */
+/* "Was this chapter useful?" (src/chapter-feedback-client.ts): joins the quiet "Edited / Edit on GitHub / Report a
+   problem" line, in its style. The links get their colour and height from that line. */
 .chapter-feedback {
-	max-width: 760px;
-	margin-top: var(--space-12);
-	padding: var(--space-3) var(--space-4);
-	border: var(--stroke-hairline) solid var(--color-primary-dim);
-}
-
-.chapter-feedback__title {
-	margin: 0 0 var(--space-2);
-	font-size: var(--font-size-md);
-}
-
-.chapter-feedback__actions {
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
-	gap: var(--space-2);
+	align-items: center;
+	gap: 0 var(--space-3);
+	min-height: 24px;
 }
 
-.chapter-feedback__link {
-	padding: var(--space-1) var(--space-3);
-	border: var(--stroke-hairline) solid var(--color-primary-dim);
-	color: var(--color-fg);
+.chapter-feedback a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
 }
 
-:root .chapter-feedback__link:hover {
-	border-color: var(--color-primary);
-	color: var(--color-fg);
-}
-
-.chapter-feedback__note {
-	margin: var(--space-2) 0 0;
-	font-size: var(--font-size-sm);
-}
-
-main .chapter-feedback + .pn {
-	margin-top: var(--space-4);
+@media (min-width: 980px) {
+	.chapter-feedback a {
+		min-height: 24px;
+	}
 }
