@@ -3,7 +3,7 @@
 // the reader only has to press "Start discussion" (and may add a line). Nothing is sent from this site and nothing is
 // stored on the reader's device: no cookie, no local storage. Injected on every page by
 // `src/learning-paths-integration.mjs`; without JavaScript the pages read as before.
-export const DISCUSSIONS = 'https://github.com/Open-reSource/openresource.dev/discussions/new';
+export const DISCUSSIONS = 'https://github.com/orgs/Open-reSource/discussions/new';
 
 export type Answer = 'yes' | 'no';
 
