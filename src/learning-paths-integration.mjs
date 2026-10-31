@@ -35,7 +35,7 @@ export const learningPaths = () => ({
 		'astro:config:setup': ({ injectScript }) => {
 			injectScript(
 				'page',
-				`import { follow } from '/src/learning-paths-client.ts'; follow(${JSON.stringify(pathData())}, ${JSON.stringify(readableChapters())});`
+				`import { follow } from '/src/learning-paths-client.ts'; import { askFeedback } from '/src/chapter-feedback-client.ts'; follow(${JSON.stringify(pathData())}, ${JSON.stringify(readableChapters())}); askFeedback(${JSON.stringify(readableChapters())});`
 			);
 		},
 	},
