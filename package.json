@@ -52,6 +52,9 @@
     "yaml": "^2.9.1"
   },
   "overrides": {
+    "@vercel/nft": {
+      "glob": "^14.0.2"
+    },
     "@vercel/cli-config": {
       "zod": "^4.6.6"
     },
