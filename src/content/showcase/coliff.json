@@ -4,10 +4,10 @@
     {
       "type": "github_repo",
       "avatarUrl": "https://avatars.githubusercontent.com/u/42865284?v=4&s=50",
-      "contributors": 77,
+      "contributors": 76,
       "description": "⚙️ The static code analysis tool you need for your HTML",
       "discussions": 7,
-      "forks": 480,
+      "forks": 481,
       "issues": 36,
       "languages": [
         "JavaScript",
@@ -19,8 +19,8 @@
       ],
       "name": "HTMLHint",
       "owner": "htmlhint",
-      "prs": 4,
-      "stars": 3315,
+      "prs": 10,
+      "stars": 3316,
       "url": "https://github.com/htmlhint/HTMLHint"
     }
   ]
