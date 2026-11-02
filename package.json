@@ -22,13 +22,13 @@
     "update:showcase": "tsx scripts/update-showcase.ts"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.10",
-    "@astrojs/mdx": "^8.1.0",
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/mdx": "^8.1.1",
     "@astrojs/sitemap": "^3.7.4",
-    "@astrojs/vercel": "^11.0.15",
+    "@astrojs/vercel": "^11.0.16",
     "@deramond.dev/astro": "^0.17.1",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^7.4.0"
+    "astro": "^7.4.2"
   },
   "devDependencies": {
     "@actions/core": "^3.0.1",
@@ -38,13 +38,13 @@
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
     "cspell": "^10.4.0",
-    "dotenv": "^18.0.8",
+    "dotenv": "^18.0.9",
     "gemoji": "^8.1.0",
-    "linkedom": "^0.18.13",
+    "linkedom": "^0.18.14",
     "parse-github-url": "^1.0.4",
     "playwright": "^1.64.1",
     "prettier": "^3.9.10",
-    "prettier-plugin-astro": "^1.1.1",
+    "prettier-plugin-astro": "^1.1.2",
     "satteri": "^0.10.5",
     "sharp": "^0.35.5",
     "tsx": "^4.23.15",
