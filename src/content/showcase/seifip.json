@@ -1,0 +1,23 @@
+{
+  "author": "seifip",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/636168?u=d23f11a817c49b75d50476040db542542aacc1b8&v=4&s=50",
+      "contributors": 2,
+      "description": "macOS network diagnostics CLI and MCP server",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "Swift",
+        "Python"
+      ],
+      "name": "kilobat-cli",
+      "owner": "seifip",
+      "prs": 0,
+      "stars": 1,
+      "url": "https://github.com/seifip/kilobat-cli"
+    }
+  ]
+}

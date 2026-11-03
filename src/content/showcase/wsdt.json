@@ -7,8 +7,8 @@
       "contributors": 5,
       "description": "The AI agent-native systems programming language: Meaning in. Verified machine code out. All target OS, memory managed through Ownership & fully interoperable with existing ecosystems & object-oriented AI Agents with payment capability.",
       "discussions": 1,
-      "forks": 3,
-      "issues": 127,
+      "forks": 4,
+      "issues": 145,
       "languages": [
         "Rust",
         "Python",
@@ -21,7 +21,7 @@
       ],
       "name": "semaprax",
       "owner": "wavect",
-      "prs": 1,
+      "prs": 8,
       "stars": 25,
       "url": "https://github.com/wavect/semaprax"
     }
