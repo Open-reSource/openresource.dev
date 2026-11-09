@@ -25,7 +25,7 @@
       "description": "Hugolify theme is a framework-agnostic core theme for Hugo",
       "discussions": 0,
       "forks": 6,
-      "issues": 4,
+      "issues": 2,
       "languages": [
         "HTML",
         "JavaScript"
@@ -42,7 +42,7 @@
       "contributors": 4,
       "description": "Admin for Hugolify allowing the build of the config file for different Headless (CloudCannon, Decap, Netlify, Pages, Static, Sveltia and Tina CMS)",
       "discussions": 0,
-      "forks": 6,
+      "forks": 5,
       "issues": 0,
       "languages": [
         "JavaScript",
@@ -51,7 +51,7 @@
       ],
       "name": "hugolify-admin",
       "owner": "Hugolify",
-      "prs": 2,
+      "prs": 1,
       "stars": 15,
       "url": "https://github.com/Hugolify/hugolify-admin"
     }
