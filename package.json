@@ -23,12 +23,12 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.12",
-    "@astrojs/mdx": "^8.1.1",
+    "@astrojs/mdx": "^8.1.2",
     "@astrojs/sitemap": "^3.7.4",
-    "@astrojs/vercel": "^11.0.16",
+    "@astrojs/vercel": "^11.0.17",
     "@deramond.dev/astro": "^0.17.1",
     "@vercel/analytics": "^2.0.1",
-    "astro": "^7.4.2"
+    "astro": "^7.4.4"
   },
   "devDependencies": {
     "@actions/core": "^3.0.1",
@@ -40,12 +40,12 @@
     "cspell": "^10.4.0",
     "dotenv": "^18.0.9",
     "gemoji": "^8.1.0",
-    "linkedom": "^0.18.14",
+    "linkedom": "^0.18.15",
     "parse-github-url": "^1.0.4",
     "playwright": "^1.64.1",
     "prettier": "^3.9.10",
     "prettier-plugin-astro": "^1.1.2",
-    "satteri": "^0.10.5",
+    "satteri": "^0.11.6",
     "sharp": "^0.35.5",
     "tsx": "^4.23.15",
     "vitest": "^5.0.5",
