@@ -7,7 +7,7 @@
       "contributors": 12,
       "description": "Formula workbooks for Node services: edit inputs, recalculate formulas, read outputs, persist WorkPaper JSON, and expose MCP tools.",
       "discussions": 15,
-      "forks": 18,
+      "forks": 17,
       "issues": 0,
       "languages": [
         "TypeScript",

@@ -3,12 +3,12 @@
   "links": [
     {
       "type": "github_repo",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/57086651?u=8440c62beb8507910c8792298f8ecc4a028fc015&v=4&s=50",
-      "contributors": 44,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/57086651?u=7e2ed9ef55b661156d426a24916d5e723ad7231a&v=4&s=50",
+      "contributors": 45,
       "description": "Multi-framework streaming Markdown renderers for AI apps: Vue/Nuxt, React/Next.js, Octane, SolidJS, Svelte, Angular, and Vue 2. Mermaid, KaTeX, streaming code blocks, SSR, and virtualized histories.",
       "discussions": 10,
-      "forks": 188,
-      "issues": 1,
+      "forks": 189,
+      "issues": 0,
       "languages": [
         "Vue",
         "JavaScript",
@@ -19,7 +19,7 @@
       "name": "markstream-vue",
       "owner": "Simon-He95",
       "prs": 0,
-      "stars": 3053,
+      "stars": 3060,
       "url": "https://github.com/Simon-He95/markstream-vue"
     }
   ]
