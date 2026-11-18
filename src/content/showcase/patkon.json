@@ -6,14 +6,14 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/111341601?v=4&s=50",
       "contributors": 6,
       "description": "Web Content Management System for Websites, Blogs and Shops",
-      "discussions": 13,
+      "discussions": 14,
       "forks": 2,
-      "issues": 12,
+      "issues": 10,
       "languages": [
         "PHP",
+        "Twig",
         "Smarty",
         "SCSS",
-        "Twig",
         "Shell",
         "JavaScript",
         "HTML"

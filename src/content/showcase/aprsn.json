@@ -1,0 +1,22 @@
+{
+  "author": "aprsn",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/278097995?v=4&s=50",
+      "contributors": 1,
+      "description": "Official TypeScript SDK for the SiftingIO market data API, REST + live WebSocket, in one isomorphic package.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 0,
+      "languages": [
+        "TypeScript"
+      ],
+      "name": "sdk-typescript",
+      "owner": "SiftingIO",
+      "prs": 1,
+      "stars": 0,
+      "url": "https://github.com/SiftingIO/sdk-typescript"
+    }
+  ]
+}

@@ -7,8 +7,8 @@
       "contributors": 142,
       "description": "Configuration Management for Python ⚙",
       "discussions": 65,
-      "forks": 349,
-      "issues": 147,
+      "forks": 351,
+      "issues": 148,
       "languages": [
         "Python",
         "Makefile",
@@ -18,8 +18,8 @@
       ],
       "name": "dynaconf",
       "owner": "dynaconf",
-      "prs": 24,
-      "stars": 4338,
+      "prs": 26,
+      "stars": 4339,
       "url": "https://github.com/dynaconf/dynaconf"
     },
     {
@@ -58,7 +58,7 @@
       "name": "py2rs",
       "owner": "rochacbruno",
       "prs": 6,
-      "stars": 2092,
+      "stars": 2093,
       "url": "https://github.com/rochacbruno/py2rs"
     }
   ]
