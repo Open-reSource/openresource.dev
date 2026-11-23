@@ -23,9 +23,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.12",
-    "@astrojs/mdx": "^8.1.3",
-    "@astrojs/sitemap": "^3.7.4",
-    "@astrojs/vercel": "^11.0.20",
+    "@astrojs/mdx": "^8.1.6",
+    "@astrojs/sitemap": "^3.7.5",
+    "@astrojs/vercel": "^11.0.22",
     "@deramond.dev/astro": "^0.17.1",
     "@vercel/analytics": "^2.0.1",
     "astro": "^7.4.4"
@@ -37,13 +37,13 @@
     "@octokit/graphql": "^9.0.5",
     "@octokit/graphql-schema": "^15.26.1",
     "@types/parse-github-url": "^1.0.3",
-    "cspell": "^10.4.1",
+    "cspell": "^10.5.1",
     "dotenv": "^18.0.10",
     "gemoji": "^8.1.0",
     "linkedom": "^0.18.15",
     "parse-github-url": "^1.0.4",
-    "playwright": "^1.65.0",
-    "prettier": "^3.9.10",
+    "playwright": "^1.65.1",
+    "prettier": "^3.10.1",
     "prettier-plugin-astro": "^1.1.2",
     "satteri": "^0.11.7",
     "sharp": "^0.35.5",
@@ -52,12 +52,6 @@
     "yaml": "^2.9.1"
   },
   "overrides": {
-    "@vercel/nft": {
-      "glob": "^14.0.2"
-    },
-    "@vercel/cli-config": {
-      "zod": "^4.6.6"
-    },
     "@vercel/routing-utils": {
       "path-to-regexp": "6.3.0"
     },
