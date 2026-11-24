@@ -119,13 +119,18 @@ export class ShowcaseScraper {
 					}
 				}
 
-				const dedupedLinks = links.filter((link) => !knownLinks.has(link.url));
-
-				if (dedupedLinks.length > 0) {
-					for (const link of dedupedLinks) {
-						knownLinks.add(link.url);
+				// Dedupe within the comment too: a repo link and a link to one of its pages (a release, a file)
+				// both resolve to the same repository URL.
+				const dedupedLinks = links.filter((link) => {
+					if (knownLinks.has(link.url)) {
+						return false;
 					}
 
+					knownLinks.add(link.url);
+					return true;
+				});
+
+				if (dedupedLinks.length > 0) {
 					const existingLinks = showcasesKeyedByAuthor.get(comment.author)?.links ?? [];
 					showcasesKeyedByAuthor.set(comment.author, {
 						author: comment.author,

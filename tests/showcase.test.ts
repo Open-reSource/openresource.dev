@@ -219,6 +219,17 @@ test('should dedupe identical links from the same user', async () => {
 	expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: link, type: 'github' });
 });
 
+test('should dedupe links to the same GitHub repo from the same comment', async () => {
+	const repoLink = getTestGitHubLink('user', 'repo');
+
+	const scraper = getTestScrapper([[repoLink, `${repoLink}/releases/tag/v1.0.0`, `${repoLink}/blob/main/README.md`]]);
+
+	const showcases = await scraper.run();
+
+	expect(showcases.at(0)?.links).toHaveLength(1);
+	expect(showcases.at(0)?.links.at(0)).toMatchObject({ url: repoLink, type: 'github_repo' });
+});
+
 test('should dedupe identical links from multiple users', async () => {
 	const link = getTestGitHubProfileLink();
 
