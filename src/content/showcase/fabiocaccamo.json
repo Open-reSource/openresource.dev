@@ -17,7 +17,7 @@
       "name": "FCUUID",
       "owner": "fabiocaccamo",
       "prs": 1,
-      "stars": 1647,
+      "stars": 1645,
       "url": "https://github.com/fabiocaccamo/FCUUID"
     },
     {
@@ -36,8 +36,8 @@
       ],
       "name": "django-admin-interface",
       "owner": "fabiocaccamo",
-      "prs": 10,
-      "stars": 2049,
+      "prs": 11,
+      "stars": 2050,
       "url": "https://github.com/fabiocaccamo/django-admin-interface"
     },
     {
@@ -47,7 +47,7 @@
       "description": "📘 dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, html, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.",
       "discussions": 3,
       "forks": 82,
-      "issues": 11,
+      "issues": 12,
       "languages": [
         "Python",
         "HTML",
@@ -56,8 +56,8 @@
       ],
       "name": "python-benedict",
       "owner": "fabiocaccamo",
-      "prs": 24,
-      "stars": 1607,
+      "prs": 26,
+      "stars": 1606,
       "url": "https://github.com/fabiocaccamo/python-benedict"
     },
     {
@@ -85,7 +85,7 @@
       "description": "🎨 color field for django models with a nice color-picker in the admin.",
       "discussions": 2,
       "forks": 95,
-      "issues": 3,
+      "issues": 4,
       "languages": [
         "Python",
         "JavaScript",
@@ -94,7 +94,7 @@
       "name": "django-colorfield",
       "owner": "fabiocaccamo",
       "prs": 8,
-      "stars": 659,
+      "stars": 658,
       "url": "https://github.com/fabiocaccamo/django-colorfield"
     },
     {
@@ -113,7 +113,7 @@
       "name": "django-treenode",
       "owner": "fabiocaccamo",
       "prs": 7,
-      "stars": 805,
+      "stars": 806,
       "url": "https://github.com/fabiocaccamo/django-treenode"
     },
     {
@@ -131,7 +131,7 @@
       "name": "django-maintenance-mode",
       "owner": "fabiocaccamo",
       "prs": 2,
-      "stars": 529,
+      "stars": 528,
       "url": "https://github.com/fabiocaccamo/django-maintenance-mode"
     },
     {
@@ -231,14 +231,14 @@
       "contributors": 8,
       "description": "🇮🇹 💳 italian fiscal codes encoding, decoding and validation - codifica, decodifica e validazione del Codice Fiscale italiano.",
       "discussions": 1,
-      "forks": 31,
+      "forks": 32,
       "issues": 0,
       "languages": [
         "Python"
       ],
       "name": "python-codicefiscale",
       "owner": "fabiocaccamo",
-      "prs": 3,
+      "prs": 4,
       "stars": 91,
       "url": "https://github.com/fabiocaccamo/python-codicefiscale"
     },
@@ -272,8 +272,8 @@
       ],
       "name": "python-fontbro",
       "owner": "fabiocaccamo",
-      "prs": 1,
-      "stars": 75,
+      "prs": 0,
+      "stars": 76,
       "url": "https://github.com/fabiocaccamo/python-fontbro"
     },
     {

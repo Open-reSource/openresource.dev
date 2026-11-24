@@ -1,0 +1,31 @@
+{
+  "author": "bbrainfuckk",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/55968278?u=4033d5b66862e066eb0bd7843c64fc1b6d8be7f5&v=4&s=50",
+      "contributors": 2,
+      "description": "Open-source Rust tool that indexes your project locally and gives AI coding tools cited lines instead of whole files. Windows app: Qorx Void in the Microsoft Store.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 2,
+      "languages": [
+        "Rust",
+        "PowerShell",
+        "HTML",
+        "Python",
+        "JavaScript",
+        "Jupyter Notebook",
+        "Shell",
+        "Nix",
+        "Dockerfile",
+        "Batchfile"
+      ],
+      "name": "qorx",
+      "owner": "bbrainfuckk",
+      "prs": 1,
+      "stars": 1,
+      "url": "https://github.com/bbrainfuckk/qorx"
+    }
+  ]
+}

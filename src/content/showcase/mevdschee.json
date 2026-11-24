@@ -7,8 +7,8 @@
       "contributors": 40,
       "description": "Single file PHP script that adds a REST API to a SQL database",
       "discussions": 0,
-      "forks": 1023,
-      "issues": 83,
+      "forks": 1022,
+      "issues": 84,
       "languages": [
         "PHP",
         "Shell",
@@ -53,7 +53,7 @@
       "name": "otp4win",
       "owner": "mevdschee",
       "prs": 0,
-      "stars": 0,
+      "stars": 1,
       "url": "https://github.com/mevdschee/otp4win"
     }
   ]

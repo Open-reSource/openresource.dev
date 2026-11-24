@@ -7,8 +7,8 @@
       "contributors": 27,
       "description": "A PDF viewer that seamlessly integrates with any JavaScript project",
       "discussions": 47,
-      "forks": 329,
-      "issues": 207,
+      "forks": 336,
+      "issues": 231,
       "languages": [
         "TypeScript",
         "MDX",
@@ -23,8 +23,8 @@
       ],
       "name": "embed-pdf-viewer",
       "owner": "embedpdf",
-      "prs": 62,
-      "stars": 4649,
+      "prs": 71,
+      "stars": 4681,
       "url": "https://github.com/embedpdf/embed-pdf-viewer"
     }
   ]

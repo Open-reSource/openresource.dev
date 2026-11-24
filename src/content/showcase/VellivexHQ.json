@@ -8,16 +8,17 @@
       "description": "Experimental, AI-assisted privacy tools: VVault passphrase encryption, VRelay ciphertext handling, VGuard Android candidate and V Cipher two-phone research. Free GPL-3.0-or-later; unaudited, synthetic testing only.",
       "discussions": 0,
       "forks": 0,
-      "issues": 1,
+      "issues": 2,
       "languages": [
         "JavaScript",
-        "Java",
+        "Kotlin",
         "Python",
+        "Java",
         "Shell"
       ],
       "name": "v-security-suite",
       "owner": "Vellivex",
-      "prs": 1,
+      "prs": 8,
       "stars": 0,
       "url": "https://github.com/Vellivex/v-security-suite"
     }

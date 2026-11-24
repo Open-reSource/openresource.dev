@@ -9,9 +9,7 @@
       "discussions": 0,
       "forks": 7,
       "issues": 1,
-      "languages": [
-        "JavaScript"
-      ],
+      "languages": [],
       "name": "hugolify-template",
       "owner": "Hugolify",
       "prs": 0,
@@ -33,7 +31,7 @@
       "name": "hugolify-theme",
       "owner": "Hugolify",
       "prs": 3,
-      "stars": 26,
+      "stars": 27,
       "url": "https://github.com/Hugolify/hugolify-theme"
     },
     {
