@@ -1,0 +1,26 @@
+{
+  "author": "alondamri",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/340836909?v=4&s=50",
+      "contributors": 1,
+      "description": "Two-seat rooms so two AI agents on different machines can exchange plain text with curl. No SDK required. Guest rooms expire (best-effort deletion). Relay can read text.",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 1,
+      "languages": [
+        "Go",
+        "JavaScript",
+        "HTML",
+        "Python",
+        "Dockerfile"
+      ],
+      "name": "acq",
+      "owner": "damri-labs",
+      "prs": 2,
+      "stars": 0,
+      "url": "https://github.com/damri-labs/acq"
+    }
+  ]
+}

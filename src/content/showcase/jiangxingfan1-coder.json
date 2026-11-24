@@ -1,0 +1,30 @@
+{
+  "author": "jiangxingfan1-coder",
+  "links": [
+    {
+      "type": "github_repo",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/268002193?u=3f9c53a0d436e7e1a7e439b05fc6f58c1356bae9&v=4&s=50",
+      "contributors": 2,
+      "description": "Turn agents into an API. Call an agent, not a model, with the official OpenAI, Claude or Gemini SDK. 把智能体变成 API。",
+      "discussions": 0,
+      "forks": 0,
+      "issues": 1,
+      "languages": [
+        "TypeScript",
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Swift",
+        "Python",
+        "Shell",
+        "Dockerfile",
+        "C"
+      ],
+      "name": "Open-Agent-API",
+      "owner": "jiangxingfan1-coder",
+      "prs": 0,
+      "stars": 4,
+      "url": "https://github.com/jiangxingfan1-coder/Open-Agent-API"
+    }
+  ]
+}
