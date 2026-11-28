@@ -37,11 +37,30 @@ const { id } = Astro.props;
 		text-indent: -1.6em;
 	}
 
+	/* Each box is a control: 16 px, square, framed in the control line; ticked, it fills with ink. */
 	.checklist :global(.task-list-item input) {
-		width: 1em;
+		appearance: none;
+		position: relative;
+		top: 2px;
+		width: 16px;
+		height: 16px;
 		margin: 0 0.6em 0 0;
+		border: 1.5px solid var(--paper-color-line-control);
+		border-radius: 0;
+		background: none;
 		text-indent: 0;
-		accent-color: var(--color-primary);
+		vertical-align: baseline;
+		cursor: pointer;
+	}
+
+	.checklist :global(.task-list-item input:checked) {
+		border-color: var(--paper-color-ink);
+		background: var(--paper-color-ink);
+	}
+
+	.checklist :global(.task-list-item input:focus-visible) {
+		outline: var(--paper-stroke-focus) solid var(--paper-color-ink);
+		outline-offset: 3px;
 	}
 
 	.checklist__actions {
@@ -55,8 +74,8 @@ const { id } = Astro.props;
 	}
 
 	.checklist__status {
-		font: var(--type-mono);
-		color: var(--color-muted);
+		font: var(--paper-type-small);
+		color: var(--paper-color-muted);
 	}
 </style>
 

@@ -11,7 +11,7 @@ export interface Props {
 const { href, name, picture, description } = Astro.props;
 ---
 
-<a class="entry not-content" href={href}>
+<a class="entry island not-content" href={href}>
 	{picture && <img src={picture} alt="" width="48" height="48" loading="lazy" />}
 	<span class="text">
 		<span class="name" set:html={name} />
@@ -26,20 +26,25 @@ const { href, name, picture, description } = Astro.props;
 		align-items: flex-start;
 		min-width: 0;
 		padding: var(--space-4);
-		border: var(--stroke-hairline) solid var(--color-line);
-		background: var(--color-panel);
-		color: var(--color-fg);
+		color: var(--paper-color-reading);
 		text-decoration: none;
 	}
 
-	.entry:hover,
+	/* Paper left standing in the showcase's tray: the card never lifts, its name answers the hover. */
+	.entry:hover .name {
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 0.18em;
+	}
+
 	.entry:focus-visible {
-		border-color: var(--color-primary);
+		outline: var(--paper-stroke-focus) solid var(--paper-color-ink);
+		outline-offset: var(--paper-stroke-focus-offset-raised);
 	}
 
 	img {
 		flex: none;
-		border-radius: var(--radius-sm);
+		border-radius: 0;
 	}
 
 	.text {
@@ -49,14 +54,17 @@ const { href, name, picture, description } = Astro.props;
 	}
 
 	.name {
-		font-family: var(--font-family-display);
-		font-weight: var(--font-weight-semibold);
+		font: var(--paper-type-tile);
+		font-size: 19px;
+		letter-spacing: var(--paper-type-tile-letter-spacing);
+		text-transform: uppercase;
+		color: var(--paper-color-ink);
 		overflow-wrap: anywhere;
 	}
 
 	.description {
-		color: var(--color-muted);
-		font-size: var(--font-size-sm);
+		font: var(--paper-type-table);
+		color: var(--paper-color-muted);
 		overflow-wrap: anywhere;
 	}
 </style>

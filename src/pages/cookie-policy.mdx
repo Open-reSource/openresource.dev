@@ -1,15 +1,20 @@
 ---
 layout: ../layouts/Page.astro
 title: Cookie Policy
-description: This website uses neither cookies nor local storage. Our cookie-free policy prioritizes your privacy.
+description: This website uses no cookies. Your browser keeps the theme you pick, your reading progress and checklist ticks, and a marker for the current tab, on your device only.
 ---
 
 export const prerender = true;
 
 {/* prettier-ignore */}
-<p class="lead">This website does not use cookies, and it does not use local storage either.</p>
+<p class="lead">This website does not use cookies. Your browser keeps a few small notes for it, and none of them ever leaves your device.</p>
 
-Nothing is stored on your device when you browse this website: no preferences, no login information, no tracking identifier.
+- **The theme you pick.** When you choose Light or Dark in the theme menu at the top of the page, your browser keeps that choice in its local storage, under the name `paper-theme`, so the next page opens in the same theme. Choosing Auto deletes it, and the site follows your system's setting again.
+- **Your reading progress.** When you follow a learning path or mark a chapter as read, your browser keeps the path and the chapters you've read in its local storage, under the name `learning-path`. The reset at the end of [Start here](/guide/start/) deletes it.
+- **Your checklist ticks.** When you tick a box in one of the guide's checklists, your browser keeps the ticks in its local storage, under a name that starts with `checklist:`, so they're still there next time.
+- **A visit marker.** On your first page, the site writes `d-mark-seen` in your browser's session storage, so the logo's arrival animation plays once per visit and not on every page. Your browser deletes it when you close the tab.
+
+Nothing else is stored: no login information, no tracking identifier. None of these notes is sent to us or to anyone else. Clearing this website's data in your browser deletes them all.
 
 The "Was this chapter useful?" links at the end of guide chapters are plain links to GitHub. If you follow one, GitHub's own policies apply on its site; this website records nothing.
 

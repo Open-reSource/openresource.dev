@@ -52,10 +52,11 @@ const sections = categories.map((category) => ({
 </open-tools>
 
 <style>
+	/* The filter prints like the nav: Courier 13 muted, the chosen category in ink 700 over a 1.5 px ink rule. */
 	.tools__filter {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-2);
+		gap: 10px 26px;
 		margin: var(--space-5) 0;
 	}
 
@@ -64,17 +65,23 @@ const sections = categories.map((category) => ({
 	}
 
 	.tools__filter button {
-		padding: var(--space-1) var(--space-3);
-		border: var(--stroke-hairline) solid var(--color-line);
-		background: transparent;
-		color: inherit;
-		font: inherit;
+		padding: 4px 0;
+		border: 0;
+		border-bottom: 1.5px solid transparent;
+		background: none;
+		font: var(--paper-type-small);
+		color: var(--paper-color-muted);
 		cursor: pointer;
 	}
 
+	.tools__filter button:hover {
+		color: var(--paper-color-ink);
+	}
+
 	.tools__filter button[aria-pressed='true'] {
-		border-color: var(--color-primary);
-		background: var(--color-panel);
+		border-bottom-color: var(--paper-color-ink);
+		font-weight: var(--paper-font-weight-bold);
+		color: var(--paper-color-ink);
 	}
 
 	.tools__category[hidden] {

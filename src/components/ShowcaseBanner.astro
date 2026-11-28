@@ -4,14 +4,16 @@ import Button from '@deramond.dev/astro/components/Button.astro';
 const { showProjectsButton = false } = Astro.props;
 ---
 
-<section class="showcase-banner d-cut">
-	<h2>Showcase your projects</h2>
-	<p>
-		<strong>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong>
-	</p>
-	<p>
-		Submit your open-source project(s), profiles or websites to the showcase and let the community discover your work.
-	</p>
+<section class="showcase-banner cut">
+	<div>
+		<h2>Showcase your projects</h2>
+		<p>
+			<strong>Explore what the Open &#123;re&#125;Source community builds for the open source world.</strong>
+		</p>
+		<p>
+			Submit your open-source project(s), profiles or websites to the showcase and let the community discover your work.
+		</p>
+	</div>
 	<div class="actions">
 		<Button href="https://github.com/orgs/Open-reSource/discussions/3">Submit your project(s)</Button>
 		{showProjectsButton && (
@@ -23,31 +25,38 @@ const { showProjectsButton = false } = Astro.props;
 </section>
 
 <style>
+	/* A slot cut in the page: the words on its floor, the actions at their foot on the right (one column under 901 px). */
 	.showcase-banner {
-		padding: var(--space-7);
-		border: var(--stroke-hairline) solid var(--color-line);
-		border-left: var(--stroke-bracket) solid var(--color-primary);
-		background: var(--color-panel);
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 20px 48px;
+		align-items: end;
+		padding: 32px 38px 30px;
 	}
 
 	h2 {
-		margin: 0 0 var(--space-4);
-		font: var(--type-heading);
+		margin: 0 0 10px;
+		font: var(--paper-type-tile);
+		letter-spacing: var(--paper-type-tile-letter-spacing);
 	}
 
 	p {
-		margin: 0 0 var(--space-3);
-		color: var(--color-muted);
-	}
-
-	strong {
-		color: var(--color-fg);
+		max-width: 58ch;
+		margin: 10px 0 0;
+		color: var(--paper-color-reading);
 	}
 
 	.actions {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-3);
-		margin-top: var(--space-5);
+		align-items: center;
+		gap: 14px 22px;
+	}
+
+	@media (max-width: 900px) {
+		.showcase-banner {
+			grid-template-columns: minmax(0, 1fr);
+			padding: 24px 22px;
+		}
 	}
 </style>

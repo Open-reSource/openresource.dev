@@ -9,8 +9,6 @@ head:
       content: 'website'
 ---
 
-![](../../../assets/resources/podcasts.svg)
-
 Podcasts about open source, with one episode to start with for each. Every show below published an episode in September or October 2026; we checked each feed on 8 October 2026.
 
 ## Shows about the people who maintain open source

@@ -1,7 +1,7 @@
 ---
 // Who does what, as a funnel: one bar per stage, as wide as its share and aligned left, so the bars read from a common edge and the shape
-// narrows as it goes down. Real text in a list, so it reads at every width and in a screen reader. At most one gold bar (`accent`): the
-// stage the reader is here for.
+// narrows as it goes down. Real text in a list, so it reads at every width and in a screen reader. At most one stage the reader is here for
+// (`accent`): its bar stays ink, its words go under the highlighter, the figure's one yellow.
 export interface Stage {
 	label: string;
 	/** Share of the whole, 0 to 100: the bar's width. */
@@ -29,7 +29,9 @@ const { stages, label, caption } = Astro.props;
 					<span class="funnel__bar" style={`--share: ${share}%`} />
 				</span>
 				<span class="funnel__text">
-					<span class="funnel__value">{value}</span> <span class="funnel__label">{label}</span>
+					<span class:list={{ hl: accent }}>
+						<span class="funnel__value">{value}</span> <span class="funnel__label">{label}</span>
+					</span>
 					{detail && <span class="funnel__detail">{detail}</span>}
 				</span>
 			</li>
@@ -66,38 +68,31 @@ const { stages, label, caption } = Astro.props;
 		display: block;
 		width: max(var(--share), 6px);
 		height: 1.5rem;
-		border-radius: var(--radius-sm);
-		background: var(--color-primary);
+		border-radius: 0;
+		background: var(--paper-color-ink);
 	}
 
-	/* One gold per figure: the stage the reader is here for. */
-	.funnel__stage--accent .funnel__bar {
-		background: var(--color-accent);
-	}
+	/* The stage the reader is here for: its words carry the figure's one highlighter; its bar stays ink. */
 
 	.funnel__value {
-		color: var(--color-primary);
-		font-family: var(--font-family-mono);
+		color: var(--paper-color-ink);
+		font-family: var(--paper-font-family-read);
 		font-variant-numeric: tabular-nums;
 	}
 
-	.funnel__stage--accent .funnel__value {
-		color: var(--color-accent);
-	}
-
 	.funnel__label {
-		color: var(--color-fg);
-		font-weight: 600;
+		color: var(--paper-color-ink);
+		font-weight: var(--paper-font-weight-bold);
 	}
 
 	.funnel__detail {
 		display: block;
-		color: var(--color-muted);
-		font-size: var(--font-size-sm);
+		color: var(--paper-color-muted);
+		font-size: var(--paper-font-size-small);
 	}
 
 	.funnel__caption {
-		color: var(--color-muted);
-		font-size: var(--font-size-sm);
+		color: var(--paper-color-muted);
+		font-size: var(--paper-font-size-small);
 	}
 </style>

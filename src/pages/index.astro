@@ -13,16 +13,15 @@ import SiteLayout from '@deramond.dev/astro/layouts/SiteLayout.astro';
 import { isoDate, postHref, readingTime, sortPosts } from '@deramond.dev/astro/blog';
 import ShowcaseBanner from '../components/ShowcaseBanner.astro';
 import { modules as guideModules } from '../guide-modules.mjs';
-import hero from '../brand/hero.svg';
-
-// One icon per guide module, keyed by the module's folder.
-const icons = import.meta.glob<string>('../brand/modules/*.svg', { query: '?raw', import: 'default', eager: true });
-const iconOf = (id: string) => icons[`../brand/modules/${id.slice('guide/'.length)}.svg`];
 
 // The guide's modules, in sidebar order: the module list is the one source, so a new module lands here on its own and
-// other pages at the guide's root (like /guide/checklists/) don't.
-const docs = new Map((await getCollection('docs')).map((entry) => [entry.id, entry]));
-const modules = guideModules.map(({ dir }) => docs.get(`guide/${dir}`)!);
+// other pages at the guide's root (like /guide/checklists/) don't. Each card counts its module's chapters.
+const entries = await getCollection('docs');
+const docs = new Map(entries.map((entry) => [entry.id, entry]));
+const modules = guideModules.map(({ dir }) => ({
+	entry: docs.get(`guide/${dir}`)!,
+	chapters: entries.filter((entry) => entry.id.startsWith(`guide/${dir}/`)).length,
+}));
 
 const articles = sortPosts(await getCollection('articles'), { production: import.meta.env.PROD }).slice(0, 3);
 ---
@@ -32,14 +31,14 @@ const articles = sortPosts(await getCollection('articles'), { production: import
 	description="Open source, {re}explained. How it works, how to contribute, how to run your own project: a free guide, articles and a showcase."
 >
 	<Hero
+		person={{ name: 'Open {re}Source', role: 'a free guide, articles and a showcase' }}
 		lead="How it works, how to contribute, how to run your own project. A free guide, articles and a showcase by the Open {re}Source community."
-		image={hero}
 	>
 		<Fragment slot="title">
-			Open source, <em class="d-cy">{'{re}'}</em>explained.
+			Open source, <span class="accent-mark">{'{re}'}explained.</span>
 		</Fragment>
 		<Fragment slot="actions">
-			<Button variant="gold" href="/guide/start/">
+			<Button variant="primary" href="/guide/start/">
 				Follow the guide
 			</Button>
 			<Button href="/articles/">Read the articles</Button>
@@ -52,37 +51,45 @@ const articles = sortPosts(await getCollection('articles'), { production: import
 	<Section>
 		<SectionHeader num="01" label="Guide" title="Ten modules, from the first contribution to funding" />
 		<ProjectGrid>
-			{modules.map((entry, i) => (
+			{modules.map(({ entry, chapters }, i) => (
 				<ProjectCard
 					num={String(i + 1).padStart(2, '0')}
 					name={entry.data.title}
 					description={entry.data.description ?? ''}
 					href={`/${entry.id}/`}
-				>
-					<Fragment slot="icon" set:html={iconOf(entry.id)} />
-				</ProjectCard>
+					link={`${chapters} chapters`}
+				/>
 			))}
+			<div class="start-slot">
+				<p>
+					Four reading paths through the guide, for first-timers, non-code contributors, new maintainers and founders,
+					each a short list of chapters in order.
+				</p>
+				<a href="/guide/start/">Start here →</a>
+			</div>
 		</ProjectGrid>
 	</Section>
 
 	<Section>
-		<SectionHeader num="02" label="Articles" title="Latest articles" />
-		<div class="posts">
-			{articles.map((post) => (
-				<PostCard
-					href={postHref('/', 'articles', post.id)}
-					title={post.data.title}
-					description={post.data.description}
-					date={isoDate(post.data.date)}
-					minutes={readingTime(post.body)}
-					tags={post.data.tags}
-				/>
-			))}
-		</div>
-		<div class="more">
-			<Button variant="quiet" href="/articles/">
+		<SectionHeader num="02" label="Articles" title="Latest articles">
+			<Button slot="aside" variant="quiet" href="/articles/">
 				All articles
 			</Button>
+		</SectionHeader>
+		<div class="cut d-prows">
+			{articles.map((post, i) => (
+				<Fragment>
+					{i > 0 && <hr class="score" />}
+					<PostCard
+						href={postHref('/', 'articles', post.id)}
+						title={post.data.title}
+						description={post.data.description}
+						date={isoDate(post.data.date)}
+						minutes={readingTime(post.body)}
+						tags={post.data.tags}
+					/>
+				</Fragment>
+			))}
 		</div>
 	</Section>
 
@@ -92,38 +99,78 @@ const articles = sortPosts(await getCollection('articles'), { production: import
 	</Section>
 
 	<Section>
-		<SectionHeader
-			num="04"
-			label="Support us"
-			title="Keep Open {re}Source going"
-			lead="Help us continue to build and maintain this project by becoming a sponsor or dropping a star on our GitHub repository."
-		/>
-		<div class="actions">
-			<Button href="https://github.com/sponsors/Open-reSource">Become a sponsor</Button>
-			<Button variant="quiet" href="https://github.com/Open-reSource/openresource.dev">
-				Star on GitHub
-			</Button>
+		<SectionHeader num="04" label="Support us" title="Keep Open {re}Source going" />
+		<div class="support">
+			<p>
+				Help us continue to build and maintain this project by becoming a sponsor or dropping a star on our GitHub
+				repository.
+			</p>
+			<div class="actions">
+				<Button href="https://github.com/sponsors/Open-reSource">Become a sponsor</Button>
+				<Button variant="quiet" href="https://github.com/Open-reSource/openresource.dev">
+					Star on GitHub
+				</Button>
+			</div>
 		</div>
 	</Section>
 </SiteLayout>
 
 <style>
-	.posts {
+	/* The tray's free cells (ten modules, three to a row): one slot on the cut's floor, the way into the paths. */
+	.start-slot {
+		grid-column: span 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		gap: 10px;
+		padding: 24px 26px 20px;
+	}
+
+	.start-slot p {
+		max-width: 52ch;
+		margin: 0;
+		font: var(--paper-type-table);
+		color: var(--paper-color-reading);
+	}
+
+	.start-slot a {
+		font: var(--paper-type-label);
+		font-weight: var(--paper-font-weight-bold);
+		letter-spacing: var(--paper-type-label-letter-spacing);
+		text-transform: uppercase;
+	}
+
+	/* 04: the words on the left, the two actions at their foot on the right. */
+	.support {
 		display: grid;
-		gap: var(--space-5);
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 20px 48px;
+		align-items: end;
 	}
 
-	@media (min-width: 980px) {
-		.posts {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
+	.support p {
+		max-width: 52ch;
+		margin: 0;
 	}
 
-	.more,
 	.actions {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-3);
-		margin-top: var(--space-7);
+		align-items: center;
+		gap: 14px 22px;
+	}
+
+	@media (max-width: 1000px) {
+		.support {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+
+	@media (max-width: 900px) {
+		.start-slot {
+			grid-column: auto;
+			padding: 20px 22px 18px;
+		}
 	}
 </style>

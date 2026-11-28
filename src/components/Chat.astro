@@ -19,7 +19,9 @@ const { author, thinking, type } = Astro.props;
 </div>
 
 <style>
-	/* Two sides of a conversation: the author's name above each bubble, the side and the border tell them apart. */
+	/* Two sides of a conversation: the author's name above each bubble, and the side tells them apart. The first
+	   speaker's bubble is a plate pressed into the page, the other's is framed in the control line; a thought is a
+	   dashed frame in muted. Square, never a shade. */
 	.chat {
 		display: grid;
 		column-gap: var(--space-3);
@@ -35,9 +37,9 @@ const { author, thinking, type } = Astro.props;
 	}
 
 	.chat-header {
-		font: var(--type-mono-label);
-		letter-spacing: var(--font-letter-spacing-mono-label);
-		color: var(--color-muted);
+		font: var(--paper-type-label);
+		letter-spacing: var(--paper-type-label-letter-spacing);
+		color: var(--paper-color-muted);
 		text-transform: uppercase;
 	}
 
@@ -46,24 +48,21 @@ const { author, thinking, type } = Astro.props;
 		max-width: 90%;
 		margin-top: var(--space-1);
 		padding: var(--space-3) var(--space-4);
-		border: var(--stroke-ui) solid var(--color-line);
-		border-radius: var(--radius-md);
-		background: var(--color-panel);
-		color: var(--color-fg);
+		border: 1px solid var(--paper-color-line-control);
+		color: var(--paper-color-reading);
 	}
 
 	.chat-start .chat-bubble {
-		border-color: var(--color-primary-dim);
-		border-end-start-radius: var(--radius-none);
-	}
-
-	.chat-end .chat-bubble {
-		border-end-end-radius: var(--radius-none);
+		border-color: transparent;
+		background: var(--paper-relief-plate-wash);
+		box-shadow: var(--paper-shadow-plate);
 	}
 
 	.chat-thinking .chat-bubble {
+		border-color: var(--paper-color-line-control);
 		border-style: dashed;
 		background: transparent;
-		color: var(--color-muted);
+		box-shadow: none;
+		color: var(--paper-color-muted);
 	}
 </style>

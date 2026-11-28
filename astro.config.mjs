@@ -155,12 +155,13 @@ export default defineConfig({
 				},
 			},
 			og: {
-				art: './src/brand/og-art.png',
 				name: 'Open {re}Source',
 				title: 'Open source,',
 				accent: '{re}explained.',
 				subtitle: 'How it works, how to contribute, how to run your own project.',
 			},
+			// Light, Dark and Auto: the reader's choice is kept in localStorage (see the cookie policy).
+			look: 'paper',
 			css: ['./src/styles/site.css'],
 			head: [
 				{

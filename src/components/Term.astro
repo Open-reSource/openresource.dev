@@ -125,14 +125,14 @@ const uid = `term-${id}-${count}`;
 	}
 
 	.term :global(.term__trigger:focus-visible) {
-		outline: 2px solid var(--color-primary);
+		outline: 2px solid var(--paper-color-ink);
 		outline-offset: 2px;
 	}
 
 	.term :global(.term__trigger:hover),
 	.term :global(.term__trigger:focus-visible),
 	.term :global(.term__trigger[aria-expanded='true']) {
-		color: var(--color-primary);
+		color: var(--paper-color-ink);
 	}
 
 	.term__pop {
@@ -146,12 +146,11 @@ const uid = `term-${id}-${count}`;
 		width: min(22rem, calc(100vw - 2rem));
 		margin-top: var(--space-1);
 		padding: var(--space-3);
-		border: var(--stroke-hairline) solid var(--color-line);
-		border-left: 3px solid var(--color-primary);
-		border-radius: 0 var(--radius-md) var(--radius-md) 0;
-		background: var(--color-panel);
-		color: var(--color-fg);
-		font: var(--type-small);
+		/* A square sheet of the page's paper in a control-line frame, like the package's dialogs. */
+		border: 1px solid var(--paper-color-line-control);
+		background: var(--paper-stock-field);
+		color: var(--paper-color-reading);
+		font: var(--paper-type-small);
 		font-style: normal;
 		font-weight: 400;
 		text-align: left;
@@ -188,9 +187,6 @@ const uid = `term-${id}-${count}`;
 			translate: none;
 			width: auto;
 			margin: 0;
-			border-radius: var(--radius-md);
-			border-left-width: var(--stroke-hairline);
-			border-top: 3px solid var(--color-primary);
 		}
 	}
 </style>

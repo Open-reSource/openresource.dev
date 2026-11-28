@@ -53,7 +53,7 @@ const items: Item[] = chapters
 		counter-reset: chapter;
 		margin: var(--space-5) 0;
 		padding: 0;
-		border-top: var(--stroke-hairline) solid var(--color-line);
+		border-top: 1px solid var(--paper-color-hairline);
 	}
 
 	.chapters__item {
@@ -62,15 +62,18 @@ const items: Item[] = chapters
 		align-items: baseline;
 		margin: 0;
 		padding: var(--space-3) 0;
-		border-bottom: var(--stroke-hairline) solid var(--color-line);
+		border-bottom: 1px solid var(--paper-color-hairline);
 	}
 
 	.chapters__item::before {
 		counter-increment: chapter;
 		content: counter(chapter, decimal-leading-zero);
 		flex: none;
-		font: var(--type-mono);
-		color: var(--color-muted);
+		/* In the list's own row, not hung in the margin as the prose's numbered lists are. */
+		width: auto;
+		margin: 0;
+		font: var(--paper-type-small);
+		color: var(--paper-color-muted);
 	}
 
 	.chapters__main {
@@ -79,18 +82,18 @@ const items: Item[] = chapters
 	}
 
 	.chapters__main a {
-		font-weight: var(--font-weight-medium);
+		font-weight: var(--paper-font-weight-bold);
 	}
 
 	.chapters__description {
 		margin: var(--space-1) 0 0;
-		color: var(--color-muted);
-		font: var(--type-small);
+		color: var(--paper-color-muted);
+		font: var(--paper-type-small);
 	}
 
 	.chapters__meta {
 		flex: none;
-		font: var(--type-mono);
-		color: var(--color-muted);
+		font: var(--paper-type-small);
+		color: var(--paper-color-muted);
 	}
 </style>
