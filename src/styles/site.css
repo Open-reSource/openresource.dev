@@ -1,21 +1,60 @@
 /*
- * Open {re}Source's own rules, on top of @deramond.dev/astro (loaded after it on every page).
- * Brand values come from the tokens; nothing here is a colour or a size of its own.
+ * Open {re}Source's own rules, on top of @deramond.dev/astro (look: 'paper', loaded after it on every page, in the
+ * light and the dark theme). Values come from the paper tokens; the few sizes typed here are layout, not colour.
  */
 
 /* The opening paragraph of a page or an article. */
 .lead {
-	font: var(--type-lead);
-	color: var(--color-fg);
+	font: var(--paper-type-lead);
+	letter-spacing: var(--paper-type-lead-letter-spacing);
+	color: var(--paper-color-ink);
 }
 
+@media (max-width: 760px) {
+	.lead {
+		font: var(--paper-type-lead-phone);
+	}
+}
+
+/* The author's photo on /about-author/: flat and in colour, in a round frame, like the package's avatars. */
 .author-picture img {
 	display: block;
 	width: var(--space-18);
 	height: auto;
 	aspect-ratio: 1;
-	border-radius: var(--radius-pill);
-	border: var(--stroke-ui) solid var(--color-primary-dim);
+	border-radius: 50%;
+}
+
+/* "In short" holds the chapter's own list (3 to 5 points), not paragraphs: the prose's dash list at the box's size. */
+.in-short ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.in-short li {
+	position: relative;
+	margin: 0;
+	padding-left: 24px;
+}
+
+.in-short li + li {
+	margin-top: 0.55em;
+}
+
+.in-short li::before {
+	content: '';
+	position: absolute;
+	top: calc(0.8em - 1px);
+	left: 2px;
+	width: 10px;
+	height: 2px;
+	background: var(--paper-color-muted);
+}
+
+.in-short > p:last-child,
+.in-short li > p {
+	margin: 0;
 }
 
 .author-actions {
@@ -48,15 +87,15 @@ pre[data-language='md'] {
 	padding-left: 1.25em;
 }
 
-/* A link to a glossary entry: a term, not a chapter. Dotted underline, so it reads apart from a link that takes you to a
-   page, and the same colour as the other links. The underline stays when it sits in a list item or a heading. */
+/* A link to a glossary entry: a term, not a chapter. Dotted underline in the control line, so it reads apart from a link
+   that takes you to a page, and the same ink as the other links. The underline stays when it sits in a list item or a heading. */
 /* :root raises the specificity above the theme's list-item and table-cell link rule, which would otherwise win. */
 :root a[href^='/guide/glossary/#'] {
 	text-decoration-line: underline;
 	text-decoration-style: dotted;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 3px;
-	text-decoration-color: var(--color-primary-dim);
+	text-decoration-color: var(--paper-color-line-control);
 }
 
 :root a[href^='/guide/glossary/#']:hover {
@@ -67,7 +106,7 @@ pre[data-language='md'] {
    chapter sits in it and how far they are, then the "Mark as read" and "Leave path" buttons. Added by script, outside
    the theme's scoped styles, so the theme's 760px column width is repeated here.
 
-   One unit between two hairlines, like the theme's previous/next links and the "Related chapter" chip, on a fixed grid
+   One unit between two hairlines, like the "Related chapter" line, on a fixed grid
    rather than a wrapping row, so no line depends on where its text happens to break. In a narrow column (a phone) its
    three parts stack, flush left: the path, the position and progress, the buttons. From 30rem of column, the buttons
    move up beside the path, on the column's right edge like the theme's "Next" link, and the position and progress get
@@ -77,7 +116,7 @@ pre[data-language='md'] {
 	max-width: 760px;
 	margin: 0 0 var(--space-6);
 	padding-block: var(--space-3);
-	border-block: var(--stroke-hairline) solid var(--color-line);
+	border-block: 1px solid var(--paper-color-hairline);
 }
 
 .reading-bar__grid {
@@ -118,19 +157,19 @@ pre[data-language='md'] {
 	display: flex;
 	align-items: baseline;
 	gap: var(--space-3);
-	font: var(--type-small);
+	font: var(--paper-type-small);
 }
 
 .reading-bar__label,
 .path-next__label {
-	font: var(--type-eyebrow);
-	letter-spacing: var(--type-eyebrow-letter-spacing);
+	font: var(--paper-type-label);
+	letter-spacing: var(--paper-type-label-letter-spacing);
 	text-transform: uppercase;
-	color: var(--color-muted);
+	color: var(--paper-color-muted);
 }
 
 .reading-bar__name {
-	font-weight: var(--font-weight-medium);
+	font-weight: var(--paper-font-weight-bold);
 }
 
 /* Numbers are data: the position in the main text colour, the progress muted. In a narrow column they are two lines,
@@ -138,13 +177,13 @@ pre[data-language='md'] {
    middle dot (decorative, with an empty alternative text so screen readers skip it). */
 .reading-bar__status {
 	grid-area: status;
-	font: var(--type-mono);
-	color: var(--color-fg);
+	font: var(--paper-type-small);
+	color: var(--paper-color-ink);
 }
 
 .reading-bar__progress {
 	display: block;
-	color: var(--color-muted);
+	color: var(--paper-color-muted);
 }
 
 @container reading-bar (min-width: 30rem) {
@@ -165,64 +204,29 @@ pre[data-language='md'] {
 	gap: var(--space-2);
 }
 
-/* Both buttons have the look of the theme's quiet small button: Chakra Petch, uppercase, a hairline border, the
-   controls' 6px radius, 32px tall (above the 24px of WCAG 2.2's target size). Pressed, "Mark as read" turns to the
-   cyan of an active state, and its text says "Read ✓", so the state is never in the colour alone. */
+/* Both buttons are the package's quiet small buttons (d-pbtn--quiet d-pbtn--sm, set by the script): the label over a
+   1.5 px ink rule, at least 32 px tall (above WCAG 2.2's 24 px target). Pressed, "Mark as read" says "Read ✓": the
+   state is in the words. It keeps its width when it changes, so "Leave path" next to it doesn't move. */
 .reading-bar__button {
-	display: inline-flex;
-	align-items: center;
 	min-height: var(--space-8);
-	padding: 0 var(--space-3);
-	border: var(--stroke-hairline) solid var(--color-line);
-	border-radius: var(--radius-md);
-	background: transparent;
-	font: var(--type-button);
-	font-size: var(--font-size-xs);
-	line-height: 1;
-	letter-spacing: var(--type-button-letter-spacing);
-	text-transform: uppercase;
-	white-space: nowrap;
-	color: var(--color-fg);
-	cursor: pointer;
-	transition:
-		background-color var(--motion-duration-feedback) var(--motion-easing-precise),
-		color var(--motion-duration-feedback) var(--motion-easing-precise),
-		border-color var(--motion-duration-feedback) var(--motion-easing-precise);
 }
 
-/* "Mark as read" keeps its width when it turns to "Read ✓", so "Leave path" next to it doesn't move. */
 .reading-bar__button[aria-pressed] {
 	justify-content: center;
 	min-width: 11em;
 }
 
-.reading-bar__button:hover {
-	border-color: var(--color-muted);
-}
-
-.reading-bar__button[aria-pressed='true'] {
-	border-color: var(--color-primary);
-	background: var(--color-tint);
-	color: var(--color-primary);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.reading-bar__button:active {
-		transform: translateY(1px);
-	}
-}
-
 /* The check after a chapter's label in the sidebar. It sits inline after the label, so a long label still wraps. */
 .read-mark {
 	margin-left: var(--space-1);
-	color: var(--color-primary);
+	color: var(--paper-color-ink);
 }
 
 /* The end of /guide/start/: what is stored, and the reset. */
 .progress-reset {
 	margin-block: var(--space-6);
-	font: var(--type-small);
-	color: var(--color-muted);
+	font: var(--paper-type-small);
+	color: var(--paper-color-muted);
 }
 
 .progress-reset__note,
@@ -236,43 +240,46 @@ pre[data-language='md'] {
 	border: 0;
 	background: none;
 	font: inherit;
-	color: var(--color-fg);
+	color: var(--paper-color-ink);
 	text-decoration: underline;
 	cursor: pointer;
 }
 
-/* "Next in path" (src/learning-paths-client.ts) has the look of the theme's previous/next links, with a cyan border for
-   the path. */
+/* "Next in path" (src/learning-paths-client.ts): a plate pressed into the page over the previous/next links, its label
+   in muted, the chapter's title in Chakra; the title's underline answers the hover. */
 .path-next {
 	max-width: 760px;
 	margin-top: var(--space-12);
 }
 
-.path-next__link {
+:root .path-next__link {
 	display: block;
-	padding: var(--space-3) var(--space-4);
-	border: var(--stroke-hairline) solid var(--color-primary-dim);
-	color: var(--color-fg);
-}
-
-:root .path-next__link:hover {
-	border-color: var(--color-primary);
-	color: var(--color-fg);
+	padding: 18px 22px 20px;
+	background: var(--paper-relief-plate-wash);
+	box-shadow: var(--paper-shadow-plate);
+	color: var(--paper-color-ink);
+	text-decoration: none;
 }
 
 .path-next__label {
 	display: block;
-	margin-bottom: var(--space-1);
+	margin-bottom: var(--space-2);
 }
 
 .path-next__link b {
-	font-family: var(--font-family-display);
+	font: var(--paper-type-h3);
+	letter-spacing: var(--paper-type-h3-letter-spacing);
 	text-transform: uppercase;
-	font-size: var(--font-size-md);
 }
 
-/* The theme's previous/next links follow, closer: the path link is the one step above them. */
-main .path-next + .pn {
+:root .path-next__link:hover b {
+	text-decoration: underline;
+	text-decoration-thickness: var(--paper-stroke-link-hover);
+	text-underline-offset: var(--paper-stroke-link-offset);
+}
+
+/* The previous/next links follow, closer: the path link is the one step above them. */
+main .path-next + :is(.d-pdocs__pager, .pn) {
 	margin-top: var(--space-4);
 }
 
@@ -296,4 +303,29 @@ main .path-next + .pn {
 	.chapter-feedback a {
 		min-height: 24px;
 	}
+}
+
+/* In a docs page's hero, the reading bar sits under the title and the hero's own hairline closes it: no second rule. */
+.d-pdocs__hero .reading-bar {
+	margin: var(--space-5) 0 0;
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+/* The texts set a Markdown rule (---) before most sections. A section head already opens on its own strong rule, so the
+   score before it would make a double line: the head's rule divides alone. */
+.d-prose hr:has(+ .d-phead) {
+	display: none;
+}
+
+/* A row's header (<th> in the body: an event's name, a license's identifier) reads like the row's other cells, in ink:
+   the package sets every <th> as a column's head, uppercase over a strong line. */
+:root .d-prose tbody th {
+	padding: 12px 24px 12px 0;
+	border-bottom: 1px solid var(--paper-color-hairline);
+	font: var(--paper-type-table);
+	letter-spacing: var(--paper-type-table-letter-spacing);
+	text-transform: none;
+	text-align: left;
+	color: var(--paper-color-ink);
 }

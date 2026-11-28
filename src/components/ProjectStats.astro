@@ -13,7 +13,7 @@ interface Props {
 const { name, href, since, license, decides, number } = Astro.props;
 ---
 
-<aside class="project-stats" aria-label={`${name} in numbers`}>
+<aside class="project-stats plate" aria-label={`${name} in numbers`}>
 	<p class="project-stats__name">
 		<a href={href}>{name}</a>
 	</p>
@@ -38,37 +38,38 @@ const { name, href, since, license, decides, number } = Astro.props;
 </aside>
 
 <style>
+	/* A plate pressed into the page: the project's name in ink, then its facts as labelled columns. */
 	.project-stats {
-		border: var(--stroke-hairline) solid var(--color-line);
-		border-left: 3px solid var(--color-primary);
-		border-radius: 0 var(--radius-md) var(--radius-md) 0;
-		background: var(--color-panel);
-		padding: var(--space-3) var(--space-4);
-		margin: var(--space-4) 0;
+		margin: var(--space-5) 0;
+		padding: 18px 22px 20px;
 	}
 
 	.project-stats__name {
-		margin: 0 0 var(--space-2);
-		font: var(--type-eyebrow);
-		letter-spacing: var(--font-letter-spacing-button);
+		margin: 0 0 var(--space-3);
+		font: var(--paper-type-label);
+		font-weight: var(--paper-font-weight-bold);
+		letter-spacing: var(--paper-type-label-letter-spacing);
 		text-transform: uppercase;
 	}
 
 	.project-stats__facts {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-		gap: var(--space-2) var(--space-4);
+		gap: var(--space-3) var(--space-5);
 		margin: 0;
 	}
 
 	.project-stats__facts dt {
-		color: var(--color-muted);
-		font: var(--type-mono-label);
+		font: var(--paper-type-label);
+		letter-spacing: var(--paper-type-label-letter-spacing);
+		text-transform: uppercase;
+		color: var(--paper-color-muted);
 	}
 
 	.project-stats__facts dd {
-		margin: 0;
-		font: var(--type-small);
+		margin: 2px 0 0;
+		font: var(--paper-type-table);
+		color: var(--paper-color-ink);
 	}
 
 	.project-stats__number {

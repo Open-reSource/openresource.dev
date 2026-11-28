@@ -155,7 +155,7 @@ export function follow(paths: LearningPath[], readable: string[] = []) {
 		}
 		grid.prepend(identity, status);
 
-		const leave = element('button', 'reading-bar__button', 'Leave path');
+		const leave = element('button', 'reading-bar__button d-pbtn d-pbtn--quiet d-pbtn--sm', 'Leave path');
 		leave.type = 'button';
 		actions.append(leave);
 
@@ -177,7 +177,7 @@ export function follow(paths: LearningPath[], readable: string[] = []) {
 		}
 		nav.append(link);
 
-		const pager = main.querySelector('nav.pn');
+		const pager = main.querySelector('nav.d-pdocs__pager, nav.pn');
 		if (pager) pager.before(nav);
 		else main.append(nav);
 		render();
@@ -205,7 +205,7 @@ export function follow(paths: LearningPath[], readable: string[] = []) {
 	}
 
 	function markButton(main: Element, key: string) {
-		const button = element('button', 'reading-bar__button');
+		const button = element('button', 'reading-bar__button d-pbtn d-pbtn--quiet d-pbtn--sm');
 		button.type = 'button';
 		renders.push(() => {
 			const read = state.read.includes(key);

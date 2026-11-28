@@ -25,7 +25,7 @@ function shuffleLinks(links: ShowcaseLink[]): ShowcaseLink[] {
 }
 ---
 
-<div class="grid">
+<div class="grid cut">
 	{allShowcaseLinks.map((link: ShowcaseLink) => {
 		if (link.type === 'github_repo') {
 			return (
@@ -52,10 +52,12 @@ function shuffleLinks(links: ShowcaseLink[]): ShowcaseLink[] {
 <ShowcaseBanner />
 
 <style>
+	/* A tray cut into the page, the entries standing in it. */
 	.grid {
 		display: grid;
-		gap: var(--space-4);
+		gap: 14px;
 		margin-block: var(--space-7);
+		padding: 14px;
 	}
 
 	@media (min-width: 768px) {

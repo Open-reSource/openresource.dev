@@ -1,6 +1,6 @@
 ---
-// A dated sequence drawn in the brand's sparse grammar: a cyan rail, one disc per entry, the year in mono, and at most
-// one gold disc for the entry that matters (`accent`). Real text, so it reads at every width and in a screen reader.
+// A dated sequence: an ink rail, one disc per entry, the year beside it, and at most one entry that matters
+// (`accent`), its title under the highlighter. Real text, so it reads at every width and in a screen reader.
 export interface Entry {
 	year: string;
 	title: string;
@@ -22,7 +22,7 @@ const { entries, label } = Astro.props;
 			<span class="timeline__year">{year}</span>
 			<span class="timeline__rail" aria-hidden="true" />
 			<span class="timeline__body">
-				<span class="timeline__title">{title}</span>
+				<span class:list={['timeline__title', { hl: accent }]}>{title}</span>
 				{detail && <span class="timeline__detail">{detail}</span>}
 			</span>
 		</li>
@@ -48,14 +48,14 @@ const { entries, label } = Astro.props;
 	}
 
 	.timeline__year {
-		color: var(--color-primary);
-		font-family: var(--font-family-mono);
-		font-size: var(--font-size-sm);
+		color: var(--paper-color-ink);
+		font-family: var(--paper-font-family-read);
+		font-size: var(--paper-font-size-small);
 		font-variant-numeric: tabular-nums;
 		text-align: right;
 	}
 
-	/* The rail: a bracket-weight cyan line, and a disc on it. The line runs the whole column, so entries join.
+	/* The rail: a 1.5 px ink line, and a disc on it. The line runs the whole column, so entries join.
 	   The rail inherits the title's font and line height, so 0.5lh is the middle of the title's first line. */
 	.timeline__rail {
 		position: relative;
@@ -67,9 +67,9 @@ const { entries, label } = Astro.props;
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		left: calc(50% - var(--stroke-bracket) / 2);
-		width: var(--stroke-bracket);
-		background: var(--color-primary);
+		left: calc(50% - 0.75px);
+		width: 1.5px;
+		background: var(--paper-color-ink);
 	}
 
 	.timeline__entry:first-child .timeline__rail::before {
@@ -88,13 +88,10 @@ const { entries, label } = Astro.props;
 		width: 12px;
 		height: 12px;
 		border-radius: 50%;
-		background: var(--color-primary);
+		background: var(--paper-color-ink);
 	}
 
-	/* One gold per decision: the entry the reader is here for. */
-	.timeline__entry--accent .timeline__rail::after {
-		background: var(--color-accent);
-	}
+	/* The entry the reader is here for: its title carries the page's highlighter (one per figure). */
 
 	.timeline__body {
 		display: flex;
@@ -108,12 +105,12 @@ const { entries, label } = Astro.props;
 	}
 
 	.timeline__title {
-		color: var(--color-fg);
-		font-weight: 600;
+		color: var(--paper-color-ink);
+		font-weight: var(--paper-font-weight-bold);
 	}
 
 	.timeline__detail {
-		color: var(--color-muted);
-		font-size: var(--font-size-sm);
+		color: var(--paper-color-muted);
+		font-size: var(--paper-font-size-small);
 	}
 </style>

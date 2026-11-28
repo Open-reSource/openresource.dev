@@ -51,7 +51,7 @@ const parts = (definition: string) => definition.split('`').map((text, i) => ({ 
 		margin: var(--space-4) 0;
 		padding: 0;
 		list-style: none;
-		font: var(--type-mono);
+		font: var(--paper-type-small);
 	}
 
 	.letters li {
@@ -60,7 +60,7 @@ const parts = (definition: string) => definition.split('`').map((text, i) => ({ 
 
 	dt {
 		margin-top: var(--space-4);
-		font-weight: 600;
+		font-weight: var(--paper-font-weight-bold);
 		/* Leave room for the sticky header when a term is the target of a link. */
 		scroll-margin-top: 5rem;
 	}
@@ -76,7 +76,7 @@ const parts = (definition: string) => definition.split('`').map((text, i) => ({ 
 	}
 
 	dt:target {
-		color: var(--color-primary);
+		color: var(--paper-color-ink);
 	}
 
 	dd {

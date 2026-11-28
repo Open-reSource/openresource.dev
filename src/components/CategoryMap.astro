@@ -14,7 +14,7 @@ const { label, groups } = Astro.props;
 
 <figure class="category-map" aria-label={label}>
 	{groups.map((group, index) => (
-		<div class:list={['category-map__group', { 'category-map__group--alt': index % 2 }]}>
+		<div class="category-map__group plate">
 			<p class="category-map__title" id={`category-map-${index}`}>
 				{group.label}
 			</p>
@@ -31,6 +31,8 @@ const { label, groups } = Astro.props;
 </figure>
 
 <style>
+	/* Each group a plate pressed into the page, its label in ink; each category a box framed in the hairline's
+	   stronger sibling, with its examples in muted. */
 	.category-map {
 		display: grid;
 		gap: var(--space-4);
@@ -38,24 +40,16 @@ const { label, groups } = Astro.props;
 	}
 
 	.category-map__group {
-		--accent: var(--color-primary);
-		border: var(--stroke-hairline) solid var(--color-line);
-		border-top: 3px solid var(--accent);
-		border-radius: 0 0 var(--radius-md) var(--radius-md);
-		background: var(--color-panel);
-		padding: var(--space-3) var(--space-4) var(--space-4);
-	}
-
-	.category-map__group--alt {
-		--accent: var(--color-illustration-azure);
+		padding: 18px 20px 20px;
 	}
 
 	.category-map__title {
 		margin: 0 0 var(--space-3);
-		color: var(--accent);
-		font: var(--type-eyebrow);
-		letter-spacing: var(--font-letter-spacing-button);
+		font: var(--paper-type-label);
+		font-weight: var(--paper-font-weight-bold);
+		letter-spacing: var(--paper-type-label-letter-spacing);
 		text-transform: uppercase;
+		color: var(--paper-color-ink);
 	}
 
 	.category-map__list {
@@ -73,18 +67,16 @@ const { label, groups } = Astro.props;
 		gap: var(--space-1);
 		margin: 0;
 		padding: var(--space-2) var(--space-3);
-		border: var(--stroke-hairline) solid var(--color-line);
-		border-radius: var(--radius-sm);
-		background: var(--color-bg);
+		border: 1px solid var(--paper-color-line-strong);
 	}
 
 	.category-map__item a {
-		font-weight: 600;
+		font-weight: var(--paper-font-weight-bold);
 	}
 
 	.category-map__examples {
-		color: var(--color-muted);
-		font: var(--type-small);
+		font: var(--paper-type-small);
+		color: var(--paper-color-muted);
 	}
 
 	@media (max-width: 30rem) {
